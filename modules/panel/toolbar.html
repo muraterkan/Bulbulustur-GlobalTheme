@@ -92,13 +92,23 @@
 <button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Temayı değiştir"><span class="material-symbols-outlined">contrast</span></button>
 <div class="bb-panel-overlay-host" data-bb-panel-popup>
 <button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="Kullanıcı menüsü"><span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.jpg" alt="Örnek kullanıcı"></span></button>
-<div id="bb_user_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<div class="bb-panel-user-summary"><span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.jpg" alt=""></span><span class="bb-panel-user-info"><strong>Demo Kullanıcı</strong><small>Panel örnek hesabı</small></span></div>
-<a class="bb-dropdown-item" href="../../pages/demo1/account/overview.html">Profilim</a>
-<a class="bb-dropdown-item" href="../../pages/demo1/account/settings.html">Hesap ayarları</a>
-<button class="bb-dropdown-item" type="button" id="bb_panel_user_theme">Temayı değiştir</button>
-<button class="bb-dropdown-item" type="button" disabled>Dil (örnek)</button>
-<button class="bb-dropdown-item" type="button" disabled>Çıkış (örnek)</button>
+<div id="bb_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>
+<div class="bb-panel-user-summary">
+<span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.jpg" alt=""></span>
+<span class="bb-panel-user-info"><span class="bb-panel-user-name">Demo Kullanıcı <span class="bb-badge bb-badge-success">Demo</span></span><small>demo@example.com</small></span>
+</div>
+<div class="bb-panel-user-group">
+<a class="bb-panel-user-item" href="profil.html"><span>Profilim</span></a>
+<button class="bb-panel-user-item" type="button" disabled title="Projeler demo sayfası henüz hazırlanmadı"><span>Projelerim</span><span class="bb-panel-user-meta">Yakında</span></button>
+<button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı"><span>Aboneliğim</span><span class="bb-panel-user-meta"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></span></button>
+<a class="bb-panel-user-item" href="fatura.html"><span>Faturalarım</span></a>
+</div>
+<div class="bb-panel-user-group">
+<button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Görünüm</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Koyu</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span></span></button>
+<div class="bb-panel-user-item"><span>Dil</span><span class="bb-panel-user-meta">Türkçe (demo)</span></div>
+<a class="bb-panel-user-item" href="hesap.html"><span>Hesap ayarları</span></a>
+<button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil"><span>Çıkış</span><span class="bb-panel-user-meta">Demo</span></button>
+</div>
 </div></div>
 </div>
         </div>
