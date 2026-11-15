@@ -8360,6 +8360,892 @@ Header
     padding: 0.75rem 1rem;
   }
 }
+/* =====================================
+   Panel Template — Faz 1: Shell
+   Existing layout and component classes are reused.
+   ===================================== */
+.bb-app.bb-panel {
+  --bb-panel-sidebar-width: var(--bb-sidebar-width, 16.25rem);
+  --bb-panel-sidebar-collapsed-width: 4.5rem;
+  --bb-panel-content-gap: var(--bb-layout-gap, 1.5rem);
+  --bb-panel-header-height: var(--bb-shell-header-height, 4rem);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-body-color);
+}
+
+.bb-panel > .bb-sidebar {
+  width: var(--bb-panel-sidebar-width);
+  height: 100vh;
+  min-height: 0;
+  position: sticky;
+  top: 0;
+  transition: width var(--bb-transition-normal);
+}
+
+.bb-panel .bb-shell {
+  min-height: 100vh;
+}
+
+.bb-panel .bb-shell-header-inner {
+  min-height: var(--bb-panel-header-height);
+  height: auto;
+  padding-inline: var(--bb-panel-content-gap);
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-shell-header-left,
+.bb-panel .bb-shell-header-right,
+.bb-panel .bb-sidebar-header {
+  min-width: 0;
+}
+
+.bb-panel .bb-sidebar-header,
+.bb-panel .bb-sidebar-footer {
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-sidebar-header {
+  justify-content: space-between;
+}
+
+.bb-panel .bb-sidebar-header .bb-sidebar-logo {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.bb-panel .bb-sidebar-logo img {
+  max-width: 100%;
+}
+
+.bb-panel .bb-sidebar-footer {
+  color: inherit;
+}
+
+.bb-panel .bb-panel-content-container {
+  width: 100%;
+  padding-inline: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-toolbar {
+  margin-block: var(--bb-panel-content-gap);
+  border: 0;
+  background: transparent;
+}
+
+.bb-panel .bb-content {
+  padding-bottom: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-shell-footer {
+  margin-top: auto;
+}
+
+.bb-panel .bb-panel-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  border-radius: var(--bb-radius);
+  padding: var(--bb-menu-link-py, 0.65rem);
+  cursor: pointer;
+}
+
+.bb-panel .bb-panel-icon-button:hover {
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-panel-icon-button:focus-visible {
+  outline: var(--bb-focus-ring-width, 0.2rem) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+
+.bb-panel .bb-sidebar .bb-panel-icon-button:hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  color: inherit;
+}
+
+.bb-panel .bb-panel-brand-text {
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
+}
+
+.bb-panel .bb-panel-sidebar-label {
+  white-space: nowrap;
+}
+
+.bb-panel .bb-panel-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-panel-content-gap);
+  padding: var(--bb-menu-link-py, 0.65rem) var(--bb-menu-link-px, 0.9rem);
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--bb-radius);
+}
+
+.bb-panel .bb-panel-sidebar-link:hover,
+.bb-panel .bb-panel-sidebar-link[aria-current=page] {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  color: inherit;
+}
+
+.bb-panel .bb-panel-sidebar-link:focus-visible {
+  outline: var(--bb-focus-ring-width, 0.2rem) solid currentColor;
+  outline-offset: var(--bb-focus-ring-width);
+}
+
+.bb-panel .bb-panel-sidebar-link .material-symbols-outlined {
+  flex: 0 0 auto;
+}
+
+.bb-panel .bb-panel-backdrop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .bb-panel[data-bb-sidebar-collapsed=true] {
+    --bb-panel-sidebar-width: var(--bb-panel-sidebar-collapsed-width);
+  }
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar-header {
+    justify-content: center;
+  }
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar-logo,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-panel-sidebar-label,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-panel-brand-text {
+    display: none;
+  }
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-panel-sidebar-link {
+    justify-content: center;
+  }
+}
+@media (max-width: 991.98px) {
+  .bb-app.bb-panel > .bb-sidebar {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: var(--bb-z-drawer, 1055);
+    transform: translateX(-100%);
+    transition: transform var(--bb-transition-normal);
+    width: var(--bb-panel-sidebar-width);
+    max-width: 85vw;
+  }
+  .bb-app.bb-panel[data-bb-sidebar-open=true] > .bb-sidebar {
+    transform: translateX(0);
+  }
+  .bb-panel .bb-panel-backdrop {
+    position: fixed;
+    inset: 0;
+    display: block;
+    border: 0;
+    background: color-mix(in srgb, var(--bb-black) 45%, transparent);
+    z-index: calc(var(--bb-z-drawer, 1055) - 1);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--bb-transition-normal), visibility var(--bb-transition-normal);
+  }
+  .bb-panel[data-bb-sidebar-open=true] .bb-panel-backdrop {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .bb-panel .bb-shell {
+    width: 100%;
+  }
+  .bb-panel .bb-shell-header-inner {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-app.bb-panel > .bb-sidebar,
+  .bb-panel .bb-panel-backdrop {
+    transition: none;
+  }
+}
+/* Faz 2 — Panel sidebar / existing bb-menu extensions */
+.bb-panel .bb-sidebar .bb-menu {
+  --bb-menu-bg: var(--bb-sidebar-bg);
+  --bb-menu-link-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-hover-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-active-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-hover-bg: color-mix(in srgb, currentColor 10%, transparent);
+  --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary) 30%, transparent);
+  --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary) 15%, transparent);
+  --bb-menu-section-color: var(--bb-sidebar-text-color);
+  --bb-menu-bullet-color: var(--bb-sidebar-text-color);
+  padding-inline: var(--bb-menu-gap);
+}
+
+.bb-panel .bb-sidebar .bb-menu-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: start;
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-section {
+  margin-block-start: var(--bb-menu-gap);
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item.active > .bb-menu-link,
+.bb-panel .bb-sidebar .bb-menu .bb-menu-link[aria-current=page] {
+  color: var(--bb-sidebar-text-color);
+  background: var(--bb-menu-link-active-bg);
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-link:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-sub-accordion .bb-menu-link {
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-sub .bb-menu-sub .bb-menu-link {
+  padding-inline-start: calc(var(--bb-menu-link-px) + var(--bb-menu-link-px) + var(--bb-menu-icon-size));
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item:not(.show) > .bb-menu-sub-accordion {
+  visibility: hidden;
+}
+
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item.show > .bb-menu-sub-accordion {
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-section,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-title,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-arrow,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-badge,
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-sub {
+    display: none;
+  }
+  .bb-panel[data-bb-sidebar-collapsed=true] .bb-sidebar .bb-menu .bb-menu-link {
+    justify-content: center;
+  }
+}
+/* Faz 3 — Panel header navigation */
+.bb-panel .bb-panel-topnav {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+  min-width: 0;
+}
+
+.bb-panel .bb-panel-topnav .bb-menu {
+  --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-sub {
+  min-width: var(--bb-menu-sub-min-width);
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-link {
+  white-space: nowrap;
+}
+
+.bb-panel .bb-panel-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+
+.bb-panel .bb-panel-header-actions .bb-panel-icon-button {
+  position: relative;
+}
+
+.bb-panel .bb-panel-header-actions .bb-panel-indicator {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  background: var(--bb-danger);
+  border: var(--bb-border-width, 1px) solid var(--bb-body-bg);
+  border-radius: var(--bb-radius-pill);
+  width: var(--bb-menu-bullet-size, 0.35rem);
+  height: var(--bb-menu-bullet-size, 0.35rem);
+}
+
+.bb-panel .bb-panel-overlay-host {
+  position: relative;
+}
+
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 100%;
+  min-width: var(--bb-menu-sub-min-width, 12rem);
+  max-width: min(90vw, 24rem);
+  padding: var(--bb-menu-sub-padding, 0.5rem);
+  z-index: var(--bb-z-dropdown, 1050);
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  border: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover[hidden] {
+  display: none;
+}
+
+.bb-panel .bb-panel-search-field {
+  width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .bb-panel .bb-panel-topnav {
+    display: none;
+  }
+}
+/* Faz 4 — panel kullanıcı ve bildirim yüzeyleri */
+.bb-panel .bb-panel-notification {
+  display: flex;
+  gap: var(--bb-menu-link-px, 0.9rem);
+  padding: var(--bb-menu-link-py, 0.65rem);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-panel-notification:last-child {
+  border-bottom: 0;
+}
+
+.bb-panel .bb-panel-notification .material-symbols-outlined {
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-panel-notification small {
+  display: block;
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-panel-user-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-link-px, 0.9rem);
+  padding: var(--bb-menu-link-py, 0.65rem);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-panel-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-panel .bb-panel-user-info small {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-panel-popover .bb-dropdown-item {
+  text-decoration: none;
+}
+
+/* Faz 5 — toolbar varyantları; mevcut .bb-toolbar tamamlayıcıları */
+.bb-panel .bb-panel-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+
+.bb-panel .bb-panel-toolbar-description {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-panel-toolbar-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+  margin-block-start: var(--bb-panel-content-gap);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-panel-toolbar-tabs a {
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  padding: var(--bb-menu-link-py, 0.65rem) var(--bb-menu-link-px, 0.9rem);
+  border-bottom: var(--bb-border-width, 1px) solid transparent;
+}
+
+.bb-panel .bb-panel-toolbar-tabs a[aria-current=page] {
+  border-bottom-color: var(--bb-primary);
+  color: var(--bb-primary-text);
+}
+
+@media (max-width: 767.98px) {
+  .bb-panel .bb-panel-toolbar-actions {
+    justify-content: flex-start;
+  }
+}
+/* Faz 6 — same shell, three layout modes */
+.bb-panel[data-bb-panel-layout=top] > .bb-sidebar,
+.bb-panel[data-bb-panel-layout=auth] > .bb-sidebar {
+  display: none;
+}
+
+.bb-panel[data-bb-panel-layout=top] .bb-panel-topnav {
+  display: flex;
+}
+
+.bb-panel[data-bb-panel-layout=auth] .bb-shell-header,
+.bb-panel[data-bb-panel-layout=auth] .bb-toolbar,
+.bb-panel[data-bb-panel-layout=auth] .bb-shell-footer {
+  display: none;
+}
+
+.bb-panel[data-bb-panel-layout=auth] .bb-main,
+.bb-panel[data-bb-panel-layout=auth] .bb-main-inner {
+  justify-content: center;
+  align-items: center;
+}
+
+.bb-panel[data-bb-panel-layout=auth] .bb-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bb-panel[data-bb-panel-layout=auth] .bb-panel-content-container {
+  max-width: var(--bb-menu-sub-min-width, 24rem);
+}
+
+.bb-panel .bb-panel-layout-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+
+.bb-panel .bb-panel-layout-switcher button[aria-pressed=true] {
+  background-color: var(--bb-primary);
+  color: var(--bb-primary-inverse);
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel[data-bb-panel-layout=top] .bb-panel-topnav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bb-panel[data-bb-panel-layout=top] [data-bb-panel-sidebar-toggle] {
+    display: none;
+  }
+}
+/* Faz 7 — selected placeholder page styling */
+.bb-panel .bb-panel-template-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+
+.bb-panel .bb-menu-link[aria-current=page] {
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-empty-state .material-symbols-outlined {
+  color: var(--bb-secondary-color);
+}
+
+/* Faz 8.1 — KPI cards, reuse bb-card */
+.bb-panel .bb-dashboard-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-kpi {
+  --bb-dashboard-kpi-accent:var(--bb-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.bb-panel .bb-dashboard-kpi-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-dashboard-kpi-icon {
+  color: var(--bb-dashboard-kpi-accent);
+}
+
+.bb-panel .bb-dashboard-kpi-value {
+  display: block;
+  color: var(--bb-body-color);
+  font-size: var(--bb-h2);
+  font-weight: var(--bb-fw-bold);
+  margin-block: var(--bb-menu-link-py);
+}
+
+.bb-panel .bb-dashboard-kpi-foot {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-dashboard-kpi[data-tone=success] {
+  --bb-dashboard-kpi-accent:var(--bb-chart-3);
+}
+
+.bb-panel .bb-dashboard-kpi[data-tone=info] {
+  --bb-dashboard-kpi-accent:var(--bb-chart-1);
+}
+
+.bb-panel .bb-dashboard-kpi[data-tone=warning] {
+  --bb-dashboard-kpi-accent:var(--bb-chart-4);
+}
+
+.bb-panel .bb-dashboard-kpi .bb-progress {
+  --bb-progress-bar-bg:var(--bb-dashboard-kpi-accent);
+  margin-block-start: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="86"] {
+  width: 86%;
+}
+
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="72"] {
+  width: 72%;
+}
+
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="61"] {
+  width: 61%;
+}
+
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="94"] {
+  width: 94%;
+}
+
+@media (max-width: 1199.98px) {
+  .bb-panel .bb-dashboard-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-panel .bb-dashboard-kpis {
+    grid-template-columns: 1fr;
+  }
+}
+/* Faz 8.2 — donut and legend with chart tokens */
+.bb-panel .bb-dashboard-donut-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-donut {
+  width: 11rem;
+  aspect-ratio: 1;
+  flex: none;
+  border-radius: var(--bb-radius-pill);
+  background: conic-gradient(var(--bb-chart-1) 0% 44%, var(--bb-chart-3) 44% 74%, var(--bb-chart-2) 74% 90%, var(--bb-chart-4) 90% 100%);
+  display: grid;
+  place-items: center;
+}
+
+.bb-panel .bb-dashboard-donut-center {
+  width: 72%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  text-align: center;
+}
+
+.bb-panel .bb-dashboard-donut-center strong {
+  font-size: var(--bb-h3);
+}
+
+.bb-panel .bb-dashboard-donut-center small {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-dashboard-legend {
+  flex: 1 1 12rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bb-panel .bb-dashboard-legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+  padding-block: var(--bb-menu-link-py);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-dashboard-legend li:last-child {
+  border: 0;
+}
+
+.bb-panel .bb-dashboard-legend-label {
+  flex: 1;
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-dashboard-legend-mark {
+  width: var(--bb-menu-icon-size, 1.15rem);
+  aspect-ratio: 1;
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-chart-1);
+}
+
+.bb-panel .bb-dashboard-legend-mark[data-series="2"] {
+  background: var(--bb-chart-2);
+}
+
+.bb-panel .bb-dashboard-legend-mark[data-series="3"] {
+  background: var(--bb-chart-3);
+}
+
+.bb-panel .bb-dashboard-legend-mark[data-series="4"] {
+  background: var(--bb-chart-4);
+}
+
+/* Faz 8.3 — week strip and appointments */
+.bb-panel .bb-dashboard-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--bb-menu-gap);
+}
+
+.bb-panel .bb-dashboard-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+  padding: var(--bb-menu-link-py);
+  border: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  text-align: center;
+}
+
+.bb-panel .bb-dashboard-day small {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-dashboard-day[aria-current=date] {
+  background: var(--bb-primary-light);
+  border-color: var(--bb-primary);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-dashboard-appointments {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bb-panel .bb-dashboard-appointments li {
+  display: flex;
+  gap: var(--bb-panel-content-gap);
+  padding-block: var(--bb-menu-link-py);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-dashboard-appointments li:last-child {
+  border: 0;
+}
+
+.bb-panel .bb-dashboard-appointments time {
+  flex: none;
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-dashboard-appointments small {
+  display: block;
+  color: var(--bb-secondary-color);
+}
+
+@media (max-width: 575.98px) {
+  .bb-panel .bb-dashboard-day {
+    padding: var(--bb-menu-gap);
+  }
+  .bb-panel .bb-dashboard-week {
+    gap: 0;
+  }
+}
+/* Faz 8.4 — data table card & micro bars */
+.bb-panel .bb-dashboard-table-wrap {
+  overflow-x: auto;
+}
+
+.bb-panel .bb-dashboard-table-wrap .bb-table {
+  min-width: 36rem;
+}
+
+.bb-panel .bb-dashboard-table-item {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+}
+
+.bb-panel .bb-dashboard-table-item .material-symbols-outlined {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-dashboard-microchart {
+  display: flex;
+  align-items: end;
+  gap: var(--bb-chart-gap);
+  height: 2.5rem;
+}
+
+.bb-panel .bb-dashboard-microchart span {
+  flex: 1 1 0;
+  min-width: var(--bb-chart-gap);
+  background: var(--bb-chart-1);
+  border-radius: var(--bb-radius-sm) var(--bb-radius-sm) 0 0;
+}
+
+.bb-panel .bb-dashboard-microchart span:nth-child(1) {
+  height: 30%;
+}
+
+.bb-panel .bb-dashboard-microchart span:nth-child(2) {
+  height: 75%;
+}
+
+.bb-panel .bb-dashboard-microchart span:nth-child(3) {
+  height: 45%;
+}
+
+.bb-panel .bb-dashboard-microchart span:nth-child(4) {
+  height: 90%;
+}
+
+.bb-panel .bb-dashboard-microchart span:nth-child(5) {
+  height: 65%;
+}
+
+/* Demo ilerleme oranları: yalnız veri durumları */
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="78"] {
+  width: 78%;
+}
+
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="92"] {
+  width: 92%;
+}
+
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="45"] {
+  width: 45%;
+}
+
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="100"] {
+  width: 100%;
+}
+
+/* Faz 8.5 — status timeline */
+.bb-panel .bb-dashboard-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bb-panel .bb-dashboard-timeline li {
+  display: grid;
+  grid-template-columns: var(--bb-menu-icon-size, 1.15rem) minmax(0, 1fr);
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-timeline-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bb-menu-gap);
+}
+
+.bb-panel .bb-dashboard-timeline-marker {
+  display: block;
+  flex: none;
+  width: var(--bb-menu-icon-size, 1.15rem);
+  aspect-ratio: 1;
+  border: var(--bb-border-width, 1px) solid var(--bb-chart-1);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-chart-1);
+}
+
+.bb-panel .bb-dashboard-timeline li[data-state=pending] .bb-dashboard-timeline-marker {
+  background: transparent;
+  border-color: var(--bb-border-color);
+}
+
+.bb-panel .bb-dashboard-timeline-line {
+  flex: 1 1 auto;
+  width: var(--bb-border-width, 1px);
+  background: var(--bb-border-color);
+  min-height: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-timeline li:last-child .bb-dashboard-timeline-line {
+  visibility: hidden;
+}
+
+.bb-panel .bb-dashboard-timeline-content {
+  padding-bottom: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-dashboard-timeline-content p {
+  color: var(--bb-secondary-color);
+  margin: 0;
+}
+
+.bb-panel .bb-dashboard-timeline-content small {
+  color: var(--bb-secondary-color);
+}
+
+/* Faz 8.6 — promotional highlight */
+.bb-panel .bb-dashboard-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-panel-content-gap);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-dashboard-promo-copy {
+  flex: 1 1 16rem;
+}
+
+.bb-panel .bb-dashboard-promo-copy p {
+  margin: 0;
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-dashboard-promo .bb-dashboard-promo-icon {
+  font-size: var(--bb-h1);
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.bb-panel .bb-dashboard-promo .bb-dashboard-promo-link {
+  color: var(--bb-primary-text);
+}
+
 /* 5. Components */
 /* =====================================
    Bulbulustur Theme - Buttons
