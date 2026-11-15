@@ -1,0 +1,289 @@
+/* =====================================
+   Bulbulustur Theme - Breadcrumb (PURE)
+   Bootstrap 5 tokens + bb- layer
+===================================== */
+
+/* -------------------------------------
+   Breadcrumb wrapper
+   Spacing lives here, not inside page SCSS.
+------------------------------------- */
+
+.bb-breadcrumb-wrap {
+  margin: 0;
+}
+
+.bb-breadcrumb-wrap-hero {
+  margin-bottom: 1.5rem;
+}
+
+.bb-breadcrumb-wrap-page {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.bb-breadcrumb-wrap-compact {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.bb-breadcrumb-wrap-spaced {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* -------------------------------------
+   Breadcrumb core
+------------------------------------- */
+
+.bb-breadcrumb {
+  /* -----------------------------------
+     Local tokens
+  ----------------------------------- */
+
+  --bb-breadcrumb-color: var(--bb-secondary-color);
+  --bb-breadcrumb-active-color: var(--bb-emphasis-color);
+  --bb-breadcrumb-separator-color: var(--bs-tertiary-color, var(--bb-breadcrumb-color));
+
+  --bb-breadcrumb-font-size: var(--bb-fs-sm);
+  --bb-breadcrumb-gap: 0.75rem;
+
+  --bb-breadcrumb-link-hover-color: var(--bb-primary);
+
+  --bb-breadcrumb-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-breadcrumb-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-breadcrumb-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+
+  --bb-breadcrumb-link-radius: var(--bb-radius-sm, var(--bs-border-radius-sm, 0.35rem));
+
+  --bb-breadcrumb-separator: "/";
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 180px;
+
+    color: var(--bb-breadcrumb-color);
+    font-size: var(--bb-breadcrumb-font-size);
+    line-height: var(--bb-line-height-base);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    a {
+      min-width: 0;
+
+      color: inherit;
+      text-decoration: none;
+
+      border-radius: var(--bb-breadcrumb-link-radius);
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      transition:
+        color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+
+      &:hover {
+        color: var(--bb-breadcrumb-link-hover-color);
+      }
+
+      &:focus-visible {
+        outline: 0;
+        box-shadow: 0 0 0 var(--bb-breadcrumb-focus-ring-width)
+          rgba(var(--bb-primary-rgb), var(--bb-breadcrumb-focus-ring-opacity));
+        box-shadow: 0 0 0 var(--bb-breadcrumb-focus-ring-width)
+          color-mix(
+            in srgb,
+            var(--bb-breadcrumb-focus-ring-color) calc(var(--bb-breadcrumb-focus-ring-opacity) * 100%),
+            transparent
+          );
+      }
+    }
+
+    &.active {
+      max-width: none;
+
+      color: var(--bb-breadcrumb-active-color);
+      font-weight: var(--bb-fw-medium, 500);
+    }
+
+    + .breadcrumb-item {
+      padding-left: var(--bb-breadcrumb-gap);
+
+      &::before {
+        float: none;
+        flex: 0 0 auto;
+
+        padding-right: var(--bb-breadcrumb-gap);
+
+        color: var(--bb-breadcrumb-separator-color);
+        content: var(--bb-breadcrumb-separator);
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+   Separator variants
+------------------------------------- */
+
+.bb-breadcrumb.bb-breadcrumb-dot {
+  --bb-breadcrumb-separator: "•";
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    font-size: var(--bb-fs-base);
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+}
+
+.bb-breadcrumb.bb-breadcrumb-line {
+  --bb-breadcrumb-separator: "—";
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: color-mix(in srgb, var(--bb-breadcrumb-separator-color) 60%, transparent);
+    font-weight: var(--bb-fw-light);
+  }
+}
+
+.bb-breadcrumb.bb-breadcrumb-arrow {
+  --bb-breadcrumb-separator: "›";
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: color-mix(in srgb, var(--bb-breadcrumb-separator-color) 72%, transparent);
+    font-size: var(--bb-fs-md);
+    font-weight: var(--bb-fw-semibold, 600);
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+}
+
+/* -------------------------------------
+   Size variants
+------------------------------------- */
+
+.bb-breadcrumb.bb-breadcrumb-sm {
+  --bb-breadcrumb-font-size: var(--bb-fs-xs);
+  --bb-breadcrumb-gap: 0.5rem;
+}
+
+.bb-breadcrumb.bb-breadcrumb-lg {
+  --bb-breadcrumb-font-size: var(--bb-fs-base);
+  --bb-breadcrumb-gap: 1rem;
+}
+
+/* -------------------------------------
+   Surface variants
+------------------------------------- */
+
+.bb-breadcrumb.bb-breadcrumb-soft {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 34px;
+
+  padding: 0 0.75rem;
+
+  background-color: rgba(var(--bb-body-bg-rgb), 0.9);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 90%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+  border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-shadow-xs);
+
+  overflow-x: auto;
+}
+
+/* -------------------------------------
+   Chip / pill breadcrumb
+------------------------------------- */
+
+.bb-breadcrumb.bb-breadcrumb-chip {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 34px;
+
+  padding: 0 0.75rem;
+
+  background-color: rgba(var(--bb-body-bg-rgb), 0.92);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+  border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-shadow-xs);
+
+  overflow-x: auto;
+
+  --bb-breadcrumb-font-size: var(--bb-fs-xs, 0.8rem);
+  --bb-breadcrumb-gap: 0.5rem;
+
+  .breadcrumb-item {
+    min-height: 34px;
+  }
+
+  .breadcrumb-item a {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 26px;
+    padding: 0 0.15rem;
+  }
+
+  .breadcrumb-item.active {
+    font-weight: var(--bb-fw-semibold, 600);
+  }
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 767.98px) {
+  .bb-breadcrumb {
+    --bb-breadcrumb-font-size: var(--bb-fs-xs);
+    --bb-breadcrumb-gap: 0.5rem;
+
+    .breadcrumb-item {
+      max-width: 140px;
+
+      &.active {
+        max-width: 180px;
+      }
+    }
+  }
+
+  .bb-breadcrumb-wrap-hero {
+    margin-bottom: 1rem;
+  }
+
+  .bb-breadcrumb-wrap-page {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-breadcrumb {
+    .breadcrumb-item {
+      max-width: 110px;
+
+      &.active {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .bb-breadcrumb.bb-breadcrumb-soft,
+  .bb-breadcrumb.bb-breadcrumb-chip {
+    width: 100%;
+  }
+}

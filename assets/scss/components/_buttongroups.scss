@@ -1,0 +1,126 @@
+/* =====================================
+   Bulbulustur Theme - Button Groups
+   Bootstrap 5 compatible (base korunur)
+   Prefix: bb-
+   Token-first (dark/light ready)
+===================================== */
+
+/* -------------------------------------------------
+  Usage
+  - Default Bootstrap group: .btn-group / .btn-toolbar / .btn-group-vertical
+  - Bulbulustur polish: add .bb-btn-group to .btn-group (opt-in)
+    مثال: <div class="btn-group bb-btn-group">...</div>
+-------------------------------------------------- */
+
+.btn-group.bb-btn-group,
+.btn-group-vertical.bb-btn-group {
+  /* local tokens (override edilebilir) */
+  --bb-btg-bg: var(--bb-body-bg);
+  --bb-btg-border-color: var(--bb-border-color);
+  --bb-btg-border-width: var(--bb-border-width, 1px);
+
+  --bb-btg-radius: var(--bb-radius, var(--bs-border-radius, 0.5rem));
+  --bb-btg-padding: 0.25rem;
+  --bb-btg-gap: 0.25rem;
+
+  --bb-btg-shadow: none; /* istersen: var(--bb-shadow-xs) */
+
+  /* item tokens */
+  --bb-btg-item-radius: calc(var(--bb-btg-radius) - 0.15rem);
+
+  /* button token bridge (child btn) */
+  --bb-btg-btn-bg: transparent;
+  --bb-btg-btn-color: var(--bb-body-color);
+
+  --bb-btg-btn-hover-bg: var(--bb-tertiary-bg);
+  --bb-btg-btn-hover-color: var(--bb-body-color);
+
+  --bb-btg-btn-active-bg: color-mix(in srgb, var(--bb-primary)12%, transparent);
+  --bb-btg-btn-active-color: var(--bb-primary);
+
+  --bb-btg-btn-focus-ring: var(--bb-focus-ring-color, var(--bb-primary));
+
+  padding: var(--bb-btg-padding);
+  border-radius: var(--bb-btg-radius);
+  background-color: var(--bb-btg-bg);
+  border: var(--bb-btg-border-width) solid var(--bb-btg-border-color);
+  box-shadow: var(--bb-btg-shadow);
+
+  /* segmented hissi */
+  gap: var(--bb-btg-gap);
+
+  /* Bootstrap’ın overlap/margin sistemini bb-mode’da kapatıyoruz */
+  > .btn,
+  > .btn-group {
+    margin-left: 0 !important;
+  }
+
+  /* dropdown’lu child group */
+  > .btn-group {
+    display: inline-flex;
+  }
+
+  /* child buttons: bb button token’larına bağlan */
+  .btn {
+    --bb-btn-bg: var(--bb-btg-btn-bg);
+    --bb-btn-color: var(--bb-btg-btn-color);
+    --bb-btn-border-color: transparent;
+
+    --bb-btn-hover-bg: var(--bb-btg-btn-hover-bg);
+    --bb-btn-hover-color: var(--bb-btg-btn-hover-color);
+    --bb-btn-hover-border-color: transparent;
+
+    --bb-btn-active-bg: var(--bb-btg-btn-active-bg);
+    --bb-btn-active-color: var(--bb-btg-btn-active-color);
+    --bb-btn-active-border-color: transparent;
+
+    /* group içinde daha “segmented” his */
+    border-radius: var(--bb-btg-item-radius) !important;
+    box-shadow: none !important;
+  }
+
+  /* checked/active states (btn-check / .active / aria-pressed) */
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn[aria-pressed="true"] {
+    --bb-btn-bg: var(--bb-btg-btn-active-bg);
+    --bb-btn-color: var(--bb-btg-btn-active-color);
+  }
+}
+
+/* -------------------------------------------------
+  Variants (bb-)
+-------------------------------------------------- */
+
+/* Pill group */
+.btn-group.bb-btn-group-pill,
+.btn-group-vertical.bb-btn-group-pill {
+  --bb-btg-radius: var(--bb-radius-pill, 50rem);
+  --bb-btg-item-radius: var(--bb-radius-pill, 50rem);
+}
+
+/* Compact density */
+.btn-group.bb-btn-group-compact,
+.btn-group-vertical.bb-btn-group-compact {
+  --bb-btg-padding: 0.15rem;
+  --bb-btg-gap: 0.15rem;
+}
+
+/* “Soft surface” (Metronic hissi ama kopya değil) */
+.btn-group.bb-btn-group-soft,
+.btn-group-vertical.bb-btn-group-soft {
+  --bb-btg-bg: var(--bb-tertiary-bg);
+  --bb-btg-border-color: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
+}
+
+/* Toolbar polish (opt-in) */
+.btn-toolbar.bb-btn-toolbar {
+  --bb-bt-gap: 0.75rem;
+  gap: var(--bb-bt-gap);
+}
+
+/* -------------------------------------------------
+  Notes:
+  - Default Bootstrap .btn-group davranışına dokunmuyoruz.
+  - bb-* sadece opt-in class ile devreye girer.
+-------------------------------------------------- */

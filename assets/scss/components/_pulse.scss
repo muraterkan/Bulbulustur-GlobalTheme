@@ -1,0 +1,105 @@
+/* =====================================
+   Bulbulustur Pulse
+   Indicator component
+   Prefix: bb-
+===================================== */
+
+.bb-pulse {
+  --bb-pulse-size: 44px;
+  --bb-pulse-ring-size: var(--bb-pulse-size);
+  --bb-pulse-duration: 1.5s;
+  --bb-pulse-scale: 1.5;
+  --bb-pulse-color: var(--bb-primary);
+  --bb-pulse-ring-opacity-from: 0.6;
+  --bb-pulse-ring-opacity-to: 0;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--bb-pulse-size);
+  height: var(--bb-pulse-size);
+}
+
+/* -------------------------------------
+   Theme / Density
+------------------------------------- */
+
+html[data-bs-theme="dark"] .bb-pulse {
+  --bb-pulse-ring-opacity-from: 0.8;
+}
+
+html[data-bs-theme="dark"][data-bb-density="compact"] .bb-pulse,
+[data-bb-density="compact"] .bb-pulse {
+  --bb-pulse-size: 36px;
+}
+
+/* -------------------------------------
+   Ring
+------------------------------------- */
+
+.bb-pulse-ring {
+  position: absolute;
+  inset: 0;
+
+  width: var(--bb-pulse-ring-size);
+  height: var(--bb-pulse-ring-size);
+
+  border-radius: var(--bb-radius-pill);
+  border: 2px solid var(--bb-pulse-color);
+
+  animation: bb-pulse-ring var(--bb-pulse-duration) ease-out infinite;
+}
+
+/* -------------------------------------
+   Colors
+------------------------------------- */
+
+.bb-pulse-primary {
+  --bb-pulse-color: var(--bb-primary);
+}
+
+.bb-pulse-secondary {
+  --bb-pulse-color: var(--bb-secondary);
+}
+
+.bb-pulse-success {
+  --bb-pulse-color: var(--bb-success);
+}
+
+.bb-pulse-info {
+  --bb-pulse-color: var(--bb-info);
+}
+
+.bb-pulse-warning {
+  --bb-pulse-color: var(--bb-warning);
+}
+
+.bb-pulse-danger {
+  --bb-pulse-color: var(--bb-danger);
+}
+
+.bb-pulse-light {
+  --bb-pulse-color: var(--bb-light);
+}
+
+.bb-pulse-dark {
+  --bb-pulse-color: var(--bb-dark);
+}
+
+/* -------------------------------------
+   Animation
+------------------------------------- */
+
+@keyframes bb-pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: var(--bb-pulse-ring-opacity-from);
+  }
+
+  100% {
+    transform: scale(var(--bb-pulse-scale));
+    opacity: var(--bb-pulse-ring-opacity-to);
+  }
+}

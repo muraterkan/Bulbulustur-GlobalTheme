@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulbulustur Theme - Dialer</title>
+
+     <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="p-4">
+  <div class="container-fluid" style="max-width: 1100px;">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="h3 mb-1">Dialer</h1>
+        <div class="text-muted">bb-dialer / token-first / dark-light safe</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-outline-secondary" id="btnThemeLight">Light</button>
+        <button type="button" class="btn btn-outline-secondary" id="btnThemeDark">Dark</button>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Basic currency -->
+      <div class="col-12 col-lg-6">
+        <div class="bb-card">
+          <div class="bb-card-body">
+            <div class="fw-semibold mb-2">Basic (currency + prefix)</div>
+
+            <div class="input-group bb-dialer w-100"
+                 data-bb-dialer="true"
+                 data-bb-dialer-currency="true"
+                 data-bb-dialer-min="1000"
+                 data-bb-dialer-max="50000"
+                 data-bb-dialer-step="1000"
+                 data-bb-dialer-decimals="0"
+                 data-bb-dialer-prefix="$">
+              <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="decrease" aria-label="Decrease">
+                <span class="material-symbols-outlined">remove</span>
+              </button>
+
+              <input type="text"
+                     class="form-control bb-dialer-input"
+                     readonly
+                     value="$10000"
+                     placeholder="Amount"
+                     data-bb-dialer-control="input" />
+
+              <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="increase" aria-label="Increase">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+
+            <div class="bb-dialer-hint">min: 1000 / max: 50000 / step: 1000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suffix + decimals -->
+      <div class="col-12 col-lg-6">
+        <div class="bb-card">
+          <div class="bb-card-body">
+            <div class="fw-semibold mb-2">Decimals (suffix + 0.1 step)</div>
+
+            <div class="input-group bb-dialer w-100"
+                 data-bb-dialer="true"
+                 data-bb-dialer-min="0"
+                 data-bb-dialer-max="9.9"
+                 data-bb-dialer-step="0.1"
+                 data-bb-dialer-decimals="1"
+                 data-bb-dialer-suffix=" kg">
+              <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="decrease" aria-label="Decrease">
+                <span class="material-symbols-outlined">remove</span>
+              </button>
+
+              <input type="text"
+                     class="form-control bb-dialer-input"
+                     readonly
+                     value="1.0 kg"
+                     placeholder="Weight"
+                     data-bb-dialer-control="input" />
+
+              <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="increase" aria-label="Increase">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </div>
+
+            <div class="bb-dialer-hint">min: 0 / max: 9.9 / step: 0.1 / decimals: 1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size variants -->
+      <div class="col-12">
+        <div class="bb-card">
+          <div class="bb-card-body">
+            <div class="fw-semibold mb-3">Size variants</div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <div class="input-group bb-dialer bb-dialer-sm"
+                   data-bb-dialer="true"
+                   data-bb-dialer-min="1"
+                   data-bb-dialer-max="99"
+                   data-bb-dialer-step="1"
+                   data-bb-dialer-decimals="0"
+                   data-bb-dialer-suffix=" adet">
+                <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="decrease" aria-label="Decrease">
+                  <span class="material-symbols-outlined">remove</span>
+                </button>
+                <input type="text" class="form-control bb-dialer-input" readonly value="1 adet" data-bb-dialer-control="input" />
+                <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="increase" aria-label="Increase">
+                  <span class="material-symbols-outlined">add</span>
+                </button>
+              </div>
+
+              <div class="input-group bb-dialer bb-dialer-lg"
+                   data-bb-dialer="true"
+                   data-bb-dialer-min="0"
+                   data-bb-dialer-max="100"
+                   data-bb-dialer-step="5"
+                   data-bb-dialer-decimals="0"
+                   data-bb-dialer-prefix="%">
+                <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="decrease" aria-label="Decrease">
+                  <span class="material-symbols-outlined">remove</span>
+                </button>
+                <input type="text" class="form-control bb-dialer-input" readonly value="%0" data-bb-dialer-control="input" />
+                <button class="btn bb-dialer-btn" type="button" data-bb-dialer-control="increase" aria-label="Increase">
+                  <span class="material-symbols-outlined">add</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="text-muted mt-3">Not: Button’lar senin mevcut .btn token sistemini kullanır.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events demo -->
+      <div class="col-12">
+        <div class="bb-card">
+          <div class="bb-card-body">
+            <div class="fw-semibold mb-2">Events (console)</div>
+            <div class="text-muted">bb.dialer.increase / increased / decrease / decreased / change / changed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITx"
+          crossorigin="anonymous"></script>
+
+  <!-- Dialer JS -->
+  <script src="/assets/js/components/bb-dialer.js"></script>
+
+  <script>
+    // theme switch
+    document.getElementById("btnThemeLight").addEventListener("click", function () {
+      document.documentElement.setAttribute("data-bs-theme", "light");
+    });
+    document.getElementById("btnThemeDark").addEventListener("click", function () {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+    });
+
+    // event demo
+    document.querySelectorAll(".bb-dialer").forEach(function (el) {
+      el.addEventListener("bb.dialer.changed", function () {
+        const inst = window.BBDialer.getInstance(el);
+        if (!inst) { return; }
+        console.log("Dialer changed:", inst.getValue());
+      });
+    });
+  </script>
+</body>
+</html>

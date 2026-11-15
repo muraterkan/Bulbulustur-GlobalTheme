@@ -1,0 +1,150 @@
+/* =====================================
+   Bulbulustur Theme - Sticky
+   JS-free: position sticky
+   Token-first | Dark/Light safe
+   Root: .bb-sticky
+   Variants: .is-end | .is-animate
+===================================== */
+
+.bb-sticky {
+  --bb-sticky-top: 0;
+  --bb-sticky-zindex: var(--bs-sticky-zindex, 1020);
+
+  position: sticky;
+  top: var(--bb-sticky-top);
+  z-index: var(--bb-sticky-zindex);
+
+  will-change: top;
+}
+
+/* -------------------------------------
+   Alignment helper
+------------------------------------- */
+
+.bb-sticky.is-end {
+  margin-left: auto;
+}
+
+/* -------------------------------------
+   Optional animation hook
+------------------------------------- */
+
+.bb-sticky.is-animate {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* -------------------------------------
+   Optional state hook
+------------------------------------- */
+
+.bb-sticky[data-bb-sticky-state="on"] {
+  transform: translateY(0);
+}
+
+/* -------------------------------------
+   Child spacing micro reset
+------------------------------------- */
+
+.bb-sticky > :last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   Sticky Top Presets
+===================================== */
+
+.bb-sticky-top-0 {
+  --bb-sticky-top: 0;
+}
+
+.bb-sticky-top-50 {
+  --bb-sticky-top: 3.125rem;
+}
+
+.bb-sticky-top-75 {
+  --bb-sticky-top: 4.6875rem;
+}
+
+.bb-sticky-top-100 {
+  --bb-sticky-top: 6.25rem;
+}
+
+.bb-sticky-top-120 {
+  --bb-sticky-top: 7.5rem;
+}
+
+.bb-sticky-top-150 {
+  --bb-sticky-top: 9.375rem;
+}
+
+.bb-sticky-top-200 {
+  --bb-sticky-top: 12.5rem;
+}
+
+/* =====================================
+   Sticky Z-index Presets
+===================================== */
+
+.bb-sticky-z-50 {
+  --bb-sticky-zindex: 50;
+}
+
+.bb-sticky-z-90 {
+  --bb-sticky-zindex: 90;
+}
+
+.bb-sticky-z-95 {
+  --bb-sticky-zindex: 95;
+}
+
+.bb-sticky-z-100 {
+  --bb-sticky-zindex: 100;
+}
+
+.bb-sticky-z-1000 {
+  --bb-sticky-zindex: 1000;
+}
+
+/* =====================================
+   Responsive Top Presets
+===================================== */
+
+@media (min-width: 992px) {
+  .bb-sticky-top-lg-0 {
+    --bb-sticky-top: 0;
+  }
+
+  .bb-sticky-top-lg-100 {
+    --bb-sticky-top: 6.25rem;
+  }
+
+  .bb-sticky-top-lg-200 {
+    --bb-sticky-top: 12.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bb-sticky-top-xl-0 {
+    --bb-sticky-top: 0;
+  }
+
+  .bb-sticky-top-xl-100 {
+    --bb-sticky-top: 6.25rem;
+  }
+
+  .bb-sticky-top-xl-200 {
+    --bb-sticky-top: 12.5rem;
+  }
+}
+
+/* =====================================
+   Reduced Motion
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-sticky.is-animate {
+    transition: none;
+  }
+}

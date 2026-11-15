@@ -1,0 +1,86 @@
+/* =====================================
+   Bulbulustur Theme - Tooltips (PURE)
+   Bootstrap 5 tooltip base korunur
+   Custom class ile theme: data-bs-custom-class="bb-tooltip ..."
+   Dark/Light: token-first
+===================================== */
+
+.tooltip.bb-tooltip {
+  /* -----------------------------------
+     Local tokens (override-friendly)
+  ----------------------------------- */
+  --bb-tooltip-bg: var(--bb-body-bg);
+  --bb-tooltip-color: var(--bb-body-color);
+  --bb-tooltip-border-color: var(--bb-border-color);
+
+  --bb-tooltip-radius: var(--bb-radius-sm, var(--bs-border-radius-sm, 0.35rem));
+  --bb-tooltip-shadow: var(--bb-shadow-xs, var(--bs-box-shadow-sm, none));
+
+  --bb-tooltip-padding-y: 0.45rem;
+  --bb-tooltip-padding-x: 0.65rem;
+
+  --bb-tooltip-font-size: var(--bb-fs-sm);;
+  --bb-tooltip-line-height: var(--bb-line-height-base);
+  --bb-tooltip-max-width: 16.25rem;
+
+  /* Bootstrap inner */
+  .tooltip-inner {
+    max-width: var(--bb-tooltip-max-width);
+    padding: var(--bb-tooltip-padding-y) var(--bb-tooltip-padding-x);
+    color: var(--bb-tooltip-color);
+    background-color: var(--bb-tooltip-bg);
+    border: 1px solid var(--bb-tooltip-border-color);
+    border-radius: var(--bb-tooltip-radius);
+    box-shadow: var(--bb-tooltip-shadow);
+    font-size: var(--bb-tooltip-font-size);
+    line-height: var(--bb-tooltip-line-height);
+    text-align: left; /* Metronic hissi: daha “UI tooltip” */
+  }
+
+  /* Arrow uses current tooltip bg */
+  .tooltip-arrow::before {
+    /* Bootstrap arrow is border-based; color is driven by CSS variables */
+    border-top-color: var(--bb-tooltip-bg);
+    border-right-color: var(--bb-tooltip-bg);
+    border-bottom-color: var(--bb-tooltip-bg);
+    border-left-color: var(--bb-tooltip-bg);
+  }
+}
+
+/* -------------------------------------
+   Inverse variant (Metronic-esque)
+   Usage: data-bs-custom-class="bb-tooltip bb-tooltip-inverse"
+-------------------------------------- */
+.tooltip.bb-tooltip.bb-tooltip-inverse {
+  --bb-tooltip-bg: var(--bb-emphasis-color);
+  --bb-tooltip-color: var(--bb-body-bg);
+  --bb-tooltip-border-color: transparent;
+  --bb-tooltip-shadow: var(--bb-shadow-sm, var(--bs-box-shadow, none));
+}
+
+/* Soft variant (subtle surface) */
+.tooltip.bb-tooltip.bb-tooltip-soft {
+  --bb-tooltip-bg: var(--bb-tertiary-bg);
+  --bb-tooltip-color: var(--bb-body-color);
+  --bb-tooltip-border-color: var(--bb-border-color);
+}
+
+/* Size helpers */
+.tooltip.bb-tooltip.bb-tooltip-sm {
+  --bb-tooltip-font-size: var(--bb-fs-xs);
+  --bb-tooltip-padding-y: 0.35rem;
+  --bb-tooltip-padding-x: 0.55rem;
+}
+
+.tooltip.bb-tooltip.bb-tooltip-lg {
+  --bb-tooltip-font-size: var(--bb-fs-sm);;
+  --bb-tooltip-padding-y: 0.55rem;
+  --bb-tooltip-padding-x: 0.75rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip.bb-tooltip .tooltip-inner {
+    transition: none;
+  }
+}

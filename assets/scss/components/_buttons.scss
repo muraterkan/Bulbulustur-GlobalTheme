@@ -1,0 +1,330 @@
+/* =====================================
+   Bulbulustur Theme - Buttons
+   Bootstrap 5 base preserved
+   Token-first | Dark/Light safe | PURE
+===================================== */
+
+.btn,
+.bb-btn {
+  /* Base tokens */
+  --bb-btn-padding-x: 1.5rem;
+  --bb-btn-padding-y: 0.775rem;
+  --bb-btn-gap: 0.5rem;
+
+  --bb-btn-font-size: var(--bb-fs-base);
+  --bb-btn-font-weight: var(--bb-fw-medium);
+  --bb-btn-line-height: var(--bb-line-height-base);
+
+  --bb-btn-radius: var(--bb-radius);
+  --bb-btn-border-width: var(--bb-border-width);
+
+  --bb-btn-bg: transparent;
+  --bb-btn-color: var(--bb-emphasis-color);
+  --bb-btn-border-color: transparent;
+
+  --bb-btn-hover-bg: var(--bb-btn-bg);
+  --bb-btn-hover-color: var(--bb-btn-color);
+  --bb-btn-hover-border-color: var(--bb-btn-border-color);
+
+  --bb-btn-active-bg: var(--bb-btn-hover-bg);
+  --bb-btn-active-color: var(--bb-btn-hover-color);
+  --bb-btn-active-border-color: var(--bb-btn-hover-border-color);
+
+  --bb-btn-disabled-opacity: var(--bb-disabled-opacity);
+  --bb-btn-icon-size: 1.2em;
+
+  --bb-btn-transition:
+    var(--bb-transition-colors),
+    box-shadow var(--bb-transition-fast),
+    transform var(--bb-transition-fast);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-btn-gap);
+
+  padding: var(--bb-btn-padding-y) var(--bb-btn-padding-x);
+
+  color: var(--bb-btn-color);
+  background-color: var(--bb-btn-bg);
+
+  border: var(--bb-btn-border-width) solid var(--bb-btn-border-color);
+  border-radius: var(--bb-btn-radius);
+
+  font-family: var(--bb-font-sans);
+  font-size: var(--bb-btn-font-size);
+  font-weight: var(--bb-btn-font-weight);
+  line-height: var(--bb-btn-line-height);
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: var(--bb-btn-transition);
+}
+
+.btn:hover,
+.bb-btn:hover {
+  color: var(--bb-btn-hover-color);
+  background-color: var(--bb-btn-hover-bg);
+  border-color: var(--bb-btn-hover-border-color);
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active,
+.btn.show,
+.bb-btn:active,
+.bb-btn.active,
+.bb-btn.show {
+  color: var(--bb-btn-active-color);
+  background-color: var(--bb-btn-active-bg);
+  border-color: var(--bb-btn-active-border-color);
+}
+
+.btn.btn-sm,
+.bb-btn.btn-sm,
+.bb-btn.bb-btn-sm {
+  --bb-btn-padding-x: 1rem;
+  --bb-btn-padding-y: 0.5rem;
+  --bb-btn-font-size: var(--bb-fs-sm);;
+}
+
+.btn.btn-lg,
+.bb-btn.btn-lg,
+.bb-btn.bb-btn-lg {
+  --bb-btn-padding-x: 2rem;
+  --bb-btn-padding-y: 1rem;
+  --bb-btn-font-size: var(--bb-icon-size-md);
+}
+
+.btn .material-symbols-outlined,
+.bb-btn .material-symbols-outlined,
+.btn .svg-icon,
+.bb-btn .svg-icon,
+.btn i,
+.bb-btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--bb-btn-icon-size);
+  line-height: 1;
+}
+
+/* -------------------------------------------------
+   Disabled
+------------------------------------------------- */
+
+.btn:disabled,
+.btn.disabled,
+.btn[aria-disabled="true"],
+.bb-btn:disabled,
+.bb-btn.disabled,
+.bb-btn[aria-disabled="true"] {
+  opacity: var(--bb-btn-disabled-opacity);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------
+   Solid variants
+   Bootstrap names preserved
+------------------------------------------------- */
+
+@mixin bb-btn-solid($name, $bg, $color) {
+  .btn-#{$name},
+  .bb-btn-#{$name} {
+    --bb-btn-bg: #{$bg};
+    --bb-btn-color: #{$color};
+    --bb-btn-border-color: #{$bg};
+
+    --bb-btn-hover-bg: color-mix(in srgb, #{$bg} 92%, var(--bb-body-bg));
+    --bb-btn-hover-color: #{$color};
+    --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
+
+    --bb-btn-active-bg: color-mix(in srgb, #{$bg} 86%, var(--bb-body-bg));
+    --bb-btn-active-color: #{$color};
+    --bb-btn-active-border-color: var(--bb-btn-active-bg);
+  }
+}
+
+@include bb-btn-solid("primary", var(--bb-primary), var(--bb-primary-inverse));
+@include bb-btn-solid("secondary", var(--bb-secondary), var(--bb-secondary-inverse));
+@include bb-btn-solid("success", var(--bb-success), var(--bb-success-inverse));
+@include bb-btn-solid("info", var(--bb-info), var(--bb-info-inverse));
+@include bb-btn-solid("warning", var(--bb-warning), var(--bb-warning-inverse));
+@include bb-btn-solid("danger", var(--bb-danger), var(--bb-danger-inverse));
+@include bb-btn-solid("light", var(--bb-light), var(--bb-light-inverse));
+@include bb-btn-solid("dark", var(--bb-dark), var(--bb-dark-inverse));
+
+/* -------------------------------------------------
+   Icon-only
+------------------------------------------------- */
+
+.bb-btn-icon {
+  width: calc((var(--bb-btn-font-size) * 1.25) + (var(--bb-btn-padding-y) * 2));
+  height: calc((var(--bb-btn-font-size) * 1.25) + (var(--bb-btn-padding-y) * 2));
+  padding: calc(var(--bb-btn-padding-y) * 0.9);
+
+  border-radius: calc(var(--bb-btn-radius) * 1.15);
+}
+
+/* -------------------------------------------------
+   Light style
+------------------------------------------------- */
+
+@mixin bb-btn-light($name, $color) {
+  .bb-btn-light-#{$name} {
+    --bb-btn-bg: color-mix(in srgb, #{$color} 12%, transparent);
+    --bb-btn-color: #{$color};
+    --bb-btn-border-color: transparent;
+
+    --bb-btn-hover-bg: color-mix(in srgb, #{$color} 18%, transparent);
+    --bb-btn-hover-color: #{$color};
+    --bb-btn-hover-border-color: transparent;
+
+    --bb-btn-active-bg: color-mix(in srgb, #{$color} 24%, transparent);
+    --bb-btn-active-color: #{$color};
+    --bb-btn-active-border-color: transparent;
+  }
+}
+
+@include bb-btn-light("primary", var(--bb-primary));
+@include bb-btn-light("secondary", var(--bb-secondary));
+@include bb-btn-light("success", var(--bb-success));
+@include bb-btn-light("info", var(--bb-info));
+@include bb-btn-light("warning", var(--bb-warning));
+@include bb-btn-light("danger", var(--bb-danger));
+@include bb-btn-light("dark", var(--bb-dark));
+
+/* -------------------------------------------------
+   Background-only style
+------------------------------------------------- */
+
+@mixin bb-btn-bg($name, $bg, $color: null) {
+  .bb-btn-bg-#{$name} {
+    --bb-btn-bg: #{$bg};
+    --bb-btn-border-color: transparent;
+
+    @if $color != null {
+      --bb-btn-color: #{$color};
+      --bb-btn-hover-color: #{$color};
+      --bb-btn-active-color: #{$color};
+    }
+  }
+}
+
+@include bb-btn-bg("light", var(--bb-light), var(--bb-light-inverse));
+@include bb-btn-bg("primary", var(--bb-primary), var(--bb-primary-inverse));
+@include bb-btn-bg("secondary", var(--bb-secondary), var(--bb-secondary-inverse));
+@include bb-btn-bg("success", var(--bb-success), var(--bb-success-inverse));
+@include bb-btn-bg("info", var(--bb-info), var(--bb-info-inverse));
+@include bb-btn-bg("warning", var(--bb-warning), var(--bb-warning-inverse));
+@include bb-btn-bg("danger", var(--bb-danger), var(--bb-danger-inverse));
+@include bb-btn-bg("dark", var(--bb-dark), var(--bb-dark-inverse));
+
+/* -------------------------------------------------
+   Outline style
+------------------------------------------------- */
+
+.bb-btn-outline {
+  --bb-btn-bg: transparent;
+  --bb-btn-hover-color: var(--bb-btn-color);
+  --bb-btn-active-color: var(--bb-btn-color);
+}
+
+@mixin bb-btn-outline($name, $color) {
+  .bb-btn-outline-#{$name} {
+    --bb-btn-color: #{$color};
+    --bb-btn-border-color: #{$color};
+
+    --bb-btn-hover-bg: color-mix(in srgb, #{$color} 10%, transparent);
+    --bb-btn-hover-border-color: #{$color};
+
+    --bb-btn-active-bg: color-mix(in srgb, #{$color} 16%, transparent);
+    --bb-btn-active-border-color: #{$color};
+  }
+}
+
+@include bb-btn-outline("primary", var(--bb-primary));
+@include bb-btn-outline("secondary", var(--bb-secondary));
+@include bb-btn-outline("success", var(--bb-success));
+@include bb-btn-outline("info", var(--bb-info));
+@include bb-btn-outline("warning", var(--bb-warning));
+@include bb-btn-outline("danger", var(--bb-danger));
+@include bb-btn-outline("dark", var(--bb-dark));
+
+.bb-btn-outline-dashed {
+  border-style: dashed;
+}
+
+/* -------------------------------------------------
+   Color-only
+------------------------------------------------- */
+
+@mixin bb-btn-color($name, $color) {
+  .bb-btn-color-#{$name} {
+    --bb-btn-color: #{$color};
+    --bb-btn-hover-color: #{$color};
+    --bb-btn-active-color: #{$color};
+  }
+}
+
+@include bb-btn-color("white", var(--bb-white));
+@include bb-btn-color("muted", var(--bb-secondary-color));
+@include bb-btn-color("primary", var(--bb-primary));
+@include bb-btn-color("success", var(--bb-success));
+@include bb-btn-color("info", var(--bb-info));
+@include bb-btn-color("warning", var(--bb-warning));
+@include bb-btn-color("danger", var(--bb-danger));
+@include bb-btn-color("dark", var(--bb-dark));
+
+/* -------------------------------------------------
+   Active-only
+------------------------------------------------- */
+
+@mixin bb-btn-active($name, $color) {
+  .bb-btn-active-#{$name} {
+    --bb-btn-hover-bg: color-mix(in srgb, #{$color} 10%, transparent);
+    --bb-btn-hover-border-color: transparent;
+
+    --bb-btn-active-bg: color-mix(in srgb, #{$color} 16%, transparent);
+    --bb-btn-active-border-color: transparent;
+  }
+}
+
+@include bb-btn-active("primary", var(--bb-primary));
+@include bb-btn-active("success", var(--bb-success));
+@include bb-btn-active("danger", var(--bb-danger));
+@include bb-btn-active("dark", var(--bb-dark));
+
+/* -------------------------------------------------
+   Utilities
+------------------------------------------------- */
+
+.bb-btn-flush {
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: var(--bb-radius-none);
+  box-shadow: none;
+}
+
+.bb-btn-flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-btn-trim-start {
+  padding-left: 0;
+}
+
+.bb-btn-trim-end {
+  padding-right: 0;
+}

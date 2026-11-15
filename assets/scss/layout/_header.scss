@@ -1,0 +1,48 @@
+/* =====================================
+   Header Layout
+   Minimal + token-first (dark/light safe)
+   ===================================== */
+.bb-header {
+  /* local tokens (override-friendly) */
+  --bb-header-bg: var(--bb-body-bg);
+  --bb-header-border-width: var(--bb-border-width, 1px);
+  --bb-header-border-color: var(--bb-border-color);
+  --bb-header-height-local: var(--bb-header-height, 70px);
+  --bb-header-zindex: var(--bb-z-sticky, 1020);
+
+  background-color: var(--bb-header-bg);
+  border-bottom: var(--bb-header-border-width) solid var(--bb-header-border-color);
+  position: sticky;
+  top: 0;
+  z-index: var(--bb-header-zindex);
+}
+
+.bb-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--bb-header-height-local);
+}
+
+.bb-logo {
+  font-size: var(--bb-fs-2xl);
+  font-weight: var(--bb-fw-bold);
+  color: var(--bb-primary);
+  text-decoration: none;
+}
+
+/* dikkat: bb-nav component ile çakışmasın */
+.bb-header-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.bb-header-nav a {
+  color: var(--bb-tertiary-color);
+  text-decoration: none;
+  font-weight: var(--bb-fw-medium);
+}
+
+.bb-header-nav a:hover {
+  color: var(--bb-primary);
+}

@@ -1,0 +1,111 @@
+/* =====================================
+   Bulbulustur Theme - Popover
+   Bootstrap 5 compatible | bb-* prefixed
+   Token-first | Dark/Light safe | PURE
+   Root: .bb-popover
+===================================== */
+
+.bb-popover {
+  /* Local tokens */
+  --bb-popover-bg: var(--bb-body-bg);
+  --bb-popover-color: var(--bb-body-color);
+  --bb-popover-border-color: var(--bb-border-color);
+  --bb-popover-border-width: var(--bb-border-width, 1px);
+  --bb-popover-radius: var(--bb-radius);
+  --bb-popover-shadow: var(--bb-shadow-sm);
+
+  --bb-popover-padding-y: 0.5rem;
+  --bb-popover-padding-x: 0.75rem;
+  --bb-popover-font-size: var(--bb-fs-sm);;
+
+  --bb-popover-header-color: var(--bb-emphasis-color);
+  --bb-popover-header-font-weight: var(--bb-fw-semibold);
+  --bb-popover-header-padding-bottom: 0.25rem;
+
+  background-color: var(--bb-popover-bg);
+  color: var(--bb-popover-color);
+
+  border: var(--bb-popover-border-width) solid var(--bb-popover-border-color);
+  border-radius: var(--bb-popover-radius);
+  box-shadow: var(--bb-popover-shadow);
+
+  padding: var(--bb-popover-padding-y) var(--bb-popover-padding-x);
+  font-size: var(--bb-popover-font-size);
+
+  .popover-header {
+    margin: 0;
+    padding: 0 0 var(--bb-popover-header-padding-bottom) 0;
+
+    color: var(--bb-popover-header-color);
+    background: transparent;
+    border: 0;
+
+    font-weight: var(--bb-popover-header-font-weight);
+  }
+
+  .popover-body {
+    margin: 0;
+    padding: 0;
+
+    color: var(--bb-popover-color);
+  }
+
+  .popover-arrow::before,
+  .popover-arrow::after {
+    border-color: transparent;
+  }
+
+  .popover-arrow::after {
+    border-top-color: var(--bb-popover-bg);
+    border-bottom-color: var(--bb-popover-bg);
+  }
+}
+
+/* -------------------------------------
+   Variants
+------------------------------------- */
+
+.bb-popover.is-success {
+  --bb-popover-bg: var(--bb-success);
+  --bb-popover-color: var(--bb-success-inverse);
+  --bb-popover-border-color: var(--bb-success);
+  --bb-popover-header-color: var(--bb-success-inverse);
+}
+
+.bb-popover.is-danger {
+  --bb-popover-bg: var(--bb-danger);
+  --bb-popover-color: var(--bb-danger-inverse);
+  --bb-popover-border-color: var(--bb-danger);
+  --bb-popover-header-color: var(--bb-danger-inverse);
+}
+
+.bb-popover.is-warning {
+  --bb-popover-bg: var(--bb-warning);
+  --bb-popover-color: var(--bb-warning-inverse);
+  --bb-popover-border-color: var(--bb-warning);
+  --bb-popover-header-color: var(--bb-warning-inverse);
+}
+
+.bb-popover.is-info {
+  --bb-popover-bg: var(--bb-info);
+  --bb-popover-color: var(--bb-info-inverse);
+  --bb-popover-border-color: var(--bb-info);
+  --bb-popover-header-color: var(--bb-info-inverse);
+}
+
+.bb-popover.is-inverse {
+  --bb-popover-bg: var(--bb-dark);
+  --bb-popover-color: var(--bb-dark-inverse);
+  --bb-popover-border-color: var(--bb-dark);
+  --bb-popover-header-color: var(--bb-dark-inverse);
+  --bb-popover-shadow: var(--bb-shadow-lg);
+}
+
+/* -------------------------------------
+   States
+------------------------------------- */
+
+.bb-popover.is-disabled {
+  opacity: var(--bb-disabled-opacity);
+  pointer-events: none;
+}

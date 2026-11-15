@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulbulustur Theme | Ribbons</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+
+    <div class="mb-4">
+      <h1 class="h4 mb-1">Ribbons</h1>
+      <div class="text-secondary">bb- prefix, Bootstrap 5 uyumlu, token odaklı.</div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Basic (card-header içinde) -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon">
+            <div class="card-title fw-semibold">Ribbon Example</div>
+
+            <!-- bg-* kullanmak serbest; istersen token ile de sür -->
+            <div class="bb-ribbon-label bg-primary">Ribbon</div>
+          </div>
+          <div class="card-body">
+            Basit kullanım: <code>card-header</code> üzerine <code>bb-ribbon</code>, label’a <code>bb-ribbon-label</code>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Start / End -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon bb-ribbon-start">
+            <div class="bb-ribbon-label bg-success">Start</div>
+            <div class="card-title fw-semibold ms-auto">Ribbon Start</div>
+          </div>
+          <div class="card-body">
+            <code>bb-ribbon-start</code> ile label sola alınır.
+          </div>
+        </div>
+      </div>
+
+      <!-- Rounded edge -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon bb-ribbon-end bb-ribbon-rounded-start">
+            <div class="card-title fw-semibold">Rounded Edge</div>
+            <div class="bb-ribbon-label bg-warning text-dark">Rounded</div>
+          </div>
+          <div class="card-body">
+            <code>bb-ribbon-rounded-start</code> / <code>bb-ribbon-rounded-end</code> ile tek tarafı “pill” yap.
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom ribbon -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon bb-ribbon-bottom">
+            <div class="card-title fw-semibold">Bottom Ribbon</div>
+            <div class="bb-ribbon-label bg-danger">Bottom</div>
+          </div>
+          <div class="card-body">
+            <code>bb-ribbon-bottom</code> ile label aşağı taşınır.
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon bb-ribbon-top bb-ribbon-vertical">
+            <div class="bb-ribbon-label bg-danger">
+              <span>OK!</span>
+            </div>
+            <div class="card-title fw-semibold">Vertical</div>
+          </div>
+          <div class="card-body">
+            <code>bb-ribbon-vertical</code> + <code>bb-ribbon-top</code>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Clip -->
+      <div class="col-12 col-lg-6">
+        <div class="card card-bordered">
+          <div class="card-header bb-ribbon bb-ribbon-end bb-ribbon-clip">
+            <div class="bb-ribbon-label">
+              Clip
+              <span class="bb-ribbon-inner bg-info"></span>
+            </div>
+            <div class="card-title fw-semibold">Clip Style</div>
+          </div>
+          <div class="card-body">
+            Label içinde <code>bb-ribbon-inner</code> opsiyonel “iç şerit” efekti verir.
+          </div>
+        </div>
+      </div>
+
+      <!-- Triangle corner ribbon (wrapper) -->
+      <div class="col-12">
+        <div class="position-relative overflow-hidden rounded-3">
+
+          <!-- triangle: renk için text-* öneriyorum -->
+          <div class="bb-ribbon-triangle bb-ribbon-top-start text-primary bb-ribbon-top-start"></div>
+          <div class="bb-ribbon-top-start">
+            <div class="bb-ribbon-icon">
+              <span class="material-symbols-outlined">check</span>
+            </div>
+          </div>
+
+          <div class="card card-bordered">
+            <div class="card-header bb-ribbon bb-ribbon-top bb-ribbon-vertical">
+              <div class="card-title fw-semibold">Triangle Corner</div>
+            </div>
+            <div class="card-body">
+              Triangle için: <code>bb-ribbon-triangle</code> + <code>bb-ribbon-top-start</code> (veya diğer köşeler).
+              Renk: <code>text-primary</code>, <code>text-danger</code> vb.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITx"
+          crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light" data-bb-density="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulbulustur Theme - Typography Demo</title>
+
+  <!-- Inter (opsiyonel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (CDN demo için) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Senin derlenmiş CSS -->
+  <link href="/assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    /* Demo-only (bb- prefix) */
+    .bb-demo-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .bb-demo-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--bb-border-color);
+      background: color-mix(in srgb, var(--bb-body-bg) 85%, transparent);
+    }
+
+    .bb-demo-toolbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .bb-demo-card {
+      border: 1px solid var(--bb-border-color);
+      border-radius: var(--bb-radius-lg);
+      background: var(--bb-body-bg);
+      box-shadow: var(--bb-shadow-xs, none);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .bb-demo-label {
+      font-size: 0.875rem;
+      color: var(--bb-secondary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .bb-demo-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 992px) {
+      .bb-demo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .bb-demo-swatch {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: var(--bb-radius, var(--bb-radius));
+      background: var(--bb-tertiary-bg);
+      border: 1px solid var(--bb-border-color);
+      font-family: var(--bb-font-mono, var(--bs-font-monospace));
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .bb-demo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--bb-theme-primary, var(--bb-primary));
+    }
+
+    .bb-demo-tokenlist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Toolbar -->
+  <div class="bb-demo-toolbar">
+    <div class="bb-demo-toolbar-inner">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <strong>Typography Demo</strong>
+        <span class="text-muted small">data-bs-theme / data-bb-density test</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Theme">
+          <button type="button" class="btn btn-outline-secondary" data-bb-theme="light">Light</button>
+          <button type="button" class="btn btn-outline-secondary" data-bb-theme="dark">Dark</button>
+        </div>
+
+        <div class="btn-group btn-group-sm" role="group" aria-label="Density">
+          <button type="button" class="btn btn-outline-secondary" data-bb-density="normal">Normal</button>
+          <button type="button" class="btn btn-outline-secondary" data-bb-density="compact">Compact</button>
+        </div>
+
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bb-copy="true">
+          Debug Tokens
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bb-demo-wrap">
+    <!-- Intro -->
+    <div class="bb-demo-card">
+      <div class="bb-demo-label">Quick check</div>
+      <div class="bb-demo-tokenlist">
+        <span class="bb-demo-swatch"><span class="bb-demo-dot"></span> --bb-body-bg</span>
+        <span class="bb-demo-swatch"><span class="bb-demo-dot"></span> --bb-body-color</span>
+        <span class="bb-demo-swatch"><span class="bb-demo-dot"></span> --bb-secondary-color</span>
+        <span class="bb-demo-swatch"><span class="bb-demo-dot"></span> --bb-border-color</span>
+        <span class="bb-demo-swatch"><span class="bb-demo-dot"></span> --bb-link-color</span>
+      </div>
+      <p class="mt-3 mb-0">
+        Bu sayfa sadece tipografi “PURE” katmanını gözle test etmek için.
+        Theme ve density butonları HTML attribute değiştirir.
+      </p>
+    </div>
+
+    <div class="bb-demo-grid">
+      <!-- Headings -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Headings</div>
+        <h1>H1 — Bulbulustur heading</h1>
+        <h2>H2 — Bulbulustur heading</h2>
+        <h3>H3 — Bulbulustur heading</h3>
+        <h4>H4 — Bulbulustur heading</h4>
+        <h5>H5 — Bulbulustur heading</h5>
+        <h6>H6 — Bulbulustur heading</h6>
+
+        <hr>
+
+        <div class="bb-demo-label">Heading classes</div>
+        <div class="h1">.h1 sınıfı</div>
+        <div class="h2">.h2 sınıfı</div>
+        <div class="h3">.h3 sınıfı</div>
+        <div class="h4">.h4 sınıfı</div>
+        <div class="h5">.h5 sınıfı</div>
+        <div class="h6">.h6 sınıfı</div>
+      </div>
+
+      <!-- Text -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Body / Paragraph / Lead / Small</div>
+
+        <p>
+          Bu bir paragraf örneği. <a href="#">Link örneği</a> ve <strong>strong</strong>,
+          <em>em</em>, <abbr title="Abbreviation">abbr</abbr> içerir.
+        </p>
+
+        <p class="bb-lead">
+          Bu bir <code>.bb-lead</code> örneği. Daha büyük, daha nefesli.
+        </p>
+
+        <p>
+          <small>Bu bir small örneği.</small>
+        </p>
+
+        <p>
+          Seçim (selection) testi: bu cümleyi seç.
+        </p>
+
+        <hr>
+
+        <div class="bb-demo-label">Mark / Sup / Sub</div>
+        <p>
+          <mark>mark örneği</mark> — normal metin içinde vurgu.
+          10<sup>2</sup> ve H<sub>2</sub>O
+        </p>
+      </div>
+
+      <!-- Lists -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Lists</div>
+
+        <ul>
+          <li>Unordered item 1</li>
+          <li>Unordered item 2</li>
+          <li>Unordered item 3</li>
+        </ul>
+
+        <ol>
+          <li>Ordered item 1</li>
+          <li>Ordered item 2</li>
+          <li>Ordered item 3</li>
+        </ol>
+
+        <div class="bb-demo-label">.list-unstyled</div>
+        <ul class="list-unstyled">
+          <li>Unstyled item 1</li>
+          <li>Unstyled item 2</li>
+          <li>Unstyled item 3</li>
+        </ul>
+      </div>
+
+      <!-- DL + Blockquote -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Definition list</div>
+        <dl>
+          <dt>Terim</dt>
+          <dd>Açıklama kısmı burada.</dd>
+          <dt>Başka bir terim</dt>
+          <dd>İkinci açıklama burada.</dd>
+        </dl>
+
+        <div class="bb-demo-label">Blockquote</div>
+        <blockquote>
+          “Bu bir blockquote örneği. Kenardaki border ve italic hissi test.”
+        </blockquote>
+
+        <hr>
+
+        <div class="bb-demo-label">Horizontal Rule</div>
+        <hr>
+      </div>
+
+      <!-- Code / Pre / KBD -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Code / Pre / KBD</div>
+        <p>
+          Inline <code>code</code> örneği ve <kbd>Ctrl</kbd> + <kbd>K</kbd>.
+        </p>
+
+        <pre><code>/* pre/code örneği */
+:root {
+  --bb-root-font-size: 15px;
+  --bb-h1: 26px;
+}
+</code></pre>
+      </div>
+
+      <!-- Font-size utils -->
+      <div class="bb-demo-card">
+        <div class="bb-demo-label">Font-size utilities</div>
+        <div class="bb-fs-xs">.bb-fs-xs — XS metin</div>
+        <div class="bb-fs-sm">.bb-fs-sm — SM metin</div>
+        <div class="bb-fs-base">.bb-fs-base — BASE metin</div>
+        <div class="bb-fs-lg">.bb-fs-lg — LG metin</div>
+        <div class="bb-fs-xl">.bb-fs-xl — XL metin</div>
+        <div class="bb-fs-xxl">.bb-fs-xxl — XXL metin</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+
+      function setTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+        // buton active görünümü (bootstrap)
+        document.querySelectorAll("[data-bb-theme]").forEach((btn) => {
+          btn.classList.toggle("active", btn.getAttribute("data-bb-theme") === theme);
+        });
+      }
+
+      function setDensity(density) {
+        if (density === "normal") {
+          root.removeAttribute("data-bb-density");
+        } else {
+          root.setAttribute("data-bb-density", density);
+        }
+        document.querySelectorAll("[data-bb-density]").forEach((btn) => {
+          btn.classList.toggle("active", btn.getAttribute("data-bb-density") === density);
+        });
+      }
+
+      document.addEventListener("click", (e) => {
+        const t = e.target.closest("[data-bb-theme],[data-bb-density],[data-bb-copy]");
+        if (!t) {
+          return;
+        }
+
+        if (t.hasAttribute("data-bb-theme")) {
+          setTheme(t.getAttribute("data-bb-theme"));
+        }
+
+        if (t.hasAttribute("data-bb-density")) {
+          setDensity(t.getAttribute("data-bb-density"));
+        }
+
+        if (t.hasAttribute("data-bb-copy")) {
+          const styles = getComputedStyle(root);
+          const payload = {
+            theme: root.getAttribute("data-bs-theme"),
+            density: root.getAttribute("data-bb-density") || "normal",
+            bb_root_font_size: styles.getPropertyValue("--bb-root-font-size").trim(),
+            bb_h1: styles.getPropertyValue("--bb-h1").trim(),
+            bb_h2: styles.getPropertyValue("--bb-h2").trim(),
+            bb_body_bg: styles.getPropertyValue("--bb-body-bg").trim(),
+            bb_body_color: styles.getPropertyValue("--bb-body-color").trim(),
+            bb_text_muted: styles.getPropertyValue("--bb-secondary-color").trim(),
+            bb_border_color: styles.getPropertyValue("--bb-border-color").trim(),
+            bb_link_color: styles.getPropertyValue("--bb-link-color").trim()
+          };
+
+          navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
+          t.textContent = "Copied ✓";
+          setTimeout(() => (t.textContent = "Debug Tokens"), 900);
+        }
+      });
+
+      // initial
+      setTheme(root.getAttribute("data-bs-theme") || "light");
+      setDensity(root.getAttribute("data-bb-density") || "normal");
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

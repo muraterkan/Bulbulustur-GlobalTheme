@@ -1,0 +1,168 @@
+/* =====================================
+   Bulbulustur Theme - Accordion
+   Bootstrap 5 base preserved
+   Root: .bb-accordion
+===================================== */
+
+.bb-accordion {
+  /* Local tokens */
+  --bb-accordion-padding-y: 1rem;
+  --bb-accordion-padding-x: 1.25rem;
+  --bb-accordion-icon-size: 1.25rem;
+
+  --bb-accordion-border-color: var(--bb-border-color);
+  --bb-accordion-border-width: var(--bb-border-width, 1px);
+  --bb-accordion-radius: var(--bb-radius);
+  --bb-accordion-bg: var(--bb-body-bg);
+  --bb-accordion-color: var(--bb-body-color);
+  --bb-accordion-muted-color: var(--bb-secondary-color);
+  --bb-accordion-active-color: var(--bb-primary);
+  --bb-accordion-active-bg: var(--bb-tertiary-bg);
+
+  .accordion-item {
+    background-color: var(--bb-accordion-bg);
+    border: var(--bb-accordion-border-width) solid var(--bb-accordion-border-color);
+    border-radius: var(--bb-accordion-radius);
+    overflow: hidden;
+
+    + .accordion-item {
+      margin-top: 0.75rem;
+    }
+  }
+
+  .accordion-header {
+    margin: 0;
+  }
+
+  .accordion-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: var(--bb-accordion-padding-y) var(--bb-accordion-padding-x);
+
+    font-weight: var(--bb-fw-medium);
+    color: var(--bb-accordion-color);
+    background-color: transparent;
+    box-shadow: none;
+
+    &::after {
+      display: none;
+    }
+
+    &:not(.collapsed) {
+      color: var(--bb-accordion-active-color);
+      background-color: var(--bb-accordion-active-bg);
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:disabled {
+      opacity: var(--bb-disabled-opacity);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  .accordion-body {
+    color: var(--bb-accordion-color);
+    background-color: var(--bb-accordion-bg);
+  }
+
+  /* -------------------------------------
+     Icon
+  ------------------------------------- */
+
+  .bb-accordion-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--bb-accordion-icon-size);
+    color: var(--bb-accordion-muted-color);
+
+    transition:
+      transform var(--bb-transition-fast),
+      color var(--bb-transition-fast);
+  }
+
+  /* -------------------------------------
+     Icon toggle mode
+  ------------------------------------- */
+
+  &.bb-accordion-icon-toggle {
+    .accordion-button:not(.collapsed) {
+      .bb-accordion-icon {
+        transform: rotate(90deg);
+        color: var(--bb-accordion-active-color);
+      }
+    }
+
+    .accordion-button.collapsed {
+      .bb-accordion-icon {
+        transform: rotate(0);
+        color: var(--bb-accordion-muted-color);
+      }
+    }
+  }
+
+  /* -------------------------------------
+     Icon collapse mode
+  ------------------------------------- */
+
+  &.bb-accordion-icon-collapse {
+    .bb-accordion-icon-on {
+      display: none;
+    }
+
+    .bb-accordion-icon-off {
+      display: inline-flex;
+    }
+
+    .accordion-button:not(.collapsed) {
+      .bb-accordion-icon-on {
+        display: inline-flex;
+        color: var(--bb-accordion-active-color);
+      }
+
+      .bb-accordion-icon-off {
+        display: none;
+      }
+    }
+  }
+
+  /* -------------------------------------
+     Borderless
+  ------------------------------------- */
+
+  &.bb-accordion-borderless {
+    .accordion-item {
+      border: 0;
+    }
+  }
+
+  /* -------------------------------------
+     Flush
+  ------------------------------------- */
+
+  &.bb-accordion-flush {
+    .accordion-item {
+      background-color: transparent;
+      border: 0;
+      border-radius: var(--bb-radius-none);
+    }
+
+    .accordion-button {
+      padding-left: 0;
+      padding-right: 0;
+      background-color: transparent;
+
+      &:not(.collapsed) {
+        background-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/* =====================================
+   Bulbulustur Theme - Overlay (PURE)
+   Token-first | Dark/Light safe
+   Root: .bb-overlay
+   States: .bb-overlay-hover | .bb-overlay-show | .bb-overlay-block
+   ===================================== */
+
+.bb-overlay {
+  /* -------------------------------------
+     Tokens (override-friendly)
+  -------------------------------------- */
+
+  /* Safety / scope */
+  --bb-overlay-scope-overflow: hidden;
+
+  /* Layer visuals */
+  --bb-overlay-bg: color-mix(in srgb, var(--bb-body-color) 35%, transparent);
+  --bb-overlay-opacity: 1;
+
+  /* Optional blur */
+  --bb-overlay-backdrop-blur: 0px;
+
+  /* Motion */
+  --bb-overlay-transition-speed: 250ms;
+  --bb-overlay-transition-ease: ease;
+
+  /* Interactions */
+  --bb-overlay-block-cursor: wait;
+
+  position: relative;                /* scope lock */
+  overflow: var(--bb-overlay-scope-overflow);
+}
+
+/* Content wrapper */
+.bb-overlay-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Layer */
+.bb-overlay-layer {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bb-overlay-bg);
+
+  /* blur (optional) */
+  backdrop-filter: blur(var(--bb-overlay-backdrop-blur));
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity var(--bb-overlay-transition-speed) var(--bb-overlay-transition-ease),
+    visibility 0ms linear var(--bb-overlay-transition-speed);
+
+  z-index: 2;
+
+  /* default: do not block clicks unless state says so */
+  pointer-events: none;
+}
+
+/* Hover OR keyboard focus within */
+.bb-overlay-hover:hover > .bb-overlay-layer,
+.bb-overlay-hover:focus-within > .bb-overlay-layer {
+  opacity: var(--bb-overlay-opacity);
+  visibility: visible;
+}
+
+/* Always visible (show) */
+.bb-overlay-show > .bb-overlay-layer {
+  opacity: var(--bb-overlay-opacity);
+  visibility: visible;
+}
+
+/* Blocking variant: blocks interaction + shows layer */
+.bb-overlay-block {
+  cursor: var(--bb-overlay-block-cursor);
+}
+
+.bb-overlay-block > .bb-overlay-layer {
+  opacity: var(--bb-overlay-opacity);
+  visibility: visible;
+
+  /* true blocking */
+  pointer-events: auto;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bb-overlay-layer {
+    transition: none;
+  }
+}

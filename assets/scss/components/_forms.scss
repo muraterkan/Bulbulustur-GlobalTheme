@@ -1,0 +1,615 @@
+/* =====================================
+   Bulbulustur Theme - Forms
+   Bootstrap 5 base classes preserved
+   Token-first | Global premium form object system | PURE
+===================================== */
+
+:root {
+  /* -------------------------------------------------------
+     Form philosophy
+     Label bilgi hiyerarşisini taşır.
+     Input sadece verinin yatağıdır.
+     Input label'dan daha siyah, daha etli ve daha baskın görünmez.
+  ------------------------------------------------------- */
+
+  /* Label */
+  --bb-form-label-color: color-mix(in srgb, var(--bb-emphasis-color) 78%, var(--bb-secondary-color));
+  --bb-form-label-font-size: var(--bb-fs-sm);;
+  --bb-form-label-font-weight: var(--bb-fw-semibold);
+  --bb-form-label-line-height: 1.3;
+  --bb-form-label-margin-bottom: 0.48rem;
+
+  /* Form Control */
+  --bb-form-control-bg: color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-tertiary-bg));
+  --bb-form-control-bg-hover: color-mix(in srgb, var(--bb-body-bg) 97%, var(--bb-primary));
+  --bb-form-control-bg-focus: var(--bb-body-bg);
+
+  --bb-form-control-color: color-mix(in srgb, var(--bb-emphasis-color) 76%, var(--bb-secondary-color));
+  --bb-form-control-color-hover: var(--bb-emphasis-color);
+  --bb-form-control-color-focus: var(--bb-emphasis-color);
+
+  --bb-form-control-placeholder-color: color-mix(in srgb, var(--bb-secondary-color) 58%, transparent);
+
+  --bb-form-control-border-color: color-mix(in srgb, var(--bb-border-color) 56%, transparent);
+  --bb-form-control-border-hover-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  --bb-form-control-border-focus-color: color-mix(in srgb, var(--bb-primary) 56%, var(--bb-border-color));
+
+  --bb-form-control-border-width: var(--bb-border-width);
+  --bb-form-control-radius: var(--bb-radius);
+
+  --bb-form-control-min-height: 3rem;
+  --bb-form-control-padding-y: 0.72rem;
+  --bb-form-control-padding-x: 0.95rem;
+
+  --bb-form-control-font-size: font-size: var(--bb-fs-base);
+  --bb-form-control-font-weight: var(--bb-fw-medium);
+  --bb-form-control-line-height: var(--bb-line-height-base);
+
+  --bb-form-control-box-shadow: none;
+  --bb-form-control-focus-box-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--bb-primary) 9%, transparent);
+
+  --bb-form-control-transition:
+    color var(--bb-transition-fast),
+    border-color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast);
+
+  /* Sizes */
+  --bb-form-control-sm-min-height: 2.55rem;
+  --bb-form-control-sm-padding-y: 0.56rem;
+  --bb-form-control-sm-padding-x: 0.8rem;
+  --bb-form-control-sm-font-size: var(--bb-fs-sm);;
+
+  --bb-form-control-lg-min-height: 3.35rem;
+  --bb-form-control-lg-padding-y: 0.82rem;
+  --bb-form-control-lg-padding-x: 1.05rem;
+  --bb-form-control-lg-font-size: var(--bb-fs-base);
+
+  /* Solid Variant */
+  --bb-form-control-solid-bg: color-mix(in srgb, var(--bb-body-bg) 90%, var(--bb-tertiary-bg));
+  --bb-form-control-solid-bg-hover: color-mix(in srgb, var(--bb-body-bg) 95%, var(--bb-tertiary-bg));
+  --bb-form-control-solid-border-color: color-mix(in srgb, var(--bb-border-color) 42%, transparent);
+
+  /* Transparent Variant */
+  --bb-form-control-transparent-bg: transparent;
+  --bb-form-control-transparent-border-color: transparent;
+
+  /* Flush Variant */
+  --bb-form-control-flush-border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
+
+  /* Disabled / Readonly */
+  --bb-form-control-disabled-bg: color-mix(in srgb, var(--bb-tertiary-bg) 82%, var(--bb-body-bg));
+  --bb-form-control-disabled-color: color-mix(in srgb, var(--bb-secondary-color) 72%, transparent);
+  --bb-form-control-disabled-border-color: color-mix(in srgb, var(--bb-border-color) 46%, transparent);
+
+  --bb-form-control-readonly-bg: color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
+
+  /* Validation */
+  --bb-form-control-valid-border-color: color-mix(in srgb, var(--bb-success) 58%, var(--bb-border-color));
+  --bb-form-control-valid-focus-border-color: var(--bb-success);
+  --bb-form-control-valid-focus-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--bb-success) 10%, transparent);
+
+  --bb-form-control-invalid-border-color: color-mix(in srgb, var(--bb-danger) 58%, var(--bb-border-color));
+  --bb-form-control-invalid-focus-border-color: var(--bb-danger);
+  --bb-form-control-invalid-focus-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--bb-danger) 10%, transparent);
+
+  --bb-form-validation-font-size: var(--bb-fs-xs);
+  --bb-form-validation-line-height: 1.4;
+
+  /* Required */
+  --bb-form-required-color: var(--bb-danger);
+  --bb-form-required-size: 0.85em;
+
+  /* Checks / Radios / Switch */
+  --bb-form-check-solid-bg: color-mix(in srgb, var(--bb-body-bg) 90%, var(--bb-tertiary-bg));
+  --bb-form-check-border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
+  --bb-form-check-focus-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--bb-primary) 9%, transparent);
+
+  /* Image Check */
+  --bb-form-check-image-radius: var(--bb-radius-lg);
+  --bb-form-check-image-border-color: var(--bb-form-control-border-color);
+  --bb-form-check-image-shadow: var(--bb-shadow-sm);
+  --bb-form-check-image-padding: var(--bb-space-4);
+  --bb-form-check-image-gap: var(--bb-space-4);
+
+  /* Helper */
+  --bb-form-text-color: var(--bb-secondary-color);
+  --bb-form-text-font-size: var(--bb-fs-sm);;
+  --bb-form-text-line-height: var(--bb-line-height-base);
+}
+
+/* -------------------------------------------------------
+   Label Base
+------------------------------------------------------- */
+
+.form-label {
+  margin-bottom: var(--bb-form-label-margin-bottom);
+
+  color: var(--bb-form-label-color);
+  font-size: var(--bb-form-label-font-size);
+  font-weight: var(--bb-form-label-font-weight);
+  line-height: var(--bb-form-label-line-height);
+}
+
+.form-label .text-danger,
+label .text-danger {
+  margin-left: 0.12rem;
+  color: var(--bb-form-required-color) !important;
+}
+
+/* -------------------------------------------------------
+   Form Control Base
+------------------------------------------------------- */
+
+.form-control,
+.form-select {
+  min-height: var(--bb-form-control-min-height);
+  padding: var(--bb-form-control-padding-y) var(--bb-form-control-padding-x);
+
+  color: var(--bb-form-control-color);
+  background-color: var(--bb-form-control-bg);
+  border-color: var(--bb-form-control-border-color);
+  border-width: var(--bb-form-control-border-width);
+  border-radius: var(--bb-form-control-radius);
+
+  font-size: var(--bb-form-control-font-size);
+  font-weight: var(--bb-form-control-font-weight);
+  line-height: var(--bb-form-control-line-height);
+
+  box-shadow: var(--bb-form-control-box-shadow);
+  transition: var(--bb-form-control-transition);
+}
+
+.form-control:hover,
+.form-select:hover {
+  color: var(--bb-form-control-color-hover);
+  background-color: var(--bb-form-control-bg-hover);
+  border-color: var(--bb-form-control-border-hover-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--bb-form-control-color-focus);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-control-focus-box-shadow);
+}
+
+.form-control::placeholder {
+  color: var(--bb-form-control-placeholder-color);
+  font-weight: var(--bb-fw-medium);
+  opacity: 1;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+textarea.form-control {
+  min-height: 8.25rem;
+  resize: vertical;
+}
+
+/* -------------------------------------------------------
+   Form Control Sizes
+------------------------------------------------------- */
+
+.form-control-sm,
+.form-select-sm {
+  min-height: var(--bb-form-control-sm-min-height);
+  padding: var(--bb-form-control-sm-padding-y) var(--bb-form-control-sm-padding-x);
+
+  font-size: var(--bb-form-control-sm-font-size);
+}
+
+.form-control-lg,
+.form-select-lg {
+  min-height: var(--bb-form-control-lg-min-height);
+  padding: var(--bb-form-control-lg-padding-y) var(--bb-form-control-lg-padding-x);
+
+  font-size: var(--bb-form-control-lg-font-size);
+}
+
+/* -------------------------------------------------------
+   Solid Variant
+------------------------------------------------------- */
+
+.form-control.form-control-solid,
+.form-select.form-select-solid {
+  background-color: var(--bb-form-control-solid-bg);
+  border-color: var(--bb-form-control-solid-border-color);
+}
+
+.form-control.form-control-solid:hover,
+.form-select.form-select-solid:hover {
+  background-color: var(--bb-form-control-solid-bg-hover);
+  border-color: var(--bb-form-control-border-hover-color);
+}
+
+.form-control.form-control-solid:focus,
+.form-select.form-select-solid:focus {
+  color: var(--bb-form-control-color-focus);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-control-focus-box-shadow);
+}
+
+/* -------------------------------------------------------
+   Transparent Variant
+------------------------------------------------------- */
+
+.form-control.form-control-transparent,
+.form-select.form-select-transparent {
+  background-color: var(--bb-form-control-transparent-bg);
+  border-color: var(--bb-form-control-transparent-border-color);
+  box-shadow: none;
+}
+
+.form-control.form-control-transparent:hover,
+.form-select.form-select-transparent:hover {
+  background-color: var(--bb-form-control-transparent-bg);
+  border-color: var(--bb-form-control-transparent-border-color);
+}
+
+.form-control.form-control-transparent:focus,
+.form-select.form-select-transparent:focus {
+  background-color: var(--bb-form-control-transparent-bg);
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: none;
+}
+
+/* -------------------------------------------------------
+   Flush Variant
+------------------------------------------------------- */
+
+.form-control.form-control-flush,
+.form-select.form-select-flush {
+  min-height: auto;
+  padding-left: 0;
+  padding-right: 0;
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: var(--bb-form-control-border-width) solid var(--bb-form-control-flush-border-color);
+  border-radius: var(--bb-radius-none);
+  box-shadow: none;
+}
+
+.form-control.form-control-flush:hover,
+.form-select.form-select-flush:hover {
+  background-color: transparent;
+  border-bottom-color: var(--bb-form-control-border-hover-color);
+}
+
+.form-control.form-control-flush:focus,
+.form-select.form-select-flush:focus {
+  background-color: transparent;
+  border-bottom-color: var(--bb-form-control-border-focus-color);
+  box-shadow: none;
+}
+
+/* -------------------------------------------------------
+   Disabled / Readonly
+------------------------------------------------------- */
+
+.form-control:disabled,
+.form-select:disabled,
+.form-check-input:disabled {
+  color: var(--bb-form-control-disabled-color);
+  background-color: var(--bb-form-control-disabled-bg);
+  border-color: var(--bb-form-control-disabled-border-color);
+  opacity: var(--bb-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.form-control:read-only:not(:disabled) {
+  background-color: var(--bb-form-control-readonly-bg);
+}
+
+/* -------------------------------------------------------
+   Validation
+------------------------------------------------------- */
+
+.form-control.is-valid,
+.form-select.is-valid {
+  border-color: var(--bb-form-control-valid-border-color);
+}
+
+.form-control.is-valid:focus,
+.form-select.is-valid:focus {
+  border-color: var(--bb-form-control-valid-focus-border-color);
+  box-shadow: var(--bb-form-control-valid-focus-shadow);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: var(--bb-form-control-invalid-border-color);
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+  border-color: var(--bb-form-control-invalid-focus-border-color);
+  box-shadow: var(--bb-form-control-invalid-focus-shadow);
+}
+
+.field-validation-error,
+.text-danger.small {
+  font-size: var(--bb-form-validation-font-size);
+  line-height: var(--bb-form-validation-line-height);
+}
+
+/* -------------------------------------------------------
+   Form Text / Help
+------------------------------------------------------- */
+
+.form-text {
+  color: var(--bb-form-text-color);
+  font-size: var(--bb-form-text-font-size);
+  line-height: var(--bb-form-text-line-height);
+}
+
+/* -------------------------------------------------------
+   Required Indicator
+------------------------------------------------------- */
+
+.form-label.required::after,
+label.required::after {
+  content: "*";
+  display: inline-block;
+  margin-left: 0.25rem;
+
+  color: var(--bb-form-required-color);
+  font-size: var(--bb-form-required-size);
+  line-height: 1;
+}
+
+.required:not(.form-label):not(label)::after {
+  content: "*";
+  display: inline-block;
+
+  color: var(--bb-form-required-color);
+  font-size: var(--bb-form-required-size);
+  line-height: 1;
+}
+
+.required.position-absolute {
+  pointer-events: none;
+}
+
+.required.position-absolute::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -35%);
+}
+
+/* -------------------------------------------------------
+   Input Group Compatibility
+   Uses Bootstrap structure:
+   .input-group.bb-input-group > .input-group-text + .form-control
+------------------------------------------------------- */
+
+.input-group .form-control,
+.input-group .form-select {
+  min-height: var(--bb-form-control-min-height);
+}
+
+.input-group-text {
+  color: color-mix(in srgb, var(--bb-secondary-color) 84%, var(--bb-emphasis-color));
+  background-color: var(--bb-form-control-bg);
+  border-color: var(--bb-form-control-border-color);
+  border-width: var(--bb-form-control-border-width);
+  border-radius: var(--bb-form-control-radius);
+  box-shadow: none;
+
+  transition:
+    color var(--bb-transition-fast),
+    border-color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.input-group:focus-within .input-group-text {
+  color: var(--bb-primary);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+}
+
+/* -------------------------------------------------------
+   Checks / Radios
+------------------------------------------------------- */
+
+.form-check.form-check-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.form-check.form-check-custom .form-check-input {
+  float: none;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.form-check.form-check-custom .form-check-label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-check-input {
+  border-color: var(--bb-form-check-border-color);
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-check-focus-shadow);
+}
+
+.form-check.form-check-solid .form-check-input {
+  background-color: var(--bb-form-check-solid-bg);
+  border-color: transparent;
+}
+
+.form-check.form-check-solid .form-check-input:focus {
+  border-color: var(--bb-form-control-border-focus-color);
+}
+
+.form-check.form-check-solid .form-check-input:checked {
+  border-color: transparent;
+}
+
+/* -------------------------------------------------------
+   Check Color Variants
+------------------------------------------------------- */
+
+.form-check.form-check-success .form-check-input:checked {
+  background-color: var(--bb-success);
+  border-color: var(--bb-success);
+}
+
+.form-check.form-check-danger .form-check-input:checked {
+  background-color: var(--bb-danger);
+  border-color: var(--bb-danger);
+}
+
+.form-check.form-check-warning .form-check-input:checked {
+  background-color: var(--bb-warning);
+  border-color: var(--bb-warning);
+}
+
+/* -------------------------------------------------------
+   Check Sizes
+------------------------------------------------------- */
+
+.form-check.form-check-sm .form-check-input {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.form-check.form-check-lg .form-check-input {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+/* -------------------------------------------------------
+   Switch Extras
+------------------------------------------------------- */
+
+.form-switch.form-check-custom {
+  gap: 0.75rem;
+}
+
+.form-switch.form-check-solid .form-check-input {
+  background-color: var(--bb-form-check-solid-bg);
+  border-color: transparent;
+}
+
+.form-switch.form-check-solid .form-check-input:focus {
+  border-color: var(--bb-form-control-border-focus-color);
+}
+
+.form-switch.form-check-success .form-check-input:checked {
+  background-color: var(--bb-success);
+  border-color: var(--bb-success);
+}
+
+.form-switch.form-check-danger .form-check-input:checked {
+  background-color: var(--bb-danger);
+  border-color: var(--bb-danger);
+}
+
+.form-switch.form-check-warning .form-check-input:checked {
+  background-color: var(--bb-warning);
+  border-color: var(--bb-warning);
+}
+
+/* -------------------------------------------------------
+   Image Check
+------------------------------------------------------- */
+
+.form-check-image {
+  display: block;
+
+  padding: var(--bb-form-check-image-padding);
+
+  cursor: pointer;
+  background-color: var(--bb-form-control-bg);
+  border: var(--bb-form-control-border-width) solid var(--bb-form-check-image-border-color);
+  border-radius: var(--bb-form-check-image-radius);
+
+  transition:
+    border-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast),
+    transform var(--bb-transition-fast);
+}
+
+.form-check-image .form-check-wrapper {
+  margin-bottom: var(--bb-form-check-image-gap);
+  overflow: hidden;
+  border-radius: calc(var(--bb-form-check-image-radius) - var(--bb-space-2));
+}
+
+.form-check-image .form-check-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.form-check-image:focus-within {
+  border-color: var(--bb-form-control-border-focus-color);
+}
+
+.form-check-image.active {
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-check-image-shadow);
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------
+   Dark Mode Adjustments
+   Dark mode'da inputlar açık kutu gibi bağırmaz.
+   Yine de body surface ile uyumlu, sessiz form yüzeyi kullanılır.
+------------------------------------------------------- */
+
+[data-bs-theme="dark"] {
+  --bb-form-control-bg: color-mix(in srgb, var(--bb-body-bg) 88%, var(--bb-tertiary-bg));
+  --bb-form-control-bg-hover: color-mix(in srgb, var(--bb-body-bg) 82%, var(--bb-tertiary-bg));
+  --bb-form-control-bg-focus: color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-tertiary-bg));
+
+  --bb-form-control-color: color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-secondary-color));
+  --bb-form-control-color-hover: var(--bb-emphasis-color);
+  --bb-form-control-color-focus: var(--bb-emphasis-color);
+
+  --bb-form-control-placeholder-color: color-mix(in srgb, var(--bb-secondary-color) 62%, transparent);
+
+  --bb-form-control-border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
+  --bb-form-control-border-hover-color: color-mix(in srgb, var(--bb-primary) 30%, var(--bb-border-color));
+  --bb-form-control-border-focus-color: color-mix(in srgb, var(--bb-primary) 58%, var(--bb-border-color));
+
+  --bb-form-label-color: color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-secondary-color));
+
+  --bb-form-control-solid-bg: color-mix(in srgb, var(--bb-body-bg) 78%, var(--bb-tertiary-bg));
+  --bb-form-control-solid-bg-hover: color-mix(in srgb, var(--bb-body-bg) 84%, var(--bb-tertiary-bg));
+  --bb-form-control-solid-border-color: color-mix(in srgb, var(--bb-border-color) 48%, transparent);
+
+  --bb-form-control-disabled-bg: color-mix(in srgb, var(--bb-body-bg) 72%, var(--bb-tertiary-bg));
+  --bb-form-control-readonly-bg: color-mix(in srgb, var(--bb-body-bg) 76%, var(--bb-tertiary-bg));
+
+  --bb-form-check-solid-bg: color-mix(in srgb, var(--bb-body-bg) 80%, var(--bb-tertiary-bg));
+}
+
+/* -------------------------------------------------------
+   Reduced Motion
+------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control,
+  .form-select,
+  .input-group-text,
+  .form-check-image {
+    transition: none;
+  }
+}

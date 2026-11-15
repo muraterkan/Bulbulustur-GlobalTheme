@@ -1,0 +1,256 @@
+/* =====================================
+   Bulbulustur Theme - Datetime (PURE)
+   Prefix: bb-
+   Vendor yok. Bootstrap 5 + token.
+   ===================================== */
+
+.bb-datetime {
+  /* local tokens */
+  --bb-dt-bg: var(--bb-body-bg);
+  --bb-dt-surface: var(--bb-body-bg);
+  --bb-dt-border: var(--bb-border-color);
+  --bb-dt-text: var(--bb-body-color);
+  --bb-dt-muted: var(--bb-secondary-color);
+
+  --bb-dt-radius: var(--bb-radius-xl);
+  --bb-dt-shadow: var(--bb-shadow-sm);
+
+  --bb-dt-hover-bg: var(--bb-tertiary-bg);
+  --bb-dt-active-bg: color-mix(in srgb, var(--bb-primary)12%, transparent);
+  --bb-dt-active-text: var(--bb-primary);
+
+  --bb-dt-inrange-bg: color-mix(in srgb, var(--bb-primary)8%, transparent);
+  --bb-dt-today-ring: color-mix(in srgb, var(--bb-primary)35%, transparent);
+
+  --bb-dt-gap: 0.75rem;
+  --bb-dt-pad: 0.85rem;
+
+  position: relative;
+}
+
+.bb-datetime-field {
+  position: relative;
+}
+
+.bb-datetime-input {
+  padding-right: 2.75rem;
+}
+
+.bb-datetime-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.85rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bb-dt-muted);
+  pointer-events: none;
+}
+
+/* Popover */
+.bb-datetime-popover {
+  position: absolute;
+  z-index: 1080; /* modal altında kalmasın */
+  min-width: 320px;
+  background-color: var(--bb-dt-surface);
+  border: 1px solid var(--bb-dt-border);
+  border-radius: var(--bb-dt-radius);
+  box-shadow: var(--bb-dt-shadow);
+  overflow: hidden;
+}
+
+.bb-datetime-popover[data-bb-open="false"] {
+  display: none;
+}
+
+.bb-datetime-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-dt-gap);
+  padding: var(--bb-dt-pad);
+  border-bottom: 1px solid var(--bb-dt-border);
+}
+
+.bb-datetime-title {
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-dt-text);
+  margin: 0;
+}
+
+.bb-datetime-close {
+  border: 0;
+  background: transparent;
+  color: var(--bb-dt-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--bb-radius-lg);
+  padding: 0.35rem;
+}
+.bb-datetime-close:hover {
+  background-color: var(--bb-dt-hover-bg);
+  color: var(--bb-dt-text);
+}
+
+/* Body layout */
+.bb-datetime-popover-body {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0;
+}
+
+.bb-datetime-presets {
+  padding: var(--bb-dt-pad);
+  border-right: 1px solid var(--bb-dt-border);
+  background-color: var(--bb-dt-surface);
+}
+
+.bb-datetime-presets .bb-datetime-preset {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--bb-radius-lg);
+  color: var(--bb-dt-text);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.bb-datetime-presets .bb-datetime-preset:hover {
+  background-color: var(--bb-dt-hover-bg);
+}
+.bb-datetime-presets .bb-datetime-preset[aria-current="true"] {
+  background-color: var(--bb-dt-active-bg);
+  color: var(--bb-dt-active-text);
+}
+
+/* Calendars */
+.bb-datetime-calendars {
+  padding: var(--bb-dt-pad);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--bb-dt-gap);
+}
+
+.bb-datetime-cal {
+  min-width: 220px;
+}
+
+.bb-datetime-cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.bb-datetime-nav {
+  border: 0;
+  background: transparent;
+  color: var(--bb-dt-muted);
+  border-radius: var(--bb-radius-lg);
+  padding: 0.25rem 0.35rem;
+}
+.bb-datetime-nav:hover {
+  background-color: var(--bb-dt-hover-bg);
+  color: var(--bb-dt-text);
+}
+
+.bb-datetime-month {
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-dt-text);
+  font-size: var(--bb-fs-base);
+  margin: 0;
+}
+
+/* Weekdays & grid */
+.bb-datetime-weekdays,
+.bb-datetime-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.bb-datetime-weekdays div {
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-dt-muted);
+  text-align: center;
+  padding: 0.2rem 0;
+}
+
+.bb-datetime-day {
+  border: 0;
+  background: transparent;
+  color: var(--bb-dt-text);
+  border-radius: var(--bb-radius-lg);
+  padding: 0.45rem 0;
+  text-align: center;
+  font-size: var(--bb-fs-sm);
+  line-height: 1;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.bb-datetime-day:hover {
+  background-color: var(--bb-dt-hover-bg);
+}
+
+.bb-datetime-day[disabled] {
+  color: color-mix(in srgb, var(--bb-dt-muted) 65%, transparent);
+  pointer-events: none;
+}
+
+.bb-datetime-day[data-bb-today="true"] {
+  box-shadow: inset 0 0 0 2px var(--bb-dt-today-ring);
+}
+
+.bb-datetime-day[data-bb-inrange="true"] {
+  background-color: var(--bb-dt-inrange-bg);
+}
+
+.bb-datetime-day[data-bb-active="true"] {
+  background-color: var(--bb-dt-active-bg);
+  color: var(--bb-dt-active-text);
+}
+
+/* Footer */
+.bb-datetime-popover-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-dt-gap);
+  padding: var(--bb-dt-pad);
+  border-top: 1px solid var(--bb-dt-border);
+  justify-content: flex-end;
+}
+
+.bb-datetime-selected {
+  margin-right: auto;
+  color: var(--bb-dt-muted);
+  font-size: var(--bb-fs-sm);;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .bb-datetime-popover {
+    min-width: 100%;
+  }
+
+  .bb-datetime-popover-body {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-datetime-presets {
+    border-right: 0;
+    border-bottom: 1px solid var(--bb-dt-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .bb-datetime-calendars {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-datetime-cal {
+    min-width: 0;
+  }
+}

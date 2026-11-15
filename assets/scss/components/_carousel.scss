@@ -1,0 +1,179 @@
+/* =====================================
+   Bulbulustur Theme - Carousel (PURE)
+   Metronic inspired (no copy)
+   Bootstrap 5 compatible, bb-* modifiers
+   ===================================== */
+
+.bb-carousel {
+  /* -----------------------------------
+     Local tokens (override-friendly)
+  ----------------------------------- */
+  --bb-carousel-indicator-size: 8px;
+  --bb-carousel-indicator-active-size: 14px;
+  --bb-carousel-indicator-gap: 0.5rem;
+
+  /* prefer semantic/text tokens over palette grays */
+  --bb-carousel-indicator-bg: var(--bb-border-color);
+  --bb-carousel-indicator-active-bg:var(--bb-primary);
+
+  /* bullets */
+  --bb-carousel-bullet-w: 28px;
+  --bb-carousel-bullet-h: 6px;
+
+  /* overlay controls */
+  --bb-carousel-control-size: 44px;
+  --bb-carousel-control-radius: 50%;
+  --bb-carousel-control-inset: var(--bb-space-4, 1rem);
+
+  --bb-carousel-control-bg-color: var(--bb-dark, var(--bs-black));
+  --bb-carousel-control-bg-opacity: 0.35;
+  --bb-carousel-control-bg-opacity-hover: 0.55;
+
+  /* focus ring */
+  --bb-carousel-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-carousel-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-carousel-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+
+  /* motion */
+  --bb-carousel-transition: 0.2s ease;
+
+  position: relative;
+
+  /* ------------------------------
+     Indicators (safe reset)
+     (avoid all: unset)
+  ------------------------------ */
+  .carousel-indicators {
+    position: static;
+    margin: 0;
+    padding: var(--bb-space-4, 1rem) 0 0;
+    gap: var(--bb-carousel-indicator-gap);
+  }
+
+  .carousel-indicators [data-bs-target] {
+    cursor: pointer;
+
+    /* minimal reset */
+    appearance: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* for a11y */
+    border-radius: var(--bb-radius-pill);
+  }
+
+  /* ------------------------------
+     DOTS variant
+  ------------------------------ */
+  &.bb-carousel-dots {
+    .carousel-indicators [data-bs-target] {
+      width: var(--bb-carousel-indicator-active-size);
+      height: var(--bb-carousel-indicator-active-size);
+
+      &::after {
+        content: "";
+        width: var(--bb-carousel-indicator-size);
+        height: var(--bb-carousel-indicator-size);
+        border-radius: 50%;
+        background-color: var(--bb-carousel-indicator-bg);
+        transition: width var(--bb-carousel-transition),
+                    height var(--bb-carousel-transition),
+                    background-color var(--bb-carousel-transition);
+      }
+
+      &.active::after {
+        width: var(--bb-carousel-indicator-active-size);
+        height: var(--bb-carousel-indicator-active-size);
+        background-color: var(--bb-carousel-indicator-active-bg);
+      }
+    }
+  }
+
+  /* ------------------------------
+     BULLET / BAR variant
+  ------------------------------ */
+  &.bb-carousel-bullets {
+    .carousel-indicators [data-bs-target] {
+      width: var(--bb-carousel-bullet-w);
+      height: var(--bb-carousel-bullet-h);
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: var(--bb-radius-pill, 999px);
+        background-color: var(--bb-carousel-indicator-bg);
+        transition: background-color var(--bb-carousel-transition);
+      }
+
+      &.active::after {
+        background-color: var(--bb-carousel-indicator-active-bg);
+      }
+    }
+  }
+
+  /* ------------------------------
+     Overlay controls
+  ------------------------------ */
+  &.bb-carousel-overlay {
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: var(--bb-carousel-control-size);
+      height: var(--bb-carousel-control-size);
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      border-radius: var(--bb-carousel-control-radius);
+
+      /* rgba yerine token + opacity */
+      background-color: color-mix(
+        in srgb,
+        var(--bb-carousel-control-bg-color) calc(var(--bb-carousel-control-bg-opacity) * 100%),
+        transparent
+      );
+
+      opacity: 1;
+      transition: background-color var(--bb-carousel-transition),
+                  transform var(--bb-carousel-transition);
+
+      &:hover {
+        background-color: color-mix(
+          in srgb,
+          var(--bb-carousel-control-bg-color) calc(var(--bb-carousel-control-bg-opacity-hover) * 100%),
+          transparent
+        );
+      }
+    }
+
+    .carousel-control-prev {
+      left: var(--bb-carousel-control-inset);
+    }
+
+    .carousel-control-next {
+      right: var(--bb-carousel-control-inset);
+    }
+  }
+
+  /* ------------------------------
+     Stretch helper
+  ------------------------------ */
+  &.bb-carousel-stretch {
+    height: 100%;
+
+    .carousel-inner,
+    .carousel-item {
+      height: 100%;
+    }
+
+    .carousel-item > * {
+      height: 100%;
+    }
+  }
+}

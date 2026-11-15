@@ -1,0 +1,196 @@
+/* =====================================
+   Bulbulustur Theme - Collapse (PURE)
+   Bootstrap 5 compatible | bb-* prefixed
+   Token-first | Dark/Light safe
+   Root: .bb-collapse
+   ===================================== */
+
+.bb-collapse {
+  /* -------------------------------------
+     Tokens (override-friendly)
+  -------------------------------------- */
+  --bb-collapse-bg: var(--bb-body-bg);
+  --bb-collapse-color: var(--bb-emphasis-color, var(--bs-emphasis-color, var(--bb-body-color)));
+
+  --bb-collapse-border-width: var(--bb-border-width, 1px);
+  --bb-collapse-border-color: var(--bb-border-color);
+
+  --bb-collapse-radius: var(--bb-radius-lg, var(--bs-border-radius-lg, 0.75rem));
+  --bb-collapse-shadow: var(--bb-shadow-xs, var(--bs-box-shadow-sm, none));
+
+  --bb-collapse-header-px: 1rem;
+  --bb-collapse-header-py: 0.9rem;
+
+  --bb-collapse-body-px: 1rem;
+  --bb-collapse-body-py: 1rem;
+
+  --bb-collapse-gap: 0.5rem;
+
+  --bb-collapse-toggle-bg: transparent;
+  --bb-collapse-toggle-hover-bg: var(--bb-tertiary-bg);
+  --bb-collapse-toggle-active-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+
+  --bb-collapse-toggle-color: var(--bb-body-color);
+  --bb-collapse-toggle-muted: var(--bb-secondary-color);
+
+  --bb-collapse-icon-size: 1.25rem;
+  --bb-collapse-icon-rotate: 180deg;
+
+  --bb-collapse-transition: 0.2s ease;
+
+  position: relative;
+  border-radius: var(--bb-collapse-radius);
+  background: var(--bb-collapse-bg);
+  color: var(--bb-collapse-color);
+  box-shadow: var(--bb-collapse-shadow);
+}
+
+/* -------------------------------------
+   Variants
+-------------------------------------- */
+
+.bb-collapse.bb-collapse-bordered {
+  box-shadow: none;
+  border: var(--bb-collapse-border-width) solid var(--bb-collapse-border-color);
+}
+
+.bb-collapse.bb-collapse-dashed {
+  box-shadow: none;
+  border: var(--bb-collapse-border-width) dashed var(--bb-collapse-border-color);
+}
+
+.bb-collapse.bb-collapse-flush {
+  box-shadow: none;
+  border: 0;
+  border-radius: var(--bb-radius-none);
+  background: transparent;
+}
+
+/* -------------------------------------
+   Toggle (header button)
+-------------------------------------- */
+
+.bb-collapse-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-collapse-gap);
+
+  padding: var(--bb-collapse-header-py) var(--bb-collapse-header-px);
+
+  border: 0;
+  background: var(--bb-collapse-toggle-bg);
+  color: var(--bb-collapse-toggle-color);
+
+  border-radius: inherit;
+  text-align: left;
+
+  transition:
+    background-color var(--bb-collapse-transition),
+    color var(--bb-collapse-transition);
+}
+
+.bb-collapse:not(.bb-collapse-flush) .bb-collapse-toggle {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Hover/Active */
+.bb-collapse-toggle:hover {
+  background: var(--bb-collapse-toggle-hover-bg);
+}
+
+.bb-collapse-toggle:active {
+  background: var(--bb-collapse-toggle-active-bg);
+}
+
+/* Title + meta */
+.bb-collapse-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.bb-collapse-title > .bb-collapse-heading {
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-heading);
+  color: var(--bb-collapse-toggle-color);
+}
+
+.bb-collapse-title > .bb-collapse-subtitle {
+  font-size: var(--bb-fs-sm);;
+  color: var(--bb-collapse-toggle-muted);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Icon */
+.bb-collapse-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(var(--bb-collapse-icon-size) + 0.5rem);
+  height: calc(var(--bb-collapse-icon-size) + 0.5rem);
+
+  border-radius: var(--bb-radius-pill);
+  color: var(--bb-collapse-toggle-muted);
+
+  transition:
+    transform var(--bb-collapse-transition),
+    background-color var(--bb-collapse-transition),
+    color var(--bb-collapse-transition);
+}
+
+.bb-collapse-toggle:hover .bb-collapse-icon {
+  background-color: color-mix(in srgb, var(--bb-body-color) 6%, transparent);
+  color: var(--bb-collapse-toggle-color);
+}
+
+/* Expanded state (Bootstrap sets: aria-expanded="true" and removes .collapsed) */
+.bb-collapse-toggle[aria-expanded="true"] .bb-collapse-icon {
+  transform: rotate(var(--bb-collapse-icon-rotate));
+}
+
+/* -------------------------------------
+   Body (content wrapper)
+-------------------------------------- */
+
+.bb-collapse .collapse {
+  /* Bootstrap handles height; we only keep visuals safe */
+}
+
+.bb-collapse-body {
+  padding: var(--bb-collapse-body-py) var(--bb-collapse-body-px);
+}
+
+.bb-collapse:not(.bb-collapse-flush) .bb-collapse-body {
+  border-top: var(--bb-collapse-border-width) solid var(--bb-collapse-border-color);
+}
+
+/* When bordered/dashed, keep body inside same radius feel */
+.bb-collapse:not(.bb-collapse-flush) .collapse.show .bb-collapse-body {
+  border-bottom-left-radius: var(--bb-collapse-radius);
+  border-bottom-right-radius: var(--bb-collapse-radius);
+}
+
+/* -------------------------------------
+   Group (accordion-like stack without Bootstrap accordion markup)
+-------------------------------------- */
+
+.bb-collapse-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* -------------------------------------
+   Reduced motion
+-------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .bb-collapse-toggle,
+  .bb-collapse-icon {
+    transition: none;
+  }
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BB Alert Test</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="py-5">
+
+  <div class="container">
+
+    <!-- Header / Toolbar -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="h4 mb-1">BB Alert</h1>
+        <div class="text-body-secondary">Light/Dark + Variant + State test sayfası</div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="btn-group" role="group" aria-label="Theme switcher">
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">
+            Light
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">
+            Dark
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-outline-secondary btn-sm" id="bbDensityToggle">
+          Compact Density
+        </button>
+      </div>
+    </div>
+
+    <!-- Card: Basic Showcase -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex align-items-center justify-content-between">
+        <div class="bb-card-title">Basic Alerts</div>
+        <div class="text-body-secondary small">Dismiss + icon + long text</div>
+      </div>
+
+      <div class="bb-card-body">
+
+        <!-- Primary (dismissible) -->
+        <div class="alert alert-dismissible bb-alert bb-alert-primary mb-4" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">notifications</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Bilgilendirme</h4>
+            <div class="bb-alert-text">
+              Bu işlem başarıyla tamamlandı. Gerekli kayıtlar sisteme işlendi.
+            </div>
+          </div>
+
+          <button type="button" class="bb-alert-close" data-bs-dismiss="alert" aria-label="Kapat">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+
+        <!-- Success -->
+        <div class="alert bb-alert bb-alert-success mb-4" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">check_circle</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Başarılı</h4>
+            <div class="bb-alert-text">
+              Kaydınız başarıyla oluşturuldu.
+            </div>
+          </div>
+        </div>
+
+        <!-- Warning (long text) -->
+        <div class="alert bb-alert bb-alert-warning mb-4" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">warning</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Uyarı</h4>
+            <div class="bb-alert-text">
+              Bu alan eksik görünüyor. Lütfen kaydetmeden önce tüm zorunlu alanları kontrol edin.
+              Uzun metin test: satır sonları, taşma, okunurluk ve gap davranışı.
+            </div>
+          </div>
+        </div>
+
+        <!-- Danger -->
+        <div class="alert bb-alert bb-alert-danger mb-0" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">error</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Hata</h4>
+            <div class="bb-alert-text">
+              İşlem sırasında beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Card: States / Accessibility -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex align-items-center justify-content-between">
+        <div class="bb-card-title">States & Accessibility</div>
+        <div class="text-body-secondary small">focus-visible + disabled</div>
+      </div>
+
+      <div class="bb-card-body">
+
+        <!-- Focus-visible test -->
+        <div class="alert alert-dismissible bb-alert bb-alert-primary mb-4" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">info</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Focus Test</h4>
+            <div class="bb-alert-text">
+              Klavyeyle (Tab) kapatma ikonuna gel: focus ring görünmeli. Mouse ile tıklayınca ring çıkmamalı.
+            </div>
+          </div>
+
+          <button type="button" class="bb-alert-close" data-bs-dismiss="alert" aria-label="Kapat (focus test)">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+
+        <!-- Disabled close button -->
+        <div class="alert bb-alert bb-alert-success mb-0" role="alert">
+          <div class="bb-alert-icon" aria-hidden="true">
+            <span class="material-symbols-outlined">lock</span>
+          </div>
+
+          <div class="bb-alert-body">
+            <h4 class="bb-alert-title">Disabled Close</h4>
+            <div class="bb-alert-text">
+              Bu alert’te close butonu disabled. Disabled state: opacity + cursor + pointer-events.
+            </div>
+          </div>
+
+          <button type="button" class="bb-alert-close" disabled aria-label="Kapat (disabled)">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer note -->
+    <div class="text-body-secondary small">
+      Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
+    </div>
+
+  </div>
+
+
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var densityBtn = document.getElementById("bbDensityToggle");
+
+      function setTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+      }
+
+      function toggleDensity() {
+        var current = root.getAttribute("data-bb-density");
+        if (current === "compact") {
+          root.removeAttribute("data-bb-density");
+          densityBtn.classList.remove("active");
+        } else {
+          root.setAttribute("data-bb-density", "compact");
+          densityBtn.classList.add("active");
+        }
+      }
+
+      document.querySelectorAll("[data-bb-theme]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setTheme(btn.getAttribute("data-bb-theme"));
+        });
+      });
+
+      densityBtn.addEventListener("click", toggleDensity);
+    })();
+  </script>
+</body>
+</html>

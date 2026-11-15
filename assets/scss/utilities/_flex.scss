@@ -1,0 +1,84 @@
+/* =====================================
+   Bulbulustur Theme – Flex Helpers
+   bb- prefix | responsive | Bootstrap SCSS bağımsız
+   ===================================== */
+
+@use "sass:map";
+
+/* Breakpoints (Bootstrap 5 defaults) */
+$bb-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin bb-up($bp) {
+  @media (min-width: map.get($bb-breakpoints, $bp)) {
+    @content;
+  }
+}
+
+/* -------------------------------------
+   Base (non-responsive)
+------------------------------------- */
+.bb-flex-equal {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------
+   Responsive helpers
+------------------------------------- */
+$bb-flex-bps: (sm, md, lg, xl, xxl);
+
+@each $bp in $bb-flex-bps {
+  @include bb-up($bp) {
+
+    /* infix (bootstrap style) */
+    $infix: "-#{$bp}";
+
+    .bb-flex#{$infix}-root {
+      flex: 1 !important;
+    }
+
+    .bb-flex#{$infix}-column-auto {
+      flex: none !important;
+    }
+
+    .bb-flex#{$infix}-column-fluid {
+      flex: 1 0 auto !important;
+    }
+
+    .bb-flex#{$infix}-row-auto {
+      flex: 0 0 auto !important;
+    }
+
+    .bb-flex#{$infix}-row-fluid {
+      flex: 1 auto !important;
+      min-width: 0 !important;
+    }
+
+    .bb-flex#{$infix}-center {
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .bb-flex#{$infix}-start {
+      justify-content: start !important;
+      align-items: start !important;
+    }
+
+    .bb-flex#{$infix}-end {
+      justify-content: flex-end !important;
+      align-items: flex-end !important;
+    }
+
+    .bb-flex#{$infix}-stack {
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+  }
+}

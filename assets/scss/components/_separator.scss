@@ -1,0 +1,77 @@
+/* =====================================
+   Bulbulustur Theme - Separator (PURE)
+   Token-first | Dark/Light safe
+   Root: .bb-separator
+   Variants: .is-dashed | .is-dotted | .has-content
+   ===================================== */
+
+.bb-separator {
+  /* tokens (override-friendly) */
+  --bb-separator-border-color: var(--bb-border-color);
+  --bb-separator-border-width: var(--bb-border-width, 1px);
+  --bb-separator-gap: 1.25rem;
+
+  display: block;
+  height: 0;
+
+  border-bottom: var(--bb-separator-border-width) solid var(--bb-separator-border-color);
+  opacity: 1;
+}
+
+/* line styles */
+.bb-separator.is-dashed {
+  border-bottom-style: dashed;
+}
+
+.bb-separator.is-dotted {
+  border-bottom-style: dotted;
+}
+
+/* ---------------------------------
+   Content separator
+--------------------------------- */
+.bb-separator.has-content {
+  display: flex;
+  align-items: center;
+
+  border-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bb-separator.has-content::before,
+.bb-separator.has-content::after {
+  content: "";
+  flex: 1 1 auto;
+  border-bottom: var(--bb-separator-border-width) solid var(--bb-separator-border-color);
+}
+
+.bb-separator.has-content::before {
+  margin-right: var(--bb-separator-gap);
+}
+
+.bb-separator.has-content::after {
+  margin-left: var(--bb-separator-gap);
+}
+
+/* dotted/dashed for content lines */
+.bb-separator.has-content.is-dotted::before,
+.bb-separator.has-content.is-dotted::after {
+  border-bottom-style: dotted;
+}
+
+.bb-separator.has-content.is-dashed::before,
+.bb-separator.has-content.is-dashed::after {
+  border-bottom-style: dashed;
+}
+
+/* ---------------------------------
+   Bootstrap color bridge (optional)
+   Works with .border-*
+--------------------------------- */
+.bb-separator.border-primary { --bb-separator-border-color: var(--bb-primary, var(--bb-primary)); }
+.bb-separator.border-success { --bb-separator-border-color: var(--bs-success, var(--bb-success)); }
+.bb-separator.border-danger  { --bb-separator-border-color: var(--bs-danger, var(--bb-danger)); }
+.bb-separator.border-warning { --bb-separator-border-color: var(--bs-warning, var(--bb-warning)); }
+.bb-separator.border-dark    { --bb-separator-border-color: var(--bs-dark, var(--bb-dark)); }
+.bb-separator.border-secondary { --bb-separator-border-color: var(--bs-secondary, var(--bb-secondary)); }

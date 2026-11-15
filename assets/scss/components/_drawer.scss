@@ -1,0 +1,210 @@
+/* =====================================
+   Bulbulustur Theme - Drawer
+   Overlay side panel (start/end)
+   Bootstrap 5 compatible, bb-* prefixed
+===================================== */
+
+.bb-drawer {
+  /* Core tokens */
+  --bb-drawer-z: var(--bb-z-drawer, 1055);
+  --bb-drawer-width: 420px;
+
+  --bb-drawer-bg: var(--bb-body-bg);
+  --bb-drawer-color: var(--bb-emphasis-color);
+  --bb-drawer-muted-color: var(--bb-secondary-color);
+
+  --bb-drawer-border-color: var(--bb-border-color);
+  --bb-drawer-border-width: var(--bb-border-width, 1px);
+  --bb-drawer-radius: var(--bb-radius-lg);
+
+  --bb-drawer-padding-x: 1.25rem;
+  --bb-drawer-header-padding-y: 1rem;
+  --bb-drawer-body-padding-y: 1rem;
+
+  --bb-drawer-transition: var(--bb-transition-normal);
+
+  --bb-drawer-shadow-color: var(--bb-black);
+  --bb-drawer-shadow-opacity: 0.28;
+  --bb-drawer-shadow:
+    0 18px 40px
+    color-mix(
+      in srgb,
+      var(--bb-drawer-shadow-color) calc(var(--bb-drawer-shadow-opacity) * 100%),
+      transparent
+    );
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: var(--bb-drawer-z);
+
+  display: flex;
+  flex-direction: column;
+
+  width: var(--bb-drawer-width);
+  max-width: 100%;
+
+  color: var(--bb-drawer-color);
+  background-color: var(--bb-drawer-bg);
+
+  border: var(--bb-drawer-border-width) solid var(--bb-drawer-border-color);
+  border-radius: var(--bb-drawer-radius);
+
+  box-shadow: var(--bb-drawer-shadow);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform var(--bb-drawer-transition),
+    opacity var(--bb-drawer-transition),
+    visibility var(--bb-drawer-transition);
+
+  will-change: transform;
+}
+
+.bb-drawer.bb-drawer-end {
+  right: 0;
+  transform: translateX(102%);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bb-drawer.bb-drawer-start {
+  left: 0;
+  transform: translateX(-102%);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.bb-drawer.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* -------------------------------------
+   Header
+------------------------------------- */
+
+.bb-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding: var(--bb-drawer-header-padding-y) var(--bb-drawer-padding-x);
+
+  background: transparent;
+  border-bottom: var(--bb-drawer-border-width) solid var(--bb-drawer-border-color);
+}
+
+.bb-drawer-title {
+  margin: 0;
+  color: inherit;
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-bold);
+}
+
+/* -------------------------------------
+   Close
+------------------------------------- */
+
+.bb-drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: var(--bb-radius);
+
+  opacity: 0.65;
+  cursor: pointer;
+
+  transition:
+    opacity var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast);
+}
+
+.bb-drawer-close:hover {
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--bb-drawer-border-color) 18%, transparent);
+}
+
+/* -------------------------------------
+   Body
+------------------------------------- */
+
+.bb-drawer-body {
+  flex: 1 1 auto;
+  padding: var(--bb-drawer-body-padding-y) var(--bb-drawer-padding-x);
+  overflow: auto;
+  color: var(--bb-drawer-color);
+}
+
+.bb-drawer-body p {
+  color: var(--bb-drawer-muted-color);
+}
+
+/* -------------------------------------
+   Backdrop
+   Usage:
+   <div class="bb-drawer-backdrop"></div>
+   <div data-bb-drawer-backdrop></div>
+------------------------------------- */
+
+.bb-drawer-backdrop,
+[data-bb-drawer-backdrop] {
+  --bb-drawer-backdrop-z: calc(var(--bb-z-drawer, 1055) - 1);
+  --bb-drawer-backdrop-color: var(--bb-overlay-color, var(--bb-black));
+  --bb-drawer-backdrop-opacity: var(--bb-overlay-opacity, 0.45);
+  --bb-drawer-backdrop-blur: var(--bb-overlay-blur, 0px);
+  --bb-drawer-backdrop-transition: var(--bb-transition-normal);
+
+  position: fixed;
+  inset: 0;
+  z-index: var(--bb-drawer-backdrop-z);
+
+  background-color:
+    color-mix(
+      in srgb,
+      var(--bb-drawer-backdrop-color) calc(var(--bb-drawer-backdrop-opacity) * 100%),
+      transparent
+    );
+
+  backdrop-filter: blur(var(--bb-drawer-backdrop-blur));
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity var(--bb-drawer-backdrop-transition),
+    visibility var(--bb-drawer-backdrop-transition);
+}
+
+.bb-drawer-backdrop.is-open,
+[data-bb-drawer-backdrop].is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* -------------------------------------
+   Density
+------------------------------------- */
+
+[data-bb-density="compact"] .bb-drawer {
+  --bb-drawer-width: 380px;
+  --bb-drawer-padding-x: 1rem;
+  --bb-drawer-header-padding-y: 0.85rem;
+  --bb-drawer-body-padding-y: 0.85rem;
+}

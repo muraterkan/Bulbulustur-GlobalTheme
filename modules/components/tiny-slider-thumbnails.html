@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme – Tiny Slider (Thumbnails)</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bg-body-tertiary">
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div>
+        <h4 class="mb-0">Tiny Slider – Thumbnails</h4>
+        <div class="text-body-secondary small">3 item görünür + thumbnail nav</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-light" type="button" data-bb-thumb-prev>
+          <span class="material-symbols-outlined align-middle">chevron_left</span>
+        </button>
+        <button class="btn btn-sm btn-light" type="button" data-bb-thumb-next>
+          <span class="material-symbols-outlined align-middle">chevron_right</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN SLIDER -->
+    <div
+      class="bb-tiny-slider mb-3 bb-ts-thumb-shell"
+      data-bb-slider-thumbs
+      data-bb-items="3"
+      data-bb-step="1"
+      data-bb-center="true"
+      data-bb-loop="true"
+      data-bb-autoplay="true"
+      data-bb-autoplay-timeout="7000">
+
+      <div class="bb-ts-viewport">
+        <div class="bb-ts-track" data-bb-track>
+          <!-- 1 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 1</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 2</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 3</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 4</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 5</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Team 6</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THUMBNAILS -->
+    <div class="d-flex justify-content-center">
+      <div class="bb-ts-thumbs" data-bb-thumbs>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 1">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 2">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 3">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 4">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 5">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+        <button type="button" class="bb-ts-thumb" aria-label="Thumb 6">
+          <span class="bb-ts-thumb-img bg-body-secondary"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function toBool(v) {
+        return String(v).toLowerCase() === 'true';
+      }
+
+      function toInt(v, def) {
+        var n = parseInt(v, 10);
+        if (isNaN(n)) {
+          return def;
+        }
+        return n;
+      }
+
+      function clamp(n, min, max) {
+        return Math.max(min, Math.min(max, n));
+      }
+
+      function initThumbSlider(root) {
+        var track = root.querySelector('[data-bb-track]');
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.bb-ts-slide'));
+        var thumbsWrap = document.querySelector('[data-bb-thumbs]');
+        var thumbs = thumbsWrap ? Array.prototype.slice.call(thumbsWrap.querySelectorAll('.bb-ts-thumb')) : [];
+
+        if (!track || slides.length === 0 || thumbs.length === 0) {
+          return;
+        }
+
+        var items = toInt(root.getAttribute('data-bb-items'), 3);
+        var step = toInt(root.getAttribute('data-bb-step'), 1);
+        var loop = toBool(root.getAttribute('data-bb-loop'));
+        var center = toBool(root.getAttribute('data-bb-center'));
+        var autoplay = toBool(root.getAttribute('data-bb-autoplay'));
+        var autoplayTimeout = toInt(root.getAttribute('data-bb-autoplay-timeout'), 7000);
+
+        var state = { index: 0, timer: null };
+
+        function gapWidth() {
+          var cs = window.getComputedStyle(track);
+          var gap = cs.columnGap || cs.gap || '0px';
+          return parseFloat(gap) || 0;
+        }
+
+        function slideWidth() {
+          return slides[0].getBoundingClientRect().width;
+        }
+
+        function maxIndex() {
+          return slides.length - 1;
+        }
+
+        function leftForIndex(i) {
+          var w = slideWidth() + gapWidth();
+
+          if (!center) {
+            return i * w;
+          }
+
+          // center: aktif item ortada gibi dursun -> track left'i bir item kaydır
+          // (3 items için ortalama centering: 1 item offset)
+          var centerOffset = Math.floor(items / 2);
+          return Math.max(0, (i - centerOffset) * w);
+        }
+
+        function setActiveThumb(i) {
+          thumbs.forEach(function (t, idx) {
+            if (idx === i) {
+              t.classList.add('is-active');
+              t.setAttribute('aria-current', 'true');
+            } else {
+              t.classList.remove('is-active');
+              t.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        function goToIndex(i) {
+          var max = maxIndex();
+
+          if (!loop) {
+            state.index = clamp(i, 0, max);
+          } else {
+            if (i < 0) {
+              state.index = max;
+            } else if (i > max) {
+              state.index = 0;
+            } else {
+              state.index = i;
+            }
+          }
+
+          track.scrollTo({ left: leftForIndex(state.index), behavior: 'smooth' });
+          setActiveThumb(state.index);
+        }
+
+        function next() {
+          goToIndex(state.index + step);
+        }
+
+        function prev() {
+          goToIndex(state.index - step);
+        }
+
+        function stopAutoplay() {
+          if (state.timer) {
+            clearInterval(state.timer);
+            state.timer = null;
+          }
+        }
+
+        function startAutoplay() {
+          stopAutoplay();
+
+          if (!autoplay) {
+            return;
+          }
+
+          state.timer = setInterval(function () {
+            next();
+          }, autoplayTimeout);
+        }
+
+        // Thumb click
+        thumbs.forEach(function (t, idx) {
+          t.addEventListener('click', function () {
+            goToIndex(idx);
+            startAutoplay();
+          });
+        });
+
+        // External buttons
+        var btnPrev = document.querySelector('[data-bb-thumb-prev]');
+        var btnNext = document.querySelector('[data-bb-thumb-next]');
+
+        if (btnPrev) {
+          btnPrev.addEventListener('click', function () {
+            prev();
+            startAutoplay();
+          });
+        }
+
+        if (btnNext) {
+          btnNext.addEventListener('click', function () {
+            next();
+            startAutoplay();
+          });
+        }
+
+        // Pause on hover
+        root.addEventListener('mouseenter', function () { stopAutoplay(); });
+        root.addEventListener('mouseleave', function () { startAutoplay(); });
+
+        // Sync on scroll (light)
+        var ticking = false;
+        track.addEventListener('scroll', function () {
+          if (ticking) {
+            return;
+          }
+          ticking = true;
+
+          window.requestAnimationFrame(function () {
+            ticking = false;
+
+            var w = slideWidth() + gapWidth();
+            if (w <= 0) {
+              return;
+            }
+
+            // center modda leftForIndex ters hesap zor, ama yaklaşık: scrollLeft / w + centerOffset
+            var approx = Math.round(track.scrollLeft / w);
+            if (center) {
+              approx = approx + Math.floor(items / 2);
+            }
+
+            approx = clamp(approx, 0, maxIndex());
+
+            if (approx !== state.index) {
+              state.index = approx;
+              setActiveThumb(state.index);
+            }
+          });
+        });
+
+        // Init
+        goToIndex(0);
+        startAutoplay();
+
+        window.addEventListener('resize', function () {
+          goToIndex(state.index);
+        });
+      }
+
+      document.querySelectorAll('[data-bb-slider-thumbs]').forEach(function (el) {
+        initThumbSlider(el);
+      });
+    })();
+  </script>
+</body>
+</html>

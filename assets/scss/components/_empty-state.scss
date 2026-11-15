@@ -1,0 +1,202 @@
+/* =====================================
+   Empty State
+   Main CSS component
+   Token-first | Dark/Light safe
+===================================== */
+
+.bb-empty-state {
+  --bb-empty-max-width: 420px;
+  --bb-empty-padding-y: 2rem;
+  --bb-empty-padding-x: 1rem;
+
+  --bb-empty-icon-size: 64px;
+  --bb-empty-icon-box-size: 76px;
+  --bb-empty-icon-radius: var(--bb-radius-2xl);
+
+  --bb-empty-title-size: var(--bb-fs-xl);
+  --bb-empty-title-weight: var(--bb-fw-semibold);
+
+  --bb-empty-text-size: .95rem;
+  --bb-empty-text-weight: var(--bb-fw-semibold);
+  --bb-empty-text-line-height: var(--bb-line-height-base);
+
+  max-width: var(--bb-empty-max-width);
+  margin-inline: auto;
+  padding: var(--bb-empty-padding-y) var(--bb-empty-padding-x);
+  text-align: center;
+}
+
+.bb-empty-icon {
+  width: var(--bb-empty-icon-box-size);
+  height: var(--bb-empty-icon-box-size);
+  margin: 0 auto 1rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border-radius: var(--bb-empty-icon-radius);
+  font-size: var(--bb-empty-icon-size);
+  line-height: 1;
+}
+
+.bb-empty-icon .material-symbols-outlined {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.bb-empty-title {
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-empty-title-size);
+  line-height: 1.3;
+  font-weight: var(--bb-empty-title-weight);
+  letter-spacing: -.01em;
+}
+
+.bb-empty-text {
+  margin: .5rem auto 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-empty-text-size);
+  line-height: var(--bb-empty-text-line-height);
+  font-weight: var(--bb-empty-text-weight);
+}
+
+.bb-empty-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+
+/* -------------------------------------
+   Variants
+------------------------------------- */
+
+.bb-empty-state-sm {
+  --bb-empty-max-width: 360px;
+  --bb-empty-padding-y: 1.25rem;
+  --bb-empty-icon-size: 38px;
+  --bb-empty-icon-box-size: 52px;
+  --bb-empty-title-size: var(--bb-fs-lg);
+  --bb-empty-text-size: .875rem;
+}
+
+.bb-empty-state-lg {
+  --bb-empty-max-width: 560px;
+  --bb-empty-padding-y: 3rem;
+  --bb-empty-icon-size: 74px;
+  --bb-empty-icon-box-size: 90px;
+  --bb-empty-title-size: var(--bb-h3);
+  --bb-empty-text-size: 1rem;
+}
+
+
+/* -------------------------------------
+   Tone variants
+------------------------------------- */
+
+.bb-empty-state-primary .bb-empty-icon {
+  color: var(--bb-primary);
+  background-color: var(--bb-primary-light);
+}
+
+.bb-empty-state-success .bb-empty-icon {
+  color: var(--bb-success);
+  background-color: var(--bb-success-light);
+}
+
+.bb-empty-state-warning .bb-empty-icon {
+  color: var(--bb-warning);
+  background-color: var(--bb-warning-light);
+}
+
+.bb-empty-state-danger .bb-empty-icon {
+  color: var(--bb-danger);
+  background-color: var(--bb-danger-light);
+}
+
+.bb-empty-state-info .bb-empty-icon {
+  color: var(--bb-info);
+  background-color: var(--bb-info-light);
+}
+
+
+/* -------------------------------------
+   Surface variant
+   Card/container içinde daha sakin kullanım.
+------------------------------------- */
+
+.bb-empty-state-flat {
+  padding: 1rem;
+}
+
+.bb-empty-state-flat .bb-empty-icon {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  margin-bottom: .75rem;
+}
+
+
+/* -------------------------------------
+   Border variant
+   Standalone empty panels için.
+------------------------------------- */
+
+.bb-empty-state-panel {
+  max-width: none;
+  border: 1px dashed var(--bb-border-color);
+  border-radius: var(--bb-radius-2xl);
+  background-color: var(--bb-body-bg);
+}
+
+
+/* -------------------------------------
+   Horizontal variant
+   Dar kartlarda / küçük dashboard alanlarında.
+------------------------------------- */
+
+.bb-empty-state-horizontal {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.bb-empty-state-horizontal .bb-empty-icon {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.bb-empty-state-horizontal .bb-empty-text {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bb-empty-state-horizontal .bb-empty-actions {
+  justify-content: flex-start;
+}
+
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 767.98px) {
+  .bb-empty-state {
+    --bb-empty-padding-y: 1.5rem;
+    --bb-empty-padding-x: .75rem;
+  }
+
+  .bb-empty-state-horizontal {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

@@ -1,0 +1,195 @@
+/* =====================================
+   Bulbulustur Theme - Form Repeater
+   Bootstrap 5 compatible (Metronic-inspired)
+   Prefix: bb-
+   Dark/Light: data-bs-theme="light|dark"
+===================================== */
+
+.bb-formrepeater {
+  /* -----------------------------------
+     Local tokens (override-friendly)
+  ----------------------------------- */
+  --bb-fr-bg: var(--bb-body-bg);
+  --bb-fr-color: var(--bb-emphasis-color, var(--bs-emphasis-color, var(--bb-body-color)));
+  --bb-fr-muted: var(--bb-secondary-color);
+
+  --bb-fr-border-width: var(--bb-border-width, 1px);
+  --bb-fr-border-color: var(--bb-border-color);
+
+  --bb-fr-radius: var(--bb-radius-lg, var(--bs-border-radius-lg, 0.75rem));
+  --bb-fr-item-radius: var(--bb-radius-md, var(--bs-border-radius, 0.5rem));
+
+  --bb-fr-shadow: var(--bb-shadow-xs, var(--bs-box-shadow-sm, none));
+
+  --bb-fr-gap: 1rem;
+  --bb-fr-padding: 1rem;
+
+  --bb-fr-item-bg: var(--bb-body-bg);
+  --bb-fr-item-border-style: dashed;
+
+  --bb-fr-handle-size: 34px;
+  --bb-fr-handle-bg: var(--bb-tertiary-bg);
+  --bb-fr-handle-color: var(--bb-fr-muted);
+
+  --bb-fr-index-size: 26px;
+  --bb-fr-index-bg: var(--bb-tertiary-bg);
+  --bb-fr-index-color: var(--bb-fr-muted);
+
+  --bb-fr-action-gap: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-fr-gap);
+  color: var(--bb-fr-color);
+}
+
+.bb-formrepeater-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-fr-gap);
+}
+
+.bb-formrepeater-title {
+  margin: 0;
+  font-weight: var(--bb-fw-semibold, 600);
+}
+
+.bb-formrepeater-subtitle {
+  margin: 0.25rem 0 0 0;
+  color: var(--bb-fr-muted);
+  font-size: var(--bb-fs-base);
+}
+
+.bb-formrepeater-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-fr-action-gap);
+}
+
+/* List */
+.bb-formrepeater-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-fr-gap);
+}
+
+/* Item */
+.bb-formrepeater-item {
+  background: var(--bb-fr-item-bg);
+  border: var(--bb-fr-border-width) var(--bb-fr-item-border-style) var(--bb-fr-border-color);
+  border-radius: var(--bb-fr-item-radius);
+  box-shadow: var(--bb-fr-shadow);
+  overflow: hidden;
+}
+
+.bb-formrepeater-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-fr-gap);
+  padding: 0.75rem var(--bb-fr-padding);
+  border-bottom: var(--bb-fr-border-width) solid var(--bb-fr-border-color);
+  background: color-mix(in srgb, var(--bb-fr-item-bg) 88%, var(--bb-tertiary-bg));
+}
+
+.bb-formrepeater-item-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.bb-formrepeater-index {
+  width: var(--bb-fr-index-size);
+  height: var(--bb-fr-index-size);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-fr-index-bg);
+  color: var(--bb-fr-index-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--bb-fs-sm);
+  flex: 0 0 auto;
+}
+
+.bb-formrepeater-handle {
+  width: var(--bb-fr-handle-size);
+  height: var(--bb-fr-handle-size);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-fr-handle-bg);
+  color: var(--bb-fr-handle-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  cursor: grab;
+  user-select: none;
+}
+
+.bb-formrepeater-item-title {
+  margin: 0;
+  font-weight: var(--bb-fw-medium, 500);
+  font-size: var(--bb-fs-base);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bb-formrepeater-item-body {
+  padding: var(--bb-fr-padding);
+}
+
+.bb-formrepeater-item-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-fr-action-gap);
+  flex: 0 0 auto;
+}
+
+/* Remove button helper (keep Bootstrap .btn base) */
+.bb-formrepeater-btn-remove {
+  --bb-fr-remove-bg: color-mix(in srgb, var(--bb-danger) 10%, transparent);
+  --bb-fr-remove-color: var(--bb-danger);
+  background: var(--bb-fr-remove-bg);
+  color: var(--bb-fr-remove-color);
+  border-color: color-mix(in srgb, var(--bb-danger) 25%, var(--bb-fr-border-color));
+}
+
+.bb-formrepeater-btn-remove:hover {
+  background: color-mix(in srgb, var(--bb-danger) 14%, transparent);
+  color: var(--bb-danger);
+}
+
+.bb-formrepeater-btn-add {
+  --bb-fr-add-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+  --bb-fr-add-color: var(--bb-primary);
+  background: var(--bb-fr-add-bg);
+  color: var(--bb-fr-add-color);
+  border-color: color-mix(in srgb, var(--bb-primary)25%, var(--bb-fr-border-color));
+}
+
+.bb-formrepeater-btn-add:hover {
+  background: color-mix(in srgb, var(--bb-primary)14%, transparent);
+  color: var(--bb-primary);
+}
+
+/* Compact density hook (optional) */
+[data-bb-density="compact"] .bb-formrepeater {
+  --bb-fr-gap: 0.75rem;
+  --bb-fr-padding: 0.75rem;
+}
+
+[data-bb-density="compact"] .bb-formrepeater-item-head {
+  padding: 0.6rem var(--bb-fr-padding);
+}
+
+/* Minimal enter/leave anim (optional class from JS) */
+.bb-formrepeater-item.bb-is-entering {
+  animation: bb-fr-in 160ms ease-out both;
+}
+
+@keyframes bb-fr-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

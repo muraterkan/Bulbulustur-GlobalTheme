@@ -1,0 +1,219 @@
+/* =====================================
+   Bulbulustur Theme - Nav / Tabs (PURE)
+   Token-first | Dark/Light safe
+   Root: .bb-nav
+   Variants: .bb-nav-tabs .bb-nav-pills .bb-nav-soft .bb-nav-group .bb-nav-underline
+   ===================================== */
+
+.bb-nav {
+  /* -------------------------------------
+     Tokens (override-friendly)
+  -------------------------------------- */
+
+  /* Layout */
+  --bb-nav-gap: 0.5rem;
+  --bb-nav-radius: var(--bb-radius, 0.65rem);
+  --bb-nav-border-width: var(--bb-border-width, 1px);
+
+  /* Colors */
+  --bb-nav-bg: transparent;
+  --bb-nav-border-color: var(--bb-border-color);
+  --bb-nav-color: var(--bb-secondary-color, var(--bs-secondary-color, var(--bb-body-color)));
+  --bb-nav-hover-color:var(--bb-primary);
+  --bb-nav-active-color:var(--bb-primary);
+
+  /* Backgrounds */
+  --bb-nav-hover-bg: transparent;
+  --bb-nav-active-bg: var(--bb-body-bg);
+  --bb-nav-soft-bg: var(--bb-tertiary-bg);
+
+  /* Pills active */
+  --bb-nav-pill-active-bg:var(--bb-primary);
+  --bb-nav-pill-active-color: var(--bb-primary-inverse, #fff);
+
+  /* Typography */
+  --bb-nav-font-weight: var(--bb-fw-medium);
+
+  /* Spacing (token’lı kalsın) */
+  --bb-nav-link-py: 0.6rem;
+  --bb-nav-link-px: 1.25rem;
+
+  /* Interaction */
+  --bb-nav-transition-speed: 200ms;
+  --bb-nav-transition-ease: ease;
+
+  /* Focus / Disabled */
+  --bb-nav-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary)25%, transparent));
+  --bb-nav-disabled-opacity: 0.55;
+
+  display: flex;
+  gap: var(--bb-nav-gap);
+}
+
+/* -------------------------------------
+   Links
+------------------------------------- */
+.bb-nav .nav-link {
+  color: var(--bb-nav-color);
+  font-weight: var(--bb-nav-font-weight);
+  border-radius: var(--bb-nav-radius);
+  padding: var(--bb-nav-link-py) var(--bb-nav-link-px);
+
+  background-color: transparent;
+  text-decoration: none;
+
+  transition:
+    color var(--bb-nav-transition-speed) var(--bb-nav-transition-ease),
+    background-color var(--bb-nav-transition-speed) var(--bb-nav-transition-ease),
+    box-shadow var(--bb-nav-transition-speed) var(--bb-nav-transition-ease);
+}
+
+.bb-nav .nav-link:hover {
+  color: var(--bb-nav-hover-color);
+  background-color: var(--bb-nav-hover-bg);
+}
+
+.bb-nav .nav-link.active,
+.bb-nav .nav-link[aria-current="page"] {
+  color: var(--bb-nav-active-color);
+  background-color: var(--bb-nav-active-bg);
+}
+
+/* Disabled */
+.bb-nav .nav-link.disabled,
+.bb-nav .nav-link[aria-disabled="true"] {
+  opacity: var(--bb-nav-disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* -------------------------------------
+   Tabs Style
+------------------------------------- */
+.bb-nav-tabs {
+  border-bottom: var(--bb-nav-border-width) solid var(--bb-nav-border-color);
+}
+
+.bb-nav-tabs .nav-link {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--bb-radius-none);
+  background-color: transparent;
+}
+
+.bb-nav-tabs .nav-link:hover {
+  background-color: transparent;
+}
+
+.bb-nav-tabs .nav-link.active,
+.bb-nav-tabs .nav-link[aria-current="page"] {
+  border-bottom-color: var(--bb-nav-active-color);
+  background-color: transparent;
+}
+
+/* -------------------------------------
+   Underline Variant (same feel, ayrı class)
+------------------------------------- */
+.bb-nav-underline .nav-link {
+  border-radius: var(--bb-radius-none);
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+}
+
+.bb-nav-underline .nav-link.active,
+.bb-nav-underline .nav-link[aria-current="page"] {
+  border-bottom-color: var(--bb-nav-active-color);
+  background-color: transparent;
+}
+
+/* -------------------------------------
+   Pills Style
+------------------------------------- */
+.bb-nav-pills {
+  background-color: transparent;
+}
+
+.bb-nav-pills .nav-link.active,
+.bb-nav-pills .nav-link[aria-current="page"] {
+  background-color: var(--bb-nav-pill-active-bg);
+  color: var(--bb-nav-pill-active-color);
+}
+
+/* -------------------------------------
+   Soft Pills (Metronic feel)
+------------------------------------- */
+.bb-nav-soft {
+  background-color: var(--bb-nav-soft-bg);
+  padding: 0.35rem;
+  border-radius: var(--bb-nav-radius);
+
+  /* Soft içinde hover bg genelde hafif olur */
+  --bb-nav-hover-bg: color-mix(in srgb, var(--bb-nav-pill-active-bg) 8%, transparent);
+}
+
+.bb-nav-soft .nav-link.active,
+.bb-nav-soft .nav-link[aria-current="page"] {
+  background-color: var(--bb-nav-active-bg);
+  box-shadow: var(--bb-shadow-sm, var(--bs-box-shadow-sm, none));
+}
+
+/* -------------------------------------
+   Group
+------------------------------------- */
+.bb-nav-group {
+  padding: 0.35rem;
+  background-color: var(--bb-nav-soft-bg);
+  border-radius: var(--bb-nav-radius);
+}
+
+/* Outline Group */
+.bb-nav-group.bb-nav-group-outline {
+  background-color: transparent;
+  border: var(--bb-nav-border-width) solid var(--bb-nav-border-color);
+}
+
+/* -------------------------------------
+   Stretch
+------------------------------------- */
+.bb-nav-stretch {
+  display: flex;
+}
+
+.bb-nav-stretch .nav-item {
+  flex: 1 1 0;
+}
+
+.bb-nav-stretch .nav-link {
+  width: 100%;
+  text-align: center;
+}
+
+/* -------------------------------------
+   Sizes
+------------------------------------- */
+.bb-nav-sm {
+  --bb-nav-link-py: 0.45rem;
+  --bb-nav-link-px: 0.9rem;
+}
+
+.bb-nav-sm .nav-link {
+  font-size: var(--bb-fs-sm);;
+}
+
+.bb-nav-lg {
+  --bb-nav-link-py: 0.85rem;
+  --bb-nav-link-px: 1.75rem;
+}
+
+.bb-nav-lg .nav-link {
+  font-size: var(--bb-fs-base);
+}
+
+/* -------------------------------------
+   Reduced motion
+------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .bb-nav .nav-link {
+    transition: none;
+  }
+}

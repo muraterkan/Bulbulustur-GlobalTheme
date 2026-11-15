@@ -1,0 +1,386 @@
+/* =====================================
+   Bulbulustur Theme - Menu (PURE)
+   Bootstrap 5 compatible
+   Prefix: bb-
+   Supports:
+   - Sidebar accordion (down)
+   - Topbar dropdown (down)
+   - Flyout submenu (right)
+   Notes:
+   - Click trigger için JS sadece .show toggle eder + aria-expanded günceller
+   ===================================== */
+
+.bb-menu {
+  /* -------------------------------------
+     Tokens (override-friendly)
+  -------------------------------------- */
+
+  /* Surfaces */
+  --bb-menu-bg: var(--bb-body-bg);
+  --bb-menu-border-color: var(--bb-border-color);
+
+  /* Link colors */
+  --bb-menu-link-color: var(--bs-secondary-color, var(--bb-body-color));
+  --bb-menu-link-hover-color: var(--bb-body-color);
+  --bb-menu-link-active-color: var(--bb-primary);
+
+  /* Link backgrounds */
+  --bb-menu-link-hover-bg: var(--bb-tertiary-bg);
+  --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary)12%, transparent);
+  --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+
+  /* Typography */
+  --bb-menu-link-font-size: var(--bs-body-font-size, 1rem);
+  --bb-menu-link-font-weight: var(--bb-fw-medium);
+  --bb-menu-link-line-height: 1.4;
+
+  --bb-menu-section-font-size: var(--bb-fs-xs);
+  --bb-menu-section-letter-spacing: 0.06em;
+  --bb-menu-section-text-transform: uppercase;
+  --bb-menu-section-color: var(--bs-secondary-color, var(--bb-body-color));
+  --bb-menu-section-opacity: 0.8;
+
+  /* Spacing / radius */
+  --bb-menu-gap: 0.25rem;
+  --bb-menu-radius: var(--bb-radius-lg);
+  --bb-menu-link-radius: var(--bb-radius-lg);
+
+  --bb-menu-link-py: 0.65rem;
+  --bb-menu-link-px: 0.9rem;
+
+  /* Icon / bullet */
+  --bb-menu-icon-size: 1.15rem;
+  --bb-menu-bullet-size: 0.35rem;
+  --bb-menu-bullet-color: var(--bs-secondary-color, var(--bb-body-color));
+  --bb-menu-bullet-opacity: 0.6;
+  --bb-menu-bullet-gap: 0.75rem;
+
+  /* Arrow */
+  --bb-menu-arrow-size: 0.5rem;
+  --bb-menu-arrow-stroke: 2px;
+  --bb-menu-arrow-opacity: 0.7;
+  --bb-menu-arrow-rotate: -45deg;      /* closed: right-ish */
+  --bb-menu-arrow-rotate-open: 45deg;  /* open: down-ish */
+
+  /* Submenu (floating) */
+  --bb-menu-sub-min-width: 12rem;
+  --bb-menu-sub-padding: 0.5rem;
+  --bb-menu-sub-radius: var(--bb-menu-radius);
+  --bb-menu-sub-offset: 0.5rem;
+  --bb-menu-sub-z: 1050;
+  --bb-menu-sub-shadow: var(--bb-shadow, var(--bb-shadow-sm, none));
+
+  /* Focus / disabled */
+  --bb-menu-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary)25%, transparent));
+  --bb-menu-disabled-opacity: 0.55;
+
+  /* Motion */
+  --bb-menu-transition-speed: 150ms;
+  --bb-menu-transition-ease: ease;
+
+  /* Accordion */
+  --bb-menu-accordion-gap-top: 0.25rem;
+  --bb-menu-accordion-speed: 200ms;
+
+  display: inline-flex;
+  align-items: stretch;
+  gap: var(--bb-menu-gap);
+
+  /* -------------------------------------
+     Core structure
+  -------------------------------------- */
+
+  .bb-menu-item {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .bb-menu-link {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: var(--bb-menu-link-py) var(--bb-menu-link-px);
+    border-radius: var(--bb-menu-link-radius);
+
+    color: var(--bb-menu-link-color);
+    text-decoration: none;
+    user-select: none;
+
+    font-size: var(--bb-menu-link-font-size);
+    font-weight: var(--bb-menu-link-font-weight);
+    line-height: var(--bb-menu-link-line-height);
+
+    transition:
+      color var(--bb-menu-transition-speed) var(--bb-menu-transition-ease),
+      background-color var(--bb-menu-transition-speed) var(--bb-menu-transition-ease),
+      transform var(--bb-menu-transition-speed) var(--bb-menu-transition-ease);
+  }
+
+  .bb-menu-link:hover {
+    text-decoration: none;
+  }
+
+  /* Disabled states */
+  .bb-menu-link.disabled,
+  .bb-menu-link[aria-disabled="true"],
+  .bb-menu-item.disabled > .bb-menu-link {
+    opacity: var(--bb-menu-disabled-opacity);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .bb-menu-icon {
+    width: var(--bb-menu-icon-size);
+    height: var(--bb-menu-icon-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    .material-symbols-outlined {
+      font-size: var(--bb-menu-icon-size);
+      line-height: 1;
+    }
+  }
+
+  /* Bullet (resim 2-3 sub item'lar) */
+  .bb-menu-bullet {
+    width: var(--bb-menu-bullet-gap);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    &::before {
+      content: "";
+      width: var(--bb-menu-bullet-size);
+      height: var(--bb-menu-bullet-size);
+      border-radius: var(--bb-radius-pill);
+      background-color: var(--bb-menu-bullet-color);
+      opacity: var(--bb-menu-bullet-opacity);
+    }
+  }
+
+  .bb-menu-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bb-menu-badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bb-menu-arrow {
+    flex: 0 0 auto;
+    width: var(--bb-menu-arrow-size);
+    height: var(--bb-menu-arrow-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      width: calc(var(--bb-menu-arrow-size) * 0.9);
+      height: calc(var(--bb-menu-arrow-size) * 0.9);
+      border-right: var(--bb-menu-arrow-stroke) solid currentColor;
+      border-bottom: var(--bb-menu-arrow-stroke) solid currentColor;
+      transform: rotate(var(--bb-menu-arrow-rotate));
+      opacity: var(--bb-menu-arrow-opacity);
+      transition: transform var(--bb-menu-transition-speed) var(--bb-menu-transition-ease);
+    }
+  }
+
+  /* Arrow rotate when open */
+  .bb-menu-item.show > .bb-menu-link .bb-menu-arrow::before,
+  .bb-menu-item[aria-expanded="true"] > .bb-menu-link .bb-menu-arrow::before {
+    transform: rotate(var(--bb-menu-arrow-rotate-open));
+  }
+
+  /* -------------------------------------
+     States (hover/active/here)
+     Controlled by root helper classes
+  -------------------------------------- */
+
+  &.bb-menu-hover-bg .bb-menu-link:hover {
+    background-color: var(--bb-menu-link-hover-bg);
+    color: var(--bb-menu-link-hover-color);
+  }
+
+  &.bb-menu-active-bg .bb-menu-link.active,
+  &.bb-menu-active-bg .bb-menu-item.active > .bb-menu-link {
+    background-color: var(--bb-menu-link-active-bg);
+    color: var(--bb-menu-link-active-color);
+  }
+
+  &.bb-menu-here-bg .bb-menu-item.here > .bb-menu-link {
+    background-color: var(--bb-menu-link-here-bg);
+    color: var(--bb-menu-link-active-color);
+  }
+
+  /* -------------------------------------
+     Layout variants
+  -------------------------------------- */
+
+  &.bb-menu-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &.bb-menu-rounded {
+    .bb-menu-link {
+      border-radius: var(--bb-radius-pill);
+    }
+  }
+
+  /* Section label (PAGES gibi) */
+  .bb-menu-section {
+    padding: 0.5rem var(--bb-menu-link-px) 0.25rem var(--bb-menu-link-px);
+    font-size: var(--bb-menu-section-font-size);
+    letter-spacing: var(--bb-menu-section-letter-spacing);
+    text-transform: var(--bb-menu-section-text-transform);
+    color: var(--bb-menu-section-color);
+    opacity: var(--bb-menu-section-opacity);
+  }
+
+  /* Optional separator */
+  .bb-menu-separator {
+    height: 1px;
+    background-color: var(--bb-menu-border-color);
+    opacity: 0.6;
+    margin: 0.35rem 0;
+  }
+
+  /* -------------------------------------
+     Submenu - Floating (dropdown/flyout)
+     Works for topbar (bottom-start) and flyout (right-start)
+  -------------------------------------- */
+
+  .bb-menu-sub {
+    display: none;
+    position: absolute;
+    z-index: var(--bb-menu-sub-z);
+
+    min-width: var(--bb-menu-sub-min-width);
+    padding: var(--bb-menu-sub-padding);
+    border-radius: var(--bb-menu-sub-radius);
+
+    background: var(--bb-menu-bg);
+    border: 1px solid var(--bb-menu-border-color);
+    box-shadow: var(--bb-menu-sub-shadow);
+  }
+
+  .bb-menu-sub .bb-menu-item,
+  .bb-menu-sub .bb-menu-link {
+    width: 100%;
+  }
+
+  /* Placement helpers */
+  .bb-menu-sub.bb-menu-sub-dropdown[data-bb-menu-placement="right-start"] {
+    left: calc(100% + var(--bb-menu-sub-offset));
+    top: 0;
+  }
+
+  .bb-menu-sub.bb-menu-sub-dropdown[data-bb-menu-placement="right-end"] {
+    left: calc(100% + var(--bb-menu-sub-offset));
+    top: auto;
+    bottom: 0;
+  }
+
+  .bb-menu-sub.bb-menu-sub-dropdown[data-bb-menu-placement="bottom-start"] {
+    left: 0;
+    top: calc(100% + var(--bb-menu-sub-offset));
+  }
+
+  .bb-menu-sub.bb-menu-sub-dropdown[data-bb-menu-placement="bottom-end"] {
+    left: auto;
+    right: 0;
+    top: calc(100% + var(--bb-menu-sub-offset));
+  }
+
+  /* Show rules */
+  .bb-menu-item.show > .bb-menu-sub {
+    display: block;
+  }
+
+  /* Hover trigger (mouse + keyboard) */
+  .bb-menu-item[data-bb-menu-trigger="hover"]:hover > .bb-menu-sub,
+  .bb-menu-item[data-bb-menu-trigger="hover"]:focus-within > .bb-menu-sub {
+    display: block;
+  }
+
+  /* -------------------------------------
+     Submenu - Accordion (sidebar down-open)
+     Markup recommended:
+     <div class="bb-menu-sub bb-menu-sub-accordion">
+       <div class="bb-menu-sub-content"> ...items... </div>
+     </div>
+  -------------------------------------- */
+
+  .bb-menu-sub.bb-menu-sub-accordion {
+    position: static;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+
+    padding: 0;
+    margin-top: var(--bb-menu-accordion-gap-top);
+
+    /* Smooth, no "1000px cap" */
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--bb-menu-accordion-speed) var(--bb-menu-transition-ease);
+  }
+
+  .bb-menu-sub.bb-menu-sub-accordion > .bb-menu-sub-content {
+    overflow: hidden;
+    min-height: 0;
+    padding: 0.25rem 0 0 0;
+  }
+
+  .bb-menu-item.show > .bb-menu-sub.bb-menu-sub-accordion,
+  .bb-menu-item[aria-expanded="true"] > .bb-menu-sub.bb-menu-sub-accordion {
+    grid-template-rows: 1fr;
+  }
+
+  /* Indent for accordion children (resim 3 hissi) */
+  &.bb-menu-sub-indention .bb-menu-sub.bb-menu-sub-accordion .bb-menu-link {
+    padding-left: calc(var(--bb-menu-link-px) + 1rem);
+  }
+
+  /* -------------------------------------
+     Size helpers
+  -------------------------------------- */
+
+  &.bb-menu-sm {
+    --bb-menu-link-py: 0.5rem;
+    --bb-menu-link-px: 0.75rem;
+    --bb-menu-icon-size: 1.05rem;
+  }
+
+  &.bb-menu-lg {
+    --bb-menu-link-py: 0.75rem;
+    --bb-menu-link-px: 1rem;
+    --bb-menu-icon-size: 1.25rem;
+  }
+
+  /* -------------------------------------
+     Reduced motion
+  -------------------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+    .bb-menu-link,
+    .bb-menu-arrow::before,
+    .bb-menu-sub.bb-menu-sub-accordion {
+      transition: none;
+    }
+  }
+}

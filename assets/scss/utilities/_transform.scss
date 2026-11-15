@@ -1,0 +1,134 @@
+/* =====================================
+   Bulbulustur Theme – Transform Helpers (PURE)
+   bb- prefix | token-driven | minimal + practical
+   Scope: utilities/transform
+===================================== */
+
+:root {
+  /* -------------------------------------
+     Rotate angles
+  ------------------------------------- */
+  --bb-rotate-0: 0deg;
+  --bb-rotate-45: 45deg;
+  --bb-rotate-90: 90deg;
+  --bb-rotate-180: 180deg;
+  --bb-rotate-270: 270deg;
+
+  /* Negative rotate */
+  --bb-rotate-n45: -45deg;
+  --bb-rotate-n90: -90deg;
+  --bb-rotate-n180: -180deg;
+
+  /* -------------------------------------
+     Scale
+  ------------------------------------- */
+  --bb-scale-90: 0.9;
+  --bb-scale-100: 1;
+  --bb-scale-105: 1.05;
+  --bb-scale-110: 1.1;
+  --bb-scale-125: 1.25;
+
+  /* -------------------------------------
+     Translate (consume global spacing tokens)
+     If spacing system is not loaded, fallback to Bootstrap spacer math.
+  ------------------------------------- */
+  --bb-translate-x-1: var(--bb-space-1, calc(var(--bs-spacer, 1rem) * 0.25));
+  --bb-translate-x-2: var(--bb-space-2, calc(var(--bs-spacer, 1rem) * 0.5));
+  --bb-translate-x-3: var(--bb-space-3, calc(var(--bs-spacer, 1rem) * 0.75));
+
+  --bb-translate-y-1: var(--bb-space-1, calc(var(--bs-spacer, 1rem) * 0.25));
+  --bb-translate-y-2: var(--bb-space-2, calc(var(--bs-spacer, 1rem) * 0.5));
+  --bb-translate-y-3: var(--bb-space-3, calc(var(--bs-spacer, 1rem) * 0.75));
+
+  /* -------------------------------------
+     Origins
+  ------------------------------------- */
+  --bb-origin-center: center;
+  --bb-origin-top: top;
+  --bb-origin-right: right;
+  --bb-origin-bottom: bottom;
+  --bb-origin-left: left;
+
+  --bb-origin-right-top: right top;
+
+  /* -------------------------------------
+     Generic hooks
+  ------------------------------------- */
+  --bb-transform: none;
+  --bb-transform-origin: center;
+}
+
+/* -------------------------------------
+   Generic hook (composite transform)
+------------------------------------- */
+.bb-transform {
+  transform: var(--bb-transform) !important;
+  transform-origin: var(--bb-transform-origin) !important;
+}
+
+/* Opt-in performance helper */
+.bb-transform-optimized {
+  transform: var(--bb-transform) !important;
+  transform-origin: var(--bb-transform-origin) !important;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* -------------------------------------
+   Rotate utilities
+------------------------------------- */
+.bb-rotate-0   { transform: rotate(var(--bb-rotate-0)) !important; }
+.bb-rotate-45  { transform: rotate(var(--bb-rotate-45)) !important; }
+.bb-rotate-90  { transform: rotate(var(--bb-rotate-90)) !important; }
+.bb-rotate-180 { transform: rotate(var(--bb-rotate-180)) !important; }
+.bb-rotate-270 { transform: rotate(var(--bb-rotate-270)) !important; }
+
+.bb-rotate-n45  { transform: rotate(var(--bb-rotate-n45)) !important; }
+.bb-rotate-n90  { transform: rotate(var(--bb-rotate-n90)) !important; }
+.bb-rotate-n180 { transform: rotate(var(--bb-rotate-n180)) !important; }
+
+/* Metronic-like specific */
+.bb-rotate-90-rt {
+  transform: rotate(var(--bb-rotate-90)) !important;
+  transform-origin: var(--bb-origin-right-top) !important;
+}
+
+/* -------------------------------------
+   Scale utilities
+------------------------------------- */
+.bb-scale-90  { transform: scale(var(--bb-scale-90)) !important; }
+.bb-scale-100 { transform: scale(var(--bb-scale-100)) !important; }
+.bb-scale-105 { transform: scale(var(--bb-scale-105)) !important; }
+.bb-scale-110 { transform: scale(var(--bb-scale-110)) !important; }
+.bb-scale-125 { transform: scale(var(--bb-scale-125)) !important; }
+
+/* -------------------------------------
+   Translate utilities (positive)
+------------------------------------- */
+.bb-translate-x-1 { transform: translateX(var(--bb-translate-x-1)) !important; }
+.bb-translate-x-2 { transform: translateX(var(--bb-translate-x-2)) !important; }
+.bb-translate-x-3 { transform: translateX(var(--bb-translate-x-3)) !important; }
+
+.bb-translate-y-1 { transform: translateY(var(--bb-translate-y-1)) !important; }
+.bb-translate-y-2 { transform: translateY(var(--bb-translate-y-2)) !important; }
+.bb-translate-y-3 { transform: translateY(var(--bb-translate-y-3)) !important; }
+
+/* -------------------------------------
+   Translate utilities (negative)
+------------------------------------- */
+.bb-translate-x-n1 { transform: translateX(calc(var(--bb-translate-x-1) * -1)) !important; }
+.bb-translate-x-n2 { transform: translateX(calc(var(--bb-translate-x-2) * -1)) !important; }
+.bb-translate-x-n3 { transform: translateX(calc(var(--bb-translate-x-3) * -1)) !important; }
+
+.bb-translate-y-n1 { transform: translateY(calc(var(--bb-translate-y-1) * -1)) !important; }
+.bb-translate-y-n2 { transform: translateY(calc(var(--bb-translate-y-2) * -1)) !important; }
+.bb-translate-y-n3 { transform: translateY(calc(var(--bb-translate-y-3) * -1)) !important; }
+
+/* -------------------------------------
+   Transform origin helpers
+------------------------------------- */
+.bb-origin-center { transform-origin: var(--bb-origin-center) !important; }
+.bb-origin-top    { transform-origin: var(--bb-origin-top) !important; }
+.bb-origin-right  { transform-origin: var(--bb-origin-right) !important; }
+.bb-origin-bottom { transform-origin: var(--bb-origin-bottom) !important; }
+.bb-origin-left   { transform-origin: var(--bb-origin-left) !important; }

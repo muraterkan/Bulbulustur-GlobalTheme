@@ -1,0 +1,127 @@
+/* =====================================
+   Bulbulustur Theme - Progress
+   Bootstrap 5 compatible, token-driven
+===================================== */
+
+.bb-progress {
+  /* Local tokens */
+  --bb-progress-height: 0.5rem;
+  --bb-progress-radius: var(--bb-radius-pill);
+
+  --bb-progress-track-bg: var(--bb-tertiary-bg);
+  --bb-progress-bar-bg: var(--bb-success);
+
+  --bb-progress-label-color: var(--bb-secondary-color);
+  --bb-progress-value-color: var(--bb-body-color);
+
+  --bb-progress-gap: 0.5rem;
+  --bb-progress-font-size: font-size: var(--bb-fs-base);
+
+  --bb-progress-transition:
+    width var(--bb-motion-normal, 200ms) var(--bb-ease-in-out, ease-in-out);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-progress-gap);
+}
+
+.bb-progress__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-progress-gap);
+}
+
+.bb-progress__label {
+  color: var(--bb-progress-label-color);
+  font-size: var(--bb-progress-font-size);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-progress__value {
+  color: var(--bb-progress-value-color);
+  font-size: var(--bb-progress-font-size);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-progress__track {
+  width: 100%;
+  height: var(--bb-progress-height);
+
+  overflow: hidden;
+
+  background-color: var(--bb-progress-track-bg);
+  border-radius: var(--bb-progress-radius);
+}
+
+.bb-progress__bar {
+  width: 0%;
+  height: 100%;
+
+  background-color: var(--bb-progress-bar-bg);
+  border-radius: inherit;
+
+  transition: var(--bb-progress-transition);
+}
+
+/* -------------------------------------
+   Sizes
+------------------------------------- */
+
+.bb-progress--sm {
+  --bb-progress-height: 5px;
+}
+
+.bb-progress--md {
+  --bb-progress-height: 8px;
+}
+
+.bb-progress--lg {
+  --bb-progress-height: 12px;
+}
+
+/* -------------------------------------
+   Variants
+------------------------------------- */
+
+.bb-progress--primary {
+  --bb-progress-bar-bg: var(--bb-primary);
+}
+
+.bb-progress--secondary {
+  --bb-progress-bar-bg: var(--bb-secondary);
+}
+
+.bb-progress--success {
+  --bb-progress-bar-bg: var(--bb-success);
+}
+
+.bb-progress--info {
+  --bb-progress-bar-bg: var(--bb-info);
+}
+
+.bb-progress--warning {
+  --bb-progress-bar-bg: var(--bb-warning);
+}
+
+.bb-progress--danger {
+  --bb-progress-bar-bg: var(--bb-danger);
+}
+
+.bb-progress--dark {
+  --bb-progress-bar-bg: var(--bb-dark);
+}
+
+/* -------------------------------------
+   States
+------------------------------------- */
+
+.bb-progress.is-loading {
+  opacity: var(--bb-loading-opacity);
+  pointer-events: none;
+}
+
+.bb-progress.is-disabled {
+  opacity: var(--bb-disabled-opacity);
+  pointer-events: none;
+}

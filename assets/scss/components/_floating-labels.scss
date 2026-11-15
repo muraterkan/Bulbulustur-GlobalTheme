@@ -1,0 +1,125 @@
+//
+// Bulbulustur Theme - Floating Labels (PURE)
+// Bootstrap 5 base class'lar korunur.
+// Token-first, dark/light safe
+//
+
+:root {
+  /* label tokens */
+  --bb-form-floating-label-color: var(--bb-secondary-color);
+  --bb-form-floating-label-bg: var(--bb-body-bg);
+
+  --bb-form-floating-label-padding-x: 0.25rem;
+  --bb-form-floating-label-radius: var(--bb-radius-sm, var(--bs-border-radius-sm, 0.4rem));
+
+  /* optional */
+  --bb-form-floating-disabled-opacity: 0.75;
+}
+
+/* -------------------------------------
+   Core label (default state)
+------------------------------------- */
+.form-floating > label {
+  color: var(--bb-form-floating-label-color);
+  background: transparent;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+/* -------------------------------------
+   Chip background ONLY when floated
+   - height/width reset: 100% hissini kırar
+------------------------------------- */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > textarea.form-control:focus ~ label,
+.form-floating > textarea.form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  height: auto;
+  width: auto;
+
+  display: inline-flex;
+  align-items: center;
+
+  background-color: var(--bb-form-floating-label-bg);
+  border-radius: var(--bb-form-floating-label-radius);
+
+  padding-left: var(--bb-form-floating-label-padding-x);
+  padding-right: var(--bb-form-floating-label-padding-x);
+}
+
+/* -------------------------------------
+   Solid style compatibility
+------------------------------------- */
+.form-floating > .form-control.form-control-solid:focus ~ label,
+.form-floating > .form-control.form-control-solid:not(:placeholder-shown) ~ label,
+.form-floating > textarea.form-control.form-control-solid:focus ~ label,
+.form-floating > textarea.form-control.form-control-solid:not(:placeholder-shown) ~ label,
+.form-floating > .form-select.form-select-solid ~ label {
+  background-color: var(--bb-form-control-solid-bg, var(--bb-form-floating-label-bg));
+}
+
+/* -------------------------------------
+   Transparent + Flush style compatibility
+------------------------------------- */
+.form-floating > .form-control.form-control-transparent:focus ~ label,
+.form-floating > .form-control.form-control-transparent:not(:placeholder-shown) ~ label,
+.form-floating > textarea.form-control.form-control-transparent:focus ~ label,
+.form-floating > textarea.form-control.form-control-transparent:not(:placeholder-shown) ~ label,
+.form-floating > .form-select.form-select-transparent ~ label,
+.form-floating > .form-control.form-control-flush:focus ~ label,
+.form-floating > .form-control.form-control-flush:not(:placeholder-shown) ~ label,
+.form-floating > textarea.form-control.form-control-flush:focus ~ label,
+.form-floating > textarea.form-control.form-control-flush:not(:placeholder-shown) ~ label,
+.form-floating > .form-select.form-select-flush ~ label {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: var(--bb-radius-none);
+}
+
+/* -------------------------------------
+   Validation: label follows input state
+------------------------------------- */
+.form-floating > .form-control.is-valid ~ label,
+.form-floating > .form-select.is-valid ~ label,
+.form-floating > textarea.form-control.is-valid ~ label {
+  color: var(--bb-success);
+}
+
+.form-floating > .form-control.is-invalid ~ label,
+.form-floating > .form-select.is-invalid ~ label,
+.form-floating > textarea.form-control.is-invalid ~ label {
+  color: var(--bb-danger);
+}
+
+/* -------------------------------------
+   Disabled: subtle but readable
+------------------------------------- */
+.form-floating > .form-control:disabled ~ label,
+.form-floating > .form-select:disabled ~ label,
+.form-floating > textarea.form-control:disabled ~ label {
+  opacity: var(--bb-form-floating-disabled-opacity);
+}
+
+/* -------------------------------------
+   Optional: autofill edge-case
+   (bazı tarayıcılarda placeholder-shown şaşabiliyor)
+------------------------------------- */
+.form-floating > .form-control:-webkit-autofill ~ label,
+.form-floating > textarea.form-control:-webkit-autofill ~ label {
+  height: auto;
+  width: auto;
+
+  display: inline-flex;
+  align-items: center;
+
+  background-color: var(--bb-form-floating-label-bg);
+  border-radius: var(--bb-form-floating-label-radius);
+
+  padding-left: var(--bb-form-floating-label-padding-x);
+  padding-right: var(--bb-form-floating-label-padding-x);
+}

@@ -1,0 +1,171 @@
+/* =====================================
+   Bulbulustur Theme - Dropdowns
+   Bootstrap 5 compatible (dropdown JS)
+   Prefix: bb-
+   Notes:
+   - Hard-coded renk yok -> tokens / Bootstrap CSS vars
+   - Bootstrap base class'lar korunur (.dropdown-menu, .dropdown-item ...)
+===================================== */
+
+.bb-dropdown-menu {
+  /* local tokens (override edilebilir) */
+  --bb-dd-bg: var(--bb-body-bg);
+  --bb-dd-border: var(--bb-border-color);
+  --bb-dd-shadow: var(--bb-shadow-sm);
+  --bb-dd-radius: var(--bb-radius-lg);
+
+  --bb-dd-minw: 14rem;
+
+  --bb-dd-pad-x: 0.5rem;
+  --bb-dd-pad-y: 0.5rem;
+
+  --bb-dd-item-radius: var(--bb-radius);
+  --bb-dd-item-px: 0.75rem;
+  --bb-dd-item-py: 0.55rem;
+
+  --bb-dd-item-hover-bg: var(--bb-tertiary-bg);
+  --bb-dd-item-active-bg: color-mix(in srgb, var(--bb-primary)14%, transparent);
+
+  --bb-dd-header-color: var(--bb-secondary-color);
+  --bb-dd-divider: var(--bb-border-color);
+
+  /* Bootstrap dropdown variable bridge */
+  --bs-dropdown-min-width: var(--bb-dd-minw);
+
+  --bs-dropdown-padding-x: var(--bb-dd-pad-x);
+  --bs-dropdown-padding-y: var(--bb-dd-pad-y);
+
+  --bs-dropdown-bg: var(--bb-dd-bg);
+  --bs-dropdown-border-color: var(--bb-dd-border);
+  --bs-dropdown-border-radius: var(--bb-dd-radius);
+
+  --bs-dropdown-link-color: var(--bb-body-color);
+  --bs-dropdown-link-hover-color: var(--bb-body-color);
+  --bs-dropdown-link-hover-bg: var(--bb-dd-item-hover-bg);
+
+  --bs-dropdown-link-active-color: var(--bb-primary);
+  --bs-dropdown-link-active-bg: var(--bb-dd-item-active-bg);
+
+  --bs-dropdown-header-color: var(--bb-dd-header-color);
+  --bs-dropdown-divider-bg: var(--bb-dd-divider);
+
+  /* polish */
+  border-width: var(--bb-border-width, 1px);
+  box-shadow: var(--bb-dd-shadow);
+}
+
+/* Menü varyantları */
+.bb-dropdown-menu-solid {
+  --bb-dd-border: transparent;
+  --bb-dd-bg: var(--bb-tertiary-bg);
+}
+
+.bb-dropdown-menu-sm {
+  --bb-dd-minw: 12rem;
+  --bb-dd-pad-x: 0.4rem;
+  --bb-dd-pad-y: 0.4rem;
+  --bb-dd-item-px: 0.65rem;
+  --bb-dd-item-py: 0.45rem;
+  --bb-dd-item-radius: var(--bb-radius);
+}
+
+.bb-dropdown-menu-lg {
+  --bb-dd-minw: 16rem;
+  --bb-dd-pad-x: 0.65rem;
+  --bb-dd-pad-y: 0.65rem;
+  --bb-dd-item-px: 0.9rem;
+  --bb-dd-item-py: 0.65rem;
+  --bb-dd-item-radius: var(--bb-radius-lg);
+}
+
+/* Scrollable menu */
+.bb-dropdown-menu-scroll {
+  max-height: 320px;
+  overflow: auto;
+}
+
+/* Item polish (hem bb class ile hem de menu scope içinde çalışsın) */
+.bb-dropdown-menu .dropdown-item,
+.bb-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-radius: var(--bb-dd-item-radius);
+  padding: var(--bb-dd-item-py) var(--bb-dd-item-px);
+
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Disabled item opacity (token bazlı) */
+.bb-dropdown-menu .dropdown-item.disabled,
+.bb-dropdown-item.disabled {
+  opacity: 0.6;
+}
+
+/* Header & divider spacing (Bootstrap base korunur) */
+.bb-dropdown-menu .dropdown-header {
+  padding-left: var(--bb-dd-item-px);
+  padding-right: var(--bb-dd-item-px);
+  color: var(--bb-dd-header-color);
+}
+
+.bb-dropdown-menu .dropdown-divider {
+  margin: 0.5rem 0;
+  opacity: 1;
+}
+
+/* Item icon helper */
+.bb-dropdown-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  color: var(--bb-secondary-color);
+}
+
+.bb-dropdown-item-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.bb-dropdown-item-meta {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+/* Toggle button helper (opsiyonel) */
+.bb-btn-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bb-btn-dropdown.dropdown-toggle::after {
+    display: none !important;
+    content: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+/* Split button alignment helper (opsiyonel) */
+.bb-btn-dropdown-split {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bb-btn-dropdown-split .dropdown-toggle-split {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark/light için ekstra iş yok:
+   - bb tokens ve bs vars zaten theme ile değişiyor
+*/

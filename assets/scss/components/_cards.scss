@@ -1,0 +1,222 @@
+/* =====================================
+   Bulbulustur Theme - Cards (v2 PURE)
+   Metronic DNA: in, copy: out
+   Bootstrap 5 compatible, token-first
+   ===================================== */
+
+.bb-card {
+  /* -----------------------------------
+     Local tokens (override-friendly)
+  ----------------------------------- */
+
+  /* surfaces + text (dark/light safe fallbacks) */
+  --bb-card-bg: var(--bb-body-bg);
+  --bb-card-color: var(--bb-emphasis-color, var(--bs-emphasis-color, var(--bb-body-color)));
+  --bb-card-muted: var(--bb-secondary-color);
+
+  /* border */
+  --bb-card-border-width: var(--bb-border-width, 1px);
+  --bb-card-border-color: var(--bb-border-color);
+
+  /* radius */
+  --bb-card-radius: var(--bb-radius-lg, var(--bs-border-radius-lg, 0.75rem));
+
+  /* elevation (no rgba fallbacks) */
+  --bb-card-shadow: var(--bb-shadow-xs, var(--bs-box-shadow-sm, none));
+  --bb-card-shadow-hover: var(--bb-shadow-sm, var(--bs-box-shadow, var(--bb-card-shadow)));
+
+  /* spacing */
+  --bb-card-px: 1.25rem;
+  --bb-card-header-py: 1rem;
+  --bb-card-body-py: 1.25rem;
+  --bb-card-footer-py: 0.85rem;
+
+  /* micro tokens */
+  --bb-card-actions-gap: 0.5rem;
+  --bb-card-metric-gap: 0.25rem;
+  --bb-card-hover-translate-y: -2px;
+
+  /* focus ring */
+  --bb-card-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-card-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-card-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+
+  border: 0;
+  border-radius: var(--bb-card-radius);
+  background-color: var(--bb-card-bg);
+  color: var(--bb-card-color);
+  box-shadow: var(--bb-card-shadow);
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+  /* Bootstrap .card ile yan yana kullanım (güvenli) */
+  &.card {
+    border-radius: var(--bb-card-radius);
+  }
+}
+
+/* -------------------------------------
+   Hover elevate (opt-in)
+------------------------------------- */
+.bb-card-hover-elevate:hover {
+  box-shadow: var(--bb-card-shadow-hover);
+  transform: translateY(var(--bb-card-hover-translate-y));
+}
+
+/* -------------------------------------
+   Header / Body / Footer
+   (color'ı garanti ediyoruz)
+------------------------------------- */
+.bb-card-header,
+.bb-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--bb-card-header-py) var(--bb-card-px);
+  background: transparent;
+  color: var(--bb-card-color);
+
+  border-bottom: var(--bb-card-border-width) solid var(--bb-card-border-color);
+}
+
+.bb-card-body,
+.bb-card .card-body {
+  padding: var(--bb-card-body-py) var(--bb-card-px);
+  color: var(--bb-card-color);
+}
+
+.bb-card-footer,
+.bb-card .card-footer {
+  padding: var(--bb-card-footer-py) var(--bb-card-px);
+  background: transparent;
+  color: var(--bb-card-muted);
+
+  border-top: var(--bb-card-border-width) solid var(--bb-card-border-color);
+}
+
+/* header title helpers */
+.bb-card-title,
+.bb-card .card-title {
+  margin: 0;
+  font-weight: var(--bb-fw-semibold);
+  font-size: var(--bb-fs-base);
+  color: var(--bb-card-color);
+}
+
+/* toolbars */
+.bb-card-actions,
+.bb-card-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-card-actions-gap);
+}
+
+/* -------------------------------------
+   Metric blocks
+------------------------------------- */
+.bb-card-metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-card-metric-gap);
+}
+
+.bb-card-value {
+  font-size: var(--bb-h3);
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-card-color);
+  letter-spacing: -0.01em;
+}
+
+.bb-card-meta {
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-medium);
+
+  &.positive { color: var(--bb-success, var(--bb-success)); }
+  &.negative { color: var(--bb-danger, var(--bb-danger)); }
+  &.muted { color: var(--bb-card-muted); }
+}
+
+.bb-card-footer-text {
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-card-muted);
+}
+
+/* -------------------------------------
+   Variants
+------------------------------------- */
+
+/* Bordered: shadow off, border on */
+.bb-card-bordered {
+  box-shadow: none;
+  border: var(--bb-card-border-width) solid var(--bb-card-border-color);
+}
+
+/* Dashed: shadow off, dashed border */
+.bb-card-dashed {
+  box-shadow: none;
+  border: var(--bb-card-border-width) dashed var(--bb-card-border-color);
+}
+
+/* Flush: header/footer borders off */
+.bb-card-flush {
+  .bb-card-header,
+  .card-header {
+    border-bottom: 0;
+  }
+
+  .bb-card-footer,
+  .card-footer {
+    border-top: 0;
+  }
+}
+
+/* Reset side paddings */
+.bb-card-px-0 {
+  --bb-card-px: 0;
+}
+
+/* Scrollable body (height via css var) */
+.bb-card-scroll {
+  --bb-card-scroll-height: 200px;
+
+  .bb-card-body,
+  .card-body {
+    max-height: var(--bb-card-scroll-height);
+    overflow: auto;
+  }
+}
+
+/* Linkable (focus-visible included) */
+.bb-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* -------------------------------------
+   Collapsible helper
+------------------------------------- */
+.bb-card-collapsible {
+  cursor: pointer;
+  user-select: none;
+
+  .bb-card-toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  &[aria-expanded="true"] {
+    .bb-card-toggle-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

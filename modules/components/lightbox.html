@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur - Lightbox</title>
+
+  <    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="p-4">
+  <div class="container">
+
+    <!-- Page Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="h4 mb-1">Lightbox</h1>
+        <div class="text-muted small">
+          Vendor-free galeri. <code>.bb-lightbox-trigger</code> + <code>data-bb-lightbox-group</code>.
+          (ESC / ← → / dblclick zoom / Z)
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="btn btn-light" id="bb_theme_light">
+          Light
+        </button>
+        <button type="button" class="btn btn-dark" id="bb_theme_dark">
+          Dark
+        </button>
+      </div>
+    </div>
+
+    <!-- Demo Card (Bulbulustur Card) -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div>
+          <div class="bb-card-title mb-0">Gallery Demo</div>
+          <div class="text-muted small">Tıklayınca açılır. Backdrop’a tıklayınca kapanır.</div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge text-bg-light">Group: gallery</span>
+        </div>
+      </div>
+
+      <div class="bb-card-body">
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <a
+              href="https://picsum.photos/id/1015/1600/1200"
+              class="d-block"
+            >
+              <img
+                src="https://picsum.photos/id/1015/800/600"
+                class="img-fluid rounded bb-lightbox-trigger"
+                data-bb-lightbox-group="gallery"
+                data-bb-lightbox-src="https://picsum.photos/id/1015/1600/1200"
+                alt="Dağ manzarası"
+              />
+            </a>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <a
+              href="https://picsum.photos/id/1025/1600/1200"
+              class="d-block"
+            >
+              <img
+                src="https://picsum.photos/id/1025/800/600"
+                class="img-fluid rounded bb-lightbox-trigger"
+                data-bb-lightbox-group="gallery"
+                data-bb-lightbox-src="https://picsum.photos/id/1025/1600/1200"
+                alt="Köpek portresi"
+              />
+            </a>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <a
+              href="https://picsum.photos/id/1035/1600/1200"
+              class="d-block"
+            >
+              <img
+                src="https://picsum.photos/id/1035/800/600"
+                class="img-fluid rounded bb-lightbox-trigger"
+                data-bb-lightbox-group="gallery"
+                data-bb-lightbox-src="https://picsum.photos/id/1035/1600/1200"
+                alt="Şehir silüeti"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-3 text-muted small">
+          Öneri: Trigger elemanına <code>href</code> veriyoruz; JS <code>data-bb-lightbox-src</code> varsa onu, yoksa <code>href/src</code>’yi kullanır.
+        </div>
+      </div>
+    </div>
+
+    <!-- Usage Card -->
+    <div class="bb-card">
+      <div class="bb-card-header">
+        <div class="bb-card-title mb-0">Kullanım</div>
+        <div class="text-muted small">Markup + script include.</div>
+      </div>
+
+      <div class="bb-card-body">
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="fw-semibold mb-2">HTML</div>
+            <pre class="mb-0"><code>&lt;img
+  class="bb-lightbox-trigger"
+  data-bb-lightbox-group="gallery"
+  data-bb-lightbox-src="https://..."
+  src="https://..."
+  alt=""
+/&gt;</code></pre>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="fw-semibold mb-2">JS</div>
+            <pre class="mb-0"><code>&lt;script src="../../../../assets/js/bb-lightbox.js"&gt;&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Component JS -->
+  <script src="../../../../assets/js/bb-lightbox.js"></script>
+
+  <!-- Theme Toggle (demo only) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btnLight = document.querySelector("#bb_theme_light");
+      var btnDark = document.querySelector("#bb_theme_dark");
+
+      function setTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+      }
+
+      if (btnLight) {
+        btnLight.addEventListener("click", function () { setTheme("light"); });
+      }
+
+      if (btnDark) {
+        btnDark.addEventListener("click", function () { setTheme("dark"); });
+      }
+    })();
+  </script>
+</body>
+</html>

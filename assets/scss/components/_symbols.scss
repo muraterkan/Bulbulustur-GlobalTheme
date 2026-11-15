@@ -1,0 +1,128 @@
+/* =====================================
+   Bulbulustur Theme - Symbols
+   Token-first | Dark/Light safe
+   Root: .bb-symbol
+   Variants: .is-circle | .is-square
+===================================== */
+
+.bb-symbol {
+  /* Local tokens */
+  --bb-symbol-size: 3.125rem;
+  --bb-symbol-radius: var(--bb-radius);
+
+  --bb-symbol-bg: var(--bb-tertiary-bg);
+  --bb-symbol-color: var(--bb-body-color);
+  --bb-symbol-border-color: var(--bb-border-color);
+
+  --bb-symbol-badge-border-color: var(--bb-body-bg);
+  --bb-symbol-badge-border-width: var(--bb-border-width, 1px);
+
+  --bb-symbol-group-overlap: 0.625rem;
+  --bb-symbol-hover-raise: 2px;
+  --bb-symbol-transition: var(--bb-transition-fast);
+
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+
+  width: var(--bb-symbol-size);
+  height: var(--bb-symbol-size);
+
+  border-radius: var(--bb-symbol-radius);
+  overflow: hidden;
+}
+
+/* -------------------------------------
+   Sizes
+------------------------------------- */
+
+.bb-symbol.size-20 { --bb-symbol-size: 1.25rem; }
+.bb-symbol.size-25 { --bb-symbol-size: 1.5625rem; }
+.bb-symbol.size-30 { --bb-symbol-size: 1.875rem; }
+.bb-symbol.size-35 { --bb-symbol-size: 2.1875rem; }
+.bb-symbol.size-40 { --bb-symbol-size: 2.5rem; }
+.bb-symbol.size-45 { --bb-symbol-size: 2.8125rem; }
+.bb-symbol.size-50 { --bb-symbol-size: 3.125rem; }
+.bb-symbol.size-60 { --bb-symbol-size: 3.75rem; }
+.bb-symbol.size-75 { --bb-symbol-size: 4.6875rem; }
+.bb-symbol.size-100 { --bb-symbol-size: 6.25rem; }
+.bb-symbol.size-125 { --bb-symbol-size: 7.8125rem; }
+.bb-symbol.size-150 { --bb-symbol-size: 9.375rem; }
+
+/* -------------------------------------
+   Label
+------------------------------------- */
+
+.bb-symbol-label {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-symbol-color);
+  background-color: var(--bb-symbol-bg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: inherit;
+}
+
+/* -------------------------------------
+   Image
+------------------------------------- */
+
+.bb-symbol > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* -------------------------------------
+   Shapes
+------------------------------------- */
+
+.bb-symbol.is-circle {
+  --bb-symbol-radius: 50%;
+}
+
+.bb-symbol.is-square {
+  --bb-symbol-radius: var(--bb-radius-none);
+}
+
+/* -------------------------------------
+   Badge
+------------------------------------- */
+
+.bb-symbol-badge {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+
+  border: var(--bb-symbol-badge-border-width) solid var(--bb-symbol-badge-border-color);
+  z-index: 1;
+}
+
+/* -------------------------------------
+   Group
+------------------------------------- */
+
+.bb-symbol-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bb-symbol-group .bb-symbol {
+  margin-left: calc(var(--bb-symbol-group-overlap) * -1);
+  transition: transform var(--bb-symbol-transition), z-index var(--bb-symbol-transition);
+}
+
+.bb-symbol-group .bb-symbol:hover {
+  z-index: 2;
+  transform: translateY(calc(var(--bb-symbol-hover-raise) * -1));
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme – Tiny Slider Test</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bg-body-tertiary">
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div>
+        <h4 class="mb-0">Tiny Slider</h4>
+        <div class="text-body-secondary small">Vendor yok, hafif scroll-snap + minimal JS</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-light" type="button" id="btnItems1">1 item</button>
+        <button class="btn btn-sm btn-light" type="button" id="btnItems2">2 items</button>
+        <button class="btn btn-sm btn-light" type="button" id="btnItems3">3 items</button>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="bb-tiny-slider" data-bb-items="1" data-bb-slider>
+      <div class="bb-ts-viewport">
+        <div class="bb-ts-track" data-bb-track>
+          <!-- Slide -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 1</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 2</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 3</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 4</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 5</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="ratio ratio-16x9 bg-body-secondary"></div>
+              <div class="bb-ts-caption">
+                <div class="fw-semibold">Slide 6</div>
+                <div class="text-body-secondary small">Caption örneği</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="bb-ts-controls">
+        <button class="bb-ts-btn" type="button" data-bb-prev aria-label="Önceki">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="bb-ts-btn" type="button" data-bb-next aria-label="Sonraki">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+      <!-- Dots -->
+      <div class="bb-ts-nav" data-bb-nav></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function clamp(n, min, max) {
+        return Math.max(min, Math.min(max, n));
+      }
+
+      function initTinySlider(root) {
+        var track = root.querySelector('[data-bb-track]');
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.bb-ts-slide'));
+        var btnPrev = root.querySelector('[data-bb-prev]');
+        var btnNext = root.querySelector('[data-bb-next]');
+        var nav = root.querySelector('[data-bb-nav]');
+
+        if (!track || slides.length === 0) {
+          return;
+        }
+
+        var state = { index: 0 };
+
+        // Build dots
+        nav.innerHTML = '';
+        slides.forEach(function (_, i) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'bb-ts-dot';
+          dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+          dot.addEventListener('click', function () {
+            goTo(i);
+          });
+          nav.appendChild(dot);
+        });
+
+        function slideWidth() {
+          // İlk slide'ın gerçek genişliği + gap’i yaklaşık yakalamak için offset baz alıyoruz
+          return slides[0].getBoundingClientRect().width;
+        }
+
+        function gapWidth() {
+          // gap’i computed style’dan çekiyoruz (px)
+          var cs = window.getComputedStyle(track);
+          var gap = cs.columnGap || cs.gap || '0px';
+          return parseFloat(gap) || 0;
+        }
+
+        function setActiveDot(i) {
+          var dots = nav.querySelectorAll('.bb-ts-dot');
+          dots.forEach(function (d, idx) {
+            if (idx === i) {
+              d.classList.add('is-active');
+            } else {
+              d.classList.remove('is-active');
+            }
+          });
+        }
+
+        function updateButtons() {
+          if (btnPrev) btnPrev.disabled = (state.index <= 0);
+          if (btnNext) btnNext.disabled = (state.index >= slides.length - 1);
+        }
+
+        function goTo(i) {
+          state.index = clamp(i, 0, slides.length - 1);
+
+          var x = state.index * (slideWidth() + gapWidth());
+          track.scrollTo({ left: x, behavior: 'smooth' });
+
+          setActiveDot(state.index);
+          updateButtons();
+        }
+
+        // Click controls
+        if (btnPrev) {
+          btnPrev.addEventListener('click', function () { goTo(state.index - 1); });
+        }
+        if (btnNext) {
+          btnNext.addEventListener('click', function () { goTo(state.index + 1); });
+        }
+
+        // Active state by scroll (light)
+        var ticking = false;
+        track.addEventListener('scroll', function () {
+          if (ticking) return;
+          ticking = true;
+
+          window.requestAnimationFrame(function () {
+            ticking = false;
+
+            var w = slideWidth() + gapWidth();
+            if (w <= 0) return;
+
+            var i = Math.round(track.scrollLeft / w);
+            i = clamp(i, 0, slides.length - 1);
+
+            if (i !== state.index) {
+              state.index = i;
+              setActiveDot(state.index);
+              updateButtons();
+            }
+          });
+        });
+
+        // Init
+        goTo(0);
+
+        // Recalc on resize
+        window.addEventListener('resize', function () {
+          goTo(state.index);
+        });
+      }
+
+      document.querySelectorAll('[data-bb-slider]').forEach(function (el) {
+        initTinySlider(el);
+      });
+
+      // Demo: item count buttons
+      var slider = document.querySelector('[data-bb-slider]');
+      if (slider) {
+        document.getElementById('btnItems1').addEventListener('click', function () {
+          slider.setAttribute('data-bb-items', '1');
+        });
+        document.getElementById('btnItems2').addEventListener('click', function () {
+          slider.setAttribute('data-bb-items', '2');
+        });
+        document.getElementById('btnItems3').addEventListener('click', function () {
+          slider.setAttribute('data-bb-items', '3');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

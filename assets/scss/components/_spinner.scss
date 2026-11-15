@@ -1,0 +1,112 @@
+/* =====================================
+   Bulbulustur Theme - Spinner (PURE)
+   Bootstrap 5 spinners preserved
+   Prefix: bb-
+   Supports: border + grow, size + color + overlay
+===================================== */
+
+.bb-spinner {
+  /* -------------------------------
+     Tokens (override-friendly)
+  -------------------------------- */
+  --bb-spinner-size: 1.5rem;
+  --bb-spinner-border-width: 0.2em;
+  --bb-spinner-speed: 0.75s;
+
+  /* Use theme tokens (dark/light safe) */
+  --bb-spinner-color:var(--bb-primary);
+  --bb-spinner-muted: var(--bb-secondary-color);
+
+  /* Bridge to Bootstrap spinner CSS vars */
+  --bs-spinner-width: var(--bb-spinner-size);
+  --bs-spinner-height: var(--bb-spinner-size);
+  --bs-spinner-border-width: var(--bb-spinner-border-width);
+  --bs-spinner-animation-speed: var(--bb-spinner-speed);
+
+  color: var(--bb-spinner-color);
+}
+
+/* When spinner sits in inline flows nicely */
+.bb-spinner-inline {
+  vertical-align: -0.125em;
+}
+
+/* -------------------------------------
+   Sizes
+------------------------------------- */
+
+.bb-spinner-xs { --bb-spinner-size: 1rem;   --bb-spinner-border-width: 0.18em; }
+.bb-spinner-sm { --bb-spinner-size: 1.25rem; }
+.bb-spinner-md { --bb-spinner-size: 1.5rem; }
+.bb-spinner-lg { --bb-spinner-size: 2rem;   --bb-spinner-border-width: 0.22em; }
+.bb-spinner-xl { --bb-spinner-size: 2.5rem; --bb-spinner-border-width: 0.24em; }
+
+/* -------------------------------------
+   Speeds
+------------------------------------- */
+
+.bb-spinner-speed-slow { --bb-spinner-speed: 1.05s; }
+.bb-spinner-speed-fast { --bb-spinner-speed: 0.55s; }
+
+/* -------------------------------------
+   Colors (token bridge)
+   (Bootstrap uses currentColor; we set color)
+------------------------------------- */
+
+.bb-spinner-primary   { --bb-spinner-color:var(--bb-primary); }
+.bb-spinner-secondary { --bb-spinner-color: var(--bb-secondary, var(--bs-secondary)); }
+.bb-spinner-success   { --bb-spinner-color: var(--bb-success, var(--bb-success)); }
+.bb-spinner-info      { --bb-spinner-color: var(--bb-info, var(--bb-info)); }
+.bb-spinner-warning   { --bb-spinner-color: var(--bb-warning, var(--bb-warning)); }
+.bb-spinner-danger    { --bb-spinner-color: var(--bb-danger, var(--bb-danger)); }
+.bb-spinner-light     { --bb-spinner-color: var(--bb-light, var(--bb-light)); }
+.bb-spinner-dark      { --bb-spinner-color: var(--bb-dark, var(--bb-dark)); }
+.bb-spinner-muted     { --bb-spinner-color: var(--bb-spinner-muted); }
+
+/* -------------------------------------
+   Button helper (Metronic hissi: label + spinner)
+------------------------------------- */
+
+.bb-btn-spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Optional: hide label when loading (opt-in) */
+.bb-btn-spinner.is-loading .bb-btn-spinner__label { opacity: 0.75; }
+
+/* -------------------------------------
+   Overlay helper (card üstü / container üstü)
+------------------------------------- */
+
+.bb-spinner-overlay {
+  /* local tokens */
+  --bb-spinner-overlay-bg: color-mix(in srgb, var(--bb-body-bg) 70%, transparent);
+  --bb-spinner-overlay-z: 10;
+  --bb-spinner-overlay-radius: inherit;
+  --bb-spinner-overlay-blur: 1px;
+
+  position: absolute;
+  inset: 0;
+  z-index: var(--bb-spinner-overlay-z);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--bb-spinner-overlay-radius);
+
+  background: var(--bb-spinner-overlay-bg);
+  backdrop-filter: blur(var(--bb-spinner-overlay-blur));
+}
+
+/* Active state */
+.bb-spinner-overlay.is-active {
+  display: flex;
+}
+
+/* Make it easy to anchor overlays */
+.bb-spinner-overlay-wrap {
+  position: relative;
+}

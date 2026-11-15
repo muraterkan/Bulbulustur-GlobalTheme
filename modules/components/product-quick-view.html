@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulbulustur Theme - Product Quick View</title>
+
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <style>
+        .bb-product-quick-view-demo-product-card {
+            position: relative;
+            width: min(100%, 340px);
+            min-height: 440px;
+            margin-inline: auto;
+            overflow: hidden;
+            border: 1px solid rgba(255, 214, 10, .42);
+            border-radius: var(--bb-radius-2xl, 1.5rem);
+            background: #0b111d;
+            box-shadow: var(--bb-shadow-xl);
+        }
+
+        .bb-product-quick-view-demo-product-media {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+            padding: 1rem;
+            background: #111827;
+        }
+
+        .bb-product-quick-view-demo-product-media img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .bb-product-quick-view-demo-product-body {
+            padding: 1rem;
+            color: #ffffff;
+        }
+
+        .bb-product-quick-view-demo-product-kicker {
+            margin-bottom: .75rem;
+            color: rgba(255, 255, 255, .68);
+            font-size: var(--bb-fs-sm);
+            font-weight: 800;
+        }
+
+        .bb-product-quick-view-demo-product-title {
+            margin: 0 0 .75rem;
+            color: #ffffff;
+            font-size: var(--bb-fs-lg);
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        .bb-product-quick-view-demo-product-price {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 950;
+            line-height: 1;
+            letter-spacing: -.04em;
+        }
+
+        .bb-product-quick-view-demo-product-note {
+            margin-top: .25rem;
+            color: rgba(255, 255, 255, .68);
+            font-size: var(--bb-fs-sm);
+            font-weight: 750;
+        }
+
+        .bb-product-quick-view-demo-preview {
+            max-width: 1120px;
+            margin-inline: auto;
+        }
+
+        .bb-product-quick-view-demo-preview .bb-product-quick-view {
+            max-width: 1120px;
+            margin-inline: auto;
+        }
+
+        .bb-product-quick-view-demo-preview .bb-product-quick-view-close {
+            pointer-events: none;
+        }
+
+        .bb-product-quick-view-demo-preview .bb-product-quick-view-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="bb-page-shell bb-page-shell-subtle">
+        <div class="bb-web-container">
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                <div>
+                    <span class="bb-chip bb-chip-primary-soft bb-chip-sm">
+                        Component
+                    </span>
+
+                    <h1 class="h3 mt-2 mb-1">
+                        Product Quick View
+                    </h1>
+
+                    <div class="text-body-secondary">
+                        Ürün kartı hızlı görüntüleme tetikleyicisi ve modal component sahnesi.
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Theme switcher">
+                    <button type="button"
+                            class="btn btn-outline-secondary btn-sm active"
+                            data-bb-theme="light">
+                        <span class="material-symbols-outlined" aria-hidden="true">
+                            light_mode
+                        </span>
+                        Light
+                    </button>
+
+                    <button type="button"
+                            class="btn btn-outline-secondary btn-sm"
+                            data-bb-theme="dark">
+                        <span class="material-symbols-outlined" aria-hidden="true">
+                            dark_mode
+                        </span>
+                        Dark
+                    </button>
+                </div>
+            </div>
+
+            <div class="bb-card mb-4">
+                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                    <div class="bb-card-title">
+                        Product Card Trigger
+                    </div>
+
+                    <div class="text-body-secondary small">
+                        Quick view butonunun ürün kartı içindeki hali
+                    </div>
+                </div>
+
+                <div class="bb-card-body">
+                    <article class="bb-product-quick-view-demo-product-card">
+                        <div class="bb-product-quick-view-demo-product-media">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                                 alt="Ortobella Comfort Çocuk Ayakkabı OB3135"
+                                 loading="lazy">
+
+                            <a href="/urun/ornek-urun"
+                               class="bb-product-card-quick-view"
+                               data-bb-product-quick-view-trigger
+                               data-quick-view-url="/b2c/product/quickview?productId=801&variantId=1201"
+                               aria-label="Hızlı görüntüle">
+                                <span class="material-symbols-outlined" aria-hidden="true">
+                                    visibility
+                                </span>
+
+                                <span class="bb-product-card-quick-view-text">
+                                    Hızlı Görüntüle
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="bb-product-quick-view-demo-product-body">
+                            <div class="bb-product-quick-view-demo-product-kicker">
+                                Sponsorlu Ürün
+                            </div>
+
+                            <h2 class="bb-product-quick-view-demo-product-title">
+                                Ortobella Comfort Çocuk Ayakkabı OB3135
+                            </h2>
+
+                            <div class="bb-product-quick-view-demo-product-price">
+                                3.600,00 $
+                            </div>
+
+                            <div class="bb-product-quick-view-demo-product-note">
+                                KDV dahil fiyat
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="bb-card">
+                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                    <div class="bb-card-title">
+                        Quick View Static Preview
+                    </div>
+
+                    <div class="text-body-secondary small">
+                        AJAX partial geldiğinde modal içinde görünecek component
+                    </div>
+                </div>
+
+                <div class="bb-card-body">
+                    <div class="bb-product-quick-view-demo-preview">
+                        <div class="bb-product-quick-view">
+
+                            <button type="button"
+                                    class="bb-product-quick-view-close"
+                                    aria-label="Kapat">
+                                <span class="material-symbols-outlined" aria-hidden="true">
+                                    close
+                                </span>
+                            </button>
+
+                            <div class="bb-product-quick-view-inner" data-bb-product-quick-view-content>
+                                <div class="bb-product-quick-view-body">
+
+                                    <div class="bb-product-quick-view-gallery">
+                                        <div class="bb-product-quick-view-media">
+                                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+                                                 alt="Ortobella Comfort Çocuk Ayakkabı OB3135"
+                                                 loading="lazy">
+                                        </div>
+
+                                        <div class="bb-product-quick-view-thumbs" aria-label="Ürün görselleri">
+                                            <button type="button" class="bb-product-quick-view-thumb active">
+                                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
+                                                     alt=""
+                                                     loading="lazy">
+                                            </button>
+
+                                            <button type="button" class="bb-product-quick-view-thumb">
+                                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=300&q=80"
+                                                     alt=""
+                                                     loading="lazy">
+                                            </button>
+
+                                            <button type="button" class="bb-product-quick-view-thumb">
+                                                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=300&q=80"
+                                                     alt=""
+                                                     loading="lazy">
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="bb-product-quick-view-content">
+                                        <div class="bb-product-quick-view-head">
+                                            <div class="bb-product-quick-view-labels">
+                                                <span class="bb-chip bb-chip-soft">
+                                                    Sponsorlu
+                                                </span>
+
+                                                <span class="bb-chip bb-chip-soft">
+                                                    KDV dahil fiyat
+                                                </span>
+                                            </div>
+
+                                            <a href="#" class="bb-product-quick-view-brand">
+                                                Ortobella
+                                            </a>
+
+                                            <h2 id="bbProductQuickViewTitle" class="bb-product-quick-view-title">
+                                                Ortobella Comfort Çocuk Ayakkabı OB3135
+                                            </h2>
+
+                                            <div class="bb-product-quick-view-rating">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
+                                                    star
+                                                </span>
+
+                                                <strong>4.8</strong>
+                                                <span>24 değerlendirme</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-product-quick-view-price-block">
+                                            <div class="bb-product-quick-view-price">
+                                                3.600,00 $
+                                            </div>
+
+                                            <div class="bb-product-quick-view-price-note">
+                                                KDV dahil fiyat
+                                            </div>
+                                        </div>
+
+                                        <p class="bb-product-quick-view-summary">
+                                            Hafif taban yapısı, cırt cırtlı kullanım kolaylığı ve günlük kullanıma uygun konforlu çocuk ayakkabısı.
+                                        </p>
+
+                                        <div class="bb-product-quick-view-options">
+                                            <div class="bb-product-quick-view-option-group">
+                                                <div class="bb-product-quick-view-option-head">
+                                                    <span>Renk</span>
+                                                    <strong>Gri / Turuncu</strong>
+                                                </div>
+
+                                                <div class="bb-product-quick-view-option-list">
+                                                    <button type="button" class="bb-product-quick-view-option active">
+                                                        Gri
+                                                    </button>
+
+                                                    <button type="button" class="bb-product-quick-view-option">
+                                                        Siyah
+                                                    </button>
+
+                                                    <button type="button" class="bb-product-quick-view-option" disabled>
+                                                        Lacivert
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="bb-product-quick-view-option-group">
+                                                <div class="bb-product-quick-view-option-head">
+                                                    <span>Beden</span>
+                                                    <strong>32</strong>
+                                                </div>
+
+                                                <div class="bb-product-quick-view-option-list">
+                                                    <button type="button" class="bb-product-quick-view-option">
+                                                        30
+                                                    </button>
+
+                                                    <button type="button" class="bb-product-quick-view-option">
+                                                        31
+                                                    </button>
+
+                                                    <button type="button" class="bb-product-quick-view-option active">
+                                                        32
+                                                    </button>
+
+                                                    <button type="button" class="bb-product-quick-view-option" disabled>
+                                                        33
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-product-quick-view-actions">
+                                            <button type="button" class="btn btn-primary bb-product-quick-view-cart-btn">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
+                                                    shopping_cart
+                                                </span>
+
+                                                Sepete Ekle
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary bb-product-quick-view-action-btn">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
+                                                    favorite
+                                                </span>
+
+                                                Favori
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary bb-product-quick-view-action-btn">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
+                                                    interests
+                                                </span>
+
+                                                Benzerleri
+                                            </button>
+
+                                            <a href="#" class="btn btn-outline-secondary bb-product-quick-view-detail-btn">
+                                                İncele
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var themeButtons = document.querySelectorAll("[data-bb-theme]");
+
+            themeButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var selectedTheme = button.getAttribute("data-bb-theme");
+
+                    root.setAttribute("data-bs-theme", selectedTheme);
+
+                    themeButtons.forEach(function (themeButton) {
+                        themeButton.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

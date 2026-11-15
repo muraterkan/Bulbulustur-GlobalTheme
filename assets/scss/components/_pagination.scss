@@ -1,0 +1,207 @@
+/* =====================================
+   Bulbulustur Theme - Pagination
+   Bootstrap 5 compatible, bb-* prefixed
+   Variants: pill, circle, outline, compact
+   ===================================== */
+
+.bb-pagination {
+    /* -----------------------------------
+       Local tokens
+       Override-friendly component API
+    ----------------------------------- */
+    --bb-pagination-gap: .5rem;
+
+    --bb-pagination-item-size: 2.25rem;
+    --bb-pagination-item-padding-x: .85rem;
+    --bb-pagination-font-size: .95rem;
+    --bb-pagination-font-weight: var(--bb-fw-semibold, 600);
+
+    --bb-pagination-radius: var(--bb-radius-md, .5rem);
+    --bb-pagination-radius-pill: var(--bb-radius-pill, 999px);
+
+    --bb-pagination-bg: var(--bb-tertiary-bg);
+    --bb-pagination-border-color: var(--bb-border-color);
+    --bb-pagination-border-width: 1px;
+
+    --bb-pagination-color: var(--bb-secondary-color);
+    --bb-pagination-hover-bg: var(--bb-secondary-bg);
+    --bb-pagination-hover-color: var(--bb-emphasis-color);
+
+    --bb-pagination-active-bg: var(--bb-primary);
+    --bb-pagination-active-color: var(--bb-primary-inverse, #fff);
+    --bb-pagination-active-border-color: var(--bb-primary);
+
+    --bb-pagination-disabled-opacity: var(--bb-disabled-opacity, .55);
+
+    --bb-pagination-focus-ring-width: var(--bb-focus-ring-width, .2rem);
+    --bb-pagination-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+    --bb-pagination-focus-ring-opacity: var(--bb-focus-ring-opacity, .25);
+
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Bootstrap pagination wrapper */
+.bb-pagination .pagination {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bb-pagination-gap);
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Item reset */
+.bb-pagination .page-item {
+    margin: 0;
+}
+
+/* Link */
+.bb-pagination .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: var(--bb-pagination-item-size);
+    height: var(--bb-pagination-item-size);
+    padding: 0 var(--bb-pagination-item-padding-x);
+
+    border: var(--bb-pagination-border-width) solid transparent;
+    border-radius: var(--bb-pagination-radius);
+
+    background-color: var(--bb-pagination-bg);
+    color: var(--bb-pagination-color);
+
+    font-size: var(--bb-pagination-font-size);
+    font-weight: var(--bb-pagination-font-weight);
+    line-height: 1;
+    text-decoration: none;
+    user-select: none;
+
+    box-shadow: none;
+
+    transition:
+        background-color var(--bb-transition-normal, 200ms),
+        color var(--bb-transition-normal, 200ms),
+        border-color var(--bb-transition-normal, 200ms),
+        box-shadow var(--bb-transition-normal, 200ms);
+}
+
+/* Hover */
+.bb-pagination .page-item:not(.disabled):not(.active) .page-link:hover {
+    background-color: var(--bb-pagination-hover-bg);
+    color: var(--bb-pagination-hover-color);
+}
+
+/* Focus */
+.bb-pagination .page-link:focus {
+    outline: 0;
+    box-shadow: 0 0 0 var(--bb-pagination-focus-ring-width)
+        color-mix(
+            in srgb,
+            var(--bb-pagination-focus-ring-color) calc(var(--bb-pagination-focus-ring-opacity) * 100%),
+            transparent
+        );
+}
+
+/* Active */
+.bb-pagination .page-item.active .page-link {
+    background-color: var(--bb-pagination-active-bg);
+    border-color: var(--bb-pagination-active-border-color);
+    color: var(--bb-pagination-active-color);
+}
+
+/* Disabled */
+.bb-pagination .page-item.disabled .page-link,
+.bb-pagination .page-item[aria-disabled="true"] .page-link {
+    opacity: var(--bb-pagination-disabled-opacity);
+    pointer-events: none;
+}
+
+/* Icons */
+.bb-pagination .page-link .material-symbols-outlined {
+    font-size: var(--bb-icon-size-sm);
+    line-height: 1;
+}
+
+/* =====================================
+   Variants
+===================================== */
+
+/* Outline */
+.bb-pagination.bb-pagination--outline .page-link {
+    border-color: var(--bb-pagination-border-color);
+    background-color: transparent;
+}
+
+.bb-pagination.bb-pagination--outline .page-item:not(.disabled):not(.active) .page-link:hover {
+    border-color: color-mix(
+        in srgb,
+        var(--bb-pagination-active-border-color) 35%,
+        var(--bb-pagination-border-color)
+    );
+}
+
+.bb-pagination.bb-pagination--outline .page-item.active .page-link {
+    border-color: var(--bb-pagination-active-border-color);
+}
+
+/* Pill */
+.bb-pagination.bb-pagination--pill .page-link {
+    border-radius: var(--bb-pagination-radius-pill);
+}
+
+/* Circle */
+.bb-pagination.bb-pagination--circle .page-link {
+    width: var(--bb-pagination-item-size);
+    min-width: var(--bb-pagination-item-size);
+    padding: 0;
+    border-radius: 50%;
+}
+
+/* Compact */
+.bb-pagination.bb-pagination--compact {
+    --bb-pagination-gap: 0.35rem;
+    --bb-pagination-item-size: 2rem;
+    --bb-pagination-item-padding-x: 0.7rem;
+    --bb-pagination-font-size: var(--bb-fs-sm);
+}
+
+.bb-b2c-history-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-top: 1.25rem;
+  padding: 0.875rem 1.125rem;
+
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-b2c-history-pager-info {
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2c-history-pager {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bb-b2c-history-pager-info {
+    text-align: center;
+  }
+
+  .bb-b2c-history-pager .bb-pagination {
+    justify-content: center;
+  }
+}

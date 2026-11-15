@@ -1,0 +1,115 @@
+/* =====================================
+   Bulbulustur Theme - Tables (PURE)
+   Bootstrap 5 friendly: use with .table
+   Root: .table.bb-table
+   Wrapper (optional): .bb-table-wrap
+   ===================================== */
+
+/* Optional wrapper (rounded + clip + border) */
+.bb-table-wrap {
+  --bb-table-wrap-radius: var(--bb-radius);
+  --bb-table-wrap-bg: var(--bb-body-bg);
+  --bb-table-wrap-border-color: var(--bb-border-color);
+  --bb-table-wrap-border-width: var(--bb-border-width, 1px);
+
+  border-radius: var(--bb-table-wrap-radius);
+  background-color: var(--bb-table-wrap-bg);
+  border: var(--bb-table-wrap-border-width) solid var(--bb-table-wrap-border-color);
+  overflow: hidden;
+}
+
+.bb-table-wrap > .table.bb-table {
+  margin-bottom: 0;
+}
+
+/* Main table */
+.table.bb-table {
+  /* -------- tokens (override edilebilir) -------- */
+  --bb-table-border-color: var(--bb-border-color);
+  --bb-table-color: var(--bb-body-color);
+  --bb-table-head-color: var(--bb-secondary-color);
+
+  --bb-table-font-size: var(--bb-fs-sm);
+  --bb-table-head-font-size: var(--bb-fs-xs);
+  --bb-table-head-font-weight: var(--bb-fw-semibold);
+  --bb-table-head-letter-spacing: 0.03em;
+  --bb-table-head-transform: uppercase;
+
+  --bb-table-cell-px: 0.75rem;
+  --bb-table-cell-py: 0.85rem;
+  --bb-table-head-py: 0.75rem;
+
+  --bb-table-striped-bg: var(--bb-tertiary-bg);
+  --bb-table-hover-bg: var(--bb-secondary-bg);
+
+  --bb-table-transition: var(--bb-transition-fast);
+  --bb-table-row-radius: var(--bb-radius-sm);
+
+  width: 100%;
+  color: var(--bb-table-color);
+  border-color: var(--bb-table-border-color);
+  vertical-align: middle;
+
+  th,
+  td {
+    font-size: var(--bb-table-font-size);
+    color: inherit;
+    vertical-align: middle;
+    padding: var(--bb-table-cell-py) var(--bb-table-cell-px);
+  }
+
+  thead th {
+    font-size: var(--bb-table-head-font-size);
+    font-weight: var(--bb-table-head-font-weight);
+    letter-spacing: var(--bb-table-head-letter-spacing);
+    text-transform: var(--bb-table-head-transform);
+    color: var(--bb-table-head-color);
+    padding-top: var(--bb-table-head-py);
+    padding-bottom: var(--bb-table-head-py);
+    white-space: nowrap;
+  }
+
+  tbody > tr:last-child > * {
+    border-bottom-width: 0;
+  }
+
+  tbody > tr {
+    --bb-table-row-bg: transparent;
+  }
+
+  tbody > tr > * {
+    background-color: var(--bb-table-row-bg);
+    transition: background-color var(--bb-table-transition);
+  }
+
+  &.table-striped > tbody > tr:nth-of-type(odd) {
+    --bb-table-row-bg: var(--bb-table-striped-bg);
+  }
+
+  &.table-hover > tbody > tr:hover {
+    --bb-table-row-bg: var(--bb-table-hover-bg);
+  }
+
+  &.bb-table-row-bordered > tbody > tr {
+    border-bottom: 1px solid var(--bb-table-border-color);
+  }
+
+  &.bb-table-row-dashed > tbody > tr {
+    border-bottom: 1px dashed var(--bb-table-border-color);
+  }
+
+  &.bb-table-rows-rounded > tbody > tr > *:first-child {
+    border-top-left-radius: var(--bb-table-row-radius);
+    border-bottom-left-radius: var(--bb-table-row-radius);
+  }
+
+  &.bb-table-rows-rounded > tbody > tr > *:last-child {
+    border-top-right-radius: var(--bb-table-row-radius);
+    border-bottom-right-radius: var(--bb-table-row-radius);
+  }
+
+  &.bb-table-flush th,
+  &.bb-table-flush td {
+    padding: 0;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulbulustur Theme – Table Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bb-root">
+
+<!-- PAGE -->
+<main class="bb-main" style="min-height:100vh;">
+    <div class="container">
+
+        <!-- PAGE TITLE -->
+        <div class="mb-4">
+            <h3 class="mb-1">Table Component Test</h3>
+            <p class="text-muted mb-0">
+                bb-table + Metronic DNA + Bootstrap 5
+            </p>
+        </div>
+
+        <!-- CARD WRAPPER -->
+        <div class="bb-card">
+            <div class="bb-card-header">
+                <h5 class="card-title mb-0">Ürün Listesi</h5>
+
+                <div class="bb-card-actions">
+                    <button class="btn btn-sm btn-light">Filtre</button>
+                    <button class="btn btn-sm btn-primary">Yeni Ürün</button>
+                </div>
+            </div>
+
+            <div class="bb-card-body p-0">
+
+                <!-- TABLE -->
+                <table class="table bb-table table-striped table-hover bb-table-row-bordered bb-gs-6 mb-0">
+                    <thead>
+                        <tr>
+                            <th>Ürün</th>
+                            <th>SKU</th>
+                            <th>Stok</th>
+                            <th>Fiyat</th>
+                            <th class="text-end">İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bulbulustur Tişört</td>
+                            <td>BB-TS-001</td>
+                            <td>125</td>
+                            <td>₺349,00</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-light">Detay</button>
+                                <button class="btn btn-sm btn-primary">Düzenle</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Premium Hoodie</td>
+                            <td>BB-HD-021</td>
+                            <td class="text-warning fw-semibold">8</td>
+                            <td>₺899,00</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-light">Detay</button>
+                                <button class="btn btn-sm btn-primary">Düzenle</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Limited Edition Jacket</td>
+                            <td>BB-JK-778</td>
+                            <td class="text-danger fw-semibold">0</td>
+                            <td>₺1.750,00</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-light">Detay</button>
+                                <button class="btn btn-sm btn-secondary" disabled>
+                                    Pasif
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="bb-card-footer d-flex justify-content-between align-items-center">
+                <span class="bb-card-footer-text">
+                    Toplam 3 kayıt
+                </span>
+
+                <button class="btn btn-sm btn-light">
+                    Daha Fazla Yükle
+                </button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* =====================================
+   Bulbulustur Theme - Input Group
+   Bootstrap 5 base preserved
+   Prefix: bb-
+   Root: .input-group.bb-input-group
+   Token-first | Dark/Light safe | PURE
+===================================== */
+
+.bb-input-group {
+  /* Local tokens */
+  --bb-ig-radius: var(--bb-form-control-radius);
+  --bb-ig-border-width: var(--bb-form-control-border-width);
+
+  --bb-ig-addon-bg: var(--bb-form-control-bg);
+  --bb-ig-addon-color: var(--bb-form-control-color);
+  --bb-ig-addon-border-color: var(--bb-form-control-border-color);
+
+  --bb-ig-addon-px: 0.9rem;
+  --bb-ig-addon-gap: 0.5rem;
+  --bb-ig-icon-size: 1.15rem;
+
+  --bb-ig-focus-border-color: var(--bb-form-control-focus-border-color);
+
+  --bb-ig-solid-bg: var(--bb-form-control-solid-bg);
+  --bb-ig-solid-border-color: var(--bb-form-control-solid-border-color);
+
+  --bb-ig-addon-bg-local: var(--bb-ig-addon-bg);
+  --bb-ig-addon-border-local: var(--bb-ig-addon-border-color);
+  --bb-ig-addon-color-local: var(--bb-ig-addon-color);
+
+  border-radius: var(--bb-ig-radius);
+}
+
+/* -------------------------------------
+   Addon
+------------------------------------- */
+
+.bb-input-group .input-group-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-ig-addon-gap);
+
+  padding-left: var(--bb-ig-addon-px);
+  padding-right: var(--bb-ig-addon-px);
+
+  color: var(--bb-ig-addon-color-local);
+  background-color: var(--bb-ig-addon-bg-local);
+  border-color: var(--bb-ig-addon-border-local);
+  border-width: var(--bb-ig-border-width);
+  border-radius: var(--bb-ig-radius);
+}
+
+/* -------------------------------------
+   Icons
+------------------------------------- */
+
+.bb-input-group .input-group-text .material-symbols-outlined,
+.bb-input-group .input-group-text i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--bb-ig-icon-size);
+  line-height: 1;
+}
+
+/* -------------------------------------
+   Focus
+   Ring _state.scss tarafından yönetilir.
+   Burada sadece border uyumu var.
+------------------------------------- */
+
+.bb-input-group:focus-within .input-group-text {
+  border-color: var(--bb-ig-focus-border-color);
+}
+
+.bb-input-group .form-control,
+.bb-input-group .form-select,
+.bb-input-group textarea.form-control {
+  border-radius: var(--bb-ig-radius);
+}
+
+/* -------------------------------------
+   Solid variant
+   Usage: .input-group.bb-input-group.bb-input-group-solid
+------------------------------------- */
+
+.bb-input-group.bb-input-group-solid {
+  --bb-ig-addon-bg-local: var(--bb-ig-solid-bg);
+  --bb-ig-addon-border-local: var(--bb-ig-solid-border-color);
+}
+
+.bb-input-group.bb-input-group-solid .form-control,
+.bb-input-group.bb-input-group-solid .form-select,
+.bb-input-group.bb-input-group-solid textarea.form-control {
+  background-color: var(--bb-ig-solid-bg);
+  border-color: var(--bb-ig-solid-border-color);
+}
+
+.bb-input-group.bb-input-group-solid:focus-within .form-control,
+.bb-input-group.bb-input-group-solid:focus-within .form-select,
+.bb-input-group.bb-input-group-solid:focus-within textarea.form-control {
+  border-color: var(--bb-ig-focus-border-color);
+}
+
+/* -------------------------------------
+   Sizing bridge
+------------------------------------- */
+
+.bb-input-group.input-group-sm {
+  --bb-ig-addon-px: 0.75rem;
+  --bb-ig-icon-size: 1.05rem;
+}
+
+.bb-input-group.input-group-lg {
+  --bb-ig-addon-px: 1.05rem;
+  --bb-ig-icon-size: 1.25rem;
+}

@@ -1,0 +1,128 @@
+/* =====================================
+   Bulbulustur Theme - Dialer (PURE)
+   Bootstrap 5 compatible | bb-* prefixed
+   Token-first | Dark/Light safe
+   Root: .bb-dialer
+   ===================================== */
+
+.bb-dialer {
+  /* -------------------------------------
+     Local tokens (override-friendly)
+  -------------------------------------- */
+  --bb-dialer-radius: var(--bb-radius, var(--bb-radius));
+  --bb-dialer-border-color: var(--bb-border-color);
+  --bb-dialer-bg: var(--bb-body-bg);
+  --bb-dialer-value-color: var(--bb-emphasis-color, var(--bb-body-color));
+  --bb-dialer-muted-color: var(--bb-secondary-color);
+
+  /* Input */
+  --bb-dialer-input-min-w: 10rem;
+  --bb-dialer-input-align: center;
+  --bb-dialer-input-fw: 600;
+  --bb-dialer-input-ls: -0.01em;
+
+  /* Buttons (icon buttons) */
+  --bb-dialer-btn-size: 2.75rem; /* default ~ form-control height */
+  --bb-dialer-btn-radius: var(--bb-radius-lg);
+  --bb-dialer-btn-border: var(--bb-dialer-border-color);
+  --bb-dialer-btn-bg: transparent;
+  --bb-dialer-btn-color: var(--bb-body-color);
+  --bb-dialer-btn-hover-bg: var(--bb-tertiary-bg);
+  --bb-dialer-btn-active-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+
+  /* Focus ring */
+  --bb-dialer-focus-ring: var(--bs-focus-ring-box-shadow);
+
+  /* Motion */
+  --bb-dialer-transition-speed: 150ms;
+  --bb-dialer-transition-ease: ease;
+
+  display: inline-flex;
+  align-items: stretch;
+}
+
+/* Works best on input-group */
+.bb-dialer.input-group {
+  width: auto;
+}
+
+/* Input */
+.bb-dialer .bb-dialer-input.form-control {
+  min-width: var(--bb-dialer-input-min-w);
+  text-align: var(--bb-dialer-input-align);
+  font-weight: var(--bb-dialer-input-fw);
+  letter-spacing: var(--bb-dialer-input-ls);
+  color: var(--bb-dialer-value-color);
+  background-color: var(--bb-dialer-bg);
+}
+
+/* Optional hint text */
+.bb-dialer .bb-dialer-hint {
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-dialer-muted-color);
+  margin-top: 0.35rem;
+}
+
+/* Buttons */
+.bb-dialer .bb-dialer-btn.btn {
+  /* use your existing .btn token system */
+  --bb-btn-padding-x: 0;
+  --bb-btn-padding-y: 0;
+  --bb-btn-radius: var(--bb-dialer-btn-radius);
+  --bb-btn-border-width: var(--bb-border-width, 1px);
+
+  --bb-btn-bg: var(--bb-dialer-btn-bg);
+  --bb-btn-color: var(--bb-dialer-btn-color);
+  --bb-btn-border-color: var(--bb-dialer-btn-border);
+
+  --bb-btn-hover-bg: var(--bb-dialer-btn-hover-bg);
+  --bb-btn-hover-color: var(--bb-dialer-btn-color);
+  --bb-btn-hover-border-color: var(--bb-dialer-btn-border);
+
+  --bb-btn-active-bg: var(--bb-dialer-btn-active-bg);
+  --bb-btn-active-color: var(--bb-dialer-btn-color);
+  --bb-btn-active-border-color: var(--bb-dialer-btn-border);
+
+  width: var(--bb-dialer-btn-size);
+  min-width: var(--bb-dialer-btn-size);
+  height: var(--bb-dialer-btn-size);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon sizing (Material Symbols) */
+.bb-dialer .bb-dialer-btn .material-symbols-outlined {
+  font-size: var(--bb-fs-xl);
+  line-height: 1;
+}
+
+
+/* Disabled state */
+.bb-dialer.is-disabled,
+.bb-dialer[aria-disabled="true"] {
+  opacity: var(--bb-disabled-opacity, 0.55);
+  pointer-events: none;
+}
+
+/* Sizes */
+.bb-dialer.bb-dialer-sm {
+  --bb-dialer-btn-size: 2.25rem;
+  --bb-dialer-input-min-w: 8.5rem;
+  --bb-dialer-btn-radius: var(--bb-radius);
+}
+
+.bb-dialer.bb-dialer-lg {
+  --bb-dialer-btn-size: 3.25rem;
+  --bb-dialer-input-min-w: 12rem;
+  --bb-dialer-btn-radius: var(--bb-radius-lg);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bb-dialer .bb-dialer-btn.btn,
+  .bb-dialer .bb-dialer-input.form-control {
+    transition: none;
+  }
+}

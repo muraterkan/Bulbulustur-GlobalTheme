@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme - Indicator</title>
+
+      <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body data-bb-theme="light">
+  <div class="container py-4">
+
+    <!-- Top bar -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="h4 mb-1">Indicator</h1>
+        <div class="bb-text-muted small">data-bb-indicator="on" ile label/progress toggle (vendor-free).</div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme-btn="light">
+          Light
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-dark" data-bb-theme-btn="dark">
+          Dark
+        </button>
+      </div>
+    </div>
+
+    <!-- Card: Basics -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header">
+        <div class="card-title mb-0">Basics</div>
+      </div>
+
+      <div class="bb-card-body">
+        <div class="d-flex flex-wrap align-items-center gap-3">
+
+          <!-- Primary submit -->
+          <button type="button"
+                  class="btn btn-primary"
+                  id="bb_indicator_btn_submit">
+            <span class="bb-indicator" data-bb-indicator-root>
+              <span class="bb-indicator-label">
+                <span class="material-symbols-outlined">send</span>
+                Submit
+              </span>
+
+              <span class="bb-indicator-progress" role="status" aria-live="polite">
+                Please wait...
+                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+              </span>
+            </span>
+          </button>
+
+          <!-- Save (starts ON to show state) -->
+          <button type="button"
+                  class="btn btn-success"
+                  data-bb-indicator="on"
+                  aria-busy="true">
+            <span class="bb-indicator" data-bb-indicator-root>
+              <span class="bb-indicator-label">
+                Save
+              </span>
+
+              <span class="bb-indicator-progress" role="status" aria-live="polite">
+                Saving...
+                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+              </span>
+            </span>
+          </button>
+
+          <!-- Disable ON (opt-in) -->
+          <button type="button"
+                  class="btn btn-dark"
+                  id="bb_indicator_btn_process"
+                  data-bb-indicator-disable="true">
+            <span class="bb-indicator" data-bb-indicator-root>
+              <span class="bb-indicator-label">
+                Process
+              </span>
+
+              <span class="bb-indicator-progress" role="status" aria-live="polite">
+                Processing...
+                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+              </span>
+            </span>
+          </button>
+
+        </div>
+
+        <div class="bb-text-muted small mt-3">
+          Not: Progress katmanı overlay olduğu için buton genişliği “zıplamaz”.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Patterns -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header">
+        <div class="card-title mb-0">Common Patterns</div>
+      </div>
+
+      <div class="bb-card-body">
+        <div class="row g-4">
+
+          <!-- Icon-only + text -->
+          <div class="col-lg-6">
+            <div class="text-muted small mb-2">Icon + Text</div>
+
+            <button type="button" class="btn btn-outline-primary" id="bb_indicator_btn_sync">
+              <span class="bb-indicator" data-bb-indicator-root>
+                <span class="bb-indicator-label">
+                  <span class="material-symbols-outlined">sync</span>
+                  Sync
+                </span>
+
+                <span class="bb-indicator-progress" role="status" aria-live="polite">
+                  Syncing...
+                  <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                </span>
+              </span>
+            </button>
+          </div>
+
+          <!-- Button group -->
+          <div class="col-lg-6">
+            <div class="text-muted small mb-2">Inline Actions</div>
+
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <button type="button" class="btn btn-light" id="bb_indicator_btn_refresh">
+                <span class="bb-indicator" data-bb-indicator-root>
+                  <span class="bb-indicator-label">
+                    <span class="material-symbols-outlined">refresh</span>
+                    Refresh
+                  </span>
+
+                  <span class="bb-indicator-progress" role="status" aria-live="polite">
+                    Loading...
+                    <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                  </span>
+                </span>
+              </button>
+
+              <button type="button" class="btn btn-outline-secondary" id="bb_indicator_force_off_all">
+                Force OFF
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Form-like demo -->
+    <div class="bb-card">
+      <div class="bb-card-header">
+        <div class="card-title mb-0">Form Submit Demo</div>
+      </div>
+
+      <div class="bb-card-body">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-5">
+            <label class="form-label">Email</label>
+            <input class="form-control" placeholder="name@example.com" />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Type</label>
+            <select class="form-select">
+              <option selected>Standard</option>
+              <option>Fast</option>
+              <option>Safe</option>
+            </select>
+          </div>
+
+          <div class="col-md-3 d-grid">
+            <button type="button" class="btn btn-primary" id="bb_indicator_btn_form_save" data-bb-indicator-disable="true">
+              <span class="bb-indicator" data-bb-indicator-root>
+                <span class="bb-indicator-label">
+                  <span class="material-symbols-outlined">check</span>
+                  Save Changes
+                </span>
+
+                <span class="bb-indicator-progress" role="status" aria-live="polite">
+                  Saving...
+                  <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-muted small mt-3">
+          Öneri: ON state’te butona <code>aria-busy="true"</code> eklemek erişilebilirliği güçlendirir.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var body = document.body;
+
+      // Theme toggle
+      document.querySelectorAll("[data-bb-theme-btn]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var theme = btn.getAttribute("data-bb-theme-btn");
+          body.setAttribute("data-bb-theme", theme);
+        });
+      });
+
+      function findIndicatorRoot(buttonEl) {
+        if (!buttonEl) {
+          return null;
+        }
+        return buttonEl.querySelector("[data-bb-indicator-root]") || buttonEl;
+      }
+
+      function setIndicatorOn(buttonEl, isOn) {
+        var root = findIndicatorRoot(buttonEl);
+        if (!root) {
+          return;
+        }
+
+        if (isOn) {
+          root.setAttribute("data-bb-indicator", "on");
+          buttonEl.setAttribute("aria-busy", "true");
+        } else {
+          root.removeAttribute("data-bb-indicator");
+          buttonEl.removeAttribute("aria-busy");
+        }
+      }
+
+      function runIndicator(buttonEl, ms) {
+        if (!buttonEl) {
+          return;
+        }
+
+        setIndicatorOn(buttonEl, true);
+
+        window.setTimeout(function () {
+          setIndicatorOn(buttonEl, false);
+        }, ms);
+      }
+
+      var btnSubmit = document.querySelector("#bb_indicator_btn_submit");
+      var btnProcess = document.querySelector("#bb_indicator_btn_process");
+      var btnSync = document.querySelector("#bb_indicator_btn_sync");
+      var btnRefresh = document.querySelector("#bb_indicator_btn_refresh");
+      var btnFormSave = document.querySelector("#bb_indicator_btn_form_save");
+      var forceOffAll = document.querySelector("#bb_indicator_force_off_all");
+
+      if (btnSubmit) {
+        btnSubmit.addEventListener("click", function () { runIndicator(btnSubmit, 1800); });
+      }
+
+      if (btnProcess) {
+        btnProcess.addEventListener("click", function () { runIndicator(btnProcess, 2400); });
+      }
+
+      if (btnSync) {
+        btnSync.addEventListener("click", function () { runIndicator(btnSync, 2000); });
+      }
+
+      if (btnRefresh) {
+        btnRefresh.addEventListener("click", function () { runIndicator(btnRefresh, 1200); });
+      }
+
+      if (btnFormSave) {
+        btnFormSave.addEventListener("click", function () { runIndicator(btnFormSave, 2200); });
+      }
+
+      if (forceOffAll) {
+        forceOffAll.addEventListener("click", function () {
+          [btnSubmit, btnProcess, btnSync, btnRefresh, btnFormSave].forEach(function (b) {
+            setIndicatorOn(b, false);
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

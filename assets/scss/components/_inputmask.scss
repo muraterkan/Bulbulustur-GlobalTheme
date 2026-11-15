@@ -1,0 +1,78 @@
+//
+// Bulbulustur Theme - Inputmask
+// Bootstrap 5-friendly
+// Apply to: <input class="form-control bb-inputmask" ...>
+//
+
+.bb-inputmask {
+  /* local tokens (override edilebilir) */
+  --bb-inputmask-bg: var(--bb-body-bg);
+  --bb-inputmask-border-color: var(--bb-border-color);
+
+  --bb-inputmask-placeholder-color: var(--bb-secondary-color);
+  --bb-inputmask-icon-color: var(--bb-secondary-color);
+
+  --bb-inputmask-focus-border-color: var(--bb-primary);
+  --bb-inputmask-focus-ring-width: 0.25rem;
+  --bb-inputmask-focus-ring-alpha: 0.15;
+
+  --bb-inputmask-hint-margin-top: 0.35rem;
+  --bb-inputmask-hint-font-size: (--bb-fs-sm)
+  --bb-inputmask-hint-color: var(--bb-secondary-color);
+
+  --bb-inputmask-icon-size: 1.1rem;
+
+  --bb-inputmask-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* Core (input üstünde) */
+.form-control.bb-inputmask {
+  background-color: var(--bb-inputmask-bg);
+  border-color: var(--bb-inputmask-border-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.form-control.bb-inputmask::placeholder {
+  color: var(--bb-inputmask-placeholder-color);
+  opacity: 1;
+}
+
+.form-control.bb-inputmask:focus {
+  border-color: var(--bb-inputmask-focus-border-color);
+}
+
+/* Helpers */
+.bb-inputmask-monospace {
+  font-family: var(--bb-inputmask-font-mono);
+  letter-spacing: 0.02em;
+}
+
+.bb-inputmask-right {
+  text-align: right;
+}
+
+/* Optional: input-group addon */
+.bb-inputmask-group {
+  .bb-inputmask-addon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-inputmask-icon-color);
+    background-color: var(--bb-tertiary-bg);
+    border-color: var(--bb-border-color);
+  }
+
+  .bb-inputmask-addon .material-symbols-outlined {
+    font-size: var(--bb-inputmask-icon-size);
+    line-height: 1;
+  }
+}
+
+/* Hint text under masked inputs */
+.bb-inputmask-hint {
+  margin-top: var(--bb-inputmask-hint-margin-top);
+  font-size: var(--bb-inputmask-hint-font-size);
+  color: var(--bb-inputmask-hint-color);
+}

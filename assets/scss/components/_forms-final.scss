@@ -1,0 +1,255 @@
+/* =====================================
+   Bulbulustur Theme - Forms Final Override
+   Purpose: Keep Bootstrap 5 form controls aligned with Main CSS form tokens
+   Must be imported at the end of main.scss
+===================================== */
+
+/* -------------------------------------
+   Strong scoped form control base
+------------------------------------- */
+
+.bb-web-page .form-control,
+.bb-web-page .form-select,
+.bb-layout-light-page .form-control,
+.bb-layout-light-page .form-select,
+.bb-form-showcase-page .form-control,
+.bb-form-showcase-page .form-select {
+  min-height: var(--bb-form-control-min-height);
+  padding: var(--bb-form-control-padding-y) var(--bb-form-control-padding-x);
+
+  color: var(--bb-form-control-color);
+  background-color: var(--bb-form-control-bg);
+  border-color: var(--bb-form-control-border-color);
+  border-width: var(--bb-form-control-border-width);
+  border-radius: var(--bb-form-control-radius);
+
+  font-size: var(--bb-form-control-font-size);
+  font-weight: var(--bb-form-control-font-weight);
+  line-height: var(--bb-form-control-line-height);
+
+  box-shadow: var(--bb-form-control-box-shadow);
+  transition: var(--bb-form-control-transition);
+}
+
+/* -------------------------------------
+   Select needs right padding for native arrow
+------------------------------------- */
+
+.bb-web-page .form-select,
+.bb-layout-light-page .form-select,
+.bb-form-showcase-page .form-select {
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* -------------------------------------
+   Hover
+------------------------------------- */
+
+.bb-web-page .form-control:hover,
+.bb-web-page .form-select:hover,
+.bb-layout-light-page .form-control:hover,
+.bb-layout-light-page .form-select:hover,
+.bb-form-showcase-page .form-control:hover,
+.bb-form-showcase-page .form-select:hover {
+  color: var(--bb-form-control-color-hover);
+  background-color: var(--bb-form-control-bg-hover);
+  border-color: var(--bb-form-control-border-hover-color);
+}
+
+/* -------------------------------------
+   Focus
+------------------------------------- */
+
+.bb-web-page .form-control:focus,
+.bb-web-page .form-select:focus,
+.bb-layout-light-page .form-control:focus,
+.bb-layout-light-page .form-select:focus,
+.bb-form-showcase-page .form-control:focus,
+.bb-form-showcase-page .form-select:focus {
+  color: var(--bb-form-control-color-focus);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-control-focus-box-shadow);
+}
+
+/* -------------------------------------
+   Placeholder
+------------------------------------- */
+
+.bb-web-page .form-control::placeholder,
+.bb-layout-light-page .form-control::placeholder,
+.bb-form-showcase-page .form-control::placeholder {
+  color: var(--bb-form-control-placeholder-color);
+  font-weight: var(--bb-fw-medium);
+  opacity: 1;
+}
+
+/* -------------------------------------
+   Labels
+------------------------------------- */
+
+.bb-web-page .form-label,
+.bb-layout-light-page .form-label,
+.bb-form-showcase-page .form-label {
+  margin-bottom: var(--bb-form-label-margin-bottom);
+
+  color: var(--bb-form-label-color);
+  font-size: var(--bb-form-label-font-size);
+  font-weight: var(--bb-form-label-font-weight);
+  line-height: var(--bb-form-label-line-height);
+}
+
+/* -------------------------------------
+   Textarea
+------------------------------------- */
+
+.bb-web-page textarea.form-control,
+.bb-layout-light-page textarea.form-control,
+.bb-form-showcase-page textarea.form-control {
+  min-height: 8.25rem;
+  resize: vertical;
+}
+
+/* -------------------------------------
+   Sizes
+------------------------------------- */
+
+.bb-web-page .form-control-sm,
+.bb-web-page .form-select-sm,
+.bb-layout-light-page .form-control-sm,
+.bb-layout-light-page .form-select-sm,
+.bb-form-showcase-page .form-control-sm,
+.bb-form-showcase-page .form-select-sm {
+  min-height: var(--bb-form-control-sm-min-height);
+  padding: var(--bb-form-control-sm-padding-y) var(--bb-form-control-sm-padding-x);
+
+  font-size: var(--bb-form-control-sm-font-size);
+}
+
+.bb-web-page .form-control-lg,
+.bb-web-page .form-select-lg,
+.bb-layout-light-page .form-control-lg,
+.bb-layout-light-page .form-select-lg,
+.bb-form-showcase-page .form-control-lg,
+.bb-form-showcase-page .form-select-lg {
+  min-height: var(--bb-form-control-lg-min-height);
+  padding: var(--bb-form-control-lg-padding-y) var(--bb-form-control-lg-padding-x);
+
+  font-size: var(--bb-form-control-lg-font-size);
+}
+
+/* -------------------------------------
+   Solid
+------------------------------------- */
+
+.bb-web-page .form-control.form-control-solid,
+.bb-web-page .form-select.form-select-solid,
+.bb-layout-light-page .form-control.form-control-solid,
+.bb-layout-light-page .form-select.form-select-solid,
+.bb-form-showcase-page .form-control.form-control-solid,
+.bb-form-showcase-page .form-select.form-select-solid {
+  background-color: var(--bb-form-control-solid-bg);
+  border-color: var(--bb-form-control-solid-border-color);
+}
+
+.bb-web-page .form-control.form-control-solid:hover,
+.bb-web-page .form-select.form-select-solid:hover,
+.bb-layout-light-page .form-control.form-control-solid:hover,
+.bb-layout-light-page .form-select.form-select-solid:hover,
+.bb-form-showcase-page .form-control.form-control-solid:hover,
+.bb-form-showcase-page .form-select.form-select-solid:hover {
+  background-color: var(--bb-form-control-solid-bg-hover);
+  border-color: var(--bb-form-control-border-hover-color);
+}
+
+.bb-web-page .form-control.form-control-solid:focus,
+.bb-web-page .form-select.form-select-solid:focus,
+.bb-layout-light-page .form-control.form-control-solid:focus,
+.bb-layout-light-page .form-select.form-select-solid:focus,
+.bb-form-showcase-page .form-control.form-control-solid:focus,
+.bb-form-showcase-page .form-select.form-select-solid:focus {
+  color: var(--bb-form-control-color-focus);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+  box-shadow: var(--bb-form-control-focus-box-shadow);
+}
+
+/* -------------------------------------
+   Validation
+------------------------------------- */
+
+.bb-web-page .form-control.is-valid,
+.bb-web-page .form-select.is-valid,
+.bb-layout-light-page .form-control.is-valid,
+.bb-layout-light-page .form-select.is-valid,
+.bb-form-showcase-page .form-control.is-valid,
+.bb-form-showcase-page .form-select.is-valid {
+  border-color: var(--bb-form-control-valid-border-color);
+}
+
+.bb-web-page .form-control.is-valid:focus,
+.bb-web-page .form-select.is-valid:focus,
+.bb-layout-light-page .form-control.is-valid:focus,
+.bb-layout-light-page .form-select.is-valid:focus,
+.bb-form-showcase-page .form-control.is-valid:focus,
+.bb-form-showcase-page .form-select.is-valid:focus {
+  border-color: var(--bb-form-control-valid-focus-border-color);
+  box-shadow: var(--bb-form-control-valid-focus-shadow);
+}
+
+.bb-web-page .form-control.is-invalid,
+.bb-web-page .form-select.is-invalid,
+.bb-layout-light-page .form-control.is-invalid,
+.bb-layout-light-page .form-select.is-invalid,
+.bb-form-showcase-page .form-control.is-invalid,
+.bb-form-showcase-page .form-select.is-invalid {
+  border-color: var(--bb-form-control-invalid-border-color);
+}
+
+.bb-web-page .form-control.is-invalid:focus,
+.bb-web-page .form-select.is-invalid:focus,
+.bb-layout-light-page .form-control.is-invalid:focus,
+.bb-layout-light-page .form-select.is-invalid:focus,
+.bb-form-showcase-page .form-control.is-invalid:focus,
+.bb-form-showcase-page .form-select.is-invalid:focus {
+  border-color: var(--bb-form-control-invalid-focus-border-color);
+  box-shadow: var(--bb-form-control-invalid-focus-shadow);
+}
+
+/* -------------------------------------
+   Input group
+------------------------------------- */
+
+.bb-web-page .input-group .form-control,
+.bb-web-page .input-group .form-select,
+.bb-layout-light-page .input-group .form-control,
+.bb-layout-light-page .input-group .form-select,
+.bb-form-showcase-page .input-group .form-control,
+.bb-form-showcase-page .input-group .form-select {
+  min-height: var(--bb-form-control-min-height);
+}
+
+.bb-web-page .input-group-text,
+.bb-layout-light-page .input-group-text,
+.bb-form-showcase-page .input-group-text {
+  color: color-mix(in srgb, var(--bb-secondary-color) 84%, var(--bb-emphasis-color));
+  background-color: var(--bb-form-control-bg);
+  border-color: var(--bb-form-control-border-color);
+  border-width: var(--bb-form-control-border-width);
+  border-radius: var(--bb-form-control-radius);
+  box-shadow: none;
+
+  transition:
+    color var(--bb-transition-fast),
+    border-color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.bb-web-page .input-group:focus-within .input-group-text,
+.bb-layout-light-page .input-group:focus-within .input-group-text,
+.bb-form-showcase-page .input-group:focus-within .input-group-text {
+  color: var(--bb-primary);
+  background-color: var(--bb-form-control-bg-focus);
+  border-color: var(--bb-form-control-border-focus-color);
+}

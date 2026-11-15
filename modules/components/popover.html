@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bulbulustur Theme – Popover Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bb-root">
+<main class="bb-main min-vh-100 py-4">
+  <div class="container">
+
+    <!-- PAGE HEADER -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+      <div>
+        <h3 class="mb-1">Popover Component Test</h3>
+        <p class="text-muted mb-0">.bb-popover + Bootstrap 5 (JS only)</p>
+      </div>
+
+      <!-- DARK / LIGHT -->
+      <button
+        type="button"
+        class="btn btn-sm btn-outline-secondary"
+        id="bbThemeToggle"
+        aria-label="Tema değiştir"
+      >
+        <span class="material-symbols-outlined align-middle me-1">contrast</span>
+        <span class="align-middle">Light / Dark</span>
+      </button>
+    </div>
+
+    <!-- =========================================
+         BASIC
+    ========================================== -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Basic</h5>
+        <span class="text-muted small">.bb-popover</span>
+      </div>
+
+      <div class="bb-card-body d-flex gap-3 flex-wrap">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="popover"
+          data-bs-custom-class="bb-popover"
+          data-bs-title="Başlık"
+          data-bs-content="Bu temel bir popover örneğidir."
+        >
+          Primary
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-custom-class="bb-popover"
+          data-bs-content="Başlıksız içerik de olur."
+        >
+          Secondary
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================
+         INVERSE
+    ========================================== -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Inverse</h5>
+        <span class="text-muted small">.bb-popover-inverse</span>
+      </div>
+
+      <div class="bb-card-body">
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-bs-toggle="popover"
+          data-bs-custom-class="bb-popover bb-popover-inverse"
+          data-bs-title="Koyu Popover"
+          data-bs-content="Dark surface üzerinde kullanılır."
+        >
+          Dark Popover
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================
+         STATES
+    ========================================== -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">State Variants</h5>
+        <span class="text-muted small">success / danger</span>
+      </div>
+
+      <div class="bb-card-body d-flex gap-3 flex-wrap">
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="popover"
+          data-bs-custom-class="bb-popover bb-popover-success"
+          data-bs-content="İşlem başarılı."
+        >
+          Success
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="popover"
+          data-bs-custom-class="bb-popover bb-popover-danger"
+          data-bs-content="Bir hata oluştu."
+        >
+          Danger
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================
+         DISABLED
+    ========================================== -->
+    <div class="bb-card mb-4">
+      <div class="bb-card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Disabled</h5>
+        <span class="text-muted small">.is-disabled</span>
+      </div>
+
+      <div class="bb-card-body">
+        <button
+          type="button"
+          class="btn btn-secondary is-disabled"
+          disabled
+        >
+          Disabled Button
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <div class="text-muted small mt-4">
+      Not: Popover JS sadece Bootstrap’tan gelir. Stil tamamen bb-popover.
+    </div>
+
+  </div>
+</main>
+
+<!-- Bootstrap JS -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  // init popovers
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+    new bootstrap.Popover(el);
+  });
+
+  // theme toggle (demo)
+  (function () {
+    var btn = document.getElementById("bbThemeToggle");
+
+    function getTheme() {
+      return document.documentElement.getAttribute("data-bs-theme");
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    }
+
+    btn.addEventListener("click", function () {
+      setTheme(getTheme() === "dark" ? "light" : "dark");
+    });
+  })();
+</script>
+</body>
+</html>

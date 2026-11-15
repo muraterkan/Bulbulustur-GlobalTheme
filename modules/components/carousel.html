@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme - Carousel</title>
+
+      <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body class="py-4">
+  <div class="container">
+
+    <!-- Top bar / Hero -->
+    <div class="bb-demo-hero mb-4">
+      <div>
+        <h1 class="bb-demo-title h4">Carousel</h1>
+        <p class="bb-demo-sub small">bb-carousel (dots / bullets / overlay) — theme içinde “adam gibi” demo</p>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="btn-group" role="group" aria-label="Theme switcher">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="light">
+            <span class="material-symbols-outlined" style="font-size:18px;">light_mode</span>
+            Light
+          </button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="dark">
+            <span class="material-symbols-outlined" style="font-size:18px;">dark_mode</span>
+            Dark
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="bbDensityToggle">
+          Compact
+        </button>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Dots -->
+      <div class="col-12">
+        <div class="card bb-card bb-card-hover-elevate">
+          <div class="card-header bb-card-header">
+            <div class="bb-card-title d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined" aria-hidden="true">radio_button_checked</span>
+              Dots
+            </div>
+
+            <div class="bb-demo-badge">
+              <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">tune</span>
+              <span><code>.bb-carousel-dots</code></span>
+            </div>
+          </div>
+
+          <div class="card-body bb-card-body">
+            <div id="carouselDots"
+                 class="carousel slide bb-carousel bb-carousel-dots"
+                 data-bs-ride="carousel"
+                 data-bs-touch="true">
+
+              <div class="carousel-inner bb-rounded-lg bb-overflow-hidden bb-demo-slide">
+                <div class="carousel-item active">
+                  <img src="https://picsum.photos/1400/700?1" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?2" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?7" alt="Slide 3">
+                </div>
+              </div>
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDots" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDots" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDots" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
+            <div class="bb-demo-caption">
+              <span>Indicator görünümü: genişleyen dot</span>
+              <span class="text-body-secondary">Klavye: Tab ile focus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bullets -->
+      <div class="col-12 col-xl-6">
+        <div class="card bb-card bb-card-hover-elevate bb-card-bordered">
+          <div class="card-header bb-card-header">
+            <div class="bb-card-title d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined" aria-hidden="true">view_agenda</span>
+              Bullets
+            </div>
+
+            <div class="bb-demo-badge">
+              <span><code>.bb-carousel-bullets</code></span>
+            </div>
+          </div>
+
+          <div class="card-body bb-card-body">
+            <div id="carouselBullets"
+                 class="carousel slide bb-carousel bb-carousel-bullets"
+                 data-bs-ride="carousel"
+                 data-bs-interval="4500">
+
+              <div class="carousel-inner bb-rounded-lg bb-overflow-hidden bb-demo-slide" style="height: 300px;">
+                <div class="carousel-item active">
+                  <img src="https://picsum.photos/1400/700?3" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?4" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?8" alt="Slide 3">
+                </div>
+              </div>
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselBullets" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselBullets" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselBullets" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
+            <div class="bb-demo-caption">
+              <span>Indicator görünümü: bar</span>
+              <span class="text-body-secondary">Interval: 4500ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay Controls -->
+      <div class="col-12 col-xl-6">
+        <div class="card bb-card bb-card-hover-elevate bb-card-dashed">
+          <div class="card-header bb-card-header">
+            <div class="bb-card-title d-flex align-items-center gap-2">
+              <span class="material-symbols-outlined" aria-hidden="true">open_in_full</span>
+              Overlay Controls
+            </div>
+
+            <div class="bb-demo-badge">
+              <span><code>.bb-carousel-overlay</code></span>
+            </div>
+          </div>
+
+          <div class="card-body bb-card-body">
+            <div id="carouselOverlay"
+                 class="carousel slide bb-carousel bb-carousel-dots bb-carousel-overlay"
+                 data-bs-ride="carousel"
+                 data-bs-interval="5000">
+
+              <div class="carousel-inner bb-rounded-xl bb-overflow-hidden bb-demo-slide" style="height: 300px;">
+                <div class="carousel-item active">
+                  <img src="https://picsum.photos/1400/700?5" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?6" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1400/700?9" alt="Slide 3">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselOverlay" data-bs-slide="prev" aria-label="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselOverlay" data-bs-slide="next" aria-label="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselOverlay" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
+            <div class="bb-demo-caption">
+              <span>Prev/Next overlay + dots</span>
+              <span class="text-body-secondary">Hover’da daha belirgin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-body-secondary small mt-4">
+      Not: Theme toggle <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var densityBtn = document.getElementById("bbDensityToggle");
+
+      function setTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+      }
+
+      function toggleDensity() {
+        var current = root.getAttribute("data-bb-density");
+        if (current === "compact") {
+          root.removeAttribute("data-bb-density");
+          densityBtn.classList.remove("active");
+        } else {
+          root.setAttribute("data-bb-density", "compact");
+          densityBtn.classList.add("active");
+        }
+      }
+
+      document.querySelectorAll("[data-bb-theme]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setTheme(btn.getAttribute("data-bb-theme"));
+        });
+      });
+
+      densityBtn.addEventListener("click", toggleDensity);
+    })();
+  </script>
+</body>
+</html>

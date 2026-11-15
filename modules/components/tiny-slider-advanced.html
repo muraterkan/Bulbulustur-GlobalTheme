@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme – Tiny Slider Advanced (3-up)</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bg-body-tertiary">
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div>
+        <h4 class="mb-0">Tiny Slider Advanced</h4>
+        <div class="text-body-secondary small">3 item görünür, 3’lü kaydırır (loop + autoplay)</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-light" type="button" data-bb-adv-prev>
+          <span class="material-symbols-outlined align-middle">chevron_left</span>
+        </button>
+        <button class="btn btn-sm btn-light" type="button" data-bb-adv-next>
+          <span class="material-symbols-outlined align-middle">chevron_right</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Advanced slider -->
+    <div
+      class="bb-tiny-slider"
+      data-bb-slider-advanced
+      data-bb-items="3"
+      data-bb-step="3"
+      data-bb-loop="true"
+      data-bb-autoplay="true"
+      data-bb-autoplay-timeout="6000">
+
+      <div class="bb-ts-viewport">
+        <div class="bb-ts-track" data-bb-track>
+          <!-- Item -->
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 1</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 2</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 4</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 6</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 7</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 8</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bb-ts-slide">
+            <div class="bb-ts-slide-inner">
+              <div class="p-3 text-center">
+                <div class="ratio ratio-16x9 bg-body-secondary rounded"></div>
+                <div class="mt-2 small fw-semibold">Slide 9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- (Nav kapalı) -->
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function toBool(v) {
+        return String(v).toLowerCase() === 'true';
+      }
+
+      function toInt(v, def) {
+        var n = parseInt(v, 10);
+        if (isNaN(n)) {
+          return def;
+        }
+        return n;
+      }
+
+      function initAdvanced(root) {
+        var track = root.querySelector('[data-bb-track]');
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.bb-ts-slide'));
+
+        if (!track || slides.length === 0) {
+          return;
+        }
+
+        var items = toInt(root.getAttribute('data-bb-items'), 3);
+        var step = toInt(root.getAttribute('data-bb-step'), 3);
+        var loop = toBool(root.getAttribute('data-bb-loop'));
+        var autoplay = toBool(root.getAttribute('data-bb-autoplay'));
+        var autoplayTimeout = toInt(root.getAttribute('data-bb-autoplay-timeout'), 6000);
+
+        var state = { page: 0, timer: null };
+
+        function gapWidth() {
+          var cs = window.getComputedStyle(track);
+          var gap = cs.columnGap || cs.gap || '0px';
+          return parseFloat(gap) || 0;
+        }
+
+        function slideWidth() {
+          return slides[0].getBoundingClientRect().width;
+        }
+
+        function pageCount() {
+          return Math.max(1, Math.ceil(slides.length / items));
+        }
+
+        function maxPageIndex() {
+          return pageCount() - 1;
+        }
+
+        function pageToLeft(pageIndex) {
+          var w = slideWidth() + gapWidth();
+          return pageIndex * items * w;
+        }
+
+        function goToPage(pageIndex) {
+          var max = maxPageIndex();
+
+          if (!loop) {
+            state.page = Math.max(0, Math.min(pageIndex, max));
+          } else {
+            if (pageIndex < 0) {
+              state.page = max;
+            } else if (pageIndex > max) {
+              state.page = 0;
+            } else {
+              state.page = pageIndex;
+            }
+          }
+
+          track.scrollTo({ left: pageToLeft(state.page), behavior: 'smooth' });
+        }
+
+        function nextPage() {
+          goToPage(state.page + 1);
+        }
+
+        function prevPage() {
+          goToPage(state.page - 1);
+        }
+
+        function stopAutoplay() {
+          if (state.timer) {
+            clearInterval(state.timer);
+            state.timer = null;
+          }
+        }
+
+        function startAutoplay() {
+          stopAutoplay();
+
+          if (!autoplay) {
+            return;
+          }
+
+          state.timer = setInterval(function () {
+            nextPage();
+          }, autoplayTimeout);
+        }
+
+        // External buttons (headerdaki)
+        var btnPrev = document.querySelector('[data-bb-adv-prev]');
+        var btnNext = document.querySelector('[data-bb-adv-next]');
+
+        if (btnPrev) {
+          btnPrev.addEventListener('click', function () {
+            prevPage();
+            startAutoplay();
+          });
+        }
+
+        if (btnNext) {
+          btnNext.addEventListener('click', function () {
+            nextPage();
+            startAutoplay();
+          });
+        }
+
+        // Pause on hover (desktop)
+        root.addEventListener('mouseenter', function () {
+          stopAutoplay();
+        });
+        root.addEventListener('mouseleave', function () {
+          startAutoplay();
+        });
+
+        // Keep state roughly in sync with scroll
+        var ticking = false;
+        track.addEventListener('scroll', function () {
+          if (ticking) {
+            return;
+          }
+          ticking = true;
+
+          window.requestAnimationFrame(function () {
+            ticking = false;
+
+            var w = slideWidth() + gapWidth();
+            if (w <= 0) {
+              return;
+            }
+
+            var page = Math.round(track.scrollLeft / (items * w));
+            var max = maxPageIndex();
+
+            if (!loop) {
+              page = Math.max(0, Math.min(page, max));
+            } else {
+              page = Math.max(0, Math.min(page, max));
+            }
+
+            state.page = page;
+          });
+        });
+
+        // Init
+        goToPage(0);
+        startAutoplay();
+
+        // Resize fix
+        window.addEventListener('resize', function () {
+          goToPage(state.page);
+        });
+      }
+
+      document.querySelectorAll('[data-bb-slider-advanced]').forEach(function (el) {
+        initAdvanced(el);
+      });
+    })();
+  </script>
+</body>
+</html>

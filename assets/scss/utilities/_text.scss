@@ -1,0 +1,521 @@
+/* =====================================
+   Bulbulustur Theme - Text Utilities
+   bb- prefix | token-driven | state aware | PURE
+
+   Scope:
+   - Text color
+   - Text decoration
+   - Text wrapping / truncation / clamp
+   - Text alignment / transform
+   - Text selection / interaction states
+   - Font-weight aliases only
+
+   Important:
+   - Font-size is managed by _typography.scss via .bb-fs-* utilities.
+   - Icon size is managed by _icons.scss via .bb-icon-* utilities.
+   - Do not define hardcoded font-size values here.
+===================================== */
+
+/* -------------------------------------
+   Local utility tokens
+------------------------------------- */
+
+:root {
+  --bb-text-transition:
+    color var(--bb-motion-fast) var(--bb-ease-in-out);
+
+  --bb-text-truncate-max-width: 100%;
+}
+
+/* -------------------------------------
+   Local SCSS selectors
+------------------------------------- */
+
+$bb-text-icon-selector: "i, .svg-icon, .material-symbols-outlined";
+
+/* -------------------------------------
+   Text color basics
+------------------------------------- */
+
+.bb-text {
+  color: var(--bb-body-color) !important;
+}
+
+.bb-text-muted {
+  color: var(--bb-secondary-color) !important;
+}
+
+.bb-text-subtle {
+  color: var(--bb-tertiary-color) !important;
+}
+
+.bb-text-heading {
+  color: var(--bb-heading-color) !important;
+}
+
+.bb-text-emphasis {
+  color: var(--bb-emphasis-color) !important;
+}
+
+.bb-text-transparent {
+  color: transparent !important;
+}
+
+.bb-text-white {
+  color: var(--bb-white) !important;
+}
+
+.bb-text-black {
+  color: var(--bb-black) !important;
+}
+
+/* -------------------------------------
+   Page accent text
+------------------------------------- */
+
+.bb-text-accent {
+  color: var(--bb-page-accent) !important;
+}
+
+.bb-text-accent-strong {
+  color: var(--bb-page-accent-strong) !important;
+}
+
+.bb-text-hover-accent {
+  transition: var(--bb-text-transition);
+
+  &:hover {
+    color: var(--bb-page-accent) !important;
+  }
+
+  &:hover :is(#{$bb-text-icon-selector}) {
+    color: var(--bb-page-accent) !important;
+  }
+}
+
+.bb-text-active-accent {
+  transition: var(--bb-text-transition);
+
+  &.active,
+  &.is-active,
+  &[aria-current="page"],
+  &[aria-current="true"] {
+    color: var(--bb-page-accent) !important;
+  }
+
+  &.active :is(#{$bb-text-icon-selector}),
+  &.is-active :is(#{$bb-text-icon-selector}),
+  &[aria-current="page"] :is(#{$bb-text-icon-selector}),
+  &[aria-current="true"] :is(#{$bb-text-icon-selector}) {
+    color: var(--bb-page-accent) !important;
+  }
+}
+
+/* -------------------------------------
+   Semantic text colors
+------------------------------------- */
+
+$bb-semantic-colors: (
+  primary,
+  secondary,
+  success,
+  info,
+  warning,
+  danger,
+  light,
+  dark
+);
+
+@each $name in $bb-semantic-colors {
+  .bb-text-#{$name} {
+    color: var(--bb-#{$name}) !important;
+  }
+
+  .bb-text-inverse-#{$name} {
+    color: var(--bb-#{$name}-inverse) !important;
+  }
+
+  .bb-text-light-#{$name} {
+    color: var(--bb-#{$name}-light) !important;
+  }
+
+  .bb-text-hover-#{$name} {
+    transition: var(--bb-text-transition);
+
+    &:hover {
+      color: var(--bb-#{$name}) !important;
+    }
+
+    &:hover :is(#{$bb-text-icon-selector}) {
+      color: var(--bb-#{$name}) !important;
+    }
+  }
+
+  .bb-text-active-#{$name} {
+    transition: var(--bb-text-transition);
+
+    &.active,
+    &.is-active,
+    &[aria-current="page"],
+    &[aria-current="true"] {
+      color: var(--bb-#{$name}) !important;
+    }
+
+    &.active :is(#{$bb-text-icon-selector}),
+    &.is-active :is(#{$bb-text-icon-selector}),
+    &[aria-current="page"] :is(#{$bb-text-icon-selector}),
+    &[aria-current="true"] :is(#{$bb-text-icon-selector}) {
+      color: var(--bb-#{$name}) !important;
+    }
+  }
+
+  .bb-text-state-#{$name} {
+    transition: var(--bb-text-transition);
+
+    &:hover,
+    &.active,
+    &.is-active,
+    &[aria-current="page"],
+    &[aria-current="true"] {
+      color: var(--bb-#{$name}) !important;
+    }
+
+    &:hover :is(#{$bb-text-icon-selector}),
+    &.active :is(#{$bb-text-icon-selector}),
+    &.is-active :is(#{$bb-text-icon-selector}),
+    &[aria-current="page"] :is(#{$bb-text-icon-selector}),
+    &[aria-current="true"] :is(#{$bb-text-icon-selector}) {
+      color: var(--bb-#{$name}) !important;
+    }
+  }
+}
+
+/* -------------------------------------
+   Gray scale text colors
+------------------------------------- */
+
+$bb-grays: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@each $g in $bb-grays {
+  .bb-text-gray-#{$g} {
+    color: var(--bb-gray-#{$g}) !important;
+  }
+}
+
+/* -------------------------------------
+   Text decoration
+------------------------------------- */
+
+.bb-text-underline {
+  text-decoration: underline !important;
+}
+
+.bb-text-line-through {
+  text-decoration: line-through !important;
+}
+
+.bb-text-overline {
+  text-decoration: overline !important;
+}
+
+.bb-text-none {
+  text-decoration: none !important;
+}
+
+.bb-text-hover-underline:hover {
+  text-decoration: underline !important;
+}
+
+.bb-text-hover-none:hover {
+  text-decoration: none !important;
+}
+
+.bb-text-hover-line-through:hover {
+  text-decoration: line-through !important;
+}
+
+/* -------------------------------------
+   Text alignment
+------------------------------------- */
+
+.bb-text-start {
+  text-align: left !important;
+}
+
+.bb-text-center {
+  text-align: center !important;
+}
+
+.bb-text-end {
+  text-align: right !important;
+}
+
+.bb-text-justify {
+  text-align: justify !important;
+}
+
+/* -------------------------------------
+   Text transform
+------------------------------------- */
+
+.bb-text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.bb-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.bb-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.bb-text-transform-none {
+  text-transform: none !important;
+}
+
+/* -------------------------------------
+   Font weight aliases
+   Typography owns the token values.
+------------------------------------- */
+
+.bb-text-regular {
+  font-weight: var(--bb-fw-normal) !important;
+}
+
+.bb-text-medium {
+  font-weight: var(--bb-fw-medium) !important;
+}
+
+.bb-text-semibold {
+  font-weight: var(--bb-fw-semibold) !important;
+}
+
+.bb-text-bold {
+  font-weight: var(--bb-fw-bold) !important;
+}
+
+.bb-text-title {
+  font-weight: var(--bb-fw-title) !important;
+}
+
+.bb-text-title-strong {
+  font-weight: var(--bb-fw-title-strong) !important;
+}
+
+/* -------------------------------------
+   Wrapping helpers
+------------------------------------- */
+
+.bb-text-wrap {
+  white-space: normal !important;
+}
+
+.bb-text-nowrap {
+  white-space: nowrap !important;
+}
+
+.bb-text-pre {
+  white-space: pre !important;
+}
+
+.bb-text-pre-wrap {
+  white-space: pre-wrap !important;
+}
+
+.bb-text-break {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+/* -------------------------------------
+   Single-line truncation
+------------------------------------- */
+
+.bb-text-truncate {
+  max-width: var(--bb-text-truncate-max-width);
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* -------------------------------------
+   Multi-line clamp
+------------------------------------- */
+
+.bb-text-clamp-1,
+.bb-text-clamp-2,
+.bb-text-clamp-3,
+.bb-text-clamp-4,
+.bb-text-clamp-5 {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden !important;
+}
+
+.bb-text-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.bb-text-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.bb-text-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.bb-text-clamp-4 {
+  -webkit-line-clamp: 4;
+}
+
+.bb-text-clamp-5 {
+  -webkit-line-clamp: 5;
+}
+
+/* -------------------------------------
+   Letter spacing helpers
+   Typography owns heading/display letter-spacing.
+   These are utility overrides only.
+------------------------------------- */
+
+.bb-ls-tight {
+  letter-spacing: var(--bb-heading-letter-spacing) !important;
+}
+
+.bb-ls-display {
+  letter-spacing: var(--bb-display-letter-spacing) !important;
+}
+
+.bb-ls-normal {
+  letter-spacing: 0 !important;
+}
+
+.bb-ls-wide {
+  letter-spacing: 0.05em !important;
+}
+
+.bb-ls-wider {
+  letter-spacing: 0.1em !important;
+}
+
+/* -------------------------------------
+   Line-height aliases
+   Typography owns line-height tokens.
+------------------------------------- */
+
+.bb-lh-1 {
+  line-height: 1 !important;
+}
+
+.bb-lh-tight {
+  line-height: var(--bb-line-height-tight) !important;
+}
+
+.bb-lh-heading {
+  line-height: var(--bb-line-height-heading) !important;
+}
+
+.bb-lh-base {
+  line-height: var(--bb-line-height-base) !important;
+}
+
+.bb-lh-content {
+  line-height: var(--bb-line-height-content) !important;
+}
+
+.bb-lh-loose {
+  line-height: var(--bb-line-height-loose) !important;
+}
+
+/* -------------------------------------
+   Text selection
+------------------------------------- */
+
+.bb-user-select-none {
+  user-select: none !important;
+}
+
+.bb-user-select-text {
+  user-select: text !important;
+}
+
+.bb-user-select-all {
+  user-select: all !important;
+}
+
+.bb-user-select-auto {
+  user-select: auto !important;
+}
+
+/* -------------------------------------
+   Parent hover / active helpers
+------------------------------------- */
+
+.bb-parent-hover {
+  @each $name in $bb-semantic-colors {
+    &:hover .bb-parent-hover-#{$name} {
+      transition: var(--bb-text-transition);
+      color: var(--bb-#{$name}) !important;
+    }
+
+    &:hover .bb-parent-hover-#{$name} :is(#{$bb-text-icon-selector}) {
+      color: var(--bb-#{$name}) !important;
+    }
+  }
+}
+
+.bb-parent-active {
+  @each $name in $bb-semantic-colors {
+    &.active .bb-parent-active-#{$name},
+    &.is-active .bb-parent-active-#{$name},
+    &[aria-current="page"] .bb-parent-active-#{$name},
+    &[aria-current="true"] .bb-parent-active-#{$name} {
+      transition: var(--bb-text-transition);
+      color: var(--bb-#{$name}) !important;
+    }
+
+    &.active .bb-parent-active-#{$name} :is(#{$bb-text-icon-selector}),
+    &.is-active .bb-parent-active-#{$name} :is(#{$bb-text-icon-selector}),
+    &[aria-current="page"] .bb-parent-active-#{$name} :is(#{$bb-text-icon-selector}),
+    &[aria-current="true"] .bb-parent-active-#{$name} :is(#{$bb-text-icon-selector}) {
+      color: var(--bb-#{$name}) !important;
+    }
+  }
+}
+
+/* -------------------------------------
+   Disabled text
+------------------------------------- */
+
+.bb-text-disabled,
+[disabled] .bb-text-auto,
+[aria-disabled="true"] .bb-text-auto {
+  color: var(--bb-secondary-color) !important;
+  opacity: var(--bb-disabled-opacity);
+  pointer-events: none;
+}
+
+/* -------------------------------------
+   Reduced motion
+------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-text-hover-accent,
+  .bb-text-active-accent {
+    transition: none;
+  }
+
+  @each $name in $bb-semantic-colors {
+    .bb-text-hover-#{$name},
+    .bb-text-active-#{$name},
+    .bb-text-state-#{$name},
+    .bb-parent-hover:hover .bb-parent-hover-#{$name},
+    .bb-parent-active.active .bb-parent-active-#{$name},
+    .bb-parent-active.is-active .bb-parent-active-#{$name},
+    .bb-parent-active[aria-current="page"] .bb-parent-active-#{$name},
+    .bb-parent-active[aria-current="true"] .bb-parent-active-#{$name} {
+      transition: none;
+    }
+  }
+}

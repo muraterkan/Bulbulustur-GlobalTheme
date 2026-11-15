@@ -1,0 +1,190 @@
+/* =====================================
+   Bulbulustur Theme - Chips
+   Compact metadata / filter / status pills
+   Bootstrap-independent, token-first
+===================================== */
+
+.bb-chip {
+    --bb-chip-bg: var(--bb-tertiary-bg);
+    --bb-chip-color: var(--bb-body-color);
+    --bb-chip-border-color: var(--bb-border-color);
+    --bb-chip-radius: var(--bb-radius-pill);
+    --bb-chip-padding-x: .75rem;
+    --bb-chip-padding-y: .35rem;
+    --bb-chip-gap: .4rem;
+    --bb-chip-font-size: var(--bb-fs-sm);;
+    --bb-chip-font-weight: var(--bb-fw-semibold);
+    --bb-chip-line-height: var(--bb-line-height-heading);
+    --bb-chip-dot-size: .45rem;
+    --bb-chip-icon-size: 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bb-chip-gap);
+    min-height: 1.875rem;
+    padding: var(--bb-chip-padding-y) var(--bb-chip-padding-x);
+    border: 1px solid var(--bb-chip-border-color);
+    border-radius: var(--bb-chip-radius);
+    background-color: var(--bb-chip-bg);
+    color: var(--bb-chip-color);
+    font-size: var(--bb-chip-font-size);
+    font-weight: var(--bb-chip-font-weight);
+    line-height: var(--bb-chip-line-height);
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.bb-chip:hover {
+    color: var(--bb-chip-color);
+    text-decoration: none;
+}
+
+.bb-chip-dot {
+    width: var(--bb-chip-dot-size);
+    height: var(--bb-chip-dot-size);
+    border-radius: 50%;
+    background-color: currentColor;
+    flex: 0 0 auto;
+}
+
+.bb-chip .material-symbols-outlined {
+    font-size: var(--bb-chip-icon-size);
+    line-height: 1;
+    color: currentColor;
+}
+
+.bb-chip-clickable {
+    cursor: pointer;
+    transition: var(--bb-transition-colors), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
+}
+
+.bb-chip-clickable:hover {
+    box-shadow: var(--bb-shadow-xs);
+    transform: translateY(-1px);
+}
+
+/* Sizes */
+
+.bb-chip-sm {
+    --bb-chip-padding-x: .55rem;
+    --bb-chip-padding-y: 0.25rem;
+    --bb-chip-font-size: var(--bb-fs-sm);;
+    min-height: 1.55rem;
+}
+
+.bb-chip-lg {
+    --bb-chip-padding-x: 1rem;
+    --bb-chip-padding-y: .45rem;
+    --bb-chip-font-size: var(--bb-fs-base);
+    min-height: 2.25rem;
+}
+
+/* Soft variants */
+
+.bb-chip-primary-soft {
+    --bb-chip-bg: var(--bb-primary-light);
+    --bb-chip-color: var(--bb-primary);
+    --bb-chip-border-color: transparent;
+}
+
+.bb-chip-success-soft {
+    --bb-chip-bg: var(--bb-success-light);
+    --bb-chip-color: var(--bb-success);
+    --bb-chip-border-color: transparent;
+}
+
+.bb-chip-warning-soft {
+    --bb-chip-bg: var(--bb-warning-light);
+    --bb-chip-color: var(--bb-warning);
+    --bb-chip-border-color: transparent;
+}
+
+.bb-chip-danger-soft {
+    --bb-chip-bg: var(--bb-danger-light);
+    --bb-chip-color: var(--bb-danger);
+    --bb-chip-border-color: transparent;
+}
+
+.bb-chip-info-soft {
+    --bb-chip-bg: var(--bb-info-light);
+    --bb-chip-color: var(--bb-info);
+    --bb-chip-border-color: transparent;
+}
+
+.bb-chip-dark-soft {
+    --bb-chip-bg: var(--bb-dark-light);
+    --bb-chip-color: var(--bb-dark);
+    --bb-chip-border-color: transparent;
+}
+
+/* Solid variants */
+
+.bb-chip-primary {
+    --bb-chip-bg: var(--bb-primary);
+    --bb-chip-color: var(--bb-primary-inverse);
+    --bb-chip-border-color: var(--bb-primary);
+}
+
+.bb-chip-success {
+    --bb-chip-bg: var(--bb-success);
+    --bb-chip-color: var(--bb-success-inverse);
+    --bb-chip-border-color: var(--bb-success);
+}
+
+.bb-chip-warning {
+    --bb-chip-bg: var(--bb-warning);
+    --bb-chip-color: var(--bb-warning-inverse);
+    --bb-chip-border-color: var(--bb-warning);
+}
+
+.bb-chip-danger {
+    --bb-chip-bg: var(--bb-danger);
+    --bb-chip-color: var(--bb-danger-inverse);
+    --bb-chip-border-color: var(--bb-danger);
+}
+
+.bb-chip-info {
+    --bb-chip-bg: var(--bb-info);
+    --bb-chip-color: var(--bb-info-inverse);
+    --bb-chip-border-color: var(--bb-info);
+}
+
+.bb-chip-dark {
+    --bb-chip-bg: var(--bb-dark);
+    --bb-chip-color: var(--bb-dark-inverse);
+    --bb-chip-border-color: var(--bb-dark);
+}
+
+/* Outline */
+
+.bb-chip-outline {
+    --bb-chip-bg: transparent;
+    --bb-chip-color: var(--bb-body-color);
+    --bb-chip-border-color: var(--bb-border-color);
+}
+
+.bb-chip-outline-success {
+    --bb-chip-bg: transparent;
+    --bb-chip-color: var(--bb-success);
+    --bb-chip-border-color: var(--bb-success);
+}
+
+.bb-chip-outline-warning {
+    --bb-chip-bg: transparent;
+    --bb-chip-color: var(--bb-warning);
+    --bb-chip-border-color: var(--bb-warning);
+}
+
+.bb-chip-outline-danger {
+    --bb-chip-bg: transparent;
+    --bb-chip-color: var(--bb-danger);
+    --bb-chip-border-color: var(--bb-danger);
+}
+
+.bb-chip-outline-info {
+    --bb-chip-bg: transparent;
+    --bb-chip-color: var(--bb-info);
+    --bb-chip-border-color: var(--bb-info);
+}

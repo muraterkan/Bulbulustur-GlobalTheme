@@ -1,0 +1,83 @@
+/* =====================================
+   Bulbulustur Theme - Indicator (PURE)
+   Bootstrap 5 uyumlu
+   Toggle: data-bb-indicator="on"
+   ===================================== */
+
+.bb-indicator {
+  /* local tokens */
+  --bb-indicator-transition: 150ms ease;
+  --bb-indicator-disabled-opacity: var(--bs-disabled-opacity, 0.65);
+
+  /* layout tokens */
+  --bb-indicator-gap: var(--bb-space-2, 0.5rem);
+
+  /* micro motion tokens */
+  --bb-indicator-shift-y: 1px;
+
+  /* icon token */
+  --bb-indicator-icon-size: 1.15em;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-indicator-gap);
+}
+
+/* Label & Progress layers */
+.bb-indicator .bb-indicator-label,
+.bb-indicator .bb-indicator-progress {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+
+  transition: opacity var(--bb-indicator-transition), transform var(--bb-indicator-transition);
+  will-change: opacity, transform;
+}
+
+/* Progress overlay: buton genişliği zıplamasın */
+.bb-indicator .bb-indicator-progress {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(var(--bb-indicator-shift-y));
+}
+
+/* Default state */
+.bb-indicator .bb-indicator-label {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* ON state */
+.bb-indicator[data-bb-indicator="on"] .bb-indicator-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(calc(var(--bb-indicator-shift-y) * -1));
+}
+
+.bb-indicator[data-bb-indicator="on"] .bb-indicator-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* Opt-in: ON iken disable davranışı */
+.bb-indicator[data-bb-indicator="on"][data-bb-indicator-disable="true"] {
+  pointer-events: none;
+  cursor: progress;
+  opacity: var(--bb-indicator-disabled-opacity);
+}
+
+/* Icon alignment */
+.bb-indicator .material-symbols-outlined {
+  font-size: var(--bb-indicator-icon-size);
+  line-height: 1;
+}

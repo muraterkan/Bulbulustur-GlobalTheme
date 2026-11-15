@@ -1,0 +1,146 @@
+/* =====================================
+   Bulbulustur Theme - Lightbox
+   Fullscreen backdrop + fixed controls
+   Token-first | Dark/Light safe | PURE
+===================================== */
+
+.bb-lightbox {
+  --bb-lightbox-z: 1090;
+  --bb-lightbox-padding: 1.25rem;
+
+  --bb-lightbox-backdrop-opacity: 0.90;
+  --bb-lightbox-backdrop-bg: rgb(0 0 0 / var(--bb-lightbox-backdrop-opacity));
+
+  --bb-lightbox-control-size: 42px;
+  --bb-lightbox-control-radius: var(--bb-radius);
+  --bb-lightbox-control-bg: rgb(var(--bb-body-bg-rgb) / 0.85);
+  --bb-lightbox-control-border-color: var(--bb-border-color);
+  --bb-lightbox-control-color: var(--bb-emphasis-color);
+  --bb-lightbox-control-shadow: var(--bb-shadow-sm);
+
+  position: fixed;
+  inset: 0;
+  z-index: var(--bb-lightbox-z);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-body-color);
+}
+
+.bb-lightbox.is-open {
+  display: flex;
+}
+
+/* -------------------------------------
+   Backdrop
+------------------------------------- */
+
+.bb-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: var(--bb-lightbox-backdrop-bg);
+}
+
+/* -------------------------------------
+   Stage / Media
+------------------------------------- */
+
+.bb-lightbox-stage {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+  max-width: 92vw;
+  max-height: 92vh;
+  padding: var(--bb-lightbox-padding);
+
+  pointer-events: none;
+}
+
+.bb-lightbox-media {
+  display: block;
+
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-shadow-lg);
+
+  pointer-events: auto;
+}
+
+/* -------------------------------------
+   Controls
+------------------------------------- */
+
+.bb-lightbox-close,
+.bb-lightbox-nav {
+  position: absolute;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--bb-lightbox-control-size);
+  height: var(--bb-lightbox-control-size);
+
+  color: var(--bb-lightbox-control-color);
+  background-color: var(--bb-lightbox-control-bg);
+  border: var(--bb-border-width, 1px) solid var(--bb-lightbox-control-border-color);
+  border-radius: var(--bb-lightbox-control-radius);
+  box-shadow: var(--bb-lightbox-control-shadow);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    color var(--bb-transition-fast),
+    border-color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.bb-lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.bb-lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bb-lightbox-nav.is-prev {
+  left: 20px;
+}
+
+.bb-lightbox-nav.is-next {
+  right: 20px;
+}
+
+.bb-lightbox-close .material-symbols-outlined,
+.bb-lightbox-nav .material-symbols-outlined {
+  font-size: var(--bb-fs-xl);
+  line-height: 1;
+}
+
+/* -------------------------------------
+   State
+------------------------------------- */
+
+.bb-lightbox-close:hover,
+.bb-lightbox-nav:hover {
+  color: var(--bb-primary);
+  border-color: var(--bb-primary);
+}

@@ -1,0 +1,161 @@
+/* =====================================
+   Bulbulustur Theme - Bootstrap Bridge
+   Source: bb-* tokens
+   Target: Bootstrap --bs-* compatibility
+===================================== */
+
+:root,
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  /* -------------------------------------
+     Body
+  ------------------------------------- */
+
+  --bs-body-bg: var(--bb-body-bg);
+  --bs-body-bg-rgb: var(--bb-body-bg-rgb);
+  --bs-body-color: var(--bb-body-color);
+  --bs-body-color-rgb: var(--bb-body-color-rgb);
+
+  /* -------------------------------------
+     Borders
+  ------------------------------------- */
+
+  --bs-border-color: var(--bb-border-color);
+  --bs-border-width: var(--bb-border-width, 1px);
+
+  /* -------------------------------------
+     Radius
+  ------------------------------------- */
+
+  --bs-border-radius-sm: var(--bb-radius-sm);
+  --bs-border-radius: var(--bb-radius);
+  --bs-border-radius-lg: var(--bb-radius-lg);
+  --bs-border-radius-xl: var(--bb-radius-xl);
+  --bs-border-radius-xxl: var(--bb-radius-2xl);
+  --bs-border-radius-pill: var(--bb-radius-pill);
+
+  /* -------------------------------------
+     Shadows
+  ------------------------------------- */
+
+  --bs-box-shadow-sm: var(--bb-shadow-sm);
+  --bs-box-shadow: var(--bb-shadow);
+  --bs-box-shadow-lg: var(--bb-shadow-lg);
+  --bs-box-shadow-inset: var(--bb-shadow-inset);
+
+  /* -------------------------------------
+     Semantic colors
+  ------------------------------------- */
+
+  --bs-primary: var(--bb-primary);
+  --bs-secondary: var(--bb-secondary);
+  --bs-success: var(--bb-success);
+  --bs-info: var(--bb-info);
+  --bs-warning: var(--bb-warning);
+  --bs-danger: var(--bb-danger);
+  --bs-light: var(--bb-light);
+  --bs-dark: var(--bb-dark);
+
+  /* -------------------------------------
+     Semantic RGB
+  ------------------------------------- */
+
+  --bs-primary-rgb: var(--bb-primary-rgb);
+  --bs-secondary-rgb: var(--bb-secondary-rgb);
+  --bs-success-rgb: var(--bb-success-rgb);
+  --bs-info-rgb: var(--bb-info-rgb);
+  --bs-warning-rgb: var(--bb-warning-rgb);
+  --bs-danger-rgb: var(--bb-danger-rgb);
+  --bs-light-rgb: var(--bb-light-rgb);
+  --bs-dark-rgb: var(--bb-dark-rgb);
+
+  /* -------------------------------------
+     Links
+  ------------------------------------- */
+
+  --bs-link-color: var(--bb-link-color);
+  --bs-link-hover-color: var(--bb-link-hover-color);
+
+  /* -------------------------------------
+     Backgrounds
+  ------------------------------------- */
+
+  --bs-secondary-bg: var(--bb-secondary-bg);
+  --bs-secondary-bg-rgb: var(--bb-secondary-bg-rgb);
+  --bs-tertiary-bg: var(--bb-tertiary-bg);
+  --bs-tertiary-bg-rgb: var(--bb-tertiary-bg-rgb);
+
+  /* -------------------------------------
+     Text
+  ------------------------------------- */
+
+  --bs-emphasis-color: var(--bb-emphasis-color);
+  --bs-secondary-color: var(--bb-secondary-color);
+  --bs-tertiary-color: var(--bb-tertiary-color);
+
+  /* -------------------------------------
+     Text RGB
+  ------------------------------------- */
+
+  --bs-secondary-color-rgb: var(--bb-secondary-color-rgb);
+  --bs-tertiary-color-rgb: var(--bb-tertiary-color-rgb);
+
+  /* -------------------------------------
+     Typography
+  ------------------------------------- */
+
+  --bs-body-font-family: var(--bb-font-sans);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: var(--bb-fw-body);
+  --bs-body-line-height: var(--bb-line-height-base);
+
+  --bs-headings-font-family: var(--bb-font-heading);
+  --bs-headings-font-weight: var(--bb-fw-title);
+  --bs-headings-line-height: var(--bb-line-height-heading);
+
+  --bs-font-monospace: var(--bb-font-mono);
+  --bs-text-muted: var(--bb-secondary-color);
+}
+
+/* =====================================
+   Bulbulustur Theme - Bootstrap Container Bridge
+   Electro theme container genişliğini Bootstrap 5 üstüne taşır.
+
+   Eski Electro theme:
+   576px  => 540px
+   768px  => 720px
+   992px  => 960px
+   1200px => 1200px
+   1480px => 1430px
+===================================== */
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.875rem;
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1480px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1430px;
+  }
+}

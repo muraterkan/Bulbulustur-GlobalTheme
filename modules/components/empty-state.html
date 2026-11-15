@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BB Empty State</title>
+
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="py-5">
+  <div class="container">
+
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="h4 mb-1">Empty State</h1>
+        <div class="text-body-secondary">bb-empty-state component test sayfası</div>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Theme switcher">
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">Default</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">inbox</span>
+              </div>
+
+              <h2 class="bb-empty-title">Kayıt bulunamadı</h2>
+
+              <p class="bb-empty-text">
+                Şu anda bu alanda gösterilecek herhangi bir kayıt bulunmuyor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">With Actions</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state bb-empty-state-primary">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">add_circle</span>
+              </div>
+
+              <h2 class="bb-empty-title">Henüz içerik eklenmedi</h2>
+
+              <p class="bb-empty-text">
+                İlk kaydı oluşturarak bu alanı kullanmaya başlayabilirsiniz.
+              </p>
+
+              <div class="bb-empty-actions">
+                <button type="button" class="btn btn-primary">
+                  İlk Kaydı Ekle
+                </button>
+
+                <button type="button" class="btn btn-outline-secondary">
+                  Daha Sonra
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">Status / Success</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state bb-empty-state-success">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">check_circle</span>
+              </div>
+
+              <h2 class="bb-empty-title">Aktif olay bulunmuyor</h2>
+
+              <p class="bb-empty-text">
+                Şu anda public olarak yayınlanmış aktif bir incident bulunmamaktadır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">Warning</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state bb-empty-state-warning">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">notifications</span>
+              </div>
+
+              <h2 class="bb-empty-title">Bildirim kanalı seçilmedi</h2>
+
+              <p class="bb-empty-text">
+                Güncellemeleri almak için en az bir bildirim kanalı seçmelisiniz.
+              </p>
+
+              <div class="bb-empty-actions">
+                <button type="button" class="btn btn-warning">
+                  Kanal Seç
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">Panel Variant</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state bb-empty-state-panel bb-empty-state-info">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">search_off</span>
+              </div>
+
+              <h2 class="bb-empty-title">Sonuç bulunamadı</h2>
+
+              <p class="bb-empty-text">
+                Filtrelerinizi değiştirerek tekrar arama yapabilirsiniz.
+              </p>
+
+              <div class="bb-empty-actions">
+                <button type="button" class="btn btn-outline-secondary">
+                  Filtreleri Temizle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <div class="bb-card">
+          <div class="bb-card-header">
+            <div class="bb-card-title">Horizontal</div>
+          </div>
+
+          <div class="bb-card-body">
+            <div class="bb-empty-state bb-empty-state-horizontal bb-empty-state-sm bb-empty-state-danger">
+              <div class="bb-empty-icon">
+                <span class="material-symbols-outlined">error</span>
+              </div>
+
+              <div>
+                <h2 class="bb-empty-title">Veri alınamadı</h2>
+
+                <p class="bb-empty-text">
+                  İlgili servis geçici olarak yanıt vermedi.
+                </p>
+
+                <div class="bb-empty-actions">
+                  <button type="button" class="btn btn-outline-danger btn-sm">
+                    Tekrar Dene
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-body-secondary small mt-4">
+      Not: Theme switcher <code>data-bs-theme</code> değerini değiştirir.
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      function setTheme(theme) {
+        root.setAttribute("data-bs-theme", theme);
+      }
+
+      document.querySelectorAll("[data-bb-theme]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setTheme(button.getAttribute("data-bb-theme"));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

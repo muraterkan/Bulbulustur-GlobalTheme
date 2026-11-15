@@ -1,0 +1,30 @@
+/* =====================================
+   Bulbulustur Theme - Motion Accessibility
+   Global reduced-motion safety layer
+   File: assets/scss/base/_motion.scss
+===================================== */
+
+/* -------------------------------------
+   Reduced motion
+   Kullanıcı işletim sistemi seviyesinde
+   "reduce motion" seçtiyse animasyonları minimuma indirir.
+------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

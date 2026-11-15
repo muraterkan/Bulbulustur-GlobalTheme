@@ -1,0 +1,248 @@
+/* =====================================
+   Bulbulustur Theme – Border Helpers
+   bb- prefix | token-driven | state aware
+   ===================================== */
+
+/* -------------------------------------
+   Base visibility helpers
+------------------------------------- */
+
+.bb-border-active:not(.active):not(:active):not(:hover):not(:focus) {
+  border-color: transparent !important;
+}
+
+.bb-border-hover:not(:hover):not(:focus):not(.active):not(:active) {
+  cursor: pointer;
+  border-color: transparent !important;
+}
+
+/* -------------------------------------
+   Default border colors
+------------------------------------- */
+
+.bb-border-default {
+  border-color: var(--bb-border-color) !important;
+}
+
+.bb-border-strong {
+  border-color: var(--bb-border-color-strong) !important;
+}
+
+.bb-border-body {
+  border-color: var(--bb-body-bg) !important;
+}
+
+.bb-border-transparent {
+  border-color: transparent !important;
+}
+
+/* -------------------------------------
+   Gray scale borders
+------------------------------------- */
+
+$bb-grays: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@each $g in $bb-grays {
+  .bb-border-gray-#{$g} {
+    border-color: var(--bb-gray-#{$g}) !important;
+  }
+
+  .bb-border-hover-gray-#{$g}:hover {
+    border-color: var(--bb-gray-#{$g}) !important;
+  }
+}
+
+/* -------------------------------------
+   Semantic borders
+------------------------------------- */
+
+$bb-semantic-colors: (
+  primary,
+  secondary,
+  success,
+  info,
+  warning,
+  danger,
+  dark,
+  light
+);
+
+@each $name in $bb-semantic-colors {
+
+  .bb-border-#{$name} {
+    border-color: var(--bb-#{$name}) !important;
+  }
+
+  .bb-border-#{$name}-clarity {
+    border-color: var(--bb-#{$name}-clarity) !important;
+  }
+
+  .bb-border-hover-#{$name}:hover {
+    border-color: var(--bb-#{$name}) !important;
+  }
+
+  .bb-border-active-#{$name}.active {
+    border-color: var(--bb-#{$name}) !important;
+  }
+
+  .bb-border-hover-#{$name}-clarity:hover {
+    border-color: var(--bb-#{$name}-clarity) !important;
+  }
+
+  .bb-border-active-#{$name}-clarity.active {
+    border-color: var(--bb-#{$name}-clarity) !important;
+  }
+}
+
+/* -------------------------------------
+   Page accent borders
+   Surface sistemine bağlı, data-bb-surface
+   değişince otomatik güncellenir
+------------------------------------- */
+
+.bb-border-accent {
+  border-color: var(--bb-page-accent) !important;
+}
+
+.bb-border-accent-clarity {
+  border-color: var(--bb-page-accent-clarity) !important;
+}
+
+.bb-border-accent-muted {
+  border-color: var(--bb-page-accent-muted) !important;
+}
+
+.bb-border-hover-accent:hover {
+  border-color: var(--bb-page-accent) !important;
+}
+
+.bb-border-active-accent.active {
+  border-color: var(--bb-page-accent) !important;
+}
+
+.bb-border-hover-accent-clarity:hover {
+  border-color: var(--bb-page-accent-clarity) !important;
+}
+
+/* -------------------------------------
+   Focus border
+------------------------------------- */
+
+.bb-border-focus:focus,
+.bb-border-focus:focus-visible {
+  border-color: var(--bb-focus-ring-color) !important;
+  outline: none;
+}
+
+/* -------------------------------------
+   Disabled border
+------------------------------------- */
+
+.bb-border-disabled,
+[disabled] .bb-border-auto,
+[aria-disabled="true"] .bb-border-auto {
+  border-color: var(--bb-border-color) !important;
+  opacity: var(--bb-disabled-opacity);
+}
+
+/* -------------------------------------
+   Border style helpers
+------------------------------------- */
+
+.bb-border-dashed {
+  border-style: dashed !important;
+  border-color: var(--bb-border-dashed-color) !important;
+}
+
+.bb-border-dotted {
+  border-style: dotted !important;
+}
+
+/* Side styles */
+.bb-border-top-dashed    { border-top-style:    dashed !important; }
+.bb-border-bottom-dashed { border-bottom-style: dashed !important; }
+.bb-border-start-dashed  { border-left-style:   dashed !important; }
+.bb-border-end-dashed    { border-right-style:  dashed !important; }
+
+.bb-border-top-dotted    { border-top-style:    dotted !important; }
+.bb-border-bottom-dotted { border-bottom-style: dotted !important; }
+.bb-border-start-dotted  { border-left-style:   dotted !important; }
+.bb-border-end-dotted    { border-right-style:  dotted !important; }
+
+/* -------------------------------------
+   Border width utilities
+------------------------------------- */
+
+.bb-border-2 { border-width: 2px !important; }
+.bb-border-3 { border-width: 3px !important; }
+
+.bb-border-top-2    { border-top-width:    2px !important; }
+.bb-border-bottom-2 { border-bottom-width: 2px !important; }
+.bb-border-start-2  { border-left-width:   2px !important; }
+.bb-border-end-2    { border-right-width:  2px !important; }
+
+.bb-border-top-3    { border-top-width:    3px !important; }
+.bb-border-bottom-3 { border-bottom-width: 3px !important; }
+.bb-border-start-3  { border-left-width:   3px !important; }
+.bb-border-end-3    { border-right-width:  3px !important; }
+
+/* -------------------------------------
+   Radius overrides
+------------------------------------- */
+
+.bb-rounded-none {
+  border-radius: 0 !important;
+}
+
+.bb-rounded-xs {
+  border-radius: var(--bb-radius-xs) !important;
+}
+
+.bb-rounded-sm {
+  border-radius: var(--bb-radius-sm) !important;
+}
+
+.bb-rounded {
+  border-radius: var(--bb-radius) !important;
+}
+
+.bb-rounded-lg {
+  border-radius: var(--bb-radius-lg) !important;
+}
+
+.bb-rounded-xl {
+  border-radius: var(--bb-radius-xl) !important;
+}
+
+.bb-rounded-2xl {
+  border-radius: var(--bb-radius-2xl) !important;
+}
+
+.bb-rounded-pill {
+  border-radius: var(--bb-radius-pill) !important;
+}
+
+.bb-rounded-circle {
+  border-radius: 50% !important;
+}
+
+/* Side radius resets */
+.bb-rounded-top-0 {
+  border-top-left-radius:  0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.bb-rounded-bottom-0 {
+  border-bottom-left-radius:  0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.bb-rounded-start-0 {
+  border-top-left-radius:    0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.bb-rounded-end-0 {
+  border-top-right-radius:    0 !important;
+  border-bottom-right-radius: 0 !important;
+}

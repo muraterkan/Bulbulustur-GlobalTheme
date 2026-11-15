@@ -1,0 +1,306 @@
+/* =====================================
+   Bulbulustur Theme - Ribbons (PURE)
+   Bootstrap 5 base class'lar korunur.
+   Token-first | Dark/Light safe
+   Root: .bb-ribbon
+   Variants: start/end, top/bottom, vertical, clip, triangle
+===================================== */
+
+.bb-ribbon {
+  /* container, usually card-header */
+  position: relative;
+  overflow: hidden;
+
+  /* -------------------------------------
+     Tokens
+  ------------------------------------- */
+
+  --bb-ribbon-gap: 0.5rem;
+
+  --bb-ribbon-label-padding-y: 0.35rem;
+  --bb-ribbon-label-padding-x: 0.75rem;
+  --bb-ribbon-label-font-size: var(--bb-fs-xs);
+  --bb-ribbon-label-font-weight: var(--bb-fw-semibold);
+  --bb-ribbon-label-letter-spacing: 0.02em;
+  --bb-ribbon-label-radius: var(--bb-radius);
+
+  --bb-ribbon-label-bg: var(--bb-primary);
+  --bb-ribbon-label-color: var(--bb-primary-inverse);
+
+  --bb-ribbon-offset-x: 1rem;
+  --bb-ribbon-offset-y: 0.65rem;
+
+  /* Clip / vertical */
+  --bb-ribbon-clip-size: 0.55rem;
+  --bb-ribbon-clip-radius: var(--bb-radius-sm);
+
+  --bb-ribbon-vertical-w: 2.25rem;
+  --bb-ribbon-vertical-h: 2.75rem;
+
+  /* Triangle */
+  --bb-ribbon-triangle-size: 2.75rem;
+  --bb-ribbon-triangle-color: currentColor;
+
+  /* Cut shadow tone
+     Fallback first, modern color-mix second.
+  */
+  --bb-ribbon-cut-bg: rgba(var(--bb-body-color-rgb), 0.12);
+  --bb-ribbon-cut-bg: color-mix(in srgb, var(--bb-body-color) 12%, transparent);
+
+  /* Inner strip */
+  --bb-ribbon-inner-opacity: 0.25;
+
+  /* Icon */
+  --bb-ribbon-icon-size: 2rem;
+  --bb-ribbon-icon-color: var(--bb-ribbon-label-color);
+  --bb-ribbon-icon-inset: 0.35rem;
+}
+
+/* -------------------------------------
+   Label
+------------------------------------- */
+
+.bb-ribbon-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+
+  padding: var(--bb-ribbon-label-padding-y) var(--bb-ribbon-label-padding-x);
+
+  color: var(--bb-ribbon-label-color);
+  background-color: var(--bb-ribbon-label-bg);
+  border-radius: var(--bb-ribbon-label-radius);
+
+  font-size: var(--bb-ribbon-label-font-size);
+  font-weight: var(--bb-ribbon-label-font-weight);
+  letter-spacing: var(--bb-ribbon-label-letter-spacing);
+  line-height: 1;
+
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Default positioning: end/top */
+
+.bb-ribbon > .bb-ribbon-label {
+  position: absolute;
+  top: var(--bb-ribbon-offset-y);
+  right: var(--bb-ribbon-offset-x);
+  z-index: 2;
+}
+
+/* -------------------------------------
+   Direction helpers
+------------------------------------- */
+
+.bb-ribbon-start > .bb-ribbon-label {
+  left: var(--bb-ribbon-offset-x);
+  right: auto;
+}
+
+.bb-ribbon-end > .bb-ribbon-label {
+  right: var(--bb-ribbon-offset-x);
+  left: auto;
+}
+
+.bb-ribbon-top > .bb-ribbon-label {
+  top: var(--bb-ribbon-offset-y);
+}
+
+.bb-ribbon-bottom > .bb-ribbon-label {
+  top: auto;
+  bottom: var(--bb-ribbon-offset-y);
+}
+
+/* -------------------------------------
+   Rounded edge helpers
+------------------------------------- */
+
+.bb-ribbon-rounded-start > .bb-ribbon-label {
+  border-top-left-radius: var(--bb-radius-pill);
+  border-bottom-left-radius: var(--bb-radius-pill);
+}
+
+.bb-ribbon-rounded-end > .bb-ribbon-label {
+  border-top-right-radius: var(--bb-radius-pill);
+  border-bottom-right-radius: var(--bb-radius-pill);
+}
+
+.bb-ribbon-rounded-top > .bb-ribbon-label {
+  border-top-left-radius: var(--bb-radius-pill);
+  border-top-right-radius: var(--bb-radius-pill);
+}
+
+.bb-ribbon-rounded-bottom > .bb-ribbon-label {
+  border-bottom-left-radius: var(--bb-radius-pill);
+  border-bottom-right-radius: var(--bb-radius-pill);
+}
+
+/* -------------------------------------
+   Vertical ribbon
+------------------------------------- */
+
+.bb-ribbon-vertical > .bb-ribbon-label {
+  width: var(--bb-ribbon-vertical-w);
+  height: var(--bb-ribbon-vertical-h);
+  padding: 0;
+
+  border-radius: calc(var(--bb-ribbon-label-radius) + 0.15rem);
+}
+
+.bb-ribbon-vertical > .bb-ribbon-label > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(-90deg);
+}
+
+/* -------------------------------------
+   Clip ribbon
+------------------------------------- */
+
+.bb-ribbon-clip > .bb-ribbon-label {
+  position: absolute;
+}
+
+.bb-ribbon-clip > .bb-ribbon-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: var(--bb-ribbon-clip-size);
+  height: var(--bb-ribbon-clip-size);
+
+  background-color: var(--bb-ribbon-cut-bg);
+  border-radius: var(--bb-ribbon-clip-radius);
+
+  z-index: -1;
+}
+
+.bb-ribbon-clip.bb-ribbon-end > .bb-ribbon-label::after,
+.bb-ribbon-clip:not(.bb-ribbon-start) > .bb-ribbon-label::after {
+  left: calc(-1 * (var(--bb-ribbon-clip-size) * 0.5));
+}
+
+.bb-ribbon-clip.bb-ribbon-start > .bb-ribbon-label::after {
+  right: calc(-1 * (var(--bb-ribbon-clip-size) * 0.5));
+  left: auto;
+}
+
+/* -------------------------------------
+   Inner strip
+------------------------------------- */
+
+.bb-ribbon-inner {
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+  opacity: var(--bb-ribbon-inner-opacity);
+  pointer-events: none;
+}
+
+/* -------------------------------------
+   Triangle ribbon
+------------------------------------- */
+
+.bb-ribbon-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+/* Positions */
+
+.bb-ribbon-top-start {
+  top: 0;
+  left: 0;
+}
+
+.bb-ribbon-top-end {
+  top: 0;
+  right: 0;
+}
+
+.bb-ribbon-bottom-start {
+  bottom: 0;
+  left: 0;
+}
+
+.bb-ribbon-bottom-end {
+  bottom: 0;
+  right: 0;
+}
+
+/* Triangle shapes */
+
+.bb-ribbon-triangle.bb-ribbon-top-start {
+  border-top: var(--bb-ribbon-triangle-size) solid var(--bb-ribbon-triangle-color);
+  border-right: var(--bb-ribbon-triangle-size) solid transparent;
+}
+
+.bb-ribbon-triangle.bb-ribbon-top-end {
+  border-top: var(--bb-ribbon-triangle-size) solid var(--bb-ribbon-triangle-color);
+  border-left: var(--bb-ribbon-triangle-size) solid transparent;
+}
+
+.bb-ribbon-triangle.bb-ribbon-bottom-start {
+  border-bottom: var(--bb-ribbon-triangle-size) solid var(--bb-ribbon-triangle-color);
+  border-right: var(--bb-ribbon-triangle-size) solid transparent;
+}
+
+.bb-ribbon-triangle.bb-ribbon-bottom-end {
+  border-bottom: var(--bb-ribbon-triangle-size) solid var(--bb-ribbon-triangle-color);
+  border-left: var(--bb-ribbon-triangle-size) solid transparent;
+}
+
+/* -------------------------------------
+   Icon on triangle
+------------------------------------- */
+
+.bb-ribbon-icon {
+  position: absolute;
+  z-index: 4;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--bb-ribbon-icon-size);
+  height: var(--bb-ribbon-icon-size);
+
+  color: var(--bb-ribbon-icon-color);
+  pointer-events: none;
+}
+
+.bb-ribbon-top-start .bb-ribbon-icon {
+  top: var(--bb-ribbon-icon-inset);
+  left: var(--bb-ribbon-icon-inset);
+}
+
+.bb-ribbon-top-end .bb-ribbon-icon {
+  top: var(--bb-ribbon-icon-inset);
+  right: var(--bb-ribbon-icon-inset);
+}
+
+.bb-ribbon-bottom-start .bb-ribbon-icon {
+  bottom: var(--bb-ribbon-icon-inset);
+  left: var(--bb-ribbon-icon-inset);
+}
+
+.bb-ribbon-bottom-end .bb-ribbon-icon {
+  bottom: var(--bb-ribbon-icon-inset);
+  right: var(--bb-ribbon-icon-inset);
+}
+
+/* -------------------------------------
+   Card header helper
+------------------------------------- */
+
+.card-header.bb-ribbon {
+  gap: var(--bb-ribbon-gap);
+}

@@ -1,0 +1,586 @@
+/* =====================================
+   Bulbulustur Theme - Icons
+   Google Material Symbols Outlined
+
+   CDN Include should be placed in layout/head:
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+   Standard:
+   - .material-symbols-outlined
+
+   Icon Decision:
+   - 2xs = 14px inline/tiny icon
+   - xs  = 16px micro icon
+   - sm  = 18px compact UI icon
+   - md  = 20px header/dropdown/button icon
+   - lg  = 24px default icon
+   - xl  = 28px card/action icon
+   - 2xl = 32px feature icon
+   - 3xl = 40px hero/section icon
+   - 4xl = 48px empty state/display icon
+
+   Accessibility:
+   - Dekoratif iconlara aria-hidden="true" eklenmeli.
+   - Anlamlı iconlarda aria-label veya sr-only span kullanılmalı.
+   - Örnek: <span class="material-symbols-outlined" aria-hidden="true">home</span>
+===================================== */
+
+:root {
+  /* -------------------------------------
+     Icon Size Scale
+  ------------------------------------- */
+
+  --bb-icon-size-2xs: 0.875rem;  /* 14px */
+  --bb-icon-size-xs: 1rem;       /* 16px */
+  --bb-icon-size-sm: 1.125rem;   /* 18px */
+  --bb-icon-size-md: 1.25rem;    /* 20px */
+  --bb-icon-size-lg: 1.5rem;     /* 24px */
+  --bb-icon-size-xl: 1.75rem;    /* 28px */
+  --bb-icon-size-2xl: 2rem;      /* 32px */
+  --bb-icon-size-3xl: 2.5rem;    /* 40px */
+  --bb-icon-size-4xl: 3rem;      /* 48px */
+
+  --bb-icon-size: var(--bb-icon-size-lg);
+
+  /* -------------------------------------
+     Material Symbols Variation Tokens
+  ------------------------------------- */
+
+  --bb-icon-fill: 0;
+  --bb-icon-weight: 450;
+  --bb-icon-grade: 0;
+  --bb-icon-optical-size: 24;
+
+  /* -------------------------------------
+     Semantic Icon Sizes
+  ------------------------------------- */
+
+  --bb-icon-size-inline: var(--bb-icon-size-sm);
+  --bb-icon-size-compact: var(--bb-icon-size-xs);
+  --bb-icon-size-ui: var(--bb-icon-size-md);
+  --bb-icon-size-action: var(--bb-icon-size-md);
+  --bb-icon-size-section: var(--bb-icon-size-lg);
+  --bb-icon-size-feature: var(--bb-icon-size-xl);
+  --bb-icon-size-hero: var(--bb-icon-size-3xl);
+  --bb-icon-size-empty: var(--bb-icon-size-4xl);
+
+  /* -------------------------------------
+     Icon Box / Circle Size Tokens
+  ------------------------------------- */
+
+  --bb-icon-box-2xs: 1.5rem;  /* 24px */
+  --bb-icon-box-xs: 1.75rem;  /* 28px */
+  --bb-icon-box-sm: 2rem;     /* 32px */
+  --bb-icon-box-md: 2.5rem;   /* 40px */
+  --bb-icon-box-lg: 3rem;     /* 48px */
+  --bb-icon-box-xl: 3.5rem;   /* 56px */
+  --bb-icon-box-2xl: 4rem;    /* 64px */
+  --bb-icon-box-3xl: 5rem;    /* 80px */
+
+  /* -------------------------------------
+     Icon Interaction Tokens
+  ------------------------------------- */
+
+  --bb-icon-transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  --bb-icon-hover-lift-y: -0.125rem;
+  --bb-icon-active-scale: 0.96;
+}
+
+/* =====================================
+   Material Symbols Base
+===================================== */
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: var(--bb-fw-normal);
+  font-style: normal;
+  font-size: var(--bb-icon-size);
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  flex-shrink: 0;
+
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-variation-settings:
+    "FILL" var(--bb-icon-fill),
+    "wght" var(--bb-icon-weight),
+    "GRAD" var(--bb-icon-grade),
+    "opsz" var(--bb-icon-optical-size);
+}
+
+/* =====================================
+   Icon Size Utilities
+===================================== */
+
+.bb-icon-2xs,
+.bb-icon-2xs.material-symbols-outlined,
+.bb-icon-2xs .material-symbols-outlined {
+  font-size: var(--bb-icon-size-xs);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-xs,
+.bb-icon-xs.material-symbols-outlined,
+.bb-icon-xs .material-symbols-outlined {
+  font-size: var(--bb-icon-size-sm);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-sm,
+.bb-icon-sm.material-symbols-outlined,
+.bb-icon-sm .material-symbols-outlined {
+  font-size: var(--bb-icon-size-sm);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-md,
+.bb-icon-md.material-symbols-outlined,
+.bb-icon-md .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-lg,
+.bb-icon-lg.material-symbols-outlined,
+.bb-icon-lg .material-symbols-outlined {
+  font-size: var(--bb-icon-size-lg);
+  --bb-icon-optical-size: 24;
+}
+
+.bb-icon-xl,
+.bb-icon-xl.material-symbols-outlined,
+.bb-icon-xl .material-symbols-outlined {
+  font-size: var(--bb-icon-size-xl);
+  --bb-icon-optical-size: 28;
+}
+
+.bb-icon-2xl,
+.bb-icon-2xl.material-symbols-outlined,
+.bb-icon-2xl .material-symbols-outlined {
+  font-size: var(--bb-icon-size-2xl);
+  --bb-icon-optical-size: 32;
+}
+
+.bb-icon-3xl,
+.bb-icon-3xl.material-symbols-outlined,
+.bb-icon-3xl .material-symbols-outlined {
+  font-size: var(--bb-icon-size-3xl);
+  --bb-icon-optical-size: 40;
+}
+
+.bb-icon-4xl,
+.bb-icon-4xl.material-symbols-outlined,
+.bb-icon-4xl .material-symbols-outlined {
+  font-size: var(--bb-icon-size-4xl);
+  --bb-icon-optical-size: 48;
+}
+
+/* =====================================
+   Semantic Icon Utilities
+===================================== */
+
+.bb-icon-inline,
+.bb-icon-inline.material-symbols-outlined,
+.bb-icon-inline .material-symbols-outlined {
+  font-size: var(--bb-icon-size-inline);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-compact,
+.bb-icon-compact.material-symbols-outlined,
+.bb-icon-compact .material-symbols-outlined {
+  font-size: var(--bb-icon-size-compact);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-ui,
+.bb-icon-ui.material-symbols-outlined,
+.bb-icon-ui .material-symbols-outlined {
+  font-size: var(--bb-icon-size-ui);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-action,
+.bb-icon-action.material-symbols-outlined,
+.bb-icon-action .material-symbols-outlined {
+  font-size: var(--bb-icon-size-action);
+  --bb-icon-optical-size: 20;
+}
+
+.bb-icon-section,
+.bb-icon-section.material-symbols-outlined,
+.bb-icon-section .material-symbols-outlined {
+  font-size: var(--bb-icon-size-section);
+  --bb-icon-optical-size: 24;
+}
+
+.bb-icon-feature,
+.bb-icon-feature.material-symbols-outlined,
+.bb-icon-feature .material-symbols-outlined {
+  font-size: var(--bb-icon-size-feature);
+  --bb-icon-optical-size: 28;
+}
+
+.bb-icon-hero,
+.bb-icon-hero.material-symbols-outlined,
+.bb-icon-hero .material-symbols-outlined {
+  font-size: var(--bb-icon-size-hero);
+  --bb-icon-optical-size: 40;
+}
+
+.bb-icon-empty,
+.bb-icon-empty.material-symbols-outlined,
+.bb-icon-empty .material-symbols-outlined {
+  font-size: var(--bb-icon-size-empty);
+  --bb-icon-optical-size: 48;
+}
+
+/* =====================================
+   Icon Weight Utilities
+===================================== */
+
+.bb-icon-w-300,
+.bb-icon-w-300.material-symbols-outlined,
+.bb-icon-w-300 .material-symbols-outlined {
+  --bb-icon-weight: 300;
+}
+
+.bb-icon-w-400,
+.bb-icon-w-400.material-symbols-outlined,
+.bb-icon-w-400 .material-symbols-outlined {
+  --bb-icon-weight: 400;
+}
+
+.bb-icon-w-450,
+.bb-icon-w-450.material-symbols-outlined,
+.bb-icon-w-450 .material-symbols-outlined {
+  --bb-icon-weight: 450;
+}
+
+.bb-icon-w-500,
+.bb-icon-w-500.material-symbols-outlined,
+.bb-icon-w-500 .material-symbols-outlined {
+  --bb-icon-weight: 500;
+}
+
+.bb-icon-w-600,
+.bb-icon-w-600.material-symbols-outlined,
+.bb-icon-w-600 .material-symbols-outlined {
+  --bb-icon-weight: 600;
+}
+
+.bb-icon-w-700,
+.bb-icon-w-700.material-symbols-outlined,
+.bb-icon-w-700 .material-symbols-outlined {
+  --bb-icon-weight: 700;
+}
+
+/* =====================================
+   Icon Fill Utilities
+===================================== */
+
+.bb-icon-fill,
+.bb-icon-fill.material-symbols-outlined,
+.bb-icon-fill .material-symbols-outlined {
+  --bb-icon-fill: 1;
+}
+
+.bb-icon-outline,
+.bb-icon-outline.material-symbols-outlined,
+.bb-icon-outline .material-symbols-outlined {
+  --bb-icon-fill: 0;
+}
+
+/* =====================================
+   Icon Grade Utilities
+===================================== */
+
+.bb-icon-grade-light,
+.bb-icon-grade-light.material-symbols-outlined,
+.bb-icon-grade-light .material-symbols-outlined {
+  --bb-icon-grade: -25;
+}
+
+.bb-icon-grade-soft,
+.bb-icon-grade-soft.material-symbols-outlined,
+.bb-icon-grade-soft .material-symbols-outlined {
+  --bb-icon-grade: 25;
+}
+
+/* =====================================
+   Icon Wrapper Helpers
+===================================== */
+
+.bb-icon-box,
+.bb-icon-circle {
+  width: var(--bb-icon-box-md);
+  height: var(--bb-icon-box-md);
+  flex: 0 0 var(--bb-icon-box-md);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-body-color);
+  background-color: var(--bb-tertiary-bg);
+}
+
+.bb-icon-box {
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-icon-circle {
+  border-radius: var(--bb-radius-pill);
+}
+
+.bb-icon-box-2xs,
+.bb-icon-circle-2xs {
+  width: var(--bb-icon-box-2xs);
+  height: var(--bb-icon-box-2xs);
+  flex-basis: var(--bb-icon-box-2xs);
+}
+
+.bb-icon-box-xs,
+.bb-icon-circle-xs {
+  width: var(--bb-icon-box-xs);
+  height: var(--bb-icon-box-xs);
+  flex-basis: var(--bb-icon-box-xs);
+}
+
+.bb-icon-box-sm,
+.bb-icon-circle-sm {
+  width: var(--bb-icon-box-sm);
+  height: var(--bb-icon-box-sm);
+  flex-basis: var(--bb-icon-box-sm);
+}
+
+.bb-icon-box-lg,
+.bb-icon-circle-lg {
+  width: var(--bb-icon-box-lg);
+  height: var(--bb-icon-box-lg);
+  flex-basis: var(--bb-icon-box-lg);
+}
+
+.bb-icon-box-xl,
+.bb-icon-circle-xl {
+  width: var(--bb-icon-box-xl);
+  height: var(--bb-icon-box-xl);
+  flex-basis: var(--bb-icon-box-xl);
+}
+
+.bb-icon-box-2xl,
+.bb-icon-circle-2xl {
+  width: var(--bb-icon-box-2xl);
+  height: var(--bb-icon-box-2xl);
+  flex-basis: var(--bb-icon-box-2xl);
+}
+
+.bb-icon-box-3xl,
+.bb-icon-circle-3xl {
+  width: var(--bb-icon-box-3xl);
+  height: var(--bb-icon-box-3xl);
+  flex-basis: var(--bb-icon-box-3xl);
+}
+
+.bb-icon-box-2xs,
+.bb-icon-box-xs,
+.bb-icon-box-sm {
+  border-radius: var(--bb-radius);
+}
+
+.bb-icon-box-lg,
+.bb-icon-box-xl,
+.bb-icon-box-2xl,
+.bb-icon-box-3xl {
+  border-radius: var(--bb-radius-xl);
+}
+
+/* =====================================
+   Icon Color Helpers
+===================================== */
+
+.bb-icon-primary {
+  color: var(--bb-primary);
+}
+
+.bb-icon-secondary {
+  color: var(--bb-secondary-color);
+}
+
+.bb-icon-muted {
+  color: var(--bb-tertiary-color);
+}
+
+.bb-icon-success {
+  color: var(--bb-success);
+}
+
+.bb-icon-warning {
+  color: var(--bb-warning);
+}
+
+.bb-icon-danger {
+  color: var(--bb-danger);
+}
+
+.bb-icon-info {
+  color: var(--bb-info);
+}
+
+.bb-icon-white {
+  color: var(--bb-white);
+}
+
+.bb-icon-black {
+  color: var(--bb-black);
+}
+
+/* =====================================
+   Icon Background Helpers
+===================================== */
+
+.bb-icon-bg-primary {
+  color: var(--bb-primary);
+  background-color: var(--bb-primary-light);
+}
+
+.bb-icon-bg-success {
+  color: var(--bb-success);
+  background-color: var(--bb-success-light);
+}
+
+.bb-icon-bg-warning {
+  color: var(--bb-warning);
+  background-color: var(--bb-warning-light);
+}
+
+.bb-icon-bg-danger {
+  color: var(--bb-danger);
+  background-color: var(--bb-danger-light);
+}
+
+.bb-icon-bg-info {
+  color: var(--bb-info);
+  background-color: var(--bb-info-light);
+}
+
+/* =====================================
+   Icon with Text Alignment
+===================================== */
+
+.bb-icon-start {
+  margin-right: var(--bb-space-2);
+}
+
+.bb-icon-end {
+  margin-left: var(--bb-space-2);
+}
+
+.bb-icon-start-sm {
+  margin-right: var(--bb-space-1);
+}
+
+.bb-icon-end-sm {
+  margin-left: var(--bb-space-1);
+}
+
+/* =====================================
+   Icon Alignment Utilities
+===================================== */
+
+.bb-icon-baseline {
+  vertical-align: baseline;
+}
+
+.bb-icon-middle {
+  vertical-align: middle;
+}
+
+.bb-icon-sub {
+  vertical-align: sub;
+}
+
+.bb-icon-text-top {
+  vertical-align: text-top;
+}
+
+.bb-icon-text-bottom {
+  vertical-align: text-bottom;
+}
+
+/* =====================================
+   Interactive Icon Utilities
+===================================== */
+
+.bb-icon-clickable,
+.bb-icon-hover,
+.bb-icon-box-hover,
+.bb-icon-circle-hover {
+  cursor: pointer;
+  transition: var(--bb-icon-transition);
+}
+
+.bb-icon-hover:hover,
+.bb-icon-box-hover:hover,
+.bb-icon-circle-hover:hover {
+  transform: translateY(var(--bb-icon-hover-lift-y));
+}
+
+.bb-icon-clickable:active {
+  transform: scale(var(--bb-icon-active-scale));
+}
+
+/* =====================================
+   Responsive Icon Sizes
+===================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --bb-icon-size-hero: var(--bb-icon-size-2xl);
+    --bb-icon-size-empty: var(--bb-icon-size-3xl);
+    --bb-icon-box-3xl: var(--bb-icon-box-2xl);
+  }
+}
+
+/* =====================================
+   Reduced Motion
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-icon-clickable,
+  .bb-icon-hover,
+  .bb-icon-box-hover,
+  .bb-icon-circle-hover {
+    transition: none;
+  }
+
+  .bb-icon-hover:hover,
+  .bb-icon-box-hover:hover,
+  .bb-icon-circle-hover:hover,
+  .bb-icon-clickable:active {
+    transform: none;
+  }
+}
+
+/* =====================================
+   Dark Mode Micro Tuning
+===================================== */
+
+[data-bs-theme="dark"] {
+  --bb-icon-weight: 400;
+  --bb-icon-grade: -25;
+}

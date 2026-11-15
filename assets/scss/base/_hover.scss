@@ -1,0 +1,117 @@
+/* =====================================
+   Bulbulustur Theme – Hover Utilities
+   Base-level hover helpers
+   ===================================== */
+
+/* -------------------------------------
+   Core hover transition
+------------------------------------- */
+.bb-hover {
+  will-change: transform, box-shadow;
+  transition: var(--bb-transition-colors),
+              box-shadow var(--bb-transition-fast),
+              transform var(--bb-transition-fast);
+}
+
+/* -------------------------------------
+   Background hover
+------------------------------------- */
+.bb-hover-bg:hover {
+  background-color: var(--bb-tertiary-bg);
+}
+
+/* -------------------------------------
+   Text hover
+------------------------------------- */
+.bb-hover-text:hover {
+  color: var(--bb-primary);
+}
+
+/* -------------------------------------
+   Border hover
+------------------------------------- */
+.bb-hover-border:hover {
+  border-color: var(--bb-border-color);
+}
+
+/* -------------------------------------
+   Elevation hover
+------------------------------------- */
+.bb-hover-elevate:hover {
+  box-shadow: var(--bb-shadow-sm);
+}
+
+/* -------------------------------------
+   Lift (micro interaction)
+------------------------------------- */
+.bb-hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------
+   Scale hover
+   Kart, ürün görseli gibi elementler için
+------------------------------------- */
+.bb-hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* -------------------------------------
+   Opacity / Dim hover
+   Icon, secondary elementler için
+------------------------------------- */
+.bb-hover-dim:hover {
+  opacity: 0.72;
+}
+
+/* -------------------------------------
+   Primary bg hover
+   Sarı CTA elementler için
+------------------------------------- */
+.bb-hover-primary:hover {
+  background-color: var(--bb-theme-primary);
+  color: var(--bb-theme-on-primary);
+}
+
+/* -------------------------------------
+   Combined (en sık kullanım)
+------------------------------------- */
+.bb-hover-soft:hover {
+  background-color: var(--bb-tertiary-bg);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+/* -------------------------------------
+   Disabled safety
+------------------------------------- */
+.is-disabled,
+[aria-disabled="true"] {
+  .bb-hover,
+  &.bb-hover {
+    pointer-events: none;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* -------------------------------------
+   Reduced motion (accessibility)
+   prefers-reduced-motion aktifse
+   tüm hover animasyonları devre dışı
+------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .bb-hover,
+  .bb-hover-lift,
+  .bb-hover-scale,
+  .bb-hover-elevate,
+  .bb-hover-soft,
+  .bb-hover-primary,
+  .bb-hover-dim,
+  .bb-hover-bg,
+  .bb-hover-text,
+  .bb-hover-border {
+    transition: none;
+    transform: none;
+    will-change: auto;
+  }
+}

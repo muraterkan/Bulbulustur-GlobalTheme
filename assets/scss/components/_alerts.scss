@@ -1,0 +1,151 @@
+/* =====================================
+   Bulbulustur Theme - Alerts (Pure)
+   Token-first, Bootstrap 5 safe
+   ===================================== */
+
+.bb-alert {
+  /* defaults (safe even if :root doesn't define) */
+  --bb-alert-gap: 0.75rem;
+  --bb-alert-padding: 1rem 1.25rem;
+  --bb-alert-radius: var(--bb-radius);
+
+  --bb-alert-bg: var(--bb-body-bg);
+  --bb-alert-border-color: transparent;
+  --bb-alert-title-color: var(--bb-emphasis-color);
+  --bb-alert-text-color: var(--bb-secondary-color);
+
+  /* micro polish (override-friendly) */
+  --bb-alert-icon-size: 1.75rem;
+  --bb-alert-icon-offset-y: 0.15rem;
+  --bb-alert-title-size: 1rem;
+  --bb-alert-title-weight: 600;
+  --bb-alert-title-margin-bottom: 0.15rem;
+  --bb-alert-text-size: 0.875rem;
+  --bb-alert-text-line-height: var(--bb-line-height-base);
+
+  /* opacity tokens (dark/light safe) */
+  --bb-alert-icon-opacity: 0.9;
+  --bb-alert-close-opacity: 0.45;
+  --bb-alert-close-opacity-hover: 0.8;
+  --bb-alert-close-padding: 0.25rem;
+
+  /* focus / a11y */
+  --bb-alert-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-alert-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-alert-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--bb-alert-gap);
+  padding: var(--bb-alert-padding);
+
+  border-radius: var(--bb-alert-radius);
+  border: var(--bb-border-width) solid var(--bb-alert-border-color);
+
+  background-color: var(--bb-alert-bg);
+  background-clip: padding-box;
+
+  position: relative;
+}
+
+/* -------------------------------------
+   Icon
+------------------------------------- */
+.bb-alert-icon {
+  font-size: var(--bb-alert-icon-size);
+  line-height: 1;
+  margin-top: var(--bb-alert-icon-offset-y);
+  opacity: var(--bb-alert-icon-opacity);
+
+  display: flex;
+  align-items: center;
+
+  color: var(--bb-alert-title-color);
+}
+
+/* -------------------------------------
+   Body
+------------------------------------- */
+.bb-alert-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-alert-title {
+  font-size: var(--bb-alert-title-size);
+  font-weight: var(--bb-alert-title-weight);
+  margin: 0 0 var(--bb-alert-title-margin-bottom) 0;
+
+  color: var(--bb-alert-title-color);
+}
+
+.bb-alert-text {
+  font-size: var(--bb-alert-text-size);
+  line-height: var(--bb-alert-text-line-height);
+
+  color: var(--bb-alert-text-color);
+}
+
+/* -------------------------------------
+   Close button
+------------------------------------- */
+.bb-alert-close {
+  margin-left: auto;
+
+  background: transparent;
+  border: 0;
+  padding: var(--bb-alert-close-padding);
+
+  opacity: var(--bb-alert-close-opacity);
+  cursor: pointer;
+
+  /* reset-ish */
+  appearance: none;
+  -webkit-appearance: none;
+
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bb-alert-close:hover {
+  opacity: var(--bb-alert-close-opacity-hover);
+}
+
+
+.bb-alert-close:disabled,
+.bb-alert.is-disabled .bb-alert-close {
+  opacity: var(--bb-disabled-opacity, 0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* =====================================
+   Variants
+   ===================================== */
+
+/* Primary */
+.bb-alert-primary {
+  --bb-alert-bg: var(--bb-primary-light);
+  --bb-alert-border-color: var(--bb-primary);
+  --bb-alert-title-color: var(--bb-primary);
+}
+
+/* Success */
+.bb-alert-success {
+  --bb-alert-bg: var(--bb-success-light);
+  --bb-alert-border-color: var(--bb-success);
+  --bb-alert-title-color: var(--bb-success);
+}
+
+/* Warning */
+.bb-alert-warning {
+  --bb-alert-bg: var(--bb-warning-light);
+  --bb-alert-border-color: var(--bb-warning);
+  --bb-alert-title-color: var(--bb-warning);
+}
+
+/* Danger */
+.bb-alert-danger {
+  --bb-alert-bg: var(--bb-danger-light);
+  --bb-alert-border-color: var(--bb-danger);
+  --bb-alert-title-color: var(--bb-danger);
+}

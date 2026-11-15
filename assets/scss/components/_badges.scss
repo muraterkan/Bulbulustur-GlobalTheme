@@ -1,0 +1,173 @@
+/* =====================================
+   Bulbulustur Theme - Badges (Pure)
+   Bootstrap 5 compatible, token-first
+   ===================================== */
+
+.badge.bb-badge {
+  /* -----------------------------------
+     Local tokens (override-friendly)
+  ----------------------------------- */
+  --bb-badge-padding-y: 0.35em;
+  --bb-badge-padding-x: 0.65em;
+
+  --bb-badge-font-size: var(--bb-fs-xs);
+  --bb-badge-font-weight: var(--bb-fw-semibold);
+  --bb-badge-line-height: 1;
+
+  --bb-badge-radius: var(--bb-radius-sm);
+
+  /* Default (dark/light safe) */
+  --bb-badge-bg: var(--bb-tertiary-bg);
+  --bb-badge-color: var(--bb-emphasis-color);
+
+  /* Outline */
+  --bb-badge-border-width: var(--bb-border-width, 1px);
+
+  /* Circle */
+  --bb-badge-circle-size: 1.75rem;
+
+  /* Focus ring (only for interactive usage) */
+  --bb-badge-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-badge-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-badge-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--bb-badge-padding-y) var(--bb-badge-padding-x);
+  font-size: var(--bb-badge-font-size);
+  font-weight: var(--bb-badge-font-weight);
+  line-height: var(--bb-badge-line-height);
+  white-space: nowrap;
+
+  border-radius: var(--bb-badge-radius);
+  background-color: var(--bb-badge-bg);
+  color: var(--bb-badge-color);
+}
+
+/* -----------------------------
+   Sizes
+----------------------------- */
+.badge.bb-badge-sm {
+  --bb-badge-font-size: var(--bb-fs-2xs);
+  --bb-badge-padding-y: 0.25em;
+  --bb-badge-padding-x: 0.5em;
+}
+
+.badge.bb-badge-lg {
+  --bb-badge-font-size: var(--bb-fs-sm);;
+  --bb-badge-padding-y: 0.45em;
+  --bb-badge-padding-x: 0.8em;
+}
+
+/* -----------------------------
+   Shapes
+----------------------------- */
+.badge.bb-badge-pill {
+  --bb-badge-radius: var(--bb-radius-pill);
+}
+
+.badge.bb-badge-circle {
+  width: var(--bb-badge-circle-size);
+  height: var(--bb-badge-circle-size);
+  padding: 0;
+  border-radius: 50%;
+  font-size: var(--bb-badge-font-size);
+}
+
+/* -----------------------------
+   Semantic Variants
+----------------------------- */
+.badge.bb-badge-primary {
+  --bb-badge-bg: var(--bb-primary);
+  --bb-badge-color: var(--bb-primary-inverse);
+}
+
+.badge.bb-badge-success {
+  --bb-badge-bg: var(--bb-success);
+  --bb-badge-color: var(--bb-success-inverse);
+}
+
+.badge.bb-badge-info {
+  --bb-badge-bg: var(--bb-info);
+  --bb-badge-color: var(--bb-info-inverse);
+}
+
+.badge.bb-badge-warning {
+  --bb-badge-bg: var(--bb-warning);
+  --bb-badge-color: var(--bb-warning-inverse);
+}
+
+.badge.bb-badge-danger {
+  --bb-badge-bg: var(--bb-danger);
+  --bb-badge-color: var(--bb-danger-inverse);
+}
+
+.badge.bb-badge-dark {
+  --bb-badge-bg: var(--bb-dark);
+  --bb-badge-color: var(--bb-dark-inverse);
+}
+
+/* -----------------------------
+   Light / Soft (Metronic feel)
+----------------------------- */
+.badge.bb-badge-light-primary {
+  --bb-badge-bg: var(--bb-primary-light);
+  --bb-badge-color: var(--bb-primary);
+}
+
+.badge.bb-badge-light-success {
+  --bb-badge-bg: var(--bb-success-light);
+  --bb-badge-color: var(--bb-success);
+}
+
+.badge.bb-badge-light-warning {
+  --bb-badge-bg: var(--bb-warning-light);
+  --bb-badge-color: var(--bb-warning);
+}
+
+.badge.bb-badge-light-danger {
+  --bb-badge-bg: var(--bb-danger-light);
+  --bb-badge-color: var(--bb-danger);
+}
+
+/* -----------------------------
+   Outline
+----------------------------- */
+.badge.bb-badge-outline {
+  --bb-badge-bg: transparent;
+
+  background-color: var(--bb-badge-bg);
+  border: var(--bb-badge-border-width) solid currentColor;
+}
+
+/* outline colors */
+.badge.bb-badge-outline.bb-badge-primary {
+  --bb-badge-color: var(--bb-primary);
+}
+
+.badge.bb-badge-outline.bb-badge-success {
+  --bb-badge-color: var(--bb-success);
+}
+
+.badge.bb-badge-outline.bb-badge-danger {
+  --bb-badge-color: var(--bb-danger);
+}
+
+/* -----------------------------
+   Interactive (optional)
+   If badge is used as <a> or <button>
+----------------------------- */
+a.badge.bb-badge,
+button.badge.bb-badge {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.badge.bb-badge[aria-disabled="true"],
+button.badge.bb-badge:disabled {
+  opacity: var(--bb-disabled-opacity, 0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}

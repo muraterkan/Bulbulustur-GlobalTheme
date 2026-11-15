@@ -1,0 +1,254 @@
+/* =====================================
+   Bulbulustur Theme - Tiny Slider (PURE)
+   CSS-only (scroll-snap) | Token-first | Dark/Light safe
+   Root: .bb-tiny-slider
+   ===================================== */
+
+.bb-tiny-slider {
+  /* ---- layout tokens ---- */
+  --bb-ts-gap: 1rem;
+  --bb-ts-radius: var(--bb-radius, var(--bb-radius));
+  --bb-ts-border-color: var(--bb-border-color);
+  --bb-ts-shadow: var(--bb-shadow-sm);
+
+  --bb-ts-track-padding-b: 0.25rem;
+
+  /* ---- motion tokens ---- */
+  --bb-ts-transition: var(--bb-transition-fast);
+  --bb-ts-scroll-behavior: smooth;
+
+  /* ---- slide surface tokens ---- */
+  --bb-ts-surface-bg: var(--bb-body-bg);
+
+  /* ---- controls tokens ---- */
+  --bb-ts-control-size: 40px;
+  --bb-ts-control-radius: var(--bb-radius-pill);
+  --bb-ts-control-bg: var(--bb-body-bg);
+  --bb-ts-control-color: var(--bb-body-color);
+  --bb-ts-control-border: var(--bb-ts-border-color);
+  --bb-ts-control-shadow: var(--bb-ts-shadow);
+  --bb-ts-controls-padding: 0.5rem;
+
+  --bb-ts-icon-size: 22px;
+
+  /* ---- nav tokens ---- */
+  --bb-ts-nav-gap: 0.5rem;
+  --bb-ts-nav-mt: 0.75rem;
+
+  --bb-ts-dot-size: 10px;
+  --bb-ts-dot-bg: var(--bb-border-color);
+  --bb-ts-dot-active-bg:var(--bb-primary);
+  --bb-ts-dot-opacity: 0.8;
+
+  /* ---- focus tokens ---- */
+  --bb-ts-focus-ring-width: 0.2rem;
+  --bb-ts-focus-ring-color: color-mix(in srgb,var(--bb-primary) 35%, transparent);
+
+  position: relative;
+}
+
+.bb-ts-viewport {
+  overflow: hidden;
+  border-radius: var(--bb-ts-radius);
+}
+
+.bb-ts-track {
+  display: flex;
+  gap: var(--bb-ts-gap);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: var(--bb-ts-scroll-behavior);
+  -webkit-overflow-scrolling: touch;
+
+  padding-bottom: var(--bb-ts-track-padding-b);
+
+  /* hide scrollbar (still scrollable) */
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+.bb-ts-track::-webkit-scrollbar {
+  display: none;
+}
+
+.bb-ts-slide {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.bb-ts-slide-inner {
+  border: 1px solid var(--bb-ts-border-color);
+  border-radius: var(--bb-ts-radius);
+  box-shadow: var(--bb-ts-shadow);
+  background: var(--bb-ts-surface-bg);
+  overflow: hidden;
+}
+
+/* Items (attribute-driven) */
+.bb-tiny-slider[data-bb-items="2"] .bb-ts-slide {
+  width: calc((100% - var(--bb-ts-gap)) / 2);
+}
+.bb-tiny-slider[data-bb-items="3"] .bb-ts-slide {
+  width: calc((100% - (var(--bb-ts-gap) * 2)) / 3);
+}
+
+/* Controls */
+.bb-ts-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  padding: var(--bb-ts-controls-padding);
+}
+
+.bb-ts-btn {
+  pointer-events: auto;
+
+  width: var(--bb-ts-control-size);
+  height: var(--bb-ts-control-size);
+
+  border-radius: var(--bb-ts-control-radius);
+  border: 1px solid var(--bb-ts-control-border);
+
+  background: var(--bb-ts-control-bg);
+  color: var(--bb-ts-control-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--bb-ts-control-shadow);
+  user-select: none;
+
+  transition: transform var(--bb-ts-transition), opacity var(--bb-ts-transition);
+}
+
+.bb-ts-btn:hover {
+  transform: scale(1.03);
+}
+
+.bb-ts-btn:active {
+  transform: scale(0.98);
+}
+
+.bb-ts-btn[disabled] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.bb-ts-btn .material-symbols-outlined {
+  font-size: var(--bb-ts-icon-size);
+  line-height: 1;
+}
+
+/* Nav dots */
+.bb-ts-nav {
+  display: flex;
+  gap: var(--bb-ts-nav-gap);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--bb-ts-nav-mt);
+}
+
+.bb-ts-dot {
+  width: var(--bb-ts-dot-size);
+  height: var(--bb-ts-dot-size);
+
+  border-radius: var(--bb-radius-pill);
+  border: 0;
+
+  background: var(--bb-ts-dot-bg);
+  opacity: var(--bb-ts-dot-opacity);
+
+  transition: transform var(--bb-ts-transition), opacity var(--bb-ts-transition), background-color var(--bb-ts-transition);
+}
+
+.bb-ts-dot:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.bb-ts-dot.is-active {
+  background: var(--bb-ts-dot-active-bg);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Caption */
+.bb-ts-caption {
+  --bb-ts-caption-py: 0.9rem;
+  --bb-ts-caption-px: 1rem;
+
+  padding: var(--bb-ts-caption-py) var(--bb-ts-caption-px);
+  border-top: 1px solid var(--bb-ts-border-color);
+}
+
+/* Thumbnails */
+.bb-ts-thumbs {
+  --bb-ts-thumb-size: 54px;
+  --bb-ts-thumb-radius: var(--bb-radius);
+  --bb-ts-thumb-border: var(--bb-border-color);
+  --bb-ts-thumb-active:var(--bb-primary);
+  --bb-ts-thumbs-gap: 0.75rem;
+
+  display: flex;
+  gap: var(--bb-ts-thumbs-gap);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bb-ts-thumb {
+  width: var(--bb-ts-thumb-size);
+  height: var(--bb-ts-thumb-size);
+
+  padding: 0;
+  border-radius: var(--bb-ts-thumb-radius);
+  border: 1px solid var(--bb-ts-thumb-border);
+
+  background: var(--bb-ts-surface-bg);
+  box-shadow: var(--bb-ts-shadow);
+
+  overflow: hidden;
+  transition: transform var(--bb-ts-transition), border-color var(--bb-ts-transition);
+}
+
+.bb-ts-thumb:hover {
+  transform: scale(1.04);
+}
+
+.bb-ts-thumb.is-active {
+  border-color: var(--bb-ts-thumb-active);
+}
+
+.bb-ts-thumb-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--bb-ts-thumb-radius) - 2px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bb-tiny-slider {
+    --bb-ts-transition: 0s;
+    --bb-ts-scroll-behavior: auto;
+  }
+
+  .bb-ts-btn,
+  .bb-ts-dot,
+  .bb-ts-thumb {
+    transition: none;
+  }
+}

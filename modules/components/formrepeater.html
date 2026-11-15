@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bulbulustur • FormRepeater</title>
+
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="p-4">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="h4 mb-1">FormRepeater</h1>
+        <div class="text-muted">Bootstrap 5 + bb- prefix + token-first (dark/light safe)</div>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Theme toggle">
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button><!--  -->
+      </div>
+    </div>
+
+    <!-- BASIC -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="bb-formrepeater" data-bb-repeater id="bb_fr_basic">
+          <div class="bb-formrepeater-header">
+            <div>
+              <h2 class="bb-formrepeater-title h5">Basic Example</h2>
+              <p class="bb-formrepeater-subtitle">Ad / Telefon alanlarını çoğalt</p>
+            </div>
+
+            <div class="bb-formrepeater-actions">
+              <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
+                <span class="material-symbols-outlined align-middle me-1">add</span>
+                Satır Ekle
+              </button>
+            </div>
+          </div>
+
+          <div class="bb-formrepeater-list" data-bb-repeater-list></div>
+
+          <!-- TEMPLATE -->
+          <template data-bb-repeater-template>
+            <div class="bb-formrepeater-item" data-bb-repeater-item>
+              <div class="bb-formrepeater-item-head">
+                <div class="bb-formrepeater-item-meta">
+                  <span class="bb-formrepeater-handle" title="Move">
+                    <span class="material-symbols-outlined">drag_indicator</span>
+                  </span>
+                  <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
+                  <h3 class="bb-formrepeater-item-title">Kişi</h3>
+                </div>
+
+                <div class="bb-formrepeater-item-actions">
+                  <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
+                    <span class="material-symbols-outlined align-middle">delete</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="bb-formrepeater-item-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" data-bb-for="Contacts___index___FullName">Name</label>
+                    <input type="text" class="form-control"
+                           data-bb-id="Contacts___index___FullName"
+                           data-bb-name="Contacts[__index__].FullName"
+                           placeholder="Enter full name" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" data-bb-for="Contacts___index___Phone">Number</label>
+                    <input type="text" class="form-control"
+                           data-bb-id="Contacts___index___Phone"
+                           data-bb-name="Contacts[__index__].Phone"
+                           placeholder="Enter contact number" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADVANCED -->
+    <div class="card">
+      <div class="card-body">
+        <div class="bb-formrepeater" data-bb-repeater id="bb_fr_advanced">
+          <div class="bb-formrepeater-header">
+            <div>
+              <h2 class="bb-formrepeater-title h5">Advanced Example</h2>
+              <p class="bb-formrepeater-subtitle">
+                Select / Date / Tags gibi “vendor” input’lar için event hook bırakırız (kopya yok).
+              </p>
+            </div>
+
+            <div class="bb-formrepeater-actions">
+              <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
+                <span class="material-symbols-outlined align-middle me-1">add</span>
+                Satır Ekle
+              </button>
+            </div>
+          </div>
+
+          <div class="bb-formrepeater-list" data-bb-repeater-list></div>
+
+          <template data-bb-repeater-template>
+            <div class="bb-formrepeater-item" data-bb-repeater-item>
+              <div class="bb-formrepeater-item-head">
+                <div class="bb-formrepeater-item-meta">
+                  <span class="bb-formrepeater-handle" title="Move">
+                    <span class="material-symbols-outlined">drag_indicator</span>
+                  </span>
+                  <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
+                  <h3 class="bb-formrepeater-item-title">Item</h3>
+                </div>
+
+                <div class="bb-formrepeater-item-actions">
+                  <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
+                    <span class="material-symbols-outlined align-middle">delete</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="bb-formrepeater-item-body">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label" data-bb-for="Advanced___index___Option">Select Options</label>
+                    <select class="form-select"
+                            data-bb-id="Advanced___index___Option"
+                            data-bb-name="Advanced[__index__].Option"
+                            data-bb-repeater-hook="select2">
+                      <option value="">Choose...</option>
+                      <option value="a">Option A</option>
+                      <option value="b">Option B</option>
+                      <option value="c">Option C</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label" data-bb-for="Advanced___index___Date">Datepicker</label>
+                    <input type="text" class="form-control"
+                           data-bb-id="Advanced___index___Date"
+                           data-bb-name="Advanced[__index__].Date"
+                           data-bb-repeater-hook="datepicker"
+                           placeholder="Pick a date" />
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label" data-bb-for="Advanced___index___Tags">Tags</label>
+                    <input type="text" class="form-control"
+                           data-bb-id="Advanced___index___Tags"
+                           data-bb-name="Advanced[__index__].Tags"
+                           data-bb-repeater-hook="tagify"
+                           placeholder="tag1, tag2, tag3" />
+                    <div class="form-text">Hook: <code>bb.repeater.added</code> event’i ile re-init yapılır.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    // Theme toggle (test convenience)
+    (() => {
+      document.querySelectorAll("[data-bb-theme]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.documentElement.setAttribute("data-bs-theme", btn.getAttribute("data-bb-theme"));
+        });
+      });
+    })();
+
+    // Bulbulustur FormRepeater (vanilla, lightweight)
+    (() => {
+      const repeaters = document.querySelectorAll("[data-bb-repeater]");
+      if (!repeaters.length) {
+        return;
+      }
+
+      const replaceIndex = (text, index) => {
+        if (!text) {
+          return text;
+        }
+        return text
+          .replaceAll("__index__", String(index))
+          .replaceAll("___index___", "_" + String(index) + "_");
+      };
+
+      const applyIndexToItem = (item, index) => {
+        const indexEl = item.querySelector("[data-bb-repeater-index]");
+        if (indexEl) {
+          indexEl.textContent = String(index + 1);
+        }
+
+        // Set attributes from templates (MVC-friendly)
+        item.querySelectorAll("[data-bb-name]").forEach((el) => {
+          const tpl = el.getAttribute("data-bb-name");
+          el.setAttribute("name", replaceIndex(tpl, index));
+        });
+
+        item.querySelectorAll("[data-bb-id]").forEach((el) => {
+          const tpl = el.getAttribute("data-bb-id");
+          el.setAttribute("id", replaceIndex(tpl, index));
+        });
+
+        item.querySelectorAll("[data-bb-for]").forEach((el) => {
+          const tpl = el.getAttribute("data-bb-for");
+          el.setAttribute("for", replaceIndex(tpl, index));
+        });
+      };
+
+      const renumber = (listEl) => {
+        const items = listEl.querySelectorAll("[data-bb-repeater-item]");
+        items.forEach((item, i) => {
+          applyIndexToItem(item, i);
+        });
+      };
+
+      const dispatchAdded = (repeaterEl, itemEl) => {
+        const ev = new CustomEvent("bb.repeater.added", {
+          bubbles: true,
+          detail: {
+            repeater: repeaterEl,
+            item: itemEl
+          }
+        });
+        repeaterEl.dispatchEvent(ev);
+      };
+
+      const initRepeater = (repeaterEl) => {
+        const listEl = repeaterEl.querySelector("[data-bb-repeater-list]");
+        const tplEl = repeaterEl.querySelector("template[data-bb-repeater-template]");
+        const createBtn = repeaterEl.querySelector("[data-bb-repeater-create]");
+
+        if (!listEl || !tplEl || !createBtn) {
+          return;
+        }
+
+        const createItem = () => {
+          const fragment = tplEl.content.cloneNode(true);
+          const item = fragment.querySelector("[data-bb-repeater-item]");
+          if (!item) {
+            return;
+          }
+
+          listEl.appendChild(fragment);
+
+          const itemsNow = listEl.querySelectorAll("[data-bb-repeater-item]");
+          const newItem = itemsNow[itemsNow.length - 1];
+
+          newItem.classList.add("bb-is-entering");
+          window.setTimeout(() => {
+            newItem.classList.remove("bb-is-entering");
+          }, 200);
+
+          // Wire delete
+          newItem.querySelectorAll("[data-bb-repeater-delete]").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              newItem.remove();
+              renumber(listEl);
+            });
+          });
+
+          renumber(listEl);
+          dispatchAdded(repeaterEl, newItem);
+        };
+
+        createBtn.addEventListener("click", () => {
+          createItem();
+        });
+
+        // Default: start with 1 row
+        createItem();
+      };
+
+      repeaters.forEach((repeater) => {
+        initRepeater(repeater);
+      });
+
+      // Example hook: vendor re-init simulation
+      document.addEventListener("bb.repeater.added", (e) => {
+        // burada istersen select2/flatpickr/tagify init edersin:
+        // e.detail.item.querySelectorAll('[data-bb-repeater-hook="select2"]')...
+        // Şimdilik sadece hook hazır.
+      });
+    })();
+  </script>
+</body>
+</html>

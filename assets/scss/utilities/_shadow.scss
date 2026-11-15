@@ -1,0 +1,188 @@
+/* =====================================
+   Bulbulustur Theme – Shadow Helpers
+   bb- prefix | token-driven | dark/light safe
+   ===================================== */
+
+/* -------------------------------------
+   Base shadows
+------------------------------------- */
+
+.bb-shadow-none {
+  box-shadow: none !important;
+}
+
+.bb-shadow-xs {
+  box-shadow: var(--bb-shadow-xs) !important;
+}
+
+.bb-shadow-sm {
+  box-shadow: var(--bb-shadow-sm) !important;
+}
+
+.bb-shadow {
+  box-shadow: var(--bb-shadow) !important;
+}
+
+.bb-shadow-lg {
+  box-shadow: var(--bb-shadow-lg) !important;
+}
+
+.bb-shadow-inset {
+  box-shadow: var(--bb-shadow-inset) !important;
+}
+
+/* -------------------------------------
+   Hover shadows
+   Transition ile yumuşak geçiş
+------------------------------------- */
+
+.bb-shadow-hover-none {
+  transition: box-shadow var(--bb-transition-normal);
+
+  &:hover { box-shadow: none !important; }
+}
+
+.bb-shadow-hover-xs {
+  transition: box-shadow var(--bb-transition-normal);
+
+  &:hover { box-shadow: var(--bb-shadow-xs) !important; }
+}
+
+.bb-shadow-hover-sm {
+  transition: box-shadow var(--bb-transition-normal);
+
+  &:hover { box-shadow: var(--bb-shadow-sm) !important; }
+}
+
+.bb-shadow-hover {
+  transition: box-shadow var(--bb-transition-normal);
+
+  &:hover { box-shadow: var(--bb-shadow) !important; }
+}
+
+.bb-shadow-hover-lg {
+  transition: box-shadow var(--bb-transition-normal);
+
+  &:hover { box-shadow: var(--bb-shadow-lg) !important; }
+}
+
+/* -------------------------------------
+   Lift — shadow + transform birlikte
+   Kart hover'ları için en sık kullanım
+------------------------------------- */
+
+.bb-shadow-lift {
+  transition:
+    box-shadow var(--bb-transition-normal),
+    transform  var(--bb-transition-normal);
+
+  &:hover {
+    box-shadow: var(--bb-shadow) !important;
+    transform:  translateY(-2px);
+  }
+}
+
+.bb-shadow-lift-sm {
+  transition:
+    box-shadow var(--bb-transition-normal),
+    transform  var(--bb-transition-normal);
+
+  &:hover {
+    box-shadow: var(--bb-shadow-sm) !important;
+    transform:  translateY(-1px);
+  }
+}
+
+.bb-shadow-lift-lg {
+  transition:
+    box-shadow var(--bb-transition-normal),
+    transform  var(--bb-transition-normal);
+
+  &:hover {
+    box-shadow: var(--bb-shadow-lg) !important;
+    transform:  translateY(-3px);
+  }
+}
+
+/* -------------------------------------
+   Active shadows
+------------------------------------- */
+
+.bb-shadow-active-none.active  { box-shadow: none !important; }
+.bb-shadow-active-xs.active    { box-shadow: var(--bb-shadow-xs) !important; }
+.bb-shadow-active-sm.active    { box-shadow: var(--bb-shadow-sm) !important; }
+.bb-shadow-active.active       { box-shadow: var(--bb-shadow) !important; }
+.bb-shadow-active-lg.active    { box-shadow: var(--bb-shadow-lg) !important; }
+
+/* -------------------------------------
+   Focus ring shadows
+   Border yerine box-shadow ile focus
+------------------------------------- */
+
+.bb-shadow-focus:focus,
+.bb-shadow-focus:focus-visible {
+  box-shadow: 0 0 0 var(--bb-focus-ring-width)
+    rgba(var(--bb-primary-rgb), var(--bb-focus-ring-opacity)) !important;
+  outline: none;
+}
+
+.bb-shadow-focus-sm:focus,
+.bb-shadow-focus-sm:focus-visible {
+  box-shadow: 0 0 0 0.15rem
+    rgba(var(--bb-primary-rgb), var(--bb-focus-ring-opacity)) !important;
+  outline: none;
+}
+
+/* -------------------------------------
+   Semantic colored shadows
+   Alert, badge, button vurgusu için
+------------------------------------- */
+
+$bb-shadow-colors: (
+  primary: var(--bb-primary-rgb),
+  success: var(--bb-success-rgb),
+  info:    var(--bb-info-rgb),
+  warning: var(--bb-warning-rgb),
+  danger:  var(--bb-danger-rgb)
+);
+
+@each $name, $rgb in $bb-shadow-colors {
+  .bb-shadow-#{$name} {
+    box-shadow: 0 0.25rem 1rem rgba(#{$rgb}, 0.28) !important;
+  }
+
+  .bb-shadow-hover-#{$name} {
+    transition: box-shadow var(--bb-transition-normal);
+
+    &:hover {
+      box-shadow: 0 0.25rem 1rem rgba(#{$rgb}, 0.28) !important;
+    }
+  }
+}
+
+/* -------------------------------------
+   Reduced motion
+------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-shadow-hover-none,
+  .bb-shadow-hover-xs,
+  .bb-shadow-hover-sm,
+  .bb-shadow-hover,
+  .bb-shadow-hover-lg,
+  .bb-shadow-lift,
+  .bb-shadow-lift-sm,
+  .bb-shadow-lift-lg {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  @each $name, $rgb in $bb-shadow-colors {
+    .bb-shadow-hover-#{$name} {
+      transition: none;
+    }
+  }
+}

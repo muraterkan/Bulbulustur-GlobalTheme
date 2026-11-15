@@ -1,0 +1,229 @@
+/* =====================================
+   Bulbulustur Theme - Utilities (bb-)
+   Mechanical utilities only (layout/size/flow)
+   Works with CDN Bootstrap too
+   ===================================== */
+
+@use "sass:map";
+
+/* Breakpoints (Bootstrap 5 defaults) */
+$bb-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin bb-up($bp) {
+  @media (min-width: map.get($bb-breakpoints, $bp)) {
+    @content;
+  }
+}
+
+/* -------------------------------------
+   Cursor
+------------------------------------- */
+$bb-cursors: (help, wait, crosshair, not-allowed, zoom-in, grab, pointer);
+
+@each $c in $bb-cursors {
+  .bb-cursor-#{$c} {
+    cursor: #{$c} !important;
+  }
+}
+
+/* -------------------------------------
+   Position (base + responsive)
+------------------------------------- */
+$bb-positions: (static, relative, absolute, fixed, sticky);
+
+@each $p in $bb-positions {
+  .bb-position-#{$p} {
+    position: #{$p} !important;
+  }
+
+  @each $bp, $min in $bb-breakpoints {
+    @include bb-up($bp) {
+      .bb-position-#{$bp}-#{$p} {
+        position: #{$p} !important;
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+   Overflow (base + responsive)
+------------------------------------- */
+$bb-overflows: (auto, hidden, visible, scroll);
+
+@each $o in $bb-overflows {
+  .bb-overflow-#{$o} {
+    overflow: #{$o} !important;
+  }
+
+  @each $bp, $min in $bb-breakpoints {
+    @include bb-up($bp) {
+      .bb-overflow-#{$bp}-#{$o} {
+        overflow: #{$o} !important;
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+   Sizing (limited scale)
+   - Percent sizes: responsive variants ON
+   - Px sizes: responsive variants OFF (CSS şişmesin)
+------------------------------------- */
+$bb-sizes-percent: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+);
+
+$bb-sizes-px: (
+  16px: 16px,
+  20px: 20px,
+  24px: 24px,
+  28px: 28px,
+  32px: 32px,
+  40px: 40px,
+  48px: 48px,
+  56px: 56px,
+  64px: 64px,
+  80px: 80px,
+  96px: 96px,
+  120px: 120px,
+  150px: 150px,
+  200px: 200px,
+  250px: 250px,
+  300px: 300px,
+  400px: 400px,
+  500px: 500px
+);
+
+/* Percent (responsive) */
+@each $k, $v in $bb-sizes-percent {
+  .bb-w-#{$k} { width: #{$v} !important; }
+  .bb-h-#{$k} { height: #{$v} !important; }
+
+  .bb-mw-#{$k} { max-width: #{$v} !important; }
+  .bb-mh-#{$k} { max-height: #{$v} !important; }
+
+  .bb-min-w-#{$k} { min-width: #{$v} !important; }
+  .bb-min-h-#{$k} { min-height: #{$v} !important; }
+
+  @each $bp, $min in $bb-breakpoints {
+    @include bb-up($bp) {
+      .bb-w-#{$bp}-#{$k} { width: #{$v} !important; }
+      .bb-h-#{$bp}-#{$k} { height: #{$v} !important; }
+
+      .bb-mw-#{$bp}-#{$k} { max-width: #{$v} !important; }
+      .bb-mh-#{$bp}-#{$k} { max-height: #{$v} !important; }
+
+      .bb-min-w-#{$bp}-#{$k} { min-width: #{$v} !important; }
+      .bb-min-h-#{$bp}-#{$k} { min-height: #{$v} !important; }
+    }
+  }
+}
+
+/* Px (non-responsive) */
+@each $k, $v in $bb-sizes-px {
+  .bb-w-#{$k} { width: #{$v} !important; }
+  .bb-h-#{$k} { height: #{$v} !important; }
+
+  .bb-mw-#{$k} { max-width: #{$v} !important; }
+  .bb-mh-#{$k} { max-height: #{$v} !important; }
+
+  .bb-min-w-#{$k} { min-width: #{$v} !important; }
+  .bb-min-h-#{$k} { min-height: #{$v} !important; }
+}
+
+/* -------------------------------------
+   Z-index (small, useful)
+------------------------------------- */
+$bb-zindex: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  10: 10,
+  50: 50,
+  100: 100,
+  999: 999
+);
+
+@each $k, $v in $bb-zindex {
+  .bb-zindex-#{$k} {
+    z-index: #{$v} !important;
+  }
+}
+
+/* -------------------------------------
+   Border width (sides)
+   Not: color/style/state -> _border.scss
+------------------------------------- */
+$bb-border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+@each $k, $v in $bb-border-widths {
+  .bb-border-top-#{$k}    { border-top-width: #{$v} !important; }
+  .bb-border-bottom-#{$k} { border-bottom-width: #{$v} !important; }
+  .bb-border-start-#{$k}  { border-left-width: #{$v} !important; }
+  .bb-border-end-#{$k}    { border-right-width: #{$v} !important; }
+}
+
+/* -------------------------------------
+   Line-height
+------------------------------------- */
+.bb-lh-0    { line-height: 0 !important; }
+.bb-lh-1    { line-height: 1 !important; }
+.bb-lh-sm   { line-height: 1.25 !important; }
+.bb-lh-base { line-height: 1.5 !important; }
+.bb-lh-lg   { line-height: 1.75 !important; }
+.bb-lh-xl   { line-height: 2 !important; }
+.bb-lh-xxl  { line-height: 2.25 !important; }
+
+/* -------------------------------------
+   Letter-spacing
+------------------------------------- */
+$bb-letter-spacing: (
+  1: 0.10rem,
+  2: 0.115rem,
+  3: 0.125rem,
+  4: 0.25rem,
+  n1: -0.10rem,
+  n2: -0.115rem,
+  n3: -0.125rem
+);
+
+@each $k, $v in $bb-letter-spacing {
+  .bb-ls-#{$k} {
+    letter-spacing: #{$v} !important;
+  }
+}
+
+/* -------------------------------------
+   Rounded (token-driven)
+------------------------------------- */
+.bb-rounded         { border-radius: var(--bb-radius) !important; }
+.bb-rounded-0       { border-radius: 0 !important; }
+.bb-rounded-sm      { border-radius: var(--bb-radius-sm) !important; }
+.bb-rounded-lg      { border-radius: var(--bb-radius-lg) !important; }
+.bb-rounded-xl      { border-radius: var(--bb-radius-xl) !important; }
+.bb-rounded-2xl     { border-radius: var(--bb-radius-2xl) !important; }
+.bb-rounded-pill    { border-radius: var(--bb-radius-pill) !important; }
+.bb-rounded-circle  { border-radius: 50% !important; }
+
+.bb-drawer-lock {
+  overflow: hidden;
+}

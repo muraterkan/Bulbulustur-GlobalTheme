@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur - Collapse</title>
+
+      <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="p-4">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="h3 mb-1">Collapse</h1>
+        <div class="text-muted">Bootstrap 5 collapse + bb- skin</div>
+      </div>
+
+      <!-- theme switch test (istersen) -->
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-light" type="button" onclick="document.documentElement.setAttribute('data-bs-theme','light')">Light</button>
+        <button class="btn btn-sm btn-dark" type="button" onclick="document.documentElement.setAttribute('data-bs-theme','dark')">Dark</button>
+      </div>
+    </div>
+
+    <!-- BASIC -->
+    <div class="bb-collapse bb-collapse-bordered mb-4">
+      <button class="bb-collapse-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#bbCollapseBasic"
+              aria-expanded="false"
+              aria-controls="bbCollapseBasic">
+        <span class="bb-collapse-title">
+          <span class="bb-collapse-heading">Basic Collapse</span>
+          <span class="bb-collapse-subtitle">Başlık + subtitle + icon rotate</span>
+        </span>
+
+        <span class="bb-collapse-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
+      </button>
+
+      <div id="bbCollapseBasic" class="collapse">
+        <div class="bb-collapse-body">
+          <p class="mb-2">
+            Bu içerik Bootstrap 5’in native collapse’ı ile açılıp kapanır.
+            Biz sadece bb- tarafında token’lı görünüm veriyoruz.
+          </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-sm btn-primary" type="button">Action</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button">Secondary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DASHED -->
+    <div class="bb-collapse bb-collapse-dashed mb-4">
+      <button class="bb-collapse-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#bbCollapseDashed"
+              aria-expanded="true"
+              aria-controls="bbCollapseDashed">
+        <span class="bb-collapse-title">
+          <span class="bb-collapse-heading">Dashed Variant</span>
+          <span class="bb-collapse-subtitle">Border dashed + token-safe</span>
+        </span>
+
+        <span class="bb-collapse-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
+      </button>
+
+      <div id="bbCollapseDashed" class="collapse show">
+        <div class="bb-collapse-body">
+          <div class="alert alert-info mb-0">
+            Bu örnek default açık (show).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLUSH -->
+    <div class="mb-4">
+      <div class="bb-collapse bb-collapse-flush">
+        <button class="bb-collapse-toggle px-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#bbCollapseFlush"
+                aria-expanded="false"
+                aria-controls="bbCollapseFlush">
+          <span class="bb-collapse-title">
+            <span class="bb-collapse-heading">Flush</span>
+            <span class="bb-collapse-subtitle">Background/border yok; layout içinde kullan</span>
+          </span>
+
+          <span class="bb-collapse-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
+        </button>
+
+        <div id="bbCollapseFlush" class="collapse">
+          <div class="bb-collapse-body px-0">
+            <div class="text-muted">
+              Flush mod: özellikle list, toolbar, card-body içinde “satır gibi” collapse için.
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-3" />
+    </div>
+
+    <!-- GROUP -->
+    <div class="bb-collapse-group">
+      <div class="bb-collapse bb-collapse-bordered">
+        <button class="bb-collapse-toggle"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#bbCollapseG1"
+                aria-expanded="false"
+                aria-controls="bbCollapseG1">
+          <span class="bb-collapse-title">
+            <span class="bb-collapse-heading">Group Item #1</span>
+            <span class="bb-collapse-subtitle">Accordion hissi (ama bootstrap accordion şart değil)</span>
+          </span>
+          <span class="bb-collapse-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
+        </button>
+        <div id="bbCollapseG1" class="collapse">
+          <div class="bb-collapse-body">
+            İçerik 1
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-collapse bb-collapse-bordered">
+        <button class="bb-collapse-toggle"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#bbCollapseG2"
+                aria-expanded="false"
+                aria-controls="bbCollapseG2">
+          <span class="bb-collapse-title">
+            <span class="bb-collapse-heading">Group Item #2</span>
+            <span class="bb-collapse-subtitle">Aynı component, farklı content</span>
+          </span>
+          <span class="bb-collapse-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
+        </button>
+        <div id="bbCollapseG2" class="collapse">
+          <div class="bb-collapse-body">
+            İçerik 2
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

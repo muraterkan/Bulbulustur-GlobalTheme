@@ -1,0 +1,245 @@
+/* =====================================
+   Bulbulustur Theme – Background Helpers
+   bb- prefix | token-driven | dark/light safe
+   ===================================== */
+
+/* -------------------------------------
+   Base surfaces
+------------------------------------- */
+
+.bb-bg-body {
+  background-color: var(--bb-body-bg) !important;
+}
+
+.bb-bg-surface {
+  background-color: var(--bb-surface-bg) !important;
+}
+
+.bb-bg-surface-soft {
+  background-color: var(--bb-surface-soft) !important;
+}
+
+.bb-bg-surface-muted {
+  background-color: var(--bb-surface-muted) !important;
+}
+
+.bb-bg-surface-elevated {
+  background-color: var(--bb-surface-elevated) !important;
+}
+
+/* Numbered aliases (geriye dönük uyumluluk) */
+.bb-bg-surface-1 { background-color: var(--bb-body-bg)      !important; }
+.bb-bg-surface-2 { background-color: var(--bb-tertiary-bg)  !important; }
+.bb-bg-surface-3 { background-color: var(--bb-secondary-bg) !important; }
+
+/* -------------------------------------
+   Neutral helpers
+------------------------------------- */
+
+.bb-bg-white {
+  background-color: var(--bb-surface-elevated) !important;
+}
+
+.bb-bg-black {
+  background-color: var(--bb-black) !important;
+}
+
+.bb-bg-transparent {
+  background-color: transparent !important;
+}
+
+/* -------------------------------------
+   Page accent backgrounds
+   Surface sistemine bağlı, data-bb-surface
+   değişince otomatik güncellenir
+------------------------------------- */
+
+.bb-bg-accent {
+  background-color: var(--bb-page-accent) !important;
+}
+
+.bb-bg-accent-soft {
+  background-color: var(--bb-page-accent-soft) !important;
+}
+
+.bb-bg-accent-muted {
+  background-color: var(--bb-page-accent-muted) !important;
+}
+
+.bb-bg-accent-clarity {
+  background-color: var(--bb-page-accent-clarity) !important;
+}
+
+.bb-bg-hover-accent:hover {
+  background-color: var(--bb-page-accent) !important;
+}
+
+.bb-bg-hover-accent-soft:hover {
+  background-color: var(--bb-page-accent-soft) !important;
+}
+
+.bb-bg-active-accent.active {
+  background-color: var(--bb-page-accent) !important;
+}
+
+.bb-bg-state-accent {
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    background-color: var(--bb-page-accent-soft) !important;
+  }
+}
+
+/* -------------------------------------
+   Semantic backgrounds
+------------------------------------- */
+
+$bb-semantic-colors: (
+  primary,
+  secondary,
+  success,
+  info,
+  warning,
+  danger,
+  dark,
+  light
+);
+
+@each $name in $bb-semantic-colors {
+
+  /* Solid */
+  .bb-bg-#{$name} {
+    background-color: var(--bb-#{$name}) !important;
+  }
+
+  /* Soft / light */
+  .bb-bg-#{$name}-soft {
+    background-color: var(--bb-#{$name}-light) !important;
+  }
+
+  /* Clarity / subtle */
+  .bb-bg-#{$name}-clarity {
+    background-color: var(--bb-#{$name}-clarity) !important;
+  }
+
+  /* Hover solid */
+  .bb-bg-hover-#{$name}:hover {
+    background-color: var(--bb-#{$name}) !important;
+  }
+
+  /* Active solid */
+  .bb-bg-active-#{$name}.active {
+    background-color: var(--bb-#{$name}) !important;
+  }
+
+  /* Hover + active birlikte */
+  .bb-bg-state-#{$name} {
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background-color: var(--bb-#{$name}) !important;
+    }
+  }
+
+  /* Soft states */
+  .bb-bg-hover-#{$name}-soft:hover {
+    background-color: var(--bb-#{$name}-light) !important;
+  }
+
+  .bb-bg-state-#{$name}-soft {
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background-color: var(--bb-#{$name}-light) !important;
+    }
+  }
+
+  /* Clarity states */
+  .bb-bg-hover-#{$name}-clarity:hover {
+    background-color: var(--bb-#{$name}-clarity) !important;
+  }
+
+  .bb-bg-state-#{$name}-clarity {
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background-color: var(--bb-#{$name}-clarity) !important;
+    }
+  }
+}
+
+/* -------------------------------------
+   Gray scale helpers
+------------------------------------- */
+
+$bb-grays: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@each $g in $bb-grays {
+  .bb-bg-gray-#{$g} {
+    background-color: var(--bb-gray-#{$g}) !important;
+  }
+
+  .bb-bg-hover-gray-#{$g}:hover {
+    background-color: var(--bb-gray-#{$g}) !important;
+  }
+}
+
+/* -------------------------------------
+   Navy helpers
+   Header/footer/dark shell için
+------------------------------------- */
+
+.bb-bg-navy {
+  background-color: var(--bb-brand-navy) !important;
+}
+
+.bb-bg-navy-soft {
+  background-color: var(--bb-brand-navy-soft) !important;
+}
+
+/* -------------------------------------
+   Ecosystem shell helpers
+   Header ve footer token'larına bağlı
+------------------------------------- */
+
+.bb-bg-header {
+  background-color: var(--bb-header-bg) !important;
+}
+
+.bb-bg-footer {
+  background-color: var(--bb-footer-bg) !important;
+}
+
+/* -------------------------------------
+   Background image helpers
+------------------------------------- */
+
+.bb-bgi-no-repeat { background-repeat:   no-repeat; }
+.bb-bgi-repeat    { background-repeat:   repeat; }
+.bb-bgi-repeat-x  { background-repeat:   repeat-x; }
+.bb-bgi-repeat-y  { background-repeat:   repeat-y; }
+
+.bb-bgi-cover     { background-size:     cover; }
+.bb-bgi-contain   { background-size:     contain; }
+.bb-bgi-auto      { background-size:     auto; }
+.bb-bgi-full      { background-size:     100% 100%; }
+
+.bb-bgi-center    { background-position: center; }
+.bb-bgi-top       { background-position: top; }
+.bb-bgi-bottom    { background-position: bottom; }
+.bb-bgi-left      { background-position: left; }
+.bb-bgi-right     { background-position: right; }
+.bb-bgi-top-left  { background-position: top left; }
+.bb-bgi-top-right { background-position: top right; }
+
+/* -------------------------------------
+   Background attachment
+------------------------------------- */
+
+.bb-bgi-fixed  { background-attachment: fixed; }
+.bb-bgi-scroll { background-attachment: scroll; }
+.bb-bgi-local  { background-attachment: local; }

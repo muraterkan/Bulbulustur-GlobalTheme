@@ -1,0 +1,171 @@
+/* =====================================
+   Bulbulustur Theme - Modal (PURE)
+   Metronic-inspired | Bootstrap 5 compatible
+   Token-first | Dark/Light safe
+   Root: .bb-modal
+   ===================================== */
+
+.bb-modal {
+  /* -------------------------------------
+     Tokens (override-friendly)
+  -------------------------------------- */
+
+  /* Core */
+  --bb-modal-radius: var(--bb-radius-lg, 0.85rem);
+  --bb-modal-bg: var(--bb-body-bg);
+  --bb-modal-border-color: var(--bb-border-color);
+  --bb-modal-border-width: var(--bb-border-width, 1px);
+  --bb-modal-shadow: var(--bb-shadow-lg, var(--bs-box-shadow-lg, none));
+
+  /* Sections bg (optional) */
+  --bb-modal-header-bg: transparent;
+  --bb-modal-footer-bg: transparent;
+
+  /* Typography */
+  --bb-modal-title-color: var(--bb-emphasis-color, var(--bb-emphasis-color));
+  --bb-modal-title-size: 1rem;
+  --bb-modal-title-weight: 600;
+
+  /* Spacing */
+  --bb-modal-padding-x: 1.25rem;
+  --bb-modal-header-padding-y: 1rem;
+  --bb-modal-body-padding-y: 1.5rem;
+  --bb-modal-footer-padding-y: 1rem;
+
+  /* Close button */
+  --bb-modal-close-size: 34px;
+  --bb-modal-close-radius: var(--bb-radius);
+  --bb-modal-close-color: var(--bs-secondary-color, var(--bb-body-color));
+  --bb-modal-close-hover-bg: var(--bb-tertiary-bg);
+  --bb-modal-close-hover-color: var(--bb-body-color);
+
+  /* Focus ring */
+  --bb-modal-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary)25%, transparent));
+
+  /* Sizes */
+  --bb-modal-max-w-sm: 420px;
+  --bb-modal-max-w-lg: 900px;
+  --bb-modal-max-w-xl: 1140px;
+
+  /* Scroll */
+  --bb-modal-scroll-max-h: calc(100vh - 220px);
+
+  /* Layout */
+  border-radius: var(--bb-modal-radius);
+  border: var(--bb-modal-border-width) solid var(--bb-modal-border-color);
+  background-color: var(--bb-modal-bg);
+  box-shadow: var(--bb-modal-shadow);
+}
+
+/* ----------------------------------------
+   Header
+----------------------------------------- */
+.bb-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--bb-modal-header-padding-y) var(--bb-modal-padding-x);
+  border-bottom: var(--bb-modal-border-width) solid var(--bb-modal-border-color);
+  background-color: var(--bb-modal-header-bg);
+}
+
+.bb-modal-title {
+  margin: 0;
+  font-size: var(--bb-modal-title-size);
+  font-weight: var(--bb-modal-title-weight);
+  color: var(--bb-modal-title-color);
+}
+
+.bb-modal-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Optional close button (pure, no Bootstrap dependency) */
+.bb-modal-close {
+  width: var(--bb-modal-close-size);
+  height: var(--bb-modal-close-size);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+  border-radius: var(--bb-modal-close-radius);
+
+  color: var(--bb-modal-close-color);
+  cursor: pointer;
+
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.bb-modal-close:hover {
+  background-color: var(--bb-modal-close-hover-bg);
+  color: var(--bb-modal-close-hover-color);
+}
+
+/* ----------------------------------------
+   Body
+----------------------------------------- */
+.bb-modal-body {
+  padding: var(--bb-modal-body-padding-y) var(--bb-modal-padding-x);
+}
+
+/*
+  KURAL:
+  Modal body spacing yapar.
+  İçerideki card / form kendi spacing’ini yönetir.
+*/
+
+/* ----------------------------------------
+   Footer
+----------------------------------------- */
+.bb-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: var(--bb-modal-footer-padding-y) var(--bb-modal-padding-x);
+  border-top: var(--bb-modal-border-width) solid var(--bb-modal-border-color);
+  background-color: var(--bb-modal-footer-bg);
+}
+
+/* ----------------------------------------
+   Size Variants (Optional)
+   Not: max-width hard-coded ama token’lı, override edilebilir
+----------------------------------------- */
+.bb-modal-sm { max-width: var(--bb-modal-max-w-sm); }
+.bb-modal-lg { max-width: var(--bb-modal-max-w-lg); }
+.bb-modal-xl { max-width: var(--bb-modal-max-w-xl); }
+
+/* ----------------------------------------
+   State Variants (Optional)
+----------------------------------------- */
+.bb-modal-danger { --bb-modal-title-color: var(--bb-danger, var(--bb-danger)); }
+.bb-modal-info   { --bb-modal-title-color: var(--bb-info, var(--bb-info)); }
+.bb-modal-success{ --bb-modal-title-color: var(--bb-success, var(--bb-success)); }
+.bb-modal-warning{ --bb-modal-title-color: var(--bb-warning, var(--bb-warning)); }
+
+/* ----------------------------------------
+   Scroll Variant
+----------------------------------------- */
+.bb-modal-scroll {
+  .bb-modal-body {
+    max-height: var(--bb-modal-scroll-max-h);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+/* ----------------------------------------
+   Reduced motion
+----------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .bb-modal-close {
+    transition: none;
+  }
+}

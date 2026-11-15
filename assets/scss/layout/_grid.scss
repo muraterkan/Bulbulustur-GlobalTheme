@@ -1,0 +1,38 @@
+/* =====================================
+   Grid System – Bulbulustur Theme
+   Bootstrap-safe
+   ===================================== */
+
+:root {
+  --bb-container-max-width: 1460px;
+  --bb-gutter-x: 1.5rem;
+  --bb-gutter-y: 1.5rem;
+}
+
+/* BB Container (Bootstrap container'ı KIRMAZ) */
+.bb-container {
+  width: 100%;
+  max-width: var(--bb-container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--bb-gutter-x);
+  padding-right: var(--bb-gutter-x);
+}
+
+/* BB Row (isteğe bağlı, bootstrap'a alternatif) */
+.bb-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bb-gutter-y));
+  margin-left: calc(-0.5 * var(--bb-gutter-x));
+  margin-right: calc(-0.5 * var(--bb-gutter-x));
+}
+
+/* BB Column */
+.bb-col {
+  flex: 1 0 0%;
+  max-width: 100%;
+  padding-left: calc(0.5 * var(--bb-gutter-x));
+  padding-right: calc(0.5 * var(--bb-gutter-x));
+  margin-top: var(--bb-gutter-y);
+}

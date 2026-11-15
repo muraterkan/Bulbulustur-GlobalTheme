@@ -1,0 +1,131 @@
+/* =====================================
+   Bulbulustur Theme - CountUp (PURE)
+   Lightweight, Bootstrap 5 friendly
+   ===================================== */
+
+.bb-countup {
+  /* -----------------------------------
+     Component tokens (override-friendly)
+  ----------------------------------- */
+  --bb-countup-bg: var(--bb-body-bg);
+  --bb-countup-color: var(--bb-emphasis-color, var(--bb-body-color));
+  --bb-countup-muted-color: var(--bb-secondary-color);
+  --bb-countup-border-color: var(--bb-border-color);
+
+  --bb-countup-border-width: var(--bb-border-width, 1px);
+  --bb-countup-border-style: dashed;
+
+  --bb-countup-shadow: var(--bb-shadow-sm, none);
+
+  --bb-countup-radius: var(--bb-radius-lg, var(--bs-border-radius, 0.75rem));
+  --bb-countup-padding-y: 0.75rem;
+  --bb-countup-padding-x: 1rem;
+
+  --bb-countup-min-w: 125px;
+  --bb-countup-gap: 0.5rem;
+  --bb-countup-stack-gap: 0.25rem;
+
+  --bb-countup-number-size: 1.5rem;
+  --bb-countup-label-size: 0.9rem;
+  --bb-countup-icon-size: 1.25rem;
+
+  --bb-countup-letter-spacing: -0.01em;
+
+  /* Focus ring tokens (for clickable variant) */
+  --bb-countup-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
+  --bb-countup-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
+  --bb-countup-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
+}
+
+/* -------------------------------------
+   Stat box
+------------------------------------- */
+.bb-countup-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-countup-stack-gap);
+
+  min-width: var(--bb-countup-min-w);
+  padding: var(--bb-countup-padding-y) var(--bb-countup-padding-x);
+
+  background-color: var(--bb-countup-bg);
+  color: var(--bb-countup-color);
+
+  border: var(--bb-countup-border-width) var(--bb-countup-border-style) var(--bb-countup-border-color);
+  border-radius: var(--bb-countup-radius);
+
+  box-shadow: var(--bb-countup-shadow);
+}
+
+/* Number row */
+.bb-countup-number {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-countup-gap);
+}
+
+.bb-countup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--bb-countup-icon-size);
+  line-height: 1;
+
+  /* inherits color; override by parent if needed */
+  color: inherit;
+}
+
+/* The animated value */
+.bb-countup-value {
+  font-size: var(--bb-countup-number-size);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-countup-letter-spacing);
+
+  color: inherit;
+}
+
+/* Label */
+.bb-countup-label {
+  font-size: var(--bb-countup-label-size);
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-countup-muted-color);
+}
+
+/* -------------------------------------
+   Clickable (opt-in)
+   Use: <a class="bb-countup-stat is-clickable">...</a>
+------------------------------------- */
+.bb-countup-stat.is-clickable {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: var(--bb-countup-color);
+
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* -------------------------------------
+   Compact density (optional)
+   If root has data-bb-density="compact"
+------------------------------------- */
+:root[data-bb-density="compact"] .bb-countup {
+  --bb-countup-padding-y: 0.6rem;
+  --bb-countup-padding-x: 0.85rem;
+  --bb-countup-number-size: 1.35rem;
+  --bb-countup-label-size: 0.85rem;
+}
+
+/* -------------------------------------
+   Small screens
+------------------------------------- */
+@media (max-width: 575.98px) {
+  .bb-countup-stat {
+    min-width: 100%;
+  }
+}

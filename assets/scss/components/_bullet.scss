@@ -1,0 +1,67 @@
+/* =====================================
+   Bulbulustur Theme - Bullet
+   Prefix: bb-
+   Type: micro / utility-friendly
+===================================== */
+
+.bb-bullet {
+  /* tokens */
+  --bb-bullet-size: 0.5rem;
+  --bb-bullet-radius: var(--bb-radius-xs);
+  --bb-bullet-bg: var(--bb-secondary-bg);
+  --bb-bullet-opacity: 1;
+
+  display: inline-block;
+  flex-shrink: 0;
+
+  width: var(--bb-bullet-size);
+  height: var(--bb-bullet-size);
+
+  border-radius: var(--bb-bullet-radius);
+  background-color: var(--bb-bullet-bg);
+  opacity: var(--bb-bullet-opacity);
+}
+
+/* -------------------------------------
+   Dot Style
+------------------------------------- */
+
+.bb-bullet-dot {
+  --bb-bullet-radius: 50%;
+}
+
+/* -------------------------------------
+   Vertical Style
+------------------------------------- */
+
+.bb-bullet-vertical {
+  --bb-bullet-size: 1.25rem;
+  --bb-bullet-radius: var(--bb-radius-xs);
+
+  width: 0.25rem;
+  height: var(--bb-bullet-size);
+}
+
+/* -------------------------------------
+   Line Style
+------------------------------------- */
+
+.bb-bullet-line {
+  --bb-bullet-radius: var(--bb-radius-xs);
+
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+/* -------------------------------------
+   Color bridge (Bootstrap bg utilities)
+------------------------------------- */
+
+.bb-bullet.bg-primary   { --bb-bullet-bg: var(--bb-primary); }
+.bb-bullet.bg-secondary { --bb-bullet-bg: var(--bs-secondary); }
+.bb-bullet.bg-success   { --bb-bullet-bg: var(--bb-success); }
+.bb-bullet.bg-info      { --bb-bullet-bg: var(--bb-info); }
+.bb-bullet.bg-warning   { --bb-bullet-bg: var(--bb-warning); }
+.bb-bullet.bg-danger    { --bb-bullet-bg: var(--bb-danger); }
+.bb-bullet.bg-light     { --bb-bullet-bg: var(--bb-light); }
+.bb-bullet.bg-dark      { --bb-bullet-bg: var(--bb-dark); }

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbulustur Theme - Scroll</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="h4 mb-1">Scroll</h1>
+        <div class="text-muted small">bb-scroll / bb-hover-scroll (CSS) + opsiyonel auto height (mini JS)</div>
+      </div>
+      <span class="badge text-bg-secondary">Bootstrap 5</span>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Basic -->
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <strong>Basic (Fixed Height)</strong>
+            <span class="text-muted small">.bb-scroll</span>
+          </div>
+          <div class="card-body">
+            <div class="bb-scroll p-3 border rounded" style="height: 260px;">
+              <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              </p>
+              <p class="mb-3">
+                Quis ipsum suspendisse ultrices gravida dictum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec...
+              </p>
+              <p class="mb-0">
+                Etiam tempor orci eu lobortis elementum nibh. Libero volutpat sed cras ornare arcu...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hover Scroll -->
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <strong>Hover Scroll</strong>
+            <span class="text-muted small">.bb-hover-scroll</span>
+          </div>
+          <div class="card-body">
+            <div class="bb-hover-scroll p-3 border rounded" style="height: 260px;">
+              <p class="mb-3">
+                Hover yapınca scrollbar görünür. Normalde saklı.
+              </p>
+              <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              </p>
+              <p class="mb-3">
+                Ipsum dolor sit amet consectetur adipiscing. Blandit cursus risus at ultrices mi tempus imperdiet...
+              </p>
+              <p class="mb-0">
+                Ut lectus arcu bibendum at varius vel. Arcu felis bibendum ut tristique et egestas quis...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- X Scroll -->
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <strong>Horizontal Scroll</strong>
+            <span class="text-muted small">.bb-scroll-x</span>
+          </div>
+          <div class="card-body">
+            <div class="bb-scroll-x p-3 border rounded">
+              <div class="d-inline-flex gap-3" style="width: 1200px;">
+                <div class="p-3 border rounded bg-white">Block 1</div>
+                <div class="p-3 border rounded bg-white">Block 2</div>
+                <div class="p-3 border rounded bg-white">Block 3</div>
+                <div class="p-3 border rounded bg-white">Block 4</div>
+                <div class="p-3 border rounded bg-white">Block 5</div>
+                <div class="p-3 border rounded bg-white">Block 6</div>
+                <div class="p-3 border rounded bg-white">Block 7</div>
+                <div class="p-3 border rounded bg-white">Block 8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hover X Scroll -->
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <strong>Hover Horizontal</strong>
+            <span class="text-muted small">.bb-hover-scroll-x</span>
+          </div>
+          <div class="card-body">
+            <div class="bb-hover-scroll-x p-3 border rounded">
+              <div class="d-inline-flex gap-3" style="width: 1200px;">
+                <div class="p-3 border rounded bg-white">Wide 1</div>
+                <div class="p-3 border rounded bg-white">Wide 2</div>
+                <div class="p-3 border rounded bg-white">Wide 3</div>
+                <div class="p-3 border rounded bg-white">Wide 4</div>
+                <div class="p-3 border rounded bg-white">Wide 5</div>
+                <div class="p-3 border rounded bg-white">Wide 6</div>
+              </div>
+            </div>
+            <div class="text-muted small mt-2">Scrollbar sadece hover’da çıkar.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auto Height (Mini JS) -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <strong>Auto Height (Mini JS)</strong>
+            <span class="text-muted small">data-bb-scroll="true"</span>
+          </div>
+
+          <div class="card-body" id="bb_scroll_wrap">
+            <div class="d-flex align-items-center justify-content-between mb-3" id="bb_scroll_header">
+              <div class="fw-semibold">This is a header</div>
+
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="bb_scroll_top">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">vertical_align_top</span>
+                  Top
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="bb_scroll_bottom">
+                  <span class="material-symbols-outlined" style="font-size: 18px;">vertical_align_bottom</span>
+                  Bottom
+                </button>
+                <button type="button" class="btn btn-sm btn-primary" id="bb_scroll_update">
+                  Update
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="bb_scroll_auto"
+              class="bb-scroll p-3 border rounded"
+              data-bb-scroll="true"
+              data-bb-scroll-height="auto"
+              data-bb-scroll-wrappers="#bb_scroll_wrap"
+              data-bb-scroll-dependencies="#bb_scroll_header, #bb_scroll_footer"
+              data-bb-scroll-offset="24"
+              tabindex="0"
+            >
+              <p class="mb-3">
+                Browser yüksekliğine göre otomatik max-height hesaplanır.
+                Sayfayı resize edince Update’e bas veya otomatik yeniden hesaplasın.
+              </p>
+
+              <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+              <p class="mb-3">Quis ipsum suspendisse ultrices gravida dictum...</p>
+              <p class="mb-3">Ipsum dolor sit amet consectetur adipiscing...</p>
+              <p class="mb-3">Etiam tempor orci eu lobortis elementum nibh...</p>
+              <p class="mb-3">Ut lectus arcu bibendum at varius vel...</p>
+
+              <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+              <p class="mb-3">Quis ipsum suspendisse ultrices gravida dictum...</p>
+              <p class="mb-3">Ipsum dolor sit amet consectetur adipiscing...</p>
+              <p class="mb-3">Etiam tempor orci eu lobortis elementum nibh...</p>
+              <p class="mb-0">This is the end.</p>
+            </div>
+
+            <div class="pt-3 text-muted" id="bb_scroll_footer">
+              This is a footer
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Bulbulustur Mini Scroll (Auto Height)
+    // - Very small subset of Metronic KTScroll idea
+    // - Supports:
+    //   data-bb-scroll="true"
+    //   data-bb-scroll-height="auto" | "300px" | "60vh"
+    //   data-bb-scroll-wrappers="#id, .class"
+    //   data-bb-scroll-dependencies="#id, .class"
+    //   data-bb-scroll-offset="24"
+
+    (function () {
+      function qsa(selector) {
+        return Array.prototype.slice.call(document.querySelectorAll(selector));
+      }
+
+      function getOuterHeight(el) {
+        if (!el) { return 0; }
+        var rect = el.getBoundingClientRect();
+        var styles = window.getComputedStyle(el);
+        var mt = parseFloat(styles.marginTop) || 0;
+        var mb = parseFloat(styles.marginBottom) || 0;
+        return rect.height + mt + mb;
+      }
+
+      function sumElementsHeight(selectors) {
+        if (!selectors) { return 0; }
+
+        var total = 0;
+        selectors.split(",").forEach(function (s) {
+          var sel = s.trim();
+          if (!sel) { return; }
+
+          var el = document.querySelector(sel);
+          total += getOuterHeight(el);
+        });
+
+        return total;
+      }
+
+      function sumWrapperSpaces(selectors) {
+        if (!selectors) { return 0; }
+
+        var total = 0;
+        selectors.split(",").forEach(function (s) {
+          var sel = s.trim();
+          if (!sel) { return; }
+
+          var el = document.querySelector(sel);
+          if (!el) { return; }
+
+          var styles = window.getComputedStyle(el);
+          var pt = parseFloat(styles.paddingTop) || 0;
+          var pb = parseFloat(styles.paddingBottom) || 0;
+          var bt = parseFloat(styles.borderTopWidth) || 0;
+          var bb = parseFloat(styles.borderBottomWidth) || 0;
+          var mt = parseFloat(styles.marginTop) || 0;
+          var mb = parseFloat(styles.marginBottom) || 0;
+
+          total += pt + pb + bt + bb + mt + mb;
+        });
+
+        return total;
+      }
+
+      function parseOffset(value) {
+        if (!value) { return 0; }
+        var n = parseFloat(value);
+        if (isNaN(n)) { return 0; }
+        return n;
+      }
+
+      function updateAutoHeight(el) {
+        if (!el) { return; }
+
+        var height = el.getAttribute("data-bb-scroll-height") || "";
+        if (height !== "auto") {
+          el.style.maxHeight = height;
+          return;
+        }
+
+        var deps = el.getAttribute("data-bb-scroll-dependencies") || "";
+        var wraps = el.getAttribute("data-bb-scroll-wrappers") || "";
+        var offset = parseOffset(el.getAttribute("data-bb-scroll-offset"));
+
+        var viewport = window.innerHeight;
+        var depsH = sumElementsHeight(deps);
+        var wrapsH = sumWrapperSpaces(wraps);
+
+        var calc = viewport - depsH - wrapsH - offset;
+        if (calc < 120) { calc = 120; }
+
+        el.style.maxHeight = calc + "px";
+      }
+
+      function init() {
+        qsa('[data-bb-scroll="true"]').forEach(function (el) {
+          updateAutoHeight(el);
+        });
+      }
+
+      // Buttons (demo)
+      var scrollEl = document.getElementById("bb_scroll_auto");
+      var btnTop = document.getElementById("bb_scroll_top");
+      var btnBottom = document.getElementById("bb_scroll_bottom");
+      var btnUpdate = document.getElementById("bb_scroll_update");
+
+      if (btnTop && scrollEl) {
+        btnTop.addEventListener("click", function () {
+          scrollEl.scrollTop = 0;
+        });
+      }
+
+      if (btnBottom && scrollEl) {
+        btnBottom.addEventListener("click", function () {
+          scrollEl.scrollTop = scrollEl.scrollHeight;
+        });
+      }
+
+      if (btnUpdate && scrollEl) {
+        btnUpdate.addEventListener("click", function () {
+          init();
+        });
+      }
+
+      // Auto update on resize
+      window.addEventListener("resize", function () {
+        init();
+      });
+
+      init();
+    })();
+  </script>
+</body>
+</html>

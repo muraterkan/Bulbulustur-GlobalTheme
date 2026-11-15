@@ -1,0 +1,52 @@
+/* =====================================
+   Bulbulustur Footer
+   Type-1 Dashboard
+   ===================================== */
+
+.bb-footer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* ZEMİN */
+.bb-footer-bar {
+  width: 100%;
+  background-color: var(--bb-body-bg);
+  border-top: 1px solid var(--bb-border-color);
+}
+
+/* İÇ HİZALAMA */
+.bb-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 56px;
+  padding: 0 1rem;
+}
+
+.bb-footer-left,
+.bb-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bb-footer-brand {
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-body-color);
+  text-decoration: none;
+}
+
+.bb-footer-brand:hover {
+  color: var(--bb-primary);
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .bb-footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+}

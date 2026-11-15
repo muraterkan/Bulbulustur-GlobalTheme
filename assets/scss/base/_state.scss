@@ -1,0 +1,219 @@
+/* =====================================
+   Bulbulustur Theme - State System
+   Global state helpers + Focus Ring Standard
+   File: assets/scss/base/_state.scss
+===================================== */
+
+/* -------------------------------------
+   Disabled
+------------------------------------- */
+
+.is-disabled,
+[aria-disabled="true"],
+:disabled {
+  pointer-events: none;
+  opacity: var(--bb-disabled-opacity);
+}
+
+/* -------------------------------------
+   Active
+   Component-level override önerilir
+------------------------------------- */
+
+.is-active {
+  /* intentionally minimal */
+}
+
+/* -------------------------------------
+   Loading
+------------------------------------- */
+
+.is-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: var(--bb-loading-opacity);
+}
+
+.is-loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* -------------------------------------
+   Validation wrappers
+------------------------------------- */
+
+.has-error,
+.has-success {
+  position: relative;
+}
+
+input.has-error,
+select.has-error,
+textarea.has-error,
+.has-error .form-control,
+.has-error .form-select {
+  border-color: var(--bb-state-error);
+}
+
+input.has-success,
+select.has-success,
+textarea.has-success,
+.has-success .form-control,
+.has-success .form-select {
+  border-color: var(--bb-state-success);
+}
+
+.has-error .bb-help,
+.has-error .invalid-feedback {
+  color: var(--bb-state-error);
+}
+
+.has-success .bb-help,
+.has-success .valid-feedback {
+  color: var(--bb-state-success);
+}
+
+.has-error .form-control:focus-visible,
+.has-error .form-select:focus-visible,
+input.has-error:focus-visible,
+select.has-error:focus-visible,
+textarea.has-error:focus-visible {
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    rgba(var(--bb-danger-rgb), 0.25);
+
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    color-mix(in srgb, var(--bb-state-error) 25%, transparent);
+}
+
+.has-success .form-control:focus-visible,
+.has-success .form-select:focus-visible,
+input.has-success:focus-visible,
+select.has-success:focus-visible,
+textarea.has-success:focus-visible {
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    rgba(var(--bb-success-rgb), 0.25);
+
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    color-mix(in srgb, var(--bb-state-success) 25%, transparent);
+}
+/* =====================================
+   Focus Ring Standard
+===================================== */
+
+@mixin bb-focus-ring() {
+  outline: 0;
+
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    rgba(var(--bb-primary-rgb), var(--bb-focus-ring-opacity));
+
+  box-shadow:
+    0 0 0 var(--bb-focus-ring-width)
+    color-mix(
+      in srgb,
+      var(--bb-focus-ring-color) var(--bb-focus-ring-alpha),
+      transparent
+    );
+}
+
+/* -------------------------------------
+   Buttons
+------------------------------------- */
+
+.btn:focus-visible,
+.bb-btn:focus-visible {
+  @include bb-focus-ring();
+}
+
+/* -------------------------------------
+   Inputs
+------------------------------------- */
+
+.form-control:focus-visible,
+.form-select:focus-visible,
+.form-check-input:focus-visible,
+textarea.form-control:focus-visible {
+  @include bb-focus-ring();
+}
+
+/* -------------------------------------
+   Interactive components
+------------------------------------- */
+
+.toast.bb-toast:focus-visible,
+.bb-ts-thumb:focus-visible,
+.bb-ts-dot:focus-visible,
+.bb-ts-btn:focus-visible,
+.bb-card-action:focus-visible,
+.bb-card a.bb-card-action:focus-visible,
+.bb-card button.bb-card-action:focus-visible,
+.bb-alert-close:focus-visible,
+a.badge.bb-badge:focus-visible,
+button.badge.bb-badge:focus-visible,
+.bb-breadcrumb a:focus-visible,
+.bb-carousel-control:focus-visible,
+.bb-carousel .carousel-control-prev:focus-visible,
+.bb-carousel .carousel-control-next:focus-visible,
+.bb-carousel .carousel-indicators [data-bs-target]:focus-visible,
+.bb-collapse-toggle:focus-visible,
+.bb-countup-stat-clickable:focus-visible,
+.bb-dialer .bb-dialer-btn:focus-visible,
+.bb-dialer .bb-dialer-input:focus-visible,
+.bb-drawer-close:focus-visible,
+.bb-dropdown-item:focus-visible,
+.form-control.bb-inputmask:focus-visible,
+.bb-lightbox-close:focus-visible,
+.bb-lightbox-nav:focus-visible,
+.bb-menu .bb-menu-link:focus-visible,
+.bb-modal-close:focus-visible,
+.bb-accordion .accordion-button:focus-visible,
+.bb-password-meter__toggle:focus-visible,
+.bb-pagination .page-link:focus-visible,
+.bb-scroll:focus-visible,
+.bb-scroll-y:focus-visible,
+.bb-scroll-x:focus-visible,
+.bb-hover-scroll:focus-visible,
+.bb-hover-scroll-y:focus-visible,
+.bb-hover-scroll-x:focus-visible {
+  @include bb-focus-ring();
+}
+
+/* -------------------------------------
+   Rating special case
+------------------------------------- */
+
+.bb-rating-input:focus-visible ~ .bb-rating-label {
+  @include bb-focus-ring();
+}
+
+/* -------------------------------------
+   Links / generic clickable bb elements
+------------------------------------- */
+
+a.bb-link:focus-visible,
+button.bb-link:focus-visible,
+.bb-nav .nav-link:focus-visible,
+.nav-tabs .nav-link:focus-visible,
+.nav-pills .nav-link:focus-visible {
+  @include bb-focus-ring();
+}
+
+/* -------------------------------------
+   Disabled ring reset
+------------------------------------- */
+
+.btn:disabled,
+.btn.disabled,
+.form-control:disabled,
+.form-select:disabled,
+.form-check-input:disabled,
+[aria-disabled="true"] {
+  box-shadow: none !important;
+}

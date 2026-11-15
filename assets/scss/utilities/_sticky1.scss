@@ -1,0 +1,33 @@
+/* =====================================
+   Bulbulustur Theme - Sticky Utilities
+   (preset helpers)
+   ===================================== */
+
+/* top presets */
+.bb-sticky-top-0   { --bb-sticky-top: 0; }
+.bb-sticky-top-50  { --bb-sticky-top: 50px; }
+.bb-sticky-top-75  { --bb-sticky-top: 75px; }
+.bb-sticky-top-100 { --bb-sticky-top: 100px; }
+.bb-sticky-top-120 { --bb-sticky-top: 120px; }
+.bb-sticky-top-150 { --bb-sticky-top: 150px; }
+.bb-sticky-top-200 { --bb-sticky-top: 200px; }
+
+/* z-index presets */
+.bb-sticky-z-50   { --bb-sticky-zindex: 50; }
+.bb-sticky-z-90   { --bb-sticky-zindex: 90; }
+.bb-sticky-z-95   { --bb-sticky-zindex: 95; }
+.bb-sticky-z-100  { --bb-sticky-zindex: 100; }
+.bb-sticky-z-1000 { --bb-sticky-zindex: 1000; }
+
+/* responsive examples */
+@media (min-width: 992px) {
+  .bb-sticky-top-lg-0   { --bb-sticky-top: 0; }
+  .bb-sticky-top-lg-100 { --bb-sticky-top: 100px; }
+  .bb-sticky-top-lg-200 { --bb-sticky-top: 200px; }
+}
+
+@media (min-width: 1200px) {
+  .bb-sticky-top-xl-0   { --bb-sticky-top: 0; }
+  .bb-sticky-top-xl-100 { --bb-sticky-top: 100px; }
+  .bb-sticky-top-xl-200 { --bb-sticky-top: 200px; }
+}

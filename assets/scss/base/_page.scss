@@ -1,0 +1,209 @@
+/* =====================================
+   Bulbulustur Theme - Page Wrapper
+   Main element remains neutral.
+   Page mood and spacing are controlled by bb-wrapper-* modifiers.
+===================================== */
+
+/* -------------------------------------
+   Main semantic area
+------------------------------------- */
+
+main {
+    display: block;
+    min-width: 0;
+}
+
+/* -------------------------------------
+   Page wrapper base
+------------------------------------- */
+
+.bb-wrapper {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 1px;
+    color: var(--bb-body-color);
+    background: var(--bb-wrapper-bg, var(--bb-body-bg));
+    padding-bottom: var(--bb-wrapper-padding-bottom, 3rem);
+}
+
+/* -------------------------------------
+   Background moods
+------------------------------------- */
+
+/* Default white surface */
+.bb-wrapper-surface-white {
+    --bb-wrapper-bg: var(--bb-body-bg);
+}
+
+/* Full gray work surface */
+.bb-wrapper-surface-gray {
+    --bb-wrapper-bg: var(--bb-tertiary-bg);
+}
+
+/* Very soft surface, premium middle ground */
+.bb-wrapper-surface-subtle {
+    --bb-wrapper-bg: var(--bb-surface-soft);
+}
+
+/* Same meaning, shorter alias for common premium pages */
+.bb-wrapper-surface-soft {
+    --bb-wrapper-bg: var(--bb-surface-soft);
+}
+
+/* Slightly stronger muted surface */
+.bb-wrapper-surface-muted {
+    --bb-wrapper-bg: var(--bb-surface-muted, var(--bb-tertiary-bg));
+}
+
+/* Soft primary wash */
+.bb-wrapper-surface-primary-soft {
+    --bb-wrapper-bg:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-primary) 3%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 18rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+/* Muted gray-to-white wash */
+.bb-wrapper-surface-muted-wash {
+    --bb-wrapper-bg:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-white)) 0%,
+            var(--bb-body-bg) 16rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+/* Brand / accent landing surface */
+.bb-wrapper-surface-accent {
+    --bb-wrapper-bg:
+        radial-gradient(
+            circle at top right,
+            color-mix(in srgb, var(--bb-primary) 18%, transparent),
+            transparent 18rem
+        ),
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-primary) 7%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 20rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+/* Cooler technical / document surface */
+.bb-wrapper-surface-technical {
+    --bb-wrapper-bg:
+        radial-gradient(
+            circle at top right,
+            color-mix(in srgb, var(--bb-primary) 12%, transparent),
+            transparent 16rem
+        ),
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 90%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 22rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+/* -------------------------------------
+   Spacing modifiers
+------------------------------------- */
+
+/* Adds top breathing space for pages without hero/slider */
+.bb-wrapper-spacing-spaced {
+    padding-top: var(--bb-wrapper-padding-top-spaced, 3rem);
+}
+
+/* Smaller bottom space than default */
+.bb-wrapper-spacing-compact {
+    --bb-wrapper-padding-bottom: 1.25rem;
+}
+
+/* Larger bottom space */
+.bb-wrapper-spacing-loose {
+    --bb-wrapper-padding-bottom: 5.5rem;
+}
+
+/* No shell spacing */
+.bb-wrapper-spacing-flush {
+    padding-top: 0;
+    --bb-wrapper-padding-bottom: 0;
+}
+
+/* Pages with bottom CTA / sticky visual ending */
+.bb-wrapper-has-bottom-cta {
+    --bb-wrapper-padding-bottom: 5.5rem;
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .bb-wrapper {
+        --bb-wrapper-padding-bottom: 3.25rem;
+    }
+
+    .bb-wrapper-spacing-spaced {
+        padding-top: 2.25rem;
+    }
+
+    .bb-wrapper-spacing-compact {
+        --bb-wrapper-padding-bottom: 1.25rem;
+    }
+
+    .bb-wrapper-spacing-loose,
+    .bb-wrapper-has-bottom-cta {
+        --bb-wrapper-padding-bottom: 4.5rem;
+    }
+
+    .bb-wrapper-spacing-flush {
+        padding-top: 0;
+        --bb-wrapper-padding-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-wrapper {
+        --bb-wrapper-padding-bottom: 3rem;
+    }
+
+    .bb-wrapper-spacing-spaced {
+        padding-top: 2rem;
+    }
+
+    .bb-wrapper-spacing-loose,
+    .bb-wrapper-has-bottom-cta {
+        --bb-wrapper-padding-bottom: 4.25rem;
+    }
+
+    .bb-wrapper-spacing-flush {
+        padding-top: 0;
+        --bb-wrapper-padding-bottom: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bb-wrapper {
+        --bb-wrapper-padding-bottom: 2.75rem;
+    }
+
+    .bb-wrapper-spacing-spaced {
+        padding-top: 1.75rem;
+    }
+
+    .bb-wrapper-spacing-loose,
+    .bb-wrapper-has-bottom-cta {
+        --bb-wrapper-padding-bottom: 4rem;
+    }
+
+    .bb-wrapper-spacing-flush {
+        padding-top: 0;
+        --bb-wrapper-padding-bottom: 0;
+    }
+}

@@ -1,0 +1,159 @@
+/* =====================================
+   Bulbulustur Theme - Scroll
+   CSS-only custom scrollbar styling
+   Optional hover scrollbar behavior
+   Token-first | Dark/Light safe
+===================================== */
+
+/* -------------------------------------
+   Shared base
+-------------------------------------- */
+
+.bb-scroll,
+.bb-scroll-y,
+.bb-scroll-x,
+.bb-scroll-x-visible,
+.bb-hover-scroll,
+.bb-hover-scroll-y,
+.bb-hover-scroll-x {
+  --bb-scrollbar-size: 10px;
+  --bb-scrollbar-radius: var(--bb-radius-pill);
+
+  --bb-scrollbar-track: var(--bb-body-bg);
+  --bb-scrollbar-thumb: var(--bb-border-color);
+  --bb-scrollbar-thumb-hover: var(--bb-secondary-color);
+
+  --bb-scrollbar-thumb-hidden: transparent;
+  --bb-scrollbar-track-hidden: transparent;
+
+  --bb-scrollbar-inset-border: 2px;
+
+  --bb-scroll-focus-radius: var(--bb-radius);
+  --bb-scroll-focus-outline-w: 2px;
+  --bb-scroll-focus-outline: color-mix(in srgb, var(--bb-primary) 35%, transparent);
+
+  position: relative;
+  max-width: 100%;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--bb-scrollbar-thumb) var(--bb-scrollbar-track);
+
+  overscroll-behavior: contain;
+}
+
+/* -------------------------------------
+   Axis helpers
+-------------------------------------- */
+
+.bb-scroll,
+.bb-scroll-y,
+.bb-hover-scroll,
+.bb-hover-scroll-y {
+  overflow-y: auto;
+}
+
+.bb-scroll-x,
+.bb-hover-scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bb-scroll-x-visible {
+  overflow-x: auto;
+  overflow-y: visible;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* -------------------------------------
+   WebKit scrollbar base
+-------------------------------------- */
+
+.bb-scroll::-webkit-scrollbar,
+.bb-scroll-y::-webkit-scrollbar,
+.bb-scroll-x::-webkit-scrollbar,
+.bb-scroll-x-visible::-webkit-scrollbar,
+.bb-hover-scroll::-webkit-scrollbar,
+.bb-hover-scroll-y::-webkit-scrollbar,
+.bb-hover-scroll-x::-webkit-scrollbar {
+  width: var(--bb-scrollbar-size);
+  height: var(--bb-scrollbar-size);
+}
+
+.bb-scroll::-webkit-scrollbar-track,
+.bb-scroll-y::-webkit-scrollbar-track,
+.bb-scroll-x::-webkit-scrollbar-track,
+.bb-scroll-x-visible::-webkit-scrollbar-track,
+.bb-hover-scroll::-webkit-scrollbar-track,
+.bb-hover-scroll-y::-webkit-scrollbar-track,
+.bb-hover-scroll-x::-webkit-scrollbar-track {
+  background: var(--bb-scrollbar-track);
+  border-radius: var(--bb-scrollbar-radius);
+}
+
+.bb-scroll::-webkit-scrollbar-thumb,
+.bb-scroll-y::-webkit-scrollbar-thumb,
+.bb-scroll-x::-webkit-scrollbar-thumb,
+.bb-scroll-x-visible::-webkit-scrollbar-thumb,
+.bb-hover-scroll::-webkit-scrollbar-thumb,
+.bb-hover-scroll-y::-webkit-scrollbar-thumb,
+.bb-hover-scroll-x::-webkit-scrollbar-thumb {
+  background: var(--bb-scrollbar-thumb);
+  border-radius: var(--bb-scrollbar-radius);
+  border: var(--bb-scrollbar-inset-border) solid var(--bb-scrollbar-track);
+}
+
+/* -------------------------------------
+   Hover
+-------------------------------------- */
+
+.bb-scroll:hover::-webkit-scrollbar-thumb,
+.bb-scroll-y:hover::-webkit-scrollbar-thumb,
+.bb-scroll-x:hover::-webkit-scrollbar-thumb,
+.bb-scroll-x-visible:hover::-webkit-scrollbar-thumb {
+  background: var(--bb-scrollbar-thumb-hover);
+}
+
+/* -------------------------------------
+   Hover Scroll
+-------------------------------------- */
+
+.bb-hover-scroll,
+.bb-hover-scroll-y,
+.bb-hover-scroll-x {
+  scrollbar-color: var(--bb-scrollbar-thumb-hidden) var(--bb-scrollbar-track-hidden);
+}
+
+.bb-hover-scroll::-webkit-scrollbar-track,
+.bb-hover-scroll-y::-webkit-scrollbar-track,
+.bb-hover-scroll-x::-webkit-scrollbar-track {
+  background: var(--bb-scrollbar-track-hidden);
+}
+
+.bb-hover-scroll::-webkit-scrollbar-thumb,
+.bb-hover-scroll-y::-webkit-scrollbar-thumb,
+.bb-hover-scroll-x::-webkit-scrollbar-thumb {
+  background: var(--bb-scrollbar-thumb-hidden);
+  border-color: var(--bb-scrollbar-track-hidden);
+}
+
+.bb-hover-scroll:hover,
+.bb-hover-scroll-y:hover,
+.bb-hover-scroll-x:hover {
+  scrollbar-color: var(--bb-scrollbar-thumb) var(--bb-scrollbar-track);
+}
+
+.bb-hover-scroll:hover::-webkit-scrollbar-track,
+.bb-hover-scroll-y:hover::-webkit-scrollbar-track,
+.bb-hover-scroll-x:hover::-webkit-scrollbar-track {
+  background: var(--bb-scrollbar-track);
+}
+
+.bb-hover-scroll:hover::-webkit-scrollbar-thumb,
+.bb-hover-scroll-y:hover::-webkit-scrollbar-thumb,
+.bb-hover-scroll-x:hover::-webkit-scrollbar-thumb {
+  background: var(--bb-scrollbar-thumb-hover);
+  border-color: var(--bb-scrollbar-track);
+}
