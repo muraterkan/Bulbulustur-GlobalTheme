@@ -67,4 +67,33 @@
   if (desktop.addEventListener) desktop.addEventListener("change", onViewportChange);
   else desktop.addListener(onViewportChange);
   updateControls();
+
+  /* Scroll-to-top: panel content uses its own scroll container; support window too. */
+  var contentScroll = panel.querySelector(".bb-content");
+  var backToTop = document.createElement("button");
+  backToTop.type = "button";
+  backToTop.className = "bb-panel-back-to-top";
+  backToTop.setAttribute("aria-label", "Yukarı çık");
+  backToTop.title = "Yukarı çık";
+  backToTop.hidden = true;
+  var backIcon = document.createElement("span");
+  backIcon.className = "material-symbols-outlined";
+  backIcon.textContent = "keyboard_arrow_up";
+  backIcon.setAttribute("aria-hidden", "true");
+  backToTop.appendChild(backIcon);
+  panel.appendChild(backToTop);
+
+  function updateBackToTop() {
+    var inContent = contentScroll && contentScroll.scrollTop > 160;
+    var inWindow = window.scrollY > 160;
+    backToTop.hidden = !(inContent || inWindow);
+  }
+  if (contentScroll) contentScroll.addEventListener("scroll", updateBackToTop, { passive: true });
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
+  backToTop.addEventListener("click", function () {
+    var behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    if (contentScroll) contentScroll.scrollTo({ top: 0, behavior: behavior });
+    window.scrollTo({ top: 0, behavior: behavior });
+  });
+  updateBackToTop();
 })();
