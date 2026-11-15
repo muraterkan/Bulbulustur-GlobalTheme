@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulbulustur Panel — Şifremi Sıfırla (Faz 11)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+<div class="bb-app bb-panel bb-panel-auth" data-bb-panel-layout="auth">
+ <div class="bb-shell"><main class="bb-main"><div class="bb-main-inner"><section class="bb-content" aria-label="Şifremi Sıfırla">
+ <div class="bb-panel-content-container">
+ <a class="bb-panel-auth-brand" href="dashboard.html"><span class="material-symbols-outlined" aria-hidden="true">layers</span><span>Bulbulustur Panel</span></a>
+ <div class="bb-card">
+  <div class="bb-card-body">
+   <h1 class="bb-panel-auth-title h3 mb-2">Şifremi Sıfırla</h1>
+   <p class="bb-panel-auth-subtitle mb-4">E-posta adresini yaz; gönderim yapılmadan form doğrulanır.</p>
+   <form data-bb-auth-form="reset">
+   <div class="mb-4"><label class="form-label required" for="bb_auth_email">E-posta adresi</label><input class="form-control form-control-solid" id="bb_auth_email" name="email" type="email" autocomplete="email" placeholder="ornek@eposta.com" required><div class="form-text">Bu demo gerçek e-posta göndermez.</div></div>
+   <button type="submit" class="btn btn-primary w-100">Sıfırlama Bağlantısı İste</button>
+   </form>
+   <div class="bb-alert bb-alert-success bb-panel-auth-result mt-4" data-bb-auth-result role="status" tabindex="-1" hidden></div>
+   <p class="bb-panel-auth-subtitle text-center mt-4 mb-0"><a href="giris.html">Girişe geri dön</a></p>
+  </div>
+ </div>
+ <p class="bb-panel-auth-subtitle text-center mt-3">Arayüz demosu — hesap, oturum veya veri kaydı yapılmaz.</p>
+ </div></section></div></main></div>
+</div>
+<script src="../../assets/js/bb-panel-auth.js"></script>
+</body></html>
