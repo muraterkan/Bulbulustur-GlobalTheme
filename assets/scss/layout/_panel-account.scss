@@ -72,12 +72,12 @@
 
 /* User Profile — shared Metronic-style identity card and subpage layout. */
 .bb-panel .bb-profile-hero { overflow: hidden; }
-.bb-panel .bb-profile-hero .bb-card-body { padding: var(--bb-space-5); }
+.bb-panel .bb-profile-hero .bb-card-body { padding: calc(var(--bb-space-4) + var(--bb-space-2)); }
 .bb-panel .bb-profile-hero-main {
   display: grid;
   grid-template-columns: 10rem minmax(0, 1fr);
   align-items: start;
-  gap: var(--bb-space-5);
+  gap: calc(var(--bb-space-4) + var(--bb-space-2));
 }
 .bb-panel .bb-profile-portrait {
   position: relative;
@@ -140,7 +140,7 @@
   align-items: end;
   justify-content: space-between;
   gap: var(--bb-space-4);
-  margin-top: var(--bb-space-5);
+  margin-top: calc(var(--bb-space-4) + var(--bb-space-2));
 }
 .bb-panel .bb-profile-stat-list { display: flex; flex-wrap: wrap; gap: var(--bb-space-3); }
 .bb-panel .bb-profile-stat {
@@ -160,7 +160,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--bb-space-4);
-  padding: 0 var(--bb-space-5);
+  padding: 0 calc(var(--bb-space-4) + var(--bb-space-2));
   border-bottom: var(--bb-border-width,1px) solid var(--bb-border-color);
 }
 .bb-panel .bb-profile-tabs a {
