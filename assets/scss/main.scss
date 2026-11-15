@@ -40,6 +40,7 @@
 @use "layout/panel-shell";         // panel template Faz 1: responsive shell
 @use "layout/panel-sidebar";       // panel template Faz 2: sidebar menüsü
 @use "layout/panel-header";        // panel template Faz 3: topbar
+@use "layout/panel-user";          // panel template Faz 4: user panels
 
 /* 5. Components */
 @use "components/buttons";
