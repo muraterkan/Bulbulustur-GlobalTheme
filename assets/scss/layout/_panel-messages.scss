@@ -1,0 +1,111 @@
+/* Panel messages: drawer-specific composition using canonical bb-drawer. */
+.bb-panel .bb-panel-chat-drawer {
+  --bb-drawer-width: 28rem;
+  --bb-drawer-padding-x: var(--bb-space-4);
+  --bb-drawer-header-padding-y: var(--bb-space-4);
+  --bb-drawer-body-padding-y: 0;
+  --bb-drawer-radius: var(--bb-radius-none);
+  font-family: var(--bb-font-sans);
+}
+.bb-panel .bb-panel-chat-drawer .bb-drawer-header {
+  flex: 0 0 auto;
+  align-items: center;
+}
+.bb-panel .bb-panel-chat-head {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.bb-panel .bb-panel-chat-head strong {
+  display: block;
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-panel-chat-head small {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel .bb-panel-chat-presence {
+  width: var(--bb-menu-bullet-size, .35rem);
+  height: var(--bb-menu-bullet-size, .35rem);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-success);
+}
+.bb-panel .bb-panel-chat-drawer .bb-drawer-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: var(--bb-space-4);
+  padding: var(--bb-space-4);
+  overscroll-behavior: contain;
+}
+.bb-panel .bb-panel-chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-2);
+  align-items: flex-start;
+  max-width: 92%;
+}
+.bb-panel .bb-panel-chat-message[data-side="out"] {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.bb-panel .bb-panel-chat-author {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-panel-chat-author small {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-normal);
+}
+.bb-panel .bb-panel-chat-bubble {
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-radius: var(--bb-radius);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-body-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  overflow-wrap: anywhere;
+}
+.bb-panel .bb-panel-chat-message[data-side="out"] .bb-panel-chat-bubble {
+  background: var(--bb-primary-light);
+  color: var(--bb-body-color);
+}
+.bb-panel .bb-panel-chat-drawer .bb-panel-chat-compose {
+  flex: 0 0 auto;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+.bb-panel .bb-panel-chat-compose textarea {
+  width: 100%;
+  min-height: 4rem;
+  max-height: 10rem;
+  resize: vertical;
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-panel-chat-compose-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  margin-top: var(--bb-space-2);
+}
+.bb-panel .bb-panel-chat-compose-note {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel .bb-panel-chat-drawer .bb-drawer-close {
+  flex: 0 0 auto;
+}
+.bb-panel .bb-panel-chat-drawer[aria-hidden="true"] {
+  visibility: hidden;
+}
+@media (max-width: 575.98px) {
+  .bb-panel .bb-panel-chat-drawer { --bb-drawer-width: 100vw; }
+}
