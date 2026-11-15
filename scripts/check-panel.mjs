@@ -56,6 +56,24 @@ for (const name of pages) {
 }
 report("Panel HTML local references (" + pages.length + " pages, " + references + " refs)", referenceIssues);
 report("Panel HTML IDs and aria-controls", idIssues);
+const pageRegistry = fileText(resolve(jsDir, "bb-panel-pages.js"));
+const registryKeys = new Set([...pageRegistry.matchAll(/"([a-z][a-z0-9-]+)":\\s*\\{title:/g)].map((m) => m[1]));
+const menuIssues = [];
+let menuEntries = 0;
+for (const name of pages) {
+  const source = fileText(join(demoDir, name));
+  for (const id of attrMatches(source, "data-bb-panel-page")) {
+    menuEntries++;
+    if (!registryKeys.has(id)) menuIssues.push(name + ": undefined menu page " + id);
+  }
+  for (const href of attrMatches(source, "href")) {
+    const match = /(?:^|\\/)sayfalar\\.html\\?page=([^&#]+)/.exec(href);
+    if (match && !registryKeys.has(decodeURIComponent(match[1]))) {
+      menuIssues.push(name + ": invalid page link " + href);
+    }
+  }
+}
+report("Menu/page registry (" + menuEntries + " menu references, " + registryKeys.size + " IDs)", menuIssues);
 const syntaxIssues = [];
 for (const name of readdirSync(jsDir).filter((x) => x.startsWith("bb-panel") && x.endsWith(".js"))) scriptPaths.add(join(jsDir, name));
 for (const path of scriptPaths) {
