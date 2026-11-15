@@ -7,6 +7,10 @@
 }
 .bb-panel .bb-panel-topnav .bb-menu {
   --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
+  --bb-menu-link-font-size: var(--bb-panel-nav-size);
+  --bb-menu-link-font-weight: var(--bb-panel-nav-weight);
+  --bb-menu-link-color: var(--bb-panel-muted-color);
+  --bb-menu-link-hover-color: var(--bb-panel-title-color);
 }
 .bb-panel .bb-panel-topnav .bb-menu-sub {
   min-width: var(--bb-menu-sub-min-width);
