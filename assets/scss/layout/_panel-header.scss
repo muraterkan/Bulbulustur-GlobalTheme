@@ -1,0 +1,62 @@
+/* Faz 3 — Panel header navigation */
+.bb-panel .bb-panel-topnav {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+  min-width: 0;
+}
+.bb-panel .bb-panel-topnav .bb-menu {
+  --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
+}
+.bb-panel .bb-panel-topnav .bb-menu-sub {
+  min-width: var(--bb-menu-sub-min-width);
+}
+.bb-panel .bb-panel-topnav .bb-menu-link {
+  white-space: nowrap;
+}
+.bb-panel .bb-panel-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+.bb-panel .bb-panel-header-actions .bb-panel-icon-button {
+  position: relative;
+}
+.bb-panel .bb-panel-header-actions .bb-panel-indicator {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  background: var(--bb-danger);
+  border: var(--bb-border-width, 1px) solid var(--bb-body-bg);
+  border-radius: var(--bb-radius-pill);
+  width: var(--bb-menu-bullet-size, 0.35rem);
+  height: var(--bb-menu-bullet-size, 0.35rem);
+}
+.bb-panel .bb-panel-overlay-host {
+  position: relative;
+}
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 100%;
+  min-width: var(--bb-menu-sub-min-width, 12rem);
+  max-width: min(90vw, 24rem);
+  padding: var(--bb-menu-sub-padding, 0.5rem);
+  z-index: var(--bb-z-dropdown, 1050);
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  border: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-shadow-sm);
+}
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover[hidden] {
+  display: none;
+}
+.bb-panel .bb-panel-search-field {
+  width: 100%;
+}
+@media (max-width: 1199.98px) {
+  .bb-panel .bb-panel-topnav {
+    display: none;
+  }
+}
