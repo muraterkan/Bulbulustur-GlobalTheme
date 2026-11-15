@@ -160,6 +160,9 @@ html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]) {
   --bb-footer-bg-soft: var(--bb-olive-800);
   --bb-footer-bottom-bg: color-mix(in srgb, var(--bb-olive-900) 82%, #000);
 
+  /* Primary zaten AA (4.99); metin türevi yalnız %15 koyulaştırılır (tint üstünde 5.29) */
+  --bb-primary-text-ratio: 85%;
+
   /* Bağlantı */
   --bb-link-color: var(--bb-terracotta-600);
   --bb-link-hover-color: var(--bb-terracotta-700);
@@ -252,6 +255,7 @@ html[data-bb-pack="atolye"][data-bs-theme="dark"] {
   --bb-footer-border-color: color-mix(in srgb, #e0cbb0 13%, transparent);
   --bb-footer-border-color-strong: color-mix(in srgb, #e0cbb0 22%, transparent);
 
+  --bb-primary-text-ratio: 100%;
   --bb-link-color: #e7b49f;
   --bb-link-hover-color: var(--bb-primary);
 }

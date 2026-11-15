@@ -1,0 +1,79 @@
+/* =====================================
+   Bulbulustur Theme - Data Viz & Status Tokens
+   Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
+   Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
+   Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
+   Kullanım kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
+   Durum renkleri yalnız ikon/etiket ile birlikte kullanılır (renk tek başına anlam taşımaz).
+===================================== */
+
+:root,
+html[data-bs-theme="light"] {
+  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Diğer"e katlanır) */
+  --bb-chart-1: #2a78d6;
+  --bb-chart-2: #eb6834;
+  --bb-chart-3: #1baf7a;
+  --bb-chart-4: #eda100;
+  --bb-chart-5: #e87ba4;
+  --bb-chart-6: #008300;
+  --bb-chart-7: #6250d6;
+  --bb-chart-8: #e34948;
+
+  /* Sıralı (tek ton, düşük -> yüksek) */
+  --bb-chart-seq-1: #cde2fb;
+  --bb-chart-seq-2: #9ec5f4;
+  --bb-chart-seq-3: #6da7ec;
+  --bb-chart-seq-4: #3987e5;
+  --bb-chart-seq-5: #256abf;
+  --bb-chart-seq-6: #184f95;
+  --bb-chart-seq-7: #0d366b;
+
+  /* Ayrışan (iki kutup + nötr orta) */
+  --bb-chart-div-neg: #e34948;
+  --bb-chart-div-mid: #f0efec;
+  --bb-chart-div-pos: #2a78d6;
+
+  /* Durum (ikon/etiketle birlikte) */
+  --bb-status-good: #0ca30c;
+  --bb-status-warning: #fab219;
+  --bb-status-serious: #ec835a;
+  --bb-status-critical: #d03b3b;
+  --bb-status-neutral: var(--bb-gray-500);
+}
+
+html[data-bs-theme="dark"] {
+  --bb-chart-1: #3987e5;
+  --bb-chart-2: #d95926;
+  --bb-chart-3: #199e70;
+  --bb-chart-4: #c98500;
+  --bb-chart-5: #d55181;
+  --bb-chart-6: #0ca30c;
+  --bb-chart-7: #9085e9;
+  --bb-chart-8: #e66767;
+
+  /* Koyu zeminde "sıfıra yakın" en koyu adım zemine gömülür */
+  --bb-chart-seq-1: #184f95;
+  --bb-chart-seq-2: #256abf;
+  --bb-chart-seq-3: #2a78d6;
+  --bb-chart-seq-4: #3987e5;
+  --bb-chart-seq-5: #6da7ec;
+  --bb-chart-seq-6: #9ec5f4;
+  --bb-chart-seq-7: #cde2fb;
+
+  --bb-chart-div-neg: #e66767;
+  --bb-chart-div-mid: #383835;
+  --bb-chart-div-pos: #3987e5;
+
+  --bb-status-neutral: var(--bb-tertiary-color);
+}
+
+/* Tema bağımsız grafik yüzeyi ve eksen/ızgara/metin (semantik tokenlardan) */
+:root,
+html[data-bs-theme="light"],
+html[data-bs-theme="dark"] {
+  --bb-chart-surface: var(--bb-surface-bg);
+  --bb-chart-grid: var(--bb-border-color);
+  --bb-chart-axis: var(--bb-secondary-color);
+  --bb-chart-label: var(--bb-body-color);
+  --bb-chart-gap: 2px;
+}

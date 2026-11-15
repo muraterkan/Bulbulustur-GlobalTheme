@@ -87,13 +87,13 @@
 .form-floating > .form-control.is-valid ~ label,
 .form-floating > .form-select.is-valid ~ label,
 .form-floating > textarea.form-control.is-valid ~ label {
-  color: var(--bb-success);
+  color: var(--bb-success-text);
 }
 
 .form-floating > .form-control.is-invalid ~ label,
 .form-floating > .form-select.is-invalid ~ label,
 .form-floating > textarea.form-control.is-invalid ~ label {
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
 }
 
 /* -------------------------------------

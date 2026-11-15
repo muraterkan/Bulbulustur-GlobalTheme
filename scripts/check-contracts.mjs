@@ -44,6 +44,14 @@ check('derived state tokens are owned only by token-engine (packs)', packs.every
 check('token-engine does not duplicate base aliases/links', !/--bb-link-color:/.test(engine) && !/:\s*var\(--bb-theme-/.test(engine));
 check('token-engine derives dark states from --bb-dark (not a fixed coal token)', !/--bb-coal-/.test(engine));
 
+// Metin rolündeki semantik renk kullanımı ham dolgu rengiyle değil -text türeviyle yapılır (AA kontrast).
+const rawTextRole = /--bb-(?:alert-title|chip|badge|toast|fr-remove|fr-add|form-required|nav-hover|nav-active|accordion-active|menu-link-active|breadcrumb-link-hover)-color:\s*var\(--bb-(?:primary|success|warning|danger|info)\)/;
+const rawTextUsers = scssFiles.filter((path) => rawTextRole.test(readFileSync(path, 'utf8')));
+check('text-role semantic colors use -text tokens', rawTextUsers.length === 0);
+if (rawTextUsers.length) console.log('  raw text-role colors in:', rawTextUsers.map((path) => relative(scssRoot, path)).join(', '));
+const dataviz = file('assets/scss/themes/_dataviz.scss');
+check('dataviz defines 8 categorical series for light and dark', [1,2,3,4,5,6,7,8].every((n) => count(dataviz, new RegExp(`--bb-chart-${n}:`, 'g')) === 2));
+
 const reset = file('assets/scss/base/_reset.scss');
 const layout = file('assets/scss/layout/_layout.scss');
 const sidebar = file('assets/scss/layout/_sidebar.scss');

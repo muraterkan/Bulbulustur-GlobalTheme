@@ -19,6 +19,11 @@
 
   --bb-light-ratio: 12%;
   --bb-clarity-ratio: 18%;
+
+  /* Metin-güvenli (AA >= 4.5) renk türevi: renk + siyah. Sarı gibi açık markalar için ayrı oran. */
+  --bb-text-mix: #000;
+  --bb-text-ratio: 60%;
+  --bb-primary-text-ratio: 50%;
 }
 
 [data-bs-theme="dark"] {
@@ -30,6 +35,11 @@
 
   --bb-light-ratio: 14%;
   --bb-clarity-ratio: 22%;
+
+  /* Koyu zeminde metin-güvenli renk türevi: renk + beyaz */
+  --bb-text-mix: #fff;
+  --bb-text-ratio: 60%;
+  --bb-primary-text-ratio: 50%;
 }
 
 /* ------------------------------------------------
@@ -58,6 +68,13 @@
   --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 90%, var(--bb-hover-mix));
   --bb-dark-hover: color-mix(in srgb, var(--bb-dark) 90%, var(--bb-hover-mix));
   --bb-light-hover: color-mix(in srgb, var(--bb-light) 90%, var(--bb-hover-mix));
+
+  /* Text (zemin üstünde okunur metin/ikon rengi; dolgu için --bb-X, metin için --bb-X-text) */
+  --bb-primary-text: color-mix(in srgb, var(--bb-primary) var(--bb-primary-text-ratio), var(--bb-text-mix));
+  --bb-success-text: color-mix(in srgb, var(--bb-success) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-info-text: color-mix(in srgb, var(--bb-info) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-warning-text: color-mix(in srgb, var(--bb-warning) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-danger-text: color-mix(in srgb, var(--bb-danger) var(--bb-text-ratio), var(--bb-text-mix));
 
   /* Light */
   --bb-primary-light: color-mix(in srgb, var(--bb-primary) var(--bb-light-ratio), transparent);
@@ -109,6 +126,12 @@
     --bb-danger-hover: var(--bb-danger);
     --bb-dark-hover: var(--bb-dark);
     --bb-light-hover: var(--bb-light);
+
+    --bb-primary-text: var(--bb-primary);
+    --bb-success-text: var(--bb-success);
+    --bb-info-text: var(--bb-info);
+    --bb-warning-text: var(--bb-warning);
+    --bb-danger-text: var(--bb-danger);
 
     --bb-primary-light: rgba(var(--bb-primary-rgb), 0.12);
     --bb-secondary-light: rgba(var(--bb-secondary-rgb), 0.12);

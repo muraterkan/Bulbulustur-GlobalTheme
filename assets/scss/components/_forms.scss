@@ -97,7 +97,7 @@
   --bb-form-validation-line-height: 1.4;
 
   /* Required */
-  --bb-form-required-color: var(--bb-danger);
+  --bb-form-required-color: var(--bb-danger-text);
   --bb-form-required-size: 0.85em;
 
   /* Checks / Radios / Switch */
@@ -409,7 +409,7 @@ label.required::after {
 }
 
 .input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }

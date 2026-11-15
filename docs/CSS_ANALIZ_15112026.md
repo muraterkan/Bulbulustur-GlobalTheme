@@ -64,3 +64,12 @@ Karar: türetilmiş durum tokenlarının (`--bb-*-hover/active/light/clarity`, 8
 - `themes/_pack-atolye.scss`: 34 türev satır silindi, yalnız girdi kaldı.
 - Doğrulama (Chrome headless, 6 yapılandırma × 36 token, önce/sonra): `data-bs-theme` yokken yalnız link (sarı → mavi `#1d4ed8`) ve `dark-*` değişti. Açık temada hover/active/light değerleri engine formülüne geçti: örn. `danger-hover` `#b91c1c` → `#d73d3d` (daha yumuşak), `success-light` düz `#dcfce7` → %12 saydam yeşil. Yeşil/mavi/kırmızı hover'ın daha koyu olması istenirse `--bb-hover-mix` oranı engine'de tek yerden ayarlanır.
 - Sözleşme: 4 yeni kontrol (türev tokenlar yalnız engine'de).
+
+## G. Palet/token/bileşen eksikleri (15.11.2026, Murat'ın devri)
+
+- **Metin kontrastı:** `--bb-{primary,success,info,warning,danger}-text` (token-engine, mod-farkındalıklı: açıkta renk+siyah %60, koyuda renk+beyaz; primary %50, pakette ayarlanabilir). 43 bileşen kullanımı (alert başlığı, chip/badge/toast, form hata, empty-state, tabs/accordion/menu/breadcrumb aktif) ham dolgu rengi yerine `-text` kullanıyor. Doğrulama (Chrome, 4 yapılandırma): metin/zemin ve metin/%12 tint ≥ 4.5 (en düşük 4.94), yazı/dolgu ≥ 4.9.
+- **Düğme yazısı:** `success`/`warning` dolgu üstü yazı beyaz yerine koyu mürekkep (`navy-900`; success 2.28 → 7.99). `danger` dolgu `red-500` → `red-600` (`#d43030`, beyaz 3.76 → 4.92). Koyu temada warning yazısı açık renk çıkma hatası da düzeldi (`gray-900` koyu temada açık renge dönüyordu).
+- **Ölçek:** tüm aksan ölçekleri 50–900 (200/400/600/800/900 eklendi, mevcut 50/100/300/500/700 değişmedi); sarı 400/800/900, navy 200/400/600/800 eklendi.
+- **Grafik/durum:** `themes/_dataviz.scss`: `--bb-chart-1..8` (kategorik, CVD-güvenli sabit sıra), `--bb-chart-seq-1..7`, `--bb-chart-div-*`, `--bb-chart-surface/grid/axis/label/gap`, `--bb-status-good/warning/serious/critical/neutral`. Pakete bağımsız. Doğrulayıcı (dataviz `validate_palette`): açık ve koyu tüm kapılar PASS; açıkta 3 seri kontrast WARN (etiket/tablo zorunlu).
+- **Bileşenler:** `bb-skeleton` (+text/title/circle/avatar/rect/pill, reduced-motion), `bb-status` (online/away/busy/offline/serious, etiketli, çevrimdışı içi boş halka), `bb-kbd`, `bb-code`, `bb-code-block`. Demo: `modules/panel-tokens.html`.
+- Sözleşme 22/22.

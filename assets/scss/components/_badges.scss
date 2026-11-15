@@ -114,22 +114,22 @@
 ----------------------------- */
 .badge.bb-badge-light-primary {
   --bb-badge-bg: var(--bb-primary-light);
-  --bb-badge-color: var(--bb-primary);
+  --bb-badge-color: var(--bb-primary-text);
 }
 
 .badge.bb-badge-light-success {
   --bb-badge-bg: var(--bb-success-light);
-  --bb-badge-color: var(--bb-success);
+  --bb-badge-color: var(--bb-success-text);
 }
 
 .badge.bb-badge-light-warning {
   --bb-badge-bg: var(--bb-warning-light);
-  --bb-badge-color: var(--bb-warning);
+  --bb-badge-color: var(--bb-warning-text);
 }
 
 .badge.bb-badge-light-danger {
   --bb-badge-bg: var(--bb-danger-light);
-  --bb-badge-color: var(--bb-danger);
+  --bb-badge-color: var(--bb-danger-text);
 }
 
 /* -----------------------------
@@ -144,15 +144,15 @@
 
 /* outline colors */
 .badge.bb-badge-outline.bb-badge-primary {
-  --bb-badge-color: var(--bb-primary);
+  --bb-badge-color: var(--bb-primary-text);
 }
 
 .badge.bb-badge-outline.bb-badge-success {
-  --bb-badge-color: var(--bb-success);
+  --bb-badge-color: var(--bb-success-text);
 }
 
 .badge.bb-badge-outline.bb-badge-danger {
-  --bb-badge-color: var(--bb-danger);
+  --bb-badge-color: var(--bb-danger-text);
 }
 
 /* -----------------------------

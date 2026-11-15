@@ -30,9 +30,12 @@ html[data-bs-theme="light"] {
   --bb-yellow-100: #fff4bf;
   --bb-yellow-200: #ffe985;
   --bb-yellow-300: #ffe45c;
+  --bb-yellow-400: #fede2e;
   --bb-yellow-500: #fed700;
   --bb-yellow-600: #e6c300;
   --bb-yellow-700: #b89400;
+  --bb-yellow-800: #816800;
+  --bb-yellow-900: #584700;
 
   --bb-yellow-rgb: 254, 215, 0;
 
@@ -50,9 +53,13 @@ html[data-bs-theme="light"] {
 
   --bb-navy-50: #edf4fb;
   --bb-navy-100: #d8e7f5;
+  --bb-navy-200: #a4bad0;
   --bb-navy-300: #6f8cab;
+  --bb-navy-400: #435f7d;
   --bb-navy-500: #17324f;
+  --bb-navy-600: #132a44;
   --bb-navy-700: #0f2238;
+  --bb-navy-800: #0c1c2f;
   --bb-navy-900: #081626;
 
   --bb-navy-rgb: 8, 22, 38;
@@ -100,51 +107,86 @@ html[data-bs-theme="light"] {
 
   --bb-blue-50: #eff6ff;
   --bb-blue-100: #dbeafe;
+  --bb-blue-200: #b7d8fe;
   --bb-blue-300: #93c5fd;
+  --bb-blue-400: #5c94f4;
   --bb-blue-500: #2563eb;
+  --bb-blue-600: #2158e2;
   --bb-blue-700: #1d4ed8;
+  --bb-blue-800: #143797;
+  --bb-blue-900: #0e2568;
   --bb-blue-rgb: 37, 99, 235;
 
   --bb-turquoise-50: #ecfeff;
   --bb-turquoise-100: #cffafe;
+  --bb-turquoise-200: #9bf1fc;
   --bb-turquoise-300: #67e8f9;
+  --bb-turquoise-400: #36cfe6;
   --bb-turquoise-500: #06b6d4;
+  --bb-turquoise-600: #0a95b2;
   --bb-turquoise-700: #0e7490;
+  --bb-turquoise-800: #0a5165;
+  --bb-turquoise-900: #073845;
   --bb-turquoise-rgb: 6, 182, 212;
 
   --bb-green-50: #f0fdf4;
   --bb-green-100: #dcfce7;
+  --bb-green-200: #b1f6ca;
   --bb-green-300: #86efac;
+  --bb-green-400: #54da85;
   --bb-green-500: #22c55e;
+  --bb-green-600: #1ca24e;
   --bb-green-700: #15803d;
+  --bb-green-800: #0f5a2b;
+  --bb-green-900: #0a3d1d;
   --bb-green-rgb: 34, 197, 94;
 
   --bb-orange-50: #fff7ed;
   --bb-orange-100: #ffedd5;
+  --bb-orange-200: #fed4a4;
   --bb-orange-300: #fdba74;
+  --bb-orange-400: #fb9645;
   --bb-orange-500: #f97316;
+  --bb-orange-600: #de5a11;
   --bb-orange-700: #c2410c;
+  --bb-orange-800: #882e08;
+  --bb-orange-900: #5d1f06;
   --bb-orange-rgb: 249, 115, 22;
 
   --bb-pink-50: #fdf2f8;
   --bb-pink-100: #fce7f3;
+  --bb-pink-200: #fac8e4;
   --bb-pink-300: #f9a8d4;
+  --bb-pink-400: #f278b6;
   --bb-pink-500: #ec4899;
+  --bb-pink-600: #d5307b;
   --bb-pink-700: #be185d;
+  --bb-pink-800: #851141;
+  --bb-pink-900: #5b0c2d;
   --bb-pink-rgb: 236, 72, 153;
 
   --bb-purple-50: #f5f3ff;
   --bb-purple-100: #ede9fe;
+  --bb-purple-200: #d8cffe;
   --bb-purple-300: #c4b5fd;
+  --bb-purple-400: #a888fa;
   --bb-purple-500: #8b5cf6;
+  --bb-purple-600: #7c42e8;
   --bb-purple-700: #6d28d9;
+  --bb-purple-800: #4c1c98;
+  --bb-purple-900: #341368;
   --bb-purple-rgb: 139, 92, 246;
 
   --bb-red-50: #fef2f2;
   --bb-red-100: #fee2e2;
+  --bb-red-200: #fdc4c4;
   --bb-red-300: #fca5a5;
+  --bb-red-400: #f67474;
   --bb-red-500: #ef4444;
+  --bb-red-600: #d43030;
   --bb-red-700: #b91c1c;
+  --bb-red-800: #821414;
+  --bb-red-900: #590d0d;
   --bb-red-rgb: 239, 68, 68;
 
   /* -------------------------------------
@@ -249,7 +291,7 @@ html[data-bs-theme="light"] {
   --bb-brand-success: var(--bb-green-500);
   --bb-brand-info: var(--bb-blue-500);
   --bb-brand-warning: var(--bb-orange-500);
-  --bb-brand-danger: var(--bb-red-500);
+  --bb-brand-danger: var(--bb-red-600);
   --bb-brand-dark: var(--bb-brand-navy);
   --bb-brand-light: var(--bb-gray-100);
 
@@ -258,15 +300,15 @@ html[data-bs-theme="light"] {
   --bb-brand-success-rgb: var(--bb-green-rgb);
   --bb-brand-info-rgb: var(--bb-blue-rgb);
   --bb-brand-warning-rgb: var(--bb-orange-rgb);
-  --bb-brand-danger-rgb: var(--bb-red-rgb);
+  --bb-brand-danger-rgb: 212, 48, 48;
   --bb-brand-dark-rgb: var(--bb-brand-navy-rgb);
   --bb-brand-light-rgb: 244, 246, 248;
 
   --bb-brand-primary-inverse: var(--bb-brand-yellow-inverse);
   --bb-brand-secondary-inverse: var(--bb-gray-800);
-  --bb-brand-success-inverse: var(--bb-white);
+  --bb-brand-success-inverse: var(--bb-navy-900);
   --bb-brand-info-inverse: var(--bb-white);
-  --bb-brand-warning-inverse: var(--bb-gray-900);
+  --bb-brand-warning-inverse: var(--bb-navy-900);
   --bb-brand-danger-inverse: var(--bb-white);
   --bb-brand-dark-inverse: var(--bb-white);
   --bb-brand-light-inverse: var(--bb-gray-800);

@@ -102,27 +102,27 @@
 ------------------------------------- */
 
 .bb-empty-state-primary .bb-empty-icon {
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
   background-color: var(--bb-primary-light);
 }
 
 .bb-empty-state-success .bb-empty-icon {
-  color: var(--bb-success);
+  color: var(--bb-success-text);
   background-color: var(--bb-success-light);
 }
 
 .bb-empty-state-warning .bb-empty-icon {
-  color: var(--bb-warning);
+  color: var(--bb-warning-text);
   background-color: var(--bb-warning-light);
 }
 
 .bb-empty-state-danger .bb-empty-icon {
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
   background-color: var(--bb-danger-light);
 }
 
 .bb-empty-state-info .bb-empty-icon {
-  color: var(--bb-info);
+  color: var(--bb-info-text);
   background-color: var(--bb-info-light);
 }
 

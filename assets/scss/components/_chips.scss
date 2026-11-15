@@ -85,31 +85,31 @@
 
 .bb-chip-primary-soft {
     --bb-chip-bg: var(--bb-primary-light);
-    --bb-chip-color: var(--bb-primary);
+    --bb-chip-color: var(--bb-primary-text);
     --bb-chip-border-color: transparent;
 }
 
 .bb-chip-success-soft {
     --bb-chip-bg: var(--bb-success-light);
-    --bb-chip-color: var(--bb-success);
+    --bb-chip-color: var(--bb-success-text);
     --bb-chip-border-color: transparent;
 }
 
 .bb-chip-warning-soft {
     --bb-chip-bg: var(--bb-warning-light);
-    --bb-chip-color: var(--bb-warning);
+    --bb-chip-color: var(--bb-warning-text);
     --bb-chip-border-color: transparent;
 }
 
 .bb-chip-danger-soft {
     --bb-chip-bg: var(--bb-danger-light);
-    --bb-chip-color: var(--bb-danger);
+    --bb-chip-color: var(--bb-danger-text);
     --bb-chip-border-color: transparent;
 }
 
 .bb-chip-info-soft {
     --bb-chip-bg: var(--bb-info-light);
-    --bb-chip-color: var(--bb-info);
+    --bb-chip-color: var(--bb-info-text);
     --bb-chip-border-color: transparent;
 }
 
@@ -167,24 +167,24 @@
 
 .bb-chip-outline-success {
     --bb-chip-bg: transparent;
-    --bb-chip-color: var(--bb-success);
+    --bb-chip-color: var(--bb-success-text);
     --bb-chip-border-color: var(--bb-success);
 }
 
 .bb-chip-outline-warning {
     --bb-chip-bg: transparent;
-    --bb-chip-color: var(--bb-warning);
+    --bb-chip-color: var(--bb-warning-text);
     --bb-chip-border-color: var(--bb-warning);
 }
 
 .bb-chip-outline-danger {
     --bb-chip-bg: transparent;
-    --bb-chip-color: var(--bb-danger);
+    --bb-chip-color: var(--bb-danger-text);
     --bb-chip-border-color: var(--bb-danger);
 }
 
 .bb-chip-outline-info {
     --bb-chip-bg: transparent;
-    --bb-chip-color: var(--bb-info);
+    --bb-chip-color: var(--bb-info-text);
     --bb-chip-border-color: var(--bb-info);
 }

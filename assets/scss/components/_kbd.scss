@@ -1,0 +1,55 @@
+/* =====================================
+   Bulbulustur Theme - Kbd & Code
+   Prefix: bb-
+   Klavye tuşu ve satır içi kod.
+===================================== */
+
+.bb-kbd {
+  /* tokens */
+  --bb-kbd-bg: var(--bb-tertiary-bg);
+  --bb-kbd-color: var(--bb-body-color);
+  --bb-kbd-border-color: var(--bb-border-color-strong);
+  --bb-kbd-radius: var(--bb-radius-sm);
+  --bb-kbd-font-size: 0.8125em;
+
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.125em 0.45em;
+  border: 1px solid var(--bb-kbd-border-color);
+  border-bottom-width: 2px;
+  border-radius: var(--bb-kbd-radius);
+  background-color: var(--bb-kbd-bg);
+  color: var(--bb-kbd-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace);
+  font-size: var(--bb-kbd-font-size);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bb-code {
+  /* tokens */
+  --bb-code-bg: var(--bb-tertiary-bg);
+  --bb-code-color: var(--bb-body-color);
+  --bb-code-border-color: var(--bb-border-color);
+  --bb-code-radius: var(--bb-radius-sm);
+  --bb-code-font-size: 0.875em;
+
+  padding: 0.125em 0.4em;
+  border: 1px solid var(--bb-code-border-color);
+  border-radius: var(--bb-code-radius);
+  background-color: var(--bb-code-bg);
+  color: var(--bb-code-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace);
+  font-size: var(--bb-code-font-size);
+  word-break: break-word;
+}
+
+.bb-code-block {
+  display: block;
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  white-space: pre;
+  word-break: normal;
+}

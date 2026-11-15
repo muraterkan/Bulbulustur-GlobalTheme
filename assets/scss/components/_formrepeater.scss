@@ -150,7 +150,7 @@
 /* Remove button helper (keep Bootstrap .btn base) */
 .bb-formrepeater-btn-remove {
   --bb-fr-remove-bg: color-mix(in srgb, var(--bb-danger) 10%, transparent);
-  --bb-fr-remove-color: var(--bb-danger);
+  --bb-fr-remove-color: var(--bb-danger-text);
   background: var(--bb-fr-remove-bg);
   color: var(--bb-fr-remove-color);
   border-color: color-mix(in srgb, var(--bb-danger) 25%, var(--bb-fr-border-color));
@@ -158,12 +158,12 @@
 
 .bb-formrepeater-btn-remove:hover {
   background: color-mix(in srgb, var(--bb-danger) 14%, transparent);
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
 }
 
 .bb-formrepeater-btn-add {
   --bb-fr-add-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
-  --bb-fr-add-color: var(--bb-primary);
+  --bb-fr-add-color: var(--bb-primary-text);
   background: var(--bb-fr-add-bg);
   color: var(--bb-fr-add-color);
   border-color: color-mix(in srgb, var(--bb-primary) 25%, var(--bb-fr-border-color));
@@ -171,7 +171,7 @@
 
 .bb-formrepeater-btn-add:hover {
   background: color-mix(in srgb, var(--bb-primary) 14%, transparent);
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
 }
 
 /* Compact density hook (optional) */

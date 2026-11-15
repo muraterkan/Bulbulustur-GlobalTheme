@@ -1,0 +1,86 @@
+/* =====================================
+   Bulbulustur Theme - Skeleton (yükleniyor yer tutucusu)
+   Prefix: bb-
+   Hareket azaltma tercihinde animasyon durur.
+===================================== */
+
+.bb-skeleton {
+  /* tokens */
+  --bb-skeleton-bg: var(--bb-secondary-bg);
+  --bb-skeleton-highlight: color-mix(in srgb, var(--bb-surface-bg) 55%, var(--bb-secondary-bg));
+  --bb-skeleton-radius: var(--bb-radius-sm);
+  --bb-skeleton-speed: 1.4s;
+  --bb-skeleton-height: 1rem;
+
+  display: block;
+  width: 100%;
+  height: var(--bb-skeleton-height);
+  border-radius: var(--bb-skeleton-radius);
+  background-color: var(--bb-skeleton-bg);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--bb-skeleton-highlight) 50%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  animation: bb-skeleton-shimmer var(--bb-skeleton-speed) ease-in-out infinite;
+}
+
+.bb-skeleton-text {
+  --bb-skeleton-height: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.bb-skeleton-text:last-child {
+  width: 60%;
+  margin-bottom: 0;
+}
+
+.bb-skeleton-title {
+  --bb-skeleton-height: 1.5rem;
+  width: 45%;
+  margin-bottom: 0.75rem;
+}
+
+.bb-skeleton-circle {
+  --bb-skeleton-radius: 50%;
+  --bb-skeleton-height: 2.5rem;
+  width: var(--bb-skeleton-height);
+}
+
+.bb-skeleton-avatar {
+  --bb-skeleton-radius: 50%;
+  --bb-skeleton-height: 2.5rem;
+  width: var(--bb-skeleton-height);
+  flex-shrink: 0;
+}
+
+.bb-skeleton-rect {
+  --bb-skeleton-height: 8rem;
+}
+
+.bb-skeleton-pill {
+  --bb-skeleton-radius: 999px;
+  --bb-skeleton-height: 1.5rem;
+  width: 5rem;
+}
+
+@keyframes bb-skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-skeleton {
+    animation: none;
+    background-image: none;
+  }
+}

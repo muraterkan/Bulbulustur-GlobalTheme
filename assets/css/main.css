@@ -29,9 +29,12 @@ html[data-bs-theme=light] {
   --bb-yellow-100: #fff4bf;
   --bb-yellow-200: #ffe985;
   --bb-yellow-300: #ffe45c;
+  --bb-yellow-400: #fede2e;
   --bb-yellow-500: #fed700;
   --bb-yellow-600: #e6c300;
   --bb-yellow-700: #b89400;
+  --bb-yellow-800: #816800;
+  --bb-yellow-900: #584700;
   --bb-yellow-rgb: 254, 215, 0;
   --bb-brand-yellow: var(--bb-yellow-500);
   --bb-brand-yellow-rgb: var(--bb-yellow-rgb);
@@ -45,9 +48,13 @@ html[data-bs-theme=light] {
   ------------------------------------- */
   --bb-navy-50: #edf4fb;
   --bb-navy-100: #d8e7f5;
+  --bb-navy-200: #a4bad0;
   --bb-navy-300: #6f8cab;
+  --bb-navy-400: #435f7d;
   --bb-navy-500: #17324f;
+  --bb-navy-600: #132a44;
   --bb-navy-700: #0f2238;
+  --bb-navy-800: #0c1c2f;
   --bb-navy-900: #081626;
   --bb-navy-rgb: 8, 22, 38;
   --bb-brand-navy: var(--bb-navy-900);
@@ -86,45 +93,80 @@ html[data-bs-theme=light] {
   ------------------------------------- */
   --bb-blue-50: #eff6ff;
   --bb-blue-100: #dbeafe;
+  --bb-blue-200: #b7d8fe;
   --bb-blue-300: #93c5fd;
+  --bb-blue-400: #5c94f4;
   --bb-blue-500: #2563eb;
+  --bb-blue-600: #2158e2;
   --bb-blue-700: #1d4ed8;
+  --bb-blue-800: #143797;
+  --bb-blue-900: #0e2568;
   --bb-blue-rgb: 37, 99, 235;
   --bb-turquoise-50: #ecfeff;
   --bb-turquoise-100: #cffafe;
+  --bb-turquoise-200: #9bf1fc;
   --bb-turquoise-300: #67e8f9;
+  --bb-turquoise-400: #36cfe6;
   --bb-turquoise-500: #06b6d4;
+  --bb-turquoise-600: #0a95b2;
   --bb-turquoise-700: #0e7490;
+  --bb-turquoise-800: #0a5165;
+  --bb-turquoise-900: #073845;
   --bb-turquoise-rgb: 6, 182, 212;
   --bb-green-50: #f0fdf4;
   --bb-green-100: #dcfce7;
+  --bb-green-200: #b1f6ca;
   --bb-green-300: #86efac;
+  --bb-green-400: #54da85;
   --bb-green-500: #22c55e;
+  --bb-green-600: #1ca24e;
   --bb-green-700: #15803d;
+  --bb-green-800: #0f5a2b;
+  --bb-green-900: #0a3d1d;
   --bb-green-rgb: 34, 197, 94;
   --bb-orange-50: #fff7ed;
   --bb-orange-100: #ffedd5;
+  --bb-orange-200: #fed4a4;
   --bb-orange-300: #fdba74;
+  --bb-orange-400: #fb9645;
   --bb-orange-500: #f97316;
+  --bb-orange-600: #de5a11;
   --bb-orange-700: #c2410c;
+  --bb-orange-800: #882e08;
+  --bb-orange-900: #5d1f06;
   --bb-orange-rgb: 249, 115, 22;
   --bb-pink-50: #fdf2f8;
   --bb-pink-100: #fce7f3;
+  --bb-pink-200: #fac8e4;
   --bb-pink-300: #f9a8d4;
+  --bb-pink-400: #f278b6;
   --bb-pink-500: #ec4899;
+  --bb-pink-600: #d5307b;
   --bb-pink-700: #be185d;
+  --bb-pink-800: #851141;
+  --bb-pink-900: #5b0c2d;
   --bb-pink-rgb: 236, 72, 153;
   --bb-purple-50: #f5f3ff;
   --bb-purple-100: #ede9fe;
+  --bb-purple-200: #d8cffe;
   --bb-purple-300: #c4b5fd;
+  --bb-purple-400: #a888fa;
   --bb-purple-500: #8b5cf6;
+  --bb-purple-600: #7c42e8;
   --bb-purple-700: #6d28d9;
+  --bb-purple-800: #4c1c98;
+  --bb-purple-900: #341368;
   --bb-purple-rgb: 139, 92, 246;
   --bb-red-50: #fef2f2;
   --bb-red-100: #fee2e2;
+  --bb-red-200: #fdc4c4;
   --bb-red-300: #fca5a5;
+  --bb-red-400: #f67474;
   --bb-red-500: #ef4444;
+  --bb-red-600: #d43030;
   --bb-red-700: #b91c1c;
+  --bb-red-800: #821414;
+  --bb-red-900: #590d0d;
   --bb-red-rgb: 239, 68, 68;
   /* -------------------------------------
      Body / Backgrounds
@@ -204,7 +246,7 @@ html[data-bs-theme=light] {
   --bb-brand-success: var(--bb-green-500);
   --bb-brand-info: var(--bb-blue-500);
   --bb-brand-warning: var(--bb-orange-500);
-  --bb-brand-danger: var(--bb-red-500);
+  --bb-brand-danger: var(--bb-red-600);
   --bb-brand-dark: var(--bb-brand-navy);
   --bb-brand-light: var(--bb-gray-100);
   --bb-brand-primary-rgb: var(--bb-brand-yellow-rgb);
@@ -212,14 +254,14 @@ html[data-bs-theme=light] {
   --bb-brand-success-rgb: var(--bb-green-rgb);
   --bb-brand-info-rgb: var(--bb-blue-rgb);
   --bb-brand-warning-rgb: var(--bb-orange-rgb);
-  --bb-brand-danger-rgb: var(--bb-red-rgb);
+  --bb-brand-danger-rgb: 212, 48, 48;
   --bb-brand-dark-rgb: var(--bb-brand-navy-rgb);
   --bb-brand-light-rgb: 244, 246, 248;
   --bb-brand-primary-inverse: var(--bb-brand-yellow-inverse);
   --bb-brand-secondary-inverse: var(--bb-gray-800);
-  --bb-brand-success-inverse: var(--bb-white);
+  --bb-brand-success-inverse: var(--bb-navy-900);
   --bb-brand-info-inverse: var(--bb-white);
-  --bb-brand-warning-inverse: var(--bb-gray-900);
+  --bb-brand-warning-inverse: var(--bb-navy-900);
   --bb-brand-danger-inverse: var(--bb-white);
   --bb-brand-dark-inverse: var(--bb-white);
   --bb-brand-light-inverse: var(--bb-gray-800);
@@ -831,6 +873,10 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   --bb-hover-mix: var(--bb-mix-shade);
   --bb-light-ratio: 12%;
   --bb-clarity-ratio: 18%;
+  /* Metin-güvenli (AA >= 4.5) renk türevi: renk + siyah. Sarı gibi açık markalar için ayrı oran. */
+  --bb-text-mix: #000;
+  --bb-text-ratio: 60%;
+  --bb-primary-text-ratio: 50%;
 }
 
 [data-bs-theme=dark] {
@@ -840,6 +886,10 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   --bb-hover-mix: var(--bb-mix-tint);
   --bb-light-ratio: 14%;
   --bb-clarity-ratio: 22%;
+  /* Koyu zeminde metin-güvenli renk türevi: renk + beyaz */
+  --bb-text-mix: #fff;
+  --bb-text-ratio: 60%;
+  --bb-primary-text-ratio: 50%;
 }
 
 /* ------------------------------------------------
@@ -866,6 +916,12 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 90%, var(--bb-hover-mix));
   --bb-dark-hover: color-mix(in srgb, var(--bb-dark) 90%, var(--bb-hover-mix));
   --bb-light-hover: color-mix(in srgb, var(--bb-light) 90%, var(--bb-hover-mix));
+  /* Text (zemin üstünde okunur metin/ikon rengi; dolgu için --bb-X, metin için --bb-X-text) */
+  --bb-primary-text: color-mix(in srgb, var(--bb-primary) var(--bb-primary-text-ratio), var(--bb-text-mix));
+  --bb-success-text: color-mix(in srgb, var(--bb-success) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-info-text: color-mix(in srgb, var(--bb-info) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-warning-text: color-mix(in srgb, var(--bb-warning) var(--bb-text-ratio), var(--bb-text-mix));
+  --bb-danger-text: color-mix(in srgb, var(--bb-danger) var(--bb-text-ratio), var(--bb-text-mix));
   /* Light */
   --bb-primary-light: color-mix(in srgb, var(--bb-primary) var(--bb-light-ratio), transparent);
   --bb-secondary-light: color-mix(in srgb, var(--bb-secondary) var(--bb-light-ratio), transparent);
@@ -912,6 +968,11 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
     --bb-danger-hover: var(--bb-danger);
     --bb-dark-hover: var(--bb-dark);
     --bb-light-hover: var(--bb-light);
+    --bb-primary-text: var(--bb-primary);
+    --bb-success-text: var(--bb-success);
+    --bb-info-text: var(--bb-info);
+    --bb-warning-text: var(--bb-warning);
+    --bb-danger-text: var(--bb-danger);
     --bb-primary-light: rgba(var(--bb-primary-rgb), 0.12);
     --bb-secondary-light: rgba(var(--bb-secondary-rgb), 0.12);
     --bb-success-light: rgba(var(--bb-success-rgb), 0.12);
@@ -930,6 +991,79 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
     --bb-light-clarity: rgba(var(--bb-light-rgb), 0.25);
   }
 }
+/* =====================================
+   Bulbulustur Theme - Data Viz & Status Tokens
+   Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
+   Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
+   Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
+   Kullanım kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
+   Durum renkleri yalnız ikon/etiket ile birlikte kullanılır (renk tek başına anlam taşımaz).
+===================================== */
+:root,
+html[data-bs-theme=light] {
+  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Diğer"e katlanır) */
+  --bb-chart-1: #2a78d6;
+  --bb-chart-2: #eb6834;
+  --bb-chart-3: #1baf7a;
+  --bb-chart-4: #eda100;
+  --bb-chart-5: #e87ba4;
+  --bb-chart-6: #008300;
+  --bb-chart-7: #6250d6;
+  --bb-chart-8: #e34948;
+  /* Sıralı (tek ton, düşük -> yüksek) */
+  --bb-chart-seq-1: #cde2fb;
+  --bb-chart-seq-2: #9ec5f4;
+  --bb-chart-seq-3: #6da7ec;
+  --bb-chart-seq-4: #3987e5;
+  --bb-chart-seq-5: #256abf;
+  --bb-chart-seq-6: #184f95;
+  --bb-chart-seq-7: #0d366b;
+  /* Ayrışan (iki kutup + nötr orta) */
+  --bb-chart-div-neg: #e34948;
+  --bb-chart-div-mid: #f0efec;
+  --bb-chart-div-pos: #2a78d6;
+  /* Durum (ikon/etiketle birlikte) */
+  --bb-status-good: #0ca30c;
+  --bb-status-warning: #fab219;
+  --bb-status-serious: #ec835a;
+  --bb-status-critical: #d03b3b;
+  --bb-status-neutral: var(--bb-gray-500);
+}
+
+html[data-bs-theme=dark] {
+  --bb-chart-1: #3987e5;
+  --bb-chart-2: #d95926;
+  --bb-chart-3: #199e70;
+  --bb-chart-4: #c98500;
+  --bb-chart-5: #d55181;
+  --bb-chart-6: #0ca30c;
+  --bb-chart-7: #9085e9;
+  --bb-chart-8: #e66767;
+  /* Koyu zeminde "sıfıra yakın" en koyu adım zemine gömülür */
+  --bb-chart-seq-1: #184f95;
+  --bb-chart-seq-2: #256abf;
+  --bb-chart-seq-3: #2a78d6;
+  --bb-chart-seq-4: #3987e5;
+  --bb-chart-seq-5: #6da7ec;
+  --bb-chart-seq-6: #9ec5f4;
+  --bb-chart-seq-7: #cde2fb;
+  --bb-chart-div-neg: #e66767;
+  --bb-chart-div-mid: #383835;
+  --bb-chart-div-pos: #3987e5;
+  --bb-status-neutral: var(--bb-tertiary-color);
+}
+
+/* Tema bağımsız grafik yüzeyi ve eksen/ızgara/metin (semantik tokenlardan) */
+:root,
+html[data-bs-theme=light],
+html[data-bs-theme=dark] {
+  --bb-chart-surface: var(--bb-surface-bg);
+  --bb-chart-grid: var(--bb-border-color);
+  --bb-chart-axis: var(--bb-secondary-color);
+  --bb-chart-label: var(--bb-body-color);
+  --bb-chart-gap: 2px;
+}
+
 /* =====================================
    Bulbulustur Theme - Renk Paketi: ATÖLYE
    El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
@@ -1074,6 +1208,8 @@ html[data-bb-pack=atolye]:not([data-bs-theme=dark]) {
   --bb-footer-bg: var(--bb-olive-900);
   --bb-footer-bg-soft: var(--bb-olive-800);
   --bb-footer-bottom-bg: color-mix(in srgb, var(--bb-olive-900) 82%, #000);
+  /* Primary zaten AA (4.99); metin türevi yalnız %15 koyulaştırılır (tint üstünde 5.29) */
+  --bb-primary-text-ratio: 85%;
   /* Bağlantı */
   --bb-link-color: var(--bb-terracotta-600);
   --bb-link-hover-color: var(--bb-terracotta-700);
@@ -1157,6 +1293,7 @@ html[data-bb-pack=atolye][data-bs-theme=dark] {
   --bb-header-top-action-hover-bg: color-mix(in srgb, #f2eadf 12%, transparent);
   --bb-footer-border-color: color-mix(in srgb, #e0cbb0 13%, transparent);
   --bb-footer-border-color-strong: color-mix(in srgb, #e0cbb0 22%, transparent);
+  --bb-primary-text-ratio: 100%;
   --bb-link-color: #e7b49f;
   --bb-link-hover-color: var(--bb-primary);
 }
@@ -9357,27 +9494,27 @@ Header
    Tone variants
 ------------------------------------- */
 .bb-empty-state-primary .bb-empty-icon {
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
   background-color: var(--bb-primary-light);
 }
 
 .bb-empty-state-success .bb-empty-icon {
-  color: var(--bb-success);
+  color: var(--bb-success-text);
   background-color: var(--bb-success-light);
 }
 
 .bb-empty-state-warning .bb-empty-icon {
-  color: var(--bb-warning);
+  color: var(--bb-warning-text);
   background-color: var(--bb-warning-light);
 }
 
 .bb-empty-state-danger .bb-empty-icon {
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
   background-color: var(--bb-danger-light);
 }
 
 .bb-empty-state-info .bb-empty-icon {
-  color: var(--bb-info);
+  color: var(--bb-info-text);
   background-color: var(--bb-info-light);
 }
 
@@ -9462,7 +9599,7 @@ Header
   --bb-accordion-bg: var(--bb-body-bg);
   --bb-accordion-color: var(--bb-body-color);
   --bb-accordion-muted-color: var(--bb-secondary-color);
-  --bb-accordion-active-color: var(--bb-primary);
+  --bb-accordion-active-color: var(--bb-primary-text);
   --bb-accordion-active-bg: var(--bb-tertiary-bg);
 }
 .bb-accordion .accordion-item {
@@ -9687,28 +9824,28 @@ Header
 .bb-alert-primary {
   --bb-alert-bg: var(--bb-primary-light);
   --bb-alert-border-color: var(--bb-primary);
-  --bb-alert-title-color: var(--bb-primary);
+  --bb-alert-title-color: var(--bb-primary-text);
 }
 
 /* Success */
 .bb-alert-success {
   --bb-alert-bg: var(--bb-success-light);
   --bb-alert-border-color: var(--bb-success);
-  --bb-alert-title-color: var(--bb-success);
+  --bb-alert-title-color: var(--bb-success-text);
 }
 
 /* Warning */
 .bb-alert-warning {
   --bb-alert-bg: var(--bb-warning-light);
   --bb-alert-border-color: var(--bb-warning);
-  --bb-alert-title-color: var(--bb-warning);
+  --bb-alert-title-color: var(--bb-warning-text);
 }
 
 /* Danger */
 .bb-alert-danger {
   --bb-alert-bg: var(--bb-danger-light);
   --bb-alert-border-color: var(--bb-danger);
-  --bb-alert-title-color: var(--bb-danger);
+  --bb-alert-title-color: var(--bb-danger-text);
 }
 
 /* =====================================
@@ -9729,8 +9866,8 @@ Header
   --bb-nav-bg: transparent;
   --bb-nav-border-color: var(--bb-border-color);
   --bb-nav-color: var(--bb-secondary-color, var(--bs-secondary-color, var(--bb-body-color)));
-  --bb-nav-hover-color:var(--bb-primary);
-  --bb-nav-active-color:var(--bb-primary);
+  --bb-nav-hover-color:var(--bb-primary-text);
+  --bb-nav-active-color:var(--bb-primary-text);
   /* Backgrounds */
   --bb-nav-hover-bg: transparent;
   --bb-nav-active-bg: var(--bb-body-bg);
@@ -10020,22 +10157,22 @@ Header
 ----------------------------- */
 .badge.bb-badge-light-primary {
   --bb-badge-bg: var(--bb-primary-light);
-  --bb-badge-color: var(--bb-primary);
+  --bb-badge-color: var(--bb-primary-text);
 }
 
 .badge.bb-badge-light-success {
   --bb-badge-bg: var(--bb-success-light);
-  --bb-badge-color: var(--bb-success);
+  --bb-badge-color: var(--bb-success-text);
 }
 
 .badge.bb-badge-light-warning {
   --bb-badge-bg: var(--bb-warning-light);
-  --bb-badge-color: var(--bb-warning);
+  --bb-badge-color: var(--bb-warning-text);
 }
 
 .badge.bb-badge-light-danger {
   --bb-badge-bg: var(--bb-danger-light);
-  --bb-badge-color: var(--bb-danger);
+  --bb-badge-color: var(--bb-danger-text);
 }
 
 /* -----------------------------
@@ -10049,15 +10186,15 @@ Header
 
 /* outline colors */
 .badge.bb-badge-outline.bb-badge-primary {
-  --bb-badge-color: var(--bb-primary);
+  --bb-badge-color: var(--bb-primary-text);
 }
 
 .badge.bb-badge-outline.bb-badge-success {
-  --bb-badge-color: var(--bb-success);
+  --bb-badge-color: var(--bb-success-text);
 }
 
 .badge.bb-badge-outline.bb-badge-danger {
-  --bb-badge-color: var(--bb-danger);
+  --bb-badge-color: var(--bb-danger-text);
 }
 
 /* -----------------------------
@@ -10160,31 +10297,31 @@ button.badge.bb-badge:disabled {
 /* Soft variants */
 .bb-chip-primary-soft {
   --bb-chip-bg: var(--bb-primary-light);
-  --bb-chip-color: var(--bb-primary);
+  --bb-chip-color: var(--bb-primary-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-chip-success-soft {
   --bb-chip-bg: var(--bb-success-light);
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-chip-warning-soft {
   --bb-chip-bg: var(--bb-warning-light);
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-chip-danger-soft {
   --bb-chip-bg: var(--bb-danger-light);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-chip-info-soft {
   --bb-chip-bg: var(--bb-info-light);
-  --bb-chip-color: var(--bb-info);
+  --bb-chip-color: var(--bb-info-text);
   --bb-chip-border-color: transparent;
 }
 
@@ -10240,25 +10377,25 @@ button.badge.bb-badge:disabled {
 
 .bb-chip-outline-success {
   --bb-chip-bg: transparent;
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
   --bb-chip-border-color: var(--bb-success);
 }
 
 .bb-chip-outline-warning {
   --bb-chip-bg: transparent;
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
   --bb-chip-border-color: var(--bb-warning);
 }
 
 .bb-chip-outline-danger {
   --bb-chip-bg: transparent;
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
   --bb-chip-border-color: var(--bb-danger);
 }
 
 .bb-chip-outline-info {
   --bb-chip-bg: transparent;
-  --bb-chip-color: var(--bb-info);
+  --bb-chip-color: var(--bb-info-text);
   --bb-chip-border-color: var(--bb-info);
 }
 
@@ -10305,7 +10442,7 @@ button.badge.bb-badge:disabled {
   --bb-breadcrumb-separator-color: var(--bs-tertiary-color, var(--bb-breadcrumb-color));
   --bb-breadcrumb-font-size: var(--bb-fs-sm);
   --bb-breadcrumb-gap: 0.75rem;
-  --bb-breadcrumb-link-hover-color: var(--bb-primary);
+  --bb-breadcrumb-link-hover-color: var(--bb-primary-text);
   --bb-breadcrumb-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
   --bb-breadcrumb-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
   --bb-breadcrumb-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
@@ -10865,13 +11002,13 @@ button.badge.bb-badge:disabled {
 ------------------------------------- */
 .toast.bb-toast-success {
   --bb-toast-bg: var(--bb-success-light);
-  --bb-toast-color: var(--bb-success);
+  --bb-toast-color: var(--bb-success-text);
   --bb-toast-border-color: var(--bb-success-clarity);
 }
 
 .toast.bb-toast-danger {
   --bb-toast-bg: var(--bb-danger-light);
-  --bb-toast-color: var(--bb-danger);
+  --bb-toast-color: var(--bb-danger-text);
   --bb-toast-border-color: var(--bb-danger-clarity);
 }
 
@@ -10883,13 +11020,13 @@ button.badge.bb-badge:disabled {
 
 .toast.bb-toast-info {
   --bb-toast-bg: var(--bb-info-light);
-  --bb-toast-color: var(--bb-info);
+  --bb-toast-color: var(--bb-info-text);
   --bb-toast-border-color: var(--bb-info-clarity);
 }
 
 .toast.bb-toast-primary {
   --bb-toast-bg: var(--bb-primary-light);
-  --bb-toast-color: var(--bb-primary);
+  --bb-toast-color: var(--bb-primary-text);
   --bb-toast-border-color: var(--bb-primary-clarity);
 }
 
@@ -11974,7 +12111,7 @@ button.badge.bb-badge:disabled {
   /* Link colors */
   --bb-menu-link-color: var(--bs-secondary-color, var(--bb-body-color));
   --bb-menu-link-hover-color: var(--bb-body-color);
-  --bb-menu-link-active-color: var(--bb-primary);
+  --bb-menu-link-active-color: var(--bb-primary-text);
   /* Link backgrounds */
   --bb-menu-link-hover-bg: var(--bb-tertiary-bg);
   --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary) 12%, transparent);
@@ -12627,7 +12764,7 @@ button.badge.bb-badge:disabled {
   --bb-form-validation-font-size: var(--bb-fs-xs);
   --bb-form-validation-line-height: 1.4;
   /* Required */
-  --bb-form-required-color: var(--bb-danger);
+  --bb-form-required-color: var(--bb-danger-text);
   --bb-form-required-size: 0.85em;
   /* Checks / Radios / Switch */
   --bb-form-check-solid-bg: color-mix(in srgb, var(--bb-body-bg) 90%, var(--bb-tertiary-bg));
@@ -12912,7 +13049,7 @@ label.required::after {
 }
 
 .input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }
@@ -13169,13 +13306,13 @@ label.required::after {
 .form-floating > .form-control.is-valid ~ label,
 .form-floating > .form-select.is-valid ~ label,
 .form-floating > textarea.form-control.is-valid ~ label {
-  color: var(--bb-success);
+  color: var(--bb-success-text);
 }
 
 .form-floating > .form-control.is-invalid ~ label,
 .form-floating > .form-select.is-invalid ~ label,
 .form-floating > textarea.form-control.is-invalid ~ label {
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
 }
 
 /* -------------------------------------
@@ -14748,7 +14885,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* Remove button helper (keep Bootstrap .btn base) */
 .bb-formrepeater-btn-remove {
   --bb-fr-remove-bg: color-mix(in srgb, var(--bb-danger) 10%, transparent);
-  --bb-fr-remove-color: var(--bb-danger);
+  --bb-fr-remove-color: var(--bb-danger-text);
   background: var(--bb-fr-remove-bg);
   color: var(--bb-fr-remove-color);
   border-color: color-mix(in srgb, var(--bb-danger) 25%, var(--bb-fr-border-color));
@@ -14756,12 +14893,12 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-formrepeater-btn-remove:hover {
   background: color-mix(in srgb, var(--bb-danger) 14%, transparent);
-  color: var(--bb-danger);
+  color: var(--bb-danger-text);
 }
 
 .bb-formrepeater-btn-add {
   --bb-fr-add-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
-  --bb-fr-add-color: var(--bb-primary);
+  --bb-fr-add-color: var(--bb-primary-text);
   background: var(--bb-fr-add-bg);
   color: var(--bb-fr-add-color);
   border-color: color-mix(in srgb, var(--bb-primary) 25%, var(--bb-fr-border-color));
@@ -14769,7 +14906,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-formrepeater-btn-add:hover {
   background: color-mix(in srgb, var(--bb-primary) 14%, transparent);
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
 }
 
 /* Compact density hook (optional) */
@@ -15229,6 +15366,212 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* Make it easy to anchor overlays */
 .bb-spinner-overlay-wrap {
   position: relative;
+}
+
+/* =====================================
+   Bulbulustur Theme - Skeleton (yükleniyor yer tutucusu)
+   Prefix: bb-
+   Hareket azaltma tercihinde animasyon durur.
+===================================== */
+.bb-skeleton {
+  /* tokens */
+  --bb-skeleton-bg: var(--bb-secondary-bg);
+  --bb-skeleton-highlight: color-mix(in srgb, var(--bb-surface-bg) 55%, var(--bb-secondary-bg));
+  --bb-skeleton-radius: var(--bb-radius-sm);
+  --bb-skeleton-speed: 1.4s;
+  --bb-skeleton-height: 1rem;
+  display: block;
+  width: 100%;
+  height: var(--bb-skeleton-height);
+  border-radius: var(--bb-skeleton-radius);
+  background-color: var(--bb-skeleton-bg);
+  background-image: linear-gradient(90deg, transparent 0%, var(--bb-skeleton-highlight) 50%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  animation: bb-skeleton-shimmer var(--bb-skeleton-speed) ease-in-out infinite;
+}
+
+.bb-skeleton-text {
+  --bb-skeleton-height: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.bb-skeleton-text:last-child {
+  width: 60%;
+  margin-bottom: 0;
+}
+
+.bb-skeleton-title {
+  --bb-skeleton-height: 1.5rem;
+  width: 45%;
+  margin-bottom: 0.75rem;
+}
+
+.bb-skeleton-circle {
+  --bb-skeleton-radius: 50%;
+  --bb-skeleton-height: 2.5rem;
+  width: var(--bb-skeleton-height);
+}
+
+.bb-skeleton-avatar {
+  --bb-skeleton-radius: 50%;
+  --bb-skeleton-height: 2.5rem;
+  width: var(--bb-skeleton-height);
+  flex-shrink: 0;
+}
+
+.bb-skeleton-rect {
+  --bb-skeleton-height: 8rem;
+}
+
+.bb-skeleton-pill {
+  --bb-skeleton-radius: 999px;
+  --bb-skeleton-height: 1.5rem;
+  width: 5rem;
+}
+
+@keyframes bb-skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-skeleton {
+    animation: none;
+    background-image: none;
+  }
+}
+/* =====================================
+   Bulbulustur Theme - Status (durum noktası + etiket)
+   Prefix: bb-
+   Renk tek başına anlam taşımaz: etiket (.bb-status-label) veya ekran okuyucu metni gerekir.
+   Şekil de ayırt eder: çevrimdışı içi boş halka.
+===================================== */
+.bb-status {
+  /* tokens */
+  --bb-status-color: var(--bb-status-neutral);
+  --bb-status-dot-size: 0.5rem;
+  --bb-status-gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-status-gap);
+  color: var(--bb-body-color);
+  font-size: var(--bb-fs-sm);
+  line-height: 1.25;
+  vertical-align: middle;
+}
+
+.bb-status::before {
+  content: "";
+  flex-shrink: 0;
+  width: var(--bb-status-dot-size);
+  height: var(--bb-status-dot-size);
+  border-radius: 50%;
+  background-color: var(--bb-status-color);
+}
+
+.bb-status-label {
+  color: var(--bb-body-color);
+}
+
+/* durumlar */
+.bb-status-online,
+.bb-status-good {
+  --bb-status-color: var(--bb-status-good);
+}
+
+.bb-status-away,
+.bb-status-warning {
+  --bb-status-color: var(--bb-status-warning);
+}
+
+.bb-status-serious {
+  --bb-status-color: var(--bb-status-serious);
+}
+
+.bb-status-busy,
+.bb-status-critical {
+  --bb-status-color: var(--bb-status-critical);
+}
+
+.bb-status-offline {
+  --bb-status-color: var(--bb-status-neutral);
+}
+
+.bb-status-offline::before {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--bb-status-color);
+}
+
+/* boyutlar */
+.bb-status-sm {
+  --bb-status-dot-size: 0.375rem;
+}
+
+.bb-status-lg {
+  --bb-status-dot-size: 0.75rem;
+}
+
+/* yalnız nokta (etiket görünmez metinle verilir) */
+.bb-status-dot-only {
+  --bb-status-gap: 0;
+}
+
+/* =====================================
+   Bulbulustur Theme - Kbd & Code
+   Prefix: bb-
+   Klavye tuşu ve satır içi kod.
+===================================== */
+.bb-kbd {
+  /* tokens */
+  --bb-kbd-bg: var(--bb-tertiary-bg);
+  --bb-kbd-color: var(--bb-body-color);
+  --bb-kbd-border-color: var(--bb-border-color-strong);
+  --bb-kbd-radius: var(--bb-radius-sm);
+  --bb-kbd-font-size: 0.8125em;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.125em 0.45em;
+  border: 1px solid var(--bb-kbd-border-color);
+  border-bottom-width: 2px;
+  border-radius: var(--bb-kbd-radius);
+  background-color: var(--bb-kbd-bg);
+  color: var(--bb-kbd-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace);
+  font-size: var(--bb-kbd-font-size);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bb-code {
+  /* tokens */
+  --bb-code-bg: var(--bb-tertiary-bg);
+  --bb-code-color: var(--bb-body-color);
+  --bb-code-border-color: var(--bb-border-color);
+  --bb-code-radius: var(--bb-radius-sm);
+  --bb-code-font-size: 0.875em;
+  padding: 0.125em 0.4em;
+  border: 1px solid var(--bb-code-border-color);
+  border-radius: var(--bb-code-radius);
+  background-color: var(--bb-code-bg);
+  color: var(--bb-code-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace);
+  font-size: var(--bb-code-font-size);
+  word-break: break-word;
+}
+
+.bb-code-block {
+  display: block;
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  white-space: pre;
+  word-break: normal;
 }
 
 /* =====================================
@@ -16394,7 +16737,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-page .input-group:focus-within .input-group-text,
 .bb-layout-light-page .input-group:focus-within .input-group-text,
 .bb-form-showcase-page .input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
+  color: var(--bb-primary-text);
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }

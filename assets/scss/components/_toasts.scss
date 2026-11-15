@@ -72,13 +72,13 @@
 
 .toast.bb-toast-success {
   --bb-toast-bg: var(--bb-success-light);
-  --bb-toast-color: var(--bb-success);
+  --bb-toast-color: var(--bb-success-text);
   --bb-toast-border-color: var(--bb-success-clarity);
 }
 
 .toast.bb-toast-danger {
   --bb-toast-bg: var(--bb-danger-light);
-  --bb-toast-color: var(--bb-danger);
+  --bb-toast-color: var(--bb-danger-text);
   --bb-toast-border-color: var(--bb-danger-clarity);
 }
 
@@ -90,13 +90,13 @@
 
 .toast.bb-toast-info {
   --bb-toast-bg: var(--bb-info-light);
-  --bb-toast-color: var(--bb-info);
+  --bb-toast-color: var(--bb-info-text);
   --bb-toast-border-color: var(--bb-info-clarity);
 }
 
 .toast.bb-toast-primary {
   --bb-toast-bg: var(--bb-primary-light);
-  --bb-toast-color: var(--bb-primary);
+  --bb-toast-color: var(--bb-primary-text);
   --bb-toast-border-color: var(--bb-primary-clarity);
 }
 
