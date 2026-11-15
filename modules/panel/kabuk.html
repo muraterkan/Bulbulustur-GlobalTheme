@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulbulustur — Panel Kabuk (Faz 1)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+  <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
+    <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
+      <div class="bb-sidebar-header">
+        <a class="bb-sidebar-logo" href="kabuk.html" aria-label="Bulbulustur panel ana sayfa">
+          <img src="../../assets/media/logos/default-dark.svg" alt="Bulbulustur">
+        </a>
+        <button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet">
+          <span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span>
+        </button>
+        <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Menüyü kapat">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+      <div class="bb-sidebar-body">
+        <nav aria-label="Örnek panel gezinme" class="px-2">
+          <a class="bb-panel-sidebar-link" href="kabuk.html" aria-current="page" title="Kabuk">
+            <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+            <span class="bb-panel-sidebar-label">Kabuk</span>
+          </a>
+        </nav>
+      </div>
+      <div class="bb-sidebar-footer">
+        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+        <span class="bb-panel-brand-text">GlobalTheme · Faz 1</span>
+      </div>
+    </aside>
+
+    <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Menüyü kapat" aria-hidden="true" tabindex="-1"></button>
+
+    <div class="bb-shell">
+      <header class="bb-shell-header">
+        <div class="bb-shell-header-inner">
+          <div class="bb-shell-header-left">
+            <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Menüyü aç">
+              <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+            <span class="bb-panel-brand-text">Bulbulustur / Yönetim Paneli</span>
+          </div>
+          <div class="bb-shell-header-right">
+            <button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Açık veya koyu temayı değiştir">
+              <span class="material-symbols-outlined" aria-hidden="true">contrast</span>
+            </button>
+            <span class="bb-symbol bb-symbol-35" aria-label="Örnek kullanıcı">
+              <img src="../../assets/media/avatars/300-3.jpg" alt="Örnek kullanıcı avatarı">
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <main class="bb-main">
+        <div class="bb-main-inner">
+          <div class="bb-toolbar">
+            <div class="bb-panel-content-container">
+              <div class="bb-toolbar-row">
+                <div class="bb-toolbar-col-left">
+                  <h1 class="bb-page-title">Panel kabuğu</h1>
+                  <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item"><a href="kabuk.html">Panel</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div class="bb-toolbar-col-right">
+                  <span class="bb-badge bb-badge-primary">Faz 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="bb-content" aria-label="Sayfa içeriği">
+            <div class="bb-panel-content-container">
+              <div class="bb-card">
+                <div class="bb-card-header"><h2 class="bb-card-title">Boş sayfa şablonu</h2></div>
+                <div class="bb-card-body">
+                  <p class="mb-0">Panelin ana omurgası: sidebar, header, toolbar, içerik ve footer. Menü ağacı Faz 2'de eklenecek.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="bb-shell-footer bb-footer">
+        <div class="bb-footer-bar">
+          <div class="bb-footer-inner">
+            <div class="bb-footer-left">
+              <a class="bb-footer-brand" href="kabuk.html">Bulbulustur GlobalTheme</a>
+            </div>
+            <div class="bb-footer-right">
+              <span class="text-body-secondary">Panel Template · Faz 1</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="../../assets/js/bb-panel.js"></script>
+  <script src="../../assets/js/bb-panel-theme.js"></script>
+</body>
+</html>
