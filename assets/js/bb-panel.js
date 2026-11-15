@@ -21,7 +21,7 @@
       collapseButton.setAttribute("aria-pressed", String(collapsed));
       collapseButton.setAttribute("aria-label", collapsed ? "Kenar çubuğunu genişlet" : "Kenar çubuğunu daralt");
     }
-    if (sidebar) sidebar.setAttribute("aria-hidden", String(!desktop.matches && !open));
+    if (sidebar) { sidebar.setAttribute("aria-hidden", String(!desktop.matches && !open)); sidebar.inert = !desktop.matches && !open; }
     if (backdrop) backdrop.setAttribute("aria-hidden", String(!open));
   }
 
