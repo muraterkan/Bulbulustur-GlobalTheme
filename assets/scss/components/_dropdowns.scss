@@ -195,3 +195,44 @@
 /* Dark/light için ekstra iş yok:
    - bb tokens ve bs vars zaten theme ile değişiyor
 */
+
+
+/* Reusable compact action menu: use with Bootstrap .dropdown + .bb-dropdown-menu.
+   Keeps the canonical dropdown palette and behavior for every panel/card. */
+.bb-action-menu {
+  position: relative;
+  display: inline-flex;
+}
+.bb-action-menu .bb-action-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.bb-action-menu .bb-action-menu-toggle .material-symbols-outlined {
+  font-size: var(--bb-fs-lg);
+  line-height: 1;
+}
+.bb-action-menu .bb-action-menu-list {
+  --bb-dd-minw: 13rem;
+  --bb-dd-pad-x: var(--bb-space-2);
+  --bb-dd-pad-y: var(--bb-space-2);
+  --bb-dd-item-px: var(--bb-space-3);
+  --bb-dd-item-py: var(--bb-space-3);
+  z-index: var(--bb-z-dropdown, 1050);
+  font-size: var(--bb-fs-sm);
+}
+.bb-action-menu .bb-action-menu-list .dropdown-header {
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+}
+.bb-action-menu .bb-action-menu-list .dropdown-item {
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-heading);
+}
+.bb-action-menu .bb-action-menu-has-arrow {
+  justify-content: space-between;
+}
+.bb-action-menu .bb-action-menu-has-arrow .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  color: var(--bb-secondary-color);
+}
