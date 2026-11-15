@@ -1,0 +1,17 @@
+/* Faz 8.1 — KPI cards, reuse bb-card */
+.bb-panel .bb-dashboard-kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-kpi { --bb-dashboard-kpi-accent:var(--bb-primary); position:relative; overflow:hidden; }
+.bb-panel .bb-dashboard-kpi-heading { display:flex; justify-content:space-between; align-items:center; gap:var(--bb-menu-gap); color:var(--bb-secondary-color); font-size:var(--bb-fs-sm); }
+.bb-panel .bb-dashboard-kpi-icon { color:var(--bb-dashboard-kpi-accent); }
+.bb-panel .bb-dashboard-kpi-value { display:block; color:var(--bb-body-color); font-size:var(--bb-h2); font-weight:var(--bb-fw-bold); margin-block:var(--bb-menu-link-py); }
+.bb-panel .bb-dashboard-kpi-foot { display:flex; align-items:center; gap:var(--bb-menu-gap); font-size:var(--bb-fs-sm); color:var(--bb-secondary-color); }
+.bb-panel .bb-dashboard-kpi[data-tone="success"] { --bb-dashboard-kpi-accent:var(--bb-chart-3); }
+.bb-panel .bb-dashboard-kpi[data-tone="info"] { --bb-dashboard-kpi-accent:var(--bb-chart-1); }
+.bb-panel .bb-dashboard-kpi[data-tone="warning"] { --bb-dashboard-kpi-accent:var(--bb-chart-4); }
+.bb-panel .bb-dashboard-kpi .bb-progress { --bb-progress-bar-bg:var(--bb-dashboard-kpi-accent); margin-block-start:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="86"] { width:86%; }
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="72"] { width:72%; }
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="61"] { width:61%; }
+.bb-panel .bb-dashboard-kpi .bb-progress__bar[data-level="94"] { width:94%; }
+@media(max-width:1199.98px) { .bb-panel .bb-dashboard-kpis { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:575.98px) { .bb-panel .bb-dashboard-kpis { grid-template-columns:1fr; } }
