@@ -1,0 +1,11 @@
+/* Faz 8.5 — status timeline */
+.bb-panel .bb-dashboard-timeline { list-style:none; padding:0; margin:0; }
+.bb-panel .bb-dashboard-timeline li { display:grid; grid-template-columns:var(--bb-menu-icon-size,1.15rem) minmax(0,1fr); gap:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-timeline-rail { display:flex; flex-direction:column; align-items:center; gap:var(--bb-menu-gap); }
+.bb-panel .bb-dashboard-timeline-marker { display:block; flex:none; width:var(--bb-menu-icon-size,1.15rem); aspect-ratio:1; border:var(--bb-border-width,1px) solid var(--bb-chart-1); border-radius:var(--bb-radius-pill); background:var(--bb-chart-1); }
+.bb-panel .bb-dashboard-timeline li[data-state="pending"] .bb-dashboard-timeline-marker { background:transparent; border-color:var(--bb-border-color); }
+.bb-panel .bb-dashboard-timeline-line { flex:1 1 auto; width:var(--bb-border-width,1px); background:var(--bb-border-color); min-height:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-timeline li:last-child .bb-dashboard-timeline-line { visibility:hidden; }
+.bb-panel .bb-dashboard-timeline-content { padding-bottom:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-timeline-content p { color:var(--bb-secondary-color); margin:0; }
+.bb-panel .bb-dashboard-timeline-content small { color:var(--bb-secondary-color); }
