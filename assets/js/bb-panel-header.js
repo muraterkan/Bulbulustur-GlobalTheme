@@ -90,6 +90,128 @@ if (notificationPanel) {
   refreshNotificationCount();
 }
 
+/* Replace the tiny Messages popup with the existing bb-drawer pattern.
+   Demo messages live in this page session only; no persistence or network. */
+var messageToggle = panel.querySelector('[aria-controls="bb_messages_pop"]');
+var messageHost = messageToggle?.closest("[data-bb-panel-popup]");
+if (messageToggle && messageHost) {
+  var oldMessagePopup = messageHost.querySelector("#bb_messages_pop");
+  if (oldMessagePopup) oldMessagePopup.remove();
+  messageHost.removeAttribute("data-bb-panel-popup");
+  messageToggle.removeAttribute("data-bb-panel-popup-toggle");
+  messageToggle.setAttribute("aria-haspopup", "dialog");
+  messageToggle.setAttribute("aria-expanded", "false");
+
+  var chatBackdrop = document.createElement("div");
+  chatBackdrop.className = "bb-drawer-backdrop";
+  chatBackdrop.setAttribute("data-bb-panel-chat-backdrop", "");
+  chatBackdrop.setAttribute("aria-hidden", "true");
+
+  var chatDrawer = document.createElement("section");
+  chatDrawer.id = "bb_messages_pop";
+  chatDrawer.className = "bb-drawer bb-drawer-end bb-panel-chat-drawer";
+  chatDrawer.setAttribute("role", "dialog");
+  chatDrawer.setAttribute("aria-modal", "true");
+  chatDrawer.setAttribute("aria-label", "Mesajlar");
+  chatDrawer.setAttribute("aria-hidden", "true");
+  chatDrawer.innerHTML = `
+    <div class="bb-drawer-header">
+      <div class="bb-panel-chat-head">
+        <strong>Destek görüşmesi</strong>
+        <small><span class="bb-panel-chat-presence" aria-hidden="true"></span>Çevrimiçi · Demo sohbet</small>
+      </div>
+      <button class="bb-drawer-close" type="button" aria-label="Mesajları kapat" data-bb-chat-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+    </div>
+    <div class="bb-drawer-body" data-bb-chat-history role="log" aria-live="polite" aria-label="Konuşma geçmişi">
+      <div class="bb-panel-chat-message" data-side="in">
+        <div class="bb-panel-chat-author">Destek Ekibi <small>09:15</small></div>
+        <div class="bb-panel-chat-bubble">Merhaba, size nasıl yardımcı olabiliriz?</div>
+      </div>
+      <div class="bb-panel-chat-message" data-side="out">
+        <div class="bb-panel-chat-author">Siz <small>09:18</small></div>
+        <div class="bb-panel-chat-bubble">Panelin yeni bileşenlerini inceliyorum.</div>
+      </div>
+      <div class="bb-panel-chat-message" data-side="in">
+        <div class="bb-panel-chat-author">Destek Ekibi <small>09:20</small></div>
+        <div class="bb-panel-chat-bubble">Harika! Herhangi bir sorunuz olursa buradan yazabilirsiniz. Bu bir demo sohbetidir.</div>
+      </div>
+    </div>
+    <form class="bb-panel-chat-compose" data-bb-chat-compose>
+      <label class="visually-hidden" for="bb_chat_text">Mesajınız</label>
+      <textarea id="bb_chat_text" class="form-control form-control-solid" data-bb-chat-input rows="2" maxlength="1000" placeholder="Bir mesaj yazın..." required></textarea>
+      <div class="bb-panel-chat-compose-actions">
+        <span class="bb-panel-chat-compose-note">Mesajlar sadece bu sayfada görünür.</span>
+        <button class="btn btn-primary btn-sm" type="submit">Gönder</button>
+      </div>
+    </form>
+  `;
+  panel.append(chatBackdrop, chatDrawer);
+
+  var chatClose = chatDrawer.querySelector("[data-bb-chat-close]");
+  var chatForm = chatDrawer.querySelector("[data-bb-chat-compose]");
+  var chatInput = chatDrawer.querySelector("[data-bb-chat-input]");
+  var chatHistory = chatDrawer.querySelector("[data-bb-chat-history]");
+  var chatOpen = false;
+  var focusBeforeChat = null;
+
+  function setChatOpen(open) {
+    if (chatOpen === open) return;
+    chatOpen = open;
+    if (open) focusBeforeChat = document.activeElement;
+    chatDrawer.classList.toggle("is-open", open);
+    chatBackdrop.classList.toggle("is-open", open);
+    chatDrawer.setAttribute("aria-hidden", String(!open));
+    messageToggle.setAttribute("aria-expanded", String(open));
+    if (open) {
+      chatClose.focus();
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    } else if (focusBeforeChat && typeof focusBeforeChat.focus === "function") {
+      focusBeforeChat.focus();
+      focusBeforeChat = null;
+    }
+  }
+  messageToggle.addEventListener("click", function () { setChatOpen(!chatOpen); });
+  chatClose.addEventListener("click", function () { setChatOpen(false); });
+  chatBackdrop.addEventListener("click", function () { setChatOpen(false); });
+  document.addEventListener("keydown", function (event) {
+    if (!chatOpen) return;
+    if (event.key === "Escape") { event.preventDefault(); setChatOpen(false); return; }
+    if (event.key !== "Tab") return;
+    var focusable = Array.from(chatDrawer.querySelectorAll('button:not([disabled]), textarea:not([disabled]), a[href], input:not([disabled])'))
+      .filter(function (item) { return item.getClientRects().length > 0; });
+    if (!focusable.length) return;
+    if (event.shiftKey && document.activeElement === focusable[0]) {
+      event.preventDefault(); focusable[focusable.length - 1].focus();
+    } else if (!event.shiftKey && document.activeElement === focusable[focusable.length - 1]) {
+      event.preventDefault(); focusable[0].focus();
+    }
+  });
+
+  chatForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!chatForm.reportValidity()) return;
+    var value = chatInput.value.trim();
+    if (!value) return;
+    var item = document.createElement("div");
+    item.className = "bb-panel-chat-message";
+    item.dataset.side = "out";
+    var author = document.createElement("div");
+    author.className = "bb-panel-chat-author";
+    author.textContent = "Siz";
+    var time = document.createElement("small");
+    time.textContent = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
+    author.appendChild(time);
+    var bubble = document.createElement("div");
+    bubble.className = "bb-panel-chat-bubble";
+    bubble.textContent = value;
+    item.append(author, bubble);
+    chatHistory.appendChild(item);
+    chatForm.reset();
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+    chatInput.focus();
+  });
+}
+
 var hosts = Array.from(panel.querySelectorAll("[data-bb-panel-popup]"));
 function close(host, focus) { var p=host.querySelector("[data-bb-panel-popup-content]"),b=host.querySelector("[data-bb-panel-popup-toggle]"); if(!p||!b)return; p.hidden=true;b.setAttribute("aria-expanded","false");if(focus)b.focus(); }
 hosts.forEach(function(host){var p=host.querySelector("[data-bb-panel-popup-content]"),b=host.querySelector("[data-bb-panel-popup-toggle]");if(!p||!b)return;p.hidden=true;b.setAttribute("aria-expanded","false");b.addEventListener("click",function(){var open=p.hidden;hosts.forEach(function(h){close(h,false)});p.hidden=!open;b.setAttribute("aria-expanded",String(open));if(open){var field=p.querySelector("input,a[href],button");if(field)field.focus();}});});
