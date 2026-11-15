@@ -2,6 +2,8 @@
    Bulbulustur Theme - Renk Paketi: ATÖLYE
    El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
    Kullanım: <html data-bb-pack="atolye"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
+   Yalnız GİRDİ tokenları (palet, marka, nötr, kabuk). hover/active/light/clarity
+   türevleri themes/_token-engine.scss tarafından bu girdilerden üretilir.
    Kapsam: yalnız renk tokenları. Sarı marka paleti (base/_theme) bozulmaz;
    paket seçilmediğinde bu dosya hiçbir şeyi etkilemez.
    Kaynak: Draugr/Ortobella örnek tasarımlarından örneklenen renkler.
@@ -143,31 +145,6 @@ html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]) {
   --bb-brand-sage-rgb: 145, 168, 157;
   --bb-brand-sage-inverse: var(--bb-gray-900);
 
-  /* Türetilmiş durumlar */
-  --bb-primary-hover: var(--bb-terracotta-600);
-  --bb-primary-active: var(--bb-terracotta-700);
-  --bb-primary-light: var(--bb-terracotta-100);
-  --bb-secondary-hover: var(--bb-sand-300);
-  --bb-secondary-active: var(--bb-sand-400);
-  --bb-success-hover: color-mix(in srgb, var(--bb-success) 82%, #000);
-  --bb-success-active: color-mix(in srgb, var(--bb-success) 70%, #000);
-  --bb-success-light: color-mix(in srgb, var(--bb-success) 14%, var(--bb-white));
-  --bb-info-hover: color-mix(in srgb, var(--bb-info) 82%, #000);
-  --bb-info-active: color-mix(in srgb, var(--bb-info) 70%, #000);
-  --bb-info-light: color-mix(in srgb, var(--bb-info) 14%, var(--bb-white));
-  --bb-warning-hover: color-mix(in srgb, var(--bb-warning) 82%, #000);
-  --bb-warning-active: color-mix(in srgb, var(--bb-warning) 70%, #000);
-  --bb-warning-light: color-mix(in srgb, var(--bb-warning) 16%, var(--bb-white));
-  --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 82%, #000);
-  --bb-danger-active: color-mix(in srgb, var(--bb-danger) 70%, #000);
-  --bb-danger-light: color-mix(in srgb, var(--bb-danger) 12%, var(--bb-white));
-  --bb-dark-hover: var(--bb-olive-700);
-  --bb-dark-active: var(--bb-olive-900);
-  --bb-dark-light: color-mix(in srgb, var(--bb-dark) 10%, transparent);
-  --bb-dark-clarity: color-mix(in srgb, var(--bb-dark) 15%, transparent);
-  --bb-light-hover: var(--bb-sand-200);
-  --bb-light-active: var(--bb-sand-300);
-
   /* Kabuk: header üst şerit adaçayı, footer zeytin */
   --bb-header-bg: var(--bb-sand-50);
   --bb-header-color: var(--bb-body-color);
@@ -263,18 +240,6 @@ html[data-bb-pack="atolye"][data-bs-theme="dark"] {
   --bb-brand-sage: var(--bb-sage-400);
   --bb-brand-sage-rgb: 165, 184, 175;
   --bb-brand-sage-inverse: #1a1411;
-
-  --bb-primary-hover: #e7a285;
-  --bb-primary-active: #f0b69d;
-  --bb-primary-light: color-mix(in srgb, var(--bb-primary) 16%, transparent);
-  --bb-success-hover: color-mix(in srgb, var(--bb-success) 88%, #fff);
-  --bb-success-active: color-mix(in srgb, var(--bb-success) 76%, #fff);
-  --bb-info-hover: color-mix(in srgb, var(--bb-info) 88%, #fff);
-  --bb-info-active: color-mix(in srgb, var(--bb-info) 76%, #fff);
-  --bb-warning-hover: color-mix(in srgb, var(--bb-warning) 88%, #fff);
-  --bb-warning-active: color-mix(in srgb, var(--bb-warning) 76%, #fff);
-  --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 88%, #fff);
-  --bb-danger-active: color-mix(in srgb, var(--bb-danger) 76%, #fff);
 
   /* Kabuk */
   --bb-header-color: #f2eadf;

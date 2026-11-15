@@ -39,16 +39,6 @@
 :root,
 [data-bs-theme="light"],
 [data-bs-theme="dark"] {
-  /* Base */
-  --bb-primary: var(--bb-theme-primary);
-  --bb-secondary: var(--bb-theme-secondary);
-  --bb-success: var(--bb-theme-success);
-  --bb-info: var(--bb-theme-info);
-  --bb-warning: var(--bb-theme-warning);
-  --bb-danger: var(--bb-theme-danger);
-  --bb-dark: var(--bb-theme-dark);
-  --bb-light: var(--bb-theme-light);
-
   /* Active */
   --bb-primary-active: color-mix(in srgb, var(--bb-primary) 85%, var(--bb-active-mix));
   --bb-secondary-active: color-mix(in srgb, var(--bb-secondary) 85%, var(--bb-active-mix));
@@ -56,7 +46,7 @@
   --bb-info-active: color-mix(in srgb, var(--bb-info) 85%, var(--bb-active-mix));
   --bb-warning-active: color-mix(in srgb, var(--bb-warning) 85%, var(--bb-active-mix));
   --bb-danger-active: color-mix(in srgb, var(--bb-danger) 85%, var(--bb-active-mix));
-  --bb-dark-active: color-mix(in srgb, var(--bb-coal-300) 85%, var(--bb-active-mix));
+  --bb-dark-active: color-mix(in srgb, var(--bb-dark) 85%, var(--bb-active-mix));
   --bb-light-active: color-mix(in srgb, var(--bb-light) 85%, var(--bb-active-mix));
 
   /* Hover */
@@ -66,7 +56,7 @@
   --bb-info-hover: color-mix(in srgb, var(--bb-info) 90%, var(--bb-hover-mix));
   --bb-warning-hover: color-mix(in srgb, var(--bb-warning) 90%, var(--bb-hover-mix));
   --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 90%, var(--bb-hover-mix));
-  --bb-dark-hover: color-mix(in srgb, var(--bb-coal-300) 90%, var(--bb-hover-mix));
+  --bb-dark-hover: color-mix(in srgb, var(--bb-dark) 90%, var(--bb-hover-mix));
   --bb-light-hover: color-mix(in srgb, var(--bb-light) 90%, var(--bb-hover-mix));
 
   /* Light */
@@ -76,7 +66,7 @@
   --bb-info-light: color-mix(in srgb, var(--bb-info) var(--bb-light-ratio), transparent);
   --bb-warning-light: color-mix(in srgb, var(--bb-warning) var(--bb-light-ratio), transparent);
   --bb-danger-light: color-mix(in srgb, var(--bb-danger) var(--bb-light-ratio), transparent);
-  --bb-dark-light: color-mix(in srgb, var(--bb-coal-300) 10%, transparent);
+  --bb-dark-light: color-mix(in srgb, var(--bb-dark) 10%, transparent);
   --bb-light-light: var(--bb-body-bg);
 
   /* Clarity */
@@ -86,26 +76,12 @@
   --bb-info-clarity: color-mix(in srgb, var(--bb-info) var(--bb-clarity-ratio), transparent);
   --bb-warning-clarity: color-mix(in srgb, var(--bb-warning) 20%, transparent);
   --bb-danger-clarity: color-mix(in srgb, var(--bb-danger) var(--bb-clarity-ratio), transparent);
-  --bb-dark-clarity: color-mix(in srgb, var(--bb-coal-300) 15%, transparent);
+  --bb-dark-clarity: color-mix(in srgb, var(--bb-dark) 15%, transparent);
   --bb-light-clarity: color-mix(in srgb, var(--bb-light) 25%, transparent);
-
-  /* Inverse */
-  --bb-primary-inverse: var(--bb-theme-on-primary);
-  --bb-secondary-inverse: var(--bb-theme-on-secondary);
-  --bb-success-inverse: var(--bb-theme-on-success);
-  --bb-info-inverse: var(--bb-theme-on-info);
-  --bb-warning-inverse: var(--bb-theme-on-warning);
-  --bb-danger-inverse: var(--bb-theme-on-danger);
-  --bb-dark-inverse: var(--bb-theme-on-dark);
-  --bb-light-inverse: var(--bb-theme-on-light);
 
   /* State */
   --bb-state-error: var(--bb-danger);
   --bb-state-success: var(--bb-success);
-
-  /* Links */
-  --bb-link-color: var(--bb-primary);
-  --bb-link-hover-color: var(--bb-primary-active);
 }
 
 /* ------------------------------------------------
@@ -151,8 +127,5 @@
     --bb-danger-clarity: rgba(var(--bb-danger-rgb), 0.18);
     --bb-dark-clarity: rgba(var(--bb-dark-rgb), 0.15);
     --bb-light-clarity: rgba(var(--bb-light-rgb), 0.25);
-
-    --bb-link-color: var(--bb-primary);
-    --bb-link-hover-color: var(--bb-primary);
   }
 }

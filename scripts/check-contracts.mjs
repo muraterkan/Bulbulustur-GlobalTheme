@@ -34,6 +34,16 @@ check('no malformed custom property values like "(--x)"', broken.length === 0);
 const bareBs = scssFiles.filter((path) => /var\(--bs-focus-ring-box-shadow\)/.test(readFileSync(path, 'utf8')));
 check('--bs-focus-ring-box-shadow always has a fallback', bareBs.length === 0);
 
+// Türetilmiş durum tokenları (hover/active/light/clarity) YALNIZ token-engine'de tanımlanır; base/pack girdi verir.
+const derivedPattern = /^\s*--bb-(?:primary|secondary|success|info|warning|danger|dark|light)-(?:hover|active|light|clarity):/m;
+const themeBase = file('assets/scss/base/_theme.scss');
+const engine = file('assets/scss/themes/_token-engine.scss');
+const packs = scssFiles.filter((path) => /[\\/]themes[\\/]_pack-/.test(path)).map((path) => readFileSync(path, 'utf8'));
+check('derived state tokens are owned only by token-engine (base)', !derivedPattern.test(themeBase));
+check('derived state tokens are owned only by token-engine (packs)', packs.every((source) => !derivedPattern.test(source)));
+check('token-engine does not duplicate base aliases/links', !/--bb-link-color:/.test(engine) && !/:\s*var\(--bb-theme-/.test(engine));
+check('token-engine derives dark states from --bb-dark (not a fixed coal token)', !/--bb-coal-/.test(engine));
+
 const reset = file('assets/scss/base/_reset.scss');
 const layout = file('assets/scss/layout/_layout.scss');
 const sidebar = file('assets/scss/layout/_sidebar.scss');
