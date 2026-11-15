@@ -63,7 +63,7 @@
     "layout-header": {title:"Üst Menü", group:"Düzenler", section:"DÜZENLER"},
     "layout-auth": {title:"Kimlik Doğrulama", group:"Düzenler", section:"DÜZENLER"},
   };
-  var id = new URLSearchParams(window.location.search).get("page") || "dashboard-overview";
+  var id = new URLSearchParams(window.location.search).get("page") || panel.getAttribute("data-bb-panel-default-page") || "dashboard-overview";
   var selected = Object.prototype.hasOwnProperty.call(pages, id) ? pages[id] : null;
   var title = selected ? selected.title : "Sayfa Şablonları";
   var heading = selected ? selected.group + " / " + selected.title : "Sayfa Şablonları";
