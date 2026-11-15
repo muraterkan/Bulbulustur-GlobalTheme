@@ -55,6 +55,7 @@
 @use "layout/panel-auth";           // Faz 11 auth ve hata sayfaları
 @use "layout/panel-account";        // Faz 12 profil hesap ve fatura
 @use "layout/panel-footer";         // Panel footer and scroll-to-top
+@use "layout/panel-messages";       // panel chat drawer
 
 /* 5. Components */
 @use "components/buttons";
