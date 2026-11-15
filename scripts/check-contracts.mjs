@@ -26,7 +26,8 @@ check('every partial is imported by main.scss (or explicitly detached)', orphans
 if (orphans.length) console.log('  orphan partials:', orphans.join(', '));
 check('every main.scss @use target exists', mainImports.every((name) => partials.includes(name)));
 check('main.scss has no duplicate @use', new Set(mainImports).size === mainImports.length);
-check('no pages/ SCSS sources in GlobalTheme', !existsSync(resolve(scssRoot, 'pages')));
+const pagesScss = resolve(scssRoot, 'pages');
+check('no pages/ SCSS sources in GlobalTheme', !existsSync(pagesScss) || !walk(pagesScss).some((path) => path.endsWith('.scss')));
 
 const scssFiles = walk(scssRoot).filter((path) => path.endsWith('.scss'));
 const broken = scssFiles.filter((path) => /:\s*\(--[a-z]/.test(readFileSync(path, 'utf8')));
