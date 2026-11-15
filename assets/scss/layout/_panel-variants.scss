@@ -1,0 +1,46 @@
+/* Faz 6 — same shell, three layout modes */
+.bb-panel[data-bb-panel-layout="top"] > .bb-sidebar,
+.bb-panel[data-bb-panel-layout="auth"] > .bb-sidebar {
+  display: none;
+}
+.bb-panel[data-bb-panel-layout="top"] .bb-panel-topnav {
+  display: flex;
+}
+.bb-panel[data-bb-panel-layout="auth"] .bb-shell-header,
+.bb-panel[data-bb-panel-layout="auth"] .bb-toolbar,
+.bb-panel[data-bb-panel-layout="auth"] .bb-shell-footer {
+  display: none;
+}
+.bb-panel[data-bb-panel-layout="auth"] .bb-main,
+.bb-panel[data-bb-panel-layout="auth"] .bb-main-inner {
+  justify-content: center;
+  align-items: center;
+}
+.bb-panel[data-bb-panel-layout="auth"] .bb-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bb-panel[data-bb-panel-layout="auth"] .bb-panel-content-container {
+  max-width: var(--bb-menu-sub-min-width, 24rem);
+}
+.bb-panel .bb-panel-layout-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+.bb-panel .bb-panel-layout-switcher button[aria-pressed="true"] {
+  background-color: var(--bb-primary);
+  color: var(--bb-primary-inverse);
+}
+@media (max-width: 991.98px) {
+  .bb-panel[data-bb-panel-layout="top"] .bb-panel-topnav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bb-panel[data-bb-panel-layout="top"] [data-bb-panel-sidebar-toggle] {
+    display: none;
+  }
+}
