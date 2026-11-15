@@ -13,20 +13,6 @@
 }
 
 /* -------------------------------------------------
-   SIDEBAR (sol)
-------------------------------------------------- */
-.bb-sidebar {
-  width: 16.25rem;
-  flex-shrink: 0;
-
-  display: flex;
-  flex-direction: column;
-
-  background-color: var(--bb-coal-300);
-  color: var(--bb-white);
-}
-
-/* -------------------------------------------------
    RIGHT SIDE (header + main + footer)
 ------------------------------------------------- */
 .bb-shell {
@@ -51,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: var(--bb-shell-header-height, 64px);
 }
 
 /* LEFT / RIGHT */
@@ -73,40 +59,6 @@
   color: var(--bb-primary);
 }
 
-/* DROPDOWN */
-.bb-dropdown {
-  position: relative;
-}
-
-.bb-dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 0.5rem);
-  min-width: 140px;
-  background: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
-  border-radius: var(--bb-radius);
-  box-shadow: var(--bs-box-shadow-sm);
-  display: none;
-  z-index: 100;
-}
-
-.bb-dropdown-item {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  color: var(--bb-body-color);
-  text-decoration: none;
-}
-
-.bb-dropdown-item:hover {
-  background-color: var(--bb-surface-2);
-}
-
-/* OPEN STATE (JS ile eklenecek) */
-.bb-dropdown.is-open .bb-dropdown-menu {
-  display: block;
-}
-
 /* -------------------------------------------------
    MAIN AREA (ortadaki büyüyen alan)
 ------------------------------------------------- */
@@ -118,7 +70,7 @@
   min-height: 0;
   min-width: 0;
 
-  background-color: var(--bb-surface-2);
+  background-color: var(--bb-tertiary-bg);
 }
 
 /* -------------------------------------------------
@@ -130,16 +82,9 @@
   flex-direction: column;
 
   width: 100%;
-  max-width: 1320px;
+  max-width: var(--bb-main-max-width, 1320px);
   margin-left: auto;
   margin-right: auto;
-}
-
-/* -------------------------------------------------
-   TOOLBAR
-------------------------------------------------- */
-.bb-toolbar {
-  flex-shrink: 0;
 }
 
 /* -------------------------------------------------

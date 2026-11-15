@@ -19,7 +19,7 @@
   --bb-tooltip-padding-y: 0.45rem;
   --bb-tooltip-padding-x: 0.65rem;
 
-  --bb-tooltip-font-size: var(--bb-fs-sm);;
+  --bb-tooltip-font-size: var(--bb-fs-sm);
   --bb-tooltip-line-height: var(--bb-line-height-base);
   --bb-tooltip-max-width: 16.25rem;
 
@@ -73,7 +73,7 @@
 }
 
 .tooltip.bb-tooltip.bb-tooltip-lg {
-  --bb-tooltip-font-size: var(--bb-fs-sm);;
+  --bb-tooltip-font-size: var(--bb-fs-sm);
   --bb-tooltip-padding-y: 0.55rem;
   --bb-tooltip-padding-x: 0.75rem;
 }

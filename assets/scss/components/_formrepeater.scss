@@ -162,15 +162,15 @@
 }
 
 .bb-formrepeater-btn-add {
-  --bb-fr-add-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+  --bb-fr-add-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
   --bb-fr-add-color: var(--bb-primary);
   background: var(--bb-fr-add-bg);
   color: var(--bb-fr-add-color);
-  border-color: color-mix(in srgb, var(--bb-primary)25%, var(--bb-fr-border-color));
+  border-color: color-mix(in srgb, var(--bb-primary) 25%, var(--bb-fr-border-color));
 }
 
 .bb-formrepeater-btn-add:hover {
-  background: color-mix(in srgb, var(--bb-primary)14%, transparent);
+  background: color-mix(in srgb, var(--bb-primary) 14%, transparent);
   color: var(--bb-primary);
 }
 

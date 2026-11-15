@@ -26,8 +26,8 @@
 
   /* Link backgrounds */
   --bb-menu-link-hover-bg: var(--bb-tertiary-bg);
-  --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary)12%, transparent);
-  --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+  --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary) 12%, transparent);
+  --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
 
   /* Typography */
   --bb-menu-link-font-size: var(--bs-body-font-size, 1rem);
@@ -71,7 +71,7 @@
   --bb-menu-sub-shadow: var(--bb-shadow, var(--bb-shadow-sm, none));
 
   /* Focus / disabled */
-  --bb-menu-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary)25%, transparent));
+  --bb-menu-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
   --bb-menu-disabled-opacity: 0.55;
 
   /* Motion */

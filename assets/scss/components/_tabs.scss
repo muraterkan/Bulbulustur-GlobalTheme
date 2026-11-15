@@ -43,7 +43,7 @@
   --bb-nav-transition-ease: ease;
 
   /* Focus / Disabled */
-  --bb-nav-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary)25%, transparent));
+  --bb-nav-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
   --bb-nav-disabled-opacity: 0.55;
 
   display: flex;
@@ -197,7 +197,7 @@
 }
 
 .bb-nav-sm .nav-link {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
 }
 
 .bb-nav-lg {

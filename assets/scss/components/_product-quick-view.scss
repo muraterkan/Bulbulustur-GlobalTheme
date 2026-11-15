@@ -4,14 +4,14 @@
 
 .bb-product-card-quick-view {
     position: absolute;
-    left: var(--bb-spacer-3);
-    right: var(--bb-spacer-3);
-    bottom: var(--bb-spacer-3);
+    left: var(--bb-space-3);
+    right: var(--bb-space-3);
+    bottom: var(--bb-space-3);
     z-index: 4;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
     min-height: 2.375rem;
     padding: .55rem .9rem;
     border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 58%, transparent);
@@ -26,11 +26,11 @@
     opacity: 0;
     transform: translateY(.5rem);
     transition:
-        opacity var(--bb-transition-base),
-        transform var(--bb-transition-base),
-        border-color var(--bb-transition-base),
-        background var(--bb-transition-base),
-        color var(--bb-transition-base);
+        opacity var(--bb-transition-normal),
+        transform var(--bb-transition-normal),
+        border-color var(--bb-transition-normal),
+        background var(--bb-transition-normal),
+        color var(--bb-transition-normal);
     backdrop-filter: blur(14px);
 }
 
@@ -87,8 +87,9 @@
 
 .bb-product-quick-view-close {
     position: absolute;
-    top: var(--bb-spacer-4);
-    right: var(--bb-spacer-4);
+    top: var(--bb-space-4);
+    right: var(--bb-space-4);
+    left: auto;
     z-index: 7;
     display: inline-flex;
     align-items: center;
@@ -101,10 +102,10 @@
     color: var(--bb-body-color);
     box-shadow: var(--bb-shadow-sm);
     transition:
-        transform var(--bb-transition-base),
-        background var(--bb-transition-base),
-        border-color var(--bb-transition-base),
-        color var(--bb-transition-base);
+        transform var(--bb-transition-normal),
+        background var(--bb-transition-normal),
+        border-color var(--bb-transition-normal),
+        color var(--bb-transition-normal);
     backdrop-filter: blur(14px);
 }
 
@@ -139,7 +140,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-content: start;
-    gap: var(--bb-spacer-3);
+    gap: var(--bb-space-3);
     min-width: 0;
 }
 
@@ -173,7 +174,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 4.75rem;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
     overflow-x: auto;
     padding-bottom: .15rem;
     scrollbar-width: thin;
@@ -191,10 +192,10 @@
     color: var(--bb-body-color);
     cursor: pointer;
     transition:
-        border-color var(--bb-transition-base),
-        box-shadow var(--bb-transition-base),
-        transform var(--bb-transition-base),
-        background var(--bb-transition-base);
+        border-color var(--bb-transition-normal),
+        box-shadow var(--bb-transition-normal),
+        transform var(--bb-transition-normal),
+        background var(--bb-transition-normal);
 }
 
 .bb-product-quick-view-thumb:hover,
@@ -227,14 +228,14 @@
 
 .bb-product-quick-view-head {
     display: grid;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
     padding-right: 3.5rem;
 }
 
 .bb-product-quick-view-labels {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
     margin-bottom: .15rem;
 }
 
@@ -315,20 +316,20 @@
 
 .bb-product-quick-view-options {
     display: grid;
-    gap: var(--bb-spacer-4);
+    gap: var(--bb-space-4);
     margin-top: clamp(1.1rem, 2.5vw, 1.5rem);
 }
 
 .bb-product-quick-view-option-group {
     display: grid;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
 }
 
 .bb-product-quick-view-option-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--bb-spacer-3);
+    gap: var(--bb-space-3);
     color: var(--bb-secondary-color);
     font-size: var(--bb-fs-sm);
 }
@@ -341,7 +342,7 @@
 .bb-product-quick-view-option-list {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
 }
 
 .bb-product-quick-view-option {
@@ -360,10 +361,10 @@
     line-height: 1;
     cursor: pointer;
     transition:
-        border-color var(--bb-transition-base),
-        background var(--bb-transition-base),
-        color var(--bb-transition-base),
-        box-shadow var(--bb-transition-base);
+        border-color var(--bb-transition-normal),
+        background var(--bb-transition-normal),
+        color var(--bb-transition-normal),
+        box-shadow var(--bb-transition-normal);
 }
 
 .bb-product-quick-view-option:hover,
@@ -375,7 +376,7 @@
 }
 
 .bb-product-quick-view-option:disabled {
-    opacity: var(--bb-opacity-disabled);
+    opacity: var(--bb-disabled-opacity);
     cursor: not-allowed;
     text-decoration: line-through;
 }
@@ -387,7 +388,7 @@
 .bb-product-quick-view-actions {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto auto;
-    gap: var(--bb-spacer-2);
+    gap: var(--bb-space-2);
     margin-top: auto;
     padding-top: clamp(1.25rem, 3vw, 2rem);
 }
@@ -421,7 +422,7 @@
 .bb-product-quick-view-error {
     display: flex;
     align-items: center;
-    gap: var(--bb-spacer-3);
+    gap: var(--bb-space-3);
     padding: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--bb-body-color);
 }
@@ -465,12 +466,6 @@
     font-size: var(--bb-icon-size-2xl);
 }
 
-.bb-product-quick-view-close {
-    top: var(--bb-spacer-4);
-    right: var(--bb-spacer-4);
-    left: auto;
-}
-
 @keyframes bb-product-quick-view-spin {
     to {
         transform: rotate(360deg);
@@ -510,7 +505,7 @@
         grid-template-columns: 1fr 1fr;
         margin-inline: calc(clamp(1rem, 3vw, 1.75rem) * -1);
         margin-bottom: calc(clamp(1rem, 3vw, 1.75rem) * -1);
-        padding: var(--bb-spacer-3);
+        padding: var(--bb-space-3);
         border-top: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 72%, transparent);
         background: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
         backdrop-filter: blur(16px);
@@ -525,7 +520,7 @@
     .bb-product-card-quick-view {
         position: static;
         width: 100%;
-        margin-top: var(--bb-spacer-2);
+        margin-top: var(--bb-space-2);
         opacity: 1;
         transform: none;
     }
@@ -551,7 +546,7 @@
 
     .bb-product-quick-view-body {
         padding: .75rem;
-        gap: var(--bb-spacer-3);
+        gap: var(--bb-space-3);
     }
 
     .bb-product-quick-view-media {

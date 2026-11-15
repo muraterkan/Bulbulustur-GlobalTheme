@@ -5,8 +5,10 @@
 .bb-sidebar {
     --bb-sidebar-width: 16.25rem;
   /* colors */
-    --bb-sidebar-bg: var(--bb-coal-900, #0d0e12);
+    --bb-sidebar-bg: var(--bb-coal-400);
     --bb-sidebar-border-color: var(--bb-border-color);
+    --bb-sidebar-header-divider: rgba(255, 255, 255, 0.06);
+    --bb-sidebar-footer-divider: rgba(255, 255, 255, 0.05);
     --bb-sidebar-text-color: rgba(255, 255, 255, 0.85);
 
   /* layout */
@@ -28,7 +30,7 @@ Header
     padding: 1rem 1.25rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid var(--bb-sidebar-header-divider);
 }
 
 .bb-sidebar-logo img {
@@ -51,5 +53,5 @@ Header
 .bb-sidebar-footer {
     flex-shrink: 0;
     padding: 0.75rem 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--bb-sidebar-footer-divider);
 }

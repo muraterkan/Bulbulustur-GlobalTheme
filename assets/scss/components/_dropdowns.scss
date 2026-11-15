@@ -24,7 +24,7 @@
   --bb-dd-item-py: 0.55rem;
 
   --bb-dd-item-hover-bg: var(--bb-tertiary-bg);
-  --bb-dd-item-active-bg: color-mix(in srgb, var(--bb-primary)14%, transparent);
+  --bb-dd-item-active-bg: color-mix(in srgb, var(--bb-primary) 14%, transparent);
 
   --bb-dd-header-color: var(--bb-secondary-color);
   --bb-dd-divider: var(--bb-border-color);
@@ -52,6 +52,25 @@
   /* polish */
   border-width: var(--bb-border-width, 1px);
   box-shadow: var(--bb-dd-shadow);
+}
+
+/* Helix JS-controlled dropdown wrapper (Bootstrap dropdowns stay independent).
+   Generic appearance and sizing remain owned by .bb-dropdown-menu above. */
+.bb-dropdown {
+  position: relative;
+}
+
+.bb-dropdown .bb-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  min-width: var(--bb-dd-minw, 140px);
+  display: none;
+  z-index: 100;
+}
+
+.bb-dropdown.is-open .bb-dropdown-menu {
+  display: block;
 }
 
 /* Menü varyantları */
@@ -91,10 +110,20 @@
   align-items: center;
   gap: 0.5rem;
 
-  border-radius: var(--bb-dd-item-radius);
-  padding: var(--bb-dd-item-py) var(--bb-dd-item-px);
+  border-radius: var(--bb-dd-item-radius, var(--bb-radius));
+  padding: var(--bb-dd-item-py, 0.55rem) var(--bb-dd-item-px, 0.75rem);
 
   transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Standalone bb items retain their link color and hover state. */
+.bb-dropdown-item {
+  color: var(--bb-body-color);
+  text-decoration: none;
+}
+
+.bb-dropdown-item:hover {
+  background-color: var(--bb-tertiary-bg);
 }
 
 /* Disabled item opacity (token bazlı) */
@@ -149,9 +178,6 @@
 
 .bb-btn-dropdown.dropdown-toggle::after {
     display: none !important;
-    content: none !important;
-    border: 0 !important;
-    margin: 0 !important;
 }
 
 /* Split button alignment helper (opsiyonel) */

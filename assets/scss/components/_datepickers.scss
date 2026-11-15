@@ -16,11 +16,11 @@
   --bb-dt-shadow: var(--bb-shadow-sm);
 
   --bb-dt-hover-bg: var(--bb-tertiary-bg);
-  --bb-dt-active-bg: color-mix(in srgb, var(--bb-primary)12%, transparent);
+  --bb-dt-active-bg: color-mix(in srgb, var(--bb-primary) 12%, transparent);
   --bb-dt-active-text: var(--bb-primary);
 
-  --bb-dt-inrange-bg: color-mix(in srgb, var(--bb-primary)8%, transparent);
-  --bb-dt-today-ring: color-mix(in srgb, var(--bb-primary)35%, transparent);
+  --bb-dt-inrange-bg: color-mix(in srgb, var(--bb-primary) 8%, transparent);
+  --bb-dt-today-ring: color-mix(in srgb, var(--bb-primary) 35%, transparent);
 
   --bb-dt-gap: 0.75rem;
   --bb-dt-pad: 0.85rem;
@@ -225,7 +225,7 @@
 .bb-datetime-selected {
   margin-right: auto;
   color: var(--bb-dt-muted);
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
 }
 
 /* Responsive */

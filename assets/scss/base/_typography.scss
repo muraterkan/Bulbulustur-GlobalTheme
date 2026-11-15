@@ -148,7 +148,7 @@
      Element Tokens
   ------------------------------------- */
 
-  --bb-small-font-size: var(--bb-fs-sm);;
+  --bb-small-font-size: var(--bb-fs-sm);
 
   --bb-list-padding-left: 2rem;
   --bb-list-item-margin-bottom: var(--bb-space-1);
@@ -157,7 +157,7 @@
   --bb-blockquote-padding-x: var(--bb-space-4);
   --bb-blockquote-border-width: 0.1875rem;
 
-  --bb-code-font-size: var(--bb-fs-sm);;
+  --bb-code-font-size: var(--bb-fs-sm);
   --bb-code-padding-y: 0.2em;
   --bb-code-padding-x: 0.4em;
 
@@ -181,20 +181,20 @@
      Component Typography Bridges
   ------------------------------------- */
 
-  --bb-chip-font-size: var(--bb-fs-sm);;
+  --bb-chip-font-size: var(--bb-fs-sm);
   --bb-chip-font-size-sm: var(--bb-fs-xs);
   --bb-chip-line-height: var(--bb-line-height-heading);
 
-  --bb-badge-font-size: var(--bb-fs-sm);;
+  --bb-badge-font-size: var(--bb-fs-sm);
   --bb-badge-font-size-sm: var(--bb-fs-xs);
 
-  --bb-table-font-size: var(--bb-fs-sm);;
-  --bb-table-head-font-size: var(--bb-fs-sm);;
-  --bb-table-line-height: var(--bb-table-line-height);
+  --bb-table-font-size: var(--bb-fs-sm);
+  --bb-table-head-font-size: var(--bb-fs-sm);
+  --bb-table-line-height: var(--bb-line-height-base);
 
-  --bb-form-label-font-size: var(--bb-fs-sm);;
+  --bb-form-label-font-size: var(--bb-fs-sm);
   --bb-form-control-font-size: var(--bb-fs-base);
-  --bb-form-help-font-size: var(--bb-fs-sm);;
+  --bb-form-help-font-size: var(--bb-fs-sm);
 
   --bb-page-text-font-size: var(--bb-fs-base);
   --bb-page-lead-font-size: var(--bb-fs-md);
@@ -208,8 +208,8 @@
 
   --bb-font-size-2xs: var(--bb-fs-2xs);
   --bb-font-size-xs: var(--bb-fs-xs);
-  --bb-font-size-sm: font-size: var(--bb-fs-sm);;
-  --bb-font-size-base: font-size: var(--bb-fs-base);;
+  --bb-font-size-sm: var(--bb-fs-sm);
+  --bb-font-size-base: var(--bb-fs-base);
   --bb-font-size-md: var(--bb-fs-md);
   --bb-font-size-lg: var(--bb-fs-lg);
   --bb-font-size-xl: var(--bb-fs-xl);
@@ -220,8 +220,8 @@
 
   --bb-text-2xs: var(--bb-fs-2xs);
   --bb-text-xs: var(--bb-fs-xs);
-  --bb-text-sm: font-size: var(--bb-fs-sm);;
-  --bb-text-base: font-size: var(--bb-fs-base);;
+  --bb-text-sm: var(--bb-fs-sm);
+  --bb-text-base: var(--bb-fs-base);
   --bb-text-md: var(--bb-fs-md);
   --bb-text-lg: var(--bb-fs-lg);
   --bb-text-xl: var(--bb-fs-xl);
@@ -252,7 +252,7 @@
 ------------------------------------- */
 
 [data-bb-density="compact"] {
-  --bb-root-font-size: var(--bb-fs-sm);;
+  --bb-root-font-size: var(--bb-fs-sm);
 
   --bb-fs-2xs: 0.6875rem;
   --bb-fs-xs: 0.75rem;
@@ -718,31 +718,31 @@ hr {
 
 .bb-text-xs {
   color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-ui);
   line-height: var(--bb-line-height-base);
 }
 
 .bb-text-ui {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-ui);
   line-height: var(--bb-line-height-base);
 }
 
 .bb-text-action {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-action);
   line-height: var(--bb-line-height-heading);
 }
 
 .bb-text-navigation {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-navigation);
   line-height: var(--bb-line-height-heading);
 }
 
 .bb-text-navigation-active {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-navigation-active);
   line-height: var(--bb-line-height-heading);
 }

@@ -28,7 +28,7 @@
 
   --bb-collapse-toggle-bg: transparent;
   --bb-collapse-toggle-hover-bg: var(--bb-tertiary-bg);
-  --bb-collapse-toggle-active-bg: color-mix(in srgb, var(--bb-primary)10%, transparent);
+  --bb-collapse-toggle-active-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
 
   --bb-collapse-toggle-color: var(--bb-body-color);
   --bb-collapse-toggle-muted: var(--bb-secondary-color);
@@ -120,7 +120,7 @@
 }
 
 .bb-collapse-title > .bb-collapse-subtitle {
-  font-size: var(--bb-fs-sm);;
+  font-size: var(--bb-fs-sm);
   color: var(--bb-collapse-toggle-muted);
   line-height: var(--bb-line-height-heading);
 }

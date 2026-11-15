@@ -15,7 +15,7 @@
   --bb-progress-value-color: var(--bb-body-color);
 
   --bb-progress-gap: 0.5rem;
-  --bb-progress-font-size: font-size: var(--bb-fs-base);
+  --bb-progress-font-size: var(--bb-fs-base);
 
   --bb-progress-transition:
     width var(--bb-motion-normal, 200ms) var(--bb-ease-in-out, ease-in-out);

@@ -109,8 +109,8 @@ $bb-sizes-px: (
   .bb-w-#{$k} { width: #{$v} !important; }
   .bb-h-#{$k} { height: #{$v} !important; }
 
-  .bb-mw-#{$k} { max-width: #{$v} !important; }
-  .bb-mh-#{$k} { max-height: #{$v} !important; }
+  .bb-mw-#{$k} { max-width: #{if($v == auto, none, $v)} !important; }
+  .bb-mh-#{$k} { max-height: #{if($v == auto, none, $v)} !important; }
 
   .bb-min-w-#{$k} { min-width: #{$v} !important; }
   .bb-min-h-#{$k} { min-height: #{$v} !important; }
@@ -120,8 +120,8 @@ $bb-sizes-px: (
       .bb-w-#{$bp}-#{$k} { width: #{$v} !important; }
       .bb-h-#{$bp}-#{$k} { height: #{$v} !important; }
 
-      .bb-mw-#{$bp}-#{$k} { max-width: #{$v} !important; }
-      .bb-mh-#{$bp}-#{$k} { max-height: #{$v} !important; }
+      .bb-mw-#{$bp}-#{$k} { max-width: #{if($v == auto, none, $v)} !important; }
+      .bb-mh-#{$bp}-#{$k} { max-height: #{if($v == auto, none, $v)} !important; }
 
       .bb-min-w-#{$bp}-#{$k} { min-width: #{$v} !important; }
       .bb-min-h-#{$bp}-#{$k} { min-height: #{$v} !important; }
@@ -169,8 +169,6 @@ $bb-zindex: (
 $bb-border-widths: (
   0: 0,
   1: 1px,
-  2: 2px,
-  3: 3px,
   4: 4px,
   5: 5px
 );
@@ -186,9 +184,7 @@ $bb-border-widths: (
    Line-height
 ------------------------------------- */
 .bb-lh-0    { line-height: 0 !important; }
-.bb-lh-1    { line-height: 1 !important; }
 .bb-lh-sm   { line-height: 1.25 !important; }
-.bb-lh-base { line-height: 1.5 !important; }
 .bb-lh-lg   { line-height: 1.75 !important; }
 .bb-lh-xl   { line-height: 2 !important; }
 .bb-lh-xxl  { line-height: 2.25 !important; }
@@ -215,14 +211,7 @@ $bb-letter-spacing: (
 /* -------------------------------------
    Rounded (token-driven)
 ------------------------------------- */
-.bb-rounded         { border-radius: var(--bb-radius) !important; }
 .bb-rounded-0       { border-radius: 0 !important; }
-.bb-rounded-sm      { border-radius: var(--bb-radius-sm) !important; }
-.bb-rounded-lg      { border-radius: var(--bb-radius-lg) !important; }
-.bb-rounded-xl      { border-radius: var(--bb-radius-xl) !important; }
-.bb-rounded-2xl     { border-radius: var(--bb-radius-2xl) !important; }
-.bb-rounded-pill    { border-radius: var(--bb-radius-pill) !important; }
-.bb-rounded-circle  { border-radius: 50% !important; }
 
 .bb-drawer-lock {
   overflow: hidden;
