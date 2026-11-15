@@ -27,7 +27,8 @@
 
   /* spacing */
   --bb-card-px: calc(var(--bb-space-4) + var(--bb-space-1));
-  --bb-card-header-py: var(--bb-space-3);
+  --bb-card-header-py: var(--bb-space-4);
+  --bb-card-header-min-height: 4.5rem;
   --bb-card-body-py: calc(var(--bb-space-4) + var(--bb-space-1));
   --bb-card-footer-py: var(--bb-space-3);
 
@@ -73,6 +74,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--bb-card-actions-gap);
+  min-height: var(--bb-card-header-min-height);
+  box-sizing: border-box;
 
   padding-block: var(--bb-card-header-py);
   padding-inline: var(--bb-card-px);
