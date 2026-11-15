@@ -1,0 +1,55 @@
+/* Faz 2 — Panel sidebar / existing bb-menu extensions */
+.bb-panel .bb-sidebar .bb-menu {
+  --bb-menu-bg: var(--bb-sidebar-bg);
+  --bb-menu-link-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-hover-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-active-color: var(--bb-sidebar-text-color);
+  --bb-menu-link-hover-bg: color-mix(in srgb, currentColor 10%, transparent);
+  --bb-menu-link-active-bg: color-mix(in srgb, var(--bb-primary) 30%, transparent);
+  --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary) 15%, transparent);
+  --bb-menu-section-color: var(--bb-sidebar-text-color);
+  --bb-menu-bullet-color: var(--bb-sidebar-text-color);
+  padding-inline: var(--bb-menu-gap);
+}
+.bb-panel .bb-sidebar .bb-menu-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: start;
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-section {
+  margin-block-start: var(--bb-menu-gap);
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item.active > .bb-menu-link,
+.bb-panel .bb-sidebar .bb-menu .bb-menu-link[aria-current="page"] {
+  color: var(--bb-sidebar-text-color);
+  background: var(--bb-menu-link-active-bg);
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-link:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-sub-accordion .bb-menu-link {
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-sub .bb-menu-sub .bb-menu-link {
+  padding-inline-start: calc(var(--bb-menu-link-px) + var(--bb-menu-link-px) + var(--bb-menu-icon-size));
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item:not(.show) > .bb-menu-sub-accordion {
+  visibility: hidden;
+}
+.bb-panel .bb-sidebar .bb-menu .bb-menu-item.show > .bb-menu-sub-accordion {
+  visibility: visible;
+}
+@media (min-width: 992px) {
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-section,
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-title,
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-arrow,
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-badge,
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-sub {
+    display: none;
+  }
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar .bb-menu .bb-menu-link {
+    justify-content: center;
+  }
+}
