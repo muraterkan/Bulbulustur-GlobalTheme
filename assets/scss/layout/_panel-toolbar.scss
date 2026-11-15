@@ -1,0 +1,33 @@
+/* Faz 5 — toolbar varyantları; mevcut .bb-toolbar tamamlayıcıları */
+.bb-panel .bb-panel-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+.bb-panel .bb-panel-toolbar-description {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-panel-toolbar-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+  margin-block-start: var(--bb-panel-content-gap);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+.bb-panel .bb-panel-toolbar-tabs a {
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  padding: var(--bb-menu-link-py, 0.65rem) var(--bb-menu-link-px, 0.9rem);
+  border-bottom: var(--bb-border-width, 1px) solid transparent;
+}
+.bb-panel .bb-panel-toolbar-tabs a[aria-current="page"] {
+  border-bottom-color: var(--bb-primary);
+  color: var(--bb-primary-text);
+}
+@media (max-width: 767.98px) {
+  .bb-panel .bb-panel-toolbar-actions { justify-content: flex-start; }
+}
