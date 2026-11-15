@@ -9499,6 +9499,102 @@ Header
     grid-template-columns: 1fr;
   }
 }
+/* Faz 11 — auth & error page additions; all controls use existing bb-card / form classes */
+.bb-panel.bb-panel-auth {
+  min-height: 100vh;
+  background: var(--bb-tertiary-bg);
+}
+
+.bb-panel.bb-panel-auth .bb-shell,
+.bb-panel.bb-panel-auth .bb-main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.bb-panel.bb-panel-auth .bb-main-inner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-panel.bb-panel-auth .bb-content {
+  width: 100%;
+  padding-block: var(--bb-panel-content-gap);
+}
+
+.bb-panel.bb-panel-auth .bb-panel-content-container {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--bb-menu-link-px, 0.9rem);
+  margin-bottom: var(--bb-panel-content-gap);
+  color: var(--bb-heading-color);
+  font-weight: var(--bb-fw-bold);
+  text-decoration: none;
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-brand .material-symbols-outlined {
+  color: var(--bb-primary-text);
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-title {
+  margin: 0;
+  color: var(--bb-heading-color);
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-subtitle {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-link-px, 0.9rem);
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-result[hidden] {
+  display: none;
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-switch {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--bb-primary-text);
+  cursor: pointer;
+}
+
+.bb-panel.bb-panel-auth .bb-panel-auth-switch:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+
+.bb-panel.bb-panel-error .bb-panel-content-container {
+  max-width: 36rem;
+}
+
+.bb-panel.bb-panel-error .bb-panel-error-number {
+  font-size: clamp(var(--bb-h1), 16vw, 8rem);
+  line-height: 1;
+  font-weight: var(--bb-fw-bold);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel.bb-panel-error .bb-panel-error-icon {
+  font-size: var(--bb-h1);
+  color: var(--bb-primary-text);
+}
+
 /* 5. Components */
 /* =====================================
    Bulbulustur Theme - Buttons
