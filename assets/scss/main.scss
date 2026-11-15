@@ -38,6 +38,7 @@
 @use "layout/toolbar1";
 @use "layout/footer";
 @use "layout/panel-shell";         // panel template Faz 1: responsive shell
+@use "layout/panel-sidebar";       // panel template Faz 2: sidebar menüsü
 
 /* 5. Components */
 @use "components/buttons";
