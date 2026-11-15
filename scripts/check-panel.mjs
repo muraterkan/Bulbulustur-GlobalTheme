@@ -1,7 +1,7 @@
 /* Panel kabul denetimi: statik linkler, ID çakışmaları ve JS sözdizimi.
  * Tarayıcı davranışı / responsive / erişilebilirlik testlerinin yerine geçmez. */
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { dirname, extname, join, relative, resolve } from "node:path";
+import { dirname, extname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
@@ -44,7 +44,8 @@ for (const name of pages) {
     if (!pathOnly) continue;
     const dest = resolve(dirname(file), decodeURIComponent(pathOnly));
     references++;
-    if (relative(root, dest).startsWith("..") || relative(root, dest).startsWith("/") || relative(root, dest).startsWith("\\\\") || /^[a-z]:/i.test(relative(root, dest))) {
+    const rel = relative(root, dest);
+    if (rel === ".." || rel.startsWith(".." + sep) || isAbsolute(rel)) {
       referenceIssues.push(name + ": path outside project: " + value);
     } else if (!existsSync(dest)) {
       referenceIssues.push(name + ": missing " + value);
@@ -56,7 +57,7 @@ for (const name of pages) {
 report("Panel HTML local references (" + pages.length + " pages, " + references + " refs)", referenceIssues);
 report("Panel HTML IDs and aria-controls", idIssues);
 const syntaxIssues = [];
-for (const name of readdirSync(jsDir).filter((x) => /^bb-panel.*\\.js$/.test(x))) scriptPaths.add(join(jsDir, name));
+for (const name of readdirSync(jsDir).filter((x) => x.startsWith("bb-panel") && x.endsWith(".js"))) scriptPaths.add(join(jsDir, name));
 for (const path of scriptPaths) {
   const result = spawnSync(process.execPath, ["--check", path], { encoding: "utf8" });
   if (result.status !== 0) syntaxIssues.push(relative(root, path) + ": " + (result.stderr || "syntax error").trim());
