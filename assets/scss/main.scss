@@ -7,6 +7,7 @@
 @use "base/theme";              // light/dark base tokens
 @use "base/radius";             // radius scale
 @use "themes/token-engine";     // semantic color tokens
+@use "themes/pack-atolye";      // renk paketi: ATÖLYE (html[data-bb-pack="atolye"], varsayılanı etkilemez)
 @use "base/typography";         // typography tokens + base typography
 @use "themes/bootstrap-bridge"; // Bootstrap --bs-* bridge
 

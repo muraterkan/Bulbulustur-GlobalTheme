@@ -50,3 +50,8 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 - B1: 11 ölü partial silindi (derleme çıktısı değişmedi). B2/B3: mükerrer media ve pages silindi. B4/B5: 5 JS `assets/js`'e taşındı, lightbox kopyası silindi, demo yolları düzeltildi. B6: `scripts/check-contracts.mjs` + `npm run check:contracts` / `check:css` eklendi (16/16 geçti; yapay yetim partial ile FAIL verdiği görüldü).
 - Derleme: sass 1.93.2, uyarısız, 451838 → 451982 bayt.
 - Yapılmadı: tarayıcıda görsel kontrol; D1–D6 kararları.
+
+## F. Ek bulgu (renk paketi çalışmasında)
+
+- D7: `themes/_token-engine.scss` ile `base/_theme.scss` aynı türetilmiş tokenları (`--bb-primary-hover/active/light/clarity`, `--bb-link-color`) tanımlıyor. `html[data-bs-theme]` varsa base (özgüllük 0,1,1) kazanıyor; öznitelik yoksa token-engine kazanıyor. Doğrulama: `data-bs-theme="light"` ile `--bb-primary-hover` = `#e6c300` (base değeri), token-engine'in %90 karışımı değil. Tek sahip seçilmeli (karar bekliyor, dokunulmadı).
+- Renk paketi `atolye` eklendi: `themes/_pack-atolye.scss`, demo `modules/pack-atolye.html`. Paket seçilmezse çıktı değişmez (`?pack=off` ile sarı varsayılan doğrulandı).

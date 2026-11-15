@@ -1032,6 +1032,282 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   }
 }
 /* =====================================
+   Bulbulustur Theme - Renk Paketi: ATÖLYE
+   El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
+   Kullanım: <html data-bb-pack="atolye"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
+   Kapsam: yalnız renk tokenları. Sarı marka paleti (base/_theme) bozulmaz;
+   paket seçilmediğinde bu dosya hiçbir şeyi etkilemez.
+   Kaynak: Draugr/Ortobella örnek tasarımlarından örneklenen renkler.
+   Kontrast (WCAG): beyaz/primary 4.99, ink/krem 13.4, ink/adaçayı 5.8,
+   koyu tema primary-üstü-yazı 6.7.
+===================================== */
+/* -------------------------------------
+   PALET (açık + koyu ortak)
+------------------------------------- */
+html[data-bb-pack=atolye] {
+  /* Terracotta (primary) */
+  --bb-terracotta-50: #f9f1ef;
+  --bb-terracotta-100: #f1e0da;
+  --bb-terracotta-200: #e3c1b6;
+  --bb-terracotta-300: #d29c89;
+  --bb-terracotta-400: #c07359;
+  --bb-terracotta-500: #b25434;
+  --bb-terracotta-600: #9a492e;
+  --bb-terracotta-700: #7f3e27;
+  --bb-terracotta-800: #643220;
+  --bb-terracotta-900: #492619;
+  --bb-terracotta-rgb: 178, 84, 52;
+  /* Adaçayı (sage) */
+  --bb-sage-50: #f6f8f7;
+  --bb-sage-100: #ebefed;
+  --bb-sage-200: #d7e0dc;
+  --bb-sage-300: #bfcdc6;
+  --bb-sage-400: #a5b8af;
+  --bb-sage-500: #91a89d;
+  --bb-sage-600: #7e948a;
+  --bb-sage-700: #6a7d74;
+  --bb-sage-800: #55665e;
+  --bb-sage-900: #405048;
+  --bb-sage-rgb: 145, 168, 157;
+  /* Zeytin (olive) */
+  --bb-olive-50: #f1f2ef;
+  --bb-olive-100: #e0e2dc;
+  --bb-olive-200: #c0c5b9;
+  --bb-olive-300: #9aa18e;
+  --bb-olive-400: #707a60;
+  --bb-olive-500: #515d3d;
+  --bb-olive-600: #485336;
+  --bb-olive-700: #3d472e;
+  --bb-olive-800: #323b26;
+  --bb-olive-900: #28301e;
+  --bb-olive-rgb: 81, 93, 61;
+  /* Kum / krem (sand) */
+  --bb-sand-50: #fefaf4;
+  --bb-sand-100: #f8f4ec;
+  --bb-sand-200: #f2e9da;
+  --bb-sand-300: #e8dcc8;
+  --bb-sand-400: #dccbb0;
+  --bb-sand-rgb: 248, 244, 236;
+  /* Şeftali (peach, vurgu yüzeyi) */
+  --bb-peach-300: #e1bea7;
+}
+
+/* -------------------------------------
+   AÇIK TEMA
+------------------------------------- */
+html[data-bb-pack=atolye]:not([data-bs-theme=dark]) {
+  color-scheme: light;
+  /* Sıcak nötr ölçek (ink = gray-900) */
+  --bb-gray-50: #fbf8f3;
+  --bb-gray-100: #f4eee4;
+  --bb-gray-200: #e9e0d2;
+  --bb-gray-300: #d9ccb9;
+  --bb-gray-400: #bfb09b;
+  --bb-gray-500: #9a8b78;
+  --bb-gray-600: #7a6a5c;
+  --bb-gray-700: #5b4c41;
+  --bb-gray-800: #43362d;
+  --bb-gray-900: #34251f;
+  /* Gövde / yüzey */
+  --bb-body-bg: var(--bb-sand-100);
+  --bb-body-color: var(--bb-gray-900);
+  --bb-secondary-bg: var(--bb-sand-200);
+  --bb-tertiary-bg: var(--bb-gray-100);
+  --bb-surface-bg: var(--bb-sand-50);
+  --bb-surface-soft: var(--bb-gray-50);
+  --bb-surface-muted: var(--bb-sand-200);
+  --bb-surface-elevated: var(--bb-sand-50);
+  --bb-emphasis-color: var(--bb-gray-900);
+  --bb-secondary-color: var(--bb-gray-600);
+  --bb-tertiary-color: var(--bb-gray-700);
+  --bb-heading-color: var(--bb-emphasis-color);
+  --bb-body-bg-rgb: 248, 244, 236;
+  --bb-body-color-rgb: 52, 37, 31;
+  --bb-secondary-bg-rgb: 242, 233, 218;
+  --bb-tertiary-bg-rgb: 244, 238, 228;
+  --bb-secondary-color-rgb: 122, 106, 92;
+  --bb-tertiary-color-rgb: 91, 76, 65;
+  --bb-border-color: #e6dccb;
+  --bb-border-color-strong: var(--bb-gray-300);
+  --bb-border-dashed-color: var(--bb-gray-300);
+  --bb-shadow-rgb: 52, 37, 31;
+  /* Marka girdileri */
+  --bb-brand-primary: var(--bb-terracotta-500);
+  --bb-brand-primary-rgb: 178, 84, 52;
+  --bb-brand-primary-inverse: var(--bb-white);
+  --bb-brand-secondary: var(--bb-sand-200);
+  --bb-brand-secondary-rgb: 242, 233, 218;
+  --bb-brand-secondary-inverse: var(--bb-gray-800);
+  --bb-brand-success: #547a46;
+  --bb-brand-success-rgb: 84, 122, 70;
+  --bb-brand-success-inverse: var(--bb-white);
+  --bb-brand-info: #447286;
+  --bb-brand-info-rgb: 68, 114, 134;
+  --bb-brand-info-inverse: var(--bb-white);
+  --bb-brand-warning: #d99a2b;
+  --bb-brand-warning-rgb: 217, 154, 43;
+  --bb-brand-warning-inverse: var(--bb-gray-900);
+  --bb-brand-danger: #b3303a;
+  --bb-brand-danger-rgb: 179, 48, 58;
+  --bb-brand-danger-inverse: var(--bb-white);
+  --bb-brand-dark: var(--bb-olive-800);
+  --bb-brand-dark-rgb: 50, 59, 38;
+  --bb-brand-dark-inverse: var(--bb-white);
+  --bb-brand-light: var(--bb-sand-100);
+  --bb-brand-light-rgb: 248, 244, 236;
+  --bb-brand-light-inverse: var(--bb-gray-800);
+  /* Paket ikincil marka rengi */
+  --bb-brand-sage: var(--bb-sage-500);
+  --bb-brand-sage-rgb: 145, 168, 157;
+  --bb-brand-sage-inverse: var(--bb-gray-900);
+  /* Türetilmiş durumlar */
+  --bb-primary-hover: var(--bb-terracotta-600);
+  --bb-primary-active: var(--bb-terracotta-700);
+  --bb-primary-light: var(--bb-terracotta-100);
+  --bb-secondary-hover: var(--bb-sand-300);
+  --bb-secondary-active: var(--bb-sand-400);
+  --bb-success-hover: color-mix(in srgb, var(--bb-success) 82%, #000);
+  --bb-success-active: color-mix(in srgb, var(--bb-success) 70%, #000);
+  --bb-success-light: color-mix(in srgb, var(--bb-success) 14%, var(--bb-white));
+  --bb-info-hover: color-mix(in srgb, var(--bb-info) 82%, #000);
+  --bb-info-active: color-mix(in srgb, var(--bb-info) 70%, #000);
+  --bb-info-light: color-mix(in srgb, var(--bb-info) 14%, var(--bb-white));
+  --bb-warning-hover: color-mix(in srgb, var(--bb-warning) 82%, #000);
+  --bb-warning-active: color-mix(in srgb, var(--bb-warning) 70%, #000);
+  --bb-warning-light: color-mix(in srgb, var(--bb-warning) 16%, var(--bb-white));
+  --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 82%, #000);
+  --bb-danger-active: color-mix(in srgb, var(--bb-danger) 70%, #000);
+  --bb-danger-light: color-mix(in srgb, var(--bb-danger) 12%, var(--bb-white));
+  --bb-dark-hover: var(--bb-olive-700);
+  --bb-dark-active: var(--bb-olive-900);
+  --bb-dark-light: color-mix(in srgb, var(--bb-dark) 10%, transparent);
+  --bb-dark-clarity: color-mix(in srgb, var(--bb-dark) 15%, transparent);
+  --bb-light-hover: var(--bb-sand-200);
+  --bb-light-active: var(--bb-sand-300);
+  /* Kabuk: header üst şerit adaçayı, footer zeytin */
+  --bb-header-bg: var(--bb-sand-50);
+  --bb-header-color: var(--bb-body-color);
+  --bb-header-border-color: var(--bb-border-color);
+  --bb-header-top-bg: var(--bb-sage-500);
+  --bb-header-top-color: var(--bb-gray-900);
+  --bb-header-top-muted-color: color-mix(in srgb, var(--bb-gray-900) 74%, transparent);
+  --bb-header-top-border-color: color-mix(in srgb, var(--bb-gray-900) 12%, transparent);
+  --bb-header-top-action-bg: color-mix(in srgb, var(--bb-gray-900) 8%, transparent);
+  --bb-header-top-action-hover-bg: color-mix(in srgb, var(--bb-gray-900) 12%, transparent);
+  --bb-footer-bg: var(--bb-olive-900);
+  --bb-footer-bg-soft: var(--bb-olive-800);
+  --bb-footer-bottom-bg: color-mix(in srgb, var(--bb-olive-900) 82%, #000);
+  /* Bağlantı */
+  --bb-link-color: var(--bb-terracotta-600);
+  --bb-link-hover-color: var(--bb-terracotta-700);
+}
+
+/* Yüzey seçilmediyse sayfa aksanı primary (terracotta) olur; data-bb-surface kuralları değişmez */
+html[data-bb-pack=atolye]:not([data-bs-theme=dark]):not([data-bb-surface]) {
+  --bb-page-accent: var(--bb-primary);
+  --bb-page-accent-rgb: var(--bb-primary-rgb);
+  --bb-page-accent-soft: var(--bb-terracotta-50);
+  --bb-page-accent-muted: var(--bb-terracotta-100);
+  --bb-page-accent-strong: var(--bb-terracotta-700);
+  --bb-page-accent-hover: var(--bb-primary-hover);
+  --bb-page-accent-active: var(--bb-primary-active);
+  --bb-page-accent-light: var(--bb-primary-light);
+  --bb-page-accent-inverse: var(--bb-primary-inverse);
+}
+
+/* -------------------------------------
+   KOYU TEMA (sıcak kakao-kömür)
+------------------------------------- */
+html[data-bb-pack=atolye][data-bs-theme=dark] {
+  color-scheme: dark;
+  /* base/_theme koyu ölçeği ink-* üzerinden okunur; ink sıcak tonlara çevrilir */
+  --bb-ink-990: #110d0b;
+  --bb-ink-980: #15100e;
+  --bb-ink-950: #1a1411;
+  --bb-ink-900: #1f1814;
+  --bb-ink-850: #231c17;
+  --bb-ink-800: #2a221c;
+  --bb-ink-750: #302720;
+  --bb-ink-700: #372d26;
+  --bb-ink-650: #40352c;
+  --bb-ink-600: #4d4035;
+  --bb-ink-blue-line: rgba(224, 203, 176, 0.14);
+  --bb-ink-blue-line-soft: rgba(224, 203, 176, 0.09);
+  --bb-ink-blue-line-strong: rgba(224, 203, 176, 0.24);
+  --bb-border-rgb: 224, 203, 176;
+  --bb-gray-700: #a89887;
+  --bb-gray-800: #cdbfae;
+  --bb-gray-900: #f2eadf;
+  --bb-body-color: #f2eadf;
+  --bb-emphasis-color: #fbf5ec;
+  --bb-secondary-color: #cdbfae;
+  --bb-tertiary-color: #a89887;
+  --bb-body-bg-rgb: 35, 28, 23;
+  --bb-body-color-rgb: 242, 234, 223;
+  --bb-secondary-bg-rgb: 55, 45, 38;
+  --bb-tertiary-bg-rgb: 48, 39, 32;
+  --bb-secondary-color-rgb: 205, 191, 174;
+  --bb-tertiary-color-rgb: 168, 152, 135;
+  /* Marka girdileri (koyu zeminde okunur tonlar, üstü koyu yazı) */
+  --bb-brand-primary: #dc8f70;
+  --bb-brand-primary-rgb: 220, 143, 112;
+  --bb-brand-primary-inverse: #2a1710;
+  --bb-brand-secondary-rgb: 48, 39, 32;
+  --bb-brand-success: #8db57a;
+  --bb-brand-success-rgb: 141, 181, 122;
+  --bb-brand-success-inverse: #1a1411;
+  --bb-brand-info: #7fb0c4;
+  --bb-brand-info-rgb: 127, 176, 196;
+  --bb-brand-info-inverse: #1a1411;
+  --bb-brand-warning: #e8b04f;
+  --bb-brand-warning-rgb: 232, 176, 79;
+  --bb-brand-warning-inverse: #1a1411;
+  --bb-brand-danger: #e0707a;
+  --bb-brand-danger-rgb: 224, 112, 122;
+  --bb-brand-danger-inverse: #1a1411;
+  --bb-brand-dark-rgb: 26, 20, 17;
+  --bb-brand-light-rgb: 42, 34, 28;
+  --bb-brand-sage: var(--bb-sage-400);
+  --bb-brand-sage-rgb: 165, 184, 175;
+  --bb-brand-sage-inverse: #1a1411;
+  --bb-primary-hover: #e7a285;
+  --bb-primary-active: #f0b69d;
+  --bb-primary-light: color-mix(in srgb, var(--bb-primary) 16%, transparent);
+  --bb-success-hover: color-mix(in srgb, var(--bb-success) 88%, #fff);
+  --bb-success-active: color-mix(in srgb, var(--bb-success) 76%, #fff);
+  --bb-info-hover: color-mix(in srgb, var(--bb-info) 88%, #fff);
+  --bb-info-active: color-mix(in srgb, var(--bb-info) 76%, #fff);
+  --bb-warning-hover: color-mix(in srgb, var(--bb-warning) 88%, #fff);
+  --bb-warning-active: color-mix(in srgb, var(--bb-warning) 76%, #fff);
+  --bb-danger-hover: color-mix(in srgb, var(--bb-danger) 88%, #fff);
+  --bb-danger-active: color-mix(in srgb, var(--bb-danger) 76%, #fff);
+  /* Kabuk */
+  --bb-header-color: #f2eadf;
+  --bb-header-top-bg: var(--bb-olive-700);
+  --bb-header-top-color: #f2eadf;
+  --bb-header-top-muted-color: color-mix(in srgb, #f2eadf 74%, transparent);
+  --bb-header-top-border-color: color-mix(in srgb, #f2eadf 12%, transparent);
+  --bb-header-top-action-bg: color-mix(in srgb, #f2eadf 8%, transparent);
+  --bb-header-top-action-hover-bg: color-mix(in srgb, #f2eadf 12%, transparent);
+  --bb-footer-border-color: color-mix(in srgb, #e0cbb0 13%, transparent);
+  --bb-footer-border-color-strong: color-mix(in srgb, #e0cbb0 22%, transparent);
+  --bb-link-color: #e7b49f;
+  --bb-link-hover-color: var(--bb-primary);
+}
+
+html[data-bb-pack=atolye][data-bs-theme=dark]:not([data-bb-surface]) {
+  --bb-page-accent: var(--bb-primary);
+  --bb-page-accent-rgb: var(--bb-primary-rgb);
+  --bb-page-accent-soft: color-mix(in srgb, var(--bb-primary) 12%, transparent);
+  --bb-page-accent-muted: color-mix(in srgb, var(--bb-primary) 18%, transparent);
+  --bb-page-accent-strong: #f0b69d;
+  --bb-page-accent-hover: var(--bb-primary-hover);
+  --bb-page-accent-active: var(--bb-primary-active);
+  --bb-page-accent-light: var(--bb-primary-light);
+  --bb-page-accent-inverse: var(--bb-primary-inverse);
+}
+
+/* =====================================
    Bulbulustur Theme - Typography
    Bootstrap-parallel token names
    Theme: data-bs-theme="light|dark"
