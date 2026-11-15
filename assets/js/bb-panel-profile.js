@@ -222,6 +222,22 @@ if (breadcrumb) {
     breadcrumb.appendChild(li);
   });
 }
+/* Keep the User Profile sidebar group expanded on tabs without direct sidebar links. */
+var profileMenuLink = document.querySelector('[data-bb-panel-page="profile-overview"]');
+if (profileMenuLink) {
+  var groupNode = profileMenuLink.parentElement;
+  while (groupNode && !groupNode.hasAttribute("data-bb-panel")) {
+    if (groupNode.classList && groupNode.classList.contains("bb-menu-item") && groupNode.hasAttribute("data-bb-menu-trigger")) {
+      groupNode.classList.add("show");
+      var groupButton = groupNode.querySelector(":scope > .bb-menu-link");
+      var groupSub = groupNode.querySelector(":scope > .bb-menu-sub");
+      if (groupButton) groupButton.setAttribute("aria-expanded", "true");
+      if (groupSub) { groupSub.setAttribute("aria-hidden", "false"); groupSub.inert = false; }
+    }
+    groupNode = groupNode.parentElement;
+  }
+}
+
 var form = root.querySelector("[data-bb-profile-form]");
 if (form) form.addEventListener("submit",function(event){
   event.preventDefault();
