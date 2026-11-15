@@ -10,3 +10,9 @@
 .bb-panel .bb-dashboard-microchart span:nth-child(3) { height:45%; }
 .bb-panel .bb-dashboard-microchart span:nth-child(4) { height:90%; }
 .bb-panel .bb-dashboard-microchart span:nth-child(5) { height:65%; }
+
+/* Demo ilerleme oranları: yalnız veri durumları */
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="78"] { width:78%; }
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="92"] { width:92%; }
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="45"] { width:45%; }
+.bb-panel .bb-dashboard-table-wrap .bb-progress__bar[data-level="100"] { width:100%; }
