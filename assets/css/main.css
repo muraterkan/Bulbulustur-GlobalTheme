@@ -9595,6 +9595,125 @@ Header
   color: var(--bb-primary-text);
 }
 
+/* Faz 12 — panel profile, account and invoice layouts. Component styles stay canonical. */
+.bb-panel .bb-panel-profile-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-panel-profile-summary .bb-symbol {
+  flex: none;
+}
+
+.bb-panel .bb-panel-profile-details {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.bb-panel .bb-panel-profile-details p {
+  color: var(--bb-secondary-color);
+  margin: 0;
+}
+
+.bb-panel .bb-panel-profile-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-panel-profile-meta dt,
+.bb-panel .bb-panel-invoice-meta dt {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-panel-profile-meta dd,
+.bb-panel .bb-panel-invoice-meta dd {
+  margin: 0;
+  font-weight: var(--bb-fw-medium);
+  overflow-wrap: anywhere;
+}
+
+.bb-panel .bb-panel-settings-actions {
+  display: flex;
+  gap: var(--bb-menu-link-px, 0.9rem);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.bb-panel .bb-panel-settings-result[hidden] {
+  display: none;
+}
+
+.bb-panel .bb-panel-invoice-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-panel-invoice-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-panel-invoice-table {
+  overflow-x: auto;
+}
+
+.bb-panel .bb-panel-invoice-table .bb-table {
+  min-width: 32rem;
+}
+
+.bb-panel .bb-panel-invoice-totals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-menu-link-py, 0.65rem);
+  max-width: 22rem;
+  margin-inline-start: auto;
+}
+
+.bb-panel .bb-panel-invoice-totals > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bb-menu-link-px, 0.9rem);
+}
+
+.bb-panel .bb-panel-invoice-totals > div:last-child {
+  font-weight: var(--bb-fw-bold);
+  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  padding-top: var(--bb-menu-link-py, 0.65rem);
+}
+
+.bb-panel .bb-panel-invoice-totals span:first-child {
+  color: var(--bb-secondary-color);
+}
+
+@media (max-width: 575.98px) {
+  .bb-panel .bb-panel-profile-meta, .bb-panel .bb-panel-invoice-meta {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .bb-panel .bb-sidebar,
+  .bb-panel .bb-shell-header,
+  .bb-panel .bb-toolbar,
+  .bb-panel .bb-shell-footer,
+  .bb-panel .bb-panel-invoice-actions {
+    display: none;
+  }
+  .bb-panel .bb-shell {
+    width: 100%;
+  }
+  .bb-panel .bb-card {
+    box-shadow: none;
+  }
+}
 /* 5. Components */
 /* =====================================
    Bulbulustur Theme - Buttons
