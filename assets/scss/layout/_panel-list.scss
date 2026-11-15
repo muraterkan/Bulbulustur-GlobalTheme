@@ -1,0 +1,82 @@
+/* Faz 9 — list/table page; extends existing bb-table, bb-pagination, forms */
+.bb-panel .bb-panel-list-filters {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-link-px, .9rem);
+}
+.bb-panel .bb-panel-list-filter {
+  flex: 1 1 11rem;
+  min-width: 0;
+}
+.bb-panel .bb-panel-list-filter--search { flex: 2 1 17rem; }
+.bb-panel .bb-panel-list-filter .form-label {
+  display: block;
+}
+.bb-panel .bb-panel-list-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--bb-menu-link-px, .9rem);
+}
+.bb-panel .bb-panel-list-count {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-panel-list-scroll { overflow-x: auto; }
+.bb-panel .bb-panel-list-scroll .bb-table { min-width: 46rem; }
+.bb-panel .bb-panel-list-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-menu-gap, .25rem);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.bb-panel .bb-panel-list-sort[aria-pressed="true"] {
+  color: var(--bb-primary-text);
+}
+.bb-panel .bb-panel-list-sort:focus-visible,
+.bb-panel .bb-panel-list-action:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+.bb-panel .bb-panel-list-sort .material-symbols-outlined { font-size: var(--bb-fs-base); }
+.bb-panel .bb-panel-list-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-link-px, .9rem);
+}
+.bb-panel .bb-panel-list-cell .material-symbols-outlined { color: var(--bb-secondary-color); }
+.bb-panel .bb-panel-list-cell small {
+  display: block;
+  color: var(--bb-secondary-color);
+}
+.bb-panel .bb-panel-list-operations { display: flex; gap: var(--bb-menu-gap, .25rem); }
+.bb-panel .bb-panel-list-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  padding: var(--bb-menu-link-py, .65rem);
+  cursor: pointer;
+}
+.bb-panel .bb-panel-list-action:hover { color: var(--bb-primary-text); background: var(--bb-tertiary-bg); }
+.bb-panel .bb-panel-list-selected { background: var(--bb-primary-light); }
+.bb-panel .bb-panel-list-bottom { display: flex; align-items: center; justify-content: space-between; gap: var(--bb-menu-link-px, .9rem); flex-wrap: wrap; }
+.bb-panel .bb-panel-list-page-buttons { display: flex; flex-wrap: wrap; gap: var(--bb-menu-gap, .25rem); }
+.bb-panel .bb-panel-list-detail[hidden] { display: none; }
+.bb-panel .bb-panel-list-detail {
+  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+.bb-panel .bb-panel-list-detail-heading { display: flex; justify-content: space-between; align-items: center; gap: var(--bb-menu-link-px, .9rem); }
+@media(max-width:575.98px) {
+  .bb-panel .bb-panel-list-bottom { align-items: stretch; flex-direction: column; }
+}
