@@ -16,6 +16,14 @@ Durum: **Kabul süreci açık; tarayıcı testleri henüz sonuçlandırılmadı.
 - `scripts/check-panel.mjs` ve `npm run check:panel` eklendi. Link/script dosyası varlığı, ID/aria-controls, menü ID eşleştirmesi ve JS sözdizimi testleri için yerel çalıştırma komutu; **bu dosya doğrulama betiği henüz kullanıcının yerel deposunda çalıştırılmadı**.
 - Gerçek ekran görüntüsü karşılaştırması, mobil CSS görünümü, popup odak yönetimi, form etkileşimi ve yazıcı çıktısı henüz gözlemlenmedi.
 
+## 2026-11-16 — Kullanıcı ekran görüntüsü sonrası somut kusurlar
+
+- **Kritik / düzeltildi (kaynak):** `_menu.scss` içerisindeki yatay `.bb-menu-item` flex düzeni sidebar accordion alt öğelerini sağa, içerik alanına taşıyordu. `layout/_panel-sidebar.scss` içinde yalnız sidebar öğelerine `flex-direction: column`, genişlik ve min-width sınırlaması eklendi. Tarayıcıda yeniden test gerekli.
+- **Kritik / düzeltildi (kaynak):** 13 panel sayfası depoda olmayan `assets/media/logos/default-dark.svg` görüntüsünü çağırıyordu. `bb-panel-brand-text` ile metin marka başlığına geçildi.
+- **Kullanılabilir demo / eklendi:** `modules/panel/sosyal-akis.html`, `assets/js/bb-panel-social.js`. Üç örnek gönderi, paylaşım yazma, takip filtresi, beğenme, profil/konu kartları. Tüm işlemler bellekte; gerçek sosyal API değil.
+- **AÇIK KAPSAM:** 58 menü kimliğinden yalnız belirli sayfalar (Dashboard, Ürünler, Oluştur, giriş/kayıt/sıfırlama, 404/500, profil/hesap/fatura, sosyal akış) içerik demosuna bağlandı. Kalan sayfalar `sayfalar.html?page=...` üzerinden `Yapım aşamasında` şablonunu gösteriyor. Bu menüler **tamamlanmış içerik sayfası sayılmaz**. Önceki Faz 0–12 "tamamlandı" değerlendirmesi yalnız fazların örnek dosyaları için geçerlidir.
+- **KABUL BEKLİYOR:** CSS derlemesi ve canlı tarayıcı görsel kontrolü bu düzeltmelerden sonra henüz yapılmadı. Tam kabul kapatılamaz.
+
 ## Otomatik kontroller
 
 - [x] Faz 12'ye kadar Sass derlemesi — kullanıcının terminal çıktısı
