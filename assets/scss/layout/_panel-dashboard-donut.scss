@@ -1,0 +1,14 @@
+/* Faz 8.2 — donut and legend with chart tokens */
+.bb-panel .bb-dashboard-donut-layout { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:var(--bb-panel-content-gap); }
+.bb-panel .bb-dashboard-donut { width:11rem; aspect-ratio:1; flex:none; border-radius:var(--bb-radius-pill); background:conic-gradient(var(--bb-chart-1) 0% 44%,var(--bb-chart-3) 44% 74%,var(--bb-chart-2) 74% 90%,var(--bb-chart-4) 90% 100%); display:grid; place-items:center; }
+.bb-panel .bb-dashboard-donut-center { width:72%; aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius:var(--bb-radius-pill); background:var(--bb-body-bg); color:var(--bb-body-color); text-align:center; }
+.bb-panel .bb-dashboard-donut-center strong { font-size:var(--bb-h3); }
+.bb-panel .bb-dashboard-donut-center small { color:var(--bb-secondary-color); }
+.bb-panel .bb-dashboard-legend { flex:1 1 12rem; list-style:none; margin:0; padding:0; }
+.bb-panel .bb-dashboard-legend li { display:flex; align-items:center; gap:var(--bb-menu-gap); padding-block:var(--bb-menu-link-py); border-bottom:var(--bb-border-width,1px) solid var(--bb-border-color); }
+.bb-panel .bb-dashboard-legend li:last-child { border:0; }
+.bb-panel .bb-dashboard-legend-label { flex:1; color:var(--bb-secondary-color); }
+.bb-panel .bb-dashboard-legend-mark { width:var(--bb-menu-icon-size,1.15rem); aspect-ratio:1; border-radius:var(--bb-radius-pill); background:var(--bb-chart-1); }
+.bb-panel .bb-dashboard-legend-mark[data-series="2"] { background:var(--bb-chart-2); }
+.bb-panel .bb-dashboard-legend-mark[data-series="3"] { background:var(--bb-chart-3); }
+.bb-panel .bb-dashboard-legend-mark[data-series="4"] { background:var(--bb-chart-4); }
