@@ -12,6 +12,19 @@
   var ticket = root.querySelector("[data-bb-support-ticket]");
   var selected = new URLSearchParams(location.search).get("tab") || "overview";
   if (!tabs.some(function (t) { return t.dataset.bbSupportTab === selected; })) selected = "overview";
+  var heading = document.querySelector(".bb-page-title");
+  if (heading) heading.textContent = "Destek Merkezi / Genel Bakış";
+  var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
+  if (breadcrumb) {
+    breadcrumb.replaceChildren();
+    ["UYGULAMALAR", "Destek Merkezi", "Genel Bakış"].forEach(function (label, i) {
+      var li = document.createElement("li");
+      li.className = "breadcrumb-item" + (i === 2 ? " active" : "");
+      li.textContent = label;
+      if (i === 2) li.setAttribute("aria-current", "page");
+      breadcrumb.appendChild(li);
+    });
+  }
 
   function selectTab(name, focus) {
     selected = name;
