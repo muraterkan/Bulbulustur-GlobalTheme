@@ -1,0 +1,11 @@
+/* Faz 8.3 — week strip and appointments */
+.bb-panel .bb-dashboard-week { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:var(--bb-menu-gap); }
+.bb-panel .bb-dashboard-day { display:flex; flex-direction:column; align-items:center; gap:var(--bb-menu-gap); padding:var(--bb-menu-link-py); border:var(--bb-border-width,1px) solid var(--bb-border-color); border-radius:var(--bb-radius); background:var(--bb-body-bg); color:var(--bb-body-color); text-align:center; }
+.bb-panel .bb-dashboard-day small { color:var(--bb-secondary-color); }
+.bb-panel .bb-dashboard-day[aria-current="date"] { background:var(--bb-primary-light); border-color:var(--bb-primary); color:var(--bb-primary-text); }
+.bb-panel .bb-dashboard-appointments { margin:0; padding:0; list-style:none; }
+.bb-panel .bb-dashboard-appointments li { display:flex; gap:var(--bb-panel-content-gap); padding-block:var(--bb-menu-link-py); border-bottom:var(--bb-border-width,1px) solid var(--bb-border-color); }
+.bb-panel .bb-dashboard-appointments li:last-child { border:0; }
+.bb-panel .bb-dashboard-appointments time { flex:none; font-weight:var(--bb-fw-semibold); }
+.bb-panel .bb-dashboard-appointments small { display:block; color:var(--bb-secondary-color); }
+@media(max-width:575.98px) { .bb-panel .bb-dashboard-day { padding:var(--bb-menu-gap); } .bb-panel .bb-dashboard-week { gap:0; } }
