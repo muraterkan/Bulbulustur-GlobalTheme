@@ -31,7 +31,7 @@
   --bb-dialer-btn-active-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
 
   /* Focus ring */
-  --bb-dialer-focus-ring: var(--bs-focus-ring-box-shadow);
+  --bb-dialer-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
 
   /* Motion */
   --bb-dialer-transition-speed: 150ms;

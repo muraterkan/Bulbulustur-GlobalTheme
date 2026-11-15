@@ -9,7 +9,7 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 |---|-----|-------|------|-------------------------|
 | A1 | `components/_inputmask.scss:20` | `--bb-inputmask-hint-font-size: (--bb-fs-sm)` — noktalı virgül yok, değer bozuk. Sonraki satır (`--bb-inputmask-hint-color`) bu bildirime yutuluyor, çıktıda tanımsız kalıyor. | Hint yazısının boyutu ve rengi uygulanmıyor. | `.bb-inputmask-hint` kullanıyor. DÜZELT: `var(--bb-fs-sm);` |
 | A2 | `components/_rating.scss:24`, `_dialer.scss:34` | `--bb-*-focus-ring: var(--bs-focus-ring-box-shadow)` fallback'siz. Bootstrap 5.3 bu değişkeni tanımlamıyor. | Klavye odak halkası (focus) görünmüyor. | `_menu`, `_modals`, `_nav` aynı değişkeni fallback ile kullanıyor. DÜZELT: aynı fallback eklenecek. |
-| A3 | `components/_carousel.scss:28` | `var(--bb-dark, var(--bs-black))` iç fallback `--bs-black` Bootstrap'ta tanımsız. | `--bb-dark` her zaman tanımlı olduğu için bugün görünmez, kırılgan. | DÜZELT: `var(--bb-black)`. |
+| A3 | `components/_carousel.scss:28` | `var(--bb-dark, var(--bs-black))` iç fallback `--bs-black` Bootstrap'ta tanımlı ama GlobalTheme kendi başına bu fallback'e bağımlı olmamalı. | Bugün etkisi yok (`--bb-dark` her zaman tanımlı). | DÜZELT: `var(--bb-black)` (token kendi içinde). |
 
 ## B. Yapısal sorunlar (düzeltilecek)
 
@@ -43,3 +43,10 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 | D4 | `js/bb-modal.js` | ES module (`export class`), hiçbir sayfa/repo çağırmıyor; Bootstrap modal kullanılıyor. `assets/js`'e taşınır, silinmez. |
 | D5 | Eski depoya (`muraterkan/bulbulustur.theme`) işaret eden yerler | `draugr.ortobella/RawTemplate/Styles/theme.lock.json` ve AI bilgi SQL'leri (`20261102`, `20261106`, `20261111`) "Tema deposu = bulbulustur.theme main" diyor; Draugr hattı main.css'i oradan klonluyor. Eski depo `e7836fd`'e geri alındı. Karar: Draugr main.css kaynağı hangi depo olacak? |
 | D6 | 9 tanımsız `--bb-*` kanca | Panel şablonunda token olarak tanımlamak istersen eklenir. |
+
+## E. Uygulama kaydı (15.11.2026)
+
+- A1, A2, A3 düzeltildi. Derleme çıktısında tam 4 bildirim değişti, başka fark yok.
+- B1: 11 ölü partial silindi (derleme çıktısı değişmedi). B2/B3: mükerrer media ve pages silindi. B4/B5: 5 JS `assets/js`'e taşındı, lightbox kopyası silindi, demo yolları düzeltildi. B6: `scripts/check-contracts.mjs` + `npm run check:contracts` / `check:css` eklendi (16/16 geçti; yapay yetim partial ile FAIL verdiği görüldü).
+- Derleme: sass 1.93.2, uyarısız, 451838 → 451982 bayt.
+- Yapılmadı: tarayıcıda görsel kontrol; D1–D6 kararları.

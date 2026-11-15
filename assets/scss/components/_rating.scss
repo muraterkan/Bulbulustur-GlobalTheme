@@ -21,7 +21,7 @@
   --bb-rating-hover-bg: var(--bb-tertiary-bg);
 
   /* focus ring (token-first) */
-  --bb-rating-focus-ring: var(--bs-focus-ring-box-shadow);
+  --bb-rating-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
 
   /* motion */
   --bb-rating-transition-speed: 150ms;

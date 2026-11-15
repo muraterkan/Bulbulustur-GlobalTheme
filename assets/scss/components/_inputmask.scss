@@ -17,7 +17,7 @@
   --bb-inputmask-focus-ring-alpha: 0.15;
 
   --bb-inputmask-hint-margin-top: 0.35rem;
-  --bb-inputmask-hint-font-size: (--bb-fs-sm)
+  --bb-inputmask-hint-font-size: var(--bb-fs-sm);
   --bb-inputmask-hint-color: var(--bb-secondary-color);
 
   --bb-inputmask-icon-size: 1.1rem;

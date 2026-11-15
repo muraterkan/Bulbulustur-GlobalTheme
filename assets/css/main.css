@@ -10366,7 +10366,7 @@ button.badge.bb-badge:disabled {
   --bb-carousel-control-size: 44px;
   --bb-carousel-control-radius: 50%;
   --bb-carousel-control-inset: var(--bb-space-4, 1rem);
-  --bb-carousel-control-bg-color: var(--bb-dark, var(--bs-black));
+  --bb-carousel-control-bg-color: var(--bb-dark, var(--bb-black));
   --bb-carousel-control-bg-opacity: 0.35;
   --bb-carousel-control-bg-opacity-hover: 0.55;
   /* focus ring */
@@ -12354,7 +12354,7 @@ button.badge.bb-badge:disabled {
   --bb-inputmask-focus-ring-width: 0.25rem;
   --bb-inputmask-focus-ring-alpha: 0.15;
   --bb-inputmask-hint-margin-top: 0.35rem;
-  --bb-inputmask-hint-font-size: (--bb-fs-sm)
+  --bb-inputmask-hint-font-size: var(--bb-fs-sm);
   --bb-inputmask-hint-color: var(--bb-secondary-color);
   --bb-inputmask-icon-size: 1.1rem;
   --bb-inputmask-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -13350,7 +13350,7 @@ label.required::after {
   /* hover bg (NO hard-coded rgba) */
   --bb-rating-hover-bg: var(--bb-tertiary-bg);
   /* focus ring (token-first) */
-  --bb-rating-focus-ring: var(--bs-focus-ring-box-shadow);
+  --bb-rating-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
   /* motion */
   --bb-rating-transition-speed: 150ms;
   --bb-rating-transition-ease: ease;
@@ -15118,7 +15118,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   --bb-dialer-btn-hover-bg: var(--bb-tertiary-bg);
   --bb-dialer-btn-active-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
   /* Focus ring */
-  --bb-dialer-focus-ring: var(--bs-focus-ring-box-shadow);
+  --bb-dialer-focus-ring: var(--bs-focus-ring-box-shadow, 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 25%, transparent));
   /* Motion */
   --bb-dialer-transition-speed: 150ms;
   --bb-dialer-transition-ease: ease;
