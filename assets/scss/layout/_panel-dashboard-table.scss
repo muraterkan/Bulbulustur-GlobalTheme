@@ -1,0 +1,12 @@
+/* Faz 8.4 — data table card & micro bars */
+.bb-panel .bb-dashboard-table-wrap { overflow-x:auto; }
+.bb-panel .bb-dashboard-table-wrap .bb-table { min-width:36rem; }
+.bb-panel .bb-dashboard-table-item { display:flex; align-items:center; gap:var(--bb-menu-gap); }
+.bb-panel .bb-dashboard-table-item .material-symbols-outlined { color:var(--bb-secondary-color); }
+.bb-panel .bb-dashboard-microchart { display:flex; align-items:end; gap:var(--bb-chart-gap); height:2.5rem; }
+.bb-panel .bb-dashboard-microchart span { flex:1 1 0; min-width:var(--bb-chart-gap); background:var(--bb-chart-1); border-radius:var(--bb-radius-sm) var(--bb-radius-sm) 0 0; }
+.bb-panel .bb-dashboard-microchart span:nth-child(1) { height:30%; }
+.bb-panel .bb-dashboard-microchart span:nth-child(2) { height:75%; }
+.bb-panel .bb-dashboard-microchart span:nth-child(3) { height:45%; }
+.bb-panel .bb-dashboard-microchart span:nth-child(4) { height:90%; }
+.bb-panel .bb-dashboard-microchart span:nth-child(5) { height:65%; }
