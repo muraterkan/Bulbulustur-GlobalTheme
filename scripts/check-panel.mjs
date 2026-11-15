@@ -21,7 +21,7 @@ if (!existsSync(demoDir)) {
 }
 const pages = readdirSync(demoDir).filter((name) => name.endsWith(".html")).sort();
 const fileText = (path) => readFileSync(path, "utf8");
-const attrMatches = (source, attribute) => [...source.matchAll(new RegExp("\\b" + attribute + '="([^"]*)"', "g"))].map((m) => m[1]);
+const attrMatches = (source, attribute) => [...source.matchAll(new RegExp("(?:\\s|<)" + attribute + '="([^"]*)"', "g"))].map((m) => m[1]);
 const referenceIssues = [];
 const idIssues = [];
 const scriptPaths = new Set();
@@ -44,7 +44,7 @@ for (const name of pages) {
     if (!pathOnly) continue;
     const dest = resolve(dirname(file), decodeURIComponent(pathOnly));
     references++;
-    if (!dest.startsWith(root + "/") && dest !== root) {
+    if (relative(root, dest).startsWith("..") || relative(root, dest).startsWith("/") || relative(root, dest).startsWith("\\\\") || /^[a-z]:/i.test(relative(root, dest))) {
       referenceIssues.push(name + ": path outside project: " + value);
     } else if (!existsSync(dest)) {
       referenceIssues.push(name + ": missing " + value);
