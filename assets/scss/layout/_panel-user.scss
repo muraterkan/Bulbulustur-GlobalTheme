@@ -7,3 +7,97 @@
 .bb-panel .bb-panel-user-info { display:flex; flex-direction:column; }
 .bb-panel .bb-panel-user-info small { color:var(--bb-secondary-color); }
 .bb-panel .bb-panel-popover .bb-dropdown-item { text-decoration:none; }
+
+/* User menu — Metronic-like hierarchy, scoped to the user popup only. */
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover.bb-panel-user-menu {
+  width: min(20.5rem, calc(100vw - 2rem));
+  min-width: 0;
+  max-width: calc(100vw - 2rem);
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-body-bg);
+  box-shadow: var(--bb-shadow-lg, var(--bb-shadow-sm));
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-summary {
+  align-items: center;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-4);
+  margin: 0;
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-summary .bb-symbol {
+  flex: 0 0 auto;
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-info {
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: var(--bb-space-1);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-space-2);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-info small {
+  font-size: var(--bb-fs-xs);
+  overflow-wrap: anywhere;
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-group {
+  padding: var(--bb-space-2);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-group + .bb-panel-user-group {
+  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  width: 100%;
+  min-height: 2.65rem;
+  margin: 0;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border: 0;
+  border-radius: var(--bb-radius);
+  background: transparent;
+  color: var(--bb-body-color);
+  font-family: var(--bb-font-sans);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-heading);
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bb-panel .bb-panel-user-menu a.bb-panel-user-item:hover,
+.bb-panel .bb-panel-user-menu button.bb-panel-user-item:not(:disabled):hover {
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+  text-decoration: none;
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-item:focus-visible {
+  outline: var(--bb-focus-ring-width, .2rem) solid var(--bb-primary);
+  outline-offset: -2px;
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-item:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  flex: 0 0 auto;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-normal);
+}
+.bb-panel .bb-panel-user-menu .bb-panel-user-meta .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
