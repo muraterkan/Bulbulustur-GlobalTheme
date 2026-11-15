@@ -26,10 +26,10 @@
   --bb-card-shadow-hover: var(--bb-shadow-sm, var(--bs-box-shadow, var(--bb-card-shadow)));
 
   /* spacing */
-  --bb-card-px: 1.25rem;
-  --bb-card-header-py: 1rem;
-  --bb-card-body-py: 1.25rem;
-  --bb-card-footer-py: 0.85rem;
+  --bb-card-px: calc(var(--bb-space-4) + var(--bb-space-1));
+  --bb-card-header-py: var(--bb-space-3);
+  --bb-card-body-py: calc(var(--bb-space-4) + var(--bb-space-1));
+  --bb-card-footer-py: var(--bb-space-3);
 
   /* micro tokens */
   --bb-card-actions-gap: 0.5rem;
@@ -72,8 +72,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--bb-card-actions-gap);
 
-  padding: var(--bb-card-header-py) var(--bb-card-px);
+  padding-block: var(--bb-card-header-py);
+  padding-inline: var(--bb-card-px);
   background: transparent;
   color: var(--bb-card-color);
 
@@ -101,7 +103,24 @@
   margin: 0;
   font-weight: var(--bb-fw-semibold);
   font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
   color: var(--bb-card-color);
+}
+
+/* Uniform vertical alignment for titles and actions in every card header. */
+.bb-card-header > .bb-card-title,
+.bb-card-header > .card-title,
+.bb-card .card-header > .bb-card-title,
+.bb-card .card-header > .card-title {
+  margin-block: 0;
+  align-self: center;
+}
+
+.bb-card-header > .bb-card-actions,
+.bb-card-header > .bb-card-toolbar,
+.bb-card .card-header > .bb-card-actions,
+.bb-card .card-header > .bb-card-toolbar {
+  align-self: center;
 }
 
 /* toolbars */
