@@ -8580,6 +8580,27 @@ Header
   padding-inline: var(--bb-menu-gap);
 }
 
+/* Sidebar accordion is vertical. Core .bb-menu-item defaults to a flex row,
+   which places submenu beside its trigger and spills out of the sidebar. */
+.bb-panel .bb-sidebar .bb-menu.bb-menu-column .bb-menu-item {
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.bb-panel .bb-sidebar .bb-menu.bb-menu-column .bb-menu-item > .bb-menu-link {
+  flex: 0 0 auto;
+}
+
+.bb-panel .bb-sidebar .bb-menu.bb-menu-column .bb-menu-sub-accordion {
+  width: 100%;
+  min-width: 0;
+}
+
+.bb-panel .bb-sidebar .bb-menu.bb-menu-column .bb-menu-sub-content {
+  min-width: 0;
+}
+
 .bb-panel .bb-sidebar .bb-menu-link {
   border: 0;
   background: transparent;
