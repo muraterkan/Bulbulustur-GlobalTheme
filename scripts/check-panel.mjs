@@ -57,7 +57,7 @@ for (const name of pages) {
 report("Panel HTML local references (" + pages.length + " pages, " + references + " refs)", referenceIssues);
 report("Panel HTML IDs and aria-controls", idIssues);
 const pageRegistry = fileText(resolve(jsDir, "bb-panel-pages.js"));
-const registryKeys = new Set([...pageRegistry.matchAll(/"([a-z][a-z0-9-]+)":\\s*\\{title:/g)].map((m) => m[1]));
+const registryKeys = new Set(pageRegistry.split("\n").filter((line) => line.includes(": {title:")).map((line) => line.trim().split('"')[1]));
 const menuIssues = [];
 let menuEntries = 0;
 for (const name of pages) {
@@ -67,8 +67,8 @@ for (const name of pages) {
     if (!registryKeys.has(id)) menuIssues.push(name + ": undefined menu page " + id);
   }
   for (const href of attrMatches(source, "href")) {
-    const match = /(?:^|\\/)sayfalar\\.html\\?page=([^&#]+)/.exec(href);
-    if (match && !registryKeys.has(decodeURIComponent(match[1]))) {
+    const match = href.includes("sayfalar.html?page=") ? href.split("sayfalar.html?page=")[1].split("&")[0].split("#")[0] : null;
+    if (match && !registryKeys.has(decodeURIComponent(match))) {
       menuIssues.push(name + ": invalid page link " + href);
     }
   }
