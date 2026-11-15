@@ -49,6 +49,21 @@ function note(h, body) {
 function metric(label, value, tone) {
   return '<div class="bb-profile-metric"><span>' + label + '</span><strong' + (tone ? ' style="color: var(--bb-' + tone + '-text)"' : '') + '>' + value + '</strong></div>';
 }
+/* Reusable action menu markup: Bootstrap dropdown + canonical bb-dropdown-menu. */
+function profileActionsMenu() {
+  return '<div class="dropdown bb-action-menu">' +
+    '<button type="button" class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Diğer profil işlemleri">' +
+    '<span class="material-symbols-outlined" aria-hidden="true">more_horiz</span></button>' +
+    '<ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">' +
+    '<li><h3 class="dropdown-header">ÖDEMELER</h3></li>' +
+    '<li><a class="dropdown-item" href="fatura.html">Fatura ön izlemesi</a></li>' +
+    '<li><a class="dropdown-item" href="profil-faturalandirma.html">Ödeme yöntemleri</a></li>' +
+    '<li><a class="dropdown-item" href="profil-ekstreler.html">Ekstreler</a></li>' +
+    '<li><a class="dropdown-item bb-action-menu-has-arrow" href="profil-faturalandirma.html"><span>Abonelik</span><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a></li>' +
+    '<li><hr class="dropdown-divider"></li>' +
+    '<li><a class="dropdown-item" href="profil-ayarlar.html">Ayarlar</a></li>' +
+    '</ul></div>';
+}
 function profileHero() {
   var tabs = pages.map(function(p) {
     return '<a href="' + p[2] + '"' + (view === p[0] ? ' aria-current="page"' : '') + '>' + p[1] + '</a>';
@@ -63,7 +78,7 @@ function profileHero() {
     '<span><span class="material-symbols-outlined" aria-hidden="true">mail</span>demo@example.com</span></div></div>' +
     '<div class="bb-profile-hero-actions"><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-profile-follow aria-pressed="false">Takip et</button>' +
     '<a href="profil-ayarlar.html" class="btn btn-primary btn-sm">Profili Düzenle</a>' +
-    '<button type="button" class="btn bb-btn-secondary btn-sm" aria-label="Diğer profil işlemleri" data-bb-profile-more><span class="material-symbols-outlined" aria-hidden="true">more_horiz</span></button></div>' +
+    profileActionsMenu() + '</div>' +
     '</div><div class="bb-profile-hero-bottom"><div class="bb-profile-stat-list">' +
     '<div class="bb-profile-stat"><strong>₺4.500</strong><small>Kazanç (demo)</small></div>' +
     '<div class="bb-profile-stat"><strong>80</strong><small>Proje (demo)</small></div>' +
@@ -250,10 +265,6 @@ if(follow) follow.addEventListener("click",function(){
   var active=follow.getAttribute("aria-pressed")==="true";
   follow.setAttribute("aria-pressed",String(!active));
   follow.textContent=active?"Takip et":"Takip ediliyor";
-});
-var more=root.querySelector("[data-bb-profile-more]");
-if(more) more.addEventListener("click",function(){
-  window.location.href="profil-ayarlar.html";
 });
 var copy=root.querySelector("[data-bb-profile-copy]");
 if(copy) copy.addEventListener("click",function(){
