@@ -1,0 +1,73 @@
+/* Faz 10 — panel form page / stepper and file input; existing form controls retained */
+.bb-panel .bb-panel-form-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-menu-link-px, .9rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bb-panel .bb-panel-form-step {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-menu-link-px, .9rem);
+  padding: var(--bb-menu-link-py, .65rem);
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  color: var(--bb-secondary-color);
+}
+.bb-panel .bb-panel-form-step[aria-current="step"] {
+  color: var(--bb-primary-text);
+  border-bottom-color: var(--bb-primary);
+}
+.bb-panel .bb-panel-form-step[data-complete="true"] {
+  color: var(--bb-success-text);
+  border-bottom-color: var(--bb-success);
+}
+.bb-panel .bb-panel-form-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: var(--bb-menu-icon-size, 1.15rem);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-panel-form-step-label { min-width: 0; font-weight: var(--bb-fw-medium); }
+.bb-panel .bb-panel-form-pane[hidden] { display: none; }
+.bb-panel .bb-panel-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--bb-menu-link-px, .9rem);
+}
+.bb-panel .bb-panel-form-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bb-menu-link-px, .9rem);
+  padding: var(--bb-panel-content-gap);
+  border: var(--bb-border-width, 1px) dashed var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-tertiary-bg);
+  text-align: center;
+}
+.bb-panel .bb-panel-form-upload[data-dragover="true"] {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+}
+.bb-panel .bb-panel-form-upload .material-symbols-outlined {
+  font-size: var(--bb-h2);
+  color: var(--bb-primary-text);
+}
+.bb-panel .bb-panel-form-file-list { margin: 0; padding-inline-start: var(--bb-panel-content-gap); }
+.bb-panel .bb-panel-form-review {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bb-menu-link-px, .9rem);
+}
+.bb-panel .bb-panel-form-review dt { color: var(--bb-secondary-color); font-size: var(--bb-fs-sm); }
+.bb-panel .bb-panel-form-review dd { margin: 0; overflow-wrap: anywhere; }
+.bb-panel .bb-panel-form-success[hidden] { display: none; }
+@media (max-width: 575.98px) {
+  .bb-panel .bb-panel-form-steps { grid-template-columns: 1fr; }
+  .bb-panel .bb-panel-form-review { grid-template-columns: 1fr; }
+}
