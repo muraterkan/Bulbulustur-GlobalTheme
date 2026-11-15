@@ -1,0 +1,12 @@
+/* Faz 7 — selected placeholder page styling */
+.bb-panel .bb-panel-template-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-menu-gap, 0.25rem);
+}
+.bb-panel .bb-menu-link[aria-current="page"] {
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-empty-state .material-symbols-outlined {
+  color: var(--bb-secondary-color);
+}
