@@ -54,6 +54,7 @@
 @use "layout/panel-form";           // Faz 10 stepper, dosya alanı
 @use "layout/panel-auth";           // Faz 11 auth ve hata sayfaları
 @use "layout/panel-account";        // Faz 12 profil hesap ve fatura
+@use "layout/panel-footer";         // Panel footer and scroll-to-top
 
 /* 5. Components */
 @use "components/buttons";
