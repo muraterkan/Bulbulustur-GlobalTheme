@@ -1,0 +1,9 @@
+/* Faz 4 — panel kullanıcı ve bildirim yüzeyleri */
+.bb-panel .bb-panel-notification { display:flex; gap:var(--bb-menu-link-px, .9rem); padding:var(--bb-menu-link-py, .65rem); border-bottom:var(--bb-border-width, 1px) solid var(--bb-border-color); }
+.bb-panel .bb-panel-notification:last-child { border-bottom:0; }
+.bb-panel .bb-panel-notification .material-symbols-outlined { color:var(--bb-primary-text); }
+.bb-panel .bb-panel-notification small { display:block; color:var(--bb-secondary-color); }
+.bb-panel .bb-panel-user-summary { display:flex; align-items:center; gap:var(--bb-menu-link-px, .9rem); padding:var(--bb-menu-link-py, .65rem); border-bottom:var(--bb-border-width, 1px) solid var(--bb-border-color); }
+.bb-panel .bb-panel-user-info { display:flex; flex-direction:column; }
+.bb-panel .bb-panel-user-info small { color:var(--bb-secondary-color); }
+.bb-panel .bb-panel-popover .bb-dropdown-item { text-decoration:none; }
