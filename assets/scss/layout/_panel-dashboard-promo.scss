@@ -1,0 +1,6 @@
+/* Faz 8.6 — promotional highlight */
+.bb-panel .bb-dashboard-promo { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--bb-panel-content-gap); background:var(--bb-primary-light); color:var(--bb-primary-text); }
+.bb-panel .bb-dashboard-promo-copy { flex:1 1 16rem; }
+.bb-panel .bb-dashboard-promo-copy p { margin:0; color:var(--bb-primary-text); }
+.bb-panel .bb-dashboard-promo .bb-dashboard-promo-icon { font-size:var(--bb-h1); line-height:1; opacity:.75; }
+.bb-panel .bb-dashboard-promo .bb-dashboard-promo-link { color:var(--bb-primary-text); }
