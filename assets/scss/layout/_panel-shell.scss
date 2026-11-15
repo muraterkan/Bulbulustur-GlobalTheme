@@ -98,7 +98,7 @@
 
 .bb-panel .bb-panel-icon-button:focus-visible {
   outline: var(--bb-focus-ring-width, 0.2rem) solid var(--bb-primary);
-  outline-offset: var(--bb-focus-ring-offset, 2px);
+  outline-offset: var(--bb-focus-ring-width);
 }
 
 .bb-panel .bb-sidebar .bb-panel-icon-button:hover {
@@ -133,7 +133,7 @@
 
 .bb-panel .bb-panel-sidebar-link:focus-visible {
   outline: var(--bb-focus-ring-width, 0.2rem) solid currentColor;
-  outline-offset: var(--bb-focus-ring-offset, 2px);
+  outline-offset: var(--bb-focus-ring-width);
 }
 
 .bb-panel .bb-panel-sidebar-link .material-symbols-outlined {
