@@ -76,3 +76,306 @@
   font-size: var(--bb-h1);
   color: var(--bb-primary-text);
 }
+
+
+/* Split-screen login — scoped only to giris.html; other auth/error screens unchanged. */
+.bb-panel.bb-panel-auth-login {
+  --bb-login-stage: var(--bb-black);
+  --bb-login-pane: color-mix(in srgb, var(--bb-white) 9%, var(--bb-black));
+  --bb-login-border: color-mix(in srgb, var(--bb-white) 14%, transparent);
+  --bb-login-copy: color-mix(in srgb, var(--bb-white) 60%, transparent);
+  --bb-login-accent: var(--bb-primary);
+  min-height: 100dvh;
+  background: var(--bb-login-stage);
+  color: var(--bb-white);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(24rem, 43%);
+  width: 100%;
+  min-height: 100dvh;
+  gap: 0;
+  padding: var(--bb-space-4);
+  overflow: clip;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: calc(100dvh - var(--bb-space-4) * 2);
+  padding: clamp(var(--bb-space-4), 6vw, 6rem);
+  isolation: isolate;
+  overflow: hidden;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-art::before,
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-art::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: min(56vw, 46rem);
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--bb-white) 12%, var(--bb-black)),
+    color-mix(in srgb, var(--bb-white) 3%, var(--bb-black)) 70%);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-art::before {
+  inset-block-start: 30%;
+  inset-inline-start: -40%;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-art::after {
+  inset-block-start: 63%;
+  inset-inline-start: 18%;
+  width: min(48vw, 37rem);
+  background: linear-gradient(45deg,
+    color-mix(in srgb, var(--bb-white) 22%, var(--bb-black)),
+    color-mix(in srgb, var(--bb-white) 7%, var(--bb-black)));
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-copy {
+  position: relative;
+  z-index: 1;
+  margin-top: 20vh;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+  color: var(--bb-white);
+  font-size: var(--bb-h3);
+  line-height: var(--bb-line-height-heading);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-logo .material-symbols-outlined {
+  color: var(--bb-login-accent);
+  font-size: var(--bb-h3);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-brand-copy p {
+  margin-top: var(--bb-space-2);
+  margin-bottom: 0;
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-white);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-surface {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--bb-space-4) * 2);
+  padding: clamp(var(--bb-space-4), 3vw, 3rem);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-login-pane);
+  border: 1px solid var(--bb-login-border);
+  box-shadow: var(--bb-shadow-lg, var(--bb-shadow-sm));
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding-block: var(--bb-space-4);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-form-wrapper {
+  width: 100%;
+  max-width: 23.5rem;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-intro {
+  text-align: center;
+  margin-bottom: calc(var(--bb-space-4) + var(--bb-space-2));
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-intro h1 {
+  font-size: var(--bb-h4);
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-white);
+  margin: 0 0 var(--bb-space-2);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-intro p {
+  margin: 0;
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-login-copy);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-providers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: var(--bb-space-2);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-provider {
+  --bb-btn-font-size: var(--bb-fs-xs);
+  --bb-btn-padding-x: var(--bb-space-2);
+  --bb-btn-padding-y: var(--bb-space-2);
+  --bb-btn-line-height: var(--bb-line-height-heading);
+  --bb-btn-bg: transparent;
+  --bb-btn-color: var(--bb-white);
+  --bb-btn-border-color: var(--bb-login-border);
+  white-space: nowrap;
+  min-width: 0;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-provider:disabled {
+  opacity: .7;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-google {
+  color: var(--bb-brand-yellow);
+  font-weight: var(--bb-fw-bold);
+  font-size: var(--bb-fs-base);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-apple {
+  color: var(--bb-white);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+  margin-block: calc(var(--bb-space-4) + var(--bb-space-2));
+  color: var(--bb-login-copy);
+  font-size: var(--bb-fs-xs);
+  white-space: nowrap;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-divider::before,
+.bb-panel.bb-panel-auth-login .bb-panel-login-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--bb-login-border);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-field {
+  margin-bottom: var(--bb-space-3);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-field .form-control {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border: var(--bb-border-width,1px) solid var(--bb-login-border);
+  border-radius: var(--bb-radius);
+  background: transparent;
+  color: var(--bb-white);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-field .form-control::placeholder {
+  color: var(--bb-login-copy);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-field .form-control:focus {
+  border-color: var(--bb-login-accent);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-password {
+  position: relative;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-password .form-control {
+  padding-inline-end: 5rem;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-password-toggle {
+  position: absolute;
+  inset-inline-end: var(--bb-space-2);
+  inset-block: var(--bb-space-2);
+  border: 0;
+  background: transparent;
+  color: var(--bb-login-copy);
+  padding: 0 var(--bb-space-2);
+  font-size: var(--bb-fs-xs);
+  cursor: pointer;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-password-toggle:hover {
+  color: var(--bb-white);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-forgot {
+  text-align: end;
+  margin-top: var(--bb-space-2);
+  margin-bottom: var(--bb-space-4);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-forgot a,
+.bb-panel.bb-panel-auth-login .bb-panel-login-signup a,
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer a {
+  color: var(--bb-login-accent);
+  text-decoration: none;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-forgot a:hover,
+.bb-panel.bb-panel-auth-login .bb-panel-login-signup a:hover,
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer a:hover {
+  text-decoration: underline;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-forgot,
+.bb-panel.bb-panel-auth-login .bb-panel-login-signup,
+.bb-panel.bb-panel-auth-login .bb-panel-login-demo {
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-submit {
+  width: 100%;
+  --bb-btn-font-size: var(--bb-fs-sm);
+  --bb-btn-padding-y: var(--bb-space-3);
+  --bb-btn-line-height: var(--bb-line-height-heading);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-signup {
+  text-align: center;
+  margin: calc(var(--bb-space-4) + var(--bb-space-2)) 0 0;
+  color: var(--bb-login-copy);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-demo {
+  text-align: center;
+  color: var(--bb-login-copy);
+  margin: var(--bb-space-4) 0 0;
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--bb-space-3);
+  padding-block: var(--bb-space-3);
+  color: var(--bb-login-copy);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-1);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer .material-symbols-outlined {
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel.bb-panel-auth-login .bb-panel-login-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-space-3);
+}
+@media (max-width: 991.98px) {
+  .bb-panel.bb-panel-auth-login .bb-panel-login-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 54%);
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-brand {
+    padding-inline: var(--bb-space-4);
+  }
+}
+@media (max-width: 767.98px) {
+  .bb-panel.bb-panel-auth-login .bb-panel-login-layout {
+    display: flex;
+    flex-direction: column;
+    padding: var(--bb-space-3);
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-brand {
+    min-height: auto;
+    padding: var(--bb-space-4);
+    overflow: visible;
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-brand-art {
+    display: none;
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-brand-copy {
+    margin: 0;
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-logo {
+    font-size: var(--bb-fs-lg);
+  }
+  .bb-panel.bb-panel-auth-login .bb-panel-login-surface {
+    min-height: calc(100dvh - 7rem);
+  }
+}
+@media (max-width: 359.98px) {
+  .bb-panel.bb-panel-auth-login .bb-panel-login-providers {
+    grid-template-columns: 1fr;
+  }
+}
