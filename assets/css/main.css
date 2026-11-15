@@ -8369,8 +8369,37 @@ Header
   --bb-panel-sidebar-collapsed-width: 4.5rem;
   --bb-panel-content-gap: var(--bb-layout-gap, 1.5rem);
   --bb-panel-header-height: var(--bb-shell-header-height, 4rem);
+  /* Panel typography: compact dashboard rhythm, sourced from global tokens. */
+  --bb-panel-title-size: var(--bb-h4);
+  --bb-panel-title-weight: var(--bb-fw-semibold);
+  --bb-panel-title-color: var(--bb-emphasis-color);
+  --bb-panel-nav-size: var(--bb-fs-sm);
+  --bb-panel-nav-weight: var(--bb-fw-medium);
+  --bb-panel-crumb-size: var(--bb-fs-xs);
+  --bb-panel-muted-color: var(--bb-secondary-color);
   background: var(--bb-tertiary-bg);
   color: var(--bb-body-color);
+}
+
+/* Keep panel titles Metronic-scale without shrinking site-wide headings. */
+.bb-panel .bb-page-title {
+  font-family: var(--bb-font-heading);
+  font-size: var(--bb-panel-title-size);
+  font-weight: var(--bb-panel-title-weight);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-heading-letter-spacing);
+  color: var(--bb-panel-title-color);
+}
+
+.bb-panel .bb-breadcrumb {
+  --bb-breadcrumb-font-size: var(--bb-panel-crumb-size);
+  --bb-breadcrumb-color: var(--bb-panel-muted-color);
+  --bb-breadcrumb-active-color: var(--bb-panel-title-color);
+}
+
+.bb-panel .bb-panel-brand-text {
+  font-size: var(--bb-fs-lg);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-panel > .bb-sidebar {
@@ -8569,6 +8598,9 @@ Header
 /* Faz 2 — Panel sidebar / existing bb-menu extensions */
 .bb-panel .bb-sidebar .bb-menu {
   --bb-menu-bg: var(--bb-sidebar-bg);
+  --bb-menu-link-font-size: var(--bb-panel-nav-size);
+  --bb-menu-link-font-weight: var(--bb-panel-nav-weight);
+  --bb-menu-section-font-size: var(--bb-panel-crumb-size);
   --bb-menu-link-color: var(--bb-sidebar-text-color);
   --bb-menu-link-hover-color: var(--bb-sidebar-text-color);
   --bb-menu-link-active-color: var(--bb-sidebar-text-color);
@@ -8661,6 +8693,10 @@ Header
 
 .bb-panel .bb-panel-topnav .bb-menu {
   --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
+  --bb-menu-link-font-size: var(--bb-panel-nav-size);
+  --bb-menu-link-font-weight: var(--bb-panel-nav-weight);
+  --bb-menu-link-color: var(--bb-panel-muted-color);
+  --bb-menu-link-hover-color: var(--bb-panel-title-color);
 }
 
 .bb-panel .bb-panel-topnav .bb-menu-sub {
@@ -8669,6 +8705,55 @@ Header
 
 .bb-panel .bb-panel-topnav .bb-menu-link {
   white-space: nowrap;
+}
+
+/* Header menu: normalize button triggers to the same flat navigation as links.
+   Bootstrap's generic button appearance must not leak into bb-menu. */
+.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-space-2);
+  appearance: none;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border-radius: var(--bb-radius);
+  color: var(--bb-panel-muted-color);
+  font-family: var(--bb-font-sans);
+  font-size: var(--bb-panel-nav-size);
+  font-weight: var(--bb-panel-nav-weight);
+  line-height: var(--bb-line-height-heading);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link:hover,
+.bb-panel .bb-panel-topnav .bb-menu-item.show > .bb-menu-link,
+.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link[aria-current=page] {
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-panel-title-color);
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: 2px;
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-arrow {
+  opacity: 0.7;
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-sub {
+  padding: var(--bb-space-2);
+}
+
+.bb-panel .bb-panel-topnav .bb-menu-sub .bb-menu-link {
+  justify-content: flex-start;
+  width: 100%;
+  padding: var(--bb-space-3);
 }
 
 .bb-panel .bb-panel-header-actions {
@@ -8690,6 +8775,27 @@ Header
   border-radius: var(--bb-radius-pill);
   width: var(--bb-menu-bullet-size, 0.35rem);
   height: var(--bb-menu-bullet-size, 0.35rem);
+}
+
+/* Slightly more legible notification marker without altering other icon buttons. */
+.bb-panel .bb-panel-header-actions [aria-controls=bb_notifications_pop] .bb-panel-indicator {
+  width: calc(var(--bb-menu-bullet-size, 0.35rem) + var(--bb-space-1));
+  height: calc(var(--bb-menu-bullet-size, 0.35rem) + var(--bb-space-1));
+  inset-inline-end: var(--bb-space-1);
+  inset-block-start: var(--bb-space-1);
+}
+
+/* Resize the header avatar only; keep the larger avatar inside the user popup. */
+.bb-panel .bb-panel-header-actions [aria-controls=bb_user_pop] .bb-symbol {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+}
+
+.bb-panel .bb-panel-header-actions [aria-controls=bb_user_pop] .bb-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bb-panel .bb-panel-overlay-host {
@@ -8764,6 +8870,113 @@ Header
 
 .bb-panel .bb-panel-popover .bb-dropdown-item {
   text-decoration: none;
+}
+
+/* User menu — Metronic-like hierarchy, scoped to the user popup only. */
+.bb-panel .bb-panel-overlay-host > .bb-panel-popover.bb-panel-user-menu {
+  width: min(20.5rem, 100vw - 2rem);
+  min-width: 0;
+  max-width: calc(100vw - 2rem);
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-body-bg);
+  box-shadow: var(--bb-shadow-lg, var(--bb-shadow-sm));
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-summary {
+  align-items: center;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-4);
+  margin: 0;
+  border-bottom: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-summary .bb-symbol {
+  flex: 0 0 auto;
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-info {
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: var(--bb-space-1);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-space-2);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-info small {
+  font-size: var(--bb-fs-xs);
+  overflow-wrap: anywhere;
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-group {
+  padding: var(--bb-space-2);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-group + .bb-panel-user-group {
+  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  width: 100%;
+  min-height: 2.65rem;
+  margin: 0;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border: 0;
+  border-radius: var(--bb-radius);
+  background: transparent;
+  color: var(--bb-body-color);
+  font-family: var(--bb-font-sans);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-heading);
+  text-align: start;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bb-panel .bb-panel-user-menu a.bb-panel-user-item:hover,
+.bb-panel .bb-panel-user-menu button.bb-panel-user-item:not(:disabled):hover {
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+  text-decoration: none;
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-item:focus-visible {
+  outline: var(--bb-focus-ring-width, 0.2rem) solid var(--bb-primary);
+  outline-offset: -2px;
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  flex: 0 0 auto;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-normal);
+}
+
+.bb-panel .bb-panel-user-menu .bb-panel-user-meta .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
 }
 
 /* Faz 5 — toolbar varyantları; mevcut .bb-toolbar tamamlayıcıları */
