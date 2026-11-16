@@ -16,6 +16,8 @@ const report = (label, items) => {
 const pages = readdirSync(dir).filter((name) => name.endsWith(".html")).sort();
 const panelMenuPath = resolve(root, "assets/js/panel/bb-panel-menu.js");
 const panelMenuSource = readFileSync(panelMenuPath, "utf8");
+const adapterPath = resolve(root, "assets/js/panel/bb-component-panel-shell.js");
+const adapterSource = readFileSync(adapterPath, "utf8");
 const catalogMatch = panelMenuSource.match(/var componentCatalog = \[([\s\S]*?)\n\s*\];/);
 const catalogPages = catalogMatch
   ? [...catalogMatch[1].matchAll(/\["([^"]+\.html)","[^"]*"\]/g)].map((m) => m[1]).sort()
@@ -37,6 +39,8 @@ const idIssues = [];
 const duplicateScriptIssues = [];
 const inlineScriptIssues = [];
 const emptyPageIssues = [];
+const invalidPixelUtilityIssues = [];
+const cardShadowIssues = [];
 const jsPaths = new Set();
 
 for (const name of pages) {
@@ -45,6 +49,11 @@ for (const name of pages) {
 
   if (!source.trim()) emptyPageIssues.push(name + ": empty demo file");
   if (/<script(?![^>]*\bsrc=)[^>]*>/i.test(source)) inlineScriptIssues.push(name + ": inline script is not allowed");
+  if (/\b(?:w|h)-\d+px\b/.test(source)) invalidPixelUtilityIssues.push(name + ": fixed-pixel utility class is not allowed");
+  for (const match of source.matchAll(/class="([^"]*)"/g)) {
+    const classes = match[1];
+    if (/\bbb-card\b/.test(classes) && /\bshadow(?:-sm|-lg)?\b/.test(classes)) cardShadowIssues.push(name + ": bb-card must use core card shadow only");
+  }
 
   const adapterCount = (source.match(/assets\/js\/panel\/bb-component-panel-shell\.js/g) || []).length;
   if (adapterCount !== 1) adapterIssues.push(name + ": adapter count=" + adapterCount);
@@ -89,6 +98,14 @@ report("Component HTML inline scripts", inlineScriptIssues);
 report("Component HTML local references", refIssues);
 report("Component HTML duplicate IDs", idIssues);
 report("Component HTML duplicate script sources", duplicateScriptIssues);
+report("Component HTML fixed-pixel utility classes", invalidPixelUtilityIssues);
+report("Component cards use canonical core shadow", cardShadowIssues);
+
+const adapterContractIssues = [];
+["normalizeStylesheetOrder", "bb-component-demo-root", "normalizeDemoCards"].forEach((marker) => {
+  if (!adapterSource.includes(marker)) adapterContractIssues.push("adapter contract missing: " + marker);
+});
+report("Component panel adapter normalization contract", adapterContractIssues);
 
 const coreJsDir = resolve(root, "assets/js/core");
 const referencedJs = new Set([...jsPaths].map((path) => resolve(path)));

@@ -16,6 +16,13 @@
     ? pageHeading.textContent.trim()
     : (document.title || slug).replace(/\s*[|–—-].*$/, "").trim();
 
+  function normalizeStylesheetOrder() {
+    var mainTheme = document.head && document.head.querySelector('link[rel="stylesheet"][href*="/assets/css/main.css"]');
+    if (mainTheme) document.head.appendChild(mainTheme);
+  }
+
+  normalizeStylesheetOrder();
+
   function removeDemoControls() {
     var selectors = [
       "[data-bb-theme]",
@@ -127,7 +134,7 @@
       '</header>',
       '<main class="bb-main">',
         '<div class="bb-main-inner">',
-          '<div class="bb-toolbar">',
+          '<div class="bb-toolbar bb-component-toolbar">',
             '<div class="bb-panel-content-container">',
               '<div class="bb-toolbar-row">',
                 '<div class="bb-toolbar-col-left">',
@@ -149,14 +156,80 @@
   body.appendChild(app);
 
   var contentHost = app.querySelector(".bb-component-showcase-content");
+  var demoRoot = document.createElement("div");
+  demoRoot.className = "bb-component-demo-root";
   preserved.forEach(function (node) {
-    contentHost.appendChild(node);
+    demoRoot.appendChild(node);
+  });
+  contentHost.appendChild(demoRoot);
+
+  function removeUtilityClasses(element, pattern) {
+    Array.from(element.classList).forEach(function (name) {
+      if (pattern.test(name)) element.classList.remove(name);
+    });
+  }
+
+  function unwrapElement(element) {
+    var parent = element.parentNode;
+    if (!parent) return;
+    while (element.firstChild) parent.insertBefore(element.firstChild, element);
+    element.remove();
+  }
+
+  demoRoot.querySelectorAll(":scope > main").forEach(function (main) {
+    unwrapElement(main);
   });
 
-  contentHost.querySelectorAll(":scope > .container, :scope > main > .container").forEach(function (container) {
-    container.classList.remove("container");
-    container.classList.add("bb-component-showcase-root");
+  demoRoot.querySelectorAll(
+    ":scope > .container, :scope > .container-fluid, :scope > .container-sm, :scope > .container-md, :scope > .container-lg, :scope > .container-xl, :scope > .container-xxl, :scope > .demo-shell"
+  ).forEach(function (wrapper) {
+    Array.from(wrapper.classList).forEach(function (name) {
+      if (/^container(?:-(?:fluid|sm|md|lg|xl|xxl))?$/.test(name) || name === "demo-shell") {
+        wrapper.classList.remove(name);
+      }
+    });
+    removeUtilityClasses(wrapper, /^(?:p|px|py|pt|pb|ps|pe|m|mx|my|mt|mb|ms|me)-[0-5]$/);
+    wrapper.classList.remove("min-vh-100", "bb-main");
+    wrapper.classList.add("bb-component-showcase-root");
   });
+
+  function normalizeDemoCards(root) {
+    root.querySelectorAll(".card, .bb-card").forEach(function (card) {
+      var hadLegacyPadding = Array.from(card.classList).some(function (name) {
+        return /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/.test(name);
+      });
+
+      card.classList.add("bb-card");
+      card.classList.remove("shadow", "shadow-sm", "shadow-lg");
+      removeUtilityClasses(card, /^(?:p|px|py|pt|pb|ps|pe|mb)-[0-5]$/);
+
+      card.querySelectorAll(":scope > .card-header, :scope > .bb-card-header").forEach(function (section) {
+        section.classList.add("bb-card-header");
+        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
+      });
+      card.querySelectorAll(":scope > .card-body, :scope > .bb-card-body").forEach(function (section) {
+        section.classList.add("bb-card-body");
+        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
+      });
+      card.querySelectorAll(":scope > .card-footer, :scope > .bb-card-footer").forEach(function (section) {
+        section.classList.add("bb-card-footer");
+        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
+      });
+      card.querySelectorAll(".card-title, .bb-card-title").forEach(function (titleElement) {
+        titleElement.classList.add("bb-card-title");
+      });
+
+      var hasCanonicalSection = card.querySelector(":scope > .bb-card-header, :scope > .bb-card-body, :scope > .bb-card-footer");
+      if (!hasCanonicalSection && hadLegacyPadding) {
+        var bodySection = document.createElement("div");
+        bodySection.className = "bb-card-body";
+        while (card.firstChild) bodySection.appendChild(card.firstChild);
+        card.appendChild(bodySection);
+      }
+    });
+  }
+
+  normalizeDemoCards(demoRoot);
 
   var pageTitle = app.querySelector(".bb-page-title");
   var breadcrumbCurrent = app.querySelector(".breadcrumb-item.active");

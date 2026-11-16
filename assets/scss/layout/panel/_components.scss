@@ -1,27 +1,47 @@
 // PANEL TEMPLATE ONLY: component catalog adapter/layout.
 // Core component styles remain under components/*.scss and do not depend on this file.
 
+.bb-panel .bb-component-toolbar {
+  margin-block-end: var(--bb-space-3);
+}
+
+.bb-panel .bb-component-showcase {
+  padding-top: 0;
+}
+
 .bb-panel .bb-component-showcase-content {
-  display: grid;
-  gap: var(--bb-panel-content-gap);
   min-width: 0;
 }
 
-.bb-panel .bb-component-showcase-content > main,
+.bb-panel .bb-component-demo-root,
 .bb-panel .bb-component-showcase-root {
+  display: grid;
+  gap: var(--bb-space-4);
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.bb-panel .bb-component-demo-root > .container,
+.bb-panel .bb-component-demo-root > .container-fluid,
+.bb-panel .bb-component-demo-root > .container-sm,
+.bb-panel .bb-component-demo-root > .container-md,
+.bb-panel .bb-component-demo-root > .container-lg,
+.bb-panel .bb-component-demo-root > .container-xl,
+.bb-panel .bb-component-demo-root > .container-xxl {
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
 }
 
-.bb-panel .bb-component-showcase-content > .container,
-.bb-panel .bb-component-showcase-content > .container-fluid {
-  max-width: none;
-  margin: 0;
-  padding: 0;
+.bb-panel .bb-component-demo-root .bb-card {
+  margin-block: 0;
 }
 
-.bb-panel .bb-component-showcase-content > :last-child {
+.bb-panel .bb-component-demo-root > :last-child,
+.bb-panel .bb-component-showcase-root > :last-child {
   margin-bottom: 0;
 }
