@@ -6,7 +6,7 @@ import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
 const demoDir = resolve(root, "modules/panel");
-const jsDir = resolve(root, "assets/js");
+const jsDir = resolve(root, "assets/js/panel");
 const failures = [];
 const report = (label, problems) => {
   if (problems.length) {
