@@ -145,40 +145,6 @@
   </main>
 
   <!-- Theme Toggle -->
-  <script>
-    (function () {
-      var STORAGE_KEY = "bb-theme";
-      var btn = document.getElementById("bb_theme_toggle");
-      var icon = document.getElementById("bb_theme_icon");
-      var text = document.getElementById("bb_theme_text");
-
-      function getPreferredTheme() {
-        var saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === "light" || saved === "dark") {
-          return saved;
-        }
-        return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
-
-      function applyTheme(theme) {
-        document.documentElement.setAttribute("data-bs-theme", theme);
-        localStorage.setItem(STORAGE_KEY, theme);
-
-        var isDark = (theme === "dark");
-        if (icon) { icon.textContent = isDark ? "light_mode" : "dark_mode"; }
-        if (text) { text.textContent = isDark ? "Light" : "Dark"; }
-      }
-
-      applyTheme(getPreferredTheme());
-
-      if (btn) {
-        btn.addEventListener("click", function () {
-          var current = document.documentElement.getAttribute("data-bs-theme") || "light";
-          applyTheme(current === "dark" ? "light" : "dark");
-        });
-      }
-    })();
-  </script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
