@@ -161,24 +161,7 @@
   <!-- Dialer JS -->
   <script src="../../assets/js/core/bb-dialer.js"></script>
 
-  <script>
-    // theme switch
-    document.getElementById("btnThemeLight").addEventListener("click", function () {
-      document.documentElement.setAttribute("data-bs-theme", "light");
-    });
-    document.getElementById("btnThemeDark").addEventListener("click", function () {
-      document.documentElement.setAttribute("data-bs-theme", "dark");
-    });
-
-    // event demo
-    document.querySelectorAll(".bb-dialer").forEach(function (el) {
-      el.addEventListener("bb.dialer.changed", function () {
-        const inst = window.BBDialer.getInstance(el);
-        if (!inst) { return; }
-        console.log("Dialer changed:", inst.getValue());
-      });
-    });
-  </script>
+    <script src="../../assets/js/panel/bb-component-dialer-demo.js"></script>
   <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
