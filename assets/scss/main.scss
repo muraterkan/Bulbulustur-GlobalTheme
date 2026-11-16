@@ -49,10 +49,10 @@
 // Keep import order stable: panel layouts currently compile before core components.
 // ==================================================
 @use "layout/panel/shell";         // panel template Faz 1: responsive shell
-@use "layout/panel/sidebar";       // panel template Faz 2: sidebar menüsü
-@use "layout/panel/header";        // panel template Faz 3: topbar
+@use "layout/panel/sidebar" as panel-sidebar;       // panel template Faz 2: sidebar menüsü
+@use "layout/panel/header" as panel-header;        // panel template Faz 3: topbar
 @use "layout/panel/user";          // panel template Faz 4: user panels
-@use "layout/panel/toolbar";       // panel template Faz 5: toolbar
+@use "layout/panel/toolbar" as panel-toolbar;       // panel template Faz 5: toolbar
 @use "layout/panel/variants";      // panel template Faz 6: layout variants
 @use "layout/panel/pages";         // panel template Faz 7: empty page navigation
 @use "layout/panel/dashboard-kpi";  // panel dashboard widget 1
@@ -65,7 +65,7 @@
 @use "layout/panel/form";           // Faz 10 stepper, dosya alanı
 @use "layout/panel/auth";           // Faz 11 auth ve hata sayfaları
 @use "layout/panel/account";        // Faz 12 profil hesap ve fatura
-@use "layout/panel/footer";         // Panel footer and scroll-to-top
+@use "layout/panel/footer" as panel-footer;         // Panel footer and scroll-to-top
 @use "layout/panel/messages";       // panel chat drawer
 @use "layout/panel/support";        // support center
 @use "layout/panel/subscription";   // subscription details

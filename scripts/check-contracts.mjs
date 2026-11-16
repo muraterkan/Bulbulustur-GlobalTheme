@@ -14,7 +14,7 @@ const walk = (dir) => readdirSync(dir).flatMap((name) => {
 });
 
 const main = file('assets/scss/main.scss');
-const mainImports = [...main.matchAll(/^\s*@use\s+"([^"]+)";/gm)].map((match) => match[1]);
+const mainImports = [...main.matchAll(/^\s*@use\s+"([^"]+)"(?:\s+as\s+[\w-]+)?;/gm)].map((match) => match[1]);
 const partials = walk(scssRoot)
   .filter((path) => /[\\/]_[^\\/]+\.scss$/.test(path))
   .map((path) => relative(scssRoot, path).replace(/\\/g, '/').replace(/\/_/, '/').replace(/\.scss$/, ''));

@@ -50,7 +50,7 @@ if (webOnlyComponentDemos.length) fail("component catalog contains no customer-s
 else pass("component catalog contains no customer-site demos");
 
 const main = readFileSync(resolve(scssRoot, "main.scss"), "utf8");
-const panelImportMatches = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'];/g)]
+const panelImportMatches = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'](?:\s+as\s+[\w-]+)?;/g)]
   .map((m) => ({ name: m[1], index: m.index }));
 const panelImports = panelImportMatches.map((x) => x.name);
 if (!panelImports.length) fail("main.scss declares panel layer imports");
@@ -76,7 +76,7 @@ if (!validPanelBlocks) {
   else pass("panel imports stay inside PANEL TEMPLATE ONLY blocks");
 
   const panelBlockSource = main.slice(blockAStart, blockAEnd) + "\n" + main.slice(blockBStart, blockBEnd);
-  const nonPanelImportsInsideBlocks = [...panelBlockSource.matchAll(/@use\s+["']([^"']+)["'];/g)]
+  const nonPanelImportsInsideBlocks = [...panelBlockSource.matchAll(/@use\s+["']([^"']+)["'](?:\s+as\s+[\w-]+)?;/g)]
     .map((m) => m[1])
     .filter((name) => !name.startsWith("layout/panel/"));
   if (nonPanelImportsInsideBlocks.length) fail("PANEL TEMPLATE ONLY blocks contain only panel imports", nonPanelImportsInsideBlocks);
