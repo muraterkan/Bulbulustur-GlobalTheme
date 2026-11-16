@@ -18183,3 +18183,178 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
     padding: var(--bb-space-4);
   }
 }
+
+/* Panel footer: compact Metronic-style metadata and links. Shared footer stays unchanged. */
+.bb-panel {
+  --bb-panel-footer-fs: var(--bb-fs-xs);
+  --bb-panel-footer-py: var(--bb-space-3);
+  --bb-panel-footer-px: var(--bb-panel-content-gap);
+}
+.bb-panel .bb-shell-footer .bb-footer-inner {
+  min-height: 0;
+  padding-block: var(--bb-panel-footer-py);
+  padding-inline: var(--bb-panel-footer-px);
+  gap: var(--bb-space-3);
+}
+.bb-panel .bb-shell-footer,
+.bb-panel .bb-shell-footer .bb-footer-brand,
+.bb-panel .bb-shell-footer .bb-footer-left,
+.bb-panel .bb-shell-footer .bb-footer-right {
+  font-family: var(--bb-font-sans);
+  font-size: var(--bb-panel-footer-fs);
+  font-weight: var(--bb-fw-normal);
+  line-height: var(--bb-line-height-heading);
+  color: var(--bb-secondary-color);
+}
+.bb-panel .bb-shell-footer .bb-footer-brand {
+  color: var(--bb-body-color);
+  font-weight: var(--bb-fw-medium);
+}
+.bb-panel .bb-shell-footer .bb-footer-brand:hover,
+.bb-panel .bb-shell-footer .bb-footer-link:hover {
+  color: var(--bb-primary-text);
+}
+.bb-panel .bb-shell-footer .bb-footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-space-4);
+}
+.bb-panel .bb-shell-footer .bb-footer-link {
+  color: var(--bb-secondary-color);
+  font-size: inherit;
+  text-decoration: none;
+}
+.bb-panel .bb-sidebar-footer {
+  padding: var(--bb-space-3);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel .bb-sidebar-footer .bb-panel-sidebar-docs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-2);
+  border-radius: var(--bb-radius);
+  background: color-mix(in srgb, var(--bb-sidebar-text-color) 8%, transparent);
+  color: var(--bb-sidebar-text-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-heading);
+  text-decoration: none;
+}
+.bb-panel .bb-sidebar-footer .bb-panel-sidebar-docs:hover {
+  background: color-mix(in srgb, var(--bb-sidebar-text-color) 15%, transparent);
+}
+.bb-panel .bb-sidebar-footer .bb-panel-sidebar-docs:focus-visible,
+.bb-panel .bb-panel-back-to-top:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: 2px;
+}
+.bb-panel .bb-sidebar-footer .bb-panel-sidebar-docs .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+}
+@media (min-width: 992px) {
+  .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar-footer .bb-panel-sidebar-docs span:last-child {
+    display: none;
+  }
+}
+.bb-panel .bb-panel-back-to-top {
+  position: fixed;
+  inset-inline-end: var(--bb-space-4);
+  inset-block-end: var(--bb-space-4);
+  z-index: var(--bb-z-fixed, 1030);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--bb-radius);
+  background: var(--bb-primary);
+  color: var(--bb-primary-inverse);
+  box-shadow: var(--bb-shadow-sm);
+  cursor: pointer;
+  transition: opacity var(--bb-transition-fast), visibility var(--bb-transition-fast);
+}
+.bb-panel .bb-panel-back-to-top[hidden] {
+  display: none;
+}
+.bb-panel .bb-panel-back-to-top .material-symbols-outlined {
+  font-size: var(--bb-fs-lg);
+  line-height: 1;
+}
+@media (max-width: 767.98px) {
+  .bb-panel .bb-shell-footer .bb-footer-inner {
+    align-items: center;
+    padding-block: var(--bb-panel-footer-py);
+    gap: var(--bb-space-2);
+  }
+  .bb-panel .bb-shell-footer .bb-footer-right {
+    justify-content: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-panel .bb-panel-back-to-top {
+    transition: none;
+  }
+}
+
+/* Component catalog normalization — compiled sync */
+.bb-panel .bb-component-toolbar {
+  margin-block-end: var(--bb-space-3);
+}
+.bb-panel .bb-component-showcase {
+  padding-top: 0;
+}
+.bb-panel .bb-component-showcase-content {
+  min-width: 0;
+}
+.bb-panel .bb-component-demo-root,
+.bb-panel .bb-component-showcase-root {
+  display: grid;
+  gap: var(--bb-space-4);
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+.bb-panel .bb-component-demo-root > .container,
+.bb-panel .bb-component-demo-root > .container-fluid,
+.bb-panel .bb-component-demo-root > .container-sm,
+.bb-panel .bb-component-demo-root > .container-md,
+.bb-panel .bb-component-demo-root > .container-lg,
+.bb-panel .bb-component-demo-root > .container-xl,
+.bb-panel .bb-component-demo-root > .container-xxl {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.bb-panel .bb-component-demo-root .bb-card {
+  margin-block: 0;
+}
+.bb-panel .bb-component-demo-root > :last-child,
+.bb-panel .bb-component-showcase-root > :last-child {
+  margin-bottom: 0;
+}
+
+/* Datepicker root-contained popover. */
+.bb-datetime-popover {
+  inset-inline-start: 0;
+  inset-block-start: calc(100% + var(--bb-space-2));
+}
+
+/* Bullet canonical sizes. */
+.bb-bullet {
+  --bb-bullet-size: var(--bb-space-2);
+}
+.bb-bullet-sm {
+  --bb-bullet-size: var(--bb-space-1);
+}
+.bb-bullet-lg {
+  --bb-bullet-size: var(--bb-space-3);
+}
+
