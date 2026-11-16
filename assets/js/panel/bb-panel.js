@@ -68,6 +68,33 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
+  /* Shared shell branding: one source for panel and component catalog. */
+  var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
+  if (sidebarLogo && !sidebarLogo.querySelector(".bb-template-logo-mark")) {
+    var logoMark = document.createElement("span");
+    logoMark.className = "bb-template-logo-mark";
+    logoMark.setAttribute("aria-hidden", "true");
+    logoMark.innerHTML = "<span>K</span>";
+    sidebarLogo.prepend(logoMark);
+  }
+
+  /* Shared compact footer inspired by the reference template. */
+  var footer = panel.querySelector(".bb-shell-footer");
+  if (footer) {
+    footer.classList.add("bb-panel-template-footer");
+    footer.innerHTML =
+      '<div class="bb-footer-bar">' +
+        '<div class="bb-footer-inner">' +
+          '<div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a></div>' +
+          '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
+            '<a class="bb-footer-link" href="pages.html?page=corporate-about">Hakkımızda</a>' +
+            '<a class="bb-footer-link" href="support-center.html">Destek</a>' +
+            '<a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>' +
+          '</nav>' +
+        '</div>' +
+      '</div>';
+  }
+
   /* Scroll-to-top: panel content uses its own scroll container; support window too. */
   var contentScroll = panel.querySelector(".bb-content");
   var backToTop = document.createElement("button");
