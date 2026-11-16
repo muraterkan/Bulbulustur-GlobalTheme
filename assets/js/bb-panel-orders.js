@@ -23,14 +23,14 @@ function render(){
  visible.forEach(function(o){
   var tr=element("tr");
   var select=element("td"),checkbox=element("input","form-check-input");checkbox.type="checkbox";checkbox.dataset.bbOrdersSelect=o.id;checkbox.checked=selection.has(o.id);checkbox.setAttribute("aria-label","Sipariş "+o.id+" seç");select.append(checkbox);
-  var id=element("td"),link=element("a","bb-orders-id","#"+o.id);link.href="siparis-detay.html?order="+encodeURIComponent(o.id);id.append(link);
+  var id=element("td"),link=element("a","bb-orders-id","#"+o.id);link.href="siparis-detay.html";link.title="Örnek sipariş #14534 detayını görüntüle";id.append(link);
   var customer=element("td"),person=element("div","bb-orders-customer"),avatar=element("span","bb-symbol size-40 is-circle"),avLabel=element("span","bb-symbol-label",o.customer.split(" ").map(function(x){return x[0];}).join(""));avatar.append(avLabel);
   var name=element("a","",o.customer);name.href=link.href;person.append(avatar,name);customer.append(person);
   var state=element("td"),badge=element("span","badge bb-badge "+(o.status==="Tamamlandı"?"bb-badge-light-success":o.status==="Beklemede"?"bb-badge-light-warning":o.status==="İade"?"bb-badge-light-primary":"bb-badge-light-danger"),o.status);state.append(badge);
   var total=element("td","",money(o.total)),added=element("td","",labelDate(o.created)),modified=element("td","",labelDate(o.modified));
   var actions=element("td"),dropdown=element("div","dropdown bb-action-menu"),trigger=element("button","btn bb-btn-secondary btn-sm bb-action-menu-toggle","İşlemler");trigger.type="button";trigger.setAttribute("data-bs-toggle","dropdown");trigger.setAttribute("aria-expanded","false");trigger.setAttribute("aria-label","Sipariş "+o.id+" işlemleri");
   var menu=element("ul","dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list");
-  [["Görüntüle","view"],["Düzenle","edit"],["Sil","delete"]].forEach(function(action){var li=element("li");if(action[1]==="view"){var a=element("a","dropdown-item",action[0]);a.href=link.href;li.append(a);}else{var b=element("button","dropdown-item",action[0]);b.type="button";b.dataset.bbOrdersAction=action[1];b.dataset.bbOrdersId=o.id;li.append(b);}menu.append(li);});dropdown.append(trigger,menu);actions.append(dropdown);
+  [["Görüntüle","view"],["Düzenle","edit"],["Sil","delete"]].forEach(function(action){var li=element("li");if(action[1]==="view"){var a=element("a","dropdown-item",action[0]);a.href=link.href;a.title="Örnek sipariş #14534 (bu satırın gerçek detayı değil)";li.append(a);}else{var b=element("button","dropdown-item",action[0]);b.type="button";b.dataset.bbOrdersAction=action[1];b.dataset.bbOrdersId=o.id;li.append(b);}menu.append(li);});dropdown.append(trigger,menu);actions.append(dropdown);
   tr.append(select,id,customer,state,total,added,modified,actions);body.append(tr);
  });
  var start=visible.length?(page-1)*size+1:0,end=start+visible.length-1;
