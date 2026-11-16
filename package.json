@@ -10,7 +10,8 @@
     "watch:css": "sass --watch assets/scss/main.scss assets/css/main.css",
     "prod:css": "sass assets/scss/main.scss assets/css/main.css --style=compressed && postcss assets/css/main.css --use autoprefixer cssnano -o assets/css/main.min.css",
     "check:panel": "node scripts/check-panel.mjs",
-    "check:architecture": "node scripts/check-architecture.mjs"
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "check:components": "node scripts/check-components.mjs"
   },
   "keywords": [],
   "author": "",
