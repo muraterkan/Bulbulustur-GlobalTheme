@@ -194,9 +194,11 @@
   background: var(--bb-tertiary-bg);
 }
 .bb-panel .bb-panel-language-flag {
-  width: 1.5rem;
-  text-align: center;
-  font-size: var(--bb-fs-base);
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: var(--bb-radius-pill);
+  object-fit: cover;
+  flex: none;
 }
 .bb-panel .bb-panel-language-check {
   visibility: hidden;
