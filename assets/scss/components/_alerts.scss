@@ -15,12 +15,12 @@
   --bb-alert-text-color: var(--bb-secondary-color);
 
   /* micro polish (override-friendly) */
-  --bb-alert-icon-size: 1.75rem;
+  --bb-alert-icon-size: 2rem;
   --bb-alert-icon-offset-y: 0.15rem;
-  --bb-alert-title-size: 1rem;
-  --bb-alert-title-weight: 600;
+  --bb-alert-title-size: var(--bb-fs-base);
+  --bb-alert-title-weight: var(--bb-fw-semibold);
   --bb-alert-title-margin-bottom: 0.15rem;
-  --bb-alert-text-size: 0.875rem;
+  --bb-alert-text-size: var(--bb-fs-xs);
   --bb-alert-text-line-height: var(--bb-line-height-base);
 
   /* opacity tokens (dark/light safe) */
