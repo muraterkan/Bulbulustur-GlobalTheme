@@ -7,13 +7,13 @@
 .btn,
 .bb-btn {
   /* Base tokens */
-  --bb-btn-padding-x: 1.5rem;
-  --bb-btn-padding-y: 0.775rem;
+  --bb-btn-padding-x: 1rem;
+  --bb-btn-padding-y: 0.625rem;
   --bb-btn-gap: 0.5rem;
 
-  --bb-btn-font-size: var(--bb-fs-base);
+  --bb-btn-font-size: var(--bb-fs-sm);
   --bb-btn-font-weight: var(--bb-fw-medium);
-  --bb-btn-line-height: var(--bb-line-height-base);
+  --bb-btn-line-height: var(--bb-line-height-heading);
 
   --bb-btn-radius: var(--bb-radius);
   --bb-btn-border-width: var(--bb-border-width);
@@ -88,17 +88,17 @@
 .btn.btn-sm,
 .bb-btn.btn-sm,
 .bb-btn.bb-btn-sm {
-  --bb-btn-padding-x: 1rem;
-  --bb-btn-padding-y: 0.5rem;
-  --bb-btn-font-size: var(--bb-fs-sm);
+  --bb-btn-padding-x: 0.75rem;
+  --bb-btn-padding-y: 0.375rem;
+  --bb-btn-font-size: var(--bb-fs-xs);
 }
 
 .btn.btn-lg,
 .bb-btn.btn-lg,
 .bb-btn.bb-btn-lg {
-  --bb-btn-padding-x: 2rem;
-  --bb-btn-padding-y: 1rem;
-  --bb-btn-font-size: var(--bb-icon-size-md);
+  --bb-btn-padding-x: 1.25rem;
+  --bb-btn-padding-y: 0.75rem;
+  --bb-btn-font-size: var(--bb-fs-base);
 }
 
 .btn .material-symbols-outlined,
