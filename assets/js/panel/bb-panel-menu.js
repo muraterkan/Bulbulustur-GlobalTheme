@@ -12,7 +12,7 @@
     ["carousel.html","Karusel"],["chips.html","Chips"],["collapse.html","Daraltma"],["countup.html","Sayaç"],
     ["datepicker.html","Tarih Seçici"],["dialer.html","Sayısal Adım"],["drawer.html","Drawer"],["dropdowns.html","Açılır Menüler"],
     ["empty-state.html","Boş Durum"],["floating-labels.html","Yüzen Etiketler"],["formrepeater.html","Form Tekrarlayıcı"],["forms.html","Formlar"],
-    ["hover.html","Hover"],["indicator.html","Gösterge"],["input-group.html","Girdi Grubu"],["inputmask.html","Girdi Maskesi"],
+    ["indicator.html","Gösterge"],["input-group.html","Girdi Grubu"],["inputmask.html","Girdi Maskesi"],
     ["lightbox.html","Lightbox"],["menu.html","Menü"],["modal.html","Modal"],["overlay.html","Overlay"],
     ["pagination.html","Sayfalama"],["password-meter.html","Şifre Ölçer"],["popover.html","Popover"],
     ["progress.html","İlerleme"],["pulse.html","Pulse"],["rating.html","Puanlama"],
