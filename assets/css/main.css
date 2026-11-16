@@ -18472,3 +18472,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-panel .bb-team-social .material-symbols-outlined{color:var(--bb-primary-text);font-size:var(--bb-fs-base)}
 @media(max-width:1199.98px){.bb-panel .bb-team-hero{grid-template-columns:repeat(3,minmax(0,1fr))}.bb-panel .bb-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:575.98px){.bb-panel .bb-team-surface{padding:var(--bb-space-4)}.bb-panel .bb-team-hero{grid-template-columns:repeat(2,minmax(0,1fr));min-height:0}.bb-panel .bb-team-grid{grid-template-columns:1fr}}
+
+
+/* Panel component catalog adapter/layout. */
+.bb-panel .bb-component-showcase-content{display:grid;gap:var(--bb-panel-content-gap);min-width:0}
+.bb-panel .bb-component-showcase-content>main,.bb-panel .bb-component-showcase-root{width:100%;max-width:none;margin:0;padding:0}
+.bb-panel .bb-component-showcase-content>.container,.bb-panel .bb-component-showcase-content>.container-fluid{max-width:none;margin:0;padding:0}
+.bb-panel .bb-component-showcase-content>:last-child{margin-bottom:0}
