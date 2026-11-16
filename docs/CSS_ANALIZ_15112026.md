@@ -85,3 +85,6 @@ Karar: türetilmiş durum tokenlarının (`--bb-*-hover/active/light/clarity`, 8
 - Kabul zinciri: `check:architecture`, `check:contracts`, `check:components`, `check:panel`.
 - `check:architecture` panel partial/import envanterini, PANEL TEMPLATE ONLY blok sahipliğini ve müşteri-site kompozisyonlarının core'a sızmamasını denetliyor.
 - `check:components` component HTML envanteri ile panel component kataloğunu birebir karşılaştırıyor.
+- Component katalog 47 gerçek demo: boş `hover.html`, orphan `product-gallery.html` ve web-only `product-quick-view.html` kaldırıldı.
+- Component demolarındaki inline JavaScript kaldırıldı; reusable davranış `assets/js/core/`, yalnız demo davranışı `assets/js/panel/bb-component-*-demo.js` altında.
+- Core JS orphan kontrolü eklendi; kullanılmayan `bb-modal.js` ve `bb-theme.js` kaldırıldı.
