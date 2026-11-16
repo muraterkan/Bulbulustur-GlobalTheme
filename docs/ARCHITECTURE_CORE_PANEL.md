@@ -67,6 +67,7 @@ Bu iki blok panel katmanının sökülebilir sınırıdır. Yeni panel importu y
 ```bash
 npm run check:architecture
 npm run check:contracts
+npm run check:components
 npm run check:panel
 ```
 
