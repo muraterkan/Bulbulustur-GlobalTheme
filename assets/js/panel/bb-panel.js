@@ -68,14 +68,15 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
-  /* Shared shell branding: one source for panel and component catalog. */
+  /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
   var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
-  if (sidebarLogo && !sidebarLogo.querySelector(".bb-template-logo-mark")) {
-    var logoMark = document.createElement("span");
-    logoMark.className = "bb-template-logo-mark";
-    logoMark.setAttribute("aria-hidden", "true");
-    logoMark.innerHTML = '<img src="../../assets/media/logos/logo-light.png" alt="">';
-    sidebarLogo.prepend(logoMark);
+  if (sidebarLogo) {
+    sidebarLogo.querySelectorAll(".bb-template-logo-mark, .bb-sidebar-brand-logo").forEach(function (node) { node.remove(); });
+    var brandLogo = document.createElement("img");
+    brandLogo.className = "bb-sidebar-brand-logo";
+    brandLogo.src = "../../assets/media/logos/logo-light.png";
+    brandLogo.alt = "Bulbulustur";
+    sidebarLogo.prepend(brandLogo);
   }
 
   /* Shared compact footer inspired by the reference template. */
