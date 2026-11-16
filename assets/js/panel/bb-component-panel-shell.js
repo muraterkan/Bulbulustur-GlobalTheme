@@ -16,6 +16,35 @@
     ? pageHeading.textContent.trim()
     : (document.title || slug).replace(/\s*[|–—-].*$/, "").trim();
 
+  var componentCatalog = [
+    ["accordion.html","Akordeon"],["alerts.html","Uyarılar"],["badges.html","Rozetler"],["breadcrumb.html","İçerik Yolu"],
+    ["bullet.html","Madde"],["buttongroup.html","Buton Grupları"],["buttons.html","Butonlar"],["cards.html","Kartlar"],
+    ["carousel.html","Karusel"],["chips.html","Chips"],["collapse.html","Daraltma"],["countup.html","Sayaç"],
+    ["datepicker.html","Tarih Seçici"],["dialer.html","Sayısal Adım"],["drawer.html","Drawer"],["dropdowns.html","Açılır Menüler"],
+    ["empty-state.html","Boş Durum"],["floating-labels.html","Yüzen Etiketler"],["formrepeater.html","Form Tekrarlayıcı"],["forms.html","Formlar"],
+    ["indicator.html","Gösterge"],["input-group.html","Girdi Grubu"],["inputmask.html","Girdi Maskesi"],
+    ["lightbox.html","Lightbox"],["menu.html","Menü"],["modal.html","Modal"],["overlay.html","Overlay"],
+    ["pagination.html","Sayfalama"],["password-meter.html","Şifre Ölçer"],["popover.html","Popover"],
+    ["progress.html","İlerleme"],["pulse.html","Pulse"],["rating.html","Puanlama"],
+    ["ribbons.html","Şeritler"],["scroll.html","Scroll"],["separator.html","Ayırıcı"],["spinner.html","Spinner"],
+    ["sticky.html","Sticky"],["symbol.html","Sembol"],["tables.html","Tablolar"],["tabs.html","Sekmeler"],
+    ["tiny-slider-advanced.html","Tiny Slider / Advanced"],["tiny-slider-thumbnails.html","Tiny Slider / Thumbnails"],["tiny-slider.html","Tiny Slider"],
+    ["toast.html","Toast"],["tooltips.html","Tooltips"],["typography.html","Tipografi"]
+  ];
+
+  function renderComponentSidebar() {
+    return componentCatalog.map(function (entry) {
+      var active = entry[0] === file;
+      return '<div class="bb-menu-item">' +
+        '<a class="bb-menu-link' + (active ? ' active' : '') + '" href="' + entry[0] + '"' +
+        (active ? ' aria-current="page"' : '') + '>' +
+        '<span class="bb-menu-bullet" aria-hidden="true"></span>' +
+        '<span class="bb-menu-title">' + entry[1] + '</span>' +
+        '</a></div>';
+    }).join("");
+  }
+
+
   function normalizeStylesheetOrder() {
     var mainTheme = document.head && document.head.querySelector('link[rel="stylesheet"][href*="/assets/css/main.css"]');
     if (mainTheme) document.head.appendChild(mainTheme);
@@ -111,9 +140,9 @@
         '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Menüyü kapat"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>',
       '</div>',
       '<div class="bb-sidebar-body">',
-        '<nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">',
-          '<div class="bb-menu-section">GÖSTERGE PANELLERİ</div>',
-          '<div class="bb-menu-item"><a class="bb-menu-link" href="../panel/dashboard.html"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">dashboard</span></span><span class="bb-menu-title">Gösterge Paneli</span></a></div>',
+        '<nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg" data-bb-panel-menu aria-label="Component gezinme">',
+          '<div class="bb-menu-section">COMPONENTS</div>',
+          renderComponentSidebar(),
         '</nav>',
       '</div>',
       '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="buttons.html"><span class="material-symbols-outlined" aria-hidden="true">widgets</span><span>Components</span></a></div>',
