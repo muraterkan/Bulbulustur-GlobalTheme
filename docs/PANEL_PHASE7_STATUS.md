@@ -4,7 +4,7 @@ Tarih: 2026-11-15
 
 ## Yapılan
 
-- `modules/panel/sayfalar.html`: Faz 7 menü ağacı taslağındaki tüm bölümlerle 60 girişlik, üç seviyeye kadar genişleyen sidebar; ortak boş sayfa şablonu.
+- `modules/panel/pages.html`: Faz 7 menü ağacı taslağındaki tüm bölümlerle 60 girişlik, üç seviyeye kadar genişleyen sidebar; ortak boş sayfa şablonu.
 - `assets/js/bb-panel-pages.js`: Statik `?page=<id>` navigasyonu, seçili menü, aria-current, breadcrumb ve başlığın eşleştirilmesi. Tanımsız sayfa kimliği güvenli varsayılana döner.
 - `assets/scss/layout/_panel-pages.scss`: Yalnız boş sayfa navigasyonuna ait sınıflar; mevcut kart, breadcrumb, menu, empty-state stilinin tekrarını içermez.
 - `assets/scss/main.scss`: Faz 7 partial'ı eklendi.
@@ -29,7 +29,7 @@ npm run build:css
 npm run check:contracts
 ```
 
-Yerel HTTP sunucusunda `modules/panel/sayfalar.html` açın. Örneğin `?page=ecommerce-products` ve `?page=auth-corporate-signin` ile menü/başlık/breadcrumb geçişlerini; mobil menüyü ve dark/light modunu deneyin.
+Yerel HTTP sunucusunda `modules/panel/pages.html` açın. Örneğin `?page=ecommerce-products` ve `?page=auth-corporate-signin` ile menü/başlık/breadcrumb geçişlerini; mobil menüyü ve dark/light modunu deneyin.
 
 ## Açık kararlar
 

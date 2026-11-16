@@ -15,24 +15,24 @@ Stiller ayrı, bağımsız bir tema olarak değil `assets/scss/layout/_panel-acc
 
 | Sekme | Dosya | İçerik |
 |---|---|---|
-| Genel Bakış | `modules/panel/profil.html` | Profil bilgileri, durum ve bilgilendirme kartı |
-| Ayarlar | `modules/panel/profil-ayarlar.html` | Gerçek form alanları, tarayıcı doğrulaması |
-| Güvenlik | `modules/panel/profil-guvenlik.html` | Özet metrikler, grafik, uyarı kartları ve oturum tablosu |
-| Etkinlik | `modules/panel/profil-etkinlik.html` | Zaman çizelgesi ve etkinlik metrikleri |
-| Faturalandırma | `modules/panel/profil-faturalandirma.html` | Abonelik, kullanıcı kota barı, örnek ödeme yöntemleri |
-| Ekstreler | `modules/panel/profil-ekstreler.html` | Dönemsel örnek ekstre tablosu |
-| Referanslar | `modules/panel/profil-referanslar.html` | Davet kodu, kopyalama aksiyonu, metrikler |
-| API Anahtarları | `modules/panel/profil-api.html` | API genel bakış, test modu, geliştirici araçları, 2FA notu |
-| Kayıtlar | `modules/panel/profil-kayitlar.html` | Denetim kayıtları tablosu |
+| Genel Bakış | `modules/panel/profile.html` | Profil bilgileri, durum ve bilgilendirme kartı |
+| Ayarlar | `modules/panel/profile-settings.html` | Gerçek form alanları, tarayıcı doğrulaması |
+| Güvenlik | `modules/panel/profile-security.html` | Özet metrikler, grafik, uyarı kartları ve oturum tablosu |
+| Etkinlik | `modules/panel/profile-activity.html` | Zaman çizelgesi ve etkinlik metrikleri |
+| Faturalandırma | `modules/panel/profile-billing.html` | Abonelik, kullanıcı kota barı, örnek ödeme yöntemleri |
+| Ekstreler | `modules/panel/profile-statements.html` | Dönemsel örnek ekstre tablosu |
+| Referanslar | `modules/panel/profile-referrals.html` | Davet kodu, kopyalama aksiyonu, metrikler |
+| API Anahtarları | `modules/panel/profile-api.html` | API genel bakış, test modu, geliştirici araçları, 2FA notu |
+| Kayıtlar | `modules/panel/profile-logs.html` | Denetim kayıtları tablosu |
 
 ## Mevcut profil sidebar bağlantıları
 
 Önceden yapım aşaması şablonuna giden aşağıdaki profil alt menülerinin her biri için ayrıca içerik sayfası oluşturuldu:
 
-- `profil-projeler.html`: proje listesi ve istatistik
-- `profil-kampanyalar.html`: kampanya kartları
-- `profil-belgeler.html`: belge tablosu
-- `profil-takipciler.html`: takipçi kartları
+- `profile-projects.html`: proje listesi ve istatistik
+- `profile-campaigns.html`: kampanya kartları
+- `profile-documents.html`: belge tablosu
+- `profile-followers.html`: takipçi kartları
 
 Böylece toplam 13 profil HTML sayfası oluştu. Profil sidebar linkleri 14 panel shell dosyasında gözden geçirildi; ilgili eski placeholder linkleri gerçek sayfalara geçirildi. Menü kimlikleri `assets/js/bb-panel-pages.js` içinde tutulur.
 
@@ -57,7 +57,7 @@ npm run check:panel
 npm run check:contracts
 ```
 
-Live Server ile `modules/panel/profil.html` açıp profil kartının avatar/istatikler/sekme yerleşimini ve 9 sekme bağlantısının farklı içerik açtığını kontrol et. Özellikle `profil-guvenlik.html`, `profil-faturalandirma.html`, `profil-api.html` ve 375px mobil görünümünü Metronic ekranlarıyla karşılaştır.
+Live Server ile `modules/panel/profile.html` açıp profil kartının avatar/istatikler/sekme yerleşimini ve 9 sekme bağlantısının farklı içerik açtığını kontrol et. Özellikle `profile-security.html`, `profile-billing.html`, `profile-api.html` ve 375px mobil görünümünü Metronic ekranlarıyla karşılaştır.
 
 ```powershell
 git add assets/css/main.css

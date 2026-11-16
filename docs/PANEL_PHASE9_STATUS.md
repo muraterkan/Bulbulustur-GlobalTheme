@@ -7,9 +7,9 @@ Dal: `main`
 
 - `assets/scss/layout/_panel-list.scss`: mevcut `bb-table`, `bb-pagination`, `bb-card`, `form-control`, `form-select` ile kullanılacak panel liste tamamlayıcıları.
 - `assets/js/bb-panel-list.js`: 18 kayıtlı ve tarayıcı belleğinde çalışan örnek ürün listesi.
-- `modules/panel/listeler.html`: header/sidebar/toolbar/footer ile bütünleşik ürün yönetimi demo sayfası.
+- `modules/panel/lists.html`: header/sidebar/toolbar/footer ile bütünleşik ürün yönetimi demo sayfası.
 - `assets/scss/main.scss`: Faz 9 partial çağrısı.
-- `modules/panel/dashboard.html` ve `modules/panel/sayfalar.html`: e-Ticaret → Ürünler bağlantısı `listeler.html?page=ecommerce-products` adresine bağlandı.
+- `modules/panel/dashboard.html` ve `modules/panel/pages.html`: e-Ticaret → Ürünler bağlantısı `lists.html?page=ecommerce-products` adresine bağlandı.
 
 ## İşlevler
 
@@ -40,7 +40,7 @@ git commit -m "build(css): faz 9 liste stilleri"
 npm run check:css
 ```
 
-Tarayıcıda `modules/panel/listeler.html?page=ecommerce-products` sayfasını yerel HTTP sunucusundan aç. Arama, status, sayfalama, sıralama, toplu seçim ve detay işlemlerini dene. Sonrasında CSS commit'ini GitHub'a göndermek için `git push origin main`.
+Tarayıcıda `modules/panel/lists.html?page=ecommerce-products` sayfasını yerel HTTP sunucusundan aç. Arama, status, sayfalama, sıralama, toplu seçim ve detay işlemlerini dene. Sonrasında CSS commit'ini GitHub'a göndermek için `git push origin main`.
 
 ## Sonraki faz
 

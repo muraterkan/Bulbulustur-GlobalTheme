@@ -8,7 +8,7 @@ Tarih: 2026-11-15
 - `assets/scss/main.scss`: `@use "layout/panel-shell";` bağlantısı.
 - `assets/js/bb-panel.js`: `data-bb-*` tabanlı açma/kapatma, daraltma, Escape, klavye odak yönetimi, mobil kapalı sidebar için `inert`, `aria-expanded` ve `aria-pressed`.
 - `assets/js/bb-panel-theme.js`: demo için açık/koyu tema anahtarı.
-- `modules/panel/kabuk.html`: boş panel sayfası örneği (header/sidebar/toolbar/content/footer). Menü ağacı Faz 2'de.
+- `modules/panel/shell.html`: boş panel sayfası örneği (header/sidebar/toolbar/content/footer). Menü ağacı Faz 2'de.
 
 ## Doğrulama
 
@@ -25,7 +25,7 @@ npm run check:contracts
 npm run check:css
 ```
 
-`modules/panel/kabuk.html` bir yerel HTTP sunucusunda açılarak açık/koyu tema, mobil aç/kapat, Escape, Tab ve desktop daraltma kontrol edilmeli. `main.css` derleme çıktısı repoya eklenmeli.
+`modules/panel/shell.html` bir yerel HTTP sunucusunda açılarak açık/koyu tema, mobil aç/kapat, Escape, Tab ve desktop daraltma kontrol edilmeli. `main.css` derleme çıktısı repoya eklenmeli.
 
 ## Dokunulmadı
 

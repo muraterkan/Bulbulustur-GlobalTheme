@@ -5,7 +5,7 @@ Dal: `main`
 
 ## Faz 7
 
-Onaylanan yapı uygulandı: Türkçe, Gösterge Panelleri / Sayfalar / Uygulamalar / Düzenler, Material Symbols. `modules/panel/sayfalar.html` içerisinde 58 bağlantı var. Slug kimlikleri değişmedi, yalnız görünür adlar Türkçeleştirildi. Menü seçimi `assets/js/bb-panel-pages.js` üzerinden başlık, breadcrumb ve aktif durumu açar.
+Onaylanan yapı uygulandı: Türkçe, Gösterge Panelleri / Sayfalar / Uygulamalar / Düzenler, Material Symbols. `modules/panel/pages.html` içerisinde 58 bağlantı var. Slug kimlikleri değişmedi, yalnız görünür adlar Türkçeleştirildi. Menü seçimi `assets/js/bb-panel-pages.js` üzerinden başlık, breadcrumb ve aktif durumu açar.
 
 ## Faz 8 — Dashboard
 
@@ -24,7 +24,7 @@ Tüm partial'lar `assets/scss/main.scss` üzerinden derlenecek şekilde bağland
 
 ## Kod ve statik kontrol
 
-- GitHub üzerinden `sayfalar.html`, `dashboard.html`, `bb-panel-pages.js`, `main.scss`, altı partial tekrar okundu.
+- GitHub üzerinden `pages.html`, `dashboard.html`, `bb-panel-pages.js`, `main.scss`, altı partial tekrar okundu.
 - 58 link / 58 benzersiz ID; JS'de 58 kayıt ve eşleşmeyen link/ID yok.
 - Dört menü bölümü, yardımcı menü kaldırıldı.
 - Her iki HTML dosyasında ana açılış/kapanış etiket sayıları eşleşti.
@@ -46,7 +46,7 @@ git commit -m "build(css): faz 7 ve 8 derlenmiş panel stilleri"
 npm run check:css
 ```
 
-Gerçek tarayıcıda `modules/panel/dashboard.html` ve `modules/panel/sayfalar.html?page=ecommerce-products` sayfaları açılmalı; light/dark, desktop sidebar collapse, mobile drawer, klavye odak ve tüm grafik/tablo düzenleri kontrol edilmeli.
+Gerçek tarayıcıda `modules/panel/dashboard.html` ve `modules/panel/pages.html?page=ecommerce-products` sayfaları açılmalı; light/dark, desktop sidebar collapse, mobile drawer, klavye odak ve tüm grafik/tablo düzenleri kontrol edilmeli.
 
 ## Sıradaki iş
 
