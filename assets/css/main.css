@@ -1317,11 +1317,11 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
    Density: data-bb-density="compact"
 
    Typography Decision:
-   - 11px = micro only / legal / extreme helper
-   - 12px = tiny helper / id / timestamp
-   - 13px = compact UI / badge / chip / dense table
-   - 15px = body / base content
-   - 16px = comfortable content / support text
+   - 12px = micro only / legal / extreme helper
+   - 13px = tiny helper / id / timestamp
+   - 14px = compact UI / badge / chip / dense table
+   - 16px = body / base content
+   - 17px = comfortable content / support text
    - 18px = lead / strong body / compact card title
    - 20px = card title / section subtitle
    - 24px = section title support
