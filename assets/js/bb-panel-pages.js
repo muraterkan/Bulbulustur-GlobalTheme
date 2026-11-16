@@ -51,6 +51,7 @@
     "ecommerce-products": {title:"Ürünler", group:"e-Ticaret", section:"UYGULAMALAR"},
     "ecommerce-categories": {title:"Kategoriler", group:"e-Ticaret", section:"UYGULAMALAR"},
     "ecommerce-orders": {title:"Siparişler", group:"e-Ticaret", section:"UYGULAMALAR"},
+    "ecommerce-order-details": {title:"Sipariş Detayı", group:"e-Ticaret", section:"UYGULAMALAR"},
     "ecommerce-customers": {title:"Müşteriler", group:"e-Ticaret", section:"UYGULAMALAR"},
     "contacts-list": {title:"Liste", group:"Kişiler", section:"UYGULAMALAR"},
     "support-tickets": {title:"Talepler", group:"Destek Merkezi", section:"UYGULAMALAR"},
