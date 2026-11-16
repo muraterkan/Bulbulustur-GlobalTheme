@@ -19998,3 +19998,155 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
     padding: var(--bb-space-4);
   }
 }
+
+/* Creative authentication layout — alternate auth composition using existing core tokens. */
+.bb-panel.bb-panel-auth-creative {
+  min-height: 100dvh;
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  min-height: 100dvh;
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: calc(var(--bb-space-4) * 2);
+  background: var(--bb-primary);
+  color: var(--bb-primary-inverse);
+  isolation: isolate;
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-brand .material-symbols-outlined { font-size: var(--bb-h4); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-story-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 34rem;
+  margin-block: auto;
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-story-copy h2 {
+  margin: var(--bb-space-4) 0 var(--bb-space-3);
+  color: inherit;
+  font-size: clamp(var(--bb-h2), 5vw, 4rem);
+  line-height: var(--bb-line-height-heading);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-story-copy p {
+  max-width: 28rem;
+  margin: 0;
+  color: color-mix(in srgb, var(--bb-primary-inverse) 78%, transparent);
+  font-size: var(--bb-fs-base);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-shapes span {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary-inverse) 24%, transparent);
+  border-radius: var(--bb-radius-lg);
+  transform: rotate(18deg);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-shapes span:nth-child(1) { width: 42%; aspect-ratio: 1; inset-inline-end: -8%; inset-block-start: 10%; }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-shapes span:nth-child(2) { width: 28%; aspect-ratio: 1; inset-inline-start: 12%; inset-block-end: 8%; transform: rotate(-24deg); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-shapes span:nth-child(3) { width: 18%; aspect-ratio: 1; inset-inline-end: 24%; inset-block-end: 18%; border-radius: var(--bb-radius-pill); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: calc(var(--bb-space-4) * 2);
+  background: var(--bb-surface);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-card {
+  width: min(100%, 34rem);
+  margin: auto;
+  padding: calc(var(--bb-space-4) * 2);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface);
+  box-shadow: var(--bb-shadow-sm);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-card header { margin-bottom: calc(var(--bb-space-4) + var(--bb-space-2)); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-kicker {
+  display: inline-block;
+  margin-bottom: var(--bb-space-2);
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-card h1 {
+  margin: 0 0 var(--bb-space-2);
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h2);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-card header p,
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-switch {
+  margin: 0;
+  color: var(--bb-secondary-color);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-field { margin-bottom: var(--bb-space-3); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: var(--bb-space-3);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-password { position: relative; }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-password .form-control { padding-inline-end: calc(var(--bb-space-4) * 4); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-toggle {
+  position: absolute;
+  inset-inline-end: var(--bb-space-2);
+  inset-block: var(--bb-space-2);
+  border: 0;
+  background: transparent;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  margin-top: var(--bb-space-4);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-row a,
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-switch a,
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-footer a {
+  color: var(--bb-primary-text);
+  text-decoration: none;
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-switch { margin-top: var(--bb-space-4); text-align: center; }
+.bb-panel.bb-panel-auth-creative .bb-panel-auth-result { margin-top: var(--bb-space-4); }
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  padding-top: var(--bb-space-4);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+.bb-panel.bb-panel-auth-creative .bb-creative-auth-footer nav { display: flex; gap: var(--bb-space-3); }
+@media (max-width: 991.98px) {
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-stage { grid-template-columns: 1fr; }
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-story { min-height: 18rem; }
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-story-copy { margin-block: calc(var(--bb-space-4) * 2); }
+}
+@media (max-width: 575.98px) {
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-story,
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-panel,
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-card { padding: var(--bb-space-4); }
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-grid { grid-template-columns: 1fr; gap: 0; }
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-row,
+  .bb-panel.bb-panel-auth-creative .bb-creative-auth-footer { align-items: stretch; flex-direction: column; }
+}
