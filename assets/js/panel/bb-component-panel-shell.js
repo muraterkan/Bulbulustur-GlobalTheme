@@ -21,9 +21,14 @@
       "[data-bb-theme]",
       "[data-bb-theme-btn]",
       "#bbThemeToggle",
+      "#bb_theme_toggle",
+      "#bb_theme_light",
+      "#bb_theme_dark",
       "#bbDensityToggle",
       "#btnThemeLight",
-      "#btnThemeDark"
+      "#btnThemeDark",
+      "#btnLight",
+      "#btnDark"
     ];
 
     selectors.forEach(function (selector) {
