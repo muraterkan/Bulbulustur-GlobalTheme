@@ -65,7 +65,8 @@
 @use "layout/panel-social";         // social feed composition
 @use "layout/panel-widget-lists";   // list widgets showcase
 @use "layout/panel-orders";
-@use "layout/panel-contacts";      // Kişiler demo sayfası         // orders listing
+@use "layout/panel-contacts";      // Kişiler demo sayfası
+@use "layout/panel-administration"; // Roller, yetkiler, abonelik ve fatura detayları
 
 /* 5. Components */
 @use "components/buttons";
