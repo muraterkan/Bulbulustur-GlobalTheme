@@ -194,7 +194,7 @@
           renderComponentSidebar(),
         '</nav>',
       '</div>',
-      '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="../panel/destek-merkezi.html"><span class="material-symbols-outlined" aria-hidden="true">support_agent</span><span>Get Support</span></a></div>',
+      '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="../panel/support-center.html"><span class="material-symbols-outlined" aria-hidden="true">support_agent</span><span>Get Support</span></a></div>',
     '</aside>',
     '<button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close menu" aria-hidden="true" tabindex="-1"></button>',
     '<div class="bb-shell">',
