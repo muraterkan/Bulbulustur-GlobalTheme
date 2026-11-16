@@ -2,6 +2,14 @@
    Bulbulustur Theme - Main Stylesheet
 ===================================== */
 
+/*
+   ARCHITECTURE BOUNDARY
+   - CORE = every import outside PANEL TEMPLATE ONLY blocks.
+   - PANEL = only imports inside PANEL TEMPLATE ONLY blocks.
+   - Panel depends on Core. Core must never depend on Panel.
+   - Two panel blocks are intentional to preserve the existing CSS cascade/order.
+*/
+
 /* 1. Foundation / Tokens */
 
 @use "base/theme";              // light/dark base tokens
@@ -37,6 +45,11 @@
 @use "layout/sidebar";
 @use "layout/toolbar1";
 @use "layout/footer";
+/* ==================================================
+   PANEL TEMPLATE ONLY — BLOCK A: SHELL / PAGE LAYOUTS
+   Optional layer. Core-only projects must exclude this block.
+   Keep import order stable: panel layouts currently compile before core components.
+================================================== */
 @use "layout/panel-shell";         // panel template Faz 1: responsive shell
 @use "layout/panel-sidebar";       // panel template Faz 2: sidebar menüsü
 @use "layout/panel-header";        // panel template Faz 3: topbar
@@ -65,17 +78,26 @@
 @use "layout/panel-social";         // social feed composition
 @use "layout/panel-widget-lists";   // list widgets showcase
 @use "layout/panel-orders";
-@use "layout/panel-contacts";      // Kişiler demo sayfası
-@use "layout/panel-administration"; // Roller, yetkiler, abonelik ve fatura detayları
+@use "layout/panel-contacts";       // kişiler demo sayfası
+@use "layout/panel-administration"; // roller, yetkiler, abonelik ve fatura detayları
+/* END PANEL TEMPLATE ONLY — BLOCK A */
 
-/* 5. Components */
+/* 5. Core Components */
 @use "components/buttons";
 @use "components/cards";
 @use "components/modals";
-@use "components/tables";
-@use "components/charts";
-@use "components/statistics";
-@use "components/team";
+@use "components/tables";         // CORE: reusable rich table patterns
+
+/* ==================================================
+   PANEL TEMPLATE ONLY — BLOCK B: PAGE/WIDGET COMPOSITIONS
+   These files compose core cards/tables/progress/tokens for panel screens.
+   They are not reusable core components.
+================================================== */
+@use "layout/panel-charts";
+@use "layout/panel-statistics";
+@use "layout/panel-team";
+/* END PANEL TEMPLATE ONLY — BLOCK B */
+
 @use "components/empty-state";
 @use "components/accordions";
 @use "components/alerts";
