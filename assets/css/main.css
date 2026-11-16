@@ -18360,6 +18360,5 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-table-card-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--bb-space-3)}
 .bb-table-periods{display:inline-flex;align-items:center;gap:var(--bb-space-1)}
 .bb-table-periods .btn[aria-pressed=true]{--bb-btn-bg:var(--bb-primary-light);--bb-btn-color:var(--bb-primary-text);--bb-btn-hover-bg:var(--bb-primary-light);--bb-btn-hover-color:var(--bb-primary-text)}
-@media (max-width:767.98px){.bb-table-card-toolbar{align-items:stretch;flex-direction:column}.bb-table-periods{align-self:flex-start}}
 
 .bb-table-progress-meter{width:100%;height:var(--bb-space-2);accent-color:var(--bb-primary)}
