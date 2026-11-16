@@ -16,7 +16,7 @@
   -------------------------------------- */
 
   /* Surfaces */
-  --bb-menu-bg: var(--bb-body-bg);
+  --bb-menu-bg: var(--bb-surface-elevated);
   --bb-menu-border-color: var(--bb-border-color);
 
   /* Link colors */
@@ -30,7 +30,7 @@
   --bb-menu-link-here-bg: color-mix(in srgb, var(--bb-primary) 10%, transparent);
 
   /* Typography */
-  --bb-menu-link-font-size: var(--bs-body-font-size, 1rem);
+  --bb-menu-link-font-size: var(--bb-fs-sm);
   --bb-menu-link-font-weight: var(--bb-fw-medium);
   --bb-menu-link-line-height: 1.4;
 
@@ -42,8 +42,8 @@
 
   /* Spacing / radius */
   --bb-menu-gap: 0.25rem;
-  --bb-menu-radius: var(--bb-radius-lg);
-  --bb-menu-link-radius: var(--bb-radius-lg);
+  --bb-menu-radius: var(--bb-radius);
+  --bb-menu-link-radius: var(--bb-radius);
 
   --bb-menu-link-py: 0.65rem;
   --bb-menu-link-px: 0.9rem;
