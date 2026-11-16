@@ -100,8 +100,12 @@
         '<div class="bb-footer-inner">' +
           '<div class="bb-footer-left"><span>2015-2026 ©</span><span>Copyright © 2026</span><a class="bb-footer-brand" href="' + panelPrefix + 'dashboard.html">Bulbulustur</a></div>' +
           '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Yenilikler</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Yardım</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-about">Hakkında</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'integrations.html">Entegrasyon</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-draugr">Draugr</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-posb">PosB</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Changelog</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
           '</nav>' +
         '</div>' +
       '</div>';
