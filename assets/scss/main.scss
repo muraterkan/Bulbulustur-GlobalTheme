@@ -64,7 +64,8 @@
 @use "layout/panel-pricing";        // plan pricing comparison
 @use "layout/panel-social";         // social feed composition
 @use "layout/panel-widget-lists";   // list widgets showcase
-@use "layout/panel-orders";         // orders listing
+@use "layout/panel-orders";
+@use "layout/panel-contacts";      // Kişiler demo sayfası         // orders listing
 
 /* 5. Components */
 @use "components/buttons";
