@@ -1,0 +1,28 @@
+/* Order listing — scoped extension of bb-table, bb-pagination and existing dropdown. */
+.bb-panel .bb-orders-list .bb-card-body{padding:var(--bb-space-4)}
+.bb-panel .bb-orders-filters{display:flex;align-items:end;flex-wrap:wrap;gap:var(--bb-space-3);justify-content:space-between;margin-bottom:var(--bb-space-4)}
+.bb-panel .bb-orders-filters .bb-orders-search{flex:2 1 14rem}
+.bb-panel .bb-orders-filters .bb-orders-date{flex:1 1 12rem}
+.bb-panel .bb-orders-filters .bb-orders-status{flex:1 1 9rem}
+.bb-panel .bb-orders-filter-label{display:block;font-size:var(--bb-fs-xs);color:var(--bb-secondary-color);margin-bottom:var(--bb-space-1)}
+.bb-panel .bb-orders-filter-field{position:relative}
+.bb-panel .bb-orders-filter-field>.material-symbols-outlined{position:absolute;inset-inline-start:var(--bb-space-3);top:50%;transform:translateY(-50%);font-size:var(--bb-fs-base);color:var(--bb-secondary-color);pointer-events:none}
+.bb-panel .bb-orders-filter-field .form-control{padding-inline-start:2.5rem}
+.bb-panel .bb-orders-table-wrap{overflow-x:auto}
+.bb-panel .bb-orders-table{width:100%;min-width:55rem;border-collapse:collapse}
+.bb-panel .bb-orders-table th{font-size:var(--bb-fs-xs);font-weight:var(--bb-fw-medium);color:var(--bb-secondary-color);white-space:nowrap}
+.bb-panel .bb-orders-table th,.bb-panel .bb-orders-table td{padding:var(--bb-space-3);border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color);vertical-align:middle}
+.bb-panel .bb-orders-table tbody tr:last-child td{border-bottom:0}
+.bb-panel .bb-orders-table tbody tr:has(input:checked){background:var(--bb-primary-light)}
+.bb-panel .bb-orders-table .bb-orders-customer{display:flex;align-items:center;gap:var(--bb-space-3);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-orders-customer .bb-symbol{flex:none}
+.bb-panel .bb-orders-customer a,.bb-panel .bb-orders-id{color:var(--bb-body-color);font-weight:var(--bb-fw-medium);text-decoration:none}
+.bb-panel .bb-orders-customer a:hover,.bb-panel .bb-orders-id:hover{color:var(--bb-primary-text)}
+.bb-panel .bb-orders-table td{font-size:var(--bb-fs-sm);white-space:nowrap}
+.bb-panel .bb-orders-table .bb-action-menu{position:relative}
+.bb-panel .bb-orders-bottom{display:flex;justify-content:space-between;align-items:center;gap:var(--bb-space-3);flex-wrap:wrap;margin-top:var(--bb-space-4)}
+.bb-panel .bb-orders-bottom .pagination{margin:0}
+.bb-panel .bb-orders-summary{font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
+.bb-panel .bb-orders-bulk{display:flex;align-items:center;gap:var(--bb-space-3);flex-wrap:wrap;margin-bottom:var(--bb-space-3)}
+.bb-panel .bb-orders-empty[hidden],.bb-panel .bb-orders-notice[hidden]{display:none}
+@media(max-width:575.98px){.bb-panel .bb-orders-filters>.bb-orders-search,.bb-panel .bb-orders-filters>.bb-orders-date,.bb-panel .bb-orders-filters>.bb-orders-status{flex:1 1 100%}.bb-panel .bb-orders-bottom{align-items:stretch}}
