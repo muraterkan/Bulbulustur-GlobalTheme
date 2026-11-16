@@ -31,8 +31,8 @@ function rows(){
 }
 function sync(){
   var option=customer.options[customer.selectedIndex];
-  root.querySelector("[data-bb-sub-customer-name]").textContent=option.dataset.name||"Müşteri seçilmedi";
-  root.querySelector("[data-bb-sub-customer-email]").textContent=option.dataset.email||"";
+  root.querySelectorAll("[data-bb-sub-customer-name]").forEach(function(el){el.textContent=option.dataset.name||"Müşteri seçilmedi";});
+  root.querySelectorAll("[data-bb-sub-customer-email]").forEach(function(el){el.textContent=option.dataset.email||"";});
   var method=root.querySelector('[name="subscriptionPayment"]:checked');
   root.querySelector("[data-bb-sub-payment-summary]").textContent=method?method.dataset.label:"Ödeme yöntemi seçilmedi";
   root.querySelectorAll("[data-bb-sub-payment-detail]").forEach(function(el){el.hidden=!method||el.dataset.bbSubPaymentDetail!==method.value;});
