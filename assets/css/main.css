@@ -24889,3 +24889,355 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }
+
+
+/* Integrations center — panel catalog composition built on core tokens/cards/forms. */
+.bb-panel .bb-integrations-page {
+  padding-bottom: var(--bb-space-6);
+}
+
+.bb-panel .bb-integrations-shell {
+  display: grid;
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-integrations-hero .bb-card-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(18rem, .6fr);
+  gap: var(--bb-space-5);
+  align-items: center;
+}
+
+.bb-panel .bb-integrations-hero-copy {
+  min-width: 0;
+}
+
+.bb-panel .bb-integrations-hero-copy h2 {
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h4);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-integrations-hero-copy p {
+  max-width: 52rem;
+  margin: var(--bb-space-2) 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-integrations-hero-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bb-space-2);
+}
+
+.bb-panel .bb-integrations-meta-card {
+  display: grid;
+  gap: var(--bb-space-1);
+  padding: var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-surface-soft);
+}
+
+.bb-panel .bb-integrations-meta-card strong {
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-lg);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-panel .bb-integrations-meta-card span {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-integrations-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--bb-space-3);
+  align-items: center;
+}
+
+.bb-panel .bb-integrations-search {
+  position: relative;
+  min-width: 0;
+}
+
+.bb-panel .bb-integrations-search .material-symbols-outlined {
+  position: absolute;
+  inset-inline-start: var(--bb-space-3);
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-lg);
+  pointer-events: none;
+}
+
+.bb-panel .bb-integrations-search .form-control {
+  padding-inline-start: calc(var(--bb-space-4) * 2.5);
+}
+
+.bb-panel .bb-integrations-count {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  white-space: nowrap;
+}
+
+.bb-panel .bb-integrations-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-space-2);
+}
+
+.bb-panel .bb-integrations-filter {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-surface-soft);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+  cursor: pointer;
+}
+
+.bb-panel .bb-integrations-filter:hover {
+  border-color: var(--bb-border-color-strong);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-panel .bb-integrations-filter[aria-pressed="true"] {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-integrations-filter .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+}
+
+.bb-panel .bb-integrations-section {
+  display: grid;
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-integrations-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-integrations-section-head h2 {
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h5);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-integrations-section-head p {
+  margin: var(--bb-space-1) 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-integration-card {
+  min-width: 0;
+  overflow: hidden;
+  border-color: var(--bb-border-color);
+  background: var(--bb-surface-elevated);
+  box-shadow: var(--bb-shadow-xs);
+  transition:
+    transform var(--bb-transition-fast),
+    border-color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast);
+}
+
+.bb-panel .bb-integration-card:hover {
+  transform: translateY(calc(var(--bb-border-width) * -2));
+  border-color: var(--bb-border-color-strong);
+  background: var(--bb-surface-soft);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-panel .bb-integration-card .bb-card-body {
+  display: grid;
+  gap: var(--bb-space-4);
+  min-height: 13.5rem;
+}
+
+.bb-panel .bb-integration-card-head {
+  display: grid;
+  grid-template-columns: 5.25rem minmax(0, 1fr) auto;
+  gap: var(--bb-space-3);
+  align-items: center;
+}
+
+.bb-panel .bb-integration-logo {
+  display: grid;
+  place-items: center;
+  width: 5.25rem;
+  height: 5.25rem;
+  overflow: hidden;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-surface-muted);
+}
+
+.bb-panel .bb-integration-logo img {
+  display: block;
+  width: 78%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+.bb-panel .bb-integration-logo-fallback {
+  display: none;
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-panel .bb-integration-logo[data-bb-logo-failed="true"] img {
+  display: none;
+}
+
+.bb-panel .bb-integration-logo[data-bb-logo-failed="true"] .bb-integration-logo-fallback {
+  display: block;
+}
+
+.bb-panel .bb-integration-card-title {
+  min-width: 0;
+}
+
+.bb-panel .bb-integration-card-title strong,
+.bb-panel .bb-integration-card-title small {
+  display: block;
+}
+
+.bb-panel .bb-integration-card-title strong {
+  overflow: hidden;
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bb-panel .bb-integration-card-title small {
+  margin-top: var(--bb-space-1);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-integration-card-action {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--bb-radius-sm);
+  background: transparent;
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-integration-card-action:hover {
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-integration-card-action .material-symbols-outlined {
+  font-size: var(--bb-fs-lg);
+}
+
+.bb-panel .bb-integration-card-copy {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-panel .bb-integration-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-2);
+  margin-top: auto;
+}
+
+.bb-panel .bb-integration-card-foot .bb-badge {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bb-panel .bb-integrations-empty {
+  display: grid;
+  place-items: center;
+  gap: var(--bb-space-2);
+  min-height: 14rem;
+  padding: var(--bb-space-5);
+  border: var(--bb-border-width) dashed var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  color: var(--bb-secondary-color);
+  text-align: center;
+}
+
+.bb-panel .bb-integrations-empty[hidden] {
+  display: none;
+}
+
+.bb-panel .bb-integrations-empty .material-symbols-outlined {
+  font-size: var(--bb-fs-2xl);
+}
+
+.bb-panel .bb-integrations-empty strong {
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+}
+
+@media (max-width: 1199.98px) {
+  .bb-panel .bb-integrations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel .bb-integrations-hero .bb-card-body,
+  .bb-panel .bb-integrations-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-panel .bb-integrations-count {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-panel .bb-integrations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-panel .bb-integration-card-head {
+    grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+  }
+
+  .bb-panel .bb-integration-logo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
