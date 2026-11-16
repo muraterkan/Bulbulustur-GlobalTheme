@@ -50,7 +50,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
               <strong>More Pages</strong>
               <a href="sosyal-akis.html">Social Feed</a>
-              <a href="profil-ayarlar.html">Profile Ayarları</a>
+              <a href="profil-ayarlar.html">Profile Settings</a>
               <a href="istatistikler.html">Statistics</a>
               <a href="grafikler.html">Charts</a>
               <a href="widget-listeleri.html">Widget Lists</a>
@@ -261,7 +261,7 @@ if (messageToggle && messageHost) {
         <strong>Support conversation</strong>
         <small><span class="bb-panel-chat-presence" aria-hidden="true"></span>Online · Demo chat</small>
       </div>
-      <button class="bb-drawer-close" type="button" aria-label="Messagesı kapat" data-bb-chat-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      <button class="bb-drawer-close" type="button" aria-label="Close messages" data-bb-chat-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
     </div>
     <div class="bb-drawer-body" data-bb-chat-history role="log" aria-live="polite" aria-label="Conversation history">
       <div class="bb-panel-chat-message" data-side="in">
@@ -270,7 +270,7 @@ if (messageToggle && messageHost) {
       </div>
       <div class="bb-panel-chat-message" data-side="out">
         <div class="bb-panel-chat-author">You <small>09:18</small></div>
-        <div class="bb-panel-chat-bubble">Panelin new bileşenlerini inceliyorum.</div>
+        <div class="bb-panel-chat-bubble">I am reviewing the new panel components.</div>
       </div>
       <div class="bb-panel-chat-message" data-side="in">
         <div class="bb-panel-chat-author">Support Team <small>09:20</small></div>
@@ -281,7 +281,7 @@ if (messageToggle && messageHost) {
       <label class="visually-hidden" for="bb_chat_text">Your message</label>
       <textarea id="bb_chat_text" class="form-control form-control-solid" data-bb-chat-input rows="2" maxlength="1000" placeholder="Write a message..." required></textarea>
       <div class="bb-panel-chat-compose-actions">
-        <span class="bb-panel-chat-compose-note">Messages sadece bu sayfada görünür.</span>
+        <span class="bb-panel-chat-compose-note">Messages are visible only on this page.</span>
         <button class="btn btn-primary btn-sm" type="submit">Send</button>
       </div>
     </form>
