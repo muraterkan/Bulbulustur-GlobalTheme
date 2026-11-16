@@ -155,29 +155,7 @@
 </main>
 
 <!-- Bootstrap JS -->
-<script>
-  // init popovers
-  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
-    new bootstrap.Popover(el);
-  });
-
-  // theme toggle (demo)
-  (function () {
-    var btn = document.getElementById("bbThemeToggle");
-
-    function getTheme() {
-      return document.documentElement.getAttribute("data-bs-theme");
-    }
-
-    function setTheme(theme) {
-      document.documentElement.setAttribute("data-bs-theme", theme);
-    }
-
-    btn.addEventListener("click", function () {
-      setTheme(getTheme() === "dark" ? "light" : "dark");
-    });
-  })();
-</script>
+  <script src="../../assets/js/core/bb-popover.js"></script>
   <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
