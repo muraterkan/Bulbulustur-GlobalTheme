@@ -14,7 +14,7 @@
   min-width: 0;
   max-width: calc(100vw - 2rem);
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   border-radius: var(--bb-radius-lg);
   background: var(--bb-body-bg);
   box-shadow: var(--bb-shadow-lg, var(--bb-shadow-sm));
@@ -165,10 +165,9 @@
   font-size: var(--bb-fs-base);
 }
 .bb-panel .bb-panel-user-language-menu {
-  position: absolute;
+  position: static;
   z-index: 30;
-  inset-inline: var(--bb-space-3);
-  inset-block-start: calc(100% - var(--bb-space-2));
+  margin-top: var(--bb-space-2);
   padding: var(--bb-space-2);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);

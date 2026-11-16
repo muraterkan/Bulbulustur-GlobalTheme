@@ -59,13 +59,15 @@
     "tiny-slider": "Tiny Slider",
     "toast": "Toast",
     "tooltips": "Tooltips",
-    "typography": "Typography"
+    "typography": "Typography",
+    "tokens": "Core Tokens"
   };
   var title = componentTitles[slug] || slug.replace(/-/g, " ").replace(/\b\w/g, function (char) {
     return char.toUpperCase();
   });
 
   var componentCatalog = [
+    ["tokens.html","Core Tokens"],
     ["accordion.html","Accordion"],["alerts.html","Alerts"],["badges.html","Badges"],["breadcrumb.html","Breadcrumb"],
     ["bullet.html","Bullet"],["buttongroup.html","Button Group"],["buttons.html","Buttons"],["cards.html","Cards"],
     ["carousel.html","Carousel"],["chips.html","Chips"],["collapse.html","Collapse"],["countup.html","Countup"],
@@ -281,7 +283,8 @@
   var directElements = Array.from(demoRoot.children);
   if (directElements.length === 1 &&
       directElements[0].tagName === "DIV" &&
-      !directElements[0].classList.contains("bb-app")) {
+      !directElements[0].classList.contains("bb-app") &&
+      !directElements[0].classList.contains("row")) {
     directElements[0].classList.add("bb-component-showcase-root");
   }
 
@@ -322,6 +325,23 @@
   }
 
   normalizeDemoCards(demoRoot);
+
+  function removeLegacyPageIntro() {
+    var root = demoRoot.querySelector(".bb-component-showcase-root") || demoRoot;
+    var first = root.firstElementChild;
+    if (!first) return;
+
+    if (slug === "ribbons" && first.classList.contains("mb-4")) {
+      first.remove();
+      return;
+    }
+
+    if (slug === "tiny-slider-advanced" && first.querySelector("h4")) {
+      first.remove();
+    }
+  }
+
+  removeLegacyPageIntro();
 
   var pageTitle = app.querySelector(".bb-page-title");
   var breadcrumbCurrent = app.querySelector(".breadcrumb-item.active");
