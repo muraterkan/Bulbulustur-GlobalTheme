@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT-0",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.1.1",
