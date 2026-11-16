@@ -177,8 +177,8 @@
           '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'about.html">Hakkında</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'integrations.html">Entegrasyon</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'draugr.html?view=dashboard">Draugr</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'posb.html?view=dashboard">PosB</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'product-draugr.html">Draugr</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'product-posb.html">PosB</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Changelog</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
           '</nav>' +
