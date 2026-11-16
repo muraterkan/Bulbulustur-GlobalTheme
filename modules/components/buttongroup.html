@@ -276,24 +276,6 @@
 
     </div><!-- /row -->
   </div><!-- /container -->
-
-
-
-  <script>
-    (function () {
-      const btn = document.getElementById("bbThemeToggle");
-      if (!btn) {
-        return;
-      }
-
-      btn.addEventListener("click", function () {
-        const root = document.documentElement;
-        const current = root.getAttribute("data-bs-theme") || "light";
-        const next = current === "light" ? "dark" : "light";
-        root.setAttribute("data-bs-theme", next);
-      });
-    })();
-  </script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
