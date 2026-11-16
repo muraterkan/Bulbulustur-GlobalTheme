@@ -43,8 +43,9 @@ function table(headers, rows) {
     '</tbody></table></div>';
 }
 function note(h, body) {
-  return '<div class="bb-profile-notice"><span class="material-symbols-outlined" aria-hidden="true">warning</span>' +
-    '<div><strong>' + h + '</strong><p>' + body + '</p></div></div>';
+  return '<div class="bb-alert bb-alert-warning" role="alert">' +
+    '<div class="bb-alert-icon" aria-hidden="true"><span class="material-symbols-outlined">warning</span></div>' +
+    '<div class="bb-alert-body"><h3 class="bb-alert-title">' + h + '</h3><div class="bb-alert-text">' + body + '</div></div></div>';
 }
 function metric(label, value, tone) {
   return '<div class="bb-profile-metric"><span>' + label + '</span><strong' + (tone ? ' style="color: var(--bb-' + tone + '-text)"' : '') + '>' + value + '</strong></div>';
