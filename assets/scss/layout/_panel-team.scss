@@ -1,8 +1,8 @@
 /* =====================================
-   Bulbulustur Theme - Panel Corporate Team
-   PANEL TEMPLATE ONLY.
-   Depends on core tokens/components; must not be imported by core-only builds.
+   Bulbulustur Theme - Corporate Team Page
+   Token-first team/culture composition.
 ===================================== */
+// PANEL TEMPLATE ONLY: corporate panel page composition; exclude from core-only builds.
 
 .bb-panel .bb-team-page {
   --bb-team-accent: var(--bb-chart-1);
