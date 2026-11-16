@@ -10,6 +10,7 @@
 .bb-panel .bb-panel-chat-drawer .bb-drawer-header {
   flex: 0 0 auto;
   align-items: center;
+  border-bottom-width: calc(var(--bb-border-width, 1px) * 2);
 }
 .bb-panel .bb-panel-chat-head {
   flex: 1 1 auto;
@@ -56,8 +57,26 @@
   display: flex;
   align-items: center;
   gap: var(--bb-space-2);
+  min-height: 2rem;
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-panel-chat-author-avatar {
+  display: block;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--bb-radius-pill);
+  object-fit: cover;
+  background: var(--bb-surface-muted);
+}
+
+.bb-panel .bb-panel-chat-author-copy {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  min-width: 0;
 }
 .bb-panel .bb-panel-chat-author small {
   color: var(--bb-secondary-color);
@@ -65,7 +84,7 @@
   font-weight: var(--bb-fw-normal);
 }
 .bb-panel .bb-panel-chat-bubble {
-  padding: var(--bb-space-3) var(--bb-space-4);
+  padding: calc(var(--bb-space-3) * 1.2) var(--bb-space-4);
   border-radius: var(--bb-radius);
   background: var(--bb-tertiary-bg);
   color: var(--bb-body-color);
@@ -79,15 +98,18 @@
 }
 .bb-panel .bb-panel-chat-drawer .bb-panel-chat-compose {
   flex: 0 0 auto;
-  padding: var(--bb-space-3) var(--bb-space-4);
-  border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
+  padding: var(--bb-space-4);
+  border-top: calc(var(--bb-border-width, 1px) * 2) solid var(--bb-border-color-strong);
+  background: var(--bb-surface-soft);
 }
 .bb-panel .bb-panel-chat-compose textarea {
   width: 100%;
-  min-height: 4rem;
+  min-height: 4.5rem;
   max-height: 10rem;
   resize: vertical;
   font-size: var(--bb-fs-sm);
+  background: var(--bb-surface-muted);
+  border-color: var(--bb-border-color-strong);
 }
 .bb-panel .bb-panel-chat-compose-actions {
   display: flex;
