@@ -68,6 +68,40 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
+  /* Draugr SaaS channel management: site-specific screens only.
+     Shared product/order/customer master data stays in the common panel menus. */
+  var panelMenu = panel.querySelector("[data-bb-panel-menu]");
+  if (panelMenu && !panelMenu.querySelector("#bb_tree_draugr")) {
+    var applicationsSection = Array.from(panelMenu.querySelectorAll(".bb-menu-section")).find(function (node) {
+      return node.textContent.trim() === "UYGULAMALAR";
+    });
+    var draugrSection = document.createElement("div");
+    draugrSection.className = "bb-menu-section";
+    draugrSection.textContent = "DRAUGR";
+    var draugrMenuItem = document.createElement("div");
+    draugrMenuItem.className = "bb-menu-item";
+    draugrMenuItem.setAttribute("data-bb-menu-trigger", "click");
+    draugrMenuItem.innerHTML =
+      '<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_draugr"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">language</span></span><span class="bb-menu-title">Draugr</span><span class="bb-menu-arrow" aria-hidden="true"></span></button>' +
+      '<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_draugr"><div class="bb-menu-sub-content">' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=dashboard" data-bb-panel-page="draugr-dashboard" data-bb-draugr-view-link="dashboard"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Dashboard</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=storefront" data-bb-panel-page="draugr-storefront" data-bb-draugr-view-link="storefront"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Vitrin</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=navigation" data-bb-panel-page="draugr-navigation" data-bb-draugr-view-link="navigation"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kategoriler & Navigasyon</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=content" data-bb-panel-page="draugr-content" data-bb-draugr-view-link="content"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Sayfalar & İçerik</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=theme" data-bb-panel-page="draugr-theme" data-bb-draugr-view-link="theme"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Tema & Görünüm</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=domain" data-bb-panel-page="draugr-domain" data-bb-draugr-view-link="domain"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Domain & SEO</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=localization" data-bb-panel-page="draugr-localization" data-bb-draugr-view-link="localization"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Dil & Yerelleştirme</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=settings" data-bb-panel-page="draugr-settings" data-bb-draugr-view-link="settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kanal Ayarları</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=subscription" data-bb-panel-page="draugr-subscription" data-bb-draugr-view-link="subscription"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Abonelik</span></a></div>' +
+      '</div></div>';
+    if (applicationsSection) {
+      panelMenu.insertBefore(draugrSection, applicationsSection);
+      panelMenu.insertBefore(draugrMenuItem, applicationsSection);
+    } else {
+      panelMenu.append(draugrSection, draugrMenuItem);
+    }
+  }
+
   /* Shared dashboard catalog extension: keep POS System available on every panel page. */
   var dashboardMenu = panel.querySelector("#bb_tree_dashboard > .bb-menu-sub-content");
   if (dashboardMenu && !dashboardMenu.querySelector("[data-bb-panel-page='dashboard-pos-system']")) {
@@ -102,7 +136,7 @@
           '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'about.html">Hakkında</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'integrations.html">Entegrasyon</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-draugr">Draugr</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'draugr.html?view=dashboard">Draugr</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-posb">PosB</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Changelog</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
