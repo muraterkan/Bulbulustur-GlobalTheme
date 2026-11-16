@@ -11,6 +11,7 @@
 .bb-panel .bb-product-tabs button[aria-selected="true"]{color:var(--bb-primary-text);border-bottom-color:var(--bb-primary)}
 .bb-panel .bb-product-tabs button:focus-visible,.bb-panel .bb-product-upload:focus-within{outline:var(--bb-focus-ring-width) solid var(--bb-primary);outline-offset:2px}
 .bb-panel .bb-product-pane[hidden],.bb-panel .bb-product-preview[hidden],.bb-panel .bb-product-result[hidden]{display:none}
+.bb-panel [data-bb-product-discount-value][hidden]{display:none}
 .bb-panel .bb-product-upload{display:flex;align-items:center;gap:var(--bb-space-4);padding:var(--bb-space-4);border:var(--bb-border-width,1px) dashed var(--bb-primary);border-radius:var(--bb-radius);background:var(--bb-primary-light);cursor:pointer}
 .bb-panel .bb-product-upload[data-dragover="true"]{background:var(--bb-tertiary-bg)}
 .bb-panel .bb-product-upload>.material-symbols-outlined{color:var(--bb-primary-text);font-size:var(--bb-h3)}
