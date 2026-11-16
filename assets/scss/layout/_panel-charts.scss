@@ -1,8 +1,8 @@
 /* =====================================
-   Bulbulustur Theme - Panel Charts
-   PANEL TEMPLATE ONLY.
-   Depends on core tokens/components; must not be imported by core-only builds.
+   Bulbulustur Theme - Charts
+   Chart.js host/layout only. All visual colors come from DataViz tokens.
 ===================================== */
+// PANEL TEMPLATE ONLY: uses core tokens/components; exclude from core-only builds.
 
 .bb-panel .bb-chart-showcase {
   --bb-chart-card-min-height: calc(var(--bb-space-4) * 24);
