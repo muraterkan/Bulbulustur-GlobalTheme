@@ -1364,7 +1364,7 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
      Modern baseline.
      Do not upscale html beyond 16px globally.
   ------------------------------------- */
-  --bb-root-font-size: var(--bb-fs-base);
+  --bb-root-font-size: 1rem;
   /* -------------------------------------
      Font Size Scale
   ------------------------------------- */
