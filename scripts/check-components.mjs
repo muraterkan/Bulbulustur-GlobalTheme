@@ -34,6 +34,7 @@ report("Component catalog inventory (" + pages.length + " pages, " + catalogPage
 const refIssues = [];
 const adapterIssues = [];
 const idIssues = [];
+const duplicateScriptIssues = [];
 const jsPaths = new Set();
 
 for (const name of pages) {
@@ -44,6 +45,13 @@ for (const name of pages) {
   if (adapterCount !== 1) adapterIssues.push(name + ": adapter count=" + adapterCount);
   if (/assets\/js\/(?!core\/|panel\/)[^"'\s]+\.js/.test(source)) {
     adapterIssues.push(name + ": loose assets/js reference");
+  }
+
+  const scriptSources = [...source.matchAll(/<script[^>]*\ssrc="([^"]+)"/gi)].map((m) => m[1]);
+  const seenScriptSources = new Set();
+  for (const src of scriptSources) {
+    if (seenScriptSources.has(src)) duplicateScriptIssues.push(name + ": duplicate script src=" + src);
+    seenScriptSources.add(src);
   }
 
   const ids = [...source.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
@@ -73,6 +81,7 @@ for (const name of pages) {
 report("Component catalog adapter (" + pages.length + " pages)", adapterIssues);
 report("Component HTML local references", refIssues);
 report("Component HTML duplicate IDs", idIssues);
+report("Component HTML duplicate script sources", duplicateScriptIssues);
 
 const syntaxIssues = [];
 for (const path of jsPaths) {
