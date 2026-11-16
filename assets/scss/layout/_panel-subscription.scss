@@ -1,0 +1,41 @@
+/* Subscription details — GlobalTheme card, form, table and semantic tokens. */
+.bb-panel .bb-subscription-layout{display:grid;grid-template-columns:minmax(0,2.25fr) minmax(17rem,1fr);align-items:start;gap:var(--bb-panel-content-gap)}
+.bb-panel .bb-subscription-main{display:grid;gap:var(--bb-panel-content-gap);min-width:0}
+.bb-panel .bb-subscription-summary{position:sticky;top:var(--bb-space-4);min-width:0}
+.bb-panel .bb-subscription-card .bb-card-body{padding:var(--bb-space-4)}
+.bb-panel .bb-subscription-customer{display:flex;align-items:center;gap:var(--bb-space-3);margin-block:var(--bb-space-3)}
+.bb-panel .bb-subscription-customer .bb-symbol{flex:none}
+.bb-panel .bb-subscription-customer strong,.bb-panel .bb-subscription-method strong{display:block;color:var(--bb-emphasis-color);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-subscription-customer small,.bb-panel .bb-subscription-method small{display:block;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-subscription-notice{border:var(--bb-border-width,1px) dashed var(--bb-primary);border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);padding:var(--bb-space-4);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-subscription-notice p{color:var(--bb-secondary-color);margin:var(--bb-space-1) 0 0}
+.bb-panel .bb-subscription-table-wrap{overflow-x:auto}
+.bb-panel .bb-subscription-table{width:100%;font-size:var(--bb-fs-sm)}
+.bb-panel .bb-subscription-table th{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs);font-weight:var(--bb-fw-medium);white-space:nowrap}
+.bb-panel .bb-subscription-table th,.bb-panel .bb-subscription-table td{padding:var(--bb-space-3);vertical-align:middle;border-bottom:var(--bb-border-width,1px) solid var(--bb-border-color)}
+.bb-panel .bb-subscription-table tr:last-child td{border-bottom:0}
+.bb-panel .bb-subscription-table button{display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;border-radius:var(--bb-radius);color:var(--bb-secondary-color);padding:var(--bb-space-2)}
+.bb-panel .bb-subscription-table button:hover{color:var(--bb-danger-text);background:var(--bb-tertiary-bg)}
+.bb-panel .bb-subscription-method{display:flex;align-items:center;gap:var(--bb-space-3);padding:var(--bb-space-3) 0;border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color)}
+.bb-panel .bb-subscription-method:last-child{border-bottom:0}
+.bb-panel .bb-subscription-method input{flex:none}
+.bb-panel .bb-subscription-method-info{flex:1;min-width:0}
+.bb-panel .bb-subscription-method .material-symbols-outlined{color:var(--bb-primary-text);font-size:var(--bb-fs-lg)}
+.bb-panel .bb-subscription-payment-detail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bb-space-3);padding:var(--bb-space-3) 0 var(--bb-space-4);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-subscription-payment-detail dt{color:var(--bb-secondary-color)}
+.bb-panel .bb-subscription-payment-detail dd{margin:0;overflow-wrap:anywhere}
+.bb-panel .bb-subscription-custom-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:var(--bb-space-2);margin-bottom:var(--bb-space-2);align-items:center}
+.bb-panel .bb-subscription-option{padding:var(--bb-space-4);border:var(--bb-border-width,1px) dashed var(--bb-border-color);border-radius:var(--bb-radius)}
+.bb-panel .bb-subscription-option .form-check-label{font-size:var(--bb-fs-sm)}
+.bb-panel .bb-subscription-summary-block{border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color);padding-bottom:var(--bb-space-4);margin-bottom:var(--bb-space-4)}
+.bb-panel .bb-subscription-summary-block:last-of-type{border-bottom:0}
+.bb-panel .bb-subscription-summary-block h3{font-size:var(--bb-fs-sm);font-weight:var(--bb-fw-semibold);color:var(--bb-emphasis-color)}
+.bb-panel .bb-subscription-summary-block p{font-size:var(--bb-fs-sm);margin:var(--bb-space-1) 0;color:var(--bb-body-color)}
+.bb-panel .bb-subscription-summary-block small{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-subscription-summary-total{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-2);margin-bottom:var(--bb-space-3);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-subscription-summary-total strong{font-size:var(--bb-fs-lg)}
+.bb-panel .bb-subscription-summary .btn{width:100%}
+.bb-panel .bb-subscription-aux{font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
+.bb-panel .bb-subscription-empty[hidden],.bb-panel .bb-subscription-result[hidden]{display:none}
+@media(max-width:991.98px){.bb-panel .bb-subscription-layout{grid-template-columns:1fr}.bb-panel .bb-subscription-summary{position:static}}
+@media(max-width:575.98px){.bb-panel .bb-subscription-payment-detail{grid-template-columns:1fr}.bb-panel .bb-subscription-custom-row{grid-template-columns:1fr 1fr}.bb-panel .bb-subscription-custom-row button{grid-column:1/-1;justify-self:end}}
