@@ -36,10 +36,19 @@ var orderTitle=root.querySelector("[data-bb-channel-order-title]");
 var filters=Array.from(root.querySelectorAll("[data-bb-channel-filter]"));
 var selectedOrderChannel=null;
 
+document.addEventListener("error",function(event){
+ var img=event.target;
+ if(!img || !img.matches || !img.matches("[data-bb-channel-logo-img]"))return;
+ var host=img.parentElement;
+ if(!host)return;
+ img.remove();
+ host.innerHTML='<span class="material-symbols-outlined" aria-hidden="true">hub</span>';
+},true);
+
 function channelById(id){return channels.find(function(c){return c.id===Number(id);});}
 function logoMarkup(c,small){
  var cls=small?"bb-channel-order-logo":"bb-channel-logo";
- if(c.logo)return '<span class="'+cls+'"><img src="../../assets/media/integrators/'+c.logo+'" alt="'+c.name+'" onerror="this.remove();this.parentElement.innerHTML=\'<span class=&quot;material-symbols-outlined&quot;>hub</span>\'"></span>';
+ if(c.logo)return '<span class="'+cls+'"><img src="../../assets/media/integrators/'+c.logo+'" alt="'+c.name+'" data-bb-channel-logo-img></span>';
  return '<span class="'+cls+'"><span class="material-symbols-outlined" aria-hidden="true">'+(c.icon||"hub")+'</span></span>';
 }
 function healthLabel(h){return h==="healthy"?"Sağlıklı":h==="warning"?"Gecikme":"Bağlantı Yok";}
