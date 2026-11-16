@@ -9,17 +9,17 @@
 
 .bb-dropdown-menu {
   /* local tokens (override edilebilir) */
-  --bb-dd-bg: var(--bb-body-bg);
+  --bb-dd-bg: var(--bb-surface-elevated);
   --bb-dd-border: var(--bb-border-color);
   --bb-dd-shadow: var(--bb-shadow-sm);
-  --bb-dd-radius: var(--bb-radius-lg);
+  --bb-dd-radius: var(--bb-radius);
 
   --bb-dd-minw: 14rem;
 
   --bb-dd-pad-x: 0.5rem;
   --bb-dd-pad-y: 0.5rem;
 
-  --bb-dd-item-radius: var(--bb-radius);
+  --bb-dd-item-radius: var(--bb-radius-sm);
   --bb-dd-item-px: 0.75rem;
   --bb-dd-item-py: 0.55rem;
 
@@ -48,6 +48,7 @@
 
   --bs-dropdown-header-color: var(--bb-dd-header-color);
   --bs-dropdown-divider-bg: var(--bb-dd-divider);
+  --bs-dropdown-font-size: var(--bb-fs-xs);
 
   /* polish */
   border-width: var(--bb-border-width, 1px);
@@ -113,6 +114,7 @@
   border-radius: var(--bb-dd-item-radius, var(--bb-radius));
   padding: var(--bb-dd-item-py, 0.55rem) var(--bb-dd-item-px, 0.75rem);
 
+  font-size: var(--bb-fs-xs);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -219,14 +221,14 @@
   --bb-dd-item-px: var(--bb-space-3);
   --bb-dd-item-py: var(--bb-space-3);
   z-index: var(--bb-z-dropdown, 1050);
-  font-size: var(--bb-fs-sm);
+  font-size: var(--bb-fs-xs);
 }
 .bb-action-menu .bb-action-menu-list .dropdown-header {
-  font-size: var(--bb-fs-xs);
+  font-size: var(--bb-fs-2xs);
   font-weight: var(--bb-fw-medium);
 }
 .bb-action-menu .bb-action-menu-list .dropdown-item {
-  font-size: var(--bb-fs-sm);
+  font-size: var(--bb-fs-xs);
   line-height: var(--bb-line-height-heading);
 }
 .bb-action-menu .bb-action-menu-has-arrow {
