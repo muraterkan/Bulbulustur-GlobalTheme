@@ -68,6 +68,15 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
+  /* Channel Registry dashboard: one list for owned and connected sales channels. */
+  var channelDashboardMenu = panel.querySelector("#bb_tree_dashboard .bb-menu-sub-content");
+  if (channelDashboardMenu && !channelDashboardMenu.querySelector("[data-bb-panel-page='dashboard-channels']")) {
+    var channelDashboardItem = document.createElement("div");
+    channelDashboardItem.className = "bb-menu-item";
+    channelDashboardItem.innerHTML = '<a class="bb-menu-link" href="channels.html" data-bb-panel-page="dashboard-channels"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kanallar</span></a>';
+    channelDashboardMenu.appendChild(channelDashboardItem);
+  }
+
   /* Draugr SaaS channel management: site-specific screens only.
      Shared product/order/customer master data stays in the common panel menus. */
   var panelMenu = panel.querySelector("[data-bb-panel-menu]");
