@@ -52,7 +52,6 @@
     "utility-404": {title:"404", group:"Yardımcı Sayfalar", section:"SAYFALAR"},
     "utility-500": {title:"500", group:"Yardımcı Sayfalar", section:"SAYFALAR"},
     "utility-maintenance": {title:"Bakım", group:"Yardımcı Sayfalar", section:"SAYFALAR"},
-    "widgets-statistics": {title:"İstatistikler", group:"Widget'lar", section:"SAYFALAR"},
     "widgets-tables": {title:"Tablolar", group:"Widget'lar", section:"SAYFALAR"},
     "widgets-lists": {title:"Listeler", group:"Widget'lar", section:"SAYFALAR"},
     "projects-list": {title:"Liste", group:"Projeler", section:"UYGULAMALAR"},
