@@ -34,6 +34,21 @@ const misplacedPanelScss = allScss.filter((path) => /[\\/]_panel-[^\\/]+\.scss$/
 if (misplacedPanelScss.length) fail("panel SCSS lives only in layout/panel", misplacedPanelScss.map(rel));
 else pass("panel SCSS lives only in layout/panel");
 
+const webOnlyName = /^_?(?:hero|home(?:page)?|category|product|cart|basket|checkout)(?:[-_.]|$)/i;
+const componentScssRoot = resolve(scssRoot, "components");
+const webOnlyCoreScss = existsSync(componentScssRoot)
+  ? walk(componentScssRoot).filter((path) => path.endsWith(".scss") && webOnlyName.test(path.split(sep).pop()))
+  : [];
+if (webOnlyCoreScss.length) fail("core components contain no customer-site compositions", webOnlyCoreScss.map(rel));
+else pass("core components contain no customer-site compositions");
+
+const componentDemoRoot = resolve(root, "modules/components");
+const webOnlyComponentDemos = existsSync(componentDemoRoot)
+  ? readdirSync(componentDemoRoot).filter((name) => name.endsWith(".html") && webOnlyName.test(name))
+  : [];
+if (webOnlyComponentDemos.length) fail("component catalog contains no customer-site demos", webOnlyComponentDemos);
+else pass("component catalog contains no customer-site demos");
+
 const main = readFileSync(resolve(scssRoot, "main.scss"), "utf8");
 const panelImportMatches = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'];/g)]
   .map((m) => ({ name: m[1], index: m.index }));
