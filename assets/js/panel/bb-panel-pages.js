@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","dashboard-pos-system":"pos-system.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"footer-draugr":"draugr.html?view=dashboard","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","dashboard-pos-system":"pos-system.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -21,6 +21,15 @@
     "footer-integrations": {title:"Entegrasyon Merkezi", group:"Ekosistem", section:"PAGES"},
     "footer-draugr": {title:"Draugr", group:"Ekosistem", section:"PAGES"},
     "footer-posb": {title:"PosB", group:"Ekosistem", section:"PAGES"},
+    "draugr-dashboard": {title:"Dashboard", group:"Draugr", section:"DRAUGR"},
+    "draugr-storefront": {title:"Vitrin", group:"Draugr", section:"DRAUGR"},
+    "draugr-navigation": {title:"Kategoriler & Navigasyon", group:"Draugr", section:"DRAUGR"},
+    "draugr-content": {title:"Sayfalar & İçerik", group:"Draugr", section:"DRAUGR"},
+    "draugr-theme": {title:"Tema & Görünüm", group:"Draugr", section:"DRAUGR"},
+    "draugr-domain": {title:"Domain & SEO", group:"Draugr", section:"DRAUGR"},
+    "draugr-localization": {title:"Dil & Yerelleştirme", group:"Draugr", section:"DRAUGR"},
+    "draugr-settings": {title:"Kanal Ayarları", group:"Draugr", section:"DRAUGR"},
+    "draugr-subscription": {title:"Abonelik", group:"Draugr", section:"DRAUGR"},
     "profile-overview": {title:"Overview", group:"User Profile", section:"PAGES"},
     "profile-projects": {title:"Projects", group:"User Profile", section:"PAGES"},
     "profile-campaigns": {title:"Campaigns", group:"User Profile", section:"PAGES"},
@@ -85,6 +94,10 @@
     "layout-auth": {title:"Authentication", group:"Layouts", section:"LAYOUTS"},
   };
   var id = new URLSearchParams(window.location.search).get("page") || panel.getAttribute("data-bb-panel-default-page") || "dashboard-overview";
+  if (/\/draugr\.html$/.test(window.location.pathname)) {
+    var draugrView = new URLSearchParams(window.location.search).get("view") || "dashboard";
+    id = "draugr-" + draugrView;
+  }
   var selected = Object.prototype.hasOwnProperty.call(pages, id) ? pages[id] : null;
   var title = selected ? selected.title : "Page Templates";
   var heading = selected ? selected.group + " / " + selected.title : "Page Templates";
