@@ -154,7 +154,7 @@
 .bb-panel .bb-profile-completion { width: min(19rem, 100%); }
 .bb-panel .bb-profile-completion-line { display: flex; justify-content: space-between; gap: var(--bb-space-3); margin-bottom: var(--bb-space-2); font-size: var(--bb-fs-xs); color: var(--bb-secondary-color); }
 .bb-panel .bb-profile-completion-line strong { color: var(--bb-emphasis-color); }
-.bb-panel .bb-profile-completion-track { height: var(--bb-space-1); border-radius: var(--bb-radius-pill); background: var(--bb-tertiary-bg); overflow: hidden; }
+.bb-panel .bb-profile-completion-track { height: 0.3333rem; border-radius: var(--bb-radius-pill); background: var(--bb-tertiary-bg); overflow: hidden; }
 .bb-panel .bb-profile-completion-track > span { display: block; width: 50%; height: 100%; border-radius: inherit; background: var(--bb-success); }
 .bb-panel .bb-profile-tabs {
   display: flex;
@@ -198,13 +198,10 @@
 }
 .bb-panel .bb-profile-metric span { display: block; font-size: var(--bb-fs-sm); color: var(--bb-secondary-color); }
 .bb-panel .bb-profile-metric strong { display: block; font-size: var(--bb-h3); color: var(--bb-emphasis-color); }
-.bb-panel .bb-profile-notice { display: flex; align-items: start; gap: var(--bb-space-3); padding: var(--bb-space-4); border: var(--bb-border-width,1px) dashed var(--bb-warning); border-radius: var(--bb-radius); background: var(--bb-tertiary-bg); }
-.bb-panel .bb-profile-notice .material-symbols-outlined { color: var(--bb-warning-text); }
-.bb-panel .bb-profile-notice p { margin: 0; color: var(--bb-secondary-color); }
 .bb-panel .bb-profile-activity-bars { display: flex; height: 13rem; align-items: end; justify-content: space-around; gap: var(--bb-space-3); border-bottom: var(--bb-border-width,1px) solid var(--bb-border-color); }
 .bb-panel .bb-profile-activity-bars > div { flex: 1; max-width: 2rem; height: var(--bar-height); border-radius: var(--bb-radius) var(--bb-radius) 0 0; background: var(--bb-chart-1); }
 .bb-panel .bb-profile-activity-labels { display: flex; justify-content: space-around; gap: var(--bb-space-2); margin-top: var(--bb-space-2); color: var(--bb-secondary-color); font-size: var(--bb-fs-xs); }
-.bb-panel .bb-profile-plan-usage { height: var(--bb-space-2); overflow: hidden; border-radius: var(--bb-radius-pill); background: var(--bb-tertiary-bg); }
+.bb-panel .bb-profile-plan-usage { height: 0.6667rem; overflow: hidden; border-radius: var(--bb-radius-pill); background: var(--bb-tertiary-bg); }
 .bb-panel .bb-profile-plan-usage > span { display: block; width: 86%; height: 100%; background: var(--bb-primary); }
 .bb-panel .bb-profile-method { display: flex; align-items: center; gap: var(--bb-space-3); padding: var(--bb-space-4); border: var(--bb-border-width,1px) dashed var(--bb-border-color); border-radius: var(--bb-radius); }
 .bb-panel .bb-profile-method > .material-symbols-outlined { color: var(--bb-primary-text); font-size: var(--bb-h4); }
