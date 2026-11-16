@@ -1,22 +1,144 @@
-/* Faz 4 — user menu theme control; uses the existing panel theme toggle. */
+/* Shared panel/component user preferences: explicit appearance + language menu. */
 (function () {
   "use strict";
-  var button = document.getElementById("bb_panel_user_theme");
-  var themeToggle = document.getElementById("bb_panel_theme_toggle");
-  if (!button || !themeToggle) return;
-  var label = button.querySelector("[data-bb-panel-user-mode-text]");
-  var icon = button.querySelector("[data-bb-panel-user-mode-icon]");
 
-  function sync() {
-    var dark = document.documentElement.getAttribute("data-bs-theme") === "dark";
-    if (label) label.textContent = dark ? "Dark" : "Light";
-    if (icon) icon.textContent = dark ? "dark_mode" : "light_mode";
-    button.setAttribute("aria-label", dark ? "Appearance: dark theme; switch to light" : "Appearance: light theme; switch to dark");
+  var STORAGE_THEME = "bb-panel-theme";
+  var STORAGE_LANGUAGE = "bb-panel-language";
+  var html = document.documentElement;
+  var menu = document.querySelector(".bb-panel-user-menu");
+  if (!menu) return;
+
+  var languages = [
+    { code: "tr", label: "Türkçe", flag: "🇹🇷" },
+    { code: "en", label: "English", flag: "🇺🇸" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "de", label: "Deutsch", flag: "🇩🇪" },
+    { code: "ja", label: "日本語", flag: "🇯🇵" },
+    { code: "fr", label: "Français", flag: "🇫🇷" }
+  ];
+
+  function getStored(key, fallback) {
+    try { return window.localStorage.getItem(key) || fallback; }
+    catch (_) { return fallback; }
   }
 
-  button.addEventListener("click", function () {
-    themeToggle.click();
+  function setStored(key, value) {
+    try { window.localStorage.setItem(key, value); }
+    catch (_) { /* Storage may be unavailable. */ }
+  }
+
+  function applyTheme(value) {
+    var next = value === "dark" ? "dark" : "light";
+    html.setAttribute("data-bs-theme", next);
+    setStored(STORAGE_THEME, next);
+    document.dispatchEvent(new CustomEvent("bb:panel-theme-change", { detail: { theme: next } }));
+    syncTheme();
+  }
+
+  function currentLanguage() {
+    var code = getStored(STORAGE_LANGUAGE, "tr");
+    return languages.some(function (item) { return item.code === code; }) ? code : "tr";
+  }
+
+  function currentLanguageItem() {
+    var code = currentLanguage();
+    return languages.find(function (item) { return item.code === code; }) || languages[0];
+  }
+
+  var legacyTheme = menu.querySelector("#bb_panel_user_theme");
+  var preferenceGroup = legacyTheme ? legacyTheme.closest(".bb-panel-user-group") : menu.querySelector(".bb-panel-user-group:last-child");
+  if (!preferenceGroup) {
+    preferenceGroup = document.createElement("div");
+    preferenceGroup.className = "bb-panel-user-group";
+    menu.appendChild(preferenceGroup);
+  }
+
+  preferenceGroup.querySelectorAll("#bb_panel_user_theme").forEach(function (node) { node.remove(); });
+  Array.from(preferenceGroup.children).forEach(function (node) {
+    if ((node.textContent || "").trim().startsWith("Dil")) node.remove();
   });
-  document.addEventListener("bb:panel-theme-change", sync);
-  sync();
+
+  var appearance = document.createElement("div");
+  appearance.className = "bb-panel-user-preference";
+  appearance.innerHTML =
+    '<span class="bb-panel-user-preference-label">Görünüm</span>' +
+    '<div class="bb-panel-user-theme-choices" role="group" aria-label="Tema seçimi">' +
+      '<button type="button" data-bb-theme-choice="light"><span class="material-symbols-outlined" aria-hidden="true">light_mode</span>Açık</button>' +
+      '<button type="button" data-bb-theme-choice="dark"><span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>Koyu</button>' +
+    '</div>';
+
+  var language = document.createElement("div");
+  language.className = "bb-panel-user-language";
+  language.innerHTML =
+    '<button class="bb-panel-user-language-toggle" type="button" aria-expanded="false" aria-controls="bb_panel_language_menu">' +
+      '<span class="bb-panel-user-preference-label">Dil</span>' +
+      '<span class="bb-panel-user-language-current" data-bb-language-current></span>' +
+      '<span class="material-symbols-outlined" aria-hidden="true">expand_more</span>' +
+    '</button>' +
+    '<div class="bb-panel-user-language-menu" id="bb_panel_language_menu" hidden></div>';
+
+  preferenceGroup.prepend(language);
+  preferenceGroup.prepend(appearance);
+
+  var languageMenu = language.querySelector(".bb-panel-user-language-menu");
+  languages.forEach(function (item) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "bb-panel-user-language-option";
+    button.dataset.bbLanguage = item.code;
+    button.innerHTML = '<span class="bb-panel-language-flag" aria-hidden="true">' + item.flag + '</span><span>' + item.label + '</span><span class="material-symbols-outlined bb-panel-language-check" aria-hidden="true">check</span>';
+    languageMenu.appendChild(button);
+  });
+
+  function syncTheme() {
+    var current = html.getAttribute("data-bs-theme") === "dark" ? "dark" : "light";
+    menu.querySelectorAll("[data-bb-theme-choice]").forEach(function (button) {
+      var active = button.dataset.bbThemeChoice === current;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  function syncLanguage() {
+    var selected = currentLanguageItem();
+    var current = language.querySelector("[data-bb-language-current]");
+    if (current) current.textContent = selected.flag + " " + selected.label;
+    languageMenu.querySelectorAll("[data-bb-language]").forEach(function (button) {
+      var active = button.dataset.bbLanguage === selected.code;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-current", active ? "true" : "false");
+    });
+  }
+
+  appearance.querySelectorAll("[data-bb-theme-choice]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      applyTheme(button.dataset.bbThemeChoice);
+    });
+  });
+
+  var languageToggle = language.querySelector(".bb-panel-user-language-toggle");
+  languageToggle.addEventListener("click", function () {
+    var open = languageToggle.getAttribute("aria-expanded") === "true";
+    languageToggle.setAttribute("aria-expanded", String(!open));
+    languageMenu.hidden = open;
+  });
+
+  languageMenu.addEventListener("click", function (event) {
+    var button = event.target.closest("[data-bb-language]");
+    if (!button) return;
+    setStored(STORAGE_LANGUAGE, button.dataset.bbLanguage);
+    syncLanguage();
+    languageMenu.hidden = true;
+    languageToggle.setAttribute("aria-expanded", "false");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (language.contains(event.target)) return;
+    languageMenu.hidden = true;
+    languageToggle.setAttribute("aria-expanded", "false");
+  });
+
+  document.addEventListener("bb:panel-theme-change", syncTheme);
+  syncTheme();
+  syncLanguage();
 })();
