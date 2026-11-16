@@ -50,7 +50,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
               <strong>Daha Fazla Sayfa</strong>
               <a href="sosyal-akis.html">Sosyal Akış</a>
-              <a href="destek-merkezi.html">Destek Merkezi</a>
+              <a href="profil-ayarlar.html">Profil Ayarları</a>
               <a href="istatistikler.html">İstatistikler</a>
               <a href="grafikler.html">Grafikler</a>
               <a href="widget-listeleri.html">Widget Listeleri</a>
