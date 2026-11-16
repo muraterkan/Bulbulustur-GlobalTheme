@@ -56,20 +56,51 @@
 
   search.addEventListener("input", applyFilter);
 
-  root.querySelectorAll("[data-bb-integration-action]").forEach(function (button) {
+  var setupDrawer = document.getElementById("bb_integration_setup_drawer");
+  var setupName = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-name]");
+  var setupType = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-type]");
+  var setupLogo = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-logo]");
+  var setupStatus = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-status]");
+  var setupForm = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-form]");
+
+  root.querySelectorAll("[data-bb-integration-start]").forEach(function (button) {
     button.addEventListener("click", function () {
       var card = button.closest("[data-bb-integration-card]");
-      if (!card) return;
+      if (!card || !setupDrawer) return;
       var name = card.dataset.integrationName;
-      var previous = button.innerHTML;
-      button.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">check</span>';
-      button.setAttribute("aria-label", name + " seçildi");
-      window.setTimeout(function () {
-        button.innerHTML = previous;
-        button.setAttribute("aria-label", name + " seçenekleri");
-      }, 900);
+      var type = card.querySelector(".bb-integration-card-title small")?.textContent || "Entegrasyon";
+      var sourceImg = card.querySelector(".bb-integration-logo img");
+      var targetImg = setupLogo?.querySelector("img");
+      var fallback = setupLogo?.querySelector(".bb-integration-logo-fallback");
+
+      if (setupName) setupName.textContent = name;
+      if (setupType) setupType.textContent = type + " · Bağlantı ayarları";
+      if (targetImg && sourceImg) {
+        targetImg.src = sourceImg.src;
+        targetImg.alt = name;
+      }
+      if (fallback) fallback.textContent = name.charAt(0);
+      if (setupLogo) setupLogo.removeAttribute("data-bb-logo-failed");
+      if (setupStatus) setupStatus.textContent = "";
+      if (setupForm) setupForm.reset();
+      window.BBDrawer.open("#bb_integration_setup_drawer");
     });
   });
+
+  if (setupLogo) {
+    var setupImg = setupLogo.querySelector("img");
+    if (setupImg) setupImg.addEventListener("error", function () {
+      setupLogo.setAttribute("data-bb-logo-failed", "true");
+    });
+  }
+
+  if (setupForm) {
+    setupForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!setupForm.reportValidity()) return;
+      if (setupStatus) setupStatus.textContent = (setupName?.textContent || "Entegrasyon") + " için demo bağlantı isteği hazırlandı.";
+    });
+  }
 
   applyFilter();
 }());
