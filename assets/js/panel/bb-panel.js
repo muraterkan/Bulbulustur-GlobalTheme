@@ -81,15 +81,18 @@
   /* Shared compact footer inspired by the reference template. */
   var footer = panel.querySelector(".bb-shell-footer");
   if (footer) {
+    var componentContext = (window.location.pathname || "").indexOf("/modules/components/") !== -1;
+    var panelPrefix = componentContext ? "../panel/" : "";
+    var componentPrefix = componentContext ? "" : "../components/";
     footer.classList.add("bb-panel-template-footer");
     footer.innerHTML =
       '<div class="bb-footer-bar">' +
         '<div class="bb-footer-inner">' +
-          '<div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a></div>' +
+          '<div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="' + panelPrefix + 'dashboard.html">Bulbulustur</a></div>' +
           '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
-            '<a class="bb-footer-link" href="pages.html?page=corporate-about">Hakkımızda</a>' +
-            '<a class="bb-footer-link" href="support-center.html">Destek</a>' +
-            '<a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=corporate-about">Hakkımızda</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
+            '<a class="bb-footer-link" href="' + componentPrefix + 'cards.html">Bileşenler</a>' +
           '</nav>' +
         '</div>' +
       '</div>';
