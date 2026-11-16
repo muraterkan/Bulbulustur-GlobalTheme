@@ -74,7 +74,7 @@
     var logoMark = document.createElement("span");
     logoMark.className = "bb-template-logo-mark";
     logoMark.setAttribute("aria-hidden", "true");
-    logoMark.innerHTML = '<img src="../../assets/media/template-logo.svg" alt="">';
+    logoMark.innerHTML = '<img src="../../assets/media/logos/logo-light.png" alt="">';
     sidebarLogo.prepend(logoMark);
   }
 
@@ -88,11 +88,10 @@
     footer.innerHTML =
       '<div class="bb-footer-bar">' +
         '<div class="bb-footer-inner">' +
-          '<div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="' + panelPrefix + 'dashboard.html">Bulbulustur</a></div>' +
+          '<div class="bb-footer-left"><span>2015-2026 ©</span><span>Copyright © 2026</span><a class="bb-footer-brand" href="' + panelPrefix + 'dashboard.html">Bulbulustur</a></div>' +
           '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=corporate-about">Hakkımızda</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
-            '<a class="bb-footer-link" href="' + componentPrefix + 'cards.html">Bileşenler</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Yenilikler</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Yardım</a>' +
           '</nav>' +
         '</div>' +
       '</div>';
