@@ -1,0 +1,304 @@
+/* About / ecosystem page — long-form corporate story using panel tokens. */
+.bb-panel .bb-about-page {
+  padding-bottom: var(--bb-space-6);
+}
+
+.bb-panel .bb-about-shell {
+  display: grid;
+  gap: var(--bb-space-5);
+}
+
+.bb-panel .bb-about-hero {
+  overflow: hidden;
+}
+
+.bb-panel .bb-about-hero .bb-card-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
+  gap: var(--bb-space-6);
+  align-items: center;
+  min-height: 20rem;
+}
+
+.bb-panel .bb-about-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: var(--bb-space-3);
+}
+
+.bb-panel .bb-about-hero h2 {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h2);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-panel .bb-about-hero p {
+  max-width: 52rem;
+  margin: var(--bb-space-3) 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-about-hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 16rem;
+  overflow: hidden;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background:
+    radial-gradient(circle at 24% 28%, color-mix(in srgb, var(--bb-primary) 20%, transparent), transparent 42%),
+    radial-gradient(circle at 76% 70%, color-mix(in srgb, var(--bb-info) 18%, transparent), transparent 46%),
+    var(--bb-surface-soft);
+}
+
+.bb-panel .bb-about-hero-visual::before,
+.bb-panel .bb-about-hero-visual::after {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  border-radius: var(--bb-radius-lg);
+  rotate: 12deg;
+}
+
+.bb-panel .bb-about-hero-visual::before {
+  inset-inline-start: 18%;
+  inset-block-start: 22%;
+}
+
+.bb-panel .bb-about-hero-visual::after {
+  inset-inline-end: 18%;
+  inset-block-end: 18%;
+  rotate: -10deg;
+}
+
+.bb-panel .bb-about-hero-visual .material-symbols-outlined {
+  position: relative;
+  z-index: 1;
+  font-size: var(--bb-fs-display-xl);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-about-story {
+  display: grid;
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-about-story-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, .9fr);
+  gap: var(--bb-space-5);
+  align-items: center;
+  padding: var(--bb-space-5);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-elevated);
+}
+
+.bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-copy {
+  order: 2;
+}
+
+.bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-media {
+  order: 1;
+}
+
+.bb-panel .bb-about-story-copy h3 {
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h5);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-about-story-copy p {
+  margin: var(--bb-space-2) 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-about-story-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 14rem;
+  overflow: hidden;
+  border-radius: var(--bb-radius);
+  background:
+    linear-gradient(140deg, color-mix(in srgb, var(--bb-primary) 12%, var(--bb-surface-muted)), var(--bb-surface-soft));
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-about-story-media::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: var(--bb-border-width) dashed var(--bb-border-color-strong);
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-panel .bb-about-story-media .material-symbols-outlined {
+  position: relative;
+  z-index: 1;
+  font-size: var(--bb-fs-display-lg);
+}
+
+.bb-panel .bb-about-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-about-metric {
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  padding: var(--bb-space-4);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-soft);
+  text-align: center;
+}
+
+.bb-panel .bb-about-metric .material-symbols-outlined {
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xl);
+}
+
+.bb-panel .bb-about-metric strong {
+  margin-top: var(--bb-space-2);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-2xl);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-panel .bb-about-metric small {
+  margin-top: var(--bb-space-1);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-about-team {
+  display: grid;
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-about-section-heading {
+  text-align: center;
+}
+
+.bb-panel .bb-about-section-heading h2 {
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h4);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-about-section-heading p {
+  max-width: 48rem;
+  margin: var(--bb-space-2) auto 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-about-person {
+  display: grid;
+  place-items: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-4);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-elevated);
+  text-align: center;
+}
+
+.bb-panel .bb-about-person-avatar {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+  border-radius: var(--bb-radius-pill);
+  border: calc(var(--bb-border-width) * 2) solid var(--bb-border-color-strong);
+  background: var(--bb-surface-muted);
+}
+
+.bb-panel .bb-about-person-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bb-panel .bb-about-person strong {
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-about-person small {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-panel .bb-about-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-4);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-soft);
+}
+
+.bb-panel .bb-about-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border-radius: var(--bb-radius);
+  background: var(--bb-surface-elevated);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+  text-decoration: none;
+}
+
+.bb-panel .bb-about-social a:hover {
+  color: var(--bb-primary-text);
+  background: var(--bb-tertiary-bg);
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel .bb-about-hero .bb-card-body,
+  .bb-panel .bb-about-story-row {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-copy,
+  .bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-media {
+    order: initial;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-panel .bb-about-metrics,
+  .bb-panel .bb-about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-panel .bb-about-story-row {
+    padding: var(--bb-space-4);
+  }
+}
