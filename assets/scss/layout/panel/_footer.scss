@@ -179,8 +179,11 @@
   line-height: 1;
   box-shadow: inset 0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-body-bg) 14%, transparent);
 }
-.bb-panel .bb-template-logo-mark span {
-  transform: translateY(-0.03em);
+.bb-panel .bb-template-logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
 }
 .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar-logo .bb-panel-brand-text {
   display: none;
