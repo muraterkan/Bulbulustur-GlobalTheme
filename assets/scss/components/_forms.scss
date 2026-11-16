@@ -37,13 +37,13 @@
   --bb-form-control-border-width: var(--bb-border-width);
   --bb-form-control-radius: var(--bb-radius);
 
-  --bb-form-control-min-height: 3rem;
-  --bb-form-control-padding-y: 0.72rem;
-  --bb-form-control-padding-x: 0.95rem;
+  --bb-form-control-min-height: 2.5rem;
+  --bb-form-control-padding-y: 0.5rem;
+  --bb-form-control-padding-x: 0.8rem;
 
-  --bb-form-control-font-size: var(--bb-fs-base);
-  --bb-form-control-font-weight: var(--bb-fw-medium);
-  --bb-form-control-line-height: var(--bb-line-height-base);
+  --bb-form-control-font-size: var(--bb-fs-sm);
+  --bb-form-control-font-weight: var(--bb-fw-normal);
+  --bb-form-control-line-height: 1.4;
 
   --bb-form-control-box-shadow: none;
   --bb-form-control-focus-box-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--bb-primary) 9%, transparent);
@@ -55,14 +55,14 @@
     box-shadow var(--bb-transition-fast);
 
   /* Sizes */
-  --bb-form-control-sm-min-height: 2.55rem;
-  --bb-form-control-sm-padding-y: 0.56rem;
-  --bb-form-control-sm-padding-x: 0.8rem;
+  --bb-form-control-sm-min-height: 2.25rem;
+  --bb-form-control-sm-padding-y: 0.375rem;
+  --bb-form-control-sm-padding-x: 0.7rem;
   --bb-form-control-sm-font-size: var(--bb-fs-sm);
 
-  --bb-form-control-lg-min-height: 3.35rem;
-  --bb-form-control-lg-padding-y: 0.82rem;
-  --bb-form-control-lg-padding-x: 1.05rem;
+  --bb-form-control-lg-min-height: 2.875rem;
+  --bb-form-control-lg-padding-y: 0.625rem;
+  --bb-form-control-lg-padding-x: 0.9rem;
   --bb-form-control-lg-font-size: var(--bb-fs-base);
 
   /* Solid Variant */
@@ -177,7 +177,7 @@ label .text-danger {
 
 .form-control::placeholder {
   color: var(--bb-form-control-placeholder-color);
-  font-weight: var(--bb-fw-medium);
+  font-weight: var(--bb-fw-normal);
   opacity: 1;
 }
 
@@ -186,7 +186,7 @@ label .text-danger {
 }
 
 textarea.form-control {
-  min-height: 8.25rem;
+  min-height: 6.5rem;
   resize: vertical;
 }
 
