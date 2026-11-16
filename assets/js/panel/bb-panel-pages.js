@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"dashboard-channels":"channels.html","footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -16,6 +16,7 @@
   var pages = {
     "dashboard-overview": {title:"Overview", group:"Dashboard", section:"DASHBOARDS"},
     "dashboard-analytics": {title:"Analitik", group:"Dashboard", section:"DASHBOARDS"},
+    "dashboard-channels": {title:"Kanallar", group:"Gösterge Paneli", section:"DASHBOARDS"},
     "footer-about": {title:"Hakkında", group:"Ekosistem", section:"PAGES"},
     "footer-integrations": {title:"Entegrasyon Merkezi", group:"Ekosistem", section:"PAGES"},
     "footer-draugr": {title:"Draugr", group:"Ekosistem", section:"PAGES"},
