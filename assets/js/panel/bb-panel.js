@@ -68,6 +68,15 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
+  /* Shared dashboard catalog extension: keep POS System available on every panel page. */
+  var dashboardMenu = panel.querySelector("#bb_tree_dashboard > .bb-menu-sub-content");
+  if (dashboardMenu && !dashboardMenu.querySelector("[data-bb-panel-page='dashboard-pos-system']")) {
+    var posMenuItem = document.createElement("div");
+    posMenuItem.className = "bb-menu-item";
+    posMenuItem.innerHTML = '<a class="bb-menu-link" href="pos-system.html" data-bb-panel-page="dashboard-pos-system"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">POS System</span></a>';
+    dashboardMenu.appendChild(posMenuItem);
+  }
+
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
   var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
   if (sidebarLogo) {
