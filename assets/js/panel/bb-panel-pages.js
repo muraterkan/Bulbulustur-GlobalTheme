@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"contacts-list":"kisiler.html","users-roles":"roller.html","users-permissions":"yetkiler.html","subscription-overview":"abonelik-detay.html","invoice-list":"fatura-detay.html"};
+  var demoRoutes = {"contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/sayfalar\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);

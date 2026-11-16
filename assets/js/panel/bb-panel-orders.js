@@ -23,7 +23,7 @@ function render(){
  visible.forEach(function(o){
   var tr=element("tr");
   var select=element("td"),checkbox=element("input","form-check-input");checkbox.type="checkbox";checkbox.dataset.bbOrdersSelect=o.id;checkbox.checked=selection.has(o.id);checkbox.setAttribute("aria-label","Sipariş "+o.id+" seç");select.append(checkbox);
-  var id=element("td"),link=element("a","bb-orders-id","#"+o.id);link.href="siparis-detay.html";link.title="Örnek sipariş #14534 detayını görüntüle";id.append(link);
+  var id=element("td"),link=element("a","bb-orders-id","#"+o.id);link.href="order-details.html";link.title="Örnek sipariş #14534 detayını görüntüle";id.append(link);
   var customer=element("td"),person=element("div","bb-orders-customer"),avatar=element("span","bb-symbol size-40 is-circle"),avLabel=element("span","bb-symbol-label",o.customer.split(" ").map(function(x){return x[0];}).join(""));avatar.append(avLabel);
   var name=element("a","",o.customer);name.href=link.href;person.append(avatar,name);customer.append(person);
   var state=element("td"),badge=element("span","badge bb-badge "+(o.status==="Tamamlandı"?"bb-badge-light-success":o.status==="Beklemede"?"bb-badge-light-warning":o.status==="İade"?"bb-badge-light-primary":"bb-badge-light-danger"),o.status);state.append(badge);

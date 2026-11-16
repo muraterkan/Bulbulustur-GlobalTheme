@@ -5,15 +5,15 @@ var root = document.querySelector("[data-bb-profile-root]");
 if (!root) return;
 var view = root.dataset.bbProfileView || "overview";
 var pages = [
-  ["overview", "Genel Bakış", "profil.html"],
-  ["settings", "Ayarlar", "profil-ayarlar.html"],
-  ["security", "Güvenlik", "profil-guvenlik.html"],
-  ["activity", "Etkinlik", "profil-etkinlik.html"],
-  ["billing", "Faturalandırma", "profil-faturalandirma.html"],
-  ["statements", "Ekstreler", "profil-ekstreler.html"],
-  ["referrals", "Referanslar", "profil-referanslar.html"],
-  ["api", "API Anahtarları", "profil-api.html"],
-  ["logs", "Kayıtlar", "profil-kayitlar.html"]
+  ["overview", "Genel Bakış", "profile.html"],
+  ["settings", "Ayarlar", "profile-settings.html"],
+  ["security", "Güvenlik", "profile-security.html"],
+  ["activity", "Etkinlik", "profile-activity.html"],
+  ["billing", "Faturalandırma", "profile-billing.html"],
+  ["statements", "Ekstreler", "profile-statements.html"],
+  ["referrals", "Referanslar", "profile-referrals.html"],
+  ["api", "API Anahtarları", "profile-api.html"],
+  ["logs", "Kayıtlar", "profile-logs.html"]
 ];
 var extras = [
   ["projects", "Projeler"],
@@ -56,12 +56,12 @@ function profileActionsMenu() {
     '<span class="material-symbols-outlined" aria-hidden="true">more_horiz</span></button>' +
     '<ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">' +
     '<li><h3 class="dropdown-header">ÖDEMELER</h3></li>' +
-    '<li><a class="dropdown-item" href="fatura.html">Fatura ön izlemesi</a></li>' +
-    '<li><a class="dropdown-item" href="profil-faturalandirma.html">Ödeme yöntemleri</a></li>' +
-    '<li><a class="dropdown-item" href="profil-ekstreler.html">Ekstreler</a></li>' +
-    '<li><a class="dropdown-item bb-action-menu-has-arrow" href="profil-faturalandirma.html"><span>Abonelik</span><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a></li>' +
+    '<li><a class="dropdown-item" href="invoices.html">Fatura ön izlemesi</a></li>' +
+    '<li><a class="dropdown-item" href="profile-billing.html">Ödeme yöntemleri</a></li>' +
+    '<li><a class="dropdown-item" href="profile-statements.html">Ekstreler</a></li>' +
+    '<li><a class="dropdown-item bb-action-menu-has-arrow" href="profile-billing.html"><span>Abonelik</span><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a></li>' +
     '<li><hr class="dropdown-divider"></li>' +
-    '<li><a class="dropdown-item" href="profil-ayarlar.html">Ayarlar</a></li>' +
+    '<li><a class="dropdown-item" href="profile-settings.html">Ayarlar</a></li>' +
     '</ul></div>';
 }
 function profileHero() {
@@ -77,7 +77,7 @@ function profileHero() {
     '<span><span class="material-symbols-outlined" aria-hidden="true">location_on</span>İstanbul, Türkiye</span>' +
     '<span><span class="material-symbols-outlined" aria-hidden="true">mail</span>demo@example.com</span></div></div>' +
     '<div class="bb-profile-hero-actions"><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-profile-follow aria-pressed="false">Takip et</button>' +
-    '<a href="profil-ayarlar.html" class="btn btn-primary btn-sm">Profili Düzenle</a>' +
+    '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profili Düzenle</a>' +
     profileActionsMenu() + '</div>' +
     '</div><div class="bb-profile-hero-bottom"><div class="bb-profile-stat-list">' +
     '<div class="bb-profile-stat"><strong>₺4.500</strong><small>Kazanç (demo)</small></div>' +
@@ -93,7 +93,7 @@ function pageOverview() {
     ["Tam ad", "Örnek Kullanıcı"],["Şirket","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
     ["Web sitesi","bulbulustur.com"],["Ülke","Türkiye"],["İletişim","E-posta, Telefon"],["Değişiklik izni","Evet"]
   ]) + '<div class="mt-4">' + note("Profil bilgilerini tamamlayın", "Eksik alanları Ayarlar sayfasından güncelleyebilirsiniz. Bu örnekte veriler kaydedilmez.") + '</div>',
-  '<a href="profil-ayarlar.html" class="btn btn-primary btn-sm">Profili Düzenle</a>') +
+  '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profili Düzenle</a>') +
   '</div><div class="col-xl-4">' + card("Profil Durumu",'<div class="bb-profile-metric-grid">' +
     metric("Aktif projeler","12") + metric("Takipçi","86") + metric("Bildirim","3") +
     '</div><p class="text-body-secondary mt-4 mb-0">İstatistikler örnek verilerden oluşur.</p>') + '</div></div>';
