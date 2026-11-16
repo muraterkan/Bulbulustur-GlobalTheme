@@ -67,6 +67,7 @@
 @use "layout/panel/account";        // Faz 12 profil hesap ve fatura
 @use "layout/panel/footer" as panel-footer;         // Panel footer and scroll-to-top
 @use "layout/panel/messages";       // panel chat drawer
+@use "layout/panel/chat";           // full chat conversations page
 @use "layout/panel/support";        // support center
 @use "layout/panel/subscription";   // subscription details
 @use "layout/panel/blog";           // blog home and listing
