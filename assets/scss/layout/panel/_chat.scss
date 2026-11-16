@@ -1,0 +1,47 @@
+/* Chat conversations — panel composition using existing core tokens/components. */
+.bb-panel .bb-chat-page{padding:var(--bb-space-4)}
+.bb-panel .bb-chat-workspace{display:grid;grid-template-columns:minmax(18rem,.8fr) minmax(0,1.7fr);gap:var(--bb-space-4);align-items:stretch}
+.bb-panel .bb-chat-directory,.bb-panel .bb-chat-thread{min-width:0}
+.bb-panel .bb-chat-directory .bb-card-body{padding-top:var(--bb-space-3)}
+.bb-panel .bb-chat-kicker{display:block;margin-bottom:var(--bb-space-1);color:var(--bb-primary-text);font-size:var(--bb-fs-xs);font-weight:var(--bb-fw-semibold);letter-spacing:.06em;text-transform:uppercase}
+.bb-panel .bb-chat-search{display:flex;align-items:center;gap:var(--bb-space-2);padding:0 var(--bb-space-3);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius);background:var(--bb-tertiary-bg)}
+.bb-panel .bb-chat-search:focus-within{border-color:var(--bb-primary)}
+.bb-panel .bb-chat-search .material-symbols-outlined{color:var(--bb-secondary-color);font-size:var(--bb-fs-lg)}
+.bb-panel .bb-chat-search input{width:100%;min-width:0;min-height:2.75rem;border:0;outline:0;background:transparent;color:var(--bb-body-color)}
+.bb-panel .bb-chat-list{display:flex;flex-direction:column;gap:var(--bb-space-1);margin-top:var(--bb-space-3);max-height:64vh;overflow:auto;padding-inline-end:var(--bb-space-1)}
+.bb-panel .bb-chat-list-item{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:var(--bb-space-3);width:100%;padding:var(--bb-space-3);border:var(--bb-border-width) solid transparent;border-radius:var(--bb-radius);background:transparent;color:var(--bb-body-color);text-align:left}
+.bb-panel .bb-chat-list-item:hover{background:var(--bb-tertiary-bg)}
+.bb-panel .bb-chat-list-item[aria-selected="true"]{border-color:var(--bb-primary);background:var(--bb-primary-light)}
+.bb-panel .bb-chat-list-avatar{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:var(--bb-radius-pill);object-fit:cover;background:var(--bb-tertiary-bg);color:var(--bb-primary-text);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-chat-list-copy{min-width:0;display:flex;flex-direction:column;gap:var(--bb-space-1)}
+.bb-panel .bb-chat-list-top,.bb-panel .bb-chat-list-meta{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-2);min-width:0}
+.bb-panel .bb-chat-list-top strong,.bb-panel .bb-chat-list-meta small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bb-panel .bb-chat-list-top strong{font-size:var(--bb-fs-sm);color:var(--bb-heading-color)}
+.bb-panel .bb-chat-list-top small,.bb-panel .bb-chat-list-meta small{font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
+.bb-panel .bb-chat-empty,.bb-panel .bb-chat-feedback{margin:var(--bb-space-3) 0 0;color:var(--bb-secondary-color);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-chat-thread{display:flex;flex-direction:column;min-height:44rem}
+.bb-panel .bb-chat-thread-head{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-3)}
+.bb-panel .bb-chat-thread-person{display:flex;align-items:center;gap:var(--bb-space-3);min-width:0}
+.bb-panel .bb-chat-thread-person>div{min-width:0}
+.bb-panel .bb-chat-thread-person .bb-card-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bb-panel .bb-chat-avatar-fallback{display:grid;place-items:center;width:100%;height:100%;border-radius:inherit;background:var(--bb-tertiary-bg);color:var(--bb-primary-text);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-chat-presence{display:flex;align-items:center;gap:var(--bb-space-2);margin-top:var(--bb-space-1)}
+.bb-panel .bb-chat-presence>span{width:.45rem;height:.45rem;border-radius:var(--bb-radius-pill);background:var(--bb-secondary-color)}
+.bb-panel .bb-chat-presence>span.is-online{background:var(--bb-success)}
+.bb-panel .bb-chat-presence small{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-chat-messages{display:flex;flex:1 1 auto;flex-direction:column;gap:var(--bb-space-4);min-height:0;max-height:58vh;overflow:auto;padding:calc(var(--bb-space-4) + var(--bb-space-2))}
+.bb-panel .bb-chat-message{display:flex;flex-direction:column;align-items:flex-start;max-width:min(78%,38rem);gap:var(--bb-space-2)}
+.bb-panel .bb-chat-message[data-side="out"]{align-self:flex-end;align-items:flex-end}
+.bb-panel .bb-chat-message-meta{display:flex;align-items:center;gap:var(--bb-space-2);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-chat-message-meta strong{color:var(--bb-heading-color);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-chat-message-meta small{color:var(--bb-secondary-color)}
+.bb-panel .bb-chat-bubble{padding:var(--bb-space-3) var(--bb-space-4);border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);color:var(--bb-body-color);font-size:var(--bb-fs-sm);line-height:var(--bb-line-height-base);overflow-wrap:anywhere}
+.bb-panel .bb-chat-message[data-side="out"] .bb-chat-bubble{background:var(--bb-primary-light);color:var(--bb-body-color)}
+.bb-panel .bb-chat-compose{padding:var(--bb-space-4);border-top:var(--bb-border-width) solid var(--bb-border-color)}
+.bb-panel .bb-chat-compose textarea{resize:vertical;min-height:5rem;max-height:11rem}
+.bb-panel .bb-chat-compose-actions{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-3);margin-top:var(--bb-space-3)}
+.bb-panel .bb-chat-compose-tools{display:flex;align-items:center;gap:var(--bb-space-1)}
+.bb-panel .bb-chat-list-item:focus-visible{outline:var(--bb-focus-ring-width) solid var(--bb-primary);outline-offset:var(--bb-focus-ring-width)}
+@media(max-width:991.98px){.bb-panel .bb-chat-workspace{grid-template-columns:minmax(16rem,.75fr) minmax(0,1.25fr)}.bb-panel .bb-chat-message{max-width:88%}}
+@media(max-width:767.98px){.bb-panel .bb-chat-workspace{grid-template-columns:1fr}.bb-panel .bb-chat-list{max-height:22rem}.bb-panel .bb-chat-thread{min-height:38rem}.bb-panel .bb-chat-messages{max-height:48vh}}
+@media(max-width:575.98px){.bb-panel .bb-chat-page{padding:var(--bb-space-3)}.bb-panel .bb-chat-message{max-width:94%}.bb-panel .bb-chat-compose-actions{align-items:stretch;flex-direction:column}.bb-panel .bb-chat-compose-actions>.btn{width:100%}}
