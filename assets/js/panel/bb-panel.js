@@ -102,13 +102,54 @@
     }
   }
 
-  /* Shared dashboard catalog extension: keep POS System available on every panel page. */
-  var dashboardMenu = panel.querySelector("#bb_tree_dashboard > .bb-menu-sub-content");
-  if (dashboardMenu && !dashboardMenu.querySelector("[data-bb-panel-page='dashboard-pos-system']")) {
-    var posMenuItem = document.createElement("div");
-    posMenuItem.className = "bb-menu-item";
-    posMenuItem.innerHTML = '<a class="bb-menu-link" href="pos-system.html" data-bb-panel-page="dashboard-pos-system"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">POS System</span></a>';
-    dashboardMenu.appendChild(posMenuItem);
+  /* POSB physical retail channel: dashboard, quick sale and definitions. */
+  var posbPanelMenu = panel.querySelector("[data-bb-panel-menu]");
+  if (posbPanelMenu && !posbPanelMenu.querySelector("#bb_tree_posb")) {
+    var posbApplicationsSection = Array.from(posbPanelMenu.querySelectorAll(".bb-menu-section")).find(function (node) {
+      return node.textContent.trim() === "UYGULAMALAR";
+    });
+    var posbSection = document.createElement("div");
+    posbSection.className = "bb-menu-section";
+    posbSection.textContent = "POSB";
+
+    var posbMenuItem = document.createElement("div");
+    posbMenuItem.className = "bb-menu-item";
+    posbMenuItem.setAttribute("data-bb-menu-trigger", "click");
+    posbMenuItem.innerHTML =
+      '<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span></span><span class="bb-menu-title">POSB</span><span class="bb-menu-arrow" aria-hidden="true"></span></button>' +
+      '<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb"><div class="bb-menu-sub-content">' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=dashboard" data-bb-panel-page="posb-dashboard" data-bb-posb-view-link="dashboard"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Dashboard</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="pos-system.html" data-bb-panel-page="posb-quick-sale"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Hızlı Satış</span></a></div>' +
+
+        '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_branch"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Şube & Kasa</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_branch"><div class="bb-menu-sub-content">' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=branches" data-bb-panel-page="posb-branches" data-bb-posb-view-link="branches"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Şubeler</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=registers" data-bb-panel-page="posb-registers" data-bb-posb-view-link="registers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kasalar</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=shifts" data-bb-panel-page="posb-shifts" data-bb-posb-view-link="shifts"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Vardiya & Gün</span></a></div>' +
+        '</div></div></div>' +
+
+        '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_invoice"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Fatura</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_invoice"><div class="bb-menu-sub-content">' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoices" data-bb-panel-page="posb-invoices" data-bb-posb-view-link="invoices"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Faturalar</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoice-settings" data-bb-panel-page="posb-invoice-settings" data-bb-posb-view-link="invoice-settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Fatura Ayarları</span></a></div>' +
+        '</div></div></div>' +
+
+        '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_stock"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Stok & Transfer</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_stock"><div class="bb-menu-sub-content">' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=warehouses" data-bb-panel-page="posb-warehouses" data-bb-posb-view-link="warehouses"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Depolar</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=stock" data-bb-panel-page="posb-stock" data-bb-posb-view-link="stock"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Stok</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=transfers" data-bb-panel-page="posb-transfers" data-bb-posb-view-link="transfers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Transferler</span></a></div>' +
+        '</div></div></div>' +
+
+        '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_partners"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Müşteri & Tedarikçi</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_partners"><div class="bb-menu-sub-content">' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=customers" data-bb-panel-page="posb-customers" data-bb-posb-view-link="customers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Müşteriler</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=suppliers" data-bb-panel-page="posb-suppliers" data-bb-posb-view-link="suppliers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Tedarikçiler</span></a></div>' +
+        '</div></div></div>' +
+      '</div></div>';
+
+    if (posbApplicationsSection) {
+      posbPanelMenu.insertBefore(posbSection, posbApplicationsSection);
+      posbPanelMenu.insertBefore(posbMenuItem, posbApplicationsSection);
+    } else {
+      posbPanelMenu.append(posbSection, posbMenuItem);
+    }
   }
 
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
@@ -137,7 +178,7 @@
             '<a class="bb-footer-link" href="' + panelPrefix + 'about.html">Hakkında</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'integrations.html">Entegrasyon</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'draugr.html?view=dashboard">Draugr</a>' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'pages.html?page=footer-posb">PosB</a>' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'posb.html?view=dashboard">PosB</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'updates.html">Changelog</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'support-center.html">Destek</a>' +
           '</nav>' +
