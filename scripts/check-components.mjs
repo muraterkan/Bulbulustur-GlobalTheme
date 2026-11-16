@@ -35,11 +35,16 @@ const refIssues = [];
 const adapterIssues = [];
 const idIssues = [];
 const duplicateScriptIssues = [];
+const inlineScriptIssues = [];
+const emptyPageIssues = [];
 const jsPaths = new Set();
 
 for (const name of pages) {
   const path = resolve(dir, name);
   const source = readFileSync(path, "utf8");
+
+  if (!source.trim()) emptyPageIssues.push(name + ": empty demo file");
+  if (/<script(?![^>]*\bsrc=)[^>]*>/i.test(source)) inlineScriptIssues.push(name + ": inline script is not allowed");
 
   const adapterCount = (source.match(/assets\/js\/panel\/bb-component-panel-shell\.js/g) || []).length;
   if (adapterCount !== 1) adapterIssues.push(name + ": adapter count=" + adapterCount);
@@ -79,9 +84,22 @@ for (const name of pages) {
 }
 
 report("Component catalog adapter (" + pages.length + " pages)", adapterIssues);
+report("Component demo content", emptyPageIssues);
+report("Component HTML inline scripts", inlineScriptIssues);
 report("Component HTML local references", refIssues);
 report("Component HTML duplicate IDs", idIssues);
 report("Component HTML duplicate script sources", duplicateScriptIssues);
+
+const coreJsDir = resolve(root, "assets/js/core");
+const referencedJs = new Set([...jsPaths].map((path) => resolve(path)));
+const coreJsOrphans = existsSync(coreJsDir)
+  ? readdirSync(coreJsDir)
+      .filter((name) => name.endsWith(".js"))
+      .map((name) => resolve(coreJsDir, name))
+      .filter((path) => !referencedJs.has(path))
+      .map((path) => relative(root, path).split(sep).join("/"))
+  : [];
+report("Core JavaScript is referenced by component catalog", coreJsOrphans);
 
 const syntaxIssues = [];
 for (const path of jsPaths) {
