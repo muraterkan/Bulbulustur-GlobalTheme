@@ -204,9 +204,16 @@
             '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>',
             '<span class="bb-panel-brand-text">Bulbulustur / Component Catalog</span>',
           '</div>',
-          '<div class="bb-shell-header-right">',
+          '<div class="bb-shell-header-right bb-panel-header-actions">',
             '<button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Toggle light or dark theme"><span class="material-symbols-outlined" aria-hidden="true">contrast</span></button>',
-            '<span class="bb-symbol bb-symbol-35" aria-label="Demo user"><img src="../../assets/media/avatars/300-3.jpg" alt="Demo user avatar"></span>',
+            '<div class="bb-panel-overlay-host" data-bb-panel-popup>',
+              '<button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_component_user_pop" aria-label="User menu"><span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.webp" alt="Demo user avatar"></span></button>',
+              '<div id="bb_component_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>',
+                '<div class="bb-panel-user-summary"><span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.webp" alt=""></span><span class="bb-panel-user-info"><span class="bb-panel-user-name">Demo User <span class="bb-badge bb-badge-success">Demo</span></span><small>demo@example.com</small></span></div>',
+                '<div class="bb-panel-user-group"><a class="bb-panel-user-item" href="../panel/profile.html"><span>Profile</span></a><a class="bb-panel-user-item" href="../panel/account.html"><span>Account Settings</span></a></div>',
+                '<div class="bb-panel-user-group"><button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Appearance</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Light</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">light_mode</span></span></button><div class="bb-panel-user-item"><span>Dil</span><span class="bb-panel-user-meta">Türkçe</span></div></div>',
+              '</div>',
+            '</div>',
           '</div>',
         '</div>',
       '</header>',
@@ -340,6 +347,8 @@
   Promise.resolve()
     .then(function () { return loadScript(base + "bb-panel.js"); })
     .then(function () { return loadScript(base + "bb-panel-theme.js"); })
+    .then(function () { return loadScript(base + "bb-panel-header.js"); })
+    .then(function () { return loadScript(base + "bb-panel-user.js"); })
     .then(function () { return loadScript(base + "bb-panel-menu.js"); })
     .catch(function () {
       var note = document.createElement("div");
