@@ -1,0 +1,79 @@
+/* Panel + component catalog dark profile.
+   Neutral charcoal only: no navy/blue cast in UI surfaces. */
+html[data-bb-ui-profile="neutral"][data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  --bb-body-bg: #101114;
+  --bb-body-color: #f2f3f5;
+
+  --bb-secondary-bg: #1a1c21;
+  --bb-tertiary-bg: #17191d;
+
+  --bb-surface-bg: #15171b;
+  --bb-surface-soft: #181a1f;
+  --bb-surface-muted: #1d2025;
+  --bb-surface-elevated: #22252b;
+
+  --bb-emphasis-color: #fafafa;
+  --bb-heading-color: #fafafa;
+  --bb-secondary-color: #b9bcc4;
+  --bb-tertiary-color: #8f949e;
+
+  --bb-body-bg-rgb: 16, 17, 20;
+  --bb-body-color-rgb: 242, 243, 245;
+  --bb-secondary-bg-rgb: 26, 28, 33;
+  --bb-tertiary-bg-rgb: 23, 25, 29;
+  --bb-secondary-color-rgb: 185, 188, 196;
+  --bb-tertiary-color-rgb: 143, 148, 158;
+
+  --bb-border-color: rgba(255, 255, 255, 0.09);
+  --bb-border-color-strong: rgba(255, 255, 255, 0.15);
+  --bb-border-dashed-color: rgba(255, 255, 255, 0.14);
+
+  --bb-brand-secondary: #1d2025;
+  --bb-brand-secondary-rgb: 29, 32, 37;
+  --bb-brand-secondary-inverse: #f2f3f5;
+
+  --bb-brand-dark: #0b0c0f;
+  --bb-brand-dark-rgb: 11, 12, 15;
+  --bb-brand-dark-inverse: #f2f3f5;
+
+  --bb-brand-light: #202228;
+  --bb-brand-light-rgb: 32, 34, 40;
+  --bb-brand-light-inverse: #f2f3f5;
+
+  --bb-theme-secondary: var(--bb-brand-secondary);
+  --bb-theme-dark: var(--bb-brand-dark);
+  --bb-theme-light: var(--bb-brand-light);
+
+  --bb-theme-secondary-rgb: var(--bb-brand-secondary-rgb);
+  --bb-theme-dark-rgb: var(--bb-brand-dark-rgb);
+  --bb-theme-light-rgb: var(--bb-brand-light-rgb);
+
+  --bb-theme-on-secondary: var(--bb-brand-secondary-inverse);
+  --bb-theme-on-dark: var(--bb-brand-dark-inverse);
+  --bb-theme-on-light: var(--bb-brand-light-inverse);
+
+  --bb-secondary: var(--bb-theme-secondary);
+  --bb-dark: var(--bb-theme-dark);
+  --bb-light: var(--bb-theme-light);
+
+  --bb-secondary-rgb: var(--bb-theme-secondary-rgb);
+  --bb-dark-rgb: var(--bb-theme-dark-rgb);
+  --bb-light-rgb: var(--bb-theme-light-rgb);
+
+  --bb-secondary-inverse: var(--bb-theme-on-secondary);
+  --bb-dark-inverse: var(--bb-theme-on-dark);
+  --bb-light-inverse: var(--bb-theme-on-light);
+
+  --bb-header-bg: #111216;
+  --bb-header-color: #f2f3f5;
+  --bb-header-border-color: var(--bb-border-color);
+
+  --bb-footer-bg: #0f1013;
+  --bb-footer-bg-soft: #131418;
+  --bb-footer-bottom-bg: #0b0c0f;
+
+  --bb-link-color: #d9dbe0;
+  --bb-link-hover-color: var(--bb-primary);
+}
