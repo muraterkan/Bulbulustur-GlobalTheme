@@ -20,7 +20,7 @@ const partials = walk(scssRoot)
   .map((path) => relative(scssRoot, path).replace(/\\/g, '/').replace(/\/_/, '/').replace(/\.scss$/, ''));
 
 // Derlenmeyen (ölü) partial kalmasın. Bilinçli ayrılmışlar burada açıkça listelenir (docs/CSS_ANALIZ_15112026.md D1).
-const detached = new Set(['base/zindex']);
+const detached = new Set();
 const orphans = partials.filter((name) => !mainImports.includes(name) && !detached.has(name));
 check('every partial is imported by main.scss (or explicitly detached)', orphans.length === 0);
 if (orphans.length) console.log('  orphan partials:', orphans.join(', '));
@@ -56,7 +56,7 @@ check('dataviz defines 8 categorical series for light and dark', [1,2,3,4,5,6,7,
 const reset = file('assets/scss/base/_reset.scss');
 const layout = file('assets/scss/layout/_layout.scss');
 const sidebar = file('assets/scss/layout/_sidebar.scss');
-const toolbar = file('assets/scss/layout/_toolbar1.scss');
+const toolbar = file('assets/scss/layout/_toolbar.scss');
 const utilities = file('assets/scss/utilities/_utilities.scss');
 const border = file('assets/scss/utilities/_border.scss');
 const text = file('assets/scss/utilities/_text.scss');
