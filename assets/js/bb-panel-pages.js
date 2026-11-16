@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"contacts-list":"kisiler.html","users-roles":"roller.html","users-permissions":"yetkiler.html","subscription-overview":"abonelik-detay.html","invoice-list":"fatura-detay.html"};
+  var demoRoutes = {"contacts-list":"kisiler.html","users-roles":"roller.html","users-permissions":"yetkiler.html","subscription-overview":"abonelik-detay.html","invoice-list":"fatura-detay.html","widgets-tables":"widget-tablolari.html"};
   panel.querySelectorAll("a[data-bb-panel-page]").forEach(function (link) {
     var destination = demoRoutes[link.getAttribute("data-bb-panel-page")];
     if (destination) link.setAttribute("href", destination);
