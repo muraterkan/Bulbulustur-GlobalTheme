@@ -169,7 +169,7 @@
     });
   }
 
-  var base = "../../assets/js/";
+  var base = "../../assets/js/panel/";
   Promise.resolve()
     .then(function () { return loadScript(base + "bb-panel.js"); })
     .then(function () { return loadScript(base + "bb-panel-theme.js"); })
