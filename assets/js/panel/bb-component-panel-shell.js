@@ -11,10 +11,59 @@
 
   var file = path.split("/").pop() || "component.html";
   var slug = file.replace(/\.html$/i, "");
-  var pageHeading = body.querySelector("h1");
-  var title = pageHeading && pageHeading.textContent.trim()
-    ? pageHeading.textContent.trim()
-    : (document.title || slug).replace(/\s*[|–—-].*$/, "").trim();
+
+  var componentTitles = {
+    "accordion": "Accordion",
+    "alerts": "Alerts",
+    "badges": "Badges",
+    "breadcrumb": "Breadcrumb",
+    "bullet": "Bullet",
+    "buttongroup": "Button Group",
+    "buttons": "Buttons",
+    "cards": "Cards",
+    "carousel": "Carousel",
+    "chips": "Chips",
+    "collapse": "Collapse",
+    "countup": "Countup",
+    "datepicker": "Datetime",
+    "dialer": "Dialer",
+    "drawer": "Drawer",
+    "dropdowns": "Dropdowns",
+    "empty-state": "Empty State",
+    "floating-labels": "Floating Labels",
+    "formrepeater": "Form Repeater",
+    "forms": "Forms",
+    "indicator": "Indicator",
+    "input-group": "Input Group",
+    "inputmask": "Input Mask",
+    "lightbox": "Lightbox",
+    "menu": "Menu",
+    "modal": "Modal",
+    "overlay": "Overlay",
+    "pagination": "Pagination",
+    "password-meter": "Password Meter",
+    "popover": "Popover",
+    "progress": "Progress",
+    "pulse": "Pulse",
+    "rating": "Rating",
+    "ribbons": "Ribbons",
+    "scroll": "Scroll",
+    "separator": "Separator",
+    "spinner": "Spinner",
+    "sticky": "Sticky",
+    "symbol": "Symbol",
+    "tables": "Tables",
+    "tabs": "Tabs",
+    "tiny-slider-advanced": "Tiny Slider / Advanced",
+    "tiny-slider-thumbnails": "Tiny Slider / Thumbnails",
+    "tiny-slider": "Tiny Slider",
+    "toast": "Toast",
+    "tooltips": "Tooltips",
+    "typography": "Typography"
+  };
+  var title = componentTitles[slug] || slug.replace(/-/g, " ").replace(/\b\w/g, function (char) {
+    return char.toUpperCase();
+  });
 
   var componentCatalog = [
     ["accordion.html","Akordeon"],["alerts.html","Uyarılar"],["badges.html","Rozetler"],["breadcrumb.html","İçerik Yolu"],
@@ -145,7 +194,7 @@
           renderComponentSidebar(),
         '</nav>',
       '</div>',
-      '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="buttons.html"><span class="material-symbols-outlined" aria-hidden="true">widgets</span><span>Components</span></a></div>',
+      '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="../panel/destek-merkezi.html"><span class="material-symbols-outlined" aria-hidden="true">support_agent</span><span>Get Support</span></a></div>',
     '</aside>',
     '<button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Menüyü kapat" aria-hidden="true" tabindex="-1"></button>',
     '<div class="bb-shell">',

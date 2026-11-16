@@ -1,71 +1,66 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-bs-theme="light">
 <head>
   <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="utf-8">
-  <title>Bulbulustur • Pulse</title>
-    <!-- Main Theme CSS -->
-    <link rel="stylesheet" href="../../assets/css/main.css" />
-
-    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <!-- Google Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
 </head>
+<body>
+  <div class="d-grid gap-4">
+    <section class="bb-card">
+      <div class="bb-card-header"><h2 class="bb-card-title">Basic</h2></div>
+      <div class="bb-card-body">
+        <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-primary" aria-label="Notifications">
+          <span class="material-symbols-outlined" aria-hidden="true">notifications</span>
+          <span class="bb-pulse-ring"></span>
+        </button>
+      </div>
+    </section>
 
-<body class="p-5">
+    <section class="bb-card">
+      <div class="bb-card-header"><h2 class="bb-card-title">Colors</h2></div>
+      <div class="bb-card-body">
+        <div class="d-flex gap-4 flex-wrap">
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-success" aria-label="Success">
+            <span class="material-symbols-outlined" aria-hidden="true">check</span>
+            <span class="bb-pulse-ring"></span>
+          </button>
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-warning" aria-label="Warning">
+            <span class="material-symbols-outlined" aria-hidden="true">warning</span>
+            <span class="bb-pulse-ring"></span>
+          </button>
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-danger" aria-label="Danger">
+            <span class="material-symbols-outlined" aria-hidden="true">error</span>
+            <span class="bb-pulse-ring"></span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-<h4 class="mb-4">Basic</h4>
-
-<a href="#" class="btn btn-icon btn-light bb-pulse bb-pulse-primary">
-  <span class="material-symbols-outlined">notifications</span>
-  <span class="bb-pulse-ring"></span>
-</a>
-
-<hr class="my-5">
-
-<h4 class="mb-4">Colors</h4>
-
-<div class="d-flex gap-4 flex-wrap">
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-success">
-    <span class="material-symbols-outlined">check</span>
-    <span class="bb-pulse-ring"></span>
-  </a>
-
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-warning">
-    <span class="material-symbols-outlined">warning</span>
-    <span class="bb-pulse-ring"></span>
-  </a>
-
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-danger">
-    <span class="material-symbols-outlined">error</span>
-    <span class="bb-pulse-ring"></span>
-  </a>
-</div>
-
-<hr class="my-5">
-
-<h4 class="mb-4">Border Width (Utility)</h4>
-
-<div class="d-flex gap-4">
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-primary">
-    <span class="material-symbols-outlined">info</span>
-    <span class="bb-pulse-ring border-1"></span>
-  </a>
-
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-primary">
-    <span class="material-symbols-outlined">info</span>
-    <span class="bb-pulse-ring border-3"></span>
-  </a>
-
-  <a class="btn btn-icon btn-light bb-pulse bb-pulse-primary">
-    <span class="material-symbols-outlined">info</span>
-    <span class="bb-pulse-ring border-5"></span>
-  </a>
-</div>
+    <section class="bb-card">
+      <div class="bb-card-header"><h2 class="bb-card-title">Border Width</h2></div>
+      <div class="bb-card-body">
+        <div class="d-flex gap-4 flex-wrap">
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-primary" aria-label="Border 1">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <span class="bb-pulse-ring border-1"></span>
+          </button>
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-primary" aria-label="Border 3">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <span class="bb-pulse-ring border-3"></span>
+          </button>
+          <button type="button" class="btn btn-icon btn-light bb-pulse bb-pulse-primary" aria-label="Border 5">
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <span class="bb-pulse-ring border-5"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>

@@ -119,7 +119,7 @@ report("Component cards use canonical core shadow", cardShadowIssues);
 report("Component theme initializes before stylesheets", themeInitIssues);
 
 const adapterContractIssues = [];
-["normalizeStylesheetOrder", "bb-component-demo-root", "normalizeDemoCards"].forEach((marker) => {
+["normalizeStylesheetOrder", "bb-component-demo-root", "normalizeDemoCards", "componentTitles", "Get Support"].forEach((marker) => {
   if (!adapterSource.includes(marker)) adapterContractIssues.push("adapter contract missing: " + marker);
 });
 report("Component panel adapter normalization contract", adapterContractIssues);
