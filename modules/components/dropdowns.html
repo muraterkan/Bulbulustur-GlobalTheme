@@ -297,20 +297,6 @@
 
     </div>
   </div>
-
-
-  <script>
-    (function () {
-      const btn = document.getElementById("bbThemeToggle");
-      if (!btn) { return; }
-
-      btn.addEventListener("click", function () {
-        const el = document.documentElement;
-        const current = el.getAttribute("data-bs-theme") || "light";
-        el.setAttribute("data-bs-theme", current === "dark" ? "light" : "dark");
-      });
-    })();
-  </script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
