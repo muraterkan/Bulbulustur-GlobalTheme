@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"footer-draugr":"draugr.html?view=dashboard","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"posb.html?view=dashboard","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -20,6 +20,8 @@
     "footer-integrations": {title:"Entegrasyon Merkezi", group:"Ekosistem", section:"PAGES"},
     "footer-draugr": {title:"Draugr", group:"Ekosistem", section:"PAGES"},
     "footer-posb": {title:"PosB", group:"Ekosistem", section:"PAGES"},
+    "product-draugr": {title:"Draugr", group:"Hizmetler", section:"PAGES"},
+    "product-posb": {title:"PosB", group:"Hizmetler", section:"PAGES"},
     "draugr-dashboard": {title:"Dashboard", group:"Draugr", section:"DRAUGR"},
     "draugr-storefront": {title:"Vitrin", group:"Draugr", section:"DRAUGR"},
     "draugr-navigation": {title:"Kategoriler & Navigasyon", group:"Draugr", section:"DRAUGR"},
