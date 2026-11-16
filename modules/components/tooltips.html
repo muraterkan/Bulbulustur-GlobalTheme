@@ -119,37 +119,7 @@
     </div>
   </div>
 
-  <script>
-    // Tooltips init
-    (() => {
-      const triggers = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-      if (!triggers.length) {
-        return;
-      }
-
-      const instances = [];
-
-      triggers.forEach((el) => {
-        const tip = new bootstrap.Tooltip(el);
-        instances.push(tip);
-
-        // Custom dismiss: data-bs-dismiss="click"
-        if (el.getAttribute("data-bs-dismiss") === "click") {
-          el.addEventListener("click", () => {
-            tip.hide();
-          });
-        }
-      });
-
-      // Demo theme switch (safe)
-      const themeBtns = document.querySelectorAll("[data-bb-theme]");
-      themeBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.documentElement.setAttribute("data-bs-theme", btn.getAttribute("data-bb-theme"));
-        });
-      });
-    })();
-  </script>
+    <script src="../../assets/js/core/bb-tooltip.js"></script>
   <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
