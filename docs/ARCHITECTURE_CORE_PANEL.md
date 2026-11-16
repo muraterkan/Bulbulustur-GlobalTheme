@@ -59,6 +59,9 @@ Bu iki blok panel katmanının sökülebilir sınırıdır. Yeni panel importu y
 ## Modüller
 
 `modules/components/` component örneklerinin tek kaynak kataloğudur.
+Component demo dosyaları boş olamaz, inline JavaScript taşıyamaz ve katalog menüsüyle birebir eşleşir.
+Reusable component davranışı `assets/js/core/` altında yaşar; orphan core JS tutulmaz.
+Yalnız demo sunumuna özgü davranış `assets/js/panel/bb-component-*-demo.js` altında tutulur.
 `modules/panel/` fiziksel panel sayfalarıdır; generic query router yeni sayfalar için kullanılmaz.
 `modules/foundation/` token/pack diagnostik sayfalarıdır.
 
