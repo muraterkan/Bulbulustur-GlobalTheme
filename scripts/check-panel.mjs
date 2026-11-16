@@ -24,12 +24,19 @@ const fileText = (path) => readFileSync(path, "utf8");
 const attrMatches = (source, attribute) => [...source.matchAll(new RegExp("(?:\\s|<)" + attribute + '="([^"]*)"', "g"))].map((m) => m[1]);
 const referenceIssues = [];
 const idIssues = [];
+const headerContractIssues = [];
 const scriptPaths = new Set();
 let references = 0;
 for (const name of pages) {
   const file = join(demoDir, name);
   const source = fileText(file);
   const ids = attrMatches(source, "id");
+  if (source.includes("data-bb-panel-topnav")) {
+    const scripts = attrMatches(source, "src");
+    if (!scripts.some((value) => value.endsWith("/assets/js/panel/bb-panel-header.js") || value.endsWith("../../assets/js/panel/bb-panel-header.js"))) {
+      headerContractIssues.push(name + ": top navigation requires bb-panel-header.js");
+    }
+  }
   const seen = new Set();
   for (const id of ids) {
     if (seen.has(id)) idIssues.push(name + ": duplicate id=" + id);
@@ -56,6 +63,7 @@ for (const name of pages) {
 }
 report("Panel HTML local references (" + pages.length + " pages, " + references + " refs)", referenceIssues);
 report("Panel HTML IDs and aria-controls", idIssues);
+report("Panel top navigation shared header contract", headerContractIssues);
 const pageRegistry = fileText(resolve(jsDir, "bb-panel-pages.js"));
 const registryKeys = new Set(pageRegistry.split("\n").filter((line) => line.includes(": {title:")).map((line) => line.trim().split('"')[1]));
 const menuIssues = [];

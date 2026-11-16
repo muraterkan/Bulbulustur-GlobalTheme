@@ -2,6 +2,147 @@
 (function () {
 "use strict";
 var panel = document.querySelector("[data-bb-panel]"); if (!panel) return;
+
+/* Shared top navigation: every panel page gets the same icon-led mega menu.
+   Physical page links stay in the panel layer; core menu remains project-agnostic. */
+var topnav = panel.querySelector("[data-bb-panel-topnav]");
+if (topnav) {
+  topnav.innerHTML = `
+    <div class="bb-menu bb-menu-hover-bg bb-menu-active-bg" data-bb-panel-topnav-menu>
+      <div class="bb-menu-item">
+        <a class="bb-menu-link" href="dashboard.html">Gösterge Paneli</a>
+      </div>
+
+      <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="pages">
+        <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_pages">
+          Sayfalar <span class="bb-menu-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-mega" id="bb_panel_topnav_pages" data-bb-menu-placement="bottom-start">
+          <div class="bb-panel-mega-layout">
+            <div class="bb-panel-mega-main">
+              <div class="bb-panel-mega-items">
+                <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="profil.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
+                  <span><strong>Profil</strong><small>Kullanıcı görünümü ve etkinlikler</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-success" href="hesap.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
+                  <span><strong>Hesap</strong><small>Ayarlar, güvenlik ve tercihler</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="fatura.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></span>
+                  <span><strong>Faturalar</strong><small>Fatura listesi ve detayları</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="fiyatlandirma.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">payments</span></span>
+                  <span><strong>Fiyatlandırma</strong><small>Plan ve paket karşılaştırmaları</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="ekibimiz.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span>
+                  <span><strong>Ekibimiz</strong><small>Kurumsal ekip ve kültür sayfası</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-info" href="blog.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">article</span></span>
+                  <span><strong>Blog</strong><small>İçerik ve yayın ekranları</small></span>
+                </a>
+              </div>
+            </div>
+            <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
+              <strong>Daha Fazla Sayfa</strong>
+              <a href="sosyal-akis.html">Sosyal Akış</a>
+              <a href="destek-merkezi.html">Destek Merkezi</a>
+              <a href="istatistikler.html">İstatistikler</a>
+              <a href="grafikler.html">Grafikler</a>
+              <a href="widget-listeleri.html">Widget Listeleri</a>
+            </aside>
+          </div>
+          <div class="bb-panel-mega-footer">
+            <span><strong>Panel sayfa şablonları</strong><small>Hazır ekranları aynı kabuk ve component sistemiyle kullan.</small></span>
+            <a class="btn bb-btn-bg-primary btn-sm" href="layoutlar.html">Keşfet</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="apps">
+        <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_apps">
+          Uygulamalar <span class="bb-menu-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-mega" id="bb_panel_topnav_apps" data-bb-menu-placement="bottom-start">
+          <div class="bb-panel-mega-layout">
+            <div class="bb-panel-mega-main">
+              <div class="bb-panel-mega-items">
+                <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="siparisler.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span></span>
+                  <span><strong>Siparişler</strong><small>Liste ve sipariş detay akışı</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-success" href="urun-olustur.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">add_box</span></span>
+                  <span><strong>Ürün Oluştur</strong><small>Ürün formu ve içerik alanları</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="kisiler.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">contacts</span></span>
+                  <span><strong>Kişiler</strong><small>Kişi kartları ve liste görünümü</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="abonelik.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">subscriptions</span></span>
+                  <span><strong>Abonelik</strong><small>Plan durumu ve abonelik detayları</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="roller.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span></span>
+                  <span><strong>Roller</strong><small>Rol listesi ve yönetim görünümü</small></span>
+                </a>
+                <a class="bb-panel-mega-link bb-panel-mega-link-info" href="yetkiler.html">
+                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span></span>
+                  <span><strong>Yetkiler</strong><small>Yetki matrisi ve erişim alanları</small></span>
+                </a>
+              </div>
+            </div>
+            <aside class="bb-panel-mega-side" aria-label="Araçlar ve örnekler">
+              <strong>Araçlar ve Örnekler</strong>
+              <a href="listeler.html">Liste / Tablo</a>
+              <a href="formlar.html">Formlar</a>
+              <a href="grafikler.html">Grafikler</a>
+              <a href="istatistikler.html">İstatistikler</a>
+              <a href="widget-listeleri.html">Widget Listeleri</a>
+            </aside>
+          </div>
+          <div class="bb-panel-mega-footer">
+            <span><strong>Uygulama ekranları</strong><small>Gerçek panel akışlarına bağlanmış hazır örnekleri incele.</small></span>
+            <a class="btn bb-btn-bg-primary btn-sm" href="siparisler.html">Keşfet</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="layouts">
+        <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_layouts">
+          Düzenler <span class="bb-menu-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-nav-menu" id="bb_panel_topnav_layouts" data-bb-menu-placement="bottom-start">
+          <a class="bb-panel-nav-menu-link" href="layoutlar.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span><span><strong>Yerleşim Planları</strong><small>Sidebar, üst menü ve auth düzenleri</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="header.html"><span class="material-symbols-outlined" aria-hidden="true">web_asset</span><span><strong>Üst Bar</strong><small>Header ve üst navigasyon</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="sidebar.html"><span class="material-symbols-outlined" aria-hidden="true">left_panel_open</span><span><strong>Sidebar</strong><small>Panel kenar menüsü</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="toolbar.html"><span class="material-symbols-outlined" aria-hidden="true">toolbar</span><span><strong>Toolbar</strong><small>Başlık, breadcrumb ve aksiyonlar</small></span></a>
+        </div>
+      </div>
+
+      <div class="bb-menu-item">
+        <a class="bb-menu-link" href="destek-merkezi.html">Yardım</a>
+      </div>
+    </div>
+  `;
+
+  var currentPage = (window.location.pathname.split("/").pop() || "").toLowerCase();
+  topnav.querySelectorAll("a[href]").forEach(function (link) {
+    var href = link.getAttribute("href");
+    if (!href || href.charAt(0) === "#" || href.indexOf("../") === 0) return;
+    var targetPage = href.split(/[?#]/)[0].split("/").pop().toLowerCase();
+    if (targetPage !== currentPage) return;
+    link.setAttribute("aria-current", "page");
+    var group = link.closest("[data-bb-panel-nav-group]");
+    if (group) group.classList.add("active");
+  });
+}
+
 /* One notification template powers every panel page. The source HTML keeps its fallback. */
 var notificationHost = panel.querySelector('[aria-controls="bb_notifications_pop"]')?.closest("[data-bb-panel-popup]");
 var notificationPanel = notificationHost?.querySelector("#bb_notifications_pop");
