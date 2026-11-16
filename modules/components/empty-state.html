@@ -200,22 +200,6 @@
     </div>
 
   </div>
-
-  <script>
-    (function () {
-      var root = document.documentElement;
-
-      function setTheme(theme) {
-        root.setAttribute("data-bs-theme", theme);
-      }
-
-      document.querySelectorAll("[data-bb-theme]").forEach(function (button) {
-        button.addEventListener("click", function () {
-          setTheme(button.getAttribute("data-bb-theme"));
-        });
-      });
-    })();
-  </script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
