@@ -280,3 +280,9 @@
     align-self: flex-start;
   }
 }
+
+.bb-table-progress-meter {
+  width: 100%;
+  height: var(--bb-space-2);
+  accent-color: var(--bb-primary);
+}
