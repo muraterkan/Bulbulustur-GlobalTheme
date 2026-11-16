@@ -39,6 +39,12 @@
   const field = (name) => form.elements.namedItem(name);
   const message = (value) => { feedback.textContent = value; };
   const count = (group) => group === "Tüm Kişiler" ? records.length : records.filter((item) => item.group === group).length;
+  const syncCounts = (visible) => {
+    const total = $("[data-bb-contacts-total]");
+    const visibleCount = $("[data-bb-contacts-visible-count]");
+    if (total) total.textContent = records.length + " kişi";
+    if (visibleCount) visibleCount.textContent = visible + " kayıt";
+  };
   function setPhoto(value) {
     currentPhoto = value || "";
     photoPreview.hidden = !currentPhoto;
@@ -74,6 +80,7 @@
     const term = $("[data-bb-contacts-search]").value.trim().toLocaleLowerCase("tr-TR");
     const matches = records.filter((item) => (activeGroup === "Tüm Kişiler" || item.group === activeGroup) && (item.name + " " + item.email + " " + item.company).toLocaleLowerCase("tr-TR").includes(term));
     $("[data-bb-contacts-empty]").hidden = matches.length !== 0;
+    syncCounts(matches.length);
     for (const item of matches) {
       const button = document.createElement("button");
       button.type = "button";
@@ -88,7 +95,13 @@
       title.textContent = item.name;
       const email = document.createElement("small");
       email.textContent = item.email;
-      info.append(title, email); button.append(avatar, info);
+      const meta = document.createElement("span");
+      meta.className = "bb-contacts-person-meta";
+      const group = document.createElement("span");
+      group.className = "bb-badge bb-badge-light-primary";
+      group.textContent = item.group;
+      meta.append(group);
+      info.append(title, email, meta); button.append(avatar, info);
       button.addEventListener("click", () => openRecord(item));
       list.append(button);
     }
@@ -99,7 +112,7 @@
     photoInput.value = "";
     setPhoto("");
     field("membership").value = activeGroup !== "Tüm Kişiler" ? activeGroup : "Genel";
-    $("[data-bb-contacts-form-heading]").textContent = "Yeni Kişi Ekle";
+    $("[data-bb-contacts-form-heading]").textContent = "Yeni Kişi";
     message(""); drawList(); field("name").focus();
   }
   function openRecord(item) {
