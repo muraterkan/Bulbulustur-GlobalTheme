@@ -37,10 +37,10 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 
 | # | Konu | Not |
 |---|------|-----|
-| D1 | `base/_zindex.scss` derlenmiyor | Değerleri Bootstrap ölçeğiyle çakışır (sticky 100 / drawer 900 / modal 1000; Bootstrap 1020/1055). Derlenirse z-index davranışı değişir. Şimdilik fallback'ler (1020/1055) geçerli. |
+| D1 | `base/_zindex.scss` | **ÇÖZÜLDÜ 16.11.2026:** Dosya hiçbir build'e bağlı değildi ve Bootstrap ölçeğiyle çakışıyordu; silindi. Mevcut fallback davranışı değişmedi. |
 | D2 | `components/forms-final` | ChatGPT sözleşmesinde ana girişten ayrıydı; senin `main.scss`'inde "Final Overrides" olarak bağlı. |
-| D3 | `components/product-quick-view` (579 satır) | Panel için gerekmeyebilir; "sonra bakarız" demiştin. |
-| D4 | `js/bb-modal.js` | ES module (`export class`), hiçbir sayfa/repo çağırmıyor; Bootstrap modal kullanılıyor. `assets/js`'e taşınır, silinmez. |
+| D3 | `components/product-quick-view` | **ÇÖZÜLDÜ 16.11.2026:** Müşteri-site ürün kompozisyonu olduğu için GlobalTheme core kapsamından çıkarıldı; partial, demo, katalog kaydı ve compiled CSS çıktısı kaldırıldı. |
+| D4 | `js/bb-modal.js` | **ÇÖZÜLDÜ 16.11.2026:** Hiçbir sayfa tarafından yüklenmeyen ES module kaldırıldı. Modal demoları Bootstrap modal davranışını kullanmaya devam ediyor. |
 | D5 | Eski depoya (`muraterkan/bulbulustur.theme`) işaret eden yerler | `draugr.ortobella/RawTemplate/Styles/theme.lock.json` ve AI bilgi SQL'leri (`20261102`, `20261106`, `20261111`) "Tema deposu = bulbulustur.theme main" diyor; Draugr hattı main.css'i oradan klonluyor. Eski depo `e7836fd`'e geri alındı. Karar: Draugr main.css kaynağı hangi depo olacak? |
 | D6 | 9 tanımsız `--bb-*` kanca | Panel şablonunda token olarak tanımlamak istersen eklenir. |
 
@@ -49,12 +49,12 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 - A1, A2, A3 düzeltildi. Derleme çıktısında tam 4 bildirim değişti, başka fark yok.
 - B1: 11 ölü partial silindi (derleme çıktısı değişmedi). B2/B3: mükerrer media ve pages silindi. B4/B5: 5 JS `assets/js`'e taşındı, lightbox kopyası silindi, demo yolları düzeltildi. B6: `scripts/check-contracts.mjs` + `npm run check:contracts` / `check:css` eklendi (16/16 geçti; yapay yetim partial ile FAIL verdiği görüldü).
 - Derleme: sass 1.93.2, uyarısız, 451838 → 451982 bayt.
-- Yapılmadı: tarayıcıda görsel kontrol; D1–D6 kararları.
+- Yapılmadı: tarayıcıda görsel kontrol. Açık kararlar: D2, D5, D6. D1, D3 ve D4 16.11.2026'da çözüldü.
 
 ## F. Ek bulgu (renk paketi çalışmasında)
 
 - D7: `themes/_token-engine.scss` ile `base/_theme.scss` aynı türetilmiş tokenları (`--bb-primary-hover/active/light/clarity`, `--bb-link-color`) tanımlıyor. `html[data-bs-theme]` varsa base (özgüllük 0,1,1) kazanıyor; öznitelik yoksa token-engine kazanıyor. Doğrulama: `data-bs-theme="light"` ile `--bb-primary-hover` = `#e6c300` (base değeri), token-engine'in %90 karışımı değil. Tek sahip seçilmeli (karar bekliyor, dokunulmadı).
-- Renk paketi `atolye` eklendi: `themes/_pack-atolye.scss`, demo `modules/pack-atolye.html`. Paket seçilmezse çıktı değişmez (`?pack=off` ile sarı varsayılan doğrulandı).
+- Renk paketi `atolye` eklendi: `themes/_pack-atolye.scss`, demo `modules/foundation/pack-atolye.html`. Paket seçilmezse çıktı değişmez (`?pack=off` ile sarı varsayılan doğrulandı).
 
 ### D7 çözümü (15.11.2026)
 
@@ -71,5 +71,17 @@ Karar: türetilmiş durum tokenlarının (`--bb-*-hover/active/light/clarity`, 8
 - **Düğme yazısı:** `success`/`warning` dolgu üstü yazı beyaz yerine koyu mürekkep (`navy-900`; success 2.28 → 7.99). `danger` dolgu `red-500` → `red-600` (`#d43030`, beyaz 3.76 → 4.92). Koyu temada warning yazısı açık renk çıkma hatası da düzeldi (`gray-900` koyu temada açık renge dönüyordu).
 - **Ölçek:** tüm aksan ölçekleri 50–900 (200/400/600/800/900 eklendi, mevcut 50/100/300/500/700 değişmedi); sarı 400/800/900, navy 200/400/600/800 eklendi.
 - **Grafik/durum:** `themes/_dataviz.scss`: `--bb-chart-1..8` (kategorik, CVD-güvenli sabit sıra), `--bb-chart-seq-1..7`, `--bb-chart-div-*`, `--bb-chart-surface/grid/axis/label/gap`, `--bb-status-good/warning/serious/critical/neutral`. Pakete bağımsız. Doğrulayıcı (dataviz `validate_palette`): açık ve koyu tüm kapılar PASS; açıkta 3 seri kontrast WARN (etiket/tablo zorunlu).
-- **Bileşenler:** `bb-skeleton` (+text/title/circle/avatar/rect/pill, reduced-motion), `bb-status` (online/away/busy/offline/serious, etiketli, çevrimdışı içi boş halka), `bb-kbd`, `bb-code`, `bb-code-block`. Demo: `modules/panel-tokens.html`.
+- **Bileşenler:** `bb-skeleton` (+text/title/circle/avatar/rect/pill, reduced-motion), `bb-status` (online/away/busy/offline/serious, etiketli, çevrimdışı içi boş halka), `bb-kbd`, `bb-code`, `bb-code-block`. Demo: `modules/foundation/tokens.html`.
 - Sözleşme 22/22.
+
+
+## H. Mimari ayrıştırma güncellemesi (16.11.2026)
+
+- Panel SCSS yalnız `assets/scss/layout/panel/` altında toplandı; core → panel bağımlılığı otomatik kontrol altında.
+- JavaScript `assets/js/core/` ve `assets/js/panel/` olarak ayrıldı; `assets/js/` kökünde loose JS yasaklandı.
+- Demo kaynakları `modules/components/`, `modules/foundation/`, `modules/panel/` olarak ayrıldı; `modules/` kökünde loose HTML yasaklandı.
+- `product-gallery.html` stilsiz/orphan demo olduğu için kaldırıldı. `product-quick-view` müşteri-site kompozisyonu olduğu için core'dan çıkarıldı.
+- `layout/_toolbar1.scss` adı `layout/_toolbar.scss` olarak normalize edildi.
+- Kabul zinciri: `check:architecture`, `check:contracts`, `check:components`, `check:panel`.
+- `check:architecture` panel partial/import envanterini, PANEL TEMPLATE ONLY blok sahipliğini ve müşteri-site kompozisyonlarının core'a sızmamasını denetliyor.
+- `check:components` component HTML envanteri ile panel component kataloğunu birebir karşılaştırıyor.
