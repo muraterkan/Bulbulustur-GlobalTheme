@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"dashboard-pos-system":"pos-system.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -16,6 +16,7 @@
   var pages = {
     "dashboard-overview": {title:"Overview", group:"Dashboard", section:"DASHBOARDS"},
     "dashboard-analytics": {title:"Analitik", group:"Dashboard", section:"DASHBOARDS"},
+    "dashboard-pos-system": {title:"POS System", group:"Gösterge Paneli", section:"DASHBOARDS"},
     "profile-overview": {title:"Overview", group:"User Profile", section:"PAGES"},
     "profile-projects": {title:"Projects", group:"User Profile", section:"PAGES"},
     "profile-campaigns": {title:"Campaigns", group:"User Profile", section:"PAGES"},
