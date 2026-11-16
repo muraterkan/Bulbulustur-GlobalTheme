@@ -5,7 +5,7 @@
 
 .bb-progress {
   /* Local tokens */
-  --bb-progress-height: 0.5rem;
+  --bb-progress-height: 0.6667rem;
   --bb-progress-radius: var(--bb-radius-pill);
 
   --bb-progress-track-bg: var(--bb-tertiary-bg);
@@ -69,15 +69,15 @@
 ------------------------------------- */
 
 .bb-progress--sm {
-  --bb-progress-height: 5px;
+  --bb-progress-height: 6.6667px;
 }
 
 .bb-progress--md {
-  --bb-progress-height: 8px;
+  --bb-progress-height: 10.6667px;
 }
 
 .bb-progress--lg {
-  --bb-progress-height: 12px;
+  --bb-progress-height: 16px;
 }
 
 /* -------------------------------------
