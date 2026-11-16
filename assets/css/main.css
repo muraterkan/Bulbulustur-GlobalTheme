@@ -18187,9 +18187,13 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* Panel footer: compact Metronic-style metadata and links. Shared footer stays unchanged. */
 .bb-panel {
   --bb-panel-footer-fs: var(--bb-fs-xs);
-  --bb-panel-footer-py: var(--bb-space-3);
+  --bb-panel-footer-py: var(--bb-space-4);
   --bb-panel-footer-px: var(--bb-panel-content-gap);
 }
+.bb-panel .bb-shell-footer .bb-footer-bar {
+  background: transparent;
+}
+
 .bb-panel .bb-shell-footer .bb-footer-inner {
   min-height: 0;
   padding-block: var(--bb-panel-footer-py);
