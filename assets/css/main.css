@@ -20568,3 +20568,108 @@ html[data-bb-ui-profile="neutral"][data-bs-theme="dark"] {
   --bb-link-color: #d9dbe0;
   --bb-link-hover-color: var(--bb-primary);
 }
+
+/* Explicit appearance selector + flag language menu. */
+.bb-panel .bb-panel-user-preference {
+  display: grid;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-3) var(--bb-space-4);
+}
+.bb-panel .bb-panel-user-preference-label {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+}
+.bb-panel .bb-panel-user-theme-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bb-space-2);
+}
+.bb-panel .bb-panel-user-theme-choices button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-space-2);
+  min-height: 2.25rem;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-body-color);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-panel-user-theme-choices button.active {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary-text);
+}
+.bb-panel .bb-panel-user-theme-choices .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+}
+.bb-panel .bb-panel-user-language {
+  position: relative;
+  padding: 0 var(--bb-space-4) var(--bb-space-3);
+}
+.bb-panel .bb-panel-user-language-toggle {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--bb-space-2);
+  width: 100%;
+  padding: var(--bb-space-2) 0;
+  border: 0;
+  background: transparent;
+  color: var(--bb-body-color);
+  text-align: left;
+}
+.bb-panel .bb-panel-user-language-current {
+  justify-self: end;
+  font-size: var(--bb-fs-sm);
+  white-space: nowrap;
+}
+.bb-panel .bb-panel-user-language-toggle .material-symbols-outlined {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-base);
+}
+.bb-panel .bb-panel-user-language-menu {
+  position: absolute;
+  z-index: 30;
+  inset-inline: var(--bb-space-3);
+  inset-block-start: calc(100% - var(--bb-space-2));
+  padding: var(--bb-space-2);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background: var(--bb-surface-elevated);
+  box-shadow: var(--bb-shadow);
+}
+.bb-panel .bb-panel-user-language-option {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--bb-space-2);
+  width: 100%;
+  padding: var(--bb-space-2) var(--bb-space-3);
+  border: 0;
+  border-radius: var(--bb-radius-sm);
+  background: transparent;
+  color: var(--bb-body-color);
+  text-align: left;
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-panel-user-language-option:hover,
+.bb-panel .bb-panel-user-language-option.active {
+  background: var(--bb-tertiary-bg);
+}
+.bb-panel .bb-panel-language-flag {
+  width: 1.5rem;
+  text-align: center;
+  font-size: var(--bb-fs-base);
+}
+.bb-panel .bb-panel-language-check {
+  visibility: hidden;
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-base);
+}
+.bb-panel .bb-panel-user-language-option.active .bb-panel-language-check {
+  visibility: visible;
+}
