@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"footer-draugr":"draugr.html?view=dashboard","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","dashboard-pos-system":"pos-system.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"footer-draugr":"draugr.html?view=dashboard","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"posb.html?view=dashboard","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -16,7 +16,6 @@
   var pages = {
     "dashboard-overview": {title:"Overview", group:"Dashboard", section:"DASHBOARDS"},
     "dashboard-analytics": {title:"Analitik", group:"Dashboard", section:"DASHBOARDS"},
-    "dashboard-pos-system": {title:"POS System", group:"Gösterge Paneli", section:"DASHBOARDS"},
     "footer-about": {title:"Hakkında", group:"Ekosistem", section:"PAGES"},
     "footer-integrations": {title:"Entegrasyon Merkezi", group:"Ekosistem", section:"PAGES"},
     "footer-draugr": {title:"Draugr", group:"Ekosistem", section:"PAGES"},
@@ -30,6 +29,18 @@
     "draugr-localization": {title:"Dil & Yerelleştirme", group:"Draugr", section:"DRAUGR"},
     "draugr-settings": {title:"Kanal Ayarları", group:"Draugr", section:"DRAUGR"},
     "draugr-subscription": {title:"Abonelik", group:"Draugr", section:"DRAUGR"},
+    "posb-dashboard": {title:"Dashboard", group:"POSB", section:"POSB"},
+    "posb-quick-sale": {title:"Hızlı Satış", group:"POSB", section:"POSB"},
+    "posb-branches": {title:"Şubeler", group:"POSB / Şube & Kasa", section:"POSB"},
+    "posb-registers": {title:"Kasalar", group:"POSB / Şube & Kasa", section:"POSB"},
+    "posb-shifts": {title:"Vardiya & Gün", group:"POSB / Şube & Kasa", section:"POSB"},
+    "posb-invoices": {title:"Faturalar", group:"POSB / Fatura", section:"POSB"},
+    "posb-invoice-settings": {title:"Fatura Ayarları", group:"POSB / Fatura", section:"POSB"},
+    "posb-warehouses": {title:"Depolar", group:"POSB / Stok & Transfer", section:"POSB"},
+    "posb-stock": {title:"Stok", group:"POSB / Stok & Transfer", section:"POSB"},
+    "posb-transfers": {title:"Transferler", group:"POSB / Stok & Transfer", section:"POSB"},
+    "posb-customers": {title:"Müşteriler", group:"POSB / Müşteri & Tedarikçi", section:"POSB"},
+    "posb-suppliers": {title:"Tedarikçiler", group:"POSB / Müşteri & Tedarikçi", section:"POSB"},
     "profile-overview": {title:"Overview", group:"User Profile", section:"PAGES"},
     "profile-projects": {title:"Projects", group:"User Profile", section:"PAGES"},
     "profile-campaigns": {title:"Campaigns", group:"User Profile", section:"PAGES"},
@@ -94,6 +105,10 @@
     "layout-auth": {title:"Authentication", group:"Layouts", section:"LAYOUTS"},
   };
   var id = new URLSearchParams(window.location.search).get("page") || panel.getAttribute("data-bb-panel-default-page") || "dashboard-overview";
+  if (/\/posb\.html$/.test(window.location.pathname)) {
+    var posbView = new URLSearchParams(window.location.search).get("view") || "dashboard";
+    id = "posb-" + posbView;
+  }
   if (/\/draugr\.html$/.test(window.location.pathname)) {
     var draugrView = new URLSearchParams(window.location.search).get("view") || "dashboard";
     id = "draugr-" + draugrView;
