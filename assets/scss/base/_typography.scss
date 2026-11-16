@@ -5,11 +5,11 @@
    Density: data-bb-density="compact"
 
    Typography Decision:
-   - 11px = micro only / legal / extreme helper
-   - 12px = tiny helper / id / timestamp
-   - 13px = compact UI / badge / chip / dense table
-   - 15px = body / base content
-   - 16px = comfortable content / support text
+   - 12px = micro only / legal / extreme helper
+   - 13px = tiny helper / id / timestamp
+   - 14px = compact UI / badge / chip / dense table
+   - 16px = body / base content
+   - 17px = comfortable content / support text
    - 18px = lead / strong body / compact card title
    - 20px = card title / section subtitle
    - 24px = section title support
@@ -65,11 +65,11 @@
      Font Size Scale
   ------------------------------------- */
 
-  --bb-fs-2xs: 0.6875rem;  /* 11px */
-  --bb-fs-xs: 0.75rem;     /* 12px */
-  --bb-fs-sm: 0.8125rem;   /* 13px */
-  --bb-fs-base: 0.9375rem; /* 15px */
-  --bb-fs-md: 1rem;        /* 16px */
+  --bb-fs-2xs: 0.75rem;     /* 12px */
+  --bb-fs-xs: 0.8125rem;   /* 13px */
+  --bb-fs-sm: 0.875rem;    /* 14px */
+  --bb-fs-base: 1rem;      /* 16px */
+  --bb-fs-md: 1.0625rem;   /* 17px */
   --bb-fs-lg: 1.125rem;    /* 18px */
   --bb-fs-xl: 1.25rem;     /* 20px */
   --bb-fs-2xl: 1.5rem;     /* 24px */
@@ -87,9 +87,9 @@
   --bb-h1: 1.875rem;   /* 30px */
   --bb-h2: 1.625rem;   /* 26px */
   --bb-h3: 1.375rem;   /* 22px */
-  --bb-h4: 1.1875rem;  /* 19px */
-  --bb-h5: 1.0625rem;  /* 17px */
-  --bb-h6: 0.9375rem;  /* 15px */
+  --bb-h4: 1.25rem;    /* 20px */
+  --bb-h5: 1.125rem;   /* 18px */
+  --bb-h6: 1rem;       /* 16px */
 
   /* -------------------------------------
      Font Weight Scale
@@ -258,15 +258,15 @@
 [data-bb-density="compact"] {
   --bb-root-font-size: 1rem;
 
-  --bb-fs-2xs: 0.625rem;
-  --bb-fs-xs: 0.6875rem;
-  --bb-fs-sm: 0.75rem;
-  --bb-fs-base: 0.875rem;
-  --bb-fs-md: 0.9375rem;
-  --bb-fs-lg: 1rem;
-  --bb-fs-xl: 1.125rem;
+  --bb-fs-2xs: 0.6875rem;
+  --bb-fs-xs: 0.75rem;
+  --bb-fs-sm: 0.8125rem;
+  --bb-fs-base: 0.9375rem;
+  --bb-fs-md: 1rem;
+  --bb-fs-lg: 1.0625rem;
+  --bb-fs-xl: 1.1875rem;
   --bb-fs-2xl: 1.375rem;
-  --bb-fs-3xl: 1.625rem;
+  --bb-fs-3xl: 1.75rem;
 
   --bb-fs-display-sm: 1.625rem;
   --bb-fs-display-md: 2rem;
@@ -276,9 +276,9 @@
   --bb-h1: 1.75rem;
   --bb-h2: 1.5rem;
   --bb-h3: 1.25rem;
-  --bb-h4: 1.0625rem;
-  --bb-h5: 0.9375rem;
-  --bb-h6: 0.875rem;
+  --bb-h4: 1.125rem;
+  --bb-h5: 1rem;
+  --bb-h6: 0.9375rem;
 
   --bb-line-height-base: 1.58;
   --bb-line-height-heading: 1.18;
@@ -295,9 +295,9 @@
     --bb-h1: 1.875rem;   /* 30px */
     --bb-h2: 1.625rem;   /* 26px */
     --bb-h3: 1.375rem;   /* 22px */
-    --bb-h4: 1.1875rem;  /* 19px */
-    --bb-h5: 1.0625rem;  /* 17px */
-    --bb-h6: 0.9375rem;  /* 15px */
+    --bb-h4: 1.25rem;    /* 20px */
+    --bb-h5: 1.125rem;   /* 18px */
+    --bb-h6: 1rem;       /* 16px */
 
     --bb-fs-display-sm: 1.75rem; /* 28px */
     --bb-fs-display-md: 2.25rem; /* 36px */
@@ -309,7 +309,7 @@
     --bb-h1: 1.625rem;
     --bb-h2: 1.375rem;
     --bb-h3: 1.1875rem;
-    --bb-h4: 1rem;
+    --bb-h4: 1.0625rem;
 
     --bb-fs-display-sm: 1.625rem;
     --bb-fs-display-md: 2rem;
