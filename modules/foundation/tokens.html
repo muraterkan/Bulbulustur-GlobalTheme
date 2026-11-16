@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel tokenları: metin, grafik, durum, skeleton, kbd</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search), h = document.documentElement;
+      if (q.get("theme") === "dark") h.setAttribute("data-bs-theme", "dark");
+      if (q.get("pack")) h.setAttribute("data-bb-pack", q.get("pack"));
+    })();
+  </script>
+  <style>
+    body { background: var(--bb-body-bg); color: var(--bb-body-color); font-family: var(--bb-font-sans, system-ui, sans-serif); }
+    h2 { font-size: 1rem; margin: 1.5rem 0 .6rem; }
+    .row2 { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .ch { display: flex; gap: var(--bb-chart-gap); height: 56px; align-items: flex-end; padding: .75rem; background: var(--bb-chart-surface); border: 1px solid var(--bb-chart-grid); border-radius: .5rem; }
+    .ch i { width: 36px; border-radius: 4px 4px 0 0; }
+    .seq { display: flex; } .seq i { width: 48px; height: 28px; }
+    .t { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="container py-4" style="max-width: 1000px;">
+    <h1 style="font-size: 1.4rem;">Panel tokenları <small style="color: var(--bb-secondary-color); font-size: .85rem;"><a href="?">açık</a> · <a href="?theme=dark">koyu</a> · <a href="?pack=atolye">atölye</a> · <a href="?theme=dark&pack=atolye">atölye koyu</a></small></h1>
+
+    <h2>Metin-güvenli renkler (-text) ve dolgu + yazı (-inverse)</h2>
+    <div class="row2 t">
+      <span style="color: var(--bb-primary-text)">primary-text</span>
+      <span style="color: var(--bb-success-text)">success-text</span>
+      <span style="color: var(--bb-info-text)">info-text</span>
+      <span style="color: var(--bb-warning-text)">warning-text</span>
+      <span style="color: var(--bb-danger-text)">danger-text</span>
+    </div>
+    <div class="row2 mt-2 t">
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-primary);color:var(--bb-primary-inverse)">primary</span>
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-success);color:var(--bb-success-inverse)">success</span>
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-info);color:var(--bb-info-inverse)">info</span>
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-warning);color:var(--bb-warning-inverse)">warning</span>
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-danger);color:var(--bb-danger-inverse)">danger</span>
+      <span style="padding:.4rem .8rem;border-radius:.4rem;background:var(--bb-dark);color:var(--bb-dark-inverse)">dark</span>
+    </div>
+    <div class="mt-3">
+      <div class="bb-alert bb-alert-success" role="alert"><div class="bb-alert-title">Başarılı</div><div class="bb-alert-text">Alert başlığı artık success-text.</div></div>
+      <div class="bb-alert bb-alert-danger mt-2" role="alert"><div class="bb-alert-title">Hata</div><div class="bb-alert-text">Alert başlığı artık danger-text.</div></div>
+      <div class="bb-alert bb-alert-warning mt-2" role="alert"><div class="bb-alert-title">Uyarı</div><div class="bb-alert-text">Alert başlığı artık warning-text.</div></div>
+    </div>
+
+    <h2>Grafik: kategorik, sıralı, ayrışan</h2>
+    <div class="ch" id="ch"></div>
+    <div class="seq mt-2" id="seq"></div>
+    <div class="seq mt-2"><i style="background:var(--bb-chart-div-neg)"></i><i style="background:var(--bb-chart-div-mid)"></i><i style="background:var(--bb-chart-div-pos)"></i></div>
+
+    <h2>Durum</h2>
+    <div class="row2">
+      <span class="bb-status bb-status-online"><span class="bb-status-label">Çevrimiçi</span></span>
+      <span class="bb-status bb-status-away"><span class="bb-status-label">Uzakta</span></span>
+      <span class="bb-status bb-status-busy"><span class="bb-status-label">Meşgul</span></span>
+      <span class="bb-status bb-status-offline"><span class="bb-status-label">Çevrimdışı</span></span>
+      <span class="bb-status bb-status-serious"><span class="bb-status-label">Ciddi</span></span>
+    </div>
+
+    <h2>Skeleton</h2>
+    <div class="row2" style="align-items: flex-start; gap: 1rem;">
+      <div class="bb-skeleton bb-skeleton-avatar"></div>
+      <div style="flex: 1;">
+        <div class="bb-skeleton bb-skeleton-title"></div>
+        <div class="bb-skeleton bb-skeleton-text"></div>
+        <div class="bb-skeleton bb-skeleton-text"></div>
+      </div>
+      <div class="bb-skeleton bb-skeleton-rect" style="width: 220px;"></div>
+    </div>
+
+    <h2>Kbd &amp; code</h2>
+    <p>Kaydetmek için <span class="bb-kbd">Ctrl</span> + <span class="bb-kbd">S</span>, arama için <span class="bb-kbd">/</span>. Satır içi <code class="bb-code">--bb-primary-text</code>.</p>
+    <pre class="bb-code bb-code-block">npm run build:css
+npm run check:contracts</pre>
+  </main>
+  <script>
+    var ch = document.getElementById("ch"), sq = document.getElementById("seq"), i;
+    for (i = 1; i <= 8; i++) ch.insertAdjacentHTML("beforeend", '<i style="height:' + (20 + i * 4) + 'px;background:var(--bb-chart-' + i + ')"></i>');
+    for (i = 1; i <= 7; i++) sq.insertAdjacentHTML("beforeend", '<i style="background:var(--bb-chart-seq-' + i + ')"></i>');
+  </script>
+</body>
+</html>
