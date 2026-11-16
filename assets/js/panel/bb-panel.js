@@ -71,7 +71,7 @@
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
   var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
   if (sidebarLogo) {
-    sidebarLogo.querySelectorAll(".bb-template-logo-mark, .bb-sidebar-brand-logo").forEach(function (node) { node.remove(); });
+    sidebarLogo.querySelectorAll(".bb-template-logo-mark, .bb-sidebar-brand-logo, .bb-panel-brand-text").forEach(function (node) { node.remove(); });
     var brandLogo = document.createElement("img");
     brandLogo.className = "bb-sidebar-brand-logo";
     brandLogo.src = "../../assets/media/logos/logo-light.png";
