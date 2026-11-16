@@ -48,6 +48,7 @@ const inlineScriptIssues = [];
 const emptyPageIssues = [];
 const invalidPixelUtilityIssues = [];
 const cardShadowIssues = [];
+const themeInitIssues = [];
 const jsPaths = new Set();
 
 for (const name of pages) {
@@ -66,6 +67,14 @@ for (const name of pages) {
   if (adapterCount !== 1) adapterIssues.push(name + ": adapter count=" + adapterCount);
   if (/assets\/js\/(?!core\/|panel\/)[^"'\s]+\.js/.test(source)) {
     adapterIssues.push(name + ": loose assets/js reference");
+  }
+
+  const themeInitCount = (source.match(/assets\/js\/panel\/bb-panel-theme-init\.js/g) || []).length;
+  const themeInitIndex = source.indexOf("assets/js/panel/bb-panel-theme-init.js");
+  const firstStylesheetIndex = source.search(/<link[^>]+rel=["']stylesheet["']/i);
+  if (themeInitCount !== 1) themeInitIssues.push(name + ": theme init count=" + themeInitCount);
+  else if (firstStylesheetIndex !== -1 && themeInitIndex > firstStylesheetIndex) {
+    themeInitIssues.push(name + ": theme init must load before stylesheets");
   }
 
   const scriptSources = [...source.matchAll(/<script[^>]*\ssrc="([^"]+)"/gi)].map((m) => m[1]);
@@ -107,6 +116,7 @@ report("Component HTML duplicate IDs", idIssues);
 report("Component HTML duplicate script sources", duplicateScriptIssues);
 report("Component HTML fixed-pixel utility classes", invalidPixelUtilityIssues);
 report("Component cards use canonical core shadow", cardShadowIssues);
+report("Component theme initializes before stylesheets", themeInitIssues);
 
 const adapterContractIssues = [];
 ["normalizeStylesheetOrder", "bb-component-demo-root", "normalizeDemoCards"].forEach((marker) => {

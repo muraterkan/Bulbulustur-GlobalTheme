@@ -25,11 +25,20 @@ const attrMatches = (source, attribute) => [...source.matchAll(new RegExp("(?:\\
 const referenceIssues = [];
 const idIssues = [];
 const headerContractIssues = [];
+const themeInitIssues = [];
 const scriptPaths = new Set();
 let references = 0;
 for (const name of pages) {
   const file = join(demoDir, name);
   const source = fileText(file);
+  const themeInitCount = (source.match(/assets\/js\/panel\/bb-panel-theme-init\.js/g) || []).length;
+  const themeInitIndex = source.indexOf("assets/js/panel/bb-panel-theme-init.js");
+  const firstStylesheetIndex = source.search(/<link[^>]+rel=["']stylesheet["']/i);
+  if (themeInitCount !== 1) themeInitIssues.push(name + ": theme init count=" + themeInitCount);
+  else if (firstStylesheetIndex !== -1 && themeInitIndex > firstStylesheetIndex) {
+    themeInitIssues.push(name + ": theme init must load before stylesheets");
+  }
+
   const ids = attrMatches(source, "id");
   if (source.includes("data-bb-panel-topnav")) {
     const scripts = attrMatches(source, "src");
@@ -64,6 +73,7 @@ for (const name of pages) {
 report("Panel HTML local references (" + pages.length + " pages, " + references + " refs)", referenceIssues);
 report("Panel HTML IDs and aria-controls", idIssues);
 report("Panel top navigation shared header contract", headerContractIssues);
+report("Panel theme initializes before stylesheets", themeInitIssues);
 const pageRegistry = fileText(resolve(jsDir, "bb-panel-pages.js"));
 const registryKeys = new Set(pageRegistry.split("\n").filter((line) => line.includes(": {title:")).map((line) => line.trim().split('"')[1]));
 const menuIssues = [];
