@@ -5,7 +5,7 @@
   if (!panel) return;
   var demoRoutes = {"contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
-  if (/\/sayfalar\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
+  if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
     return;
   }
