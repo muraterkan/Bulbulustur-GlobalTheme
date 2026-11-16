@@ -1,0 +1,244 @@
+/* =====================================
+   Bulbulustur Theme - Panel Corporate Team
+   PANEL TEMPLATE ONLY.
+   Depends on core tokens/components; must not be imported by core-only builds.
+===================================== */
+
+.bb-panel .bb-team-page {
+  --bb-team-accent: var(--bb-chart-1);
+  --bb-team-accent-alt: var(--bb-chart-3);
+}
+
+.bb-panel .bb-team-surface {
+  display: grid;
+  gap: calc(var(--bb-space-4) * 2);
+  padding: calc(var(--bb-space-4) * 2);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-bg);
+}
+
+.bb-panel .bb-team-intro {
+  display: grid;
+  gap: var(--bb-space-4);
+  max-width: calc(var(--bb-space-4) * 52);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.bb-panel .bb-team-intro h2,
+.bb-panel .bb-team-section-heading h2,
+.bb-panel .bb-team-join h2 {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-h2);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-team-intro p,
+.bb-panel .bb-team-section-heading p,
+.bb-panel .bb-team-join p,
+.bb-panel .bb-team-story p {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-panel .bb-team-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+  min-height: calc(var(--bb-space-4) * 20);
+  padding: var(--bb-space-4);
+  overflow: hidden;
+  border-radius: var(--bb-radius-lg);
+  background:
+    linear-gradient(
+      135deg,
+      var(--bb-tertiary-bg),
+      var(--bb-surface-bg)
+    );
+  border: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-team-hero::before,
+.bb-panel .bb-team-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-team-accent);
+  opacity: var(--bb-disabled-opacity);
+  pointer-events: none;
+}
+
+.bb-panel .bb-team-hero::before {
+  width: calc(var(--bb-space-4) * 13);
+  height: calc(var(--bb-space-4) * 13);
+  inset-inline-start: calc(var(--bb-space-4) * -4);
+  inset-block-start: calc(var(--bb-space-4) * -4);
+}
+
+.bb-panel .bb-team-hero::after {
+  width: calc(var(--bb-space-4) * 11);
+  height: calc(var(--bb-space-4) * 11);
+  inset-inline-end: calc(var(--bb-space-4) * -3);
+  inset-block-end: calc(var(--bb-space-4) * -3);
+  background: var(--bb-team-accent-alt);
+}
+
+.bb-panel .bb-team-hero-person {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-body-bg);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-panel .bb-team-hero-person:nth-child(even) {
+  align-self: start;
+}
+
+.bb-panel .bb-team-hero-person img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bb-panel .bb-team-story {
+  max-width: calc(var(--bb-space-4) * 52);
+  margin-inline: auto;
+}
+
+.bb-panel .bb-team-section-heading {
+  display: grid;
+  gap: var(--bb-space-3);
+  max-width: calc(var(--bb-space-4) * 52);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.bb-panel .bb-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: calc(var(--bb-space-4) * 2) var(--bb-panel-content-gap);
+}
+
+.bb-panel .bb-team-member {
+  display: grid;
+  justify-items: center;
+  gap: var(--bb-space-3);
+  text-align: center;
+}
+
+.bb-panel .bb-team-member-photo {
+  position: relative;
+  width: calc(var(--bb-space-4) * 7);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-panel .bb-team-member-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--bb-space-2);
+  background: var(--bb-team-member-tone, var(--bb-chart-1));
+}
+
+.bb-panel .bb-team-member[data-tone="primary"] { --bb-team-member-tone: var(--bb-chart-1); }
+.bb-panel .bb-team-member[data-tone="success"] { --bb-team-member-tone: var(--bb-chart-3); }
+.bb-panel .bb-team-member[data-tone="warning"] { --bb-team-member-tone: var(--bb-chart-4); }
+.bb-panel .bb-team-member[data-tone="danger"] { --bb-team-member-tone: var(--bb-chart-8); }
+.bb-panel .bb-team-member[data-tone="violet"] { --bb-team-member-tone: var(--bb-chart-7); }
+
+.bb-panel .bb-team-member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bb-panel .bb-team-member h3 {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-team-member p {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-team-join {
+  display: grid;
+  justify-items: center;
+  gap: var(--bb-space-4);
+  max-width: calc(var(--bb-space-4) * 52);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.bb-panel .bb-team-social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-4);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-tertiary-bg);
+}
+
+.bb-panel .bb-team-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+}
+
+.bb-panel .bb-team-social a:hover {
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-team-social .material-symbols-outlined {
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-base);
+}
+
+@media (max-width: 1199.98px) {
+  .bb-panel .bb-team-hero {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .bb-panel .bb-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-panel .bb-team-surface {
+    padding: var(--bb-space-4);
+  }
+
+  .bb-panel .bb-team-hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 0;
+  }
+
+  .bb-panel .bb-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
