@@ -4,9 +4,9 @@ html[data-bb-ui-profile="neutral"][data-bs-theme="dark"] {
   color-scheme: dark;
 
   --bb-body-bg: #15171b;
-  --bb-body-color: #d9dce1;
+  --bb-body-color: #d2d6dc;
   --bb-fw-body: var(--bb-fw-medium);
-  --bb-sidebar-text-color: #c9ced6;
+  --bb-sidebar-text-color: #c3c8d0;
 
   --bb-secondary-bg: #202228;
   --bb-tertiary-bg: #1c1e23;
@@ -16,17 +16,17 @@ html[data-bb-ui-profile="neutral"][data-bs-theme="dark"] {
   --bb-surface-muted: #23262c;
   --bb-surface-elevated: #292c33;
 
-  --bb-emphasis-color: #e4e7eb;
-  --bb-heading-color: #e7eaee;
-  --bb-secondary-color: #aeb3bc;
-  --bb-tertiary-color: #858b95;
+  --bb-emphasis-color: #dde1e6;
+  --bb-heading-color: #e1e4e8;
+  --bb-secondary-color: #a8aeb8;
+  --bb-tertiary-color: #808792;
 
   --bb-body-bg-rgb: 21, 23, 27;
-  --bb-body-color-rgb: 217, 220, 225;
+  --bb-body-color-rgb: 210, 214, 220;
   --bb-secondary-bg-rgb: 32, 34, 40;
   --bb-tertiary-bg-rgb: 28, 30, 35;
-  --bb-secondary-color-rgb: 174, 179, 188;
-  --bb-tertiary-color-rgb: 133, 139, 149;
+  --bb-secondary-color-rgb: 168, 174, 184;
+  --bb-tertiary-color-rgb: 128, 135, 146;
 
   --bb-border-color: rgba(255, 255, 255, 0.08);
   --bb-border-color-strong: rgba(255, 255, 255, 0.13);
@@ -69,13 +69,13 @@ html[data-bb-ui-profile="neutral"][data-bs-theme="dark"] {
   --bb-light-inverse: var(--bb-theme-on-light);
 
   --bb-header-bg: #181a1f;
-  --bb-header-color: #d9dce1;
+  --bb-header-color: #d2d6dc;
   --bb-header-border-color: var(--bb-border-color);
 
   --bb-footer-bg: #15171b;
   --bb-footer-bg-soft: #191b20;
   --bb-footer-bottom-bg: #121317;
 
-  --bb-link-color: #bcc2ca;
+  --bb-link-color: #b6bcc5;
   --bb-link-hover-color: var(--bb-primary);
 }
