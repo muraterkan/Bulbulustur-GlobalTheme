@@ -9,12 +9,12 @@
   if (!menu) return;
 
   var languages = [
-    { code: "tr", label: "Türkçe", flag: "🇹🇷" },
-    { code: "en", label: "English", flag: "🇺🇸" },
-    { code: "es", label: "Español", flag: "🇪🇸" },
-    { code: "de", label: "Deutsch", flag: "🇩🇪" },
-    { code: "ja", label: "日本語", flag: "🇯🇵" },
-    { code: "fr", label: "Français", flag: "🇫🇷" }
+    { code: "tr", label: "Türkçe", flag: "../../assets/media/flags/turkey.svg" },
+    { code: "en", label: "English", flag: "../../assets/media/flags/United States of America.svg" },
+    { code: "es", label: "Español", flag: "../../assets/media/flags/spain.svg" },
+    { code: "de", label: "Deutsch", flag: "../../assets/media/flags/germany.svg" },
+    { code: "ja", label: "日本語", flag: "../../assets/media/flags/japan.svg" },
+    { code: "fr", label: "Français", flag: "../../assets/media/flags/france.svg" }
   ];
 
   function getStored(key, fallback) {
@@ -86,7 +86,7 @@
     button.type = "button";
     button.className = "bb-panel-user-language-option";
     button.dataset.bbLanguage = item.code;
-    button.innerHTML = '<span class="bb-panel-language-flag" aria-hidden="true">' + item.flag + '</span><span>' + item.label + '</span><span class="material-symbols-outlined bb-panel-language-check" aria-hidden="true">check</span>';
+    button.innerHTML = '<img class="bb-panel-language-flag" src="' + item.flag + '" alt=""><span>' + item.label + '</span><span class="material-symbols-outlined bb-panel-language-check" aria-hidden="true">check</span>';
     languageMenu.appendChild(button);
   });
 
@@ -102,7 +102,7 @@
   function syncLanguage() {
     var selected = currentLanguageItem();
     var current = language.querySelector("[data-bb-language-current]");
-    if (current) current.textContent = selected.flag + " " + selected.label;
+    if (current) current.innerHTML = '<img class="bb-panel-language-flag" src="' + selected.flag + '" alt=""> <span>' + selected.label + '</span>';
     languageMenu.querySelectorAll("[data-bb-language]").forEach(function (button) {
       var active = button.dataset.bbLanguage === selected.code;
       button.classList.toggle("active", active);
