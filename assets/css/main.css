@@ -18388,6 +18388,8 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
    Token-first statistics card patterns.
 ===================================== */
 .bb-panel .bb-statistics-page{--bb-stat-tone:var(--bb-chart-1);--bb-stat-tone-soft:var(--bb-primary-light)}
+
+.bb-panel .bb-statistics-stack{display:grid;gap:var(--bb-panel-content-gap)}
 .bb-panel .bb-statistics-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-panel-content-gap)}
 .bb-panel .bb-statistics-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .bb-panel .bb-stat-card{min-width:0;overflow:hidden}
