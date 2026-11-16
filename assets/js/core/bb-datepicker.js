@@ -133,31 +133,13 @@
         return el;
       }
 
-      function positionPopover(pop, anchor) {
-        const rect = anchor.getBoundingClientRect();
-        const top = rect.bottom + window.scrollY + 8;
-        const left = rect.left + window.scrollX;
-
-        pop.style.top = top + "px";
-        pop.style.left = left + "px";
-
-        // viewport overflow guard (simple)
-        const popRect = pop.getBoundingClientRect();
-        const vw = document.documentElement.clientWidth;
-
-        if (popRect.right > vw) {
-          const shift = popRect.right - vw + 12;
-          pop.style.left = (left - shift) + "px";
-        }
-      }
-
       function initDatetime(root) {
         const mode = root.getAttribute("data-bb-datetime") || "range";
         const input = root.querySelector(".bb-datetime-input");
         if (!input) { return; }
 
         const pop = buildPopover();
-        document.body.appendChild(pop);
+        root.appendChild(pop);
 
         let open = false;
         let anchorMonthLeft = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
@@ -290,7 +272,6 @@
           draftEnd = end ? new Date(end.getTime()) : null;
 
           pop.setAttribute("data-bb-open", "true");
-          positionPopover(pop, input);
           renderAll();
           syncSelectedText();
         }

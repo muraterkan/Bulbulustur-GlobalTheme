@@ -6,7 +6,7 @@
 
 .bb-bullet {
   /* tokens */
-  --bb-bullet-size: 0.5rem;
+  --bb-bullet-size: var(--bb-space-2);
   --bb-bullet-radius: var(--bb-radius-xs);
   --bb-bullet-bg: var(--bb-secondary-bg);
   --bb-bullet-opacity: 1;
@@ -20,6 +20,14 @@
   border-radius: var(--bb-bullet-radius);
   background-color: var(--bb-bullet-bg);
   opacity: var(--bb-bullet-opacity);
+}
+
+.bb-bullet-sm {
+  --bb-bullet-size: var(--bb-space-1);
+}
+
+.bb-bullet-lg {
+  --bb-bullet-size: var(--bb-space-3);
 }
 
 /* -------------------------------------
