@@ -1,0 +1,72 @@
+/* Product/service showcase pages — concise marketing layer inside the panel shell. */
+.bb-panel .bb-service-page{padding-bottom:var(--bb-space-6)}
+.bb-panel .bb-service-shell{display:grid;gap:var(--bb-space-5)}
+.bb-panel .bb-service-hero{overflow:hidden}
+.bb-panel .bb-service-hero .bb-card-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(22rem,.95fr);gap:var(--bb-space-6);align-items:center;min-height:26rem;padding:calc(var(--bb-space-5)*1.4)}
+.bb-panel .bb-service-kicker{display:inline-flex;width:fit-content;margin-bottom:var(--bb-space-3)}
+.bb-panel .bb-service-hero h2{max-width:42rem;margin:0;color:var(--bb-heading-color);font-size:var(--bb-h1);font-weight:var(--bb-fw-semibold);line-height:var(--bb-line-height-heading)}
+.bb-panel .bb-service-hero p{max-width:42rem;margin:var(--bb-space-3) 0 0;color:var(--bb-secondary-color);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-service-hero-actions{display:flex;flex-wrap:wrap;gap:var(--bb-space-2);margin-top:var(--bb-space-4)}
+.bb-panel .bb-service-hero-meta{display:flex;flex-wrap:wrap;gap:var(--bb-space-3);margin-top:var(--bb-space-4);color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-hero-meta span{display:inline-flex;align-items:center;gap:var(--bb-space-1)}
+.bb-panel .bb-service-hero-meta .material-symbols-outlined{font-size:var(--bb-fs-base);color:var(--bb-success-text)}
+.bb-panel .bb-service-visual{position:relative;min-height:21rem;overflow:hidden;border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius-lg);background:linear-gradient(145deg,var(--bb-surface-soft),var(--bb-surface-muted));box-shadow:var(--bb-shadow-sm)}
+.bb-panel .bb-service-browser{position:absolute;inset:var(--bb-space-4);display:grid;grid-template-rows:auto 1fr;overflow:hidden;border:var(--bb-border-width) solid var(--bb-border-color-strong);border-radius:var(--bb-radius);background:var(--bb-surface-elevated)}
+.bb-panel .bb-service-browser-top{display:flex;align-items:center;gap:var(--bb-space-1);padding:var(--bb-space-2) var(--bb-space-3);border-bottom:var(--bb-border-width) solid var(--bb-border-color);background:var(--bb-surface-soft)}
+.bb-panel .bb-service-browser-top i{width:.55rem;height:.55rem;border-radius:var(--bb-radius-pill);background:var(--bb-border-color-strong)}
+.bb-panel .bb-service-browser-body{display:grid;grid-template-columns:1fr .8fr;gap:var(--bb-space-3);padding:var(--bb-space-4)}
+.bb-panel .bb-service-browser-copy{display:grid;align-content:center;gap:var(--bb-space-2)}
+.bb-panel .bb-service-browser-copy strong{width:72%;height:1rem;border-radius:var(--bb-radius-sm);background:var(--bb-emphasis-color)}
+.bb-panel .bb-service-browser-copy span{height:.55rem;border-radius:var(--bb-radius-sm);background:var(--bb-border-color-strong)}
+.bb-panel .bb-service-browser-copy span:nth-child(3){width:78%}
+.bb-panel .bb-service-browser-copy span:nth-child(4){width:58%}
+.bb-panel .bb-service-browser-art{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--bb-space-2);align-content:center}
+.bb-panel .bb-service-browser-art span{aspect-ratio:1;border-radius:var(--bb-radius);background:linear-gradient(145deg,var(--bb-primary-light),var(--bb-tertiary-bg))}
+.bb-panel .bb-service-pos-terminal{position:absolute;inset:var(--bb-space-4);display:grid;grid-template-columns:1.15fr .85fr;gap:var(--bb-space-3)}
+.bb-panel .bb-service-pos-products,.bb-panel .bb-service-pos-receipt{display:grid;gap:var(--bb-space-2);padding:var(--bb-space-3);border:var(--bb-border-width) solid var(--bb-border-color-strong);border-radius:var(--bb-radius);background:var(--bb-surface-elevated)}
+.bb-panel .bb-service-pos-products{grid-template-columns:repeat(2,1fr)}
+.bb-panel .bb-service-pos-products span{min-height:4.25rem;border-radius:var(--bb-radius-sm);background:linear-gradient(145deg,var(--bb-tertiary-bg),var(--bb-surface-muted))}
+.bb-panel .bb-service-pos-receipt{align-content:start}
+.bb-panel .bb-service-pos-receipt strong{height:1rem;width:65%;border-radius:var(--bb-radius-sm);background:var(--bb-emphasis-color)}
+.bb-panel .bb-service-pos-receipt span{height:.6rem;border-radius:var(--bb-radius-sm);background:var(--bb-border-color-strong)}
+.bb-panel .bb-service-pos-receipt span:nth-last-child(1){height:2.6rem;margin-top:auto;background:var(--bb-primary)}
+.bb-panel .bb-service-section-heading{text-align:center;max-width:46rem;margin:0 auto}
+.bb-panel .bb-service-section-heading h2{margin:0;color:var(--bb-heading-color);font-size:var(--bb-h3);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-service-section-heading p{margin:var(--bb-space-2) 0 0;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-service-benefit{display:grid;gap:var(--bb-space-3);padding:var(--bb-space-4);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius-lg);background:var(--bb-surface-soft)}
+.bb-panel .bb-service-benefit-icon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:var(--bb-radius);background:var(--bb-primary-light);color:var(--bb-primary-text)}
+.bb-panel .bb-service-benefit strong{color:var(--bb-emphasis-color);font-size:var(--bb-fs-sm);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-service-benefit p{margin:0;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-service-proof-card{display:grid;place-items:center;gap:var(--bb-space-1);min-height:8rem;padding:var(--bb-space-3);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius-lg);background:var(--bb-surface-elevated);text-align:center}
+.bb-panel .bb-service-proof-card strong{color:var(--bb-primary-text);font-size:var(--bb-fs-2xl);font-weight:var(--bb-fw-bold)}
+.bb-panel .bb-service-proof-card span{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-proof-note{text-align:center;color:var(--bb-secondary-color);font-size:var(--bb-fs-2xs)}
+.bb-panel .bb-service-usecases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-service-usecase{display:grid;gap:var(--bb-space-2);padding:var(--bb-space-4);border-left:calc(var(--bb-border-width)*3) solid var(--bb-primary);border-radius:var(--bb-radius);background:var(--bb-surface-elevated);box-shadow:var(--bb-shadow-xs)}
+.bb-panel .bb-service-usecase strong{color:var(--bb-emphasis-color);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-service-usecase span{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-stories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-service-story{display:grid;grid-template-rows:auto 1fr auto;gap:var(--bb-space-3);padding:var(--bb-space-4);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius-lg);background:var(--bb-surface-soft)}
+.bb-panel .bb-service-story-head{display:flex;align-items:center;gap:var(--bb-space-3)}
+.bb-panel .bb-service-story-avatar{width:3.25rem;height:3.25rem;overflow:hidden;border-radius:var(--bb-radius-pill);border:var(--bb-border-width) solid var(--bb-border-color-strong);background:var(--bb-surface-muted)}
+.bb-panel .bb-service-story-avatar img{width:100%;height:100%;object-fit:cover}
+.bb-panel .bb-service-story-person strong,.bb-panel .bb-service-story-person small{display:block}
+.bb-panel .bb-service-story-person strong{color:var(--bb-emphasis-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-story-person small{margin-top:var(--bb-space-1);color:var(--bb-secondary-color);font-size:var(--bb-fs-2xs)}
+.bb-panel .bb-service-story blockquote{margin:0;color:var(--bb-body-color);font-size:var(--bb-fs-sm);line-height:var(--bb-line-height-base)}
+.bb-panel .bb-service-story .bb-badge{justify-self:start}
+.bb-panel .bb-service-ecosystem{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--bb-space-2)}
+.bb-panel .bb-service-logo-pill{display:inline-flex;align-items:center;justify-content:center;min-width:7rem;padding:var(--bb-space-3) var(--bb-space-4);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius);background:var(--bb-surface-elevated);color:var(--bb-secondary-color);font-size:var(--bb-fs-xs);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-service-faq{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:var(--bb-space-5);align-items:start}
+.bb-panel .bb-service-faq-copy h2{margin:0;color:var(--bb-heading-color);font-size:var(--bb-h3);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-service-faq-copy p{margin:var(--bb-space-2) 0 0;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-service-cta{overflow:hidden;background:linear-gradient(135deg,var(--bb-primary-light),var(--bb-surface-elevated))}
+.bb-panel .bb-service-cta .bb-card-body{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--bb-space-4);align-items:center;padding:var(--bb-space-5)}
+.bb-panel .bb-service-cta h2{margin:0;color:var(--bb-heading-color);font-size:var(--bb-h3);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-service-cta p{margin:var(--bb-space-2) 0 0;color:var(--bb-secondary-color);font-size:var(--bb-fs-sm)}
+.bb-panel .bb-service-cta-actions{display:flex;flex-wrap:wrap;gap:var(--bb-space-2)}
+@media(max-width:1199.98px){.bb-panel .bb-service-hero .bb-card-body{grid-template-columns:1fr}.bb-panel .bb-service-visual{min-height:19rem}.bb-panel .bb-service-proof{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:991.98px){.bb-panel .bb-service-benefits,.bb-panel .bb-service-usecases,.bb-panel .bb-service-stories{grid-template-columns:1fr}.bb-panel .bb-service-faq{grid-template-columns:1fr}.bb-panel .bb-service-cta .bb-card-body{grid-template-columns:1fr}}
+@media(max-width:575.98px){.bb-panel .bb-service-proof{grid-template-columns:1fr}.bb-panel .bb-service-pos-terminal{grid-template-columns:1fr}.bb-panel .bb-service-pos-receipt{display:none}.bb-panel .bb-service-browser-body{grid-template-columns:1fr}.bb-panel .bb-service-browser-art{grid-template-columns:repeat(4,1fr)}}
