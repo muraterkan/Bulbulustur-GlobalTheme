@@ -74,7 +74,7 @@
     var logoMark = document.createElement("span");
     logoMark.className = "bb-template-logo-mark";
     logoMark.setAttribute("aria-hidden", "true");
-    logoMark.innerHTML = "<span>K</span>";
+    logoMark.innerHTML = '<img src="../../assets/media/template-logo.svg" alt="">';
     sidebarLogo.prepend(logoMark);
   }
 
