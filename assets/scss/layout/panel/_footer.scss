@@ -118,3 +118,81 @@
     transition: none;
   }
 }
+
+/* Shared template footer + compact brand mark. */
+.bb-panel .bb-panel-template-footer {
+  margin-top: auto;
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+  background: var(--bb-surface-bg);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-bar {
+  background: var(--bb-surface-bg);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.5rem;
+  padding: var(--bb-space-3) var(--bb-panel-content-gap);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-left,
+.bb-panel .bb-panel-template-footer .bb-footer-right {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-left {
+  color: var(--bb-secondary-color);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-brand {
+  color: var(--bb-primary-text);
+  font-weight: var(--bb-fw-medium);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-right {
+  gap: calc(var(--bb-space-4) + var(--bb-space-2));
+}
+.bb-panel .bb-panel-template-footer .bb-footer-link {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+}
+.bb-panel .bb-panel-template-footer .bb-footer-link:hover {
+  color: var(--bb-primary-text);
+  text-decoration: none;
+}
+.bb-panel .bb-sidebar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+.bb-panel .bb-template-logo-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-emphasis-color);
+  color: var(--bb-body-bg);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1;
+  box-shadow: inset 0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-body-bg) 14%, transparent);
+}
+.bb-panel .bb-template-logo-mark span {
+  transform: translateY(-0.03em);
+}
+.bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar-logo .bb-panel-brand-text {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .bb-panel .bb-panel-template-footer .bb-footer-inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bb-panel .bb-panel-template-footer .bb-footer-left,
+  .bb-panel .bb-panel-template-footer .bb-footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
