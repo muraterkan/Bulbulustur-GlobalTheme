@@ -9,6 +9,8 @@
 }
 .bb-panel .bb-panel-form-step {
   display: flex;
+  font-size: var(--bb-ui-font-size);
+  line-height: var(--bb-ui-line-height);
   align-items: center;
   gap: var(--bb-menu-link-px, .9rem);
   padding: var(--bb-menu-link-py, .65rem);
@@ -31,7 +33,7 @@
   min-width: var(--bb-menu-icon-size, 1.15rem);
   font-weight: var(--bb-fw-semibold);
 }
-.bb-panel .bb-panel-form-step-label { min-width: 0; font-weight: var(--bb-fw-medium); }
+.bb-panel .bb-panel-form-step-label { min-width: 0; font-size: var(--bb-ui-font-size); font-weight: var(--bb-fw-medium); }
 .bb-panel .bb-panel-form-pane[hidden] { display: none; }
 .bb-panel .bb-panel-form-actions {
   display: flex;
