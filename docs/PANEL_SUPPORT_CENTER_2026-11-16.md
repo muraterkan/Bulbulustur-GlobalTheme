@@ -5,11 +5,11 @@ Dal: `main`
 
 ## Geliştirilen
 
-- `modules/panel/destek-merkezi.html`: Metronic referansındaki karşılama/arama alanı, 6 sekme (Genel Bakış, Talepler, Eğitimler, SSS, Lisanslar, İletişim), Popüler Talepler/SSS/Eğitimler/Videolar/Dokümantasyon kartları ve örnek destek talebi formu.
+- `modules/panel/support-center.html`: Metronic referansındaki karşılama/arama alanı, 6 sekme (Genel Bakış, Talepler, Eğitimler, SSS, Lisanslar, İletişim), Popüler Talepler/SSS/Eğitimler/Videolar/Dokümantasyon kartları ve örnek destek talebi formu.
 - `assets/scss/layout/_panel-support.scss`: yalnız panel Support Center kapsamında responsive yerleşim, soru/cevap ve arama tasarımı. Ana `bb-card`, Bootstrap form ve semantik renk/spacing tokenları korunur.
 - `assets/js/bb-panel-support.js`: sekme geçişi, soru arama, açılır cevaplar, talep formu istemci doğrulaması, başlık/breadcrumb düzeni.
 - `assets/scss/main.scss`: SCSS partial import edildi.
-- Panel sidebar'larında `support-tickets` ve `support-faq` bağlantıları `destek-merkezi.html?tab=tickets` ve `destek-merkezi.html?tab=faq` adreslerine yönlendirildi.
+- Panel sidebar'larında `support-tickets` ve `support-faq` bağlantıları `support-center.html?tab=tickets` ve `support-center.html?tab=faq` adreslerine yönlendirildi.
 
 ## Kapsam
 
@@ -32,6 +32,6 @@ npm run check:panel
 npm run check:contracts
 ```
 
-VS Code Live Server ile `modules/panel/destek-merkezi.html` aç. 6 sekme, örnek arama, açılır soru cevapları, Talepler/SSS sidebar yönlendirmeleri, talep formu ve mobil/dark/light görünümünü test et.
+VS Code Live Server ile `modules/panel/support-center.html` aç. 6 sekme, örnek arama, açılır soru cevapları, Talepler/SSS sidebar yönlendirmeleri, talep formu ve mobil/dark/light görünümünü test et.
 
 Derleme başarılı olursa `assets/css/main.css` için commit ve push; ardından `npm run check:css`.

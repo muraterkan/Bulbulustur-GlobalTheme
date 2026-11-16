@@ -5,9 +5,9 @@ Dal: `main`
 
 ## Yapılanlar
 
-- `modules/panel/profil.html`: avatar, kullanıcı özeti, temel profil bilgileri, son etkinlik zaman çizelgesi.
-- `modules/panel/hesap.html`: ad/soyad, e-posta, telefon, dil, açıklama, bildirim tercihi; zorunlu alan kontrolü, sıfırlama ve demo sonucu.
-- `modules/panel/fatura.html`: temsili fatura numarası, alıcı, tarih, kalem tablosu, örnek vergi/toplam; tarayıcı yazdır/PDF akışı.
+- `modules/panel/profile.html`: avatar, kullanıcı özeti, temel profil bilgileri, son etkinlik zaman çizelgesi.
+- `modules/panel/account.html`: ad/soyad, e-posta, telefon, dil, açıklama, bildirim tercihi; zorunlu alan kontrolü, sıfırlama ve demo sonucu.
+- `modules/panel/invoices.html`: temsili fatura numarası, alıcı, tarih, kalem tablosu, örnek vergi/toplam; tarayıcı yazdır/PDF akışı.
 - `assets/scss/layout/_panel-account.scss`: yalnız faza özgü yerleşim farkları ve yazdırma görünümü. Mevcut `bb-card`, `bb-symbol`, `bb-nav`, `bb-table` ve Bootstrap form sınıfları tekrar kullanılır.
 - `assets/js/bb-panel-account.js`: form doğrulama (sunucuya göndermez) ve yazdırma.
 - `assets/scss/main.scss`: Faz 12 SCSS importu eklendi.
@@ -36,7 +36,7 @@ npm run build:css
 npm run check:contracts
 ```
 
-VS Code Live Server: `modules/panel/profil.html`, `hesap.html`, `fatura.html`.
+VS Code Live Server: `modules/panel/profile.html`, `account.html`, `invoices.html`.
 
 Hesap formunda geçersiz e-posta, sıfırla/doğrula, dark/light ve mobil; fatura sayfasında Yazdır/PDF ve baskı görünümünü dene.
 

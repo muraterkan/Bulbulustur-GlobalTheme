@@ -54,14 +54,14 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 ## F. Ek bulgu (renk paketi çalışmasında)
 
 - D7: `themes/_token-engine.scss` ile `base/_theme.scss` aynı türetilmiş tokenları (`--bb-primary-hover/active/light/clarity`, `--bb-link-color`) tanımlıyor. `html[data-bs-theme]` varsa base (özgüllük 0,1,1) kazanıyor; öznitelik yoksa token-engine kazanıyor. Doğrulama: `data-bs-theme="light"` ile `--bb-primary-hover` = `#e6c300` (base değeri), token-engine'in %90 karışımı değil. Tek sahip seçilmeli (karar bekliyor, dokunulmadı).
-- Renk paketi `atolye` eklendi: `themes/_pack-atolye.scss`, demo `modules/foundation/pack-atolye.html`. Paket seçilmezse çıktı değişmez (`?pack=off` ile sarı varsayılan doğrulandı).
+- Renk paketi `atolye` eklendi: `themes/_pack-workshop.scss`, demo `modules/foundation/pack-workshop.html`. Paket seçilmezse çıktı değişmez (`?pack=off` ile sarı varsayılan doğrulandı).
 
 ### D7 çözümü (15.11.2026)
 
 Karar: türetilmiş durum tokenlarının (`--bb-*-hover/active/light/clarity`, 8 renk) TEK sahibi `themes/_token-engine.scss`. `base/_theme.scss` ve renk paketleri yalnız girdi verir.
 - `base/_theme.scss`: 72 türetilmiş satır silindi (açık + koyu).
 - `themes/_token-engine.scss`: base ile birebir aynı alias (`--bb-primary: var(--bb-theme-primary)`...) ve inverse blokları silindi; link tokenları kaldırıldı (engine'de link = primary idi, öznitelik yokken sarı link üretiyordu; link base/paket sahipliğinde); `dark-*` türevleri sabit `--bb-coal-300` yerine `--bb-dark` tabanlı.
-- `themes/_pack-atolye.scss`: 34 türev satır silindi, yalnız girdi kaldı.
+- `themes/_pack-workshop.scss`: 34 türev satır silindi, yalnız girdi kaldı.
 - Doğrulama (Chrome headless, 6 yapılandırma × 36 token, önce/sonra): `data-bs-theme` yokken yalnız link (sarı → mavi `#1d4ed8`) ve `dark-*` değişti. Açık temada hover/active/light değerleri engine formülüne geçti: örn. `danger-hover` `#b91c1c` → `#d73d3d` (daha yumuşak), `success-light` düz `#dcfce7` → %12 saydam yeşil. Yeşil/mavi/kırmızı hover'ın daha koyu olması istenirse `--bb-hover-mix` oranı engine'de tek yerden ayarlanır.
 - Sözleşme: 4 yeni kontrol (türev tokenlar yalnız engine'de).
 

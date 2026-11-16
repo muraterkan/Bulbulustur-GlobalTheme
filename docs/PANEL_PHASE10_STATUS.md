@@ -7,10 +7,10 @@ Dal: `main`
 
 - `assets/scss/layout/_panel-form.scss`: üç adımlı sihirbaz (stepper), dosya sürükle-bırak alanı, ön izleme yüzeyi.
 - `assets/js/bb-panel-form.js`: adım geçişi, zorunlu alan kontrolü, örnek dosya seçimi (PNG, JPEG, PDF; 5 MB ve 4 dosya sınırı), özeti oluşturma, sıfırlama ve yalnızca tarayıcı içi tamamlama.
-- `modules/panel/formlar.html`: GlobalTheme panel kabuğu içinde ürün formu demosu. Mevcut `form-control`, `form-select`, `bb-card`, Bootstrap etiket ve form tipleri.
+- `modules/panel/forms.html`: GlobalTheme panel kabuğu içinde ürün formu demosu. Mevcut `form-control`, `form-select`, `bb-card`, Bootstrap etiket ve form tipleri.
 - `assets/scss/main.scss`: `layout/panel-form` eklendi.
 - `assets/js/bb-panel-pages.js`: panel demo sayfalarında varsayılan aktif menüyü `data-bb-panel-default-page` ile belirleyebilme.
-- `modules/panel/dashboard.html`, `modules/panel/sayfalar.html`, `modules/panel/listeler.html`: Projeler/Oluştur menü bağlantısı form demosuna yönlendirildi.
+- `modules/panel/dashboard.html`, `modules/panel/pages.html`, `modules/panel/lists.html`: Projeler/Oluştur menü bağlantısı form demosuna yönlendirildi.
 
 ## Doğrulama
 
@@ -30,7 +30,7 @@ Kullanıcının son `git status` çıktısı merge devam ettiğini, tüm çatı�
 
 1. Önce merge'i bitir, sonra `git pull origin main`.
 2. `npm run build:css`, `npm run check:contracts`.
-3. VS Code Live Server ile `modules/panel/formlar.html` dosyasını aç.
+3. VS Code Live Server ile `modules/panel/forms.html` dosyasını aç.
 4. Boş alanlarla İleri, ardından valid form; sonraki adımda PDF/PNG/JPEG seçimi, limit hataları, ön izleme, geri ve sıfırlama etkileşimlerini dene.
 5. Tarayıcıda mobil genişlik, dark/light ve klavye odağı kontrolü.
 6. Derlenen CSS için commit, ardından `npm run check:css`, son olarak `git push origin main`.

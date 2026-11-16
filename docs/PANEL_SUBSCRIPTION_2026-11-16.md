@@ -5,11 +5,11 @@ Dal: `main`
 
 ## Gerçekleştirilen
 
-- `modules/panel/abonelik.html`: Metronic Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Müşteri, Ürünler, Ödeme Yöntemi, Gelişmiş Seçenekler. Sağ kolon: Özet.
+- `modules/panel/subscription.html`: Metronic Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Müşteri, Ürünler, Ödeme Yöntemi, Gelişmiş Seçenekler. Sağ kolon: Özet.
 - `assets/scss/layout/_panel-subscription.scss`: GlobalTheme renk, spacing, typography tokenlarıyla responsive abonelik ekranı.
 - `assets/js/bb-panel-subscription.js`: müşteri ve ödeme yöntemi seçimi, plan ekle/kaldır, örnek özel alan ekle/kaldır, özet ve aylık toplam güncelleme, form doğrulama ve demo uyarısı.
 - `assets/scss/main.scss`: ilgili partial `@use` ile dahil edildi.
-- Mevcut panel demolarında Abonelik/Genel Bakış bağlantıları `abonelik.html` sayfasına çevrildi.
+- Mevcut panel demolarında Abonelik/Genel Bakış bağlantıları `subscription.html` sayfasına çevrildi.
 
 ## Kapsam ve veri sınırı
 
@@ -32,7 +32,7 @@ npm run check:panel
 npm run check:contracts
 ```
 
-`modules/panel/abonelik.html` dosyasını Live Server'da aç. Müşteri, plan ve ödeme seçimi sırasında özeti kontrol et. Ürün kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
+`modules/panel/subscription.html` dosyasını Live Server'da aç. Müşteri, plan ve ödeme seçimi sırasında özeti kontrol et. Ürün kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
 
 CSS derlenince:
 
