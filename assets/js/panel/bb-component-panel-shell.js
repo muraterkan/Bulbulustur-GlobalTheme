@@ -193,6 +193,13 @@
     wrapper.classList.add("bb-component-showcase-root");
   });
 
+  var directElements = Array.from(demoRoot.children);
+  if (directElements.length === 1 &&
+      directElements[0].tagName === "DIV" &&
+      !directElements[0].classList.contains("bb-app")) {
+    directElements[0].classList.add("bb-component-showcase-root");
+  }
+
   function normalizeDemoCards(root) {
     root.querySelectorAll(".card, .bb-card").forEach(function (card) {
       var hadLegacyPadding = Array.from(card.classList).some(function (name) {
