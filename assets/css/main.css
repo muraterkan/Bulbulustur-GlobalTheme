@@ -1467,6 +1467,10 @@ html[data-bb-pack=atolye][data-bs-theme=dark]:not([data-bb-surface]) {
   --bb-table-font-size: var(--bb-fs-sm);
   --bb-table-head-font-size: var(--bb-fs-sm);
   --bb-table-line-height: var(--bb-line-height-base);
+  --bb-ui-font-size: var(--bb-fs-sm);
+  --bb-ui-font-size-sm: var(--bb-fs-xs);
+  --bb-ui-line-height: 1.4;
+
   --bb-form-label-font-size: var(--bb-fs-sm);
   --bb-form-control-font-size: var(--bb-fs-base);
   --bb-form-help-font-size: var(--bb-fs-sm);
@@ -9635,6 +9639,8 @@ Header
 
 .bb-panel .bb-panel-form-step {
   display: flex;
+  font-size: var(--bb-ui-font-size);
+  line-height: var(--bb-ui-line-height);
   align-items: center;
   gap: var(--bb-menu-link-px, 0.9rem);
   padding: var(--bb-menu-link-py, 0.65rem);
@@ -9663,6 +9669,7 @@ Header
 
 .bb-panel .bb-panel-form-step-label {
   min-width: 0;
+  font-size: var(--bb-ui-font-size);
   font-weight: var(--bb-fw-medium);
 }
 
