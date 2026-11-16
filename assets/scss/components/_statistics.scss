@@ -8,6 +8,11 @@
   --bb-stat-tone-soft: var(--bb-primary-light);
 }
 
+
+.bb-panel .bb-statistics-stack {
+  display: grid;
+  gap: var(--bb-panel-content-gap);
+}
 .bb-panel .bb-statistics-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
