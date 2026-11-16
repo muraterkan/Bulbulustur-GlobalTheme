@@ -268,69 +268,7 @@
     </div>
   </div>
 
-  <script>
-    (function () {
-      const root = document.documentElement;
-
-      function setTheme(theme) {
-        root.setAttribute("data-bs-theme", theme);
-        // buton active görünümü (bootstrap)
-        document.querySelectorAll("[data-bb-theme]").forEach((btn) => {
-          btn.classList.toggle("active", btn.getAttribute("data-bb-theme") === theme);
-        });
-      }
-
-      function setDensity(density) {
-        if (density === "normal") {
-          root.removeAttribute("data-bb-density");
-        } else {
-          root.setAttribute("data-bb-density", density);
-        }
-        document.querySelectorAll("[data-bb-density]").forEach((btn) => {
-          btn.classList.toggle("active", btn.getAttribute("data-bb-density") === density);
-        });
-      }
-
-      document.addEventListener("click", (e) => {
-        const t = e.target.closest("[data-bb-theme],[data-bb-density],[data-bb-copy]");
-        if (!t) {
-          return;
-        }
-
-        if (t.hasAttribute("data-bb-theme")) {
-          setTheme(t.getAttribute("data-bb-theme"));
-        }
-
-        if (t.hasAttribute("data-bb-density")) {
-          setDensity(t.getAttribute("data-bb-density"));
-        }
-
-        if (t.hasAttribute("data-bb-copy")) {
-          const styles = getComputedStyle(root);
-          const payload = {
-            theme: root.getAttribute("data-bs-theme"),
-            density: root.getAttribute("data-bb-density") || "normal",
-            bb_root_font_size: styles.getPropertyValue("--bb-root-font-size").trim(),
-            bb_h1: styles.getPropertyValue("--bb-h1").trim(),
-            bb_h2: styles.getPropertyValue("--bb-h2").trim(),
-            bb_body_bg: styles.getPropertyValue("--bb-body-bg").trim(),
-            bb_body_color: styles.getPropertyValue("--bb-body-color").trim(),
-            bb_text_muted: styles.getPropertyValue("--bb-secondary-color").trim(),
-            bb_border_color: styles.getPropertyValue("--bb-border-color").trim(),
-            bb_link_color: styles.getPropertyValue("--bb-link-color").trim()
-          };
-
-          navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
-          t.textContent = "Copied ✓";
-          setTimeout(() => (t.textContent = "Debug Tokens"), 900);
-        }
-      });
-
-      // initial
-      setTheme(root.getAttribute("data-bs-theme") || "light");
-      setDensity(root.getAttribute("data-bb-density") || "normal");
-    })();
-  </script>
+    <script src="../../assets/js/panel/bb-component-typography-demo.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
