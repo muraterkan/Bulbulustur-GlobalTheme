@@ -51,7 +51,11 @@
         toolbar.remove();
       } else {
         var block = heading.parentElement;
-        if (block && block !== body && !block.classList.contains("bb-card") && !block.closest(".bb-card")) block.remove();
+        var safeWrapper = block && block !== body && !block.matches("main, .container, .container-fluid, [class*='col-']") && !block.classList.contains("bb-card") && !block.closest(".bb-card");
+        var meaningfulChildren = block ? Array.from(block.children).filter(function (child) {
+          return child !== heading && (child.textContent || "").trim();
+        }) : [];
+        if (safeWrapper && meaningfulChildren.length === 0) block.remove();
         else heading.remove();
       }
     }
