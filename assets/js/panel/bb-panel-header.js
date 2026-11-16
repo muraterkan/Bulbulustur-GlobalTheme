@@ -248,6 +248,23 @@ if (messageToggle && messageHost) {
   chatBackdrop.setAttribute("data-bb-panel-chat-backdrop", "");
   chatBackdrop.setAttribute("aria-hidden", "true");
 
+  var chatAvatarPool = [
+    "../../assets/media/avatars/300-12.webp",
+    "../../assets/media/avatars/300-2.webp",
+    "../../assets/media/avatars/300-5.webp",
+    "../../assets/media/avatars/300-6.webp"
+  ];
+  var supportAvatar = chatAvatarPool[Math.floor(Math.random() * chatAvatarPool.length)];
+  var userAvatarChoices = chatAvatarPool.filter(function (avatar) { return avatar !== supportAvatar; });
+  var userAvatar = userAvatarChoices[Math.floor(Math.random() * userAvatarChoices.length)];
+
+  function chatAuthorMarkup(name, time, avatar) {
+    return '<div class="bb-panel-chat-author">' +
+      '<img class="bb-panel-chat-author-avatar" src="' + avatar + '" alt="">' +
+      '<span class="bb-panel-chat-author-copy"><strong>' + name + '</strong><small>' + time + '</small></span>' +
+    '</div>';
+  }
+
   var chatDrawer = document.createElement("section");
   chatDrawer.id = "bb_messages_pop";
   chatDrawer.className = "bb-drawer bb-drawer-end bb-panel-chat-drawer";
@@ -265,15 +282,15 @@ if (messageToggle && messageHost) {
     </div>
     <div class="bb-drawer-body" data-bb-chat-history role="log" aria-live="polite" aria-label="Conversation history">
       <div class="bb-panel-chat-message" data-side="in">
-        <div class="bb-panel-chat-author">Support Team <small>09:15</small></div>
+        ${chatAuthorMarkup("Support Team", "09:15", supportAvatar)}
         <div class="bb-panel-chat-bubble">Hello, how can we help you?</div>
       </div>
       <div class="bb-panel-chat-message" data-side="out">
-        <div class="bb-panel-chat-author">You <small>09:18</small></div>
+        ${chatAuthorMarkup("You", "09:18", userAvatar)}
         <div class="bb-panel-chat-bubble">I am reviewing the new panel components.</div>
       </div>
       <div class="bb-panel-chat-message" data-side="in">
-        <div class="bb-panel-chat-author">Support Team <small>09:20</small></div>
+        ${chatAuthorMarkup("Support Team", "09:20", supportAvatar)}
         <div class="bb-panel-chat-bubble">Harika! Herhangi bir sorunuz olursa buradan yazabilirsiniz. Bu bir demo sohbetidir.</div>
       </div>
     </div>
@@ -338,10 +355,18 @@ if (messageToggle && messageHost) {
     item.dataset.side = "out";
     var author = document.createElement("div");
     author.className = "bb-panel-chat-author";
-    author.textContent = "You";
+    var authorAvatar = document.createElement("img");
+    authorAvatar.className = "bb-panel-chat-author-avatar";
+    authorAvatar.src = userAvatar;
+    authorAvatar.alt = "";
+    var authorCopy = document.createElement("span");
+    authorCopy.className = "bb-panel-chat-author-copy";
+    var authorName = document.createElement("strong");
+    authorName.textContent = "You";
     var time = document.createElement("small");
     time.textContent = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
-    author.appendChild(time);
+    authorCopy.append(authorName, time);
+    author.append(authorAvatar, authorCopy);
     var bubble = document.createElement("div");
     bubble.className = "bb-panel-chat-bubble";
     bubble.textContent = value;
