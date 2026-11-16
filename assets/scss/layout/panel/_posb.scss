@@ -1,0 +1,43 @@
+/* POSB channel management — physical retail operations on shared core tokens. */
+.bb-panel .bb-posb-page{padding-bottom:var(--bb-space-6)}
+.bb-panel .bb-posb-stack{display:grid;gap:var(--bb-space-4)}
+.bb-panel .bb-posb-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-posb-kpi .bb-card-body{display:grid;gap:var(--bb-space-2);min-height:9rem}
+.bb-panel .bb-posb-kpi-icon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);color:var(--bb-primary-text)}
+.bb-panel .bb-posb-kpi strong{color:var(--bb-emphasis-color);font-size:var(--bb-h3);font-weight:var(--bb-fw-semibold);line-height:var(--bb-line-height-heading)}
+.bb-panel .bb-posb-kpi small{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-posb-grid{display:grid;grid-template-columns:minmax(18rem,.75fr) minmax(0,1.75fr);gap:var(--bb-space-4)}
+.bb-panel .bb-posb-card-heading{display:grid;gap:var(--bb-space-1)}
+.bb-panel .bb-posb-card-heading h2,.bb-panel .bb-posb-card-heading h3{margin:0;color:var(--bb-heading-color);font-size:var(--bb-h5);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-posb-card-heading p{margin:0;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-posb-health-list,.bb-panel .bb-posb-setting-list{display:grid;gap:var(--bb-space-3)}
+.bb-panel .bb-posb-health-row{display:grid;gap:var(--bb-space-2)}
+.bb-panel .bb-posb-health-copy,.bb-panel .bb-posb-setting-row{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-3)}
+.bb-panel .bb-posb-health-copy span,.bb-panel .bb-posb-setting-row span{color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-posb-health-copy strong,.bb-panel .bb-posb-setting-row strong{color:var(--bb-emphasis-color);font-size:var(--bb-fs-xs);font-weight:var(--bb-fw-semibold)}
+.bb-panel .bb-posb-progress{height:.6667rem;overflow:hidden;border-radius:var(--bb-radius-pill);background:var(--bb-tertiary-bg)}
+.bb-panel .bb-posb-progress>span{display:block;height:100%;border-radius:inherit;background:var(--bb-primary)}
+.bb-panel .bb-posb-progress>span[data-level="62"]{width:62%}.bb-panel .bb-posb-progress>span[data-level="78"]{width:78%}.bb-panel .bb-posb-progress>span[data-level="92"]{width:92%}.bb-panel .bb-posb-progress>span[data-level="100"]{width:100%}
+.bb-panel .bb-posb-bars{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:var(--bb-space-3);align-items:end;min-height:16rem;padding:var(--bb-space-4) var(--bb-space-3) var(--bb-space-2);border-block:var(--bb-border-width) dashed var(--bb-border-color)}
+.bb-panel .bb-posb-bar{display:grid;grid-template-rows:1fr auto;gap:var(--bb-space-2);align-items:end;height:100%}
+.bb-panel .bb-posb-bar>span{display:block;width:min(2.5rem,80%);min-height:1rem;margin-inline:auto;border-radius:var(--bb-radius-sm) var(--bb-radius-sm) 0 0;background:var(--bb-primary)}
+.bb-panel .bb-posb-bar>span[data-level="44"]{height:44%}.bb-panel .bb-posb-bar>span[data-level="58"]{height:58%}.bb-panel .bb-posb-bar>span[data-level="67"]{height:67%}.bb-panel .bb-posb-bar>span[data-level="73"]{height:73%}.bb-panel .bb-posb-bar>span[data-level="82"]{height:82%}.bb-panel .bb-posb-bar>span[data-level="91"]{height:91%}
+.bb-panel .bb-posb-bar small{color:var(--bb-secondary-color);font-size:var(--bb-fs-2xs);text-align:center}
+.bb-panel .bb-posb-quick-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--bb-space-2)}
+.bb-panel .bb-posb-quick-link{display:grid;place-items:center;gap:var(--bb-space-2);min-height:6rem;padding:var(--bb-space-3);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius);background:var(--bb-surface-soft);color:var(--bb-secondary-color);text-decoration:none;text-align:center}
+.bb-panel .bb-posb-quick-link:hover{border-color:var(--bb-border-color-strong);background:var(--bb-tertiary-bg);color:var(--bb-emphasis-color)}
+.bb-panel .bb-posb-quick-link .material-symbols-outlined{color:var(--bb-primary-text);font-size:var(--bb-fs-xl)}
+.bb-panel .bb-posb-quick-link strong{font-size:var(--bb-fs-xs)}
+.bb-panel .bb-posb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bb-space-4)}
+.bb-panel .bb-posb-form-card .bb-card-body,.bb-panel .bb-posb-list-card .bb-card-body{display:grid;gap:var(--bb-space-4)}
+.bb-panel .bb-posb-form-actions{display:flex;justify-content:flex-end;gap:var(--bb-space-2);padding-top:var(--bb-space-4);border-top:var(--bb-border-width) solid var(--bb-border-color)}
+.bb-panel .bb-posb-save-status{min-height:1.25rem;margin:0;color:var(--bb-success-text);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-posb-entity-list{display:grid;gap:var(--bb-space-2)}
+.bb-panel .bb-posb-entity{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--bb-space-3);align-items:center;padding:var(--bb-space-3);border:var(--bb-border-width) solid var(--bb-border-color);border-radius:var(--bb-radius);background:var(--bb-surface-soft)}
+.bb-panel .bb-posb-entity-icon{display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);color:var(--bb-primary-text)}
+.bb-panel .bb-posb-entity-copy strong,.bb-panel .bb-posb-entity-copy small{display:block}.bb-panel .bb-posb-entity-copy strong{color:var(--bb-emphasis-color);font-size:var(--bb-fs-sm)}.bb-panel .bb-posb-entity-copy small{margin-top:var(--bb-space-1);color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel [data-bb-posb-view][hidden]{display:none}
+@media(max-width:1399.98px){.bb-panel .bb-posb-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.bb-panel .bb-posb-quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1199.98px){.bb-panel .bb-posb-grid,.bb-panel .bb-posb-form-grid{grid-template-columns:1fr}}
+@media(max-width:767.98px){.bb-panel .bb-posb-kpis,.bb-panel .bb-posb-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:575.98px){.bb-panel .bb-posb-kpis,.bb-panel .bb-posb-quick-grid{grid-template-columns:1fr}}
