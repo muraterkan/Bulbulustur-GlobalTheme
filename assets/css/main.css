@@ -17570,6 +17570,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   - Default Bootstrap .btn-group davranışına dokunmuyoruz.
   - bb-* sadece opt-in class ile devreye girer.
 -------------------------------------------------- */
+/* ================================================== */
+/* ================================================== */
+/* 6. Final Overrides */
+/* Bootstrap ve page-level ezmelerden sonra form objelerini tekrar Main CSS standardına sabitler. */
 /* =====================================
    Bulbulustur Theme - Forms Final Override
    Purpose: Keep Bootstrap 5 form controls aligned with Main CSS form tokens
