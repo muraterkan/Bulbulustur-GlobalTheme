@@ -48,6 +48,7 @@
 // Optional layer. Core-only projects must exclude this block.
 // Keep import order stable: panel layouts currently compile before core components.
 // ==================================================
+@use "layout/panel/theme-profile"; // panel/component neutral dark profile
 @use "layout/panel/shell";         // panel template Faz 1: responsive shell
 @use "layout/panel/sidebar" as panel-sidebar;       // panel template Faz 2: sidebar menüsü
 @use "layout/panel/header" as panel-header;        // panel template Faz 3: topbar
