@@ -1,7 +1,7 @@
 /* =====================================
-   Bulbulustur Theme - Renk Paketi: ATÖLYE
+   Bulbulustur Theme - Renk Paketi: WORKSHOP
    El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
-   Kullanım: <html data-bb-pack="atolye"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
+   Kullanım: <html data-bb-pack="workshop"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
    Yalnız GİRDİ tokenları (palet, marka, nötr, kabuk). hover/active/light/clarity
    türevleri themes/_token-engine.scss tarafından bu girdilerden üretilir.
    Kapsam: yalnız renk tokenları. Sarı marka paleti (base/_theme) bozulmaz;
@@ -15,7 +15,7 @@
    PALET (açık + koyu ortak)
 ------------------------------------- */
 
-html[data-bb-pack="atolye"] {
+html[data-bb-pack="workshop"] {
   /* Terracotta (primary) */
   --bb-terracotta-50: #f9f1ef;
   --bb-terracotta-100: #f1e0da;
@@ -71,7 +71,7 @@ html[data-bb-pack="atolye"] {
    AÇIK TEMA
 ------------------------------------- */
 
-html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]) {
+html[data-bb-pack="workshop"]:not([data-bs-theme="dark"]) {
   color-scheme: light;
 
   /* Sıcak nötr ölçek (ink = gray-900) */
@@ -169,7 +169,7 @@ html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]) {
 }
 
 /* Yüzey seçilmediyse sayfa aksanı primary (terracotta) olur; data-bb-surface kuralları değişmez */
-html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]):not([data-bb-surface]) {
+html[data-bb-pack="workshop"]:not([data-bs-theme="dark"]):not([data-bb-surface]) {
   --bb-page-accent: var(--bb-primary);
   --bb-page-accent-rgb: var(--bb-primary-rgb);
   --bb-page-accent-soft: var(--bb-terracotta-50);
@@ -185,7 +185,7 @@ html[data-bb-pack="atolye"]:not([data-bs-theme="dark"]):not([data-bb-surface]) {
    KOYU TEMA (sıcak kakao-kömür)
 ------------------------------------- */
 
-html[data-bb-pack="atolye"][data-bs-theme="dark"] {
+html[data-bb-pack="workshop"][data-bs-theme="dark"] {
   color-scheme: dark;
 
   /* base/_theme koyu ölçeği ink-* üzerinden okunur; ink sıcak tonlara çevrilir */
@@ -260,7 +260,7 @@ html[data-bb-pack="atolye"][data-bs-theme="dark"] {
   --bb-link-hover-color: var(--bb-primary);
 }
 
-html[data-bb-pack="atolye"][data-bs-theme="dark"]:not([data-bb-surface]) {
+html[data-bb-pack="workshop"][data-bs-theme="dark"]:not([data-bb-surface]) {
   --bb-page-accent: var(--bb-primary);
   --bb-page-accent-rgb: var(--bb-primary-rgb);
   --bb-page-accent-soft: color-mix(in srgb, var(--bb-primary) 12%, transparent);

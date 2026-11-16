@@ -19,7 +19,7 @@ const partials = walk(scssRoot)
   .filter((path) => /[\\/]_[^\\/]+\.scss$/.test(path))
   .map((path) => relative(scssRoot, path).replace(/\\/g, '/').replace(/\/_/, '/').replace(/\.scss$/, ''));
 
-// Derlenmeyen (ölü) partial kalmasın. Bilinçli ayrılmışlar burada açıkça listelenir (docs/CSS_ANALIZ_15112026.md D1).
+// Derlenmeyen (ölü) partial kalmasın. Bilinçli ayrılmışlar burada açıkça listelenir (docs/CSS_ANALYSIS_2026-11-15.md D1).
 const detached = new Set();
 const orphans = partials.filter((name) => !mainImports.includes(name) && !detached.has(name));
 check('every partial is imported by main.scss (or explicitly detached)', orphans.length === 0);
