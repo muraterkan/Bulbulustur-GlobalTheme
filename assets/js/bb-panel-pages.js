@@ -55,7 +55,6 @@
     "widgets-statistics": {title:"İstatistikler", group:"Widget'lar", section:"SAYFALAR"},
     "widgets-tables": {title:"Tablolar", group:"Widget'lar", section:"SAYFALAR"},
     "widgets-lists": {title:"Listeler", group:"Widget'lar", section:"SAYFALAR"},
-    "widgets-charts": {title:"Grafikler", group:"Widget'lar", section:"SAYFALAR"},
     "projects-list": {title:"Liste", group:"Projeler", section:"UYGULAMALAR"},
     "projects-overview": {title:"Genel Bakış", group:"Projeler", section:"UYGULAMALAR"},
     "projects-create": {title:"Oluştur", group:"Projeler", section:"UYGULAMALAR"},
