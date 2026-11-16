@@ -179,35 +179,6 @@
   <script src="../../assets/js/core/bb-drawer.js"></script>
 
   <!-- Demo: theme + density -->
-  <script>
-    (function () {
-      var root = document.documentElement;
-      var densityBtn = document.getElementById("bbDensityToggle");
-
-      function setTheme(theme) {
-        root.setAttribute("data-bs-theme", theme);
-      }
-
-      function toggleDensity() {
-        var current = root.getAttribute("data-bb-density");
-        if (current === "compact") {
-          root.removeAttribute("data-bb-density");
-          densityBtn.classList.remove("active");
-        } else {
-          root.setAttribute("data-bb-density", "compact");
-          densityBtn.classList.add("active");
-        }
-      }
-
-      document.querySelectorAll("[data-bb-theme]").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          setTheme(btn.getAttribute("data-bb-theme"));
-        });
-      });
-
-      densityBtn.addEventListener("click", toggleDensity);
-    })();
-  </script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
