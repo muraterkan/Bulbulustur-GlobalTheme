@@ -1,0 +1,34 @@
+/* Blog listing/home — GlobalTheme tokens, cards and type scale. */
+.bb-panel .bb-blog-page { --bb-blog-gap: var(--bb-panel-content-gap); }
+.bb-panel .bb-blog-featured { padding: calc(var(--bb-space-4) + var(--bb-space-2)); }
+.bb-panel .bb-blog-section-title { display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-3);padding-bottom:var(--bb-space-4);margin:0 0 var(--bb-space-4);border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color);}
+.bb-panel .bb-blog-section-title h2 {font-size:var(--bb-fs-lg);font-weight:var(--bb-fw-semibold);color:var(--bb-emphasis-color);margin:0}
+.bb-panel .bb-blog-section-title a {font-size:var(--bb-fs-sm);color:var(--bb-primary-text);text-decoration:none}
+.bb-panel .bb-blog-feature-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(var(--bb-space-4) + var(--bb-space-2))}
+.bb-panel .bb-blog-feature-primary,.bb-panel .bb-blog-news-item,.bb-panel .bb-blog-tile {min-width:0}
+.bb-panel .bb-blog-image {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--bb-radius);background:var(--bb-tertiary-bg)}
+.bb-panel .bb-blog-media {position:relative;display:block;overflow:hidden;border-radius:var(--bb-radius)}
+.bb-panel .bb-blog-media .bb-blog-play {position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.bb-panel .bb-blog-play .material-symbols-outlined {background:color-mix(in srgb,var(--bb-black) 72%,transparent);color:var(--bb-white);font-size:2.5rem;padding:var(--bb-space-2);border-radius:var(--bb-radius)}
+.bb-panel .bb-blog-headline {display:block;margin:var(--bb-space-3) 0 var(--bb-space-2);font-size:var(--bb-fs-lg);font-weight:var(--bb-fw-semibold);line-height:var(--bb-line-height-heading);color:var(--bb-emphasis-color);text-decoration:none}
+.bb-panel .bb-blog-headline:hover,.bb-panel .bb-blog-tile-title:hover{color:var(--bb-primary-text)}
+.bb-panel .bb-blog-excerpt {font-size:var(--bb-fs-sm);line-height:var(--bb-line-height-base);color:var(--bb-secondary-color)}
+.bb-panel .bb-blog-meta {display:flex;align-items:center;flex-wrap:wrap;gap:var(--bb-space-2);font-size:var(--bb-fs-xs);color:var(--bb-secondary-color);margin-top:var(--bb-space-3)}
+.bb-panel .bb-blog-meta .bb-symbol {width:2rem;height:2rem;flex:0 0 2rem}
+.bb-panel .bb-blog-meta .badge {margin-inline-start:auto}
+.bb-panel .bb-blog-news {display:flex;flex-direction:column;gap:var(--bb-space-4)}
+.bb-panel .bb-blog-news-item:not(:last-child) {padding-bottom:var(--bb-space-3);border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color)}
+.bb-panel .bb-blog-news-item .bb-blog-headline {margin:0 0 var(--bb-space-2)}
+.bb-panel .bb-blog-section {margin-top:calc(var(--bb-space-4) + var(--bb-space-3))}
+.bb-panel .bb-blog-grid-3 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-blog-gap)}
+.bb-panel .bb-blog-tile-title {display:block;margin:var(--bb-space-3) 0 var(--bb-space-2);color:var(--bb-emphasis-color);font-size:var(--bb-fs-sm);font-weight:var(--bb-fw-semibold);text-decoration:none}
+.bb-panel .bb-blog-price {display:flex;justify-content:space-between;gap:var(--bb-space-2);align-items:center;margin-top:var(--bb-space-3)}
+.bb-panel .bb-blog-price strong {font-size:var(--bb-fs-lg);color:var(--bb-emphasis-color)}
+.bb-panel .bb-blog-gallery {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--bb-blog-gap)}
+.bb-panel .bb-blog-gallery img {display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--bb-radius)}
+.bb-panel .bb-blog-filter-bar {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--bb-space-3);margin-bottom:var(--bb-space-4)}
+.bb-panel .bb-blog-filter-bar .form-control {max-width:22rem}
+.bb-panel .bb-blog-filter-bar .btn[aria-pressed="true"] {background:var(--bb-primary-light);color:var(--bb-primary-text)}
+.bb-panel .bb-blog-item[hidden],.bb-panel .bb-blog-empty[hidden] {display:none}
+@media(max-width:991.98px){.bb-panel .bb-blog-feature-grid{grid-template-columns:1fr}.bb-panel .bb-blog-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.bb-panel .bb-blog-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:575.98px){.bb-panel .bb-blog-featured{padding:var(--bb-space-4)}.bb-panel .bb-blog-grid-3{grid-template-columns:1fr}.bb-panel .bb-blog-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
