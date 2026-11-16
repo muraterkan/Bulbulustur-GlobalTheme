@@ -10,12 +10,12 @@ if (topnav) {
   topnav.innerHTML = `
     <div class="bb-menu bb-menu-hover-bg bb-menu-active-bg" data-bb-panel-topnav-menu>
       <div class="bb-menu-item">
-        <a class="bb-menu-link" href="dashboard.html">Gösterge Paneli</a>
+        <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
       </div>
 
       <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="pages">
         <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_pages">
-          Sayfalar <span class="bb-menu-arrow" aria-hidden="true"></span>
+          Pages <span class="bb-menu-arrow" aria-hidden="true"></span>
         </button>
         <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-mega" id="bb_panel_topnav_pages" data-bb-menu-placement="bottom-start">
           <div class="bb-panel-mega-layout">
@@ -23,49 +23,49 @@ if (topnav) {
               <div class="bb-panel-mega-items">
                 <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="profil.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
-                  <span><strong>Profil</strong><small>Kullanıcı görünümü ve etkinlikler</small></span>
+                  <span><strong>Profile</strong><small>User overview and activity</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-success" href="hesap.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
-                  <span><strong>Hesap</strong><small>Ayarlar, güvenlik ve tercihler</small></span>
+                  <span><strong>Account</strong><small>Settings, security and preferences</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="fatura.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></span>
-                  <span><strong>Faturalar</strong><small>Fatura listesi ve detayları</small></span>
+                  <span><strong>Invoices</strong><small>Invoice list and details</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="fiyatlandirma.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">payments</span></span>
-                  <span><strong>Fiyatlandırma</strong><small>Plan ve paket karşılaştırmaları</small></span>
+                  <span><strong>Pricing</strong><small>Compare plans and packages</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="ekibimiz.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span>
-                  <span><strong>Ekibimiz</strong><small>Kurumsal ekip ve kültür sayfası</small></span>
+                  <span><strong>Our Team</strong><small>Corporate team and culture page</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-info" href="blog.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">article</span></span>
-                  <span><strong>Blog</strong><small>İçerik ve yayın ekranları</small></span>
+                  <span><strong>Blog</strong><small>Content and publishing screens</small></span>
                 </a>
               </div>
             </div>
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
-              <strong>Daha Fazla Sayfa</strong>
-              <a href="sosyal-akis.html">Sosyal Akış</a>
-              <a href="profil-ayarlar.html">Profil Ayarları</a>
-              <a href="istatistikler.html">İstatistikler</a>
-              <a href="grafikler.html">Grafikler</a>
-              <a href="widget-listeleri.html">Widget Listeleri</a>
+              <strong>More Pages</strong>
+              <a href="sosyal-akis.html">Social Feed</a>
+              <a href="profil-ayarlar.html">Profile Ayarları</a>
+              <a href="istatistikler.html">Statistics</a>
+              <a href="grafikler.html">Charts</a>
+              <a href="widget-listeleri.html">Widget Lists</a>
             </aside>
           </div>
           <div class="bb-panel-mega-footer">
-            <span><strong>Panel sayfa şablonları</strong><small>Hazır ekranları aynı kabuk ve component sistemiyle kullan.</small></span>
-            <a class="btn bb-btn-bg-primary btn-sm" href="layoutlar.html">Keşfet</a>
+            <span><strong>Panel page templates</strong><small>Use ready-made screens with the same shell and component system.</small></span>
+            <a class="btn bb-btn-bg-primary btn-sm" href="layoutlar.html">Explore</a>
           </div>
         </div>
       </div>
 
       <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="apps">
         <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_apps">
-          Uygulamalar <span class="bb-menu-arrow" aria-hidden="true"></span>
+          Applications <span class="bb-menu-arrow" aria-hidden="true"></span>
         </button>
         <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-mega" id="bb_panel_topnav_apps" data-bb-menu-placement="bottom-start">
           <div class="bb-panel-mega-layout">
@@ -73,60 +73,60 @@ if (topnav) {
               <div class="bb-panel-mega-items">
                 <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="siparisler.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span></span>
-                  <span><strong>Siparişler</strong><small>Liste ve sipariş detay akışı</small></span>
+                  <span><strong>Orders</strong><small>Order list and detail flow</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-success" href="urun-olustur.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">add_box</span></span>
-                  <span><strong>Ürün Oluştur</strong><small>Ürün formu ve içerik alanları</small></span>
+                  <span><strong>Create Product</strong><small>Product form and content fields</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="kisiler.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">contacts</span></span>
-                  <span><strong>Kişiler</strong><small>Kişi kartları ve liste görünümü</small></span>
+                  <span><strong>Contacts</strong><small>Contact cards and list view</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="abonelik.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">subscriptions</span></span>
-                  <span><strong>Abonelik</strong><small>Plan durumu ve abonelik detayları</small></span>
+                  <span><strong>Subscription</strong><small>Plan status and subscription details</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="roller.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span></span>
-                  <span><strong>Roller</strong><small>Rol listesi ve yönetim görünümü</small></span>
+                  <span><strong>Roles</strong><small>Role list and management view</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-info" href="yetkiler.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span></span>
-                  <span><strong>Yetkiler</strong><small>Yetki matrisi ve erişim alanları</small></span>
+                  <span><strong>Permissions</strong><small>Permission matrix and access scopes</small></span>
                 </a>
               </div>
             </div>
-            <aside class="bb-panel-mega-side" aria-label="Araçlar ve örnekler">
-              <strong>Araçlar ve Örnekler</strong>
-              <a href="listeler.html">Liste / Tablo</a>
+            <aside class="bb-panel-mega-side" aria-label="Tools and examples">
+              <strong>Tools and Examples</strong>
+              <a href="listeler.html">List / Table</a>
               <a href="formlar.html">Formlar</a>
-              <a href="grafikler.html">Grafikler</a>
-              <a href="istatistikler.html">İstatistikler</a>
-              <a href="widget-listeleri.html">Widget Listeleri</a>
+              <a href="grafikler.html">Charts</a>
+              <a href="istatistikler.html">Statistics</a>
+              <a href="widget-listeleri.html">Widget Lists</a>
             </aside>
           </div>
           <div class="bb-panel-mega-footer">
-            <span><strong>Uygulama ekranları</strong><small>Gerçek panel akışlarına bağlanmış hazır örnekleri incele.</small></span>
-            <a class="btn bb-btn-bg-primary btn-sm" href="siparisler.html">Keşfet</a>
+            <span><strong>Application screens</strong><small>Explore ready-made examples connected to real panel flows.</small></span>
+            <a class="btn bb-btn-bg-primary btn-sm" href="siparisler.html">Explore</a>
           </div>
         </div>
       </div>
 
       <div class="bb-menu-item" data-bb-menu-trigger="click" data-bb-panel-nav-group="layouts">
         <button class="bb-menu-link" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="bb_panel_topnav_layouts">
-          Düzenler <span class="bb-menu-arrow" aria-hidden="true"></span>
+          Layouts <span class="bb-menu-arrow" aria-hidden="true"></span>
         </button>
         <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-nav-menu" id="bb_panel_topnav_layouts" data-bb-menu-placement="bottom-start">
-          <a class="bb-panel-nav-menu-link" href="layoutlar.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span><span><strong>Yerleşim Planları</strong><small>Sidebar, üst menü ve auth düzenleri</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="header.html"><span class="material-symbols-outlined" aria-hidden="true">web_asset</span><span><strong>Üst Bar</strong><small>Header ve üst navigasyon</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="sidebar.html"><span class="material-symbols-outlined" aria-hidden="true">left_panel_open</span><span><strong>Sidebar</strong><small>Panel kenar menüsü</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="toolbar.html"><span class="material-symbols-outlined" aria-hidden="true">toolbar</span><span><strong>Toolbar</strong><small>Başlık, breadcrumb ve aksiyonlar</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="layoutlar.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span><span><strong>Layout Plans</strong><small>Sidebar, top navigation and auth layouts</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="header.html"><span class="material-symbols-outlined" aria-hidden="true">web_asset</span><span><strong>Header</strong><small>Header and top navigation</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="sidebar.html"><span class="material-symbols-outlined" aria-hidden="true">left_panel_open</span><span><strong>Sidebar</strong><small>Panel sidebar</small></span></a>
+          <a class="bb-panel-nav-menu-link" href="toolbar.html"><span class="material-symbols-outlined" aria-hidden="true">toolbar</span><span><strong>Toolbar</strong><small>Title, breadcrumb and actions</small></span></a>
         </div>
       </div>
 
       <div class="bb-menu-item">
-        <a class="bb-menu-link" href="destek-merkezi.html">Yardım</a>
+        <a class="bb-menu-link" href="destek-merkezi.html">Help</a>
       </div>
     </div>
   `;
@@ -148,46 +148,46 @@ var notificationHost = panel.querySelector('[aria-controls="bb_notifications_pop
 var notificationPanel = notificationHost?.querySelector("#bb_notifications_pop");
 if (notificationPanel) {
   notificationPanel.classList.add("bb-panel-notifications");
-  notificationPanel.setAttribute("aria-label", "Bildirimler");
+  notificationPanel.setAttribute("aria-label", "Notifications");
   notificationPanel.innerHTML = `
     <div class="bb-panel-notifications-head">
       <div class="bb-panel-notifications-heading">
-        <h2 id="bb_notifications_title">Bildirimler</h2>
-        <span class="bb-panel-notifications-count" data-bb-notification-count>3 yeni</span>
+        <h2 id="bb_notifications_title">Notifications</h2>
+        <span class="bb-panel-notifications-count" data-bb-notification-count>3 new</span>
       </div>
-      <div class="bb-panel-notifications-tabs" role="tablist" aria-label="Bildirim kategorileri">
-        <button type="button" id="bb_notifications_tab_alerts" class="bb-panel-notifications-tab" role="tab" aria-selected="true" aria-controls="bb_notifications_alerts" data-bb-notification-tab="alerts" tabindex="0">Uyarılar</button>
-        <button type="button" id="bb_notifications_tab_updates" class="bb-panel-notifications-tab" role="tab" aria-selected="false" aria-controls="bb_notifications_updates" data-bb-notification-tab="updates" tabindex="-1">Güncellemeler</button>
-        <button type="button" id="bb_notifications_tab_logs" class="bb-panel-notifications-tab" role="tab" aria-selected="false" aria-controls="bb_notifications_logs" data-bb-notification-tab="logs" tabindex="-1">Geçmiş</button>
+      <div class="bb-panel-notifications-tabs" role="tablist" aria-label="Notification categories">
+        <button type="button" id="bb_notifications_tab_alerts" class="bb-panel-notifications-tab" role="tab" aria-selected="true" aria-controls="bb_notifications_alerts" data-bb-notification-tab="alerts" tabindex="0">Alerts</button>
+        <button type="button" id="bb_notifications_tab_updates" class="bb-panel-notifications-tab" role="tab" aria-selected="false" aria-controls="bb_notifications_updates" data-bb-notification-tab="updates" tabindex="-1">Updates</button>
+        <button type="button" id="bb_notifications_tab_logs" class="bb-panel-notifications-tab" role="tab" aria-selected="false" aria-controls="bb_notifications_logs" data-bb-notification-tab="logs" tabindex="-1">History</button>
       </div>
     </div>
     <div class="bb-panel-notifications-body">
       <div role="tabpanel" id="bb_notifications_alerts" aria-labelledby="bb_notifications_tab_alerts" data-bb-notification-panel="alerts">
         <div class="bb-panel-notification-row" data-bb-notification-unread>
           <span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">shopping_bag</span></span>
-          <div class="bb-panel-notification-copy"><strong>Yeni sipariş alındı</strong><p>Bir sipariş onay bekliyor.</p><small>5 dakika önce · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Okunmadı"></span>
+          <div class="bb-panel-notification-copy"><strong>New order received</strong><p>An order is awaiting approval.</p><small>5 minutes ago · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Unread"></span>
         </div>
         <div class="bb-panel-notification-row" data-bb-notification-unread>
           <span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">inventory_2</span></span>
-          <div class="bb-panel-notification-copy"><strong>Stok uyarısı</strong><p>Bir ürünün stok seviyesi azaldı.</p><small>25 dakika önce · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Okunmadı"></span>
+          <div class="bb-panel-notification-copy"><strong>Stock alert</strong><p>A product stock level is low.</p><small>25 minutes ago · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Unread"></span>
         </div>
         <div class="bb-panel-notification-row">
           <span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">task_alt</span></span>
-          <div class="bb-panel-notification-copy"><strong>Günlük kontrol tamamlandı</strong><p>İşlem kuyruğu kontrol edildi.</p><small>Dün · Demo</small></div>
+          <div class="bb-panel-notification-copy"><strong>Daily check completed</strong><p>The processing queue was checked.</p><small>Yesterday · Demo</small></div>
         </div>
       </div>
       <div role="tabpanel" id="bb_notifications_updates" aria-labelledby="bb_notifications_tab_updates" data-bb-notification-panel="updates" hidden>
         <div class="bb-panel-notification-row" data-bb-notification-unread>
           <span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">system_update</span></span>
-          <div class="bb-panel-notification-copy"><strong>Sistem güncellemesi</strong><p>Panel bileşenleri güncellendi.</p><small>2 saat önce · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Okunmadı"></span>
+          <div class="bb-panel-notification-copy"><strong>System update</strong><p>Panel components were updated.</p><small>2 hours ago · Demo</small></div><span class="bb-panel-notification-dot" aria-label="Unread"></span>
         </div>
-        <div class="bb-panel-notification-row"><span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">palette</span></span><div class="bb-panel-notification-copy"><strong>Tema seçenekleri</strong><p>Açık ve koyu görünüm kullanılabilir.</p><small>Dün · Demo</small></div></div>
+        <div class="bb-panel-notification-row"><span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">palette</span></span><div class="bb-panel-notification-copy"><strong>Theme options</strong><p>Light and dark modes are available.</p><small>Yesterday · Demo</small></div></div>
       </div>
       <div role="tabpanel" id="bb_notifications_logs" aria-labelledby="bb_notifications_tab_logs" data-bb-notification-panel="logs" hidden>
-        <div class="bb-panel-notification-row"><span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">history</span></span><div class="bb-panel-notification-copy"><strong>Son etkinlik</strong><p>Örnek geçmiş kaydı görüntüleniyor.</p><small>15 Kasım · Demo</small></div></div>
+        <div class="bb-panel-notification-row"><span class="bb-panel-notification-icon" aria-hidden="true"><span class="material-symbols-outlined">history</span></span><div class="bb-panel-notification-copy"><strong>Recent activity</strong><p>A demo history entry is displayed.</p><small>November 15 · Demo</small></div></div>
       </div>
     </div>
-    <div class="bb-panel-notifications-foot"><span>Örnek veriler</span><button type="button" class="bb-panel-notifications-clear" data-bb-notification-read>Tümünü okundu işaretle</button></div>
+    <div class="bb-panel-notifications-foot"><span>Demo data</span><button type="button" class="bb-panel-notifications-clear" data-bb-notification-read>Mark all as read</button></div>
   `;
 
   var notificationTabs = Array.from(notificationPanel.querySelectorAll("[data-bb-notification-tab]"));
@@ -215,7 +215,7 @@ if (notificationPanel) {
   function refreshNotificationCount() {
     var unread = notificationPanel.querySelectorAll("[data-bb-notification-unread]").length;
     var count = notificationPanel.querySelector("[data-bb-notification-count]");
-    if (count) count.textContent = unread ? unread + " yeni" : "Tümü okundu";
+    if (count) count.textContent = unread ? unread + " new" : "All read";
     var indicator = notificationHost.querySelector(".bb-panel-indicator");
     if (indicator) indicator.hidden = unread === 0;
     if (markRead) markRead.disabled = unread === 0;
@@ -253,36 +253,36 @@ if (messageToggle && messageHost) {
   chatDrawer.className = "bb-drawer bb-drawer-end bb-panel-chat-drawer";
   chatDrawer.setAttribute("role", "dialog");
   chatDrawer.setAttribute("aria-modal", "true");
-  chatDrawer.setAttribute("aria-label", "Mesajlar");
+  chatDrawer.setAttribute("aria-label", "Messages");
   chatDrawer.setAttribute("aria-hidden", "true");
   chatDrawer.innerHTML = `
     <div class="bb-drawer-header">
       <div class="bb-panel-chat-head">
-        <strong>Destek görüşmesi</strong>
-        <small><span class="bb-panel-chat-presence" aria-hidden="true"></span>Çevrimiçi · Demo sohbet</small>
+        <strong>Support conversation</strong>
+        <small><span class="bb-panel-chat-presence" aria-hidden="true"></span>Online · Demo chat</small>
       </div>
-      <button class="bb-drawer-close" type="button" aria-label="Mesajları kapat" data-bb-chat-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      <button class="bb-drawer-close" type="button" aria-label="Messagesı kapat" data-bb-chat-close><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
     </div>
-    <div class="bb-drawer-body" data-bb-chat-history role="log" aria-live="polite" aria-label="Konuşma geçmişi">
+    <div class="bb-drawer-body" data-bb-chat-history role="log" aria-live="polite" aria-label="Conversation history">
       <div class="bb-panel-chat-message" data-side="in">
-        <div class="bb-panel-chat-author">Destek Ekibi <small>09:15</small></div>
-        <div class="bb-panel-chat-bubble">Merhaba, size nasıl yardımcı olabiliriz?</div>
+        <div class="bb-panel-chat-author">Support Team <small>09:15</small></div>
+        <div class="bb-panel-chat-bubble">Hello, how can we help you?</div>
       </div>
       <div class="bb-panel-chat-message" data-side="out">
-        <div class="bb-panel-chat-author">Siz <small>09:18</small></div>
-        <div class="bb-panel-chat-bubble">Panelin yeni bileşenlerini inceliyorum.</div>
+        <div class="bb-panel-chat-author">You <small>09:18</small></div>
+        <div class="bb-panel-chat-bubble">Panelin new bileşenlerini inceliyorum.</div>
       </div>
       <div class="bb-panel-chat-message" data-side="in">
-        <div class="bb-panel-chat-author">Destek Ekibi <small>09:20</small></div>
+        <div class="bb-panel-chat-author">Support Team <small>09:20</small></div>
         <div class="bb-panel-chat-bubble">Harika! Herhangi bir sorunuz olursa buradan yazabilirsiniz. Bu bir demo sohbetidir.</div>
       </div>
     </div>
     <form class="bb-panel-chat-compose" data-bb-chat-compose>
-      <label class="visually-hidden" for="bb_chat_text">Mesajınız</label>
-      <textarea id="bb_chat_text" class="form-control form-control-solid" data-bb-chat-input rows="2" maxlength="1000" placeholder="Bir mesaj yazın..." required></textarea>
+      <label class="visually-hidden" for="bb_chat_text">Your message</label>
+      <textarea id="bb_chat_text" class="form-control form-control-solid" data-bb-chat-input rows="2" maxlength="1000" placeholder="Write a message..." required></textarea>
       <div class="bb-panel-chat-compose-actions">
-        <span class="bb-panel-chat-compose-note">Mesajlar sadece bu sayfada görünür.</span>
-        <button class="btn btn-primary btn-sm" type="submit">Gönder</button>
+        <span class="bb-panel-chat-compose-note">Messages sadece bu sayfada görünür.</span>
+        <button class="btn btn-primary btn-sm" type="submit">Send</button>
       </div>
     </form>
   `;
@@ -338,7 +338,7 @@ if (messageToggle && messageHost) {
     item.dataset.side = "out";
     var author = document.createElement("div");
     author.className = "bb-panel-chat-author";
-    author.textContent = "Siz";
+    author.textContent = "You";
     var time = document.createElement("small");
     time.textContent = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
     author.appendChild(time);

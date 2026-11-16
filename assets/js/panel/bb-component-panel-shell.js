@@ -66,19 +66,19 @@
   });
 
   var componentCatalog = [
-    ["accordion.html","Akordeon"],["alerts.html","Uyarılar"],["badges.html","Rozetler"],["breadcrumb.html","İçerik Yolu"],
-    ["bullet.html","Madde"],["buttongroup.html","Buton Grupları"],["buttons.html","Butonlar"],["cards.html","Kartlar"],
-    ["carousel.html","Karusel"],["chips.html","Chips"],["collapse.html","Daraltma"],["countup.html","Sayaç"],
-    ["datepicker.html","Tarih Seçici"],["dialer.html","Sayısal Adım"],["drawer.html","Drawer"],["dropdowns.html","Açılır Menüler"],
-    ["empty-state.html","Boş Durum"],["floating-labels.html","Yüzen Etiketler"],["formrepeater.html","Form Tekrarlayıcı"],["forms.html","Formlar"],
-    ["indicator.html","Gösterge"],["input-group.html","Girdi Grubu"],["inputmask.html","Girdi Maskesi"],
-    ["lightbox.html","Lightbox"],["menu.html","Menü"],["modal.html","Modal"],["overlay.html","Overlay"],
-    ["pagination.html","Sayfalama"],["password-meter.html","Şifre Ölçer"],["popover.html","Popover"],
-    ["progress.html","İlerleme"],["pulse.html","Pulse"],["rating.html","Puanlama"],
-    ["ribbons.html","Şeritler"],["scroll.html","Scroll"],["separator.html","Ayırıcı"],["spinner.html","Spinner"],
-    ["sticky.html","Sticky"],["symbol.html","Sembol"],["tables.html","Tablolar"],["tabs.html","Sekmeler"],
+    ["accordion.html","Accordion"],["alerts.html","Alerts"],["badges.html","Badges"],["breadcrumb.html","Breadcrumb"],
+    ["bullet.html","Bullet"],["buttongroup.html","Button Group"],["buttons.html","Buttons"],["cards.html","Cards"],
+    ["carousel.html","Carousel"],["chips.html","Chips"],["collapse.html","Collapse"],["countup.html","Countup"],
+    ["datepicker.html","Datetime"],["dialer.html","Dialer"],["drawer.html","Drawer"],["dropdowns.html","Dropdowns"],
+    ["empty-state.html","Empty State"],["floating-labels.html","Floating Labels"],["formrepeater.html","Form Repeater"],["forms.html","Forms"],
+    ["indicator.html","Indicator"],["input-group.html","Input Group"],["inputmask.html","Input Mask"],
+    ["lightbox.html","Lightbox"],["menu.html","Menu"],["modal.html","Modal"],["overlay.html","Overlay"],
+    ["pagination.html","Pagination"],["password-meter.html","Password Meter"],["popover.html","Popover"],
+    ["progress.html","Progress"],["pulse.html","Pulse"],["rating.html","Rating"],
+    ["ribbons.html","Ribbons"],["scroll.html","Scroll"],["separator.html","Separator"],["spinner.html","Spinner"],
+    ["sticky.html","Sticky"],["symbol.html","Symbol"],["tables.html","Tables"],["tabs.html","Tabs"],
     ["tiny-slider-advanced.html","Tiny Slider / Advanced"],["tiny-slider-thumbnails.html","Tiny Slider / Thumbnails"],["tiny-slider.html","Tiny Slider"],
-    ["toast.html","Toast"],["tooltips.html","Tooltips"],["typography.html","Tipografi"]
+    ["toast.html","Toast"],["tooltips.html","Tooltips"],["typography.html","Typography"]
   ];
 
   function renderComponentSidebar() {
@@ -182,31 +182,31 @@
   app.setAttribute("data-bb-panel-default-page", "component-" + slug);
 
   app.innerHTML = [
-    '<aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">',
+    '<aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel sidebar">',
       '<div class="bb-sidebar-header">',
         '<a class="bb-sidebar-logo" href="../panel/dashboard.html" aria-label="Bulbulustur panel ana sayfa"><span class="bb-panel-brand-text">Bulbulustur</span></a>',
-        '<button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet"><span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span></button>',
-        '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Menüyü kapat"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>',
+        '<button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Collapse sidebar" aria-pressed="false" title="Collapse / expand"><span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span></button>',
+        '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Close menu"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>',
       '</div>',
       '<div class="bb-sidebar-body">',
-        '<nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg" data-bb-panel-menu aria-label="Component gezinme">',
+        '<nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg" data-bb-panel-menu aria-label="Component navigation">',
           '<div class="bb-menu-section">COMPONENTS</div>',
           renderComponentSidebar(),
         '</nav>',
       '</div>',
       '<div class="bb-sidebar-footer"><a class="bb-panel-sidebar-docs" href="../panel/destek-merkezi.html"><span class="material-symbols-outlined" aria-hidden="true">support_agent</span><span>Get Support</span></a></div>',
     '</aside>',
-    '<button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Menüyü kapat" aria-hidden="true" tabindex="-1"></button>',
+    '<button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close menu" aria-hidden="true" tabindex="-1"></button>',
     '<div class="bb-shell">',
       '<header class="bb-shell-header">',
         '<div class="bb-shell-header-inner">',
           '<div class="bb-shell-header-left">',
-            '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Menüyü aç"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>',
-            '<span class="bb-panel-brand-text">Bulbulustur / Component Kataloğu</span>',
+            '<button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>',
+            '<span class="bb-panel-brand-text">Bulbulustur / Component Catalog</span>',
           '</div>',
           '<div class="bb-shell-header-right">',
-            '<button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Açık veya koyu temayı değiştir"><span class="material-symbols-outlined" aria-hidden="true">contrast</span></button>',
-            '<span class="bb-symbol bb-symbol-35" aria-label="Örnek kullanıcı"><img src="../../assets/media/avatars/300-3.jpg" alt="Örnek kullanıcı avatarı"></span>',
+            '<button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Toggle light or dark theme"><span class="material-symbols-outlined" aria-hidden="true">contrast</span></button>',
+            '<span class="bb-symbol bb-symbol-35" aria-label="Demo user"><img src="../../assets/media/avatars/300-3.jpg" alt="Demo user avatar"></span>',
           '</div>',
         '</div>',
       '</header>',
@@ -217,7 +217,7 @@
               '<div class="bb-toolbar-row">',
                 '<div class="bb-toolbar-col-left">',
                   '<h1 class="bb-page-title"></h1>',
-                  '<nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../panel/dashboard.html">Panel</a></li><li class="breadcrumb-item">Components</li><li class="breadcrumb-item active" aria-current="page"></li></ol></nav>',
+                  '<nav class="bb-breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../panel/dashboard.html">Panel</a></li><li class="breadcrumb-item">Components</li><li class="breadcrumb-item active" aria-current="page"></li></ol></nav>',
                 '</div>',
               '</div>',
             '</div>',
@@ -344,7 +344,7 @@
     .catch(function () {
       var note = document.createElement("div");
       note.className = "alert alert-warning";
-      note.textContent = "Panel davranış dosyalarından biri yüklenemedi.";
+      note.textContent = "A panel behavior script could not be loaded.";
       contentHost.prepend(note);
     });
 }());

@@ -19,7 +19,7 @@
     if (mobileToggle) mobileToggle.setAttribute("aria-expanded", String(open));
     if (collapseButton) {
       collapseButton.setAttribute("aria-pressed", String(collapsed));
-      collapseButton.setAttribute("aria-label", collapsed ? "Kenar çubuğunu genişlet" : "Kenar çubuğunu daralt");
+      collapseButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
     }
     if (sidebar) { sidebar.setAttribute("aria-hidden", String(!desktop.matches && !open)); sidebar.inert = !desktop.matches && !open; }
     if (backdrop) backdrop.setAttribute("aria-hidden", String(!open));
@@ -73,8 +73,8 @@
   var backToTop = document.createElement("button");
   backToTop.type = "button";
   backToTop.className = "bb-panel-back-to-top";
-  backToTop.setAttribute("aria-label", "Yukarı çık");
-  backToTop.title = "Yukarı çık";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.title = "Back to top";
   backToTop.hidden = true;
   var backIcon = document.createElement("span");
   backIcon.className = "material-symbols-outlined";

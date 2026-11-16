@@ -9,9 +9,9 @@
 
   function sync() {
     var dark = document.documentElement.getAttribute("data-bs-theme") === "dark";
-    if (label) label.textContent = dark ? "Koyu" : "Açık";
+    if (label) label.textContent = dark ? "Dark" : "Light";
     if (icon) icon.textContent = dark ? "dark_mode" : "light_mode";
-    button.setAttribute("aria-label", dark ? "Görünüm: koyu tema; açık temaya geç" : "Görünüm: açık tema; koyu temaya geç");
+    button.setAttribute("aria-label", dark ? "Appearance: dark theme; switch to light" : "Appearance: light theme; switch to dark");
   }
 
   button.addEventListener("click", function () {
