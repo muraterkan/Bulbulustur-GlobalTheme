@@ -21,6 +21,7 @@ const panelScssRoot = resolve(scssRoot, "layout/panel");
 const allScss = walk(scssRoot).filter((x) => x.endsWith(".scss"));
 const panelScss = existsSync(panelScssRoot) ? walk(panelScssRoot).filter((x) => x.endsWith(".scss")) : [];
 const coreScss = allScss.filter((x) => !x.startsWith(panelScssRoot + sep) && !x.endsWith("main.scss"));
+const panelPartialNames = panelScss.map((path) => path.split(sep).pop().replace(/^_/, "").replace(/\.scss$/, "")).sort();
 
 const panelLeaks = coreScss.filter((path) => {
   const source = readFileSync(path, "utf8");
@@ -34,13 +35,52 @@ if (misplacedPanelScss.length) fail("panel SCSS lives only in layout/panel", mis
 else pass("panel SCSS lives only in layout/panel");
 
 const main = readFileSync(resolve(scssRoot, "main.scss"), "utf8");
-const panelImports = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'];/g)].map((m) => m[1]);
+const panelImportMatches = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'];/g)]
+  .map((m) => ({ name: m[1], index: m.index }));
+const panelImports = panelImportMatches.map((x) => x.name);
 if (!panelImports.length) fail("main.scss declares panel layer imports");
 else pass("main.scss declares panel layer imports");
 
-if (!main.includes("PANEL TEMPLATE ONLY — BLOCK A") || !main.includes("PANEL TEMPLATE ONLY — BLOCK B")) {
+const blockAStart = main.indexOf("PANEL TEMPLATE ONLY — BLOCK A");
+const blockAEnd = main.indexOf("END PANEL TEMPLATE ONLY — BLOCK A");
+const blockBStart = main.indexOf("PANEL TEMPLATE ONLY — BLOCK B");
+const blockBEnd = main.indexOf("END PANEL TEMPLATE ONLY — BLOCK B");
+const validPanelBlocks = blockAStart >= 0 && blockAEnd > blockAStart && blockBStart > blockAEnd && blockBEnd > blockBStart;
+
+if (!validPanelBlocks) {
   fail("main.scss keeps removable panel boundary markers");
-} else pass("main.scss keeps removable panel boundary markers");
+} else {
+  pass("main.scss keeps removable panel boundary markers");
+
+  const insidePanelBlock = (index) =>
+    (index > blockAStart && index < blockAEnd) ||
+    (index > blockBStart && index < blockBEnd);
+
+  const importsOutsideBlocks = panelImportMatches.filter((x) => !insidePanelBlock(x.index)).map((x) => x.name);
+  if (importsOutsideBlocks.length) fail("panel imports stay inside PANEL TEMPLATE ONLY blocks", importsOutsideBlocks);
+  else pass("panel imports stay inside PANEL TEMPLATE ONLY blocks");
+
+  const panelBlockSource = main.slice(blockAStart, blockAEnd) + "\n" + main.slice(blockBStart, blockBEnd);
+  const nonPanelImportsInsideBlocks = [...panelBlockSource.matchAll(/@use\s+["']([^"']+)["'];/g)]
+    .map((m) => m[1])
+    .filter((name) => !name.startsWith("layout/panel/"));
+  if (nonPanelImportsInsideBlocks.length) fail("PANEL TEMPLATE ONLY blocks contain only panel imports", nonPanelImportsInsideBlocks);
+  else pass("PANEL TEMPLATE ONLY blocks contain only panel imports");
+}
+
+const duplicatePanelImports = [...new Set(panelImports.filter((name, index) => panelImports.indexOf(name) !== index))];
+if (duplicatePanelImports.length) fail("panel partials are imported once", duplicatePanelImports);
+else pass("panel partials are imported once");
+
+const importedPanelSet = new Set(panelImports);
+const missingPanelImports = panelPartialNames.filter((name) => !importedPanelSet.has(name));
+const unknownPanelImports = panelImports.filter((name) => !panelPartialNames.includes(name));
+if (missingPanelImports.length || unknownPanelImports.length) {
+  fail("layout/panel partial inventory matches main.scss", [
+    ...missingPanelImports.map((name) => "missing import: " + name),
+    ...unknownPanelImports.map((name) => "missing partial: " + name)
+  ]);
+} else pass("layout/panel partial inventory matches main.scss (" + panelPartialNames.length + " partials)");
 
 const rootJs = readdirSync(jsRoot).filter((name) => statSync(join(jsRoot, name)).isFile() && name.endsWith(".js"));
 if (rootJs.length) fail("assets/js root contains no loose JavaScript", rootJs);
