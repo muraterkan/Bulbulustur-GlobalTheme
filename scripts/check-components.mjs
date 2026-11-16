@@ -18,20 +18,14 @@ const panelMenuPath = resolve(root, "assets/js/panel/bb-panel-menu.js");
 const panelMenuSource = readFileSync(panelMenuPath, "utf8");
 const adapterPath = resolve(root, "assets/js/panel/bb-component-panel-shell.js");
 const adapterSource = readFileSync(adapterPath, "utf8");
-const catalogMatch = panelMenuSource.match(/var componentCatalog = \[([\s\S]*?)\n\s*\];/);
-const catalogPages = catalogMatch
-  ? [...catalogMatch[1].matchAll(/\["([^"]+\.html)","[^"]*"\]/g)].map((m) => m[1]).sort()
-  : [];
-const catalogIssues = [];
-if (!catalogMatch) {
-  catalogIssues.push("assets/js/panel/bb-panel-menu.js: componentCatalog not found");
-} else {
-  const pageSet = new Set(pages);
-  const catalogSet = new Set(catalogPages);
-  pages.filter((name) => !catalogSet.has(name)).forEach((name) => catalogIssues.push("missing catalog entry: " + name));
-  catalogPages.filter((name) => !pageSet.has(name)).forEach((name) => catalogIssues.push("stale catalog entry: " + name));
+
+report("Component catalog inventory (" + pages.length + " pages)", []);
+
+const menuInjectionIssues = [];
+if (/componentCatalog|data-bb-component-catalog|bb_tree_components_catalog|ensureComponentCatalog/.test(panelMenuSource)) {
+  menuInjectionIssues.push("bb-panel-menu.js must not inject the component catalog into the sidebar");
 }
-report("Component catalog inventory (" + pages.length + " pages, " + catalogPages.length + " menu entries)", catalogIssues);
+report("Component catalog is not injected into sidebar", menuInjectionIssues);
 
 const refIssues = [];
 const adapterIssues = [];

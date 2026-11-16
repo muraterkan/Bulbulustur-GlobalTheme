@@ -16,7 +16,7 @@
 
   button.addEventListener("click", function () {
     themeToggle.click();
-    sync();
   });
+  document.addEventListener("bb:panel-theme-change", sync);
   sync();
 })();
