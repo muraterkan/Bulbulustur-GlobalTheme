@@ -1,0 +1,56 @@
+/* Social feeds — scoped composition over existing bb-card, forms and semantic tokens. */
+.bb-panel .bb-social-layout{display:grid;grid-template-columns:minmax(13rem,1fr) minmax(0,1.4fr) minmax(13rem,1fr);align-items:start;gap:var(--bb-panel-content-gap)}
+.bb-panel .bb-social-column{min-width:0;display:grid;align-content:start;gap:var(--bb-panel-content-gap)}
+.bb-panel .bb-social-layout .bb-card-body{padding:var(--bb-space-4)}
+.bb-panel .bb-social-profile{text-align:center}
+.bb-panel .bb-social-avatar{display:grid;place-items:center;width:7rem;height:7rem;margin:0 auto var(--bb-space-3);border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);overflow:hidden}
+.bb-panel .bb-social-avatar img{width:100%;height:100%;object-fit:cover}
+.bb-panel .bb-social-profile strong{display:block;font-size:var(--bb-fs-base);color:var(--bb-emphasis-color)}
+.bb-panel .bb-social-muted{font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
+.bb-panel .bb-social-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-space-2);margin:var(--bb-space-4) 0}
+.bb-panel .bb-social-stats strong{font-size:var(--bb-fs-sm)}
+.bb-panel .bb-social-stats small{display:block;font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
+.bb-panel .bb-social-nav{display:grid;gap:var(--bb-space-1);text-align:start}
+.bb-panel .bb-social-nav button{display:flex;align-items:center;gap:var(--bb-space-3);padding:var(--bb-space-3);border:0;border-radius:var(--bb-radius);background:transparent;color:var(--bb-secondary-color);font-size:var(--bb-fs-sm);text-align:start}
+.bb-panel .bb-social-nav button[aria-pressed="true"]{background:var(--bb-tertiary-bg);color:var(--bb-primary-text)}
+.bb-panel .bb-social-nav .material-symbols-outlined{font-size:var(--bb-fs-base)}
+.bb-panel .bb-social-timeline{list-style:none;padding:0;margin:0}
+.bb-panel .bb-social-timeline li{position:relative;display:grid;grid-template-columns:3.4rem minmax(0,1fr);gap:var(--bb-space-2);padding:0 0 var(--bb-space-4);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-social-timeline li:not(:last-child)::after{content:"";position:absolute;inset-inline-start:2.95rem;top:1rem;bottom:0;width:1px;background:var(--bb-border-color)}
+.bb-panel .bb-social-timeline time{color:var(--bb-primary-text)}
+.bb-panel .bb-social-timeline p{margin:0;color:var(--bb-secondary-color)}
+.bb-panel .bb-social-composer{display:flex;gap:var(--bb-space-3);align-items:start}
+.bb-panel .bb-social-composer .bb-symbol{flex:none}
+.bb-panel .bb-social-composer .form-control{resize:vertical;min-height:5rem}
+.bb-panel .bb-social-composer-area{flex:1;min-width:0}
+.bb-panel .bb-social-post-header{display:flex;align-items:center;gap:var(--bb-space-3);margin-bottom:var(--bb-space-4)}
+.bb-panel .bb-social-post-header .bb-symbol{flex:none}
+.bb-panel .bb-social-post-header strong{display:block;font-size:var(--bb-fs-sm);color:var(--bb-emphasis-color)}
+.bb-panel .bb-social-post-header small{display:block;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-social-post-text{font-size:var(--bb-fs-sm);line-height:var(--bb-line-height-base);white-space:pre-wrap;overflow-wrap:anywhere}
+.bb-panel .bb-social-post-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bb-space-2);margin-block:var(--bb-space-4)}
+.bb-panel .bb-social-post-media img{width:100%;height:100%;max-height:18rem;aspect-ratio:4/5;object-fit:cover;border-radius:var(--bb-radius)}
+.bb-panel .bb-social-post-media img:first-child:nth-last-child(3){grid-row:span 2}
+.bb-panel .bb-social-post-actions{display:flex;align-items:center;flex-wrap:wrap;gap:var(--bb-space-2);padding-block:var(--bb-space-3);border-block:var(--bb-border-width,1px) solid var(--bb-border-color)}
+.bb-panel .bb-social-post-actions .btn{display:inline-flex;align-items:center;gap:var(--bb-space-1)}
+.bb-panel .bb-social-post-actions .material-symbols-outlined{font-size:var(--bb-fs-base)}
+.bb-panel .bb-social-comment-list{display:grid;gap:var(--bb-space-3);padding:var(--bb-space-3) 0}
+.bb-panel .bb-social-comment{display:flex;gap:var(--bb-space-3);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-social-comment .bb-symbol{flex:none}
+.bb-panel .bb-social-comment strong{color:var(--bb-emphasis-color)}
+.bb-panel .bb-social-comment p{margin:var(--bb-space-1) 0 0;color:var(--bb-secondary-color);overflow-wrap:anywhere}
+.bb-panel .bb-social-comment-form{display:flex;gap:var(--bb-space-2);align-items:center}
+.bb-panel .bb-social-comment-form .form-control{min-width:0;flex:1}
+.bb-panel .bb-social-person{display:flex;align-items:center;gap:var(--bb-space-2);padding:var(--bb-space-3) 0;border-bottom:var(--bb-border-width,1px) dashed var(--bb-border-color)}
+.bb-panel .bb-social-person:last-child{border:0}
+.bb-panel .bb-social-person .bb-symbol{flex:none}
+.bb-panel .bb-social-person-info{flex:1;min-width:0}
+.bb-panel .bb-social-person-info strong{display:block;color:var(--bb-emphasis-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-social-person-info small{display:block;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
+.bb-panel .bb-social-trends{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--bb-space-3)}
+.bb-panel .bb-social-trend{display:grid;place-items:center;aspect-ratio:1;border-radius:var(--bb-radius);background:var(--bb-tertiary-bg);color:var(--bb-primary-text);text-decoration:none}
+.bb-panel .bb-social-trend .material-symbols-outlined{font-size:3rem}
+.bb-panel [data-bb-social-post][hidden],.bb-panel [data-bb-social-empty][hidden]{display:none}
+@media(max-width:1199.98px){.bb-panel .bb-social-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}.bb-panel .bb-social-column:last-child{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767.98px){.bb-panel .bb-social-layout{grid-template-columns:1fr}.bb-panel .bb-social-column:last-child{grid-column:auto;grid-template-columns:1fr}}
+@media(max-width:575.98px){.bb-panel .bb-social-post-media{grid-template-columns:1fr 1fr}.bb-panel .bb-social-post-media img{max-height:12rem}.bb-panel .bb-social-post-actions{gap:var(--bb-space-1)}}
