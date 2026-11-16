@@ -46,10 +46,19 @@
 
     var heading = body.querySelector("h1");
     if (heading) {
-      var block = heading.parentElement;
-      if (block && block !== body && !block.classList.contains("bb-card") && !block.closest(".bb-card")) block.remove();
-      else heading.remove();
+      var toolbar = heading.closest(".d-flex.justify-content-between, .d-flex.flex-wrap.justify-content-between, header, .bb-toolbar");
+      if (toolbar && !toolbar.closest(".bb-card")) {
+        toolbar.remove();
+      } else {
+        var block = heading.parentElement;
+        if (block && block !== body && !block.classList.contains("bb-card") && !block.closest(".bb-card")) block.remove();
+        else heading.remove();
+      }
     }
+
+    body.querySelectorAll(".d-flex, .btn-group").forEach(function (element) {
+      if (!element.children.length && !(element.textContent || "").trim()) element.remove();
+    });
 
     body.querySelectorAll(".text-body-secondary.small, .text-muted.small").forEach(function (note) {
       var text = (note.textContent || "").toLocaleLowerCase("tr-TR");
