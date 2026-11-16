@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulbulustur — Kişiler</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body class="bb-panel">
+<main class="bb-contacts-page" data-bb-contacts aria-label="Kişiler">
+<header class="bb-contacts-toolbar">
+ <div><h1 class="bb-page-title">Yeni Kişi Ekle</h1><nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="dashboard.html">Ana Sayfa</a></li><li class="breadcrumb-item" aria-current="page">Kişiler</li></ol></nav></div>
+ <div class="bb-contacts-actions"><button class="btn bb-btn-secondary" type="button" data-bb-contacts-filter aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">filter_alt</span> Filtre</button><button class="btn btn-primary" type="button" data-bb-contacts-create>Oluştur</button></div>
+</header>
+<div class="bb-contacts-layout">
+<aside class="bb-card bb-contacts-groups" aria-label="Kişi grupları">
+  <h2 class="bb-contacts-section-title">Gruplar</h2>
+  <nav class="bb-contacts-group-list" data-bb-contacts-groups aria-label="Gruplar"></nav>
+  <form class="bb-contacts-add-group" data-bb-contacts-group-form><label for="bb_contacts_group">Yeni grup ekle</label><div class="bb-contacts-group-input"><input id="bb_contacts_group" class="form-control" name="group" maxlength="35" placeholder="Grup adı" required><button class="bb-contacts-inline-add" type="submit" aria-label="Grup ekle"><span class="material-symbols-outlined" aria-hidden="true">add_box</span></button></div></form>
+  <button class="btn btn-primary bb-contacts-add-button" type="button" data-bb-contacts-create><span class="material-symbols-outlined" aria-hidden="true">person_add</span> Yeni kişi ekle</button>
+</aside>
+<section class="bb-card bb-contacts-directory" aria-label="Kişi listesi">
+ <label class="bb-contacts-search"><span class="material-symbols-outlined" aria-hidden="true">search</span><input type="search" data-bb-contacts-search aria-label="Kişilerde ara" placeholder="Kişilerde ara"></label>
+ <div class="bb-contacts-list" data-bb-contacts-list></div>
+ <p class="bb-contacts-empty" data-bb-contacts-empty hidden>Bu filtreye uygun kişi bulunamadı.</p>
+</section>
+<section class="bb-card bb-contacts-editor" aria-labelledby="bb_contacts_editor_title">
+ <h2 id="bb_contacts_editor_title" class="bb-contacts-section-title"><span class="material-symbols-outlined" aria-hidden="true">contact_page</span> <span data-bb-contacts-form-heading>Yeni Kişi Ekle</span></h2>
+ <form data-bb-contacts-form>
+  <div class="bb-contacts-avatar-field"><label for="bb_contacts_avatar">Profil fotoğrafı</label><input id="bb_contacts_avatar" type="file" accept="image/*" class="visually-hidden" data-bb-contacts-avatar-input><label class="bb-contacts-avatar-upload" for="bb_contacts_avatar"><span class="material-symbols-outlined" aria-hidden="true">add_photo_alternate</span><img alt="Fotoğraf önizlemesi" data-bb-contacts-avatar-preview hidden></label></div>
+  <div class="bb-contacts-fields">
+   <div class="bb-contacts-field bb-contacts-field-full"><label for="bb_contacts_name">Ad Soyad <span aria-hidden="true">*</span></label><input id="bb_contacts_name" name="name" class="form-control" autocomplete="name" required maxlength="100"></div>
+   <div class="bb-contacts-field bb-contacts-field-full"><label for="bb_contacts_company">Şirket Adı</label><input id="bb_contacts_company" name="company" class="form-control" autocomplete="organization" maxlength="120"></div>
+   <div class="bb-contacts-field"><label for="bb_contacts_email">E-posta <span aria-hidden="true">*</span></label><input id="bb_contacts_email" name="email" class="form-control" type="email" autocomplete="email" required maxlength="150"></div>
+   <div class="bb-contacts-field"><label for="bb_contacts_phone">Telefon</label><input id="bb_contacts_phone" name="phone" class="form-control" type="tel" autocomplete="tel" maxlength="30"></div>
+   <div class="bb-contacts-field"><label for="bb_contacts_city">Şehir</label><input id="bb_contacts_city" name="city" class="form-control" autocomplete="address-level2" maxlength="80"></div>
+   <div class="bb-contacts-field"><label for="bb_contacts_country">Ülke <span aria-hidden="true">*</span></label><select id="bb_contacts_country" name="country" class="form-select" required><option value="">Ülke seçin</option><option>Türkiye</option><option>Almanya</option><option>Birleşik Krallık</option><option>Amerika Birleşik Devletleri</option><option>Fransa</option><option>Hollanda</option></select></div>
+   <div class="bb-contacts-field bb-contacts-field-full"><label for="bb_contacts_notes">Notlar</label><textarea id="bb_contacts_notes" name="notes" class="form-control" rows="3" maxlength="3000"></textarea></div>
+   <div class="bb-contacts-field bb-contacts-field-full"><label for="bb_contacts_membership">Grup</label><select id="bb_contacts_membership" name="membership" class="form-select" data-bb-contacts-membership></select></div>
+  </div>
+  <div class="bb-contacts-form-actions"><button class="btn bb-btn-secondary" type="reset">Vazgeç</button><button class="btn btn-primary" type="submit">Kaydet</button></div>
+  <p class="bb-contacts-feedback" role="status" aria-live="polite" data-bb-contacts-feedback></p>
+ </form>
+</section>
+</div>
+<p class="bb-contacts-disclaimer">Örnek panel verisidir. Kayıtlar sunucuya gönderilmez.</p>
+</main>
+<script src="../../assets/js/bb-panel-contacts.js"></script>
+</body>
+</html>
