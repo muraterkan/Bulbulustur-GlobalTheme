@@ -223,22 +223,6 @@
     </div>
 
   </div>
-
-<script>
-  (function () {
-    var root = document.documentElement;
-
-    document.querySelectorAll("[data-bb-theme-btn]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var theme = btn.getAttribute("data-bb-theme-btn");
-
-        root.setAttribute("data-bs-theme", theme); // Bootstrap dark/light
-        root.setAttribute("data-bb-theme", theme); // Senin layer
-      });
-    });
-  })();
-</script>
-
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>
