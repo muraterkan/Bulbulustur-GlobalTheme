@@ -41,7 +41,6 @@
     "auth-general-reset": {title:"Şifre Sıfırla", group:"Kimlik Doğrulama", section:"SAYFALAR"},
     "corporate-about": {title:"Hakkımızda", group:"Kurumsal", section:"SAYFALAR"},
     "corporate-contact": {title:"İletişim", group:"Kurumsal", section:"SAYFALAR"},
-    "corporate-team": {title:"Ekip", group:"Kurumsal", section:"SAYFALAR"},
     "social-feed": {title:"Akış", group:"Sosyal", section:"SAYFALAR"},
     "social-activity": {title:"Etkinlik", group:"Sosyal", section:"SAYFALAR"},
     "blog-posts": {title:"Yazılar", group:"Blog", section:"SAYFALAR"},
