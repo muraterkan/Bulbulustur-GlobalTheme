@@ -4,6 +4,17 @@
 var root=document.querySelector("[data-bb-product]");
 if(!root)return;
 var form=root.querySelector("[data-bb-product-form]");
+var pageTitle=document.querySelector(".bb-page-title");
+if(pageTitle)pageTitle.textContent="Ürün Oluştur";
+var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
+if(crumb){
+ crumb.replaceChildren();
+ ["UYGULAMALAR","e-Ticaret","Ürün Oluştur"].forEach(function(value,i){
+  var item=document.createElement("li");item.className="breadcrumb-item"+(i===2?" active":"");item.textContent=value;
+  if(i===2)item.setAttribute("aria-current","page");
+  crumb.appendChild(item);
+ });
+}
 var tabs=Array.from(root.querySelectorAll("[data-bb-product-tab]"));
 function selectTab(name,focus){
  tabs.forEach(function(tab){var active=tab.dataset.bbProductTab===name;tab.setAttribute("aria-selected",String(active));tab.tabIndex=active?0:-1;if(active&&focus)tab.focus();});
