@@ -165,25 +165,13 @@
   align-items: center;
   gap: var(--bb-space-2);
 }
-.bb-panel .bb-template-logo-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  flex: none;
-  border-radius: var(--bb-radius-pill);
-  background: var(--bb-emphasis-color);
-  color: var(--bb-body-bg);
-  font-size: var(--bb-fs-base);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1;
-  box-shadow: inset 0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-body-bg) 14%, transparent);
-}
-.bb-panel .bb-template-logo-mark img {
+.bb-panel .bb-sidebar-brand-logo {
   display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
+  width: auto;
+  height: 2rem;
+  max-width: 9rem;
+  object-fit: contain;
+  flex: none;
 }
 .bb-panel[data-bb-sidebar-collapsed="true"] .bb-sidebar-logo .bb-panel-brand-text {
   display: none;
