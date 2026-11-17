@@ -14,45 +14,49 @@
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
-<body class="p-5">
+<!--::Body-->
+<body class="bb-body">
     <div class="bb-wrapper">
-        <header>
-        </header>
+        <header></header>
+
         <main class="bb-main">
 
             <div class="bb-container">
+                <section class="bb-section">
+                    <button class="btn btn-primary mb-3" onclick="BBToast.show('#bbToast1')">
+                        Toast Göster
+                    </button>
 
-                <button class="btn btn-primary mb-3" onclick="BBToast.show('#bbToast1')">
-                    Toast Göster
-                </button>
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
 
-                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="bbToast1"
+                             class="toast bb-toast-success"
+                             role="alert"
+                             aria-live="assertive"
+                             aria-atomic="true">
 
-                    <div id="bbToast1"
-                         class="toast bb-toast-success"
-                         role="alert"
-                         aria-live="assertive"
-                         aria-atomic="true">
+                            <div class="toast-header">
+                                <strong class="me-auto">Bulbulustur</strong>
+                                <small>şimdi</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                            </div>
 
-                        <div class="toast-header">
-                            <strong class="me-auto">Bulbulustur</strong>
-                            <small>şimdi</small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                            <div class="toast-body">
+                                İşlem başarıyla tamamlandı.
+                            </div>
                         </div>
 
-                        <div class="toast-body">
-                            İşlem başarıyla tamamlandı.
-                        </div>
                     </div>
+                </section>
 
-                </div>
 
-                <script src="../../assets/js/core/bb-toast.js"></script>
-                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-
+            </div>
         </main>
-        <footer>
-        </footer>
+        <footer></footer>
+
     </div>
+    <script src="../../assets/js/core/bb-toast.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
+<!--/::Body-->
 </html>

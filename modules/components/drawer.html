@@ -32,14 +32,15 @@
     </style>
 </head>
 
+<!--::Body-->
 <body class="bb-body">
     <div class="bb-wrapper">
-        <header>
-        </header>
+        <header></header>
+
         <main class="bb-main">
 
             <div class="bb-container">
-                <div class="container">
+                <section class="bb-section">
 
                     <!-- Top bar -->
                     <div class="bb-demo-hero">
@@ -120,80 +121,86 @@
                         </div>
                     </div>
 
+            
+
+            <!-- Drawer End -->
+            <div id="drawerEnd"
+                 class="bb-drawer bb-drawer-end"
+                 data-bb-drawer
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="drawerEndTitle"
+                 tabindex="-1">
+
+                <div class="bb-drawer-header">
+                    <h2 id="drawerEndTitle" class="bb-drawer-title">Sağ Panel</h2>
+
+                    <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Kapat">
+                        <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+                    </button>
                 </div>
 
-                <!-- Drawer End -->
-                <div id="drawerEnd"
-                     class="bb-drawer bb-drawer-end"
-                     data-bb-drawer
-                     role="dialog"
-                     aria-modal="true"
-                     aria-labelledby="drawerEndTitle"
-                     tabindex="-1">
+                <div class="bb-drawer-body">
+                    <p>Bu sağdan açılan overlay drawer.</p>
+                    <p>Filtre, ayar, quick edit için birebir.</p>
 
-                    <div class="bb-drawer-header">
-                        <h2 id="drawerEndTitle" class="bb-drawer-title">Sağ Panel</h2>
-
-                        <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Kapat">
-                            <span class="material-symbols-outlined" style="font-size:20px;">close</span>
-                        </button>
-                    </div>
-
-                    <div class="bb-drawer-body">
-                        <p>Bu sağdan açılan overlay drawer.</p>
-                        <p>Filtre, ayar, quick edit için birebir.</p>
-
-                        <div class="mt-3">
-                            <div class="fw-semibold mb-2">Scroll testi</div>
-                            <div class="small text-body-secondary">
-                                <p>Lorem ipsum dolor sit amet...</p>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                                <p>Lorem ipsum dolor sit amet...</p>
-                            </div>
+                    <div class="mt-3">
+                        <div class="fw-semibold mb-2">Scroll testi</div>
+                        <div class="small text-body-secondary">
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
+                            <p>Lorem ipsum dolor sit amet...</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Drawer Start -->
-                <div id="drawerStart"
-                     class="bb-drawer bb-drawer-start"
-                     data-bb-drawer
-                     role="dialog"
-                     aria-modal="true"
-                     aria-labelledby="drawerStartTitle"
-                     tabindex="-1">
+            <!-- Drawer Start -->
+            <div id="drawerStart"
+                 class="bb-drawer bb-drawer-start"
+                 data-bb-drawer
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="drawerStartTitle"
+                 tabindex="-1">
 
-                    <div class="bb-drawer-header">
-                        <h2 id="drawerStartTitle" class="bb-drawer-title">Sol Panel</h2>
+                <div class="bb-drawer-header">
+                    <h2 id="drawerStartTitle" class="bb-drawer-title">Sol Panel</h2>
 
-                        <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Kapat">
-                            <span class="material-symbols-outlined" style="font-size:20px;">close</span>
-                        </button>
-                    </div>
-
-                    <div class="bb-drawer-body">
-                        <p>Bu da soldan gelen overlay drawer.</p>
-
-                        <div class="mt-3">
-                            <button class="btn btn-sm btn-primary" data-bb-drawer-close>
-                                Kapat
-                            </button>
-                        </div>
-                    </div>
+                    <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Kapat">
+                        <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+                    </button>
                 </div>
 
-                <!-- Drawer JS -->
-                <script src="../../assets/js/core/bb-drawer.js"></script>
+                <div class="bb-drawer-body">
+                    <p>Bu da soldan gelen overlay drawer.</p>
 
-                <!-- Demo: theme + density -->
-                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                    <div class="mt-3">
+                        <button class="btn btn-sm btn-primary" data-bb-drawer-close>
+                            Kapat
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+
+
+
+
+                </section>
+            </div>
         </main>
-        <footer>
-        </footer>
+        <footer></footer>
+
     </div>
+    <!-- Drawer JS -->
+    <script src="../../assets/js/core/bb-drawer.js"></script>
+
+    <!-- Demo: theme + density -->
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
+<!--/::Body-->
 </html>

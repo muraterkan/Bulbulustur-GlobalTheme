@@ -45,7 +45,7 @@ if(page==="subscription-details.html"){
 }
 if(page==="invoice-details.html"){
  const print=$("[data-bb-invoice-print]");if(print)print.addEventListener("click",()=>window.print());
- const download=$("[data-bb-invoice-download]");if(download)download.addEventListener("click",()=>{const doc="<!doctype html><html lang=\"tr\"><meta charset=\"utf-8\"><title>Örnek Fatura</title><body>"+root.querySelector(".bb-showcase-invoice").outerHTML+"</body></html>";const a=document.createElement("a"),url=URL.createObjectURL(new Blob([doc],{type:"text/html;charset=utf-8"}));a.href=url;a.download="ornek-invoices.html";a.click();URL.revokeObjectURL(url);say("Yalnız HTML demo önizlemesi indirildi.");});
+ const download=$("[data-bb-invoice-download]");if(download)download.addEventListener("click",()=>{const doc="<!doctype html><html lang=\"tr\"><meta charset=\"utf-8\"><title>Örnek Fatura</title><body>"+root.querySelector(".bb-showcase-invoice").outerHTML+"</body><!--/::Body--></html>";const a=document.createElement("a"),url=URL.createObjectURL(new Blob([doc],{type:"text/html;charset=utf-8"}));a.href=url;a.download="ornek-invoices.html";a.click();URL.revokeObjectURL(url);say("Yalnız HTML demo önizlemesi indirildi.");});
 }
 const filter=$("[data-bb-showcase-filter]");if(filter)filter.addEventListener("click",()=>{const input=$('input[type="search"]');if(input)input.focus();else say("Bu sayfada ek filtre bulunmuyor.");});
 const create=$("[data-bb-showcase-create]");if(create)create.addEventListener("click",()=>{if(page==="roles.html")openDialog("Yeni Rol Ekle (Demo)","");else if(page==="permissions.html")openDialog("Yetki Ekle (Demo)","");else say("Bu sayfa görüntüleme örneğidir; yeni kayıt oluşturulmaz.");});

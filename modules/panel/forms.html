@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="projects-create" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
@@ -810,8 +811,9 @@
                             \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<label class="form-label" for="bb_search">Hızlı arama</label>
-<input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara"></div>
+                                <label class="form-label" for="bb_search">Hızlı arama</label>
+                                <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
@@ -947,27 +949,34 @@
                                                     <legend class="h5 mb-4">Ürün bilgileri</legend>
                                                     <div class="row g-4">
                                                         <div class="col-md-6">
-<label for="bb_form_name" class="required form-label">Ürün adı</label>
-<input id="bb_form_name" class="form-control form-control-solid" name="productName" type="text" maxlength="150" placeholder="Örn. Keten gömlek" required></div>
+                                                            <label for="bb_form_name" class="required form-label">Ürün adı</label>
+                                                            <input id="bb_form_name" class="form-control form-control-solid" name="productName" type="text" maxlength="150" placeholder="Örn. Keten gömlek" required>
+                                                        </div>
                                                         <div class="col-md-6">
-<label for="bb_form_sku" class="required form-label">Stok kodu</label>
-<input id="bb_form_sku" class="form-control form-control-solid" name="sku" type="text" maxlength="50" placeholder="Örn. SKU-1001" required></div>
+                                                            <label for="bb_form_sku" class="required form-label">Stok kodu</label>
+                                                            <input id="bb_form_sku" class="form-control form-control-solid" name="sku" type="text" maxlength="50" placeholder="Örn. SKU-1001" required>
+                                                        </div>
                                                         <div class="col-md-6">
-<label for="bb_form_category" class="required form-label">Kategori</label>
-<select class="form-select form-select-solid" id="bb_form_category" name="category" required>
-<option value="">Kategori seçin</option>
-<option value="giyim">Giyim</option>
-<option value="aksesuar">Aksesuar</option>
-<option value="ev">Ev &amp; Yaşam</option></select></div>
+                                                            <label for="bb_form_category" class="required form-label">Kategori</label>
+                                                            <select class="form-select form-select-solid" id="bb_form_category" name="category" required>
+                                                                <option value="">Kategori seçin</option>
+                                                                <option value="giyim">Giyim</option>
+                                                                <option value="aksesuar">Aksesuar</option>
+                                                                <option value="ev">Ev &amp; Yaşam</option>
+                                                            </select>
+                                                        </div>
                                                         <div class="col-md-3">
-<label for="bb_form_price" class="required form-label">Fiyat (TL)</label>
-<input id="bb_form_price" class="form-control form-control-solid" name="price" type="number" min="0.01" step="0.01" placeholder="0,00" required></div>
+                                                            <label for="bb_form_price" class="required form-label">Fiyat (TL)</label>
+                                                            <input id="bb_form_price" class="form-control form-control-solid" name="price" type="number" min="0.01" step="0.01" placeholder="0,00" required>
+                                                        </div>
                                                         <div class="col-md-3">
-<label for="bb_form_status" class="form-label">Durum</label>
-<select class="form-select form-select-solid" id="bb_form_status" name="status">
-<option value="Taslak">Taslak</option>
-<option value="Aktif">Aktif</option>
-<option value="Pasif">Pasif</option></select></div>
+                                                            <label for="bb_form_status" class="form-label">Durum</label>
+                                                            <select class="form-select form-select-solid" id="bb_form_status" name="status">
+                                                                <option value="Taslak">Taslak</option>
+                                                                <option value="Aktif">Aktif</option>
+                                                                <option value="Pasif">Pasif</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </fieldset>
                                                 <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
@@ -1043,4 +1052,5 @@
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
     <script src="../../assets/js/panel/bb-panel-form.js"></script>
 </body>
+<!--/::Body-->
 </html>
