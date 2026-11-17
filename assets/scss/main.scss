@@ -156,6 +156,19 @@
 /* ================================================== */
 /* ================================================== */
 
+
+
+/* 7. Status Pages */
+/* Status projesinin genel token, shell, header, footer, card, border, radius ve layout varsayılanları burada. */
+@use "layout/status/project";
+@use "layout/status/index";
+@use "layout/status/history";
+@use "layout/status/incident";
+@use "layout/status/subscribe";
+@use "layout/status/component";
+
+
+
 /* 6. Final Overrides */
 /* Bootstrap ve page-level ezmelerden sonra form objelerini tekrar Main CSS standardına sabitler. */
 @use "components/forms-final";

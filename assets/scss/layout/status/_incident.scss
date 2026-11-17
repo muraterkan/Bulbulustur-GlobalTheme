@@ -1,0 +1,560 @@
+/* assets/scss/pages/status/_incident.scss */
+
+/* =====================================
+   Status Incident Detail
+   Main CSS component-first
+   Page-specific visual layer
+===================================== */
+
+
+/* -------------------------------------
+   Main / Top
+------------------------------------- */
+
+.bb-status-detail-main {
+    padding: 28px 0 0;
+}
+
+.bb-status-detail-top {
+    background-color: var(--bb-body-bg);
+    border-bottom: 1px solid var(--bb-border-color);
+    padding: 28px 0 30px;
+}
+
+.bb-status-detail-content {
+    padding: 34px 0 40px;
+}
+
+
+/* -------------------------------------
+   Overall Card
+   Special visual card, keeps its own scene.
+------------------------------------- */
+
+.bb-status-overall-card {
+    min-height: 92px;
+    border-color: color-mix(in srgb, var(--bb-success) 26%, transparent);
+    background:
+        radial-gradient(circle at 96% 8%, color-mix(in srgb, var(--bb-success) 10%, transparent), transparent 28%),
+        linear-gradient(135deg, var(--bb-success-light) 0%, var(--bb-body-bg) 72%);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.bb-status-overall-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bb-success-light);
+    color: var(--bb-success);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bb-status-overall-icon .material-symbols-outlined {
+    font-size: var(--bb-h2);
+}
+
+.bb-status-overall-title {
+    margin: 0;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-2xl);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-semibold);
+    letter-spacing: -.015em;
+}
+
+.bb-status-overall-text {
+    margin: 6px 0 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: var(--bb-table-line-height);
+    font-weight: var(--bb-fw-semibold);
+}
+
+.bb-status-detail-intro {
+    margin: 26px 0 0;
+    max-width: 1040px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: var(--bb-line-height-content);
+    font-weight: var(--bb-fw-semibold);
+}
+
+
+/* -------------------------------------
+   Incident Head
+------------------------------------- */
+
+.bb-status-incident-head {
+    margin-bottom: 30px;
+}
+
+.bb-status-incident-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+    margin-bottom: 18px;
+}
+
+.bb-status-back-button {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--bb-status-card-inner-radius);
+    border: var(--bb-status-panel-border);
+    background-color: var(--bb-body-bg);
+    color: var(--bb-heading-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--bb-status-card-shadow);
+}
+
+.bb-status-back-button:hover {
+    color: var(--bb-primary);
+    border-color: var(--bb-border-color-strong);
+    text-decoration: none;
+}
+
+.bb-status-back-button .material-symbols-outlined {
+    font-size: var(--bb-fs-2xl);
+}
+
+.bb-status-incident-title {
+    margin: 0;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-h2);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-semibold);
+    letter-spacing: -.025em;
+}
+
+.bb-status-incident-badges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* -------------------------------------
+   Incident chips
+   Main: .bb-chip
+------------------------------------- */
+
+.bb-status-incident-badge {
+    --bb-chip-padding-x: .95rem;
+    --bb-chip-padding-y: .55rem;
+    --bb-chip-font-size: var(--bb-icon-size-md);
+    --bb-chip-font-weight: var(--bb-fw-bold);
+    --bb-chip-min-height: 42px;
+    --bb-chip-bg: var(--bb-body-bg);
+    --bb-chip-color: var(--bb-heading-color);
+    --bb-chip-border-color: var(--bb-border-color);
+}
+
+.bb-status-incident-badge.resolved {
+    --bb-chip-bg: var(--bb-success);
+    --bb-chip-border-color: var(--bb-success);
+    --bb-chip-color: var(--bb-success-inverse);
+}
+
+.bb-status-incident-badge.outage {
+    --bb-chip-bg: var(--bb-danger-light);
+    --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
+    --bb-chip-color: var(--bb-danger);
+}
+
+.bb-status-incident-badge .material-symbols-outlined {
+    font-size: var(--bb-fs-xl);
+}
+
+.bb-status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: currentColor;
+    flex-shrink: 0;
+}
+
+
+/* -------------------------------------
+   Sections / Cards
+------------------------------------- */
+
+.bb-status-section {
+    margin-bottom: 32px;
+}
+
+.bb-status-section-title {
+    margin: 0 0 13px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: 1.4;
+    font-weight: var(--bb-fw-bold);
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.bb-status-affected-card,
+.bb-status-updates-card {
+    padding: 22px 24px;
+}
+
+.bb-status-affected-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+
+/* -------------------------------------
+   Range chip
+------------------------------------- */
+
+.bb-status-range-pill {
+    --bb-chip-bg: var(--bb-tertiary-bg);
+    --bb-chip-color: var(--bb-secondary-color);
+    --bb-chip-border-color: var(--bb-border-color);
+    --bb-chip-padding-x: .7rem;
+    --bb-chip-padding-y: .35rem;
+    --bb-chip-font-size: var(--bb-fs-sm);;
+    --bb-chip-font-weight: var(--bb-fw-semibold);
+    --bb-chip-min-height: 32px;
+}
+
+.bb-status-range-pill .material-symbols-outlined {
+    font-size: var(--bb-fs-md);
+}
+
+
+/* -------------------------------------
+   Affected services
+------------------------------------- */
+
+.bb-status-affected-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.bb-status-affected-row {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.bb-status-affected-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-semibold);
+}
+
+.bb-status-affected-name .material-symbols-outlined {
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-md);
+}
+
+.bb-status-affected-bar {
+    height: 8px;
+    border-radius: var(--bb-status-pill-radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 36fr 2fr 3fr 2fr 57fr;
+    gap: 5px;
+    background: transparent;
+}
+
+.bb-status-segment {
+    height: 8px;
+    border-radius: var(--bb-status-pill-radius);
+    display: block;
+}
+
+.bb-status-segment.ok {
+    background-color: var(--bb-success);
+}
+
+.bb-status-segment.warning {
+    background-color: var(--bb-warning);
+}
+
+.bb-status-segment.error {
+    background-color: var(--bb-danger);
+}
+
+.bb-status-segment.maintenance {
+    background-color: var(--bb-info);
+}
+
+
+/* -------------------------------------
+   Legend
+------------------------------------- */
+
+.bb-status-legend {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.bb-status-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    font-weight: var(--bb-fw-semibold);
+}
+
+.bb-status-legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.bb-status-legend-dot.ok {
+    background-color: var(--bb-success);
+}
+
+.bb-status-legend-dot.warning {
+    background-color: var(--bb-warning);
+}
+
+.bb-status-legend-dot.error {
+    background-color: var(--bb-danger);
+}
+
+.bb-status-legend-dot.maintenance {
+    background-color: var(--bb-info);
+}
+
+
+/* -------------------------------------
+   Timeline
+------------------------------------- */
+
+.bb-status-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.bb-status-timeline::before {
+    content: "";
+    position: absolute;
+    left: 192px;
+    top: 18px;
+    bottom: 24px;
+    width: 2px;
+    background-color: var(--bb-border-color);
+}
+
+.bb-status-timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 34px minmax(0, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.bb-status-timeline-state {
+    --bb-chip-padding-x: .9rem;
+    --bb-chip-padding-y: .45rem;
+    --bb-chip-font-size: var(--bb-icon-size-md);
+    --bb-chip-font-weight: var(--bb-fw-bold);
+    --bb-chip-min-height: 36px;
+    --bb-chip-bg: var(--bb-body-bg);
+    --bb-chip-color: var(--bb-heading-color);
+    --bb-chip-border-color: var(--bb-border-color);
+
+    box-shadow: var(--bb-status-card-shadow);
+}
+
+.bb-status-timeline-state.resolved {
+    --bb-chip-bg: var(--bb-success-light);
+    --bb-chip-border-color: color-mix(in srgb, var(--bb-success) 25%, transparent);
+    --bb-chip-color: var(--bb-success);
+}
+
+.bb-status-timeline-state.monitoring {
+    --bb-chip-bg: var(--bb-warning-light);
+    --bb-chip-border-color: color-mix(in srgb, var(--bb-warning) 35%, transparent);
+    --bb-chip-color: var(--bb-warning);
+}
+
+.bb-status-timeline-state.identified {
+    --bb-chip-bg: var(--bb-danger-light);
+    --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
+    --bb-chip-color: var(--bb-danger);
+}
+
+.bb-status-timeline-state.update {
+    --bb-chip-color: var(--bb-heading-color);
+}
+
+.bb-status-timeline-state .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+}
+
+.bb-status-timeline-node-wrap {
+    position: relative;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.bb-status-timeline-node {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 4px solid var(--bb-body-bg);
+    box-shadow: 0 0 0 1px var(--bb-border-color-strong);
+    display: inline-block;
+    background-color: var(--bb-info);
+}
+
+.bb-status-timeline-node.resolved {
+    background-color: var(--bb-success);
+}
+
+.bb-status-timeline-node.monitoring {
+    background-color: var(--bb-warning);
+}
+
+.bb-status-timeline-node.identified {
+    background-color: var(--bb-danger);
+}
+
+.bb-status-timeline-content {
+    padding-top: 0;
+}
+
+.bb-status-timeline-date {
+    margin: 0 0 7px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-status-timeline-text {
+    margin: 0;
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: var(--bb-line-height-content);
+    font-weight: var(--bb-fw-semibold);
+}
+
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .bb-status-overall-card {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .bb-status-incident-title {
+        font-size: var(--bb-fs-2xl);
+    }
+
+    .bb-status-affected-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .bb-status-timeline::before {
+        left: 17px;
+    }
+
+    .bb-status-timeline-item {
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .bb-status-timeline-state {
+        grid-column: 2;
+        grid-row: 1;
+        width: fit-content;
+    }
+
+    .bb-status-timeline-node-wrap {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .bb-status-timeline-content {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-status-overall-card {
+        flex-direction: column;
+        gap: 0.875rem;
+    }
+
+    .bb-status-overall-title {
+        font-size: var(--bb-icon-size-md);
+    }
+
+    .bb-status-overall-text,
+    .bb-status-detail-intro,
+    .bb-status-timeline-text {
+        font-size: var(--bb-icon-size-md);
+    }
+
+    .bb-status-incident-title-row {
+        align-items: flex-start;
+        gap: 0.875rem;
+    }
+
+    .bb-status-back-button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .bb-status-incident-title {
+        font-size: var(--bb-icon-size-lg);
+    }
+
+    .bb-status-incident-badge {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .bb-status-affected-card,
+    .bb-status-updates-card {
+        padding: 16px;
+    }
+
+    .bb-status-affected-bar {
+        grid-template-columns: 34fr 3fr 4fr 3fr 56fr;
+        gap: 4px;
+    }
+
+    .bb-status-legend {
+        gap: 0.875rem;
+    }
+}

@@ -1,0 +1,419 @@
+/* assets/scss/pages/status/_project.scss */
+
+/* =====================================
+   Status Project Theme Scope
+   Main CSS tokenlarını status projesi içinde ayarlar.
+   Yeni özel renk sistemi kurmaz.
+   Light/Dark safe.
+===================================== */
+
+.bb-status-page {
+    /* Semantic theme */
+    --bb-theme-primary: #2d7dff;
+    --bb-theme-primary-rgb: 45, 125, 255;
+
+    --bb-theme-success: #138a49;
+    --bb-theme-success-rgb: 19, 138, 73;
+
+    --bb-theme-warning: #f2b100;
+    --bb-theme-warning-rgb: 242, 177, 0;
+
+    --bb-theme-danger: #f04a6a;
+    --bb-theme-danger-rgb: 240, 74, 106;
+
+    --bb-theme-info: #3b82f6;
+    --bb-theme-info-rgb: 59, 130, 246;
+
+    --bb-theme-dark: #071b39;
+    --bb-theme-dark-rgb: 7, 27, 57;
+
+    /* Surfaces */
+    --bb-body-bg: #ffffff;
+    --bb-secondary-bg: #f7f9fc;
+    --bb-tertiary-bg: #eef3f8;
+
+    /* Text */
+    --bb-body-color: #101828;
+    --bb-heading-color: #101828;
+    --bb-secondary-color: #5f6f8a;
+    --bb-tertiary-color: #44506a;
+
+    /* Borders */
+    --bb-border-color: #dfe7f1;
+    --bb-border-color-strong: #cfd9e6;
+
+    /* Status project defaults */
+    --bb-status-container-max-width: 1320px;
+    --bb-status-container-x: 40px;
+    --bb-status-container-x-mobile: 20px;
+
+    --bb-status-card-bg: var(--bb-body-bg);
+    --bb-status-card-border-color: var(--bb-border-color);
+    --bb-status-card-border: 1px solid var(--bb-status-card-border-color);
+    --bb-status-card-radius: var(--bb-radius-2xl);
+    --bb-status-card-inner-radius: var(--bb-radius-lg);
+    --bb-status-card-shadow: var(--bb-shadow-xs);
+    --bb-status-card-padding: 18px;
+
+    --bb-status-panel-bg: var(--bb-body-bg);
+    --bb-status-panel-border: 1px solid var(--bb-border-color);
+    --bb-status-panel-radius: var(--bb-radius-lg);
+
+    --bb-status-pill-radius: var(--bb-radius-pill);
+    --bb-status-section-gap: 16px;
+    --bb-status-stack-gap: 0.875rem;
+
+    min-height: 100vh;
+    background-color: var(--bb-body-bg);
+    color: var(--bb-body-color);
+}
+
+[data-bs-theme="dark"] .bb-status-page,
+.bb-status-page[data-bs-theme="dark"] {
+    /* Semantic theme */
+    --bb-theme-primary: #68a1ff;
+    --bb-theme-primary-rgb: 104, 161, 255;
+
+    --bb-theme-success: #47d990;
+    --bb-theme-success-rgb: 71, 217, 144;
+
+    --bb-theme-warning: #ffd45a;
+    --bb-theme-warning-rgb: 255, 212, 90;
+
+    --bb-theme-danger: #ff6f8f;
+    --bb-theme-danger-rgb: 255, 111, 143;
+
+    --bb-theme-info: #8eb8ff;
+    --bb-theme-info-rgb: 142, 184, 255;
+
+    --bb-theme-dark: #101827;
+    --bb-theme-dark-rgb: 16, 24, 39;
+
+    /* Surfaces */
+    --bb-body-bg: #0b0f17;
+    --bb-secondary-bg: #121c30;
+    --bb-tertiary-bg: #0f1626;
+
+    /* Text */
+    --bb-body-color: #e8edf6;
+    --bb-heading-color: #f3f6fb;
+    --bb-secondary-color: rgba(232, 237, 246, .76);
+    --bb-tertiary-color: rgba(232, 237, 246, .62);
+
+    /* Borders */
+    --bb-border-color: rgba(183, 196, 218, .14);
+    --bb-border-color-strong: rgba(183, 196, 218, .22);
+}
+
+
+/* =====================================
+   Status Project Carrier Defaults
+===================================== */
+
+.bb-status-card,
+.bb-status-component-card,
+.bb-status-component-side-card,
+.bb-status-overall-card,
+.bb-status-affected-card,
+.bb-status-updates-card,
+.bb-status-subscribe-card {
+    border: var(--bb-status-card-border);
+    border-radius: var(--bb-status-card-radius);
+    background-color: var(--bb-status-card-bg);
+    box-shadow: var(--bb-status-card-shadow);
+}
+
+.bb-status-component-item,
+.bb-status-event-item,
+.bb-status-history-item,
+.bb-status-history-link,
+.bb-status-component-side-item,
+.bb-status-component-side-empty,
+.bb-status-component-metric {
+    border: var(--bb-status-panel-border);
+    border-radius: var(--bb-status-panel-radius);
+    background-color: var(--bb-status-panel-bg);
+}
+
+.bb-status-label,
+.bb-status-card-chip,
+.bb-status-component-state,
+.bb-status-pill,
+.bb-status-tag,
+.bb-status-event-badge,
+.bb-status-incident-badge,
+.bb-status-timeline-state,
+.bb-status-component-section-label {
+    border-radius: var(--bb-status-pill-radius);
+}
+
+
+/* =====================================
+   Status Layout Shell
+===================================== */
+
+.bb-status-container {
+    width: min(var(--bb-status-container-max-width), calc(100% - var(--bb-status-container-x)));
+    margin: 0 auto;
+}
+
+.bb-status-header {
+    background-color: var(--bb-body-bg);
+    border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-status-header-inner {
+    min-height: 98px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px 0;
+}
+
+.bb-status-brand {
+    display: inline-flex;
+    align-items: center;
+    max-width: 350px;
+    text-decoration: none;
+}
+
+.bb-status-brand img {
+    display: block;
+    width: auto;
+    height: 40px;
+}
+
+.bb-status-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.bb-status-main,
+.bb-status-history-main,
+.bb-status-detail-main,
+.bb-status-component-main {
+    background-color: var(--bb-secondary-bg);
+    min-height: 720px;
+}
+
+.bb-status-main {
+    padding: 0 0 36px;
+}
+
+.bb-status-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.95fr) minmax(320px, .9fr);
+    gap: var(--bb-status-section-gap);
+    align-items: start;
+}
+
+.bb-status-left,
+.bb-status-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-status-stack-gap);
+    min-width: 0;
+}
+
+
+/* =====================================
+   Footer
+===================================== */
+
+.bb-status-footer {
+    background-color: var(--bb-body-bg);
+    border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-status-footer-inner {
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 22px 0 18px;
+}
+
+.bb-status-footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4375rem;
+    min-width: 0;
+}
+
+.bb-status-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bb-status-footer-brand img {
+    display: block;
+    width: auto;
+    height: 34px;
+}
+
+.bb-status-footer-copy {
+    color: color-mix(in srgb, var(--bb-secondary-color) 84%, var(--bb-heading-color));
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-medium);
+    letter-spacing: -.01em;
+}
+
+.bb-status-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    min-width: 0;
+}
+
+.bb-status-footer-links a {
+    color: var(--bb-secondary-color);
+    font-size: .925rem;
+    line-height: 1.4;
+    font-weight: var(--bb-fw-semibold);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.bb-status-footer-links a:first-child {
+    color: var(--bb-heading-color);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-status-footer-links a:hover {
+    color: var(--bb-primary);
+    text-decoration: none;
+}
+
+.bb-status-footer-links a + a::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    margin: 0 14px 0 0;
+    background-color: color-mix(in srgb, var(--bb-border-color) 75%, transparent);
+    vertical-align: -2px;
+}
+
+
+/* =====================================
+   Status Chip Density
+===================================== */
+
+:where(.bb-status-page) .bb-chip {
+    --bb-chip-padding-y: .45rem;
+    --bb-chip-padding-x: .9rem;
+    --bb-chip-min-height: 2rem;
+}
+
+
+/* =====================================
+   Soft Sections
+===================================== */
+
+.bb-status-section-soft {
+    background-color: var(--bb-tertiary-bg);
+}
+
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 1200px) {
+    .bb-status-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bb-status-header-inner {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .bb-status-header-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-status-container,
+    .bb-status-live-holder {
+        width: min(100%, calc(100% - var(--bb-status-container-x-mobile)));
+    }
+
+    .bb-status-header-inner {
+        padding: 24px 0 18px;
+    }
+
+    .bb-status-brand img {
+        height: 34px;
+    }
+
+    .bb-status-header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bb-status-live-holder {
+        margin: 18px auto;
+    }
+
+    .bb-status-footer-inner {
+        align-items: flex-start;
+        padding: 22px 0;
+    }
+
+    .bb-status-footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .bb-status-footer-brand img {
+        height: 32px;
+    }
+
+    .bb-status-footer-copy {
+        font-size: .85rem;
+    }
+
+    .bb-status-footer-links {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .bb-status-footer-links a {
+        font-size: .925rem;
+    }
+
+    .bb-status-footer-links a + a::before {
+        display: none;
+    }
+
+    .bb-status-bar::before,
+    .bb-status-component-day::before {
+        display: none !important;
+    }
+
+    .bb-status-bar-tooltip,
+    .bb-status-component-day-tooltip {
+        display: none !important;
+    }
+}
