@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"dashboard-channels":"channels.html","footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"corporate-team":"team.html","widgets-statistics":"statistics.html","widgets-charts":"charts.html","dashboard-channels":"channels.html","footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","chat-conversations":"chat.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -69,6 +69,7 @@
     "auth-creative-reset": {title:"Reset Password", group:"Authentication / Creative", section:"PAGES"},
     "corporate-about": {title:"About", group:"Corporate", section:"PAGES"},
     "corporate-contact": {title:"Contact", group:"Corporate", section:"PAGES"},
+    "corporate-team": {title:"Team", group:"Corporate", section:"PAGES"},
     "social-feed": {title:"Feed", group:"Social", section:"PAGES"},
     "social-activity": {title:"Activity", group:"Social", section:"PAGES"},
     "blog-posts": {title:"Posts", group:"Blog", section:"PAGES"},
