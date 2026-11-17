@@ -80,7 +80,7 @@
   padding:var(--bb-space-1) var(--bb-space-3);
   border:var(--bb-border-width) solid var(--bb-border-color);
   border-radius:var(--bb-radius-pill);
-  background:var(--bb-surface);
+  background:var(--bb-surface-elevated);
   color:var(--bb-body-color);
   font-size:var(--bb-fs-sm);
   font-weight:var(--bb-fw-medium)
@@ -106,7 +106,7 @@
   font-size:var(--bb-fs-xs)
 }
 .bb-panel .bb-contacts-group-item[aria-pressed="true"] .bb-contacts-count{
-  background:var(--bb-surface);
+  background:var(--bb-surface-elevated);
   color:var(--bb-primary-text)
 }
 .bb-panel .bb-contacts-workspace{
