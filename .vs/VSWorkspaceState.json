@@ -3,10 +3,8 @@
     "",
     "\\assets",
     "\\modules",
-    "\\modules\\components",
-    "\\pages\\demo1",
-    "\\pages\\demo1\\account"
+    "\\modules\\panel"
   ],
-  "SelectedNode": "\\modules\\components\\typography.html",
+  "SelectedNode": "\\modules\\panel\\500.html",
   "PreviewInSolutionExplorer": false
 }
