@@ -4,7 +4,7 @@
   <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bulbulustur — Destek Merkezi</title>
+  <title>Bulbulustur — Support Center</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -25,130 +25,698 @@
         </button>
       </div>
       <div class="bb-sidebar-body">
-        <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme"><div class="bb-menu-section">GÖSTERGE PANELLERİ</div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">dashboard</span></span><span class="bb-menu-title">Gösterge Paneli</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_dashboard"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="dashboard.html" data-bb-panel-page="dashboard-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div>
+        <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
+<div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+</span>
+<span class="bb-menu-title">Dashboard</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_dashboard">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=dashboard-analytics" data-bb-panel-page="dashboard-analytics"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Analitik</span></a></div></div></div></div><div class="bb-menu-section">SAYFALAR</div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span><span class="bb-menu-title">Kullanıcı Profili</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="profile.html" data-bb-panel-page="profile-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div>
+<a class="bb-menu-link" href="dashboard.html" data-bb-panel-page="dashboard-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="profile-projects.html" data-bb-panel-page="profile-projects"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Projeler</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=dashboard-analytics" data-bb-panel-page="dashboard-analytics">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Analitics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-section">SAYFALAR</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">person</span>
+</span>
+<span class="bb-menu-title">User Profile</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="profile-campaigns.html" data-bb-panel-page="profile-campaigns"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kampanyalar</span></a></div>
+<a class="bb-menu-link" href="profile.html" data-bb-panel-page="profile-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="profile-documents.html" data-bb-panel-page="profile-documents"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Belgeler</span></a></div>
+<a class="bb-menu-link" href="profile-projects.html" data-bb-panel-page="profile-projects">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Projects</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="profile-followers.html" data-bb-panel-page="profile-followers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Takipçiler</span></a></div>
+<a class="bb-menu-link" href="profile-campaigns.html" data-bb-panel-page="profile-campaigns">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Campaigns</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="profile-activity.html" data-bb-panel-page="profile-activity"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Etkinlik</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_account"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span><span class="bb-menu-title">Hesap</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_account"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="profile.html" data-bb-panel-page="account-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div>
+<a class="bb-menu-link" href="profile-documents.html" data-bb-panel-page="profile-documents">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Documents</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="account.html" data-bb-panel-page="account-settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Ayarlar</span></a></div>
+<a class="bb-menu-link" href="profile-followers.html" data-bb-panel-page="profile-followers">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Followers</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=account-security" data-bb-panel-page="account-security"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Güvenlik</span></a></div>
+<a class="bb-menu-link" href="profile-activity.html" data-bb-panel-page="profile-activity">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Activity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_account">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>
+</span>
+<span class="bb-menu-title">Manage Account</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_account">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="invoices.html" data-bb-panel-page="account-billing"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Faturalandırma</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_authentication"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">lock</span></span><span class="bb-menu-title">Kimlik Doğrulama</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_authentication"><div class="bb-menu-sub-content"><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_corporate_layout"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kurumsal Düzen</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_corporate_layout"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="sign-in.html" data-bb-panel-page="auth-corporate-signin"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Giriş Yap</span></a></div>
+<a class="bb-menu-link" href="profile.html" data-bb-panel-page="account-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="sign-up.html" data-bb-panel-page="auth-corporate-signup"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kayıt Ol</span></a></div>
+<a class="bb-menu-link" href="account.html" data-bb-panel-page="account-settings">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Account Settings</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="reset-password.html" data-bb-panel-page="auth-corporate-reset"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Şifre Sıfırla</span></a></div></div></div></div>
-<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_general_layout"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Creative Düzen</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_general_layout"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="creative-sign-in.html" data-bb-panel-page="auth-creative-signin"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Giriş Yap</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=account-security" data-bb-panel-page="account-security">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Security</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="creative-sign-up.html" data-bb-panel-page="auth-creative-signup"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kayıt Ol</span></a></div>
+<a class="bb-menu-link" href="invoices.html" data-bb-panel-page="account-billing">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Billing</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_authentication">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">lock</span>
+</span>
+<span class="bb-menu-title">Identity Verification</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_authentication">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_corporate_layout">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Corporate Layout</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_corporate_layout">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="creative-reset-password.html" data-bb-panel-page="auth-creative-reset"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Şifre Sıfırla</span></a></div></div></div></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_corporate"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">domain</span></span><span class="bb-menu-title">Kurumsal</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_corporate"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=corporate-about" data-bb-panel-page="corporate-about"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Hakkımızda</span></a></div>
+<a class="bb-menu-link" href="sign-in.html" data-bb-panel-page="auth-corporate-signin">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Login</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=corporate-contact" data-bb-panel-page="corporate-contact"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">İletişim</span></a></div>
+<a class="bb-menu-link" href="sign-up.html" data-bb-panel-page="auth-corporate-signup">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Register</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="team.html" data-bb-panel-page="corporate-team"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Ekip</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_social"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span><span class="bb-menu-title">Sosyal</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_social"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="social-feed.html" data-bb-panel-page="social-feed"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Akış</span></a></div>
+<a class="bb-menu-link" href="reset-password.html" data-bb-panel-page="auth-corporate-reset">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Reset Password</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_general_layout">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Creative Düzen</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_general_layout">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=social-activity" data-bb-panel-page="social-activity"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Etkinlik</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_blog"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">article</span></span><span class="bb-menu-title">Blog</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_blog"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="blog.html" data-bb-panel-page="blog-posts"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Yazılar</span></a></div>
+<a class="bb-menu-link" href="creative-sign-in.html" data-bb-panel-page="auth-creative-signin">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Login</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Yazı Detayı</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_faq"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">quiz</span></span><span class="bb-menu-title">Sık Sorulan Sorular</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_faq"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=faq-overview" data-bb-panel-page="faq-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pricing"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">sell</span></span><span class="bb-menu-title">Fiyatlandırma</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pricing.html" data-bb-panel-page="pricing-plans"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Planlar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_careers"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">work</span></span><span class="bb-menu-title">Kariyer</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_careers"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=careers-open" data-bb-panel-page="careers-open"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Açık Pozisyonlar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_utilities"><span class="bb-menu-icon"><span class="bb-empty-icon"><span class="material-symbols-outlined" aria-hidden="true">construction</span></span></span><span class="bb-menu-title">Yardımcı Sayfalar</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="404.html" data-bb-panel-page="utility-404"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">404</span></a></div>
+<a class="bb-menu-link" href="creative-sign-up.html" data-bb-panel-page="auth-creative-signup">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Register</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="500.html" data-bb-panel-page="utility-500"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">500</span></a></div>
+<a class="bb-menu-link" href="creative-reset-password.html" data-bb-panel-page="auth-creative-reset">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Reset Password</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_corporate">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">domain</span>
+</span>
+<span class="bb-menu-title">Kurumsal</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_corporate">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=utility-maintenance" data-bb-panel-page="utility-maintenance"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Bakım</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_widgets"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">widgets</span></span><span class="bb-menu-title">Widget'lar</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_widgets"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="statistics.html" data-bb-panel-page="widgets-statistics"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">İstatistikler</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=corporate-about" data-bb-panel-page="corporate-about">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">About Us</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="tabs.html" data-bb-panel-page="widgets-tables"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Tablolar</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=corporate-contact" data-bb-panel-page="corporate-contact">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Contact</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="charts.html" data-bb-panel-page="widgets-charts"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Grafikler</span></a></div></div></div></div><div class="bb-menu-section">UYGULAMALAR</div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_projects"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">folder_open</span></span><span class="bb-menu-title">Projeler</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_projects"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=projects-list" data-bb-panel-page="projects-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Liste</span></a></div>
+<a class="bb-menu-link" href="team.html" data-bb-panel-page="corporate-team">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Team</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_social">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">groups</span>
+</span>
+<span class="bb-menu-title">Social</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_social">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=projects-overview" data-bb-panel-page="projects-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div>
+<a class="bb-menu-link" href="social-feed.html" data-bb-panel-page="social-feed">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Workflow</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="forms.html?page=projects-create" data-bb-panel-page="projects-create"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Oluştur</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_ecommerce"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span></span><span class="bb-menu-title">e-Ticaret</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_ecommerce"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Ürünler</span></a></div><div class="bb-menu-item">
-<a class="bb-menu-link" href="create-product.html"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Ürün Oluştur</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=social-activity" data-bb-panel-page="social-activity">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Activity</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_blog">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">article</span>
+</span>
+<span class="bb-menu-title">Blog</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_blog">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=ecommerce-categories" data-bb-panel-page="ecommerce-categories"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kategoriler</span></a></div>
+<a class="bb-menu-link" href="blog.html" data-bb-panel-page="blog-posts">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Blogs</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="orders.html" data-bb-panel-page="ecommerce-orders"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Siparişler</span></a></div><div class="bb-menu-item">
-<a class="bb-menu-link" href="order-details.html"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Sipariş Detayı</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Yazı Detayı</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_faq">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">quiz</span>
+</span>
+<span class="bb-menu-title">Faq</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_faq">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=ecommerce-customers" data-bb-panel-page="ecommerce-customers"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Müşteriler</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_contacts"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">contacts</span></span><span class="bb-menu-title">Kişiler</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_contacts"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=contacts-list" data-bb-panel-page="contacts-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Liste</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_support_center"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">support_agent</span></span><span class="bb-menu-title">Destek Merkezi</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_support_center"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="support-center.html?tab=tickets" data-bb-panel-page="support-tickets"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Talepler</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=faq-overview" data-bb-panel-page="faq-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pricing">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">sell</span>
+</span>
+<span class="bb-menu-title">Fiyatlandırma</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="support-center.html?tab=faq" data-bb-panel-page="support-faq"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Sık Sorulan Sorular</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_management"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span></span><span class="bb-menu-title">Kullanıcı Yönetimi</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_management"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=users-list" data-bb-panel-page="users-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kullanıcılar</span></a></div>
+<a class="bb-menu-link" href="pricing.html" data-bb-panel-page="pricing-plans">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Planlar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_careers">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">work</span>
+</span>
+<span class="bb-menu-title">Carrer</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_careers">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=users-roles" data-bb-panel-page="users-roles"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Roller</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=careers-open" data-bb-panel-page="careers-open">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Open Positions</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_utilities">
+<span class="bb-menu-icon">
+<span class="bb-empty-icon">
+<span class="material-symbols-outlined" aria-hidden="true">construction</span>
+</span></span>
+<span class="bb-menu-title">Yardımcı Sayfalar</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Yetkiler</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_customers"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">group</span></span><span class="bb-menu-title">Müşteriler</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_customers"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=customers-list" data-bb-panel-page="customers-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Liste</span></a></div>
+<a class="bb-menu-link" href="404.html" data-bb-panel-page="utility-404">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">404</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Detaylar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_subscription"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">subscriptions</span></span><span class="bb-menu-title">Abonelik</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_subscription"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="subscription.html" data-bb-panel-page="subscription-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_invoice_manager"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></span><span class="bb-menu-title">Fatura Yönetimi</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=invoice-list" data-bb-panel-page="invoice-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Faturalar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_file_manager"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">drive_folder_upload</span></span><span class="bb-menu-title">Dosya Yöneticisi</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_file_manager"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=files-list" data-bb-panel-page="files-list"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Dosyalar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_inbox"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">inbox</span></span><span class="bb-menu-title">Gelen Kutusu</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_inbox"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Mesajlar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_chat"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></span><span class="bb-menu-title">Sohbet</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_chat"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=chat-conversations" data-bb-panel-page="chat-conversations"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Konuşmalar</span></a></div></div></div></div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_calendar"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span></span><span class="bb-menu-title">Takvim</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=calendar-overview" data-bb-panel-page="calendar-overview"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Genel Bakış</span></a></div></div></div></div><div class="bb-menu-section">DÜZENLER</div><div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_layouts"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">view_quilt</span></span><span class="bb-menu-title">Düzenler</span><span class="bb-menu-arrow" aria-hidden="true"></span>
-</button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_layouts"><div class="bb-menu-sub-content"><div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=layout-sidebar" data-bb-panel-page="layout-sidebar"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kenar Menüsü</span></a></div>
+<a class="bb-menu-link" href="500.html" data-bb-panel-page="utility-500">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">500</span>
+</a>
+</div>
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=layout-header" data-bb-panel-page="layout-header"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Üst Menü</span></a></div>
+<a class="bb-menu-link" href="pages.html?page=utility-maintenance" data-bb-panel-page="utility-maintenance">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Maintenance</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_widgets">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">widgets</span>
+</span>
+<span class="bb-menu-title">Widget'lar</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_widgets">
+<div class="bb-menu-sub-content">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="pages.html?page=layout-auth" data-bb-panel-page="layout-auth"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kimlik Doğrulama</span></a></div></div></div></div></nav>
+<a class="bb-menu-link" href="statistics.html" data-bb-panel-page="widgets-statistics">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Statiscitc</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="tabs.html" data-bb-panel-page="widgets-tables">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Tables</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="charts.html" data-bb-panel-page="widgets-charts">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Grafikler</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-section">UYGULAMALAR</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_projects">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
+</span>
+<span class="bb-menu-title">Projects</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_projects">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=projects-list" data-bb-panel-page="projects-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Liste</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=projects-overview" data-bb-panel-page="projects-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="forms.html?page=projects-create" data-bb-panel-page="projects-create">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Create</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_ecommerce">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+</span>
+<span class="bb-menu-title">e-Ticaret</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_ecommerce">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Ürünler</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="create-product.html">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Ürün Create</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=ecommerce-categories" data-bb-panel-page="ecommerce-categories">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Kategoriler</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="orders.html" data-bb-panel-page="ecommerce-orders">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Orders</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="order-details.html">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Order Detail</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=ecommerce-customers" data-bb-panel-page="ecommerce-customers">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Customers</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_contacts">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">contacts</span>
+</span>
+<span class="bb-menu-title">Contacts</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_contacts">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=contacts-list" data-bb-panel-page="contacts-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Liste</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_support_center">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+</span>
+<span class="bb-menu-title">Support Center</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_support_center">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="support-center.html?tab=tickets" data-bb-panel-page="support-tickets">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Talepler</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="support-center.html?tab=faq" data-bb-panel-page="support-faq">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Faq</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_management">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span>
+</span>
+<span class="bb-menu-title">Kullanıcı Yönetimi</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_management">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=users-list" data-bb-panel-page="users-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Kullanıcılar</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=users-roles" data-bb-panel-page="users-roles">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Roller</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Yetkiler</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_customers">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">group</span>
+</span>
+<span class="bb-menu-title">Customers</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_customers">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=customers-list" data-bb-panel-page="customers-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Liste</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Detaylar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_subscription">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">subscriptions</span>
+</span>
+<span class="bb-menu-title">Abonelik</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_subscription">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="subscription.html" data-bb-panel-page="subscription-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_invoice_manager">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
+</span>
+<span class="bb-menu-title">Fatura Yönetimi</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=invoice-list" data-bb-panel-page="invoice-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Faturalar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_file_manager">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">drive_folder_upload</span>
+</span>
+<span class="bb-menu-title">Dosya Yöneticisi</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_file_manager">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=files-list" data-bb-panel-page="files-list">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Dosyalar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_inbox">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">inbox</span>
+</span>
+<span class="bb-menu-title">Gelen Kutusu</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_inbox">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Mesajlar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_chat">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">chat</span>
+</span>
+<span class="bb-menu-title">Sohbet</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_chat">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=chat-conversations" data-bb-panel-page="chat-conversations">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Konuşmalar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_calendar">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+</span>
+<span class="bb-menu-title">Takvim</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=calendar-overview" data-bb-panel-page="calendar-overview">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Overview</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="bb-menu-section">DÜZENLER</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_layouts">
+<span class="bb-menu-icon">
+<span class="material-symbols-outlined" aria-hidden="true">view_quilt</span>
+</span>
+<span class="bb-menu-title">Düzenler</span>
+<span class="bb-menu-arrow" aria-hidden="true"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_layouts">
+<div class="bb-menu-sub-content">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=layout-sidebar" data-bb-panel-page="layout-sidebar">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Kenar Menüsü</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=layout-header" data-bb-panel-page="layout-header">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Üst Menü</span>
+</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="pages.html?page=layout-auth" data-bb-panel-page="layout-auth">
+<span class="bb-menu-bullet" aria-hidden="true"></span>
+<span class="bb-menu-title">Identity Verification</span>
+</a>
+</div>
+</div>
+</div>
+</div></nav>
       </div>
       <div class="bb-sidebar-footer">
-        <a class="bb-panel-sidebar-docs" href="../components/menu.html"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span><span>Bileşenler</span></a>
+        <a class="bb-panel-sidebar-docs" href="../components/menu.html">
+<span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+<span>Bileşenler</span>
+</a>
       </div>
     </aside>
 
@@ -162,61 +730,107 @@
               <span class="material-symbols-outlined" aria-hidden="true">menu</span>
             </button>
             
-<nav class="bb-panel-topnav" data-bb-panel-topnav aria-label="Üst navigasyon"><div class="bb-menu bb-menu-hover-bg bb-menu-active-bg">
+<nav class="bb-panel-topnav" data-bb-panel-topnav aria-label="Üst navigasyon">
+<div class="bb-menu bb-menu-hover-bg bb-menu-active-bg">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="dashboard.html">Gösterge Paneli</a></div>
-<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false">Sayfalar <span class="bb-menu-arrow"></span>
-</button><div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start"><div class="bb-menu-item">
-<a class="bb-menu-link" href="profile.html">Profil</a></div><div class="bb-menu-item">
-<a class="bb-menu-link" href="account.html">Hesap</a></div></div></div>
-<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false">Uygulamalar <span class="bb-menu-arrow"></span>
-</button><div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start"><div class="bb-menu-item">
-<a class="bb-menu-link" href="../components/forms.html">Formlar</a></div><div class="bb-menu-item">
-<a class="bb-menu-link" href="../components/tables.html">Tablolar</a></div></div></div>
+<a class="bb-menu-link" href="dashboard.html">Dashboard</a>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false">Sayfalar <span class="bb-menu-arrow"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
 <div class="bb-menu-item">
-<a class="bb-menu-link" href="layouts.html">Düzenler</a></div><div class="bb-menu-item">
-<a class="bb-menu-link" href="../components/menu.html">Yardım</a></div>
+<a class="bb-menu-link" href="profile.html">Profil</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="account.html">Manage Account</a>
+</div>
+</div>
+</div>
+<div class="bb-menu-item" data-bb-menu-trigger="click">\<button class="bb-menu-link" type="button" aria-expanded="false">Uygulamalar <span class="bb-menu-arrow"></span>
+</button>
+<div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="../components/forms.html">Formlar</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="../components/tables.html">Tables</a>
+</div>
+</div>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="layouts.html">Düzenler</a>
+</div>
+<div class="bb-menu-item">
+<a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+</div>
 </div></nav>
           </div>
           <div class="bb-shell-header-right bb-panel-header-actions">
-<div class="bb-panel-overlay-host" data-bb-panel-popup><button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle><span class="material-symbols-outlined">search</span>
-</button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><label class="form-label" for="bb_search">Hızlı arama</label><input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara"></div></div>
-<div class="bb-panel-overlay-host" data-bb-panel-popup><button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle><span class="material-symbols-outlined">notifications</span><span class="bb-panel-indicator"></span>
-</button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div></div>
-<div class="bb-panel-overlay-host" data-bb-panel-popup><button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle><span class="material-symbols-outlined">chat</span>
-</button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div></div>
-<div class="bb-panel-overlay-host" data-bb-panel-popup><button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle><span class="material-symbols-outlined">apps</span>
+<div class="bb-panel-overlay-host" data-bb-panel-popup>\<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+<span class="material-symbols-outlined">search</span>
+</button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><label class="form-label" for="bb_search">Hızlı arama</label><input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara"></div>
+</div>
+<div class="bb-panel-overlay-host" data-bb-panel-popup>\<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+<span class="material-symbols-outlined">notifications</span>
+<span class="bb-panel-indicator"></span>
+</button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+</div>
+<div class="bb-panel-overlay-host" data-bb-panel-popup>\<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+<span class="material-symbols-outlined">chat</span>
+</button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+</div>
+<div class="bb-panel-overlay-host" data-bb-panel-popup>\<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+<span class="material-symbols-outlined">apps</span>
 </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
 <a class="bb-dropdown-item" href="../components/cards.html">Kartlar</a>
-<a class="bb-dropdown-item" href="../components/tables.html">Tablolar</a></div></div>
-<button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Temayı değiştir"><span class="material-symbols-outlined">contrast</span>
+<a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
+</div>
+</div>
+<button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Temayı değiştir">
+<span class="material-symbols-outlined">contrast</span>
 </button>
 <div class="bb-panel-overlay-host" data-bb-panel-popup>
-<button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="Kullanıcı menüsü"><span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.webp" alt="Örnek kullanıcı"></span>
+<button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="Kullanıcı menüsü">
+<span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.webp" alt="Örnek kullanıcı"></span>
 </button>
 <div id="bb_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>
 <div class="bb-panel-user-summary">
 <span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.webp" alt=""></span>
-<span class="bb-panel-user-info"><span class="bb-panel-user-name">Demo Kullanıcı <span class="bb-badge bb-badge-success">Demo</span></span><small>demo@example.com</small></span>
+<span class="bb-panel-user-info">
+<span class="bb-panel-user-name">Demo Kullanıcı <span class="bb-badge bb-badge-success">Demo</span>
+</span><small>demo@example.com</small></span>
 </div>
 <div class="bb-panel-user-group">
-<a class="bb-panel-user-item" href="profile.html"><span>Profilim</span></a>
-<button class="bb-panel-user-item" type="button" disabled title="Projeler demo sayfası henüz hazırlanmadı"><span>Projelerim</span><span class="bb-panel-user-meta">Yakında</span>
+<a class="bb-panel-user-item" href="profile.html"><span>Profilim</span>
+</a>
+<button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı"><span>Projectsim</span>
+<span class="bb-panel-user-meta">Yakında</span>
 </button>
-<button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı"><span>Aboneliğim</span><span class="bb-panel-user-meta"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></span>
+<button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı"><span>Aboneliğim</span>
+<span class="bb-panel-user-meta">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+</span>
 </button>
-<a class="bb-panel-user-item" href="invoices.html"><span>Faturalarım</span></a>
+<a class="bb-panel-user-item" href="invoices.html"><span>Faturalarım</span>
+</a>
 </div>
 <div class="bb-panel-user-group">
-<button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Görünüm</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Koyu</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span></span>
+<button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Görünüm</span>
+<span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Koyu</span>
+<span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
+</span>
 </button>
-<div class="bb-panel-user-item"><span>Dil</span><span class="bb-panel-user-meta">Türkçe (demo)</span></div>
-<a class="bb-panel-user-item" href="account.html"><span>Hesap ayarları</span></a>
-<button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil"><span>Çıkış</span><span class="bb-panel-user-meta">Demo</span>
+<div class="bb-panel-user-item"><span>Dil</span>
+<span class="bb-panel-user-meta">Türkçe (demo)</span></div>
+<a class="bb-panel-user-item" href="account.html"><span>Manage Account ayarları</span>
+</a>
+<button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil"><span>Çıkış</span>
+<span class="bb-panel-user-meta">Demo</span>
 </button>
 </div>
-</div></div>
+</div>
+</div>
 </div>
         </div>
       </header>
@@ -231,7 +845,7 @@
             <div class="bb-panel-content-container">
               <div class="bb-toolbar-row">
                 <div class="bb-toolbar-col-left">
-                  <h1 class="bb-page-title">Gösterge Paneli</h1>
+                  <h1 class="bb-page-title">Dashboard</h1>
                   <nav class="bb-breadcrumb" aria-label="İçerik yolu">
                     <ol class="breadcrumb mb-0">
                       <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
@@ -240,94 +854,242 @@
                   </nav>
                 </div>
                 <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                  <a class="btn btn-primary" href="support-center.html?tab=contact">Talep Oluştur</a>
+                  <a class="btn btn-primary" href="support-center.html?tab=contact">Talep Create</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <section class="bb-content" aria-label="Destek Merkezi" data-bb-support>
+          <section class="bb-content" aria-label="Support Center" data-bb-support>
 <div class="bb-panel-content-container">
 <section class="bb-card bb-support-hero" aria-labelledby="bb_support_title">
  <div class="bb-support-hero-inner"><div>
   <h2 id="bb_support_title">Size nasıl yardımcı olabiliriz?</h2>
-  <div class="bb-support-search"><span class="material-symbols-outlined" aria-hidden="true">search</span><label for="bb_support_search" class="visually-hidden">Destek içeriklerinde ara</label><input id="bb_support_search" class="form-control form-control-solid" type="search" data-bb-support-search placeholder="Bir soru sorun" autocomplete="off"></div>
-  <p class="bb-support-notice mt-3" data-bb-support-status aria-live="polite">Örnek Destek Merkezi · Gerçek talep verisi bulunmuyor</p>
- </div><div class="bb-support-illustration" aria-hidden="true"><span class="material-symbols-outlined">support_agent</span></div></div>
- <div class="bb-support-hero-footer"><nav class="bb-support-tabs" role="tablist" aria-label="Destek Merkezi bölümleri"><button type="button" role="tab" aria-controls="bb_support_view_overview" id="bb_support_tab_overview" class="bb-support-tab" data-bb-support-tab="overview" aria-selected="true" tabindex="0">Genel Bakış</button><button type="button" role="tab" aria-controls="bb_support_view_tickets" id="bb_support_tab_tickets" class="bb-support-tab" data-bb-support-tab="tickets" aria-selected="false" tabindex="-1">Talepler</button><button type="button" role="tab" aria-controls="bb_support_view_tutorials" id="bb_support_tab_tutorials" class="bb-support-tab" data-bb-support-tab="tutorials" aria-selected="false" tabindex="-1">Eğitimler</button><button type="button" role="tab" aria-controls="bb_support_view_faq" id="bb_support_tab_faq" class="bb-support-tab" data-bb-support-tab="faq" aria-selected="false" tabindex="-1">SSS</button><button type="button" role="tab" aria-controls="bb_support_view_licenses" id="bb_support_tab_licenses" class="bb-support-tab" data-bb-support-tab="licenses" aria-selected="false" tabindex="-1">Lisanslar</button><button type="button" role="tab" aria-controls="bb_support_view_contact" id="bb_support_tab_contact" class="bb-support-tab" data-bb-support-tab="contact" aria-selected="false" tabindex="-1">İletişim</button></nav><button class="btn btn-primary btn-sm" type="button" data-bb-support-tab="contact">Talep Oluştur</button></div>
+  <div class="bb-support-search">
+<span class="material-symbols-outlined" aria-hidden="true">search</span><label for="bb_support_search" class="visually-hidden">Destek içeriklerinde ara</label><input id="bb_support_search" class="form-control form-control-solid" type="search" data-bb-support-search placeholder="Bir soru sorun" autocomplete="off"></div>
+  <p class="bb-support-notice mt-3" data-bb-support-status aria-live="polite">Örnek Support Center · Gerçek talep verisi bulunmuyor</p>
+ </div>
+<div class="bb-support-illustration" aria-hidden="true">
+<span class="material-symbols-outlined">support_agent</span></div>
+</div>
+ <div class="bb-support-hero-footer"><nav class="bb-support-tabs" role="tablist" aria-label="Support Center bölümleri">\<button type="button" role="tab" aria-controls="bb_support_view_overview" id="bb_support_tab_overview" class="bb-support-tab" data-bb-support-tab="overview" aria-selected="true" tabindex="0">Overview</button>\<button type="button" role="tab" aria-controls="bb_support_view_tickets" id="bb_support_tab_tickets" class="bb-support-tab" data-bb-support-tab="tickets" aria-selected="false" tabindex="-1">Talepler</button>\<button type="button" role="tab" aria-controls="bb_support_view_tutorials" id="bb_support_tab_tutorials" class="bb-support-tab" data-bb-support-tab="tutorials" aria-selected="false" tabindex="-1">Eğitimler</button>\<button type="button" role="tab" aria-controls="bb_support_view_faq" id="bb_support_tab_faq" class="bb-support-tab" data-bb-support-tab="faq" aria-selected="false" tabindex="-1">SSS</button>\<button type="button" role="tab" aria-controls="bb_support_view_licenses" id="bb_support_tab_licenses" class="bb-support-tab" data-bb-support-tab="licenses" aria-selected="false" tabindex="-1">Lisanslar</button>\<button type="button" role="tab" aria-controls="bb_support_view_contact" id="bb_support_tab_contact" class="bb-support-tab" data-bb-support-tab="contact" aria-selected="false" tabindex="-1">Contact</button></nav>\<button class="btn btn-primary btn-sm" type="button" data-bb-support-tab="contact">Talep Create</button></div>
 </section>
-<div data-bb-support-empty class="bb-card mt-4" hidden><div class="bb-card-body">Aramanızla eşleşen örnek soru bulunamadı.</div></div>
+<div data-bb-support-empty class="bb-card mt-4" hidden>
+<div class="bb-card-body">Aramanızla eşleşen örnek soru bulunamadı.</div>
+</div>
 <div id="bb_support_view_overview" role="tabpanel" aria-labelledby="bb_support_tab_overview" data-bb-support-view="overview" class="bb-support-view">
 <div class="bb-support-resource-grid">
-<section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Popüler Talepler</h3><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="tickets">Talepler</button></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Sipariş durumumu nereden görebilirim?</span>
-</button><div id="bb_support_popular_0" class="bb-support-qa-answer" hidden>Siparişlerinizi panelde e-Ticaret / Siparişler bölümünden takip edebilirsiniz. Bu sayfadaki bilgiler örnek içeriktir.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Destek talebini nasıl oluştururum?</span>
-</button><div id="bb_support_popular_1" class="bb-support-qa-answer" hidden>Talepler sekmesindeki formu kullanabilirsiniz. Demo sürümünde form gerçek bir talep kaydetmez.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bir ürünü nasıl düzenleyebilirim?</span>
-</button><div id="bb_support_popular_2" class="bb-support-qa-answer" hidden>Ürünler listesinden ilgili ürünü seçerek düzenleme ekranına geçilir. Bu şablon gerçek API bağlantısı içermez.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_3"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Fatura bilgilerimi nereden görürüm?</span>
-</button><div id="bb_support_popular_3" class="bb-support-qa-answer" hidden>Kullanıcı Profili / Faturalandırma veya Fatura ekranında örnek bilgileri inceleyebilirsiniz.</div></div></div></section>
-<section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Sık Sorulan Sorular</h3><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="faq">Tüm SSS</button></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Hesap şifremi nasıl sıfırlarım?</span>
-</button><div id="bb_support_faq_0" class="bb-support-qa-answer" hidden>Giriş ekranında Şifremi unuttum bağlantısını kullanabilirsiniz. Şu anda e-posta gönderimi yalnız örnek arayüzdür.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Açık ve koyu tema nasıl değiştirilir?</span>
-</button><div id="bb_support_faq_1" class="bb-support-qa-answer" hidden>Üst menüdeki tema simgesi veya kullanıcı menüsündeki Görünüm seçeneğiyle temayı değiştirebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bildirimleri nasıl kontrol ederim?</span>
-</button><div id="bb_support_faq_2" class="bb-support-qa-answer" hidden>Header bölümündeki çan simgesine tıklayarak Uyarılar, Güncellemeler ve Geçmiş sekmelerini açabilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_3"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bu örnekler gerçek verileri mi kullanıyor?</span>
-</button><div id="bb_support_faq_3" class="bb-support-qa-answer" hidden>Hayır. GlobalTheme paneli bileşen ve tasarım demolarından oluşur.</div></div></div></section>
-<section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Eğitimler</h3><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="tutorials">Tüm eğitimler</button></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Panelde nasıl gezinirim?</span>
-</button><div id="bb_support_tutorials_0" class="bb-support-qa-answer" hidden>Sol sidebar üzerinden modüllere erişebilir, daraltma düğmesiyle menüyü gizleyebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Yeni ürün oluşturma örneği nerede?</span>
-</button><div id="bb_support_tutorials_1" class="bb-support-qa-answer" hidden>Formlar sayfasındaki adımlı ürün oluşturma demosunu inceleyebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Filtreleme ve sıralama nasıl çalışır?</span>
-</button><div id="bb_support_tutorials_2" class="bb-support-qa-answer" hidden>Listeler sayfasındaki arama, durum filtresi ve sıralama bileşenlerini deneyebilirsiniz.</div></div></div></section>
-<section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Videolar</h3></div><div class="bb-support-video"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span><strong>Video eğitimleri</strong><p class="bb-support-notice mb-0">Henüz bağlı video kaynağı yok.</p></div></div></section>
+<section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Popüler Talepler</h3>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="tickets">Talepler</button></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Sipariş durumumu nereden görebilirim?</span>
+</button><div id="bb_support_popular_0" class="bb-support-qa-answer" hidden>Ordersinizi panelde e-Ticaret / Orders bölümünden takip edebilirsiniz. Bu sayfadaki bilgiler örnek içeriktir.</div>
 </div>
-<div class="mt-4"><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Ürün Dokümantasyonu</h3></div><div class="bb-support-docs"><a href="../components/cards.html"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Bileşenler</a>
-<a href="../components/menu.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span>Menü ve navigasyon</a>
-<a href="lists.html"><span class="material-symbols-outlined" aria-hidden="true">view_list</span>Liste örneği</a>
-<a href="forms.html"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span>Form örneği</a>
-<a href="dashboard.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard</span>Dashboard</a>
-<a href="profile.html"><span class="material-symbols-outlined" aria-hidden="true">person</span>Profil</a>
-<a href="invoices.html"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura</a>
-<a href="../components/buttons.html"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Tema</a>
-<a href="../components/dropdowns.html"><span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım</a></div></div></section></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Destek talebini nasıl oluştururum?</span>
+</button><div id="bb_support_popular_1" class="bb-support-qa-answer" hidden>Talepler sekmesindeki formu kullanabilirsiniz. Demo sürümünde form gerçek bir talep kaydetmez.</div>
 </div>
-<div id="bb_support_view_tickets" role="tabpanel" aria-labelledby="bb_support_tab_tickets" data-bb-support-view="tickets" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Popüler Talepler</h3></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Sipariş durumumu nereden görebilirim?</span>
-</button><div id="bb_support_tickets_0" class="bb-support-qa-answer" hidden>Siparişlerinizi panelde e-Ticaret / Siparişler bölümünden takip edebilirsiniz. Bu sayfadaki bilgiler örnek içeriktir.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Destek talebini nasıl oluştururum?</span>
-</button><div id="bb_support_tickets_1" class="bb-support-qa-answer" hidden>Talepler sekmesindeki formu kullanabilirsiniz. Demo sürümünde form gerçek bir talep kaydetmez.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bir ürünü nasıl düzenleyebilirim?</span>
-</button><div id="bb_support_tickets_2" class="bb-support-qa-answer" hidden>Ürünler listesinden ilgili ürünü seçerek düzenleme ekranına geçilir. Bu şablon gerçek API bağlantısı içermez.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_3"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Fatura bilgilerimi nereden görürüm?</span>
-</button><div id="bb_support_tickets_3" class="bb-support-qa-answer" hidden>Kullanıcı Profili / Faturalandırma veya Fatura ekranında örnek bilgileri inceleyebilirsiniz.</div></div><div class="mt-4"><p class="text-body-secondary">Yeni destek talebi için İletişim sekmesine geçebilirsiniz.</p><button type="button" class="btn btn-primary btn-sm" data-bb-support-tab="contact">Talep Oluştur</button></div></div></section></div>
-<div id="bb_support_view_tutorials" role="tabpanel" aria-labelledby="bb_support_tab_tutorials" data-bb-support-view="tutorials" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Eğitimler</h3></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Panelde nasıl gezinirim?</span>
-</button><div id="bb_support_lessons_0" class="bb-support-qa-answer" hidden>Sol sidebar üzerinden modüllere erişebilir, daraltma düğmesiyle menüyü gizleyebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Yeni ürün oluşturma örneği nerede?</span>
-</button><div id="bb_support_lessons_1" class="bb-support-qa-answer" hidden>Formlar sayfasındaki adımlı ürün oluşturma demosunu inceleyebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Filtreleme ve sıralama nasıl çalışır?</span>
-</button><div id="bb_support_lessons_2" class="bb-support-qa-answer" hidden>Listeler sayfasındaki arama, durum filtresi ve sıralama bileşenlerini deneyebilirsiniz.</div></div><div class="mt-3 bb-support-docs"><a href="../components/cards.html"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Bileşenler</a>
-<a href="../components/menu.html"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span>Menü ve navigasyon</a>
-<a href="lists.html"><span class="material-symbols-outlined" aria-hidden="true">view_list</span>Liste örneği</a>
-<a href="forms.html"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span>Form örneği</a>
-<a href="dashboard.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard</span>Dashboard</a>
-<a href="profile.html"><span class="material-symbols-outlined" aria-hidden="true">person</span>Profil</a>
-<a href="invoices.html"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura</a>
-<a href="../components/buttons.html"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Tema</a>
-<a href="../components/dropdowns.html"><span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım</a></div></div></section></div>
-<div id="bb_support_view_faq" role="tabpanel" aria-labelledby="bb_support_tab_faq" data-bb-support-view="faq" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Sık Sorulan Sorular</h3></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Hesap şifremi nasıl sıfırlarım?</span>
-</button><div id="bb_support_allfaq_0" class="bb-support-qa-answer" hidden>Giriş ekranında Şifremi unuttum bağlantısını kullanabilirsiniz. Şu anda e-posta gönderimi yalnız örnek arayüzdür.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Açık ve koyu tema nasıl değiştirilir?</span>
-</button><div id="bb_support_allfaq_1" class="bb-support-qa-answer" hidden>Üst menüdeki tema simgesi veya kullanıcı menüsündeki Görünüm seçeneğiyle temayı değiştirebilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_2"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bildirimleri nasıl kontrol ederim?</span>
-</button><div id="bb_support_allfaq_2" class="bb-support-qa-answer" hidden>Header bölümündeki çan simgesine tıklayarak Uyarılar, Güncellemeler ve Geçmiş sekmelerini açabilirsiniz.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_3"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Bu örnekler gerçek verileri mi kullanıyor?</span>
-</button><div id="bb_support_allfaq_3" class="bb-support-qa-answer" hidden>Hayır. GlobalTheme paneli bileşen ve tasarım demolarından oluşur.</div></div></div></section></div>
-<div id="bb_support_view_licenses" role="tabpanel" aria-labelledby="bb_support_tab_licenses" data-bb-support-view="licenses" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Lisanslar</h3></div><div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_licenses_0"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Lisans kapsamı nedir?</span>
-</button><div id="bb_support_licenses_0" class="bb-support-qa-answer" hidden>Bu örnek ekran herhangi bir ticari lisans koşulu açıklamaz. Gerçek lisans koşulları ilgili üründen doğrulanmalıdır.</div></div>
-<div class="bb-support-qa bb-support-item" data-bb-support-item><button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_licenses_1"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span><span>Proje içinde component kullanımı nasıl düzenlenir?</span>
-</button><div id="bb_support_licenses_1" class="bb-support-qa-answer" hidden>GlobalTheme ortak SCSS ve JavaScript bileşenleri üzerinden kullanılmalıdır.</div></div></div></section></div>
-<div id="bb_support_view_contact" role="tabpanel" aria-labelledby="bb_support_tab_contact" data-bb-support-view="contact" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Destek Talebi Oluştur</h3></div><p class="bb-support-notice">Demo formudur. Kaydetme, gönderme veya destek kaydı açma işlemi yapılmaz.</p><form data-bb-support-ticket><div class="row g-3"><div class="col-md-6"><label class="form-label" for="bb_support_name">Ad soyad</label><input class="form-control form-control-solid" id="bb_support_name" name="name" required maxlength="100"></div><div class="col-md-6"><label class="form-label" for="bb_support_email">E-posta</label><input class="form-control form-control-solid" id="bb_support_email" name="email" type="email" required></div><div class="col-12"><label class="form-label" for="bb_support_subject">Konu</label><select class="form-select form-select-solid" id="bb_support_subject" name="subject" required><option value="">Konu seçin</option><option>Hesap</option><option>Ürünler</option><option>Teknik sorun</option><option>Diğer</option></select></div><div class="col-12"><label class="form-label" for="bb_support_message">Açıklama</label><textarea class="form-control form-control-solid" id="bb_support_message" name="message" rows="4" required maxlength="1000"></textarea></div><div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Talebi kontrol et</button></div></div></form><div class="alert alert-info mt-3" role="status" tabindex="-1" data-bb-support-ticket-result hidden></div></div></section></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bir ürünü nasıl düzenleyebilirim?</span>
+</button><div id="bb_support_popular_2" class="bb-support-qa-answer" hidden>Ürünler listesinden ilgili ürünü seçerek düzenleme ekranına geçilir. Bu şablon gerçek API bağlantısı içermez.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_popular_3">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Fatura bilgilerimi nereden görürüm?</span>
+</button><div id="bb_support_popular_3" class="bb-support-qa-answer" hidden>User Profile / Billing veya Fatura ekranında örnek bilgileri inceleyebilirsiniz.</div>
+</div>
+</div></section>
+<section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Faq</h3>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="faq">Tüm SSS</button></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Manage Account şifremi nasıl sıfırlarım?</span>
+</button><div id="bb_support_faq_0" class="bb-support-qa-answer" hidden>Giriş ekranında Şifremi unuttum bağlantısını kullanabilirsiniz. Şu anda e-posta gönderimi yalnız örnek arayüzdür.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Açık ve koyu tema nasıl değiştirilir?</span>
+</button><div id="bb_support_faq_1" class="bb-support-qa-answer" hidden>Üst menüdeki tema simgesi veya kullanıcı menüsündeki Görünüm seçeneğiyle temayı değiştirebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bildirimleri nasıl kontrol ederim?</span>
+</button><div id="bb_support_faq_2" class="bb-support-qa-answer" hidden>Header bölümündeki çan simgesine tıklayarak Uyarılar, Güncellemeler ve Geçmiş sekmelerini açabilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_faq_3">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bu örnekler gerçek verileri mi kullanıyor?</span>
+</button><div id="bb_support_faq_3" class="bb-support-qa-answer" hidden>Hayır. GlobalTheme paneli bileşen ve tasarım demolarından oluşur.</div>
+</div>
+</div></section>
+<section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Eğitimler</h3>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-support-tab="tutorials">Tüm eğitimler</button></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Panelde nasıl gezinirim?</span>
+</button><div id="bb_support_tutorials_0" class="bb-support-qa-answer" hidden>Sol sidebar üzerinden modüllere erişebilir, daraltma düğmesiyle menüyü gizleyebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Yeni ürün oluşturma örneği nerede?</span>
+</button><div id="bb_support_tutorials_1" class="bb-support-qa-answer" hidden>Formlar sayfasındaki adımlı ürün oluşturma demosunu inceleyebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tutorials_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Filtreleme ve sıralama nasıl çalışır?</span>
+</button><div id="bb_support_tutorials_2" class="bb-support-qa-answer" hidden>Lists sayfasındaki arama, durum filtresi ve sıralama bileşenlerini deneyebilirsiniz.</div>
+</div>
+</div></section>
+<section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Videolar</h3></div>
+<div class="bb-support-video">
+<span class="material-symbols-outlined" aria-hidden="true">play_circle</span><strong>Video eğitimleri</strong><p class="bb-support-notice mb-0">Henüz bağlı video kaynağı yok.</p></div>
+</div></section>
+</div>
+<div class="mt-4"><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Ürün Dokümantasyonu</h3></div>
+<div class="bb-support-docs"><a href="../components/cards.html">
+<span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Bileşenler</a>
+<a href="../components/menu.html">
+<span class="material-symbols-outlined" aria-hidden="true">account_tree</span>Menü ve navigasyon</a>
+<a href="lists.html">
+<span class="material-symbols-outlined" aria-hidden="true">view_list</span>Liste örneği</a>
+<a href="forms.html">
+<span class="material-symbols-outlined" aria-hidden="true">edit_note</span>Form örneği</a>
+<a href="dashboard.html">
+<span class="material-symbols-outlined" aria-hidden="true">dashboard</span>Dashboard</a>
+<a href="profile.html">
+<span class="material-symbols-outlined" aria-hidden="true">person</span>Profil</a>
+<a href="invoices.html">
+<span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura</a>
+<a href="../components/buttons.html">
+<span class="material-symbols-outlined" aria-hidden="true">palette</span>Tema</a>
+<a href="../components/dropdowns.html">
+<span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım</a>
+</div>
+</div></section></div>
+</div>
+<div id="bb_support_view_tickets" role="tabpanel" aria-labelledby="bb_support_tab_tickets" data-bb-support-view="tickets" class="bb-support-view mt-4" hidden><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Popüler Talepler</h3></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Sipariş durumumu nereden görebilirim?</span>
+</button><div id="bb_support_tickets_0" class="bb-support-qa-answer" hidden>Ordersinizi panelde e-Ticaret / Orders bölümünden takip edebilirsiniz. Bu sayfadaki bilgiler örnek içeriktir.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Destek talebini nasıl oluştururum?</span>
+</button><div id="bb_support_tickets_1" class="bb-support-qa-answer" hidden>Talepler sekmesindeki formu kullanabilirsiniz. Demo sürümünde form gerçek bir talep kaydetmez.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bir ürünü nasıl düzenleyebilirim?</span>
+</button><div id="bb_support_tickets_2" class="bb-support-qa-answer" hidden>Ürünler listesinden ilgili ürünü seçerek düzenleme ekranına geçilir. Bu şablon gerçek API bağlantısı içermez.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_tickets_3">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Fatura bilgilerimi nereden görürüm?</span>
+</button><div id="bb_support_tickets_3" class="bb-support-qa-answer" hidden>User Profile / Billing veya Fatura ekranında örnek bilgileri inceleyebilirsiniz.</div>
+</div>
+<div class="mt-4"><p class="text-body-secondary">Yeni destek talebi için Contact sekmesine geçebilirsiniz.</p>\<button type="button" class="btn btn-primary btn-sm" data-bb-support-tab="contact">Talep Create</button></div>
+</div></section></div>
+<div id="bb_support_view_tutorials" role="tabpanel" aria-labelledby="bb_support_tab_tutorials" data-bb-support-view="tutorials" class="bb-support-view mt-4" hidden><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Eğitimler</h3></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Panelde nasıl gezinirim?</span>
+</button><div id="bb_support_lessons_0" class="bb-support-qa-answer" hidden>Sol sidebar üzerinden modüllere erişebilir, daraltma düğmesiyle menüyü gizleyebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Yeni ürün oluşturma örneği nerede?</span>
+</button><div id="bb_support_lessons_1" class="bb-support-qa-answer" hidden>Formlar sayfasındaki adımlı ürün oluşturma demosunu inceleyebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_lessons_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Filtreleme ve sıralama nasıl çalışır?</span>
+</button><div id="bb_support_lessons_2" class="bb-support-qa-answer" hidden>Lists sayfasındaki arama, durum filtresi ve sıralama bileşenlerini deneyebilirsiniz.</div>
+</div>
+<div class="mt-3 bb-support-docs"><a href="../components/cards.html">
+<span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Bileşenler</a>
+<a href="../components/menu.html">
+<span class="material-symbols-outlined" aria-hidden="true">account_tree</span>Menü ve navigasyon</a>
+<a href="lists.html">
+<span class="material-symbols-outlined" aria-hidden="true">view_list</span>Liste örneği</a>
+<a href="forms.html">
+<span class="material-symbols-outlined" aria-hidden="true">edit_note</span>Form örneği</a>
+<a href="dashboard.html">
+<span class="material-symbols-outlined" aria-hidden="true">dashboard</span>Dashboard</a>
+<a href="profile.html">
+<span class="material-symbols-outlined" aria-hidden="true">person</span>Profil</a>
+<a href="invoices.html">
+<span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura</a>
+<a href="../components/buttons.html">
+<span class="material-symbols-outlined" aria-hidden="true">palette</span>Tema</a>
+<a href="../components/dropdowns.html">
+<span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım</a>
+</div>
+</div></section></div>
+<div id="bb_support_view_faq" role="tabpanel" aria-labelledby="bb_support_tab_faq" data-bb-support-view="faq" class="bb-support-view mt-4" hidden><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Faq</h3></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Manage Account şifremi nasıl sıfırlarım?</span>
+</button><div id="bb_support_allfaq_0" class="bb-support-qa-answer" hidden>Giriş ekranında Şifremi unuttum bağlantısını kullanabilirsiniz. Şu anda e-posta gönderimi yalnız örnek arayüzdür.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Açık ve koyu tema nasıl değiştirilir?</span>
+</button><div id="bb_support_allfaq_1" class="bb-support-qa-answer" hidden>Üst menüdeki tema simgesi veya kullanıcı menüsündeki Görünüm seçeneğiyle temayı değiştirebilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_2">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bildirimleri nasıl kontrol ederim?</span>
+</button><div id="bb_support_allfaq_2" class="bb-support-qa-answer" hidden>Header bölümündeki çan simgesine tıklayarak Uyarılar, Güncellemeler ve Geçmiş sekmelerini açabilirsiniz.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_allfaq_3">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Bu örnekler gerçek verileri mi kullanıyor?</span>
+</button><div id="bb_support_allfaq_3" class="bb-support-qa-answer" hidden>Hayır. GlobalTheme paneli bileşen ve tasarım demolarından oluşur.</div>
+</div>
+</div></section></div>
+<div id="bb_support_view_licenses" role="tabpanel" aria-labelledby="bb_support_tab_licenses" data-bb-support-view="licenses" class="bb-support-view mt-4" hidden><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Lisanslar</h3></div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_licenses_0">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Lisans kapsamı nedir?</span>
+</button><div id="bb_support_licenses_0" class="bb-support-qa-answer" hidden>Bu örnek ekran herhangi bir ticari lisans koşulu açıklamaz. Gerçek lisans koşulları ilgili üründen doğrulanmalıdır.</div>
+</div>
+<div class="bb-support-qa bb-support-item" data-bb-support-item>\<button type="button" data-bb-support-question aria-expanded="false" aria-controls="bb_support_licenses_1">
+<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+<span>Proje içinde component kullanımı nasıl düzenlenir?</span>
+</button><div id="bb_support_licenses_1" class="bb-support-qa-answer" hidden>GlobalTheme ortak SCSS ve JavaScript bileşenleri üzerinden kullanılmalıdır.</div>
+</div>
+</div></section></div>
+<div id="bb_support_view_contact" role="tabpanel" aria-labelledby="bb_support_tab_contact" data-bb-support-view="contact" class="bb-support-view mt-4" hidden><section class="bb-card">
+<div class="bb-card-body">
+<div class="bb-support-card-heading"><h3>Destek Talebi Create</h3></div><p class="bb-support-notice">Demo formudur. Kaydetme, gönderme veya destek kaydı açma işlemi yapılmaz.</p><form data-bb-support-ticket>
+<div class="row g-3">
+<div class="col-md-6"><label class="form-label" for="bb_support_name">Ad soyad</label><input class="form-control form-control-solid" id="bb_support_name" name="name" required maxlength="100"></div>
+<div class="col-md-6"><label class="form-label" for="bb_support_email">E-posta</label><input class="form-control form-control-solid" id="bb_support_email" name="email" type="email" required></div>
+<div class="col-12"><label class="form-label" for="bb_support_subject">Konu</label><select class="form-select form-select-solid" id="bb_support_subject" name="subject" required><option value="">Konu seçin</option><option>Manage Account</option><option>Ürünler</option><option>Teknik sorun</option><option>Diğer</option></select></div>
+<div class="col-12"><label class="form-label" for="bb_support_message">Açıklama</label><textarea class="form-control form-control-solid" id="bb_support_message" name="message" rows="4" required maxlength="1000"></textarea></div>
+<div class="col-12 d-flex justify-content-end">\<button class="btn btn-primary" type="submit">Talebi kontrol et</button></div>
+</div></form>
+<div class="alert alert-info mt-3" role="status" tabindex="-1" data-bb-support-ticket-result hidden></div>
+</div></section></div>
 </div></section>
         
         </div></main>
@@ -336,13 +1098,16 @@
       </div>
 
       <footer class="bb-shell-footer bb-footer">
-        <div class="bb-footer-bar"><div class="bb-footer-inner">
+        <div class="bb-footer-bar">
+<div class="bb-footer-inner">
           <div class="bb-footer-left"><span>2026 ©</span>
-<a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a></div>
+<a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+</div>
           <nav class="bb-footer-right" aria-label="Alt bağlantılar">
 <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
 <a class="bb-footer-link" href="../components/menu.html">Menüler</a></nav>
-        </div></div>
+        </div>
+</div>
       </footer>
     </div>
   </div>
