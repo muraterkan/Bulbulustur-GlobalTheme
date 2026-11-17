@@ -43,6 +43,20 @@ main {
 }
 
 /* -------------------------------------
+   Page section
+------------------------------------- */
+
+.bb-section {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
+.bb-section + .bb-section {
+    margin-top: var(--bb-space-6);
+}
+
+/* -------------------------------------
    Background moods
 ------------------------------------- */
 
