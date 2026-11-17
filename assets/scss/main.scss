@@ -231,7 +231,7 @@
 @use "layout/web.bulbulustur.com/help";
 @use "layout/web.bulbulustur.com/subscription-comparison";
 
-@use "layout/web.bulbulustur.com/account";
+@use "layout/web.bulbulustur.com/account" as web-account;
 @use "layout/web.bulbulustur.com/account-profile";
 @use "layout/web.bulbulustur.com/account-address";
 @use "layout/web.bulbulustur.com/account-requests";
