@@ -3,9 +3,8 @@
     "",
     "\\assets",
     "\\modules",
-    "\\modules\\components",
     "\\modules\\panel"
   ],
-  "SelectedNode": "\\modules\\components\\accordion.html",
+  "SelectedNode": "\\modules\\panel\\dashboard.html",
   "PreviewInSolutionExplorer": false
 }
