@@ -21414,47 +21414,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   margin-block-end: var(--bb-space-3);
 }
 
-.bb-panel .bb-component-showcase {
-  padding-top: 0;
-}
-
-.bb-panel .bb-component-showcase-content {
-  min-width: 0;
-}
-
-.bb-panel .bb-component-demo-root,
-.bb-panel .bb-component-showcase-root {
-  display: grid;
-  gap: var(--bb-space-4);
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.bb-panel .bb-component-demo-root > .container,
-.bb-panel .bb-component-demo-root > .container-fluid,
-.bb-panel .bb-component-demo-root > .container-sm,
-.bb-panel .bb-component-demo-root > .container-md,
-.bb-panel .bb-component-demo-root > .container-lg,
-.bb-panel .bb-component-demo-root > .container-xl,
-.bb-panel .bb-component-demo-root > .container-xxl {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-.bb-panel .bb-component-demo-root .bb-card {
-  margin-block: 0;
-}
-
-.bb-panel .bb-component-demo-root > :last-child,
-.bb-panel .bb-component-showcase-root > :last-child {
-  margin-bottom: 0;
-}
-
 /* Core token catalog — panel documentation only. */
 .bb-panel .bb-token-sections {
   display: grid;
@@ -21561,7 +21520,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   text-align: end;
 }
 
-.bb-panel .bb-component-demo-root .tab-pane > .bb-card {
+.bb-panel .tab-pane > .bb-card {
   --bb-card-bg: var(--bb-surface-elevated);
 }
 
