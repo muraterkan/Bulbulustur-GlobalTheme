@@ -87,7 +87,7 @@
   }
 
   products.forEach(function (product) {
-    product.addEventListner("click", function () {
+    product.addEventListener("click", function () {
       var id = product.dataset.productId;
       cart.set(id, (cart.get(id) || 0) + 1);
       renderCart();
@@ -95,7 +95,7 @@
     });
   });
 
-  orderLines.addEventListner("click", function (event) {
+  orderLines.addEventListener("click", function (event) {
     var button = event.target.closest("[data-bb-pos-qty]");
     if (!button) return;
     var row = button.closest("[data-product-id]");
@@ -107,14 +107,14 @@
     renderCart();
   });
 
-  root.querySelector("[data-bb-pos-clear]").addEventListner("click", function () {
+  root.querySelector("[data-bb-pos-clear]").addEventListener("click", function () {
     cart.clear();
     renderCart();
     setStatus("Fiş temizlendi.");
   });
 
   root.querySelectorAll("[data-bb-pos-payment]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       root.querySelectorAll("[data-bb-pos-payment]").forEach(function (item) {
         item.setAttribute("aria-pressed", String(item === button));
       });
@@ -122,7 +122,7 @@
     });
   });
 
-  root.querySelector("[data-bb-pos-checkout]").addEventListner("click", function () {
+  root.querySelector("[data-bb-pos-checkout]").addEventListener("click", function () {
     if (!cart.size) {
       setStatus("Ödeme için fişe en az bir ürün ekleyin.");
       return;
@@ -130,7 +130,7 @@
     setStatus("Demo ödeme hazır. Gerçek POS bağlantısı bu örnekte yapılmaz.");
   });
 
-  root.querySelector("[data-bb-pos-hold]").addEventListner("click", function () {
+  root.querySelector("[data-bb-pos-hold]").addEventListener("click", function () {
     if (!cart.size) {
       setStatus("Bekletmek için fişe ürün ekleyin.");
       return;
@@ -157,7 +157,7 @@
       row.innerHTML =
         '<span><strong>' + order.id + ' · ' + order.customer + '</strong><small>' + order.items + ' ürün · ' + order.total + '</small></span>' +
         '<button class="btn bb-btn-secondary btn-sm" type="button">Fişe Al</button>';
-      row.querySelector("button").addEventListner("click", function () {
+      row.querySelector("button").addEventListener("click", function () {
         setStatus(order.id + " demo siparişi seçildi.");
       });
       heldList.append(row);
@@ -165,7 +165,7 @@
   }
 
   root.querySelectorAll("[data-bb-pos-category]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       root.querySelectorAll("[data-bb-pos-category]").forEach(function (item) {
         item.setAttribute("aria-pressed", String(item === button));
       });
@@ -184,9 +184,9 @@
     });
   }
 
-  productSearch.addEventListner("input", filterProducts);
+  productSearch.addEventListener("input", filterProducts);
 
-  barcodeInput.addEventListner("keydown", function (event) {
+  barcodeInput.addEventListener("keydown", function (event) {
     if (event.key !== "Enter") return;
     event.preventDefault();
     var value = barcodeInput.value.trim().toLocaleLowerCase("tr-TR");
@@ -205,12 +205,12 @@
   var customerModalEl = document.getElementById("bb_pos_customer_modal");
   var customerModal = customerModalEl && window.bootstrap ? new bootstrap.Modal(customerModalEl) : null;
 
-  root.querySelector("[data-bb-pos-customer-open]").addEventListner("click", function () {
+  root.querySelector("[data-bb-pos-customer-open]").addEventListener("click", function () {
     if (customerModal) customerModal.show();
   });
 
   document.querySelectorAll("[data-bb-pos-customer-select]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       selectedCustomerName.textContent = button.dataset.customerName;
       selectedCustomerMeta.textContent = button.dataset.customerMeta;
       if (customerModal) customerModal.hide();
@@ -220,12 +220,12 @@
 
   var newCustomerOpen = document.querySelector("[data-bb-pos-new-customer-open]");
   if (newCustomerOpen) {
-    newCustomerOpen.addEventListner("click", function () {
+    newCustomerOpen.addEventListener("click", function () {
       if (!customerModal) {
         window.BBDrawer.open("#bb_pos_new_customer_drawer");
         return;
       }
-      customerModalEl.addEventListner("hidden.bs.modal", function openDrawerOnce() {
+      customerModalEl.addEventListener("hidden.bs.modal", function openDrawerOnce() {
         customerModalEl.removeEventListner("hidden.bs.modal", openDrawerOnce);
         window.BBDrawer.open("#bb_pos_new_customer_drawer");
       });
@@ -235,7 +235,7 @@
 
   var newCustomerForm = document.querySelector("[data-bb-pos-new-customer-form]");
   if (newCustomerForm) {
-    newCustomerForm.addEventListner("submit", function (event) {
+    newCustomerForm.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!newCustomerForm.reportValidity()) return;
       var nameInput = newCustomerForm.querySelector("[name='customerName']");
@@ -248,7 +248,7 @@
   }
 
   document.querySelectorAll("[data-bb-pos-cash-tab]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       var target = button.dataset.bbPosCashTab;
       document.querySelectorAll("[data-bb-pos-cash-tab]").forEach(function (item) {
         item.setAttribute("aria-selected", String(item === button));
@@ -261,7 +261,7 @@
 
   var openDayForm = document.querySelector("[data-bb-pos-open-day-form]");
   if (openDayForm) {
-    openDayForm.addEventListner("submit", function (event) {
+    openDayForm.addEventListener("submit", function (event) {
       event.preventDefault();
       setStatus("Kasa günü demo olarak açıldı.");
       window.BBDrawer.close();

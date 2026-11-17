@@ -12,7 +12,7 @@
   var empty = root.querySelector("[data-bb-integrations-empty]");
 
   root.querySelectorAll(".bb-integration-logo img").forEach(function (img) {
-    img.addEventListner("error", function () {
+    img.addEventListener("error", function () {
       var host = img.closest(".bb-integration-logo");
       if (host) host.setAttribute("data-bb-logo-failed", "true");
     });
@@ -46,7 +46,7 @@
   }
 
   filters.forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       filters.forEach(function (item) {
         item.setAttribute("aria-pressed", String(item === button));
       });
@@ -54,7 +54,7 @@
     });
   });
 
-  search.addEventListner("input", applyFilter);
+  search.addEventListener("input", applyFilter);
 
   var setupDrawer = document.getElementById("bb_integration_setup_drawer");
   var setupName = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-name]");
@@ -64,7 +64,7 @@
   var setupForm = setupDrawer && setupDrawer.querySelector("[data-bb-integration-setup-form]");
 
   root.querySelectorAll("[data-bb-integration-start]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       var card = button.closest("[data-bb-integration-card]");
       if (!card || !setupDrawer) return;
       var name = card.dataset.integrationName;
@@ -89,13 +89,13 @@
 
   if (setupLogo) {
     var setupImg = setupLogo.querySelector("img");
-    if (setupImg) setupImg.addEventListner("error", function () {
+    if (setupImg) setupImg.addEventListener("error", function () {
       setupLogo.setAttribute("data-bb-logo-failed", "true");
     });
   }
 
   if (setupForm) {
-    setupForm.addEventListner("submit", function (event) {
+    setupForm.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!setupForm.reportValidity()) return;
       if (setupStatus) setupStatus.textContent = (setupName?.textContent || "Entegrasyon") + " için demo bağlantı isteği hazırlandı.";

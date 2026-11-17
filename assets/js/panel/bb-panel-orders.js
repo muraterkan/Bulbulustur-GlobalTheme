@@ -42,10 +42,10 @@ function render(){
  function pageButton(label,target,disabled,active){var li=element("li","page-item"+(disabled?" disabled":"")+(active?" active":""));var button=element("button","page-link",label);button.type="button";button.disabled=disabled;button.dataset.bbOrdersPage=String(target);if(active)button.setAttribute("aria-current","page");li.append(button);pages.append(li);}
  pageButton("‹",page-1,page===1,false);for(var i=1;i<=maxPage;i++)pageButton(String(i),i,false,i===page);pageButton("›",page+1,page===maxPage,false);
 }
-[search,from,to,status,limit].forEach(function(control){control.addEventListner(control===search?"input":"change",function(){page=1;render();});});
-root.addEventListner("change",function(event){var selected=event.target.closest("[data-bb-orders-select]");if(selected){if(selected.checked)selection.add(selected.dataset.bbOrdersSelect);else selection.delete(selected.dataset.bbOrdersSelect);render();}});
-checkAll.addEventListner("change",function(){var size=Number(limit.value);filtered().slice((page-1)*size,page*size).forEach(function(o){if(checkAll.checked)selection.add(o.id);else selection.delete(o.id);});render();});
-root.addEventListner("click",function(event){var button=event.target.closest("[data-bb-orders-page]");if(button&&!button.disabled){page=Number(button.dataset.bbOrdersPage);render();return;}
+[search,from,to,status,limit].forEach(function(control){control.addEventListener(control===search?"input":"change",function(){page=1;render();});});
+root.addEventListener("change",function(event){var selected=event.target.closest("[data-bb-orders-select]");if(selected){if(selected.checked)selection.add(selected.dataset.bbOrdersSelect);else selection.delete(selected.dataset.bbOrdersSelect);render();}});
+checkAll.addEventListener("change",function(){var size=Number(limit.value);filtered().slice((page-1)*size,page*size).forEach(function(o){if(checkAll.checked)selection.add(o.id);else selection.delete(o.id);});render();});
+root.addEventListener("click",function(event){var button=event.target.closest("[data-bb-orders-page]");if(button&&!button.disabled){page=Number(button.dataset.bbOrdersPage);render();return;}
  var action=event.target.closest("[data-bb-orders-action]");if(action){info(action.dataset.bbOrdersAction==="edit"?"#"+action.dataset.bbOrdersId+" düzenleme demosu: Sipariş değiştirilmedi.":"#"+action.dataset.bbOrdersId+" silme demosu: Hiçbir kayıt silinmedi.");return;}
  if(event.target.closest("[data-bb-orders-bulk]")){info(selection.size+" seçili sipariş. Toplu işlem demo kapsamındadır; veri değiştirilmedi.");return;}
  if(event.target.closest("[data-bb-orders-new]"))info("Yeni sipariş işlemi demo kapsamındadır; kayıt oluşturulmadı.");
