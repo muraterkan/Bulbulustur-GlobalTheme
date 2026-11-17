@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="ecommerce-order-details" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
@@ -27,7 +29,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +358,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -664,7 +666,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -694,7 +696,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -745,7 +747,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -766,7 +768,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -779,7 +781,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -795,32 +797,33 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<label class="form-label" for="bb_search">Hızlı arama</label>
-<input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara"></div>
+                                <label class="form-label" for="bb_search">Hızlı arama</label>
+                                <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -846,39 +849,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -888,259 +891,259 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Dashboard</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                                <ol class="breadcrumb mb-0">
-                                                    <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <a class="btn bb-btn-secondary" href="orders.html">Orders</a>
-                                            <a class="btn btn-primary" href="order-details.html">Detay</a>
-                                        </div>
+
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Dashboard</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <a class="btn bb-btn-secondary" href="orders.html">Orders</a>
+                                        <a class="btn btn-primary" href="order-details.html">Detay</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <section class="bb-content bb-order-page" data-bb-order-details aria-label="Sipariş detayları">
-                                <div class="bb-panel-content-container">
-                                    <p class="text-body-secondary mb-3">Örnek sipariş #14534 · Gerçek müşteri, sipariş veya ödeme verisi içermez.</p>
-                                    <div class="bb-order-toolbar">
-                                        <div role="tablist" class="bb-order-tabs" aria-label="Sipariş bölümleri">\<button type="button" id="bb_order_tab_summary" role="tab" aria-controls="bb_order_panel_summary" data-bb-order-tab="summary" aria-selected="true">Sipariş Özeti</button>\<button type="button" id="bb_order_tab_history" role="tab" aria-controls="bb_order_panel_history" data-bb-order-tab="history" aria-selected="false" tabindex="-1">Sipariş Geçmişi</button></div>
-                                        <div class="bb-order-actions">
-                                            <a class="btn bb-btn-secondary btn-sm" href="orders.html" aria-label="Sipariş listesine dön">
-                                                <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
-                                            </a><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-order-edit>Siparişi Düzenle (Demo)</button><button class="btn btn-primary btn-sm" type="button" data-bb-order-new>Yeni Sipariş (Demo)</button>
-                                        </div>
+                        <section class="bb-content bb-order-page" data-bb-order-details aria-label="Sipariş detayları">
+                            <div class="bb-panel-content-container">
+                                <p class="text-body-secondary mb-3">Örnek sipariş #14534 · Gerçek müşteri, sipariş veya ödeme verisi içermez.</p>
+                                <div class="bb-order-toolbar">
+                                    <div role="tablist" class="bb-order-tabs" aria-label="Sipariş bölümleri">\<button type="button" id="bb_order_tab_summary" role="tab" aria-controls="bb_order_panel_summary" data-bb-order-tab="summary" aria-selected="true">Sipariş Özeti</button>\<button type="button" id="bb_order_tab_history" role="tab" aria-controls="bb_order_panel_history" data-bb-order-tab="history" aria-selected="false" tabindex="-1">Sipariş Geçmişi</button></div>
+                                    <div class="bb-order-actions">
+                                        <a class="btn bb-btn-secondary btn-sm" href="orders.html" aria-label="Sipariş listesine dön">
+                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                                        </a><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-order-edit>Siparişi Düzenle (Demo)</button><button class="btn btn-primary btn-sm" type="button" data-bb-order-new>Yeni Sipariş (Demo)</button>
                                     </div>
-                                    <div id="bb_order_panel_summary" role="tabpanel" aria-labelledby="bb_order_tab_summary" data-bb-order-panel="summary">
-                                        <div class="bb-order-cards">
-                                            <section class="bb-card ">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Sipariş Bilgileri (#14534)</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <dl class="bb-order-kv">
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Sipariş tarihi
-                                                            </dt>
-                                                            <dd>10.09.2026</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">payments</span>Ödeme yöntemi
-                                                            </dt>
-                                                            <dd>Çevrimiçi · Visa •••• 1679</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>Teslimat
-                                                            </dt>
-                                                            <dd>Standart kargo</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">verified</span>Sipariş durumu
-                                                            </dt>
-                                                            <dd>
-                                                                <span class="badge bb-badge bb-badge-light-success">Tamamlandı</span>
-                                                            </dd>
-                                                        </div>
-                                                    </dl>
-                                                </div>
-                                            </section><section class="bb-card ">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Müşteri Bilgileri</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <dl class="bb-order-kv">
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">person</span>Müşteri
-                                                            </dt>
-                                                            <dd>Deniz Yılmaz (Demo)</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">mail</span>E-posta
-                                                            </dt>
-                                                            <dd>deniz@example.com</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">phone</span>Telefon
-                                                            </dt>
-                                                            <dd>+90 555 000 00 00</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">location_on</span>Konum
-                                                            </dt>
-                                                            <dd>İstanbul, Türkiye</dd>
-                                                        </div>
-                                                    </dl>
-                                                </div>
-                                            </section><section class="bb-card ">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Documents</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <dl class="bb-order-kv">
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura
-                                                            </dt>
-                                                            <dd>INV-DEMO-00041</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>Kargo
-                                                            </dt>
-                                                            <dd>SHP-DEMO-002541</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">loyalty</span>Ödül puanı
-                                                            </dt>
-                                                            <dd>60</dd>
-                                                        </div>
-                                                        <div>
-                                                            <dt>
-                                                                <span class="material-symbols-outlined" aria-hidden="true">info</span>Not
-                                                            </dt>
-                                                            <dd>Gerçek belge oluşturulmaz</dd>
-                                                        </div>
-                                                    </dl>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div class="bb-order-addresses">
-                                            <section class="bb-card bb-order-address-card">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Fatura Adresi</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <address>Örnek Mahallesi, Örnek Sokak No: 12<br>Şişli / İstanbul<br>Türkiye</address>
-                                                    <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
-                                                </div>
-                                            </section><section class="bb-card bb-order-address-card">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Teslimat Adresi</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <address>Örnek Mahallesi, Örnek Sokak No: 12<br>Kadıköy / İstanbul<br>Türkiye</address>
-                                                    <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div class="bb-order-items">
-                                            <section class="bb-card ">
-                                                <div class="bb-card-header"><h2 class="bb-card-title">Sipariş #14534</h2></div>
-                                                <div class="bb-order-card-body">
-                                                    <div class="bb-order-table-wrap">
-                                                        <table class="bb-order-table">
-                                                            <thead><tr><th scope="col">Ürün</th><th scope="col">SKU</th><th scope="col">Adet</th><th scope="col">Birim Fiyat</th><th scope="col">Toplam</th></tr></thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="bb-order-product">
-                                                                            <span class="bb-order-product-icon">
-                                                                                <span class="material-symbols-outlined" aria-hidden="true">watch</span>
-                                                                            </span>
-                                                                            <span><strong>Akıllı Saat · Demo</strong><small>Saat aksesuarı · Teslim 12.09.2026</small></span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>04486001</td>
-                                                                    <td>2</td>
-                                                                    <td>₺120,00</td>
-                                                                    <td>₺240,00</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="bb-order-product">
-                                                                            <span class="bb-order-product-icon">
-                                                                                <span class="material-symbols-outlined" aria-hidden="true">steps</span>
-                                                                            </span>
-                                                                            <span><strong>Spor Ayakkabı · Demo</strong><small>Ayakkabı · Teslim 12.09.2026</small></span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>02902007</td>
-                                                                    <td>1</td>
-                                                                    <td>₺24,00</td>
-                                                                    <td>₺24,00</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="bb-order-totals">
-                                                        <div>
-                                                            <span>Ara toplam</span>
-                                                            <span>₺264,00</span>
-                                                        </div><div>
-                                                            <span>KDV (%0, demo)</span>
-                                                            <span>₺0,00</span>
-                                                        </div><div>
-                                                            <span>Kargo</span>
-                                                            <span>₺5,00</span>
-                                                        </div><div><span>Genel Toplam</span><strong>₺269,00</strong></div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div id="bb_order_panel_history" role="tabpanel" aria-labelledby="bb_order_tab_history" data-bb-order-panel="history" hidden>
+                                </div>
+                                <div id="bb_order_panel_summary" role="tabpanel" aria-labelledby="bb_order_tab_summary" data-bb-order-panel="summary">
+                                    <div class="bb-order-cards">
                                         <section class="bb-card ">
-                                            <div class="bb-card-header"><h2 class="bb-card-title">Sipariş Geçmişi (#14534)</h2></div>
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Sipariş Bilgileri (#14534)</h2></div>
                                             <div class="bb-order-card-body">
-                                                <ol class="bb-order-history-list">
-                                                    <li>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span><div><strong>Sipariş oluşturuldu</strong><p>Sipariş #14534 demo kaydı açıldı.</p></div><time>10.09.2026 09:40</time>
-                                                    </li>
-                                                    <li>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">payments</span><div><strong>Ödeme onaylandı</strong><p>Çevrimiçi ödeme onayı (örnek).</p></div><time>10.09.2026 09:45</time>
-                                                    </li>
-                                                    <li>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><div><strong>Ürünler hazırlandı</strong><p>Paketleme tamamlandı (örnek).</p></div><time>11.09.2026 14:20</time>
-                                                    </li>
-                                                    <li>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span><div><strong>Kargoya verildi</strong><p>Kargo takip numarası SHP-DEMO-002541.</p></div><time>11.09.2026 17:00</time>
-                                                    </li>
-                                                    <li>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">check_circle</span><div><strong>Sipariş tamamlandı</strong><p>Teslimat başarılı (örnek).</p></div><time>12.09.2026 15:30</time>
-                                                    </li>
-                                                </ol>
+                                                <dl class="bb-order-kv">
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>Sipariş tarihi
+                                                        </dt>
+                                                        <dd>10.09.2026</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">payments</span>Ödeme yöntemi
+                                                        </dt>
+                                                        <dd>Çevrimiçi · Visa •••• 1679</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>Teslimat
+                                                        </dt>
+                                                        <dd>Standart kargo</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">verified</span>Sipariş durumu
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="badge bb-badge bb-badge-light-success">Tamamlandı</span>
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </section><section class="bb-card ">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Müşteri Bilgileri</h2></div>
+                                            <div class="bb-order-card-body">
+                                                <dl class="bb-order-kv">
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">person</span>Müşteri
+                                                        </dt>
+                                                        <dd>Deniz Yılmaz (Demo)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">mail</span>E-posta
+                                                        </dt>
+                                                        <dd>deniz@example.com</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">phone</span>Telefon
+                                                        </dt>
+                                                        <dd>+90 555 000 00 00</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>Konum
+                                                        </dt>
+                                                        <dd>İstanbul, Türkiye</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </section><section class="bb-card ">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Documents</h2></div>
+                                            <div class="bb-order-card-body">
+                                                <dl class="bb-order-kv">
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>Fatura
+                                                        </dt>
+                                                        <dd>INV-DEMO-00041</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>Kargo
+                                                        </dt>
+                                                        <dd>SHP-DEMO-002541</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">loyalty</span>Ödül puanı
+                                                        </dt>
+                                                        <dd>60</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">info</span>Not
+                                                        </dt>
+                                                        <dd>Gerçek belge oluşturulmaz</dd>
+                                                    </div>
+                                                </dl>
                                             </div>
                                         </section>
                                     </div>
-                                    <div class="alert alert-info mt-4" role="status" tabindex="-1" data-bb-order-result hidden></div>
+                                    <div class="bb-order-addresses">
+                                        <section class="bb-card bb-order-address-card">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Fatura Adresi</h2></div>
+                                            <div class="bb-order-card-body">
+                                                <address>Örnek Mahallesi, Örnek Sokak No: 12<br>Şişli / İstanbul<br>Türkiye</address>
+                                                <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
+                                            </div>
+                                        </section><section class="bb-card bb-order-address-card">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Teslimat Adresi</h2></div>
+                                            <div class="bb-order-card-body">
+                                                <address>Örnek Mahallesi, Örnek Sokak No: 12<br>Kadıköy / İstanbul<br>Türkiye</address>
+                                                <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="bb-order-items">
+                                        <section class="bb-card ">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Sipariş #14534</h2></div>
+                                            <div class="bb-order-card-body">
+                                                <div class="bb-order-table-wrap">
+                                                    <table class="bb-order-table">
+                                                        <thead><tr><th scope="col">Ürün</th><th scope="col">SKU</th><th scope="col">Adet</th><th scope="col">Birim Fiyat</th><th scope="col">Toplam</th></tr></thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="bb-order-product">
+                                                                        <span class="bb-order-product-icon">
+                                                                            <span class="material-symbols-outlined" aria-hidden="true">watch</span>
+                                                                        </span>
+                                                                        <span><strong>Akıllı Saat · Demo</strong><small>Saat aksesuarı · Teslim 12.09.2026</small></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>04486001</td>
+                                                                <td>2</td>
+                                                                <td>₺120,00</td>
+                                                                <td>₺240,00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="bb-order-product">
+                                                                        <span class="bb-order-product-icon">
+                                                                            <span class="material-symbols-outlined" aria-hidden="true">steps</span>
+                                                                        </span>
+                                                                        <span><strong>Spor Ayakkabı · Demo</strong><small>Ayakkabı · Teslim 12.09.2026</small></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>02902007</td>
+                                                                <td>1</td>
+                                                                <td>₺24,00</td>
+                                                                <td>₺24,00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="bb-order-totals">
+                                                    <div>
+                                                        <span>Ara toplam</span>
+                                                        <span>₺264,00</span>
+                                                    </div><div>
+                                                        <span>KDV (%0, demo)</span>
+                                                        <span>₺0,00</span>
+                                                    </div><div>
+                                                        <span>Kargo</span>
+                                                        <span>₺5,00</span>
+                                                    </div><div><span>Genel Toplam</span><strong>₺269,00</strong></div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
                                 </div>
-                            </section>
-
-                        </div>
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
+                                <div id="bb_order_panel_history" role="tabpanel" aria-labelledby="bb_order_tab_history" data-bb-order-panel="history" hidden>
+                                    <section class="bb-card ">
+                                        <div class="bb-card-header"><h2 class="bb-card-title">Sipariş Geçmişi (#14534)</h2></div>
+                                        <div class="bb-order-card-body">
+                                            <ol class="bb-order-history-list">
+                                                <li>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span><div><strong>Sipariş oluşturuldu</strong><p>Sipariş #14534 demo kaydı açıldı.</p></div><time>10.09.2026 09:40</time>
+                                                </li>
+                                                <li>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">payments</span><div><strong>Ödeme onaylandı</strong><p>Çevrimiçi ödeme onayı (örnek).</p></div><time>10.09.2026 09:45</time>
+                                                </li>
+                                                <li>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span><div><strong>Ürünler hazırlandı</strong><p>Paketleme tamamlandı (örnek).</p></div><time>11.09.2026 14:20</time>
+                                                </li>
+                                                <li>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span><div><strong>Kargoya verildi</strong><p>Kargo takip numarası SHP-DEMO-002541.</p></div><time>11.09.2026 17:00</time>
+                                                </li>
+                                                <li>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">check_circle</span><div><strong>Sipariş tamamlandı</strong><p>Teslimat başarılı (örnek).</p></div><time>12.09.2026 15:30</time>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="alert alert-info mt-4" role="status" tabindex="-1" data-bb-order-result hidden></div>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </footer>
+            </main>
+            <!--/::Main-->
         </div>
+
+        <!--::Footer-->
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+    <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

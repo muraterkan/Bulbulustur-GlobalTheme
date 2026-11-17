@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,9 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="projects-create" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
+
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -27,7 +30,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +359,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -670,7 +673,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -700,7 +703,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -751,7 +754,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -772,7 +775,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -785,7 +788,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -801,14 +804,14 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
@@ -816,18 +819,18 @@
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -853,39 +856,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -895,146 +898,148 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Dashboard</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                                <ol class="breadcrumb mb-0">
-                                                    <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <button class="btn bb-btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bb_toolbar_filter">Filtreler</button>
-                                            <a class="btn bb-btn-bg-primary" href="../components/forms.html">Yeni kayıt</a>
-                                        </div>
+
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Dashboard</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <button class="btn bb-btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#bb_toolbar_filter">Filtreler</button>
+                                        <a class="btn bb-btn-bg-primary" href="../components/forms.html">Yeni kayıt</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <section class="bb-content" aria-label="Ürün oluşturma formu">
-                                <div class="bb-panel-content-container">
-                                    <p class="bb-panel-toolbar-description mb-4">Form bileşenleri, adımlı giriş ve dosya yükleme alanı. Bu örnek sunucuya veri göndermez.</p>
-                                    <div class="bb-card">
-                                        <div class="bb-card-header">
-                                            <h2 class="bb-card-title">Yeni ürün oluştur</h2>
-                                            <span class="badge bb-badge bb-badge-light-primary">Faz 10</span>
-                                        </div>
-                                        <div class="bb-card-body">
-                                            <form data-bb-panel-form novalidate>
-                                                <ol class="bb-panel-form-steps mb-4" aria-label="Form adımları">
-                                                    <li class="bb-panel-form-step" data-bb-form-step aria-current="step">
-                                                        <span class="bb-panel-form-step-index">1</span>
-                                                        <span class="bb-panel-form-step-label">Temel bilgiler</span>
-                                                    </li>
-                                                    <li class="bb-panel-form-step" data-bb-form-step>
-                                                        <span class="bb-panel-form-step-index">2</span>
-                                                        <span class="bb-panel-form-step-label">Görseller ve açıklama</span>
-                                                    </li>
-                                                    <li class="bb-panel-form-step" data-bb-form-step>
-                                                        <span class="bb-panel-form-step-index">3</span>
-                                                        <span class="bb-panel-form-step-label">Ön izleme</span>
-                                                    </li>
-                                                </ol>
-                                                <fieldset class="bb-panel-form-pane" data-bb-form-pane>
-                                                    <legend class="h5 mb-4">Ürün bilgileri</legend>
-                                                    <div class="row g-4">
-                                                        <div class="col-md-6">
-                                                            <label for="bb_form_name" class="required form-label">Ürün adı</label>
-                                                            <input id="bb_form_name" class="form-control form-control-solid" name="productName" type="text" maxlength="150" placeholder="Örn. Keten gömlek" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="bb_form_sku" class="required form-label">Stok kodu</label>
-                                                            <input id="bb_form_sku" class="form-control form-control-solid" name="sku" type="text" maxlength="50" placeholder="Örn. SKU-1001" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="bb_form_category" class="required form-label">Kategori</label>
-                                                            <select class="form-select form-select-solid" id="bb_form_category" name="category" required>
-                                                                <option value="">Kategori seçin</option>
-                                                                <option value="giyim">Giyim</option>
-                                                                <option value="aksesuar">Aksesuar</option>
-                                                                <option value="ev">Ev &amp; Yaşam</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <label for="bb_form_price" class="required form-label">Fiyat (TL)</label>
-                                                            <input id="bb_form_price" class="form-control form-control-solid" name="price" type="number" min="0.01" step="0.01" placeholder="0,00" required>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <label for="bb_form_status" class="form-label">Durum</label>
-                                                            <select class="form-select form-select-solid" id="bb_form_status" name="status">
-                                                                <option value="Taslak">Taslak</option>
-                                                                <option value="Aktif">Aktif</option>
-                                                                <option value="Pasif">Pasif</option>
-                                                            </select>
-                                                        </div>
+                        <section class="bb-content" aria-label="Ürün oluşturma formu">
+                            <div class="bb-panel-content-container">
+                                <p class="bb-panel-toolbar-description mb-4">Form bileşenleri, adımlı giriş ve dosya yükleme alanı. Bu örnek sunucuya veri göndermez.</p>
+                                <div class="bb-card">
+                                    <div class="bb-card-header">
+                                        <h2 class="bb-card-title">Yeni ürün oluştur</h2>
+                                        <span class="badge bb-badge bb-badge-light-primary">Faz 10</span>
+                                    </div>
+                                    <div class="bb-card-body">
+                                        <form data-bb-panel-form novalidate>
+                                            <ol class="bb-panel-form-steps mb-4" aria-label="Form adımları">
+                                                <li class="bb-panel-form-step" data-bb-form-step aria-current="step">
+                                                    <span class="bb-panel-form-step-index">1</span>
+                                                    <span class="bb-panel-form-step-label">Temel bilgiler</span>
+                                                </li>
+                                                <li class="bb-panel-form-step" data-bb-form-step>
+                                                    <span class="bb-panel-form-step-index">2</span>
+                                                    <span class="bb-panel-form-step-label">Görseller ve açıklama</span>
+                                                </li>
+                                                <li class="bb-panel-form-step" data-bb-form-step>
+                                                    <span class="bb-panel-form-step-index">3</span>
+                                                    <span class="bb-panel-form-step-label">Ön izleme</span>
+                                                </li>
+                                            </ol>
+                                            <fieldset class="bb-panel-form-pane" data-bb-form-pane>
+                                                <legend class="h5 mb-4">Ürün bilgileri</legend>
+                                                <div class="row g-4">
+                                                    <div class="col-md-6">
+                                                        <label for="bb_form_name" class="required form-label">Ürün adı</label>
+                                                        <input id="bb_form_name" class="form-control form-control-solid" name="productName" type="text" maxlength="150" placeholder="Örn. Keten gömlek" required>
                                                     </div>
-                                                </fieldset>
-                                                <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
-                                                    <legend class="h5 mb-4">Açıklama ve dosyalar</legend>
-                                                    <div class="mb-4">
-                                                        <label for="bb_form_description" class="form-label">Ürün açıklaması</label><textarea id="bb_form_description" name="description" class="form-control form-control-solid" rows="4" maxlength="1500" placeholder="Ürünün temel özellikleri"></textarea>
-                                                        <div class="form-text">En fazla 1500 karakter.</div>
+                                                    <div class="col-md-6">
+                                                        <label for="bb_form_sku" class="required form-label">Stok kodu</label>
+                                                        <input id="bb_form_sku" class="form-control form-control-solid" name="sku" type="text" maxlength="50" placeholder="Örn. SKU-1001" required>
                                                     </div>
-                                                    <div class="bb-panel-form-upload" data-bb-form-upload>
-                                                        <span class="material-symbols-outlined" aria-hidden="true">cloud_upload</span>
-                                                        <label for="bb_form_files" class="form-label">Dosyaları bu alana sürükleyin veya seçin</label>
-                                                        <input type="file" class="form-control" id="bb_form_files" data-bb-form-file accept=".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf" multiple aria-describedby="bb_form_file_help">
-                                                        <p class="form-text mb-0" id="bb_form_file_help">PNG, JPEG veya PDF. Dosya başına en fazla 5 MB; en çok 4 dosya. Dosyalar gönderilmez.</p>
-                                                    </div><ul class="bb-panel-form-file-list mt-3" data-bb-form-file-list aria-label="Seçilen dosyalar"></ul>
-                                                </fieldset>
-                                                <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
-                                                    <legend class="h5 mb-4">Bilgileri kontrol et</legend>
-                                                    <dl class="bb-panel-form-review" data-bb-form-review></dl>
-                                                    <div class="alert alert-info mb-0" role="note">Bu form örnek arayüzdür. Kaydet düğmesi veritabanında işlem yapmaz.</div>
-                                                </fieldset>
-                                                <div class="alert alert-success bb-panel-form-success mt-4" data-bb-form-success role="status" tabindex="-1" hidden><strong></strong></div>
-                                                <div class="bb-panel-form-actions mt-4">
-                                                    <button class="btn bb-btn-secondary" type="button" data-bb-form-prev hidden>Geri</button>
-                                                    <div class="d-flex gap-2 ms-auto">
-                                                        <button type="button" class="btn bb-btn-secondary" data-bb-form-reset>Sıfırla</button>
-                                                        <button type="button" class="btn btn-primary" data-bb-form-next>İleri</button>
-                                                        <button type="submit" class="btn btn-primary" data-bb-form-submit hidden>Örneği tamamla</button>
+                                                    <div class="col-md-6">
+                                                        <label for="bb_form_category" class="required form-label">Kategori</label>
+                                                        <select class="form-select form-select-solid" id="bb_form_category" name="category" required>
+                                                            <option value="">Kategori seçin</option>
+                                                            <option value="giyim">Giyim</option>
+                                                            <option value="aksesuar">Aksesuar</option>
+                                                            <option value="ev">Ev &amp; Yaşam</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="bb_form_price" class="required form-label">Fiyat (TL)</label>
+                                                        <input id="bb_form_price" class="form-control form-control-solid" name="price" type="number" min="0.01" step="0.01" placeholder="0,00" required>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="bb_form_status" class="form-label">Durum</label>
+                                                        <select class="form-select form-select-solid" id="bb_form_status" name="status">
+                                                            <option value="Taslak">Taslak</option>
+                                                            <option value="Aktif">Aktif</option>
+                                                            <option value="Pasif">Pasif</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                                <p class="visually-hidden" aria-live="polite" role="status" data-bb-form-message></p>
-                                            </form>
-                                        </div>
+                                            </fieldset>
+                                            <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
+                                                <legend class="h5 mb-4">Description ve dosyalar</legend>
+                                                <div class="mb-4">
+                                                    <label for="bb_form_description" class="form-label">Ürün açıklaması</label><textarea id="bb_form_description" name="description" class="form-control form-control-solid" rows="4" maxlength="1500" placeholder="Ürünün temel özellikleri"></textarea>
+                                                    <div class="form-text">En fazla 1500 karakter.</div>
+                                                </div>
+                                                <div class="bb-panel-form-upload" data-bb-form-upload>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">cloud_upload</span>
+                                                    <label for="bb_form_files" class="form-label">Dosyaları bu alana sürükleyin veya seçin</label>
+                                                    <input type="file" class="form-control" id="bb_form_files" data-bb-form-file accept=".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf" multiple aria-describedby="bb_form_file_help">
+                                                    <p class="form-text mb-0" id="bb_form_file_help">PNG, JPEG veya PDF. Dosya başına en fazla 5 MB; en çok 4 dosya. Dosyalar gönderilmez.</p>
+                                                </div><ul class="bb-panel-form-file-list mt-3" data-bb-form-file-list aria-label="Seçilen dosyalar"></ul>
+                                            </fieldset>
+                                            <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
+                                                <legend class="h5 mb-4">Bilgileri kontrol et</legend>
+                                                <dl class="bb-panel-form-review" data-bb-form-review></dl>
+                                                <div class="alert alert-info mb-0" role="note">Bu form örnek arayüzdür. Kaydet düğmesi veritabanında işlem yapmaz.</div>
+                                            </fieldset>
+                                            <div class="alert alert-success bb-panel-form-success mt-4" data-bb-form-success role="status" tabindex="-1" hidden><strong></strong></div>
+                                            <div class="bb-panel-form-actions mt-4">
+                                                <button class="btn bb-btn-secondary" type="button" data-bb-form-prev hidden>Geri</button>
+                                                <div class="d-flex gap-2 ms-auto">
+                                                    <button type="button" class="btn bb-btn-secondary" data-bb-form-reset>Sıfırla</button>
+                                                    <button type="button" class="btn btn-primary" data-bb-form-next>İleri</button>
+                                                    <button type="submit" class="btn btn-primary" data-bb-form-submit hidden>Örneği tamamla</button>
+                                                </div>
+                                            </div>
+                                            <p class="visually-hidden" aria-live="polite" role="status" data-bb-form-message></p>
+                                        </form>
                                     </div>
                                 </div>
-                            </section>
-
-                        </div>
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </footer>
+            </main>
+            <!--/::Main-->
+
         </div>
+
+        <!--::Footer-->
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+
+    <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1043,6 +1048,7 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/panel/bb-panel.js"></script>
     <script src="../../assets/js/panel/bb-panel-theme.js"></script>

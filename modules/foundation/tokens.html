@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
+<!--::Head-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +23,12 @@
     .t { font-weight: 600; }
   </style>
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
   <header>
 </header>
+<!--::Main-->
 <main class="container py-4" style="max-width: 1000px;">
     <h1 style="font-size: 1.4rem;">Panel tokenları <small style="color: var(--bb-secondary-color); font-size: .85rem;"><a href="?">açık</a> · <a href="?theme=dark">koyu</a> · <a href="?pack=atolye">atölye</a> · <a href="?theme=dark&pack=atolye">atölye koyu</a></small></h1>
 
@@ -100,8 +103,11 @@
     <pre class="bb-code bb-code-block">npm run build:css
 npm run check:contracts</pre>
   </main>
+<!--/::Main-->
+<!--::Footer-->
 <footer>
 </footer>
+<!--/::Footer-->
   <script>
     var ch = document.getElementById("ch"), sq = document.getElementById("seq"), i;
     for (i = 1; i <= 8; i++) ch.insertAdjacentHTML("beforeend", '<i style="height:' + (20 + i * 4) + 'px;background:var(--bb-chart-' + i + ')"></i>');

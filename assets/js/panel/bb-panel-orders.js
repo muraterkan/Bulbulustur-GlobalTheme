@@ -5,7 +5,7 @@ var root=document.querySelector("[data-bb-orders]");if(!root)return;
 var search=root.querySelector("[data-bb-orders-search]"),from=root.querySelector("[data-bb-orders-from]"),to=root.querySelector("[data-bb-orders-to]"),status=root.querySelector("[data-bb-orders-status]"),limit=root.querySelector("[data-bb-orders-limit]");
 var body=root.querySelector("[data-bb-orders-body]"),pages=root.querySelector("[data-bb-orders-pages]"),range=root.querySelector("[data-bb-orders-range]"),count=root.querySelector("[data-bb-orders-count]"),selectedCount=root.querySelector("[data-bb-orders-selected]"),checkAll=root.querySelector("[data-bb-orders-check-all]"),bulk=root.querySelector("[data-bb-orders-bulk]"),notice=root.querySelector("[data-bb-orders-notice]"),empty=root.querySelector("[data-bb-orders-empty]");
 var customers=["Francis Mitcham","Ethan Wilder","John Miller","Neil Owen","Brian Cox","Sean Bean","Ayşe Demir","Mehmet Kaya","Zeynep Arslan","Deniz Yılmaz"];
-var statuses=["Tamamlandı","Beklemede","Tamamlandı","Beklemede","Tamamlandı","İptal","Tamamlandı","Tamamlandı","İade","Beklemede"];
+var statuses=["Tamamlandı","Beklemede","Tamamlandı","Beklemede","Tamamlandı","Cancel","Tamamlandı","Tamamlandı","İade","Beklemede"];
 var orders=Array.from({length:50},function(_,i){
  var date=new Date(Date.UTC(2026,9,31-Math.floor(i/2)));var updated=new Date(date.getTime()+86400000*(i%5));
  var iso=function(d){return d.toISOString().slice(0,10);};

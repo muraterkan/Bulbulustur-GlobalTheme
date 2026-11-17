@@ -213,13 +213,13 @@
               '<div id="bb_component_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>',
                 '<div class="bb-panel-user-summary"><span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.webp" alt=""></span><span class="bb-panel-user-info"><span class="bb-panel-user-name">Demo User <span class="bb-badge bb-badge-success">Demo</span></span><small>demo@example.com</small></span></div>',
                 '<div class="bb-panel-user-group"><a class="bb-panel-user-item" href="../panel/profile.html"><span>Profile</span></a><a class="bb-panel-user-item" href="../panel/account.html"><span>Account Settings</span></a></div>',
-                '<div class="bb-panel-user-group"><button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Appearance</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Light</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">light_mode</span></span></button><div class="bb-panel-user-item"><span>Dil</span><span class="bb-panel-user-meta">Türkçe</span></div></div>',
+                '<div class="bb-panel-user-group"><button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Appearance</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Light</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">light_mode</span></span></button><div class="bb-panel-user-item"><span>Languages</span><span class="bb-panel-user-meta">Türkçe</span></div></div>',
               '</div>',
             '</div>',
           '</div>',
         '</div>',
       '</header>',
-      '<main class="bb-main">',
+      '<!--::Main--><main class="bb-main">',
         '<div class="bb-main-inner">',
           '<div class="bb-toolbar bb-component-toolbar">',
             '<div class="bb-panel-content-container">',
@@ -235,8 +235,8 @@
             '<div class="bb-panel-content-container bb-component-showcase-content"></div>',
           '</section>',
         '</div>',
-      '</main>',
-      '<footer class="bb-shell-footer bb-footer"><div class="bb-footer-bar"><div class="bb-footer-inner"><div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="../panel/dashboard.html">Bulbulustur</a></div><div class="bb-footer-right"><span class="bb-footer-link">Core component demo / Panel shell</span></div></div></div></footer>',
+      '</main><!--/::Main-->',
+      '<!--::Footer--><footer class="bb-shell-footer bb-footer"><div class="bb-footer-bar"><div class="bb-footer-inner"><div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="../panel/dashboard.html">Bulbulustur</a></div><div class="bb-footer-right"><span class="bb-footer-link">Core component demo / Panel shell</span></div></div></div></footer><!--/::Footer-->',
     '</div>'
   ].join("");
 

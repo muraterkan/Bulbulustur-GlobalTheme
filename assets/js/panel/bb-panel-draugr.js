@@ -6,7 +6,7 @@ var views={
  storefront:{title:"Draugr / Vitrin",label:"Vitrin"},
  navigation:{title:"Draugr / Kategoriler & Navigasyon",label:"Kategoriler & Navigasyon"},
  content:{title:"Draugr / Sayfalar & İçerik",label:"Sayfalar & İçerik"},
- theme:{title:"Draugr / Tema & Görünüm",label:"Tema & Görünüm"},
+ theme:{title:"Draugr / Tema & View Mode",label:"Tema & View Mode"},
  domain:{title:"Draugr / Domain & SEO",label:"Domain & SEO"},
  localization:{title:"Draugr / Dil & Yerelleştirme",label:"Dil & Yerelleştirme"},
  settings:{title:"Draugr / Kanal Ayarları",label:"Kanal Ayarları"},

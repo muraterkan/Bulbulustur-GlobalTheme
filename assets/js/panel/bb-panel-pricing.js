@@ -96,7 +96,7 @@ var title=document.querySelector(".bb-page-title");
 if(title&&!productPlans[product])title.textContent="Fiyatlandırma / Planlar";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
 if(crumb){
- var crumbValues=productPlans[product]?["HİZMETLER",product==="draugr"?"Draugr":"PosB","Paketler"]:["SAYFALAR","Fiyatlandırma","Planlar"];
+ var crumbValues=productPlans[product]?["HİZMETLER",product==="draugr"?"Draugr":"PosB","Paketler"]:["PAGES","Fiyatlandırma","Planlar"];
  crumb.replaceChildren();
  crumbValues.forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});
 }

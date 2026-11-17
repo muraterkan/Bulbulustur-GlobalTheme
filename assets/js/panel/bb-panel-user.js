@@ -61,7 +61,7 @@
   var appearance = document.createElement("div");
   appearance.className = "bb-panel-user-preference";
   appearance.innerHTML =
-    '<span class="bb-panel-user-preference-label">Görünüm</span>' +
+    '<span class="bb-panel-user-preference-label">View Mode</span>' +
     '<div class="bb-panel-user-theme-choices" role="group" aria-label="Tema seçimi">' +
       '<button type="button" data-bb-theme-choice="light"><span class="material-symbols-outlined" aria-hidden="true">light_mode</span>Açık</button>' +
       '<button type="button" data-bb-theme-choice="dark"><span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>Koyu</button>' +
@@ -71,7 +71,7 @@
   language.className = "bb-panel-user-language";
   language.innerHTML =
     '<button class="bb-panel-user-language-toggle" type="button" aria-expanded="false" aria-controls="bb_panel_language_menu">' +
-      '<span class="bb-panel-user-preference-label">Dil</span>' +
+      '<span class="bb-panel-user-preference-label">Languages</span>' +
       '<span class="bb-panel-user-language-current" data-bb-language-current></span>' +
       '<span class="material-symbols-outlined" aria-hidden="true">expand_more</span>' +
     '</button>' +

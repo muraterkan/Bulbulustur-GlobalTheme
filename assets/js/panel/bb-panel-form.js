@@ -58,7 +58,7 @@
       ["Kategori", form.elements.namedItem("category").selectedOptions[0].textContent],
       ["Fiyat", form.elements.namedItem("price").value + " TL"],
       ["Durum", form.elements.namedItem("status").value],
-      ["Açıklama", form.elements.namedItem("description").value || "—"],
+      ["Description", form.elements.namedItem("description").value || "—"],
       ["Görseller ve belgeler", attached.length ? attached.map(function (f) { return f.name; }).join(", ") : "Yok"]
     ];
     values.forEach(function (value) {

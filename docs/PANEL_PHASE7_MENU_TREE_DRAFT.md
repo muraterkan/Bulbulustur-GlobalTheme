@@ -7,7 +7,7 @@ Tarih: 2026-11-15
 - Menü dili: **Türkçe**.
 - Ana bölüm kapsamı: **Gösterge Panelleri, Sayfalar, Uygulamalar, Düzenler**.
 - İkon: **Material Symbols** (mevcut yapı devam eder).
-- Yardım bölümü ilk sürüm sidebar ağacına dahil değildir. Mevcut component demoları kendi adreslerinde kalır.
+- Help bölümü ilk sürüm sidebar ağacına dahil değildir. Mevcut component demoları kendi adreslerinde kalır.
 
 ## Gerçekleştirme
 

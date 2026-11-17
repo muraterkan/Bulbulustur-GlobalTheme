@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="footer-integrations" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
@@ -27,7 +29,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +358,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -670,7 +672,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -700,7 +702,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -751,7 +753,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -772,7 +774,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -785,7 +787,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -801,32 +803,33 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<label class="form-label" for="bb_search">Hızlı arama</label>
-<input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara"></div>
+                                <label class="form-label" for="bb_search">Hızlı arama</label>
+                                <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -852,39 +855,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -894,737 +897,738 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Entegrasyon Merkezi</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                                <ol class="breadcrumb mb-0">
-                                                    <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
-                                                    <li class="breadcrumb-item">Entegrasyonlar</li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Entegratörler</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <a class="btn bb-btn-secondary" href="support-center.html">
-                                                <span class="material-symbols-outlined" aria-hidden="true">help</span> Yardım
-                                            </a>
-                                            <button class="btn btn-primary" type="button">
-                                                <span class="material-symbols-outlined" aria-hidden="true">add_link</span> Yeni Entegrasyon
-                                            </button>
-                                        </div>
+
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Entegrasyon Merkezi</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
+                                                <li class="breadcrumb-item">Entegrasyonlar</li>
+                                                <li class="breadcrumb-item active" aria-current="page">Entegratörler</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <a class="btn bb-btn-secondary" href="support-center.html">
+                                            <span class="material-symbols-outlined" aria-hidden="true">help</span> Help
+                                        </a>
+                                        <button class="btn btn-primary" type="button">
+                                            <span class="material-symbols-outlined" aria-hidden="true">add_link</span> Yeni Entegrasyon
+                                        </button>
                                     </div>
                                 </div>
-                            </div><section class="bb-content bb-integrations-page" data-bb-integrations aria-label="Entegrasyon Merkezi">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-integrations-shell">
-                                        <section class="bb-card bb-integrations-hero">
-                                            <div class="bb-card-body">
-                                                <div class="bb-integrations-hero-copy">
-                                                    <span class="bb-badge bb-badge-info mb-3">Integration Hub</span>
-                                                    <h2>Tüm satış kanallarınızı tek merkezde birleştirin</h2>
-                                                    <p>E-ticaret altyapıları, pazaryerleri, kargo, ödeme ve muhasebe servislerini Bulbulustur operasyonlarına bağlayın. Kartlar demo katalogdur; gerçek bağlantı akışı sonraki entegratör detay sayfalarında ele alınacaktır.</p>
+                            </div>
+                        </div><section class="bb-content bb-integrations-page" data-bb-integrations aria-label="Entegrasyon Merkezi">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-integrations-shell">
+                                    <section class="bb-card bb-integrations-hero">
+                                        <div class="bb-card-body">
+                                            <div class="bb-integrations-hero-copy">
+                                                <span class="bb-badge bb-badge-info mb-3">Integration Hub</span>
+                                                <h2>Tüm satış kanallarınızı tek merkezde birleştirin</h2>
+                                                <p>E-ticaret altyapıları, pazaryerleri, kargo, ödeme ve muhasebe servislerini Bulbulustur operasyonlarına bağlayın. Kartlar demo katalogdur; gerçek bağlantı akışı sonraki entegratör detay sayfalarında ele alınacaktır.</p>
+                                            </div>
+                                            <div class="bb-integrations-hero-meta" aria-label="Entegrasyon özeti">
+                                                <div class="bb-integrations-meta-card"><strong>23</strong><span>Hazır entegratör</span></div>
+                                                <div class="bb-integrations-meta-card"><strong>3</strong><span>Ana kategori</span></div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <div class="bb-integrations-tools">
+                                        <div class="bb-integrations-search">
+                                            <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                                            <label class="visually-hidden" for="bb_integrations_search">Entegrasyon ara</label>
+                                            <input class="form-control form-control-solid" id="bb_integrations_search" data-bb-integrations-search type="search" placeholder="Entegrasyon ara…">
+                                        </div>
+                                        <span class="bb-integrations-count" data-bb-integrations-count>23 entegrasyon</span>
+                                    </div>
+
+                                    <div class="bb-integrations-filters" role="group" aria-label="Entegrasyon kategorileri">
+                                        <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="all" aria-pressed="true">
+                                            <span class="material-symbols-outlined" aria-hidden="true">apps</span>All
+                                        </button>
+                                        <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="commerce" aria-pressed="false">
+                                            <span class="material-symbols-outlined" aria-hidden="true">storefront</span>E-Ticaret Altyapıları
+                                        </button>
+                                        <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="marketplace" aria-pressed="false">
+                                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>Pazaryerleri
+                                        </button>
+                                        <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="operations" aria-pressed="false">
+                                            <span class="material-symbols-outlined" aria-hidden="true">hub</span>Operasyon &amp; Finans
+                                        </button>
+                                    </div>
+
+
+                                    <section class="bb-integrations-section" data-bb-integrations-section>
+                                        <div class="bb-integrations-section-head">
+                                            <div><h2>E-Ticaret Altyapıları</h2><p>Mağazanızı Bulbulustur ile bağlayın; ürün, stok, fiyat ve sipariş akışlarını tek merkezde yönetin.</p></div>
+                                            <span class="bb-badge bb-badge-light">9 entegratör</span>
+                                        </div>
+                                        <div class="bb-integrations-grid">
+
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Ticimax" data-integration-category="commerce" data-integration-search="Ticimax E-Ticaret Altyapısı Ticimax mağazanızı Bulbulustur'a bağlayarak katalog, stok ve sipariş operasyonlarını merkezileştirin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/ticimax.png" alt="Ticimax">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Ticimax</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Ticimax işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Ticimax mağazanızı Bulbulustur'a bağlayarak katalog, stok ve sipariş operasyonlarını merkezileştirin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
                                                 </div>
-                                                <div class="bb-integrations-hero-meta" aria-label="Entegrasyon özeti">
-                                                    <div class="bb-integrations-meta-card"><strong>23</strong><span>Hazır entegratör</span></div>
-                                                    <div class="bb-integrations-meta-card"><strong>3</strong><span>Ana kategori</span></div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Ideasoft" data-integration-category="commerce" data-integration-search="Ideasoft E-Ticaret Altyapısı Ideasoft altyapısındaki mağazanızı ürün, stok ve sipariş akışlarıyla entegre edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/ideasoft.png" alt="Ideasoft">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">I</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Ideasoft</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Ideasoft işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Ideasoft altyapısındaki mağazanızı ürün, stok ve sipariş akışlarıyla entegre edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </section>
-
-                                        <div class="bb-integrations-tools">
-                                            <div class="bb-integrations-search">
-                                                <span class="material-symbols-outlined" aria-hidden="true">search</span>
-                                                <label class="visually-hidden" for="bb_integrations_search">Entegrasyon ara</label>
-                                                <input class="form-control form-control-solid" id="bb_integrations_search" data-bb-integrations-search type="search" placeholder="Entegrasyon ara…">
-                                            </div>
-                                            <span class="bb-integrations-count" data-bb-integrations-count>23 entegrasyon</span>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Shopify" data-integration-category="commerce" data-integration-search="Shopify Global E-Ticaret Shopify mağazanızın ürün ve sipariş akışlarını Bulbulustur operasyonlarına bağlayın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/shopify.png" alt="Shopify">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">S</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Shopify</strong><small>Global E-Ticaret</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Shopify işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Shopify mağazanızın ürün ve sipariş akışlarını Bulbulustur operasyonlarına bağlayın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Global Kanal</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Tsoft" data-integration-category="commerce" data-integration-search="Tsoft E-Ticaret Altyapısı Tsoft mağazanızın katalog ve sipariş süreçlerini tek panelden yönetin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/tsoft.png" alt="Tsoft">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Tsoft</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Tsoft işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Tsoft mağazanızın katalog ve sipariş süreçlerini tek panelden yönetin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Opencart" data-integration-category="commerce" data-integration-search="Opencart Açık Kaynak E-Ticaret Opencart ürün, stok ve sipariş verilerini Bulbulustur ile senkronize edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/opencart.png" alt="Opencart">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">O</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Opencart</strong><small>Açık Kaynak E-Ticaret</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Opencart işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Opencart ürün, stok ve sipariş verilerini Bulbulustur ile senkronize edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Açık Kaynak</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PrestaShop" data-integration-category="commerce" data-integration-search="PrestaShop Açık Kaynak E-Ticaret PrestaShop mağazanızı bağlayıp ürün ve sipariş operasyonlarını otomatikleştirin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/prestashop.png" alt="PrestaShop">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>PrestaShop</strong><small>Açık Kaynak E-Ticaret</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PrestaShop işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">PrestaShop mağazanızı bağlayıp ürün ve sipariş operasyonlarını otomatikleştirin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Açık Kaynak</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="ikas" data-integration-category="commerce" data-integration-search="ikas E-Ticaret Altyapısı ikas mağazanızdaki ürün ve sipariş akışlarını merkezi operasyonlara dahil edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/ikas.png" alt="ikas">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">i</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>ikas</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ikas işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">ikas mağazanızdaki ürün ve sipariş akışlarını merkezi operasyonlara dahil edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PlatinMarket" data-integration-category="commerce" data-integration-search="PlatinMarket E-Ticaret Altyapısı PlatinMarket mağazanızı Bulbulustur'a bağlayarak sipariş ve stok akışlarını senkronize edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/platinmarket.png" alt="PlatinMarket">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>PlatinMarket</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PlatinMarket işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">PlatinMarket mağazanızı Bulbulustur'a bağlayarak sipariş ve stok akışlarını senkronize edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="QukaSoft" data-integration-category="commerce" data-integration-search="QukaSoft E-Ticaret Altyapısı QukaSoft mağazanızı katalog ve sipariş süreçleri için Bulbulustur ile entegre edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/qukasoft.png" alt="QukaSoft">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">Q</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>QukaSoft</strong><small>E-Ticaret Altyapısı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="QukaSoft işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">QukaSoft mağazanızı katalog ve sipariş süreçleri için Bulbulustur ile entegre edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
                                         </div>
-
-                                        <div class="bb-integrations-filters" role="group" aria-label="Entegrasyon kategorileri">
-                                            <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="all" aria-pressed="true">
-                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>Tümü
-                                            </button>
-                                            <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="commerce" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">storefront</span>E-Ticaret Altyapıları
-                                            </button>
-                                            <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="marketplace" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>Pazaryerleri
-                                            </button>
-                                            <button class="bb-integrations-filter" type="button" data-bb-integrations-filter="operations" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">hub</span>Operasyon &amp; Finans
-                                            </button>
+                                    </section>
+                                    <section class="bb-integrations-section" data-bb-integrations-section>
+                                        <div class="bb-integrations-section-head">
+                                            <div><h2>Pazaryerleri & Satış Kanalları</h2><p>Pazaryeri siparişleri, stok değişimleri ve kanal bazlı operasyonları merkezi olarak yönetin.</p></div>
+                                            <span class="bb-badge bb-badge-light">9 entegratör</span>
                                         </div>
+                                        <div class="bb-integrations-grid">
 
-
-                                        <section class="bb-integrations-section" data-bb-integrations-section>
-                                            <div class="bb-integrations-section-head">
-                                                <div><h2>E-Ticaret Altyapıları</h2><p>Mağazanızı Bulbulustur ile bağlayın; ürün, stok, fiyat ve sipariş akışlarını tek merkezde yönetin.</p></div>
-                                                <span class="bb-badge bb-badge-light">9 entegratör</span>
-                                            </div>
-                                            <div class="bb-integrations-grid">
-
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Ticimax" data-integration-category="commerce" data-integration-search="Ticimax E-Ticaret Altyapısı Ticimax mağazanızı Bulbulustur'a bağlayarak katalog, stok ve sipariş operasyonlarını merkezileştirin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/ticimax.png" alt="Ticimax">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Ticimax</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Ticimax işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Trendyol" data-integration-category="marketplace" data-integration-search="Trendyol Pazaryeri Trendyol mağazanızı bağlayarak ürün, stok ve sipariş akışlarını tek merkezden yönetin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/trendyol.png" alt="Trendyol">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Trendyol</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Trendyol işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">Ticimax mağazanızı Bulbulustur'a bağlayarak katalog, stok ve sipariş operasyonlarını merkezileştirin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Ideasoft" data-integration-category="commerce" data-integration-search="Ideasoft E-Ticaret Altyapısı Ideasoft altyapısındaki mağazanızı ürün, stok ve sipariş akışlarıyla entegre edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/ideasoft.png" alt="Ideasoft">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">I</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Ideasoft</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Ideasoft işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">Trendyol mağazanızı bağlayarak ürün, stok ve sipariş akışlarını tek merkezden yönetin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Hepsiburada" data-integration-category="marketplace" data-integration-search="Hepsiburada Pazaryeri Hepsiburada satış operasyonlarını Bulbulustur sipariş ve stok akışlarına bağlayın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/hepsiburada.png" alt="Hepsiburada">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">H</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Hepsiburada</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Hepsiburada işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">Ideasoft altyapısındaki mağazanızı ürün, stok ve sipariş akışlarıyla entegre edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Shopify" data-integration-category="commerce" data-integration-search="Shopify Global E-Ticaret Shopify mağazanızın ürün ve sipariş akışlarını Bulbulustur operasyonlarına bağlayın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/shopify.png" alt="Shopify">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">S</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Shopify</strong><small>Global E-Ticaret</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Shopify işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">Hepsiburada satış operasyonlarını Bulbulustur sipariş ve stok akışlarına bağlayın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Amazon Türkiye" data-integration-category="marketplace" data-integration-search="Amazon Türkiye Pazaryeri Amazon Türkiye mağazanızı katalog, stok ve sipariş senkronizasyonuna dahil edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/amazon.png" alt="Amazon Türkiye">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">A</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Amazon Türkiye</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Amazon Türkiye işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">Shopify mağazanızın ürün ve sipariş akışlarını Bulbulustur operasyonlarına bağlayın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Global Kanal</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Tsoft" data-integration-category="commerce" data-integration-search="Tsoft E-Ticaret Altyapısı Tsoft mağazanızın katalog ve sipariş süreçlerini tek panelden yönetin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/tsoft.png" alt="Tsoft">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Tsoft</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Tsoft işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">Amazon Türkiye mağazanızı katalog, stok ve sipariş senkronizasyonuna dahil edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="ÇiçekSepeti" data-integration-category="marketplace" data-integration-search="ÇiçekSepeti Pazaryeri ÇiçekSepeti ürün ve sipariş akışlarını tek panelde takip edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/ciceksepeti.png" alt="ÇiçekSepeti">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">Ç</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>ÇiçekSepeti</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ÇiçekSepeti işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">Tsoft mağazanızın katalog ve sipariş süreçlerini tek panelden yönetin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Opencart" data-integration-category="commerce" data-integration-search="Opencart Açık Kaynak E-Ticaret Opencart ürün, stok ve sipariş verilerini Bulbulustur ile senkronize edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/opencart.png" alt="Opencart">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">O</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Opencart</strong><small>Açık Kaynak E-Ticaret</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Opencart işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">ÇiçekSepeti ürün ve sipariş akışlarını tek panelde takip edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Pazarama" data-integration-category="marketplace" data-integration-search="Pazarama Pazaryeri Pazarama satış, kargo ve stok hareketlerini Bulbulustur üzerinden yönetin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/pazarama.png" alt="Pazarama">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Pazarama</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Pazarama işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">Opencart ürün, stok ve sipariş verilerini Bulbulustur ile senkronize edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Açık Kaynak</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PrestaShop" data-integration-category="commerce" data-integration-search="PrestaShop Açık Kaynak E-Ticaret PrestaShop mağazanızı bağlayıp ürün ve sipariş operasyonlarını otomatikleştirin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/prestashop.png" alt="PrestaShop">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>PrestaShop</strong><small>Açık Kaynak E-Ticaret</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PrestaShop işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">Pazarama satış, kargo ve stok hareketlerini Bulbulustur üzerinden yönetin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PTTAVM" data-integration-category="marketplace" data-integration-search="PTTAVM Pazaryeri PTTAVM mağazanızı ürün ve sipariş operasyonları için sisteme bağlayın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/pttavm.png" alt="PTTAVM">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>PTTAVM</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PTTAVM işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">PrestaShop mağazanızı bağlayıp ürün ve sipariş operasyonlarını otomatikleştirin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Açık Kaynak</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="ikas" data-integration-category="commerce" data-integration-search="ikas E-Ticaret Altyapısı ikas mağazanızdaki ürün ve sipariş akışlarını merkezi operasyonlara dahil edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/ikas.png" alt="ikas">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">i</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>ikas</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ikas işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">PTTAVM mağazanızı ürün ve sipariş operasyonları için sisteme bağlayın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="N11" data-integration-category="marketplace" data-integration-search="N11 Pazaryeri N11 mağazanızın sipariş ve stok akışlarını merkezi yönetime dahil edin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/N11.png" alt="N11">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">N</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>N11</strong><small>Pazaryeri</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="N11 işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">ikas mağazanızdaki ürün ve sipariş akışlarını merkezi operasyonlara dahil edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PlatinMarket" data-integration-category="commerce" data-integration-search="PlatinMarket E-Ticaret Altyapısı PlatinMarket mağazanızı Bulbulustur'a bağlayarak sipariş ve stok akışlarını senkronize edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/platinmarket.png" alt="PlatinMarket">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>PlatinMarket</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PlatinMarket işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">N11 mağazanızın sipariş ve stok akışlarını merkezi yönetime dahil edin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Modanisa" data-integration-category="marketplace" data-integration-search="Modanisa Satış Kanalı Modanisa satış kanalında ürün, stok ve sipariş süreçlerini Bulbulustur ile eşleyin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/modanisa.png" alt="Modanisa">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">M</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Modanisa</strong><small>Satış Kanalı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Modanisa işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">PlatinMarket mağazanızı Bulbulustur'a bağlayarak sipariş ve stok akışlarını senkronize edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="QukaSoft" data-integration-category="commerce" data-integration-search="QukaSoft E-Ticaret Altyapısı QukaSoft mağazanızı katalog ve sipariş süreçleri için Bulbulustur ile entegre edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/qukasoft.png" alt="QukaSoft">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">Q</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>QukaSoft</strong><small>E-Ticaret Altyapısı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="QukaSoft işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    <p class="bb-integration-card-copy">Modanisa satış kanalında ürün, stok ve sipariş süreçlerini Bulbulustur ile eşleyin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Moda Kanalı</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Shopier" data-integration-category="marketplace" data-integration-search="Shopier Satış Kanalı Shopier sipariş ve stok akışlarını merkezi operasyon ekranlarına bağlayın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/shopier.png" alt="Shopier">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">S</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Shopier</strong><small>Satış Kanalı</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Shopier işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
                                                                 </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <p class="bb-integration-card-copy">QukaSoft mağazanızı katalog ve sipariş süreçleri için Bulbulustur ile entegre edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Katalog + Sipariş</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
                                                     </div>
-                                                </article>
-                                            </div>
-                                        </section>
-                                        <section class="bb-integrations-section" data-bb-integrations-section>
-                                            <div class="bb-integrations-section-head">
-                                                <div><h2>Pazaryerleri & Satış Kanalları</h2><p>Pazaryeri siparişleri, stok değişimleri ve kanal bazlı operasyonları merkezi olarak yönetin.</p></div>
-                                                <span class="bb-badge bb-badge-light">9 entegratör</span>
-                                            </div>
-                                            <div class="bb-integrations-grid">
-
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Trendyol" data-integration-category="marketplace" data-integration-search="Trendyol Pazaryeri Trendyol mağazanızı bağlayarak ürün, stok ve sipariş akışlarını tek merkezden yönetin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/trendyol.png" alt="Trendyol">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">T</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Trendyol</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Trendyol işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Trendyol mağazanızı bağlayarak ürün, stok ve sipariş akışlarını tek merkezden yönetin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
+                                                    <p class="bb-integration-card-copy">Shopier sipariş ve stok akışlarını merkezi operasyon ekranlarına bağlayın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Satış Kanalı</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Hepsiburada" data-integration-category="marketplace" data-integration-search="Hepsiburada Pazaryeri Hepsiburada satış operasyonlarını Bulbulustur sipariş ve stok akışlarına bağlayın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/hepsiburada.png" alt="Hepsiburada">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">H</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Hepsiburada</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Hepsiburada işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Hepsiburada satış operasyonlarını Bulbulustur sipariş ve stok akışlarına bağlayın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Amazon Türkiye" data-integration-category="marketplace" data-integration-search="Amazon Türkiye Pazaryeri Amazon Türkiye mağazanızı katalog, stok ve sipariş senkronizasyonuna dahil edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/amazon.png" alt="Amazon Türkiye">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">A</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Amazon Türkiye</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Amazon Türkiye işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Amazon Türkiye mağazanızı katalog, stok ve sipariş senkronizasyonuna dahil edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="ÇiçekSepeti" data-integration-category="marketplace" data-integration-search="ÇiçekSepeti Pazaryeri ÇiçekSepeti ürün ve sipariş akışlarını tek panelde takip edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/ciceksepeti.png" alt="ÇiçekSepeti">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">Ç</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>ÇiçekSepeti</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="ÇiçekSepeti işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">ÇiçekSepeti ürün ve sipariş akışlarını tek panelde takip edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Pazarama" data-integration-category="marketplace" data-integration-search="Pazarama Pazaryeri Pazarama satış, kargo ve stok hareketlerini Bulbulustur üzerinden yönetin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/pazarama.png" alt="Pazarama">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Pazarama</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Pazarama işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Pazarama satış, kargo ve stok hareketlerini Bulbulustur üzerinden yönetin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PTTAVM" data-integration-category="marketplace" data-integration-search="PTTAVM Pazaryeri PTTAVM mağazanızı ürün ve sipariş operasyonları için sisteme bağlayın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/pttavm.png" alt="PTTAVM">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>PTTAVM</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PTTAVM işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">PTTAVM mağazanızı ürün ve sipariş operasyonları için sisteme bağlayın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="N11" data-integration-category="marketplace" data-integration-search="N11 Pazaryeri N11 mağazanızın sipariş ve stok akışlarını merkezi yönetime dahil edin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/N11.png" alt="N11">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">N</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>N11</strong><small>Pazaryeri</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="N11 işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">N11 mağazanızın sipariş ve stok akışlarını merkezi yönetime dahil edin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Pazaryeri</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Modanisa" data-integration-category="marketplace" data-integration-search="Modanisa Satış Kanalı Modanisa satış kanalında ürün, stok ve sipariş süreçlerini Bulbulustur ile eşleyin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/modanisa.png" alt="Modanisa">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">M</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Modanisa</strong><small>Satış Kanalı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Modanisa işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Modanisa satış kanalında ürün, stok ve sipariş süreçlerini Bulbulustur ile eşleyin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Moda Kanalı</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Shopier" data-integration-category="marketplace" data-integration-search="Shopier Satış Kanalı Shopier sipariş ve stok akışlarını merkezi operasyon ekranlarına bağlayın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/shopier.png" alt="Shopier">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">S</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Shopier</strong><small>Satış Kanalı</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Shopier işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Shopier sipariş ve stok akışlarını merkezi operasyon ekranlarına bağlayın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Satış Kanalı</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                        </section>
-                                        <section class="bb-integrations-section" data-bb-integrations-section>
-                                            <div class="bb-integrations-section-head">
-                                                <div><h2>Operasyon, Finans & Kargo</h2><p>Kargo, ödeme, muhasebe ve operasyon servislerini satış akışınızın doğal parçası haline getirin.</p></div>
-                                                <span class="bb-badge bb-badge-light">5 entegratör</span>
-                                            </div>
-                                            <div class="bb-integrations-grid">
-
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Yurtiçi Kargo" data-integration-category="operations" data-integration-search="Yurtiçi Kargo Kargo Sipariş gönderilerini otomatik oluşturun ve takip numaralarını operasyon akışına taşıyın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/yurtici-kargo.png" alt="Yurtiçi Kargo">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">Y</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Yurtiçi Kargo</strong><small>Kargo</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Yurtiçi Kargo işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Sipariş gönderilerini otomatik oluşturun ve takip numaralarını operasyon akışına taşıyın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Kargo</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PayTR" data-integration-category="operations" data-integration-search="PayTR Ödeme Ödeme akışlarını satış operasyonlarıyla birleştirerek tahsilat süreçlerini merkezileştirin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/paytr.png" alt="PayTR">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>PayTR</strong><small>Ödeme</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PayTR işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Ödeme akışlarını satış operasyonlarıyla birleştirerek tahsilat süreçlerini merkezileştirin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Ödeme</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Paraşüt" data-integration-category="operations" data-integration-search="Paraşüt Muhasebe Fatura ve finansal kayıt akışlarını satış operasyonlarıyla ilişkilendirin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/parasut.png" alt="Paraşüt">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Paraşüt</strong><small>Muhasebe</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Paraşüt işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Fatura ve finansal kayıt akışlarını satış operasyonlarıyla ilişkilendirin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Muhasebe</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="BizimManage Account" data-integration-category="operations" data-integration-search="BizimManage Account Ön Muhasebe Sipariş ve finansal hareketleri ön muhasebe süreçlerine bağlayın.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/bizimhesap.png" alt="BizimManage Account">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">B</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>BizimManage Account</strong><small>Ön Muhasebe</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="BizimManage Account işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Sipariş ve finansal hareketleri ön muhasebe süreçlerine bağlayın.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Ön Muhasebe</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Cimri" data-integration-category="operations" data-integration-search="Cimri Ürün Karşılaştırma Ürünlerinizi fiyat karşılaştırma kanalında görünür hale getirip veri akışını yönetin.">
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-integration-card-head">
-                                                            <span class="bb-integration-logo">
-                                                                <img src="../../assets/media/integrators/cimri.png" alt="Cimri">
-                                                                <span class="bb-integration-logo-fallback" aria-hidden="true">C</span>
-                                                            </span>
-                                                            <span class="bb-integration-card-title"><strong>Cimri</strong><small>Ürün Karşılaştırma</small></span>
-                                                            <div class="dropdown bb-action-menu">
-                                                                <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cimri işlemleri">
-                                                                    <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                                </button>
-                                                                <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                                                                    <h6 class="dropdown-header">İŞLEMLER</h6>
-                                                                    <button class="dropdown-item" type="button" data-bb-integration-start>
-                                                                        <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="bb-integration-card-copy">Ürünlerinizi fiyat karşılaştırma kanalında görünür hale getirip veri akışını yönetin.</p>
-                                                        <div class="bb-integration-card-foot">
-                                                            <span class="bb-badge bb-badge-light">Karşılaştırma</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                        </section>
-
-                                        <div class="bb-integrations-empty" data-bb-integrations-empty hidden>
-                                            <span class="material-symbols-outlined" aria-hidden="true">search_off</span>
-                                            <strong>Sonuç bulunamadı</strong>
-                                            <span>Arama metnini veya kategori filtresini değiştirin.</span>
+                                                </div>
+                                            </article>
                                         </div>
+                                    </section>
+                                    <section class="bb-integrations-section" data-bb-integrations-section>
+                                        <div class="bb-integrations-section-head">
+                                            <div><h2>Operasyon, Finans & Kargo</h2><p>Kargo, ödeme, muhasebe ve operasyon servislerini satış akışınızın doğal parçası haline getirin.</p></div>
+                                            <span class="bb-badge bb-badge-light">5 entegratör</span>
+                                        </div>
+                                        <div class="bb-integrations-grid">
+
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Yurtiçi Kargo" data-integration-category="operations" data-integration-search="Yurtiçi Kargo Kargo Sipariş gönderilerini otomatik oluşturun ve takip numaralarını operasyon akışına taşıyın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/yurtici-kargo.png" alt="Yurtiçi Kargo">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">Y</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Yurtiçi Kargo</strong><small>Kargo</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Yurtiçi Kargo işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Sipariş gönderilerini otomatik oluşturun ve takip numaralarını operasyon akışına taşıyın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Kargo</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="PayTR" data-integration-category="operations" data-integration-search="PayTR Ödeme Ödeme akışlarını satış operasyonlarıyla birleştirerek tahsilat süreçlerini merkezileştirin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/paytr.png" alt="PayTR">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>PayTR</strong><small>Ödeme</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="PayTR işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Ödeme akışlarını satış operasyonlarıyla birleştirerek tahsilat süreçlerini merkezileştirin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Ödeme</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Paraşüt" data-integration-category="operations" data-integration-search="Paraşüt Muhasebe Fatura ve finansal kayıt akışlarını satış operasyonlarıyla ilişkilendirin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/parasut.png" alt="Paraşüt">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">P</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Paraşüt</strong><small>Muhasebe</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Paraşüt işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Fatura ve finansal kayıt akışlarını satış operasyonlarıyla ilişkilendirin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Muhasebe</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="BizimManage Account" data-integration-category="operations" data-integration-search="BizimManage Account Ön Muhasebe Sipariş ve finansal hareketleri ön muhasebe süreçlerine bağlayın.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/bizimhesap.png" alt="BizimManage Account">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">B</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>BizimManage Account</strong><small>Ön Muhasebe</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="BizimManage Account işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Sipariş ve finansal hareketleri ön muhasebe süreçlerine bağlayın.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Ön Muhasebe</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="bb-card bb-integration-card" data-bb-integration-card data-integration-name="Cimri" data-integration-category="operations" data-integration-search="Cimri Ürün Karşılaştırma Ürünlerinizi fiyat karşılaştırma kanalında görünür hale getirip veri akışını yönetin.">
+                                                <div class="bb-card-body">
+                                                    <div class="bb-integration-card-head">
+                                                        <span class="bb-integration-logo">
+                                                            <img src="../../assets/media/integrators/cimri.png" alt="Cimri">
+                                                            <span class="bb-integration-logo-fallback" aria-hidden="true">C</span>
+                                                        </span>
+                                                        <span class="bb-integration-card-title"><strong>Cimri</strong><small>Ürün Karşılaştırma</small></span>
+                                                        <div class="dropdown bb-action-menu">
+                                                            <button class="bb-integration-card-action bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Cimri işlemleri">
+                                                                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                            </button>
+                                                            <div class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                                                <h6 class="dropdown-header">İŞLEMLER</h6>
+                                                                <button class="dropdown-item" type="button" data-bb-integration-start>
+                                                                    <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Başlat / Ayarla
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="bb-integration-card-copy">Ürünlerinizi fiyat karşılaştırma kanalında görünür hale getirip veri akışını yönetin.</p>
+                                                    <div class="bb-integration-card-foot">
+                                                        <span class="bb-badge bb-badge-light">Karşılaştırma</span><button class="btn bb-btn-secondary btn-sm" type="button">İncele</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </section>
+
+                                    <div class="bb-integrations-empty" data-bb-integrations-empty hidden>
+                                        <span class="material-symbols-outlined" aria-hidden="true">search_off</span>
+                                        <strong>Sonuç bulunamadı</strong>
+                                        <span>Arama metnini veya kategori filtresini değiştirin.</span>
                                     </div>
                                 </div>
-                            </section>
-                        </div>
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </footer>
+            </main>
+            <!--/::Main-->
         </div>
+
+        <!--::Footer-->
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+    
     <section class="bb-drawer bb-drawer-end bb-integration-setup-drawer" id="bb_integration_setup_drawer" aria-hidden="true" tabindex="-1" aria-labelledby="bb_integration_setup_title">
         <div class="bb-drawer-header">
-            <div><h2 class="bb-drawer-title" id="bb_integration_setup_title">Entegrasyonu Başlat</h2><small class="text-body-secondary">Seçilen entegratör için bağlantı ayarlarını hazırlayın.</small>
-</div>
+            <div>
+                <h2 class="bb-drawer-title" id="bb_integration_setup_title">Entegrasyonu Başlat</h2><small class="text-body-secondary">Seçilen entegratör için bağlantı ayarlarını hazırlayın.</small>
+            </div>
             <button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Kapat">
                 <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
@@ -1639,12 +1643,15 @@
             </div>
 
             <div class="bb-integration-setup-steps" aria-label="Kurulum adımları">
-                <div class="bb-integration-setup-step is-active"><span>1</span><strong>Bağlantı</strong><small>Kimlik bilgileri</small>
-</div>
-                <div class="bb-integration-setup-step"><span>2</span><strong>Eşleme</strong><small>Katalog ve alanlar</small>
-</div>
-                <div class="bb-integration-setup-step"><span>3</span><strong>Aktivasyon</strong><small>Senkronizasyon</small>
-</div>
+                <div class="bb-integration-setup-step is-active">
+                    <span>1</span><strong>Bağlantı</strong><small>Kimlik bilgileri</small>
+                </div>
+                <div class="bb-integration-setup-step">
+                    <span>2</span><strong>Eşleme</strong><small>Katalog ve alanlar</small>
+                </div>
+                <div class="bb-integration-setup-step">
+                    <span>3</span><strong>Aktivasyon</strong><small>Senkronizasyon</small>
+                </div>
             </div>
 
             <form data-bb-integration-setup-form>
@@ -1670,7 +1677,7 @@
                     </div>
                 </div>
                 <div class="bb-integration-setup-actions">
-                    <button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>İptal</button>
+                    <button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel</button>
                     <button class="btn btn-primary" type="submit">
                         <span class="material-symbols-outlined" aria-hidden="true">link</span> Bağlantıyı Başlat
                     </button>
@@ -1679,6 +1686,7 @@
             <p class="bb-integration-setup-status" data-bb-integration-setup-status role="status"></p>
         </div>
     </section>
+    <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

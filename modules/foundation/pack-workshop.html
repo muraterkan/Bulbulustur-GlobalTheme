@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr" data-bb-pack="workshop" data-bs-theme="light">
+<!--::Head-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,9 +22,11 @@
     h2 { font-size: 1rem; margin: 1.5rem 0 .6rem; }
   </style>
 </head>
+<!--/::Head-->
 <body style="background: var(--bb-body-bg); color: var(--bb-body-color);">
   <header>
 </header>
+<!--::Main-->
 <main class="container py-4" style="max-width: 1040px;">
     <h1 style="font-size: 1.5rem;">Renk Paketi: WORKSHOP <small style="color: var(--bb-secondary-color); font-size: .9rem;">html[data-bb-pack="workshop"]</small></h1>
     <p style="color: var(--bb-secondary-color);">Açık/koyu: <a href="?">açık</a> · <a href="?theme=dark">koyu</a> · <a href="?pack=off">paket kapalı (varsayılan sarı)</a></p>
@@ -34,7 +37,7 @@
     <h2>Semantik</h2>
     <div class="sw" id="sem"></div>
 
-    <h2>Bileşenler</h2>
+    <h2>Components</h2>
     <div class="d-flex flex-wrap gap-2 mb-3">
       <button class="btn btn-primary">Primary</button>
       <button class="btn btn-secondary">Secondary</button>
@@ -61,8 +64,11 @@
         <div class="p-3 mt-2" style="background: var(--bb-footer-bg); color: var(--bb-footer-color); border-radius: .75rem;">Footer zemini · <span style="color: var(--bb-footer-heading-color)">başlık</span></div>
       </div>
     </main>
+<!--/::Main-->
+<!--::Footer-->
 <footer>
 </footer>
+<!--/::Footer-->
   <script>
     var cs = getComputedStyle(document.documentElement);
     function mk(host, names) {

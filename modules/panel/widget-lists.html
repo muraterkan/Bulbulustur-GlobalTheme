@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,9 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="widgets-lists" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
+
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -27,7 +30,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +359,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -670,7 +673,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -700,7 +703,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -751,7 +754,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -772,7 +775,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -785,7 +788,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -801,14 +804,14 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
@@ -816,18 +819,18 @@
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -853,39 +856,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -895,536 +898,535 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Dashboard</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                                <ol class="breadcrumb mb-0">
-                                                    <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <a class="btn bb-btn-secondary" href="../components/cards.html">Kart Bileşenleri</a>
-                                        </div>
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Dashboard</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <a class="btn bb-btn-secondary" href="../components/cards.html">Kart Componentsi</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <section class="bb-content bb-widget-lists" data-bb-widget-lists aria-label="Liste Widget'ları">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-widget-toolbar">
-                                        <label class="visually-hidden" for="bb_widgets_search">Widget içinde ara</label>
-                                        <input id="bb_widgets_search" type="search" class="form-control form-control-solid" data-bb-widget-search placeholder="Widget içeriklerinde ara...">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-widget-show-all>Tüm Kartları Göster</button>
-                                        <span class="bb-widget-subtitle" role="status" aria-live="polite" data-bb-widget-status>Örnek widget'lar</span>
-                                    </div>
-                                    <div class="bb-widget-grid">
-                                        <section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Görev Özeti</h2><small class="bb-widget-subtitle">10 bekleyen görev</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">layers</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Proje brifingi</strong><small>Proje yöneticisi</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">draw</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Konsept tasarım</strong><small>Sanat yönetmeni</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>İşlevsel akışlar</strong><small>Yazılım ekibi</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">link</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Geliştirme</strong><small>DevOps</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">bug_report</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Testler</strong><small>Kalite ekibi</small>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Yazarlar</h2><small class="bb-widget-subtitle">Team üyeleri</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-symbol size-45 is-circle">
-                                                            <span class="bb-symbol-label">ES</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Emma Smith</strong><small>Proje yöneticisi</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-symbol size-45 is-circle">
-                                                            <span class="bb-symbol-label">SB</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Sean Bean</strong><small>Yazılım geliştirici</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-symbol size-45 is-circle">
-                                                            <span class="bb-symbol-label">BC</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Brian Cox</strong><small>Frontend geliştirici</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-symbol size-45 is-circle">
-                                                            <span class="bb-symbol-label">FM</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Francis Mitcham</strong><small>Teknik lider</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-symbol size-45 is-circle">
-                                                            <span class="bb-symbol-label">DW</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Dan Wilson</strong><small>İçerik editörü</small>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Yapılacaklar</h2><small class="bb-widget-subtitle">Güncel iş listesi</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-todo">
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>Yeni logo tasarımı</strong><small>2 gün kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>Paydaş toplantısı</strong><small>3 gün kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>Kapsam ve tahmin</strong><small>5 gün kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>KPI gösterimi</strong><small>2 gün kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>Proje toplantısı</strong><small>12 gün kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                    <label class="bb-widget-todo-item" data-bb-widget-row>
-                                                        <input class="form-check-input" type="checkbox" data-bb-widget-todo>
-                                                        <span class="bb-widget-row-main"><strong>Müşteri güncellemesi</strong><small>1 hafta kaldı</small></span>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Trendler</h2><small class="bb-widget-subtitle">Güncel teknoloji trendleri</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">person</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Popüler yazarlar</strong><small>Sektörel içerikler</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary"> +825</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>En çok okunanlar</strong><small>Blog ve duyurular</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+280</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">group_add</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Yeni kullanıcılar</strong><small>Bu ay katılanlar</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+450</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">store</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Aktif müşteriler</strong><small>Tekrarlanan siparişler</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+686</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">palette</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Çok satan tema</strong><small>Tasarım paketleri</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+726</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">apps</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Yeni uygulama</strong><small>Ekosistem çözümleri</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+145</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Aktiviteler</h2><small class="bb-widget-subtitle">Örnek zaman çizelgesi</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <ol class="bb-widget-activity">
-                                                    <li data-bb-widget-row>
-                                                        <time>08:42</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Yeni çalışma kaydı oluşturuldu</p>
-                                                    </li>
-                                                    <li data-bb-widget-row>
-                                                        <time>10:00</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Team toplantısı tamamlandı</p>
-                                                    </li>
-                                                    <li data-bb-widget-row>
-                                                        <time>14:37</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Örnek ödeme hareketi incelendi</p>
-                                                    </li>
-                                                    <li data-bb-widget-row>
-                                                        <time>16:50</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Görev ilerlemesi güncellendi</p>
-                                                    </li>
-                                                    <li data-bb-widget-row>
-                                                        <time>21:03</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Yeni sipariş bildirimi görüntülendi</p>
-                                                    </li>
-                                                    <li data-bb-widget-row>
-                                                        <time>10:30</time>
-                                                        <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>KPI değerlendirmesi planlandı</p>
-                                                    </li>
-                                                </ol>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Bildirimler</h2><small class="bb-widget-subtitle">Team ve proje gelişmeleri</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-notice" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Team buluşması</strong><small>2 gün kaldı</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+28%</span>
-                                                    </div>
-                                                    <div class="bb-widget-notice" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">layers</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Menü optimizasyonu</strong><small>Yeni görev</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+50%</span>
-                                                    </div>
-                                                    <div class="bb-widget-notice" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">draw</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Marka tasarım toplantısı</strong><small>5 gün kaldı</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">-27%</span>
-                                                    </div>
-                                                    <div class="bb-widget-notice" data-bb-widget-row>
-                                                        <span class="bb-widget-icon">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">target</span>
-                                                        </span>
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Ürün hedefleri</strong><small>7 gün kaldı</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">+8%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Son Medyalar</h2><small class="bb-widget-subtitle">Makaleler ve yayınlar</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Kahve ve Doğa örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Kahve ve Doğa</strong><small>87 KB</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Onaylandı</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Sarı Tema örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Sarı Tema</strong><small>1,2 MB</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">İşleniyor</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Mavi Tasarım örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Mavi Tasarım</strong><small>87 KB</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Başarılı</span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=180&q=75" alt="Yeni Koleksiyon örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Yeni Koleksiyon</strong><small>345 KB</small>
-                                                        </div>
-                                                        <span class="badge bb-badge bb-badge-light-primary">Reddedildi</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Son Ürünler</h2><small class="bb-widget-subtitle">Hediye ve tasarımlar</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Yeni Tasarım örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Yeni Tasarım</strong><small>Görsel odaklı</small>
-                                                        </div>
-                                                        <span class="bb-widget-rating">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">star</span>4,2
-                                                        </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Yeni Tasarım örnek ürün formu">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=180&q=75" alt="Pembe Desen örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Pembe Desen</strong><small>Yeni koleksiyon</small>
-                                                        </div>
-                                                        <span class="bb-widget-rating">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">star</span>5,0
-                                                        </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Pembe Desen örnek ürün formu">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Soyut Sanat örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Soyut Sanat</strong><small>Butik tasarım</small>
-                                                        </div>
-                                                        <span class="bb-widget-rating">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">star</span>5,7
-                                                        </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Soyut Sanat örnek ürün formu">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Tatlı Koleksiyonu örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Tatlı Koleksiyonu</strong><small>Yeni trendler</small>
-                                                        </div>
-                                                        <span class="bb-widget-rating">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">star</span>3,7
-                                                        </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Tatlı Koleksiyonu örnek ürün formu">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
-                                            <div class="bb-card-header">
-                                                <div class="bb-widget-heading">
-                                                    <h2 class="bb-card-title">Rakiplerim</h2><small class="bb-widget-subtitle">Pazar karşılaştırması · örnek</small>
-                                                </div>
-                                                <div class="dropdown bb-action-menu">
-                                                    \<button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-                                                    </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
-                                                </div>
-                                            </div>
-                                            <div class="bb-card-body">
-                                                <div class="bb-widget-rows">
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Cup & Green örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Cup & Green</strong><small>Örnek marka</small>
-                                                        </div>
-                                                        <span class="bb-widget-sales">24.900<small>Satış (demo)</small></span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Yellow Hearts örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Yellow Hearts</strong><small>Örnek marka</small>
-                                                        </div>
-                                                        <span class="bb-widget-sales">70.380<small>Satış (demo)</small></span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Nike & Blue örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Nike & Blue</strong><small>Örnek marka</small>
-                                                        </div>
-                                                        <span class="bb-widget-sales">7.200<small>Satış (demo)</small></span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=180&q=75" alt="Red Boots örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Red Boots</strong><small>Örnek marka</small>
-                                                        </div>
-                                                        <span class="bb-widget-sales">36.450<small>Satış (demo)</small></span>
-                                                    </div>
-                                                    <div class="bb-widget-row" data-bb-widget-row>
-                                                        <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=180&q=75" alt="Desserts Platter örnek görseli" loading="lazy">
-                                                        <div class="bb-widget-row-main">
-                                                            <strong>Desserts Platter</strong><small>Örnek marka</small>
-                                                        </div>
-                                                        <span class="bb-widget-sales">64.753<small>Satış (demo)</small></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                    <div class="bb-card bb-widget-empty mt-4" data-bb-widget-empty hidden>
-                                        <div class="bb-card-body">Aramanıza uygun kart bulunamadı.</div>
-                                    </div>
-                                    <p class="text-body-secondary small mt-4">Bu ekran görsel bileşen demosudur; görevler, üyeler, satışlar ve bildirimler gerçek API verisi değildir.</p>
+                        <section class="bb-content bb-widget-lists" data-bb-widget-lists aria-label="Liste Widget'ları">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-widget-toolbar">
+                                    <label class="visually-hidden" for="bb_widgets_search">Widget içinde ara</label>
+                                    <input id="bb_widgets_search" type="search" class="form-control form-control-solid" data-bb-widget-search placeholder="Widget içeriklerinde ara...">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-widget-show-all>Tüm Kartları Göster</button>
+                                    <span class="bb-widget-subtitle" role="status" aria-live="polite" data-bb-widget-status>Örnek widget'lar</span>
                                 </div>
-                            </section>
+                                <div class="bb-widget-grid">
+                                    <section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Görev Özeti</h2><small class="bb-widget-subtitle">10 bekleyen görev</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Proje brifingi</strong><small>Proje yöneticisi</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">draw</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Konsept tasarım</strong><small>Sanat yönetmeni</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>İşlevsel akışlar</strong><small>Yazılım ekibi</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">link</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Geliştirme</strong><small>DevOps</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">bug_report</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Testler</strong><small>Kalite ekibi</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Yazarlar</h2><small class="bb-widget-subtitle">Team üyeleri</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-symbol size-45 is-circle">
+                                                        <span class="bb-symbol-label">ES</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Emma Smith</strong><small>Proje yöneticisi</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-symbol size-45 is-circle">
+                                                        <span class="bb-symbol-label">SB</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Sean Bean</strong><small>Yazılım geliştirici</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-symbol size-45 is-circle">
+                                                        <span class="bb-symbol-label">BC</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Brian Cox</strong><small>Frontend geliştirici</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-symbol size-45 is-circle">
+                                                        <span class="bb-symbol-label">FM</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Francis Mitcham</strong><small>Teknik lider</small>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-symbol size-45 is-circle">
+                                                        <span class="bb-symbol-label">DW</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Dan Wilson</strong><small>İçerik editörü</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Yapılacaklar</h2><small class="bb-widget-subtitle">Güncel iş listesi</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-todo">
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>Yeni logo tasarımı</strong><small>2 gün kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>Paydaş toplantısı</strong><small>3 gün kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>Kapsam ve tahmin</strong><small>5 gün kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>KPI gösterimi</strong><small>2 gün kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>Proje toplantısı</strong><small>12 gün kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                                <label class="bb-widget-todo-item" data-bb-widget-row>
+                                                    <input class="form-check-input" type="checkbox" data-bb-widget-todo>
+                                                    <span class="bb-widget-row-main"><strong>Müşteri güncellemesi</strong><small>1 hafta kaldı</small></span>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Yeni</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Trendler</h2><small class="bb-widget-subtitle">Güncel teknoloji trendleri</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Popüler yazarlar</strong><small>Sektörel içerikler</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary"> +825</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>En çok okunanlar</strong><small>Blog ve duyurular</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+280</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">group_add</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Yeni kullanıcılar</strong><small>Bu ay katılanlar</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+450</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">store</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Aktif müşteriler</strong><small>Tekrarlanan siparişler</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+686</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">palette</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Çok satan tema</strong><small>Tasarım paketleri</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+726</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Yeni uygulama</strong><small>Ekosistem çözümleri</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+145</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Aktiviteler</h2><small class="bb-widget-subtitle">Örnek zaman çizelgesi</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <ol class="bb-widget-activity">
+                                                <li data-bb-widget-row>
+                                                    <time>08:42</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Yeni çalışma kaydı oluşturuldu</p>
+                                                </li>
+                                                <li data-bb-widget-row>
+                                                    <time>10:00</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Team toplantısı tamamlandı</p>
+                                                </li>
+                                                <li data-bb-widget-row>
+                                                    <time>14:37</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Örnek ödeme hareketi incelendi</p>
+                                                </li>
+                                                <li data-bb-widget-row>
+                                                    <time>16:50</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Görev ilerlemesi güncellendi</p>
+                                                </li>
+                                                <li data-bb-widget-row>
+                                                    <time>21:03</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>Yeni sipariş bildirimi görüntülendi</p>
+                                                </li>
+                                                <li data-bb-widget-row>
+                                                    <time>10:30</time>
+                                                    <span class="bb-widget-activity-dot" aria-hidden="true"></span><p>KPI değerlendirmesi planlandı</p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Notifications</h2><small class="bb-widget-subtitle">Team ve proje gelişmeleri</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-notice" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Team buluşması</strong><small>2 gün kaldı</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+28%</span>
+                                                </div>
+                                                <div class="bb-widget-notice" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Menü optimizasyonu</strong><small>Yeni görev</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+50%</span>
+                                                </div>
+                                                <div class="bb-widget-notice" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">draw</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Marka tasarım toplantısı</strong><small>5 gün kaldı</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">-27%</span>
+                                                </div>
+                                                <div class="bb-widget-notice" data-bb-widget-row>
+                                                    <span class="bb-widget-icon">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">target</span>
+                                                    </span>
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Ürün hedefleri</strong><small>7 gün kaldı</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">+8%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Son Medyalar</h2><small class="bb-widget-subtitle">Makaleler ve yayınlar</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Kahve ve Doğa örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Kahve ve Doğa</strong><small>87 KB</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Onaylandı</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Sarı Tema örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Sarı Tema</strong><small>1,2 MB</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">İşleniyor</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Mavi Tasarım örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Mavi Tasarım</strong><small>87 KB</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Başarılı</span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=180&q=75" alt="Yeni Koleksiyon örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Yeni Koleksiyon</strong><small>345 KB</small>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-primary">Reddedildi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Son Ürünler</h2><small class="bb-widget-subtitle">Hediye ve tasarımlar</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Yeni Tasarım örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Yeni Tasarım</strong><small>Görsel odaklı</small>
+                                                    </div>
+                                                    <span class="bb-widget-rating">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">star</span>4,2
+                                                    </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Yeni Tasarım örnek ürün formu">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                    </a>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=180&q=75" alt="Pembe Desen örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Pembe Desen</strong><small>Yeni koleksiyon</small>
+                                                    </div>
+                                                    <span class="bb-widget-rating">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">star</span>5,0
+                                                    </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Pembe Desen örnek ürün formu">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                    </a>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Soyut Sanat örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Soyut Sanat</strong><small>Butik tasarım</small>
+                                                    </div>
+                                                    <span class="bb-widget-rating">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">star</span>5,7
+                                                    </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Soyut Sanat örnek ürün formu">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                    </a>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Tatlı Koleksiyonu örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Tatlı Koleksiyonu</strong><small>Yeni trendler</small>
+                                                    </div>
+                                                    <span class="bb-widget-rating">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">star</span>3,7
+                                                    </span><a href="create-product.html" class="btn bb-btn-secondary btn-sm" aria-label="Tatlı Koleksiyonu örnek ürün formu">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section><section class="bb-card bb-widget-card bb-widget-card--wide" data-bb-widget-card>
+                                        <div class="bb-card-header">
+                                            <div class="bb-widget-heading">
+                                                <h2 class="bb-card-title">Rakiplerim</h2><small class="bb-widget-subtitle">Pazar karşılaştırması · örnek</small>
+                                            </div>
+                                            <div class="dropdown bb-action-menu">
+                                                <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Widget işlemleri">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                                </button><ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list"><li>\<button type="button" class="dropdown-item" data-bb-widget-reset>Widget görünümünü sıfırla</button></li><li>\<button type="button" class="dropdown-item" data-bb-widget-hide>Kartı gizle</button></li></ul>
+                                            </div>
+                                        </div>
+                                        <div class="bb-card-body">
+                                            <div class="bb-widget-rows">
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=180&q=75" alt="Cup & Green örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Cup & Green</strong><small>Örnek marka</small>
+                                                    </div>
+                                                    <span class="bb-widget-sales">24.900<small>Satış (demo)</small></span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=180&q=75" alt="Yellow Hearts örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Yellow Hearts</strong><small>Örnek marka</small>
+                                                    </div>
+                                                    <span class="bb-widget-sales">70.380<small>Satış (demo)</small></span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=180&q=75" alt="Nike & Blue örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Nike & Blue</strong><small>Örnek marka</small>
+                                                    </div>
+                                                    <span class="bb-widget-sales">7.200<small>Satış (demo)</small></span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=180&q=75" alt="Red Boots örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Red Boots</strong><small>Örnek marka</small>
+                                                    </div>
+                                                    <span class="bb-widget-sales">36.450<small>Satış (demo)</small></span>
+                                                </div>
+                                                <div class="bb-widget-row" data-bb-widget-row>
+                                                    <img class="bb-widget-media-thumbnail" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=180&q=75" alt="Desserts Platter örnek görseli" loading="lazy">
+                                                    <div class="bb-widget-row-main">
+                                                        <strong>Desserts Platter</strong><small>Örnek marka</small>
+                                                    </div>
+                                                    <span class="bb-widget-sales">64.753<small>Satış (demo)</small></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="bb-card bb-widget-empty mt-4" data-bb-widget-empty hidden>
+                                    <div class="bb-card-body">Aramanıza uygun kart bulunamadı.</div>
+                                </div>
+                                <p class="text-body-secondary small mt-4">Bu ekran görsel bileşen demosudur; görevler, üyeler, satışlar ve bildirimler gerçek API verisi değildir.</p>
+                            </div>
+                        </section>
 
-                        </div>
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
                     </div>
                 </div>
-            </footer>
+            </main>
+            <!--/::Main-->
         </div>
+        <!--::Footer-->
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+    <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

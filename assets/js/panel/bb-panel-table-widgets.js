@@ -51,7 +51,7 @@
         view: "Görüntüleme",
         edit: "Düzenleme",
         delete: "Silme",
-        grid: "Görünüm",
+        grid: "View Mode",
         new: "Yeni kayıt",
         filter: "Filtre",
         create: "Oluşturma"

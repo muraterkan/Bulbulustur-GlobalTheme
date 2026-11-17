@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,9 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="subscription-overview" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
+
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -27,7 +30,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +359,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -670,7 +673,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -700,7 +703,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -751,7 +754,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -772,7 +775,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -785,7 +788,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -801,14 +804,14 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
@@ -816,18 +819,18 @@
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -853,39 +856,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -895,171 +898,173 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Dashboard</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                                <ol class="breadcrumb mb-0">
-                                                    <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <a class="btn bb-btn-secondary" href="profile-billing.html">Planları Gör</a>
-                                            <button type="submit" class="btn btn-primary" form="bb_sub_form">Create (Demo)</button>
-                                        </div>
+
+
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Dashboard</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kabuk</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <a class="btn bb-btn-secondary" href="profile-billing.html">Planları Gör</a>
+                                        <button type="submit" class="btn btn-primary" form="bb_sub_form">Create (Demo)</button>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <section class="bb-content" aria-label="Abonelik Detayları" data-bb-subscription>
-                                <div class="bb-panel-content-container">
-                                    <p class="bb-subscription-aux mb-4">Temsili abonelik oluşturma ekranı — kayıt, faturalandırma ve tahsilat yapılmaz.</p>
-                                    <form id="bb_sub_form" data-bb-sub-form>
-                                        <div class="bb-subscription-layout">
-                                            <div class="bb-subscription-main">
-                                                <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_customer_title">
-                                                    <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_customer_title">Müşteri</h2></div>
-                                                    <div class="bb-card-body">
-                                                        <p class="text-body-secondary">Aboneliğe eklenecek müşteriyi seçin:</p>
-                                                        <div class="bb-subscription-customer">
-                                                            <span class="bb-symbol size-50 is-circle">
-                                                                <span class="bb-symbol-label">AK</span>
-                                                            </span><div>
-                                                                <strong data-bb-sub-customer-name>Ayşe Kaya</strong><small data-bb-sub-customer-email>ayse@example.com</small>
-                                                            </div>
-                                                        </div>
-                                                        <label for="bb_sub_customer" class="form-label">Müşteri değiştir</label>
-                                                        <select id="bb_sub_customer" class="form-select form-select-solid" data-bb-sub-customer required>
-                                                            <option value="ayse" data-name="Ayşe Kaya" data-email="ayse@example.com">Ayşe Kaya</option>
-                                                            <option value="mehmet" data-name="Mehmet Demir" data-email="mehmet@example.com">Mehmet Demir</option>
-                                                            <option value="zeynep" data-name="Zeynep Yılmaz" data-email="zeynep@example.com">Zeynep Yılmaz</option>
-                                                        </select>
-                                                        <div class="bb-subscription-notice mt-4">
-                                                            <strong>
-                                                                <span class="material-symbols-outlined align-middle me-2" aria-hidden="true">info</span>Gizlilik bilgilendirmesi
-                                                            </strong><p>Bu müşteriler ve iletişim adresleri örnektir. Gerçek kişisel veri veya ödeme bilgisi işlenmez.</p>
+                        <section class="bb-content" aria-label="Abonelik Detayları" data-bb-subscription>
+                            <div class="bb-panel-content-container">
+                                <p class="bb-subscription-aux mb-4">Temsili abonelik oluşturma ekranı — kayıt, faturalandırma ve tahsilat yapılmaz.</p>
+                                <form id="bb_sub_form" data-bb-sub-form>
+                                    <div class="bb-subscription-layout">
+                                        <div class="bb-subscription-main">
+                                            <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_customer_title">
+                                                <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_customer_title">Müşteri</h2></div>
+                                                <div class="bb-card-body">
+                                                    <p class="text-body-secondary">Aboneliğe eklenecek müşteriyi seçin:</p>
+                                                    <div class="bb-subscription-customer">
+                                                        <span class="bb-symbol size-50 is-circle">
+                                                            <span class="bb-symbol-label">AK</span>
+                                                        </span><div>
+                                                            <strong data-bb-sub-customer-name>Ayşe Kaya</strong><small data-bb-sub-customer-email>ayse@example.com</small>
                                                         </div>
                                                     </div>
-                                                </section>
-                                                <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_products_title">
-                                                    <div class="bb-card-header">
-                                                        <h2 class="bb-card-title" id="bb_sub_products_title">Ürünler</h2>
-                                                        <div class="d-flex align-items-center gap-2">
-                                                            <label class="visually-hidden" for="bb_sub_plan">Eklenecek plan</label>
-                                                            <select id="bb_sub_plan" data-bb-sub-plan-select class="form-select form-select-solid form-select-sm">
-                                                                <option value="basic">Başlangıç Planı</option>
-                                                                <option value="pro">Pro Plan</option>
-                                                                <option value="team">Team Planı</option>
-                                                            </select><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-sub-add>Ürün Ekle</button>
+                                                    <label for="bb_sub_customer" class="form-label">Müşteri değiştir</label>
+                                                    <select id="bb_sub_customer" class="form-select form-select-solid" data-bb-sub-customer required>
+                                                        <option value="ayse" data-name="Ayşe Kaya" data-email="ayse@example.com">Ayşe Kaya</option>
+                                                        <option value="mehmet" data-name="Mehmet Demir" data-email="mehmet@example.com">Mehmet Demir</option>
+                                                        <option value="zeynep" data-name="Zeynep Yılmaz" data-email="zeynep@example.com">Zeynep Yılmaz</option>
+                                                    </select>
+                                                    <div class="bb-subscription-notice mt-4">
+                                                        <strong>
+                                                            <span class="material-symbols-outlined align-middle me-2" aria-hidden="true">info</span>Gizlilik bilgilendirmesi
+                                                        </strong><p>Bu müşteriler ve iletişim adresleri örnektir. Gerçek kişisel veri veya ödeme bilgisi işlenmez.</p>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_products_title">
+                                                <div class="bb-card-header">
+                                                    <h2 class="bb-card-title" id="bb_sub_products_title">Ürünler</h2>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="visually-hidden" for="bb_sub_plan">Eklenecek plan</label>
+                                                        <select id="bb_sub_plan" data-bb-sub-plan-select class="form-select form-select-solid form-select-sm">
+                                                            <option value="basic">Başlangıç Planı</option>
+                                                            <option value="pro">Pro Plan</option>
+                                                            <option value="team">Team Planı</option>
+                                                        </select><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-sub-add>Ürün Ekle</button>
+                                                    </div>
+                                                </div>
+                                                <div class="bb-card-body">
+                                                    <div class="bb-subscription-table-wrap"><table class="bb-subscription-table"><thead><tr><th scope="col">ÜRÜN</th><th scope="col">ADET</th><th scope="col">TUTAR</th><th scope="col">KALDIR</th></tr></thead><tbody data-bb-sub-products></tbody></table></div><p class="text-body-secondary bb-subscription-empty mt-3" data-bb-sub-empty hidden>Henüz plan eklenmedi.</p>
+                                                </div>
+                                            </section>
+                                            <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_payment_title">
+                                                <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_payment_title">Ödeme Yöntemi</h2><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-sub-new-method>Yeni Yöntem</button></div>
+                                                <div class="bb-card-body">
+                                                    <label class="bb-subscription-method" for="bb_sub_payment_mc">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
+                                                        <span class="bb-subscription-method-info"><strong>Mastercard •••• 3733 <span class="badge bb-badge bb-badge-light-success">Birincil</span></strong><small>12/2028 · Demo</small></span><input id="bb_sub_payment_mc" type="radio" name="subscriptionPayment" value="mc" data-label="Mastercard •••• 3733" checked>
+                                                    </label>
+                                                    <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="mc"><div><dt>Kart üzerindeki ad</dt><dd>Örnek Kart Sahibi</dd></div><div><dt>Tür</dt><dd>Mastercard · Demo</dd></div><div><dt>Son dört hane</dt><dd>3733</dd></div><div><dt>Son kullanım</dt><dd>12/2028</dd></div></dl>
+                                                    <label class="bb-subscription-method" for="bb_sub_payment_visa">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
+                                                        <span class="bb-subscription-method-info"><strong>Visa •••• 1679</strong><small>09/2029 · Demo</small></span><input id="bb_sub_payment_visa" type="radio" name="subscriptionPayment" value="visa" data-label="Visa •••• 1679">
+                                                    </label>
+                                                    <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="visa" hidden><div><dt>Tür</dt><dd>Visa · Demo</dd></div><div><dt>Son kullanım</dt><dd>09/2029</dd></div></dl>
+                                                    <label class="bb-subscription-method" for="bb_sub_payment_amex">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
+                                                        <span class="bb-subscription-method-info"><strong>American Express •••• 2040</strong><small>10/2029 · Demo</small></span><input id="bb_sub_payment_amex" type="radio" name="subscriptionPayment" value="amex" data-label="American Express •••• 2040">
+                                                    </label>
+                                                    <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="amex" hidden><div><dt>Tür</dt><dd>American Express · Demo</dd></div><div><dt>Son kullanım</dt><dd>10/2029</dd></div></dl>
+                                                </div>
+                                            </section>
+                                            <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_advanced_title">
+                                                <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_advanced_title">Gelişmiş Seçenekler</h2></div>
+                                                <div class="bb-card-body">
+                                                    <h3 class="h6 mb-3">Özel Alanlar</h3><div data-bb-sub-custom>
+                                                        <div class="bb-subscription-custom-row"><input class="form-control form-control-solid" name="customKey[]" aria-label="Özel alan adı" placeholder="Alan adı" maxlength="80"><input class="form-control form-control-solid" name="customValue[]" aria-label="Özel alan değeri" placeholder="Değer" maxlength="150">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-sub-remove-custom>Kaldır</button></div>
+                                                    </div><button type="button" class="btn bb-btn-secondary btn-sm mb-4" data-bb-sub-add-custom>Özel alan ekle</button>
+                                                    <div class="mb-4">
+                                                        <label for="bb_sub_invoice_footer" class="form-label">Fatura alt notu</label><textarea class="form-control form-control-solid" id="bb_sub_invoice_footer" name="invoiceFooter" rows="3" maxlength="1000" placeholder="Örnek fatura notu"></textarea>
+                                                    </div>
+                                                    <div class="bb-subscription-option mb-3">
+                                                        <div class="fw-semibold mb-2">Kullanım eşiği</div>
+                                                        <div class="form-check">
+                                                            <input id="bb_sub_usage" class="form-check-input" type="checkbox" name="usageThreshold" checked>
+                                                            <label class="form-check-label" for="bb_sub_usage">Kullanım %80'e ulaştığında bilgilendir</label>
                                                         </div>
                                                     </div>
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-subscription-table-wrap"><table class="bb-subscription-table"><thead><tr><th scope="col">ÜRÜN</th><th scope="col">ADET</th><th scope="col">TUTAR</th><th scope="col">KALDIR</th></tr></thead><tbody data-bb-sub-products></tbody></table></div><p class="text-body-secondary bb-subscription-empty mt-3" data-bb-sub-empty hidden>Henüz plan eklenmedi.</p>
-                                                    </div>
-                                                </section>
-                                                <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_payment_title">
-                                                    <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_payment_title">Ödeme Yöntemi</h2><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-sub-new-method>Yeni Yöntem</button></div>
-                                                    <div class="bb-card-body">
-                                                        <label class="bb-subscription-method" for="bb_sub_payment_mc">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
-                                                            <span class="bb-subscription-method-info"><strong>Mastercard •••• 3733 <span class="badge bb-badge bb-badge-light-success">Birincil</span></strong><small>12/2028 · Demo</small></span><input id="bb_sub_payment_mc" type="radio" name="subscriptionPayment" value="mc" data-label="Mastercard •••• 3733" checked>
-                                                        </label>
-                                                        <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="mc"><div><dt>Kart üzerindeki ad</dt><dd>Örnek Kart Sahibi</dd></div><div><dt>Tür</dt><dd>Mastercard · Demo</dd></div><div><dt>Son dört hane</dt><dd>3733</dd></div><div><dt>Son kullanım</dt><dd>12/2028</dd></div></dl>
-                                                        <label class="bb-subscription-method" for="bb_sub_payment_visa">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
-                                                            <span class="bb-subscription-method-info"><strong>Visa •••• 1679</strong><small>09/2029 · Demo</small></span><input id="bb_sub_payment_visa" type="radio" name="subscriptionPayment" value="visa" data-label="Visa •••• 1679">
-                                                        </label>
-                                                        <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="visa" hidden><div><dt>Tür</dt><dd>Visa · Demo</dd></div><div><dt>Son kullanım</dt><dd>09/2029</dd></div></dl>
-                                                        <label class="bb-subscription-method" for="bb_sub_payment_amex">
-                                                            <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
-                                                            <span class="bb-subscription-method-info"><strong>American Express •••• 2040</strong><small>10/2029 · Demo</small></span><input id="bb_sub_payment_amex" type="radio" name="subscriptionPayment" value="amex" data-label="American Express •••• 2040">
-                                                        </label>
-                                                        <dl class="bb-subscription-payment-detail" data-bb-sub-payment-detail="amex" hidden><div><dt>Tür</dt><dd>American Express · Demo</dd></div><div><dt>Son kullanım</dt><dd>10/2029</dd></div></dl>
-                                                    </div>
-                                                </section>
-                                                <section class="bb-card bb-subscription-card" aria-labelledby="bb_sub_advanced_title">
-                                                    <div class="bb-card-header"><h2 class="bb-card-title" id="bb_sub_advanced_title">Gelişmiş Seçenekler</h2></div>
-                                                    <div class="bb-card-body">
-                                                        <h3 class="h6 mb-3">Özel Alanlar</h3><div data-bb-sub-custom>
-                                                            <div class="bb-subscription-custom-row"><input class="form-control form-control-solid" name="customKey[]" aria-label="Özel alan adı" placeholder="Alan adı" maxlength="80"><input class="form-control form-control-solid" name="customValue[]" aria-label="Özel alan değeri" placeholder="Değer" maxlength="150">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-sub-remove-custom>Kaldır</button></div>
-                                                        </div>\<button type="button" class="btn bb-btn-secondary btn-sm mb-4" data-bb-sub-add-custom>Özel alan ekle</button>
-                                                        <div class="mb-4">
-                                                            <label for="bb_sub_invoice_footer" class="form-label">Fatura alt notu</label><textarea class="form-control form-control-solid" id="bb_sub_invoice_footer" name="invoiceFooter" rows="3" maxlength="1000" placeholder="Örnek fatura notu"></textarea>
-                                                        </div>
-                                                        <div class="bb-subscription-option mb-3">
-                                                            <div class="fw-semibold mb-2">Kullanım eşiği</div>
-                                                            <div class="form-check">
-                                                                <input id="bb_sub_usage" class="form-check-input" type="checkbox" name="usageThreshold" checked>
-                                                                <label class="form-check-label" for="bb_sub_usage">Kullanım %80'e ulaştığında bilgilendir</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="bb-subscription-option">
-                                                            <div class="fw-semibold mb-2">Orantılı faturalandırma</div>
-                                                            <div class="form-check">
-                                                                <input id="bb_sub_prorate" class="form-check-input" type="checkbox" name="prorate">
-                                                                <label class="form-check-label" for="bb_sub_prorate">Dönem ortası değişiklikleri orantılı hesapla (örnek)</label>
-                                                            </div>
+                                                    <div class="bb-subscription-option">
+                                                        <div class="fw-semibold mb-2">Orantılı faturalandırma</div>
+                                                        <div class="form-check">
+                                                            <input id="bb_sub_prorate" class="form-check-input" type="checkbox" name="prorate">
+                                                            <label class="form-check-label" for="bb_sub_prorate">Dönem ortası değişiklikleri orantılı hesapla (örnek)</label>
                                                         </div>
                                                     </div>
-                                                </section>
-                                            </div>
-                                            <aside class="bb-subscription-summary" aria-label="Abonelik özeti">
-                                                <section class="bb-card bb-subscription-card">
-                                                    <div class="bb-card-header"><h2 class="bb-card-title">Özet</h2></div>
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-subscription-summary-block">
-                                                            <h3>Müşteri bilgileri</h3><p data-bb-sub-customer-name>Ayşe Kaya</p><small data-bb-sub-customer-email>ayse@example.com</small>
-                                                        </div>
-                                                        <div class="bb-subscription-summary-block">
-                                                            <h3>Ürün detayları</h3><p data-bb-sub-plan-summary>Başlangıç Planı, Pro Plan</p><small>Her ay yenilenen örnek planlar</small>
-                                                        </div>
-                                                        <div class="bb-subscription-summary-block">
-                                                            <h3>Ödeme bilgileri</h3><p data-bb-sub-payment-summary>Mastercard •••• 3733</p><small>Ödeme alınmaz</small>
-                                                        </div>
-                                                        <div class="bb-subscription-summary-total"><span>Aylık toplam</span><strong data-bb-sub-total>₺0,00</strong></div>
-                                                        <button class="btn btn-primary" data-bb-sub-create type="submit">Aboneliği Create (Demo)</button>
-                                                        <p class="bb-subscription-aux mt-3 mb-0">Bu işlem abonelik, kart kaydı veya tahsilat oluşturmaz.</p>
-                                                    </div>
-                                                </section>
-                                            </aside>
+                                                </div>
+                                            </section>
                                         </div>
-                                        <div role="status" tabindex="-1" class="alert alert-info bb-subscription-result mt-4" data-bb-sub-result hidden></div>
-                                    </form>
-                                </div>
-                            </section>
-
-                        </div>
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
+                                        <aside class="bb-subscription-summary" aria-label="Abonelik özeti">
+                                            <section class="bb-card bb-subscription-card">
+                                                <div class="bb-card-header"><h2 class="bb-card-title">Özet</h2></div>
+                                                <div class="bb-card-body">
+                                                    <div class="bb-subscription-summary-block">
+                                                        <h3>Müşteri bilgileri</h3><p data-bb-sub-customer-name>Ayşe Kaya</p><small data-bb-sub-customer-email>ayse@example.com</small>
+                                                    </div>
+                                                    <div class="bb-subscription-summary-block">
+                                                        <h3>Ürün detayları</h3><p data-bb-sub-plan-summary>Başlangıç Planı, Pro Plan</p><small>Her ay yenilenen örnek planlar</small>
+                                                    </div>
+                                                    <div class="bb-subscription-summary-block">
+                                                        <h3>Ödeme bilgileri</h3><p data-bb-sub-payment-summary>Mastercard •••• 3733</p><small>Ödeme alınmaz</small>
+                                                    </div>
+                                                    <div class="bb-subscription-summary-total"><span>Aylık toplam</span><strong data-bb-sub-total>₺0,00</strong></div>
+                                                    <button class="btn btn-primary" data-bb-sub-create type="submit">Aboneliği Create (Demo)</button>
+                                                    <p class="bb-subscription-aux mt-3 mb-0">Bu işlem abonelik, kart kaydı veya tahsilat oluşturmaz.</p>
+                                                </div>
+                                            </section>
+                                        </aside>
+                                    </div>
+                                    <div role="status" tabindex="-1" class="alert alert-info bb-subscription-result mt-4" data-bb-sub-result hidden></div>
+                                </form>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </footer>
+            </main>
+            <!--/::Main-->
         </div>
+        <!--::Footer-->
+
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/panel/bb-panel.js"></script>
     <script src="../../assets/js/panel/bb-panel-theme.js"></script>

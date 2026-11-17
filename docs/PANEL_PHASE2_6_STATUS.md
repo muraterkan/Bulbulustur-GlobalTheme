@@ -8,7 +8,7 @@
 - **Faz 4:** `layout/_panel-user.scss`, `assets/js/bb-panel-user.js`, `modules/panel/user-panels.html`. Kullanıcı dropdown'ı ve demo panel içerikleri.
 - **Faz 5:** `layout/_panel-toolbar.scss`, `modules/panel/toolbar.html`. Başlık, breadcrumb, aksiyon butonları ve sekmeler.
 - **Faz 6:** `layout/_panel-variants.scss`, `assets/js/bb-panel-layout.js`, `modules/panel/layouts.html`. Sidebar, topbar ve auth yerleşim geçişi.
-- **Faz 7 taslağı:** `docs/PANEL_PHASE7_MENU_TREE_DRAFT.md`. Menülerin tamamını kullanıma açma/onay yok.
+- **Faz 7 taslağı:** `docs/PANEL_PHASE7_MENU_TREE_DRAFT.md`. Menusin tamamını kullanıma açma/onay yok.
 
 Bütün yeni SCSS partial'ları `assets/scss/main.scss` üzerinden çağrılıyor. `main.css` dosyasının güncel derleme çıktısı repoya yazılmadı.
 

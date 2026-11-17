@@ -32,7 +32,7 @@ if(title)title.textContent="Blog / Ana Sayfa";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
 if(crumb){
  crumb.replaceChildren();
- ["SAYFALAR","Blog","Ana Sayfa"].forEach(function(value,i){
+ ["PAGES","Blog","Ana Sayfa"].forEach(function(value,i){
   var item=document.createElement("li");item.className="breadcrumb-item"+(i===2?" active":"");item.textContent=value;
   if(i===2)item.setAttribute("aria-current","page");
   crumb.appendChild(item);

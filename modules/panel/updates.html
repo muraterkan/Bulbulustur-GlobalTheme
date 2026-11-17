@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="utf-8">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+<!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
     <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
@@ -27,7 +29,7 @@
             </div>
             <div class="bb-sidebar-body">
                 <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">GÖSTERGE PANELLERİ</div>
+                    <div class="bb-menu-section">DASHBOARDS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
                             <span class="bb-menu-icon">
@@ -53,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">SAYFALAR</div>
+                    <div class="bb-menu-section">PAGES</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
                             <span class="bb-menu-icon">
@@ -356,7 +358,7 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">construction</span>
                                 </span>
                             </span>
-                            <span class="bb-menu-title">Yardımcı Sayfalar</span>
+                            <span class="bb-menu-title">Helpcı Sayfalar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
@@ -670,7 +672,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Mesajlar</span>
+                                        <span class="bb-menu-title">Messges</span>
                                     </a>
                                 </div>
                             </div>
@@ -700,7 +702,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
                             </span>
-                            <span class="bb-menu-title">Takvim</span>
+                            <span class="bb-menu-title">Calendar</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
@@ -751,7 +753,7 @@
             <div class="bb-sidebar-footer">
                 <a class="bb-panel-sidebar-docs" href="../components/menu.html">
                     <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                    <span>Bileşenler</span>
+                    <span>Components</span>
                 </a>
             </div>
         </aside>
@@ -772,7 +774,7 @@
                                     <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Sayfalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -785,7 +787,7 @@
                                     </div>
                                 </div>
                                 <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    \<button class="bb-menu-link" type="button" aria-expanded="false">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
                                         Uygulamalar <span class="bb-menu-arrow"></span>
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
@@ -801,14 +803,14 @@
                                     <a class="bb-menu-link" href="layouts.html">Düzenler</a>
                                 </div>
                                 <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Yardım</a>
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
                     <div class="bb-shell-header-right bb-panel-header-actions">
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
                             </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
@@ -816,18 +818,18 @@
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Bildirimler" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Bildirimler</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Mesajlar" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Mesajlar</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            \<button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
@@ -853,39 +855,39 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>Profilim</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projectsim</span>
+                                        <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
                                     <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
-                                        <span>Aboneliğim</span>
+                                        <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                         </span>
                                     </button>
                                     <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Faturalarım</span>
+                                        <span>Orders</span>
                                     </a>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>Görünüm</span>
+                                        <span>View Mode</span>
                                         <span class="bb-panel-user-meta">
                                             <span data-bb-panel-user-mode-text>Koyu</span>
                                             <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
                                         </span>
                                     </button>
                                     <div class="bb-panel-user-item">
-                                        <span>Dil</span>
+                                        <span>Languages</span>
                                         <span class="bb-panel-user-meta">Türkçe (demo)</span>
                                     </div>
                                     <a class="bb-panel-user-item" href="account.html">
                                         <span>Manage Account ayarları</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Çıkış</span>
+                                        <span>Logout</span>
                                         <span class="bb-panel-user-meta">Demo</span>
                                     </button>
                                 </div>
@@ -895,256 +897,258 @@
                 </div>
             </header>
 
-            <div class="bb-wrapper">
-                <header>
-                </header>
-                <main class="bb-main">
-                    <div class="bb-main-inner bb-wrapper">
-                        <div class="bb-container">
-                            <div class="bb-toolbar">
-                                <div class="bb-panel-content-container">
-                                    <div class="bb-toolbar-row">
-                                        <div class="bb-toolbar-col-left">
-                                            <h1 class="bb-page-title">Yenilikler</h1>
-                                            <nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item">Ana Sayfa</li><li class="breadcrumb-item active" aria-current="page">Yenilikler</li></ol></nav>
-                                        </div>
-                                        <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                            <button class="btn bb-btn-secondary" type="button">Sürümleri Yönet</button>
-                                        </div>
+
+
+            <!--::Main-->
+            <main class="bb-main">
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Yenilikler</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item">Ana Sayfa</li><li class="breadcrumb-item active" aria-current="page">Yenilikler</li></ol></nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <button class="btn bb-btn-secondary" type="button">Sürümleri Yönet</button>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <section class="bb-content bb-updates-page" aria-label="Yenilikler">
-                                <div class="bb-panel-content-container">
-                                    <article class="bb-card bb-updates-hero">
-                                        <div class="bb-card-body">
-                                            <div class="bb-updates-date">
-                                                <span class="bb-badge bb-badge-light-primary">2026.10.27</span>
-                                                <span>27.10.2026</span>
-                                            </div>
-                                            <h2>Panel Güncellendi</h2>
-                                            <p>Bu güncelleme iş akışınızı hızlandıracak yeni özellikler ve iyileştirmeler içeriyor.</p>
-                                            <h3>Yenilenen Management Paneli</h3>
-                                            <p>Panel Metronic 8 yaklaşımından ilham alınarak Bulbulustur bileşen sistemiyle yeniden düzenlendi. Görevler, takımlar, bildirimler, yardım merkezi ve yönetim araçları bu sürümde birlikte geliyor.</p>
+                        <section class="bb-content bb-updates-page" aria-label="Yenilikler">
+                            <div class="bb-panel-content-container">
+                                <article class="bb-card bb-updates-hero">
+                                    <div class="bb-card-body">
+                                        <div class="bb-updates-date">
+                                            <span class="bb-badge bb-badge-light-primary">2026.10.27</span>
+                                            <span>27.10.2026</span>
                                         </div>
-                                    </article>
-
-                                    <div class="bb-updates-section-head">
-                                        <div>
-                                            <h2>Yenilenen Management Paneli</h2>
-                                            <p>
-                                                <span class="bb-badge bb-badge-light-primary">2026.10.27</span> 27.10.2026 — Panel deneyimi ve yönetim araçları güncellendi.
-                                            </p>
-                                        </div>
+                                        <h2>Panel Güncellendi</h2>
+                                        <p>Bu güncelleme iş akışınızı hızlandıracak yeni özellikler ve iyileştirmeler içeriyor.</p>
+                                        <h3>Yenilenen Management Paneli</h3>
+                                        <p>Panel Metronic 8 yaklaşımından ilham alınarak Bulbulustur bileşen sistemiyle yeniden düzenlendi. Görevler, takımlar, bildirimler, yardım merkezi ve yönetim araçları bu sürümde birlikte geliyor.</p>
                                     </div>
+                                </article>
 
-                                    <div class="bb-updates-grid">
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">task_alt</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Yenilenen Panel Tasarımı</h3>
-                                                <p>Panel arayüzü daha sade, hızlı ve mobil uyumlu olacak şekilde güncellendi.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">assignment</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Görev Yönetimi</h3>
-                                                <p>Görevleri tek ekranda filtreleyin, durum değiştirin, atayın ve yorumlayın.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">groups</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Takımlar</h3>
-                                                <p>Takım oluşturun, çalışanları takıma ekleyin ve görevleri ekiplerle yönetin.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">smart_toy</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>AI Personel Ataması</h3>
-                                                <p>Görev atama listesi arama destekli. AI çalışan adlarının yanında AI etiketiyle görünür.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="iyileştirme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">tune</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">İyileştirme</span>
-                                                <h3>Görev Durum ve Öncelikleri Veritabanından</h3>
-                                                <p>Todo, Devam Ediyor gibi durumlar ve öncelikler artık merkezi veriden gelir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="iyileştirme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">account_circle</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">İyileştirme</span>
-                                                <h3>Görev Listesinde Açan Kişi Fotoğrafı</h3>
-                                                <p>Görev listesinde görevi açan kişinin profil görseli görünür.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">notifications_active</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Yeni Bildirim Merkezi</h3>
-                                                <p>Uyarı, güncelleme ve log sekmeleri; renkli ve ikonlu bildirimler tek yerde.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="düzeltme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">build</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Düzeltme</span>
-                                                <h3>Bildirimler Kişiye Özel</h3>
-                                                <p>Artık yalnızca kendi bildirimlerinizi görürsünüz ve yeni kayıtlar üstte listelenir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">schedule</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Hangfire İş Yönetimi</h3>
-                                                <p>Yetkili kullanıcılar zamanlanmış işleri panelden görür, düzenler ve tetikler.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">admin_panel_settings</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Panel Menü ve Yetki</h3>
-                                                <p>Menü ve yetki yapısı tek ekranda toplandı. Rol ve bölüm bazlı yetkilendirme desteklenir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">support_agent</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Yardım Merkezi</h3>
-                                                <p>Konular, kategoriler ve memnuniyet göstergeleri tek bakışta izlenebilir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="iyileştirme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">priority_high</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">İyileştirme</span>
-                                                <h3>Destek Talebi Öncelikleri</h3>
-                                                <p>Destek önceliği listesi dolu gelir; arşivlenen talepler ulaşıma engel olmaz.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="düzeltme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">category</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Düzeltme</span>
-                                                <h3>Yardım Kategorileri Uyarısı</h3>
-                                                <p>Yardım kategorilerine ulaşılamadığında sessiz kalmak yerine açıklayıcı uyarı gösterilir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="iyileştirme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">translate</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">İyileştirme</span>
-                                                <h3>Çeviriler Ana Veri Panosu</h3>
-                                                <p>Çeviri ekranları yeni tasarıma taşındı ve ana veri panosunun düzenini kullanır.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="iyileştirme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">menu_open</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">İyileştirme</span>
-                                                <h3>Sadeleşen Menüler</h3>
-                                                <p>Sol menüden gereksiz öğeler kaldırıldı; tekrar eden kullanıcı menüsü sadeleştirildi.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="düzeltme">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">query_stats</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Düzeltme</span>
-                                                <h3>Üye Statiscitci Uyarısı</h3>
-                                                <p>Üye servisine ulaşılamadığında sıfır göstermek yerine açıklayıcı bir uyarı gösterilir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">language</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Giriş Sayfasında Dil Menüsü</h3>
-                                                <p>Management, HR ve Finance giriş ekranlarında diller kendi adlarıyla listelenir.</p>
-                                            </div>
-                                        </article>
-                                        <article class="bb-update-card" data-kind="yeni">
-                                            <div class="bb-update-visual" aria-hidden="true">
-                                                <span class="material-symbols-outlined">new_releases</span>
-                                            </div>
-                                            <div class="bb-update-card-body">
-                                                <span class="bb-update-badge">Yeni</span>
-                                                <h3>Yenilikler Merkezi</h3>
-                                                <p>Yeni sürümden sonra ilk girişte yenilikler gösterilir; kapattığınızda tekrar açılmaz.</p>
-                                            </div>
-                                        </article>
+                                <div class="bb-updates-section-head">
+                                    <div>
+                                        <h2>Yenilenen Management Paneli</h2>
+                                        <p>
+                                            <span class="bb-badge bb-badge-light-primary">2026.10.27</span> 27.10.2026 — Panel deneyimi ve yönetim araçları güncellendi.
+                                        </p>
                                     </div>
                                 </div>
-                            </section>
 
-                </main>
-                <footer>
-                </footer>
-            </div>
-
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Alt bağlantılar">
-                            <a class="bb-footer-link" href="../components/cards.html">Bileşenler</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menüler</a>
-                        </nav>
+                                <div class="bb-updates-grid">
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">task_alt</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Yenilenen Panel Tasarımı</h3>
+                                            <p>Panel arayüzü daha sade, hızlı ve mobil uyumlu olacak şekilde güncellendi.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">assignment</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Görev Yönetimi</h3>
+                                            <p>Görevleri tek ekranda filtreleyin, durum değiştirin, atayın ve yorumlayın.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">groups</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Takımlar</h3>
+                                            <p>Takım oluşturun, çalışanları takıma ekleyin ve görevleri ekiplerle yönetin.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">smart_toy</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>AI Personel Ataması</h3>
+                                            <p>Görev atama listesi arama destekli. AI çalışan adlarının yanında AI etiketiyle görünür.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="iyileştirme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">tune</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">İyileştirme</span>
+                                            <h3>Görev Durum ve Öncelikleri Veritabanından</h3>
+                                            <p>Todo, Devam Ediyor gibi durumlar ve öncelikler artık merkezi veriden gelir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="iyileştirme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">account_circle</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">İyileştirme</span>
+                                            <h3>Görev Listesinde Açan Kişi Fotoğrafı</h3>
+                                            <p>Görev listesinde görevi açan kişinin profil görseli görünür.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">notifications_active</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Yeni Bildirim Merkezi</h3>
+                                            <p>Uyarı, güncelleme ve log sekmeleri; renkli ve ikonlu bildirimler tek yerde.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="düzeltme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">build</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Düzeltme</span>
+                                            <h3>Notifications Kişiye Özel</h3>
+                                            <p>Artık yalnızca kendi bildirimlerinizi görürsünüz ve yeni kayıtlar üstte listelenir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">schedule</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Hangfire İş Yönetimi</h3>
+                                            <p>Yetkili kullanıcılar zamanlanmış işleri panelden görür, düzenler ve tetikler.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">admin_panel_settings</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Panel Menü ve Yetki</h3>
+                                            <p>Menü ve yetki yapısı tek ekranda toplandı. Rol ve bölüm bazlı yetkilendirme desteklenir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">support_agent</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Help Merkezi</h3>
+                                            <p>Konular, kategoriler ve memnuniyet göstergeleri tek bakışta izlenebilir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="iyileştirme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">priority_high</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">İyileştirme</span>
+                                            <h3>Destek Talebi Öncelikleri</h3>
+                                            <p>Destek önceliği listesi dolu gelir; arşivlenen talepler ulaşıma engel olmaz.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="düzeltme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">category</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Düzeltme</span>
+                                            <h3>Help Kategorileri Uyarısı</h3>
+                                            <p>Help kategorilerine ulaşılamadığında sessiz kalmak yerine açıklayıcı uyarı gösterilir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="iyileştirme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">translate</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">İyileştirme</span>
+                                            <h3>Çeviriler Ana Veri Panosu</h3>
+                                            <p>Çeviri ekranları yeni tasarıma taşındı ve ana veri panosunun düzenini kullanır.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="iyileştirme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">menu_open</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">İyileştirme</span>
+                                            <h3>Sadeleşen Menus</h3>
+                                            <p>Sol menüden gereksiz öğeler kaldırıldı; tekrar eden kullanıcı menüsü sadeleştirildi.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="düzeltme">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">query_stats</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Düzeltme</span>
+                                            <h3>Üye Statiscitci Uyarısı</h3>
+                                            <p>Üye servisine ulaşılamadığında sıfır göstermek yerine açıklayıcı bir uyarı gösterilir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">language</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Giriş Sayfasında Dil Menüsü</h3>
+                                            <p>Management, HR ve Finance giriş ekranlarında diller kendi adlarıyla listelenir.</p>
+                                        </div>
+                                    </article>
+                                    <article class="bb-update-card" data-kind="yeni">
+                                        <div class="bb-update-visual" aria-hidden="true">
+                                            <span class="material-symbols-outlined">new_releases</span>
+                                        </div>
+                                        <div class="bb-update-card-body">
+                                            <span class="bb-update-badge">Yeni</span>
+                                            <h3>Yenilikler Merkezi</h3>
+                                            <p>Yeni sürümden sonra ilk girişte yenilikler gösterilir; kapattığınızda tekrar açılmaz.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </footer>
+            </main>
+            <!--/::Main-->
         </div>
+
+        <!--::Footer-->
+        <footer class="bb-shell-footer bb-footer">
+            <div class="bb-footer-bar">
+                <div class="bb-footer-inner">
+                    <div class="bb-footer-left">
+                        <span>2026 ©</span>
+                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                    </div>
+                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!--/::Footer-->
     </div>
+    <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

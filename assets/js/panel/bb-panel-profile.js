@@ -104,9 +104,9 @@ function pageSettings() {
     '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Örnek Kullanıcı" maxlength="120" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_email">E-posta</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_city">Şehir</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
-    '<div class="col-md-6"><label class="form-label" for="profile_language">Dil</label><select class="form-select form-select-solid" id="profile_language" name="language"><option>Türkçe</option><option>English</option></select></div>' +
+    '<div class="col-md-6"><label class="form-label" for="profile_language">Languages</label><select class="form-select form-select-solid" id="profile_language" name="language"><option>Türkçe</option><option>English</option></select></div>' +
     '<div class="col-12"><label class="form-label" for="profile_about">Hakkımda</label><textarea class="form-control form-control-solid" id="profile_about" name="about" rows="4" maxlength="1000">Panel tasarım sistemi üzerinde çalışıyorum.</textarea></div>' +
-    '<div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="profile_notify" checked><label class="form-check-label" for="profile_notify">Bildirimleri etkinleştir</label></div></div>' +
+    '<div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="profile_notify" checked><label class="form-check-label" for="profile_notify">Notificationsi etkinleştir</label></div></div>' +
     '</div><div class="d-flex gap-2 justify-content-end mt-4"><button type="reset" class="btn bb-btn-secondary">Sıfırla</button><button type="submit" class="btn btn-primary">Değişiklikleri kontrol et</button></div>' +
     '<p class="text-body-secondary mt-3" data-bb-profile-status role="status">Bu sayfa demo formudur; bilgileri kaydetmez.</p></form>');
 }
@@ -230,7 +230,7 @@ if (pageTitle) pageTitle.textContent = "Kullanıcı Profili / " + title;
 var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
 if (breadcrumb) {
   breadcrumb.replaceChildren();
-  ["SAYFALAR","Kullanıcı Profili",title].forEach(function(t,i,items){
+  ["PAGES","Kullanıcı Profili",title].forEach(function(t,i,items){
     var li=document.createElement("li");
     li.className="breadcrumb-item" + (i===items.length-1 ? " active":"");
     li.textContent=t;

@@ -71,7 +71,7 @@ Karar: türetilmiş durum tokenlarının (`--bb-*-hover/active/light/clarity`, 8
 - **Düğme yazısı:** `success`/`warning` dolgu üstü yazı beyaz yerine koyu mürekkep (`navy-900`; success 2.28 → 7.99). `danger` dolgu `red-500` → `red-600` (`#d43030`, beyaz 3.76 → 4.92). Koyu temada warning yazısı açık renk çıkma hatası da düzeldi (`gray-900` koyu temada açık renge dönüyordu).
 - **Ölçek:** tüm aksan ölçekleri 50–900 (200/400/600/800/900 eklendi, mevcut 50/100/300/500/700 değişmedi); sarı 400/800/900, navy 200/400/600/800 eklendi.
 - **Grafik/durum:** `themes/_dataviz.scss`: `--bb-chart-1..8` (kategorik, CVD-güvenli sabit sıra), `--bb-chart-seq-1..7`, `--bb-chart-div-*`, `--bb-chart-surface/grid/axis/label/gap`, `--bb-status-good/warning/serious/critical/neutral`. Pakete bağımsız. Doğrulayıcı (dataviz `validate_palette`): açık ve koyu tüm kapılar PASS; açıkta 3 seri kontrast WARN (etiket/tablo zorunlu).
-- **Bileşenler:** `bb-skeleton` (+text/title/circle/avatar/rect/pill, reduced-motion), `bb-status` (online/away/busy/offline/serious, etiketli, çevrimdışı içi boş halka), `bb-kbd`, `bb-code`, `bb-code-block`. Demo: `modules/foundation/tokens.html`.
+- **Components:** `bb-skeleton` (+text/title/circle/avatar/rect/pill, reduced-motion), `bb-status` (online/away/busy/offline/serious, etiketli, çevrimdışı içi boş halka), `bb-kbd`, `bb-code`, `bb-code-block`. Demo: `modules/foundation/tokens.html`.
 - Sözleşme 22/22.
 
 

@@ -126,7 +126,7 @@
           <div class="bb-datetime-popover-footer">
             <div class="bb-datetime-selected" data-bb-selected>Seçim yok</div>
             <button type="button" class="btn btn-light btn-sm" data-bb-action="clear">Temizle</button>
-            <button type="button" class="btn btn-light btn-sm" data-bb-action="cancel">İptal</button>
+            <button type="button" class="btn btn-light btn-sm" data-bb-action="cancel">Cancel</button>
             <button type="button" class="btn btn-primary btn-sm" data-bb-action="apply">Uygula</button>
           </div>
         `;

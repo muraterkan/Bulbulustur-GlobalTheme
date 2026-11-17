@@ -27,7 +27,7 @@
     "draugr-storefront": {title:"Vitrin", group:"Draugr", section:"DRAUGR"},
     "draugr-navigation": {title:"Kategoriler & Navigasyon", group:"Draugr", section:"DRAUGR"},
     "draugr-content": {title:"Sayfalar & İçerik", group:"Draugr", section:"DRAUGR"},
-    "draugr-theme": {title:"Tema & Görünüm", group:"Draugr", section:"DRAUGR"},
+    "draugr-theme": {title:"Tema & View Mode", group:"Draugr", section:"DRAUGR"},
     "draugr-domain": {title:"Domain & SEO", group:"Draugr", section:"DRAUGR"},
     "draugr-localization": {title:"Dil & Yerelleştirme", group:"Draugr", section:"DRAUGR"},
     "draugr-settings": {title:"Kanal Ayarları", group:"Draugr", section:"DRAUGR"},

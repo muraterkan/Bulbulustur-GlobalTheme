@@ -75,6 +75,6 @@ form.addEventListener("submit",function(event){
  var post=createPost(text);list.prepend(post);form.reset();filter="all";refresh();post.scrollIntoView({block:"nearest",behavior:"auto"});
 });
 var pageTitle=document.querySelector(".bb-page-title");if(pageTitle)pageTitle.textContent="Sosyal / Akış";
-var crumbs=document.querySelector(".bb-breadcrumb .breadcrumb");if(crumbs){crumbs.replaceChildren();["SAYFALAR","Sosyal","Akış"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumbs.append(li);});}
+var crumbs=document.querySelector(".bb-breadcrumb .breadcrumb");if(crumbs){crumbs.replaceChildren();["PAGES","Sosyal","Akış"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumbs.append(li);});}
 refresh();
 })();

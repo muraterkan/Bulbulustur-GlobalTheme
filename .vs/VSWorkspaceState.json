@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\modules",
-    "\\modules\\panel"
+    "\\assets\\media\\avatars",
+    "\\modules"
   ],
-  "SelectedNode": "\\modules\\panel\\social-feed.html",
+  "SelectedNode": "\\modules\\panel",
   "PreviewInSolutionExplorer": false
 }
