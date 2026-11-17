@@ -63,7 +63,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">person</span>
                             </span>
-                            <span class="bb-menu-title">User Prifilee</span>
+                            <span class="bb-menu-title">User Profile</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile">
@@ -781,7 +781,7 @@
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
                                         <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="profile.html">Prifile</a>
+                                            <a class="bb-menu-link" href="profile.html">Profil</a>
                                         </div>
                                         <div class="bb-menu-item">
                                             <a class="bb-menu-link" href="account.html">Manage Account</a>
@@ -824,13 +824,15 @@
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
                             </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                                <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
                             </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                                <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
@@ -859,7 +861,7 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>My Prifilee</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
                                         <span>Projects</span>
@@ -1017,22 +1019,22 @@
                                                         <li>
                                                             <i class="bb-dashboard-legend-mark" aria-hidden="true"></i>
                                                             <span class="bb-dashboard-legend-label">Web</span>
-<strong>%44</strong>
+                                                            <strong>%44</strong>
                                                         </li>
                                                         <li>
                                                             <i class="bb-dashboard-legend-mark" data-series="3" aria-hidden="true"></i>
                                                             <span class="bb-dashboard-legend-label">Pazaryeri</span>
-<strong>%30</strong>
+                                                            <strong>%30</strong>
                                                         </li>
                                                         <li>
                                                             <i class="bb-dashboard-legend-mark" data-series="2" aria-hidden="true"></i>
                                                             <span class="bb-dashboard-legend-label">Mobil</span>
-<strong>%16</strong>
+                                                            <strong>%16</strong>
                                                         </li>
                                                         <li>
                                                             <i class="bb-dashboard-legend-mark" data-series="4" aria-hidden="true"></i>
                                                             <span class="bb-dashboard-legend-label">Diğer</span>
-<strong>%10</strong>
+                                                            <strong>%10</strong>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1056,12 +1058,21 @@
                                                     <div class="bb-dashboard-day" aria-current="date"><small>Paz</small><strong>15</strong></div>
                                                 </div>
                                                 <ul class="bb-dashboard-appointments">
-                                                    <li><time datetime="2026-11-15T09:30">09:30</time><span>
-<strong>Katalog kontrolü</strong><small>Ürün ve stok eşleştirme · Demo</small></span></li>
-                                                    <li><time datetime="2026-11-15T11:00">11:00</time><span>
-<strong>Sipariş incelemesi</strong><small>Operasyon kontrolü · Demo</small></span></li>
-                                                    <li><time datetime="2026-11-15T14:30">14:30</time><span>
-<strong>Tema değerlendirmesi</strong><small>GlobalTheme tasarım gözden geçirme · Demo</small></span></li>
+                                                    <li>
+                                                        <time datetime="2026-11-15T09:30">09:30</time><span>
+                                                            <strong>Katalog kontrolü</strong><small>Ürün ve stok eşleştirme · Demo</small>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <time datetime="2026-11-15T11:00">11:00</time><span>
+                                                            <strong>Sipariş incelemesi</strong><small>Operasyon kontrolü · Demo</small>
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <time datetime="2026-11-15T14:30">14:30</time><span>
+                                                            <strong>Tema değerlendirmesi</strong><small>GlobalTheme tasarım gözden geçirme · Demo</small>
+                                                        </span>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </section>
@@ -1077,14 +1088,15 @@
                                             <div class="bb-card-body">
                                                 <div class="bb-dashboard-table-wrap">
                                                     <table class="table bb-table table-hover">
-                                                        <thead><tr>
-<th scope="col">Proje</th>
-<th scope="col">Bütçe</th>
-<th scope="col">İlerleme</th>
-<th scope="col">Durum</th>
-<th scope="col">Eğilim</th>
-</tr>
-</thead>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Proje</th>
+                                                                <th scope="col">Bütçe</th>
+                                                                <th scope="col">İlerleme</th>
+                                                                <th scope="col">Durum</th>
+                                                                <th scope="col">Eğilim</th>
+                                                            </tr>
+                                                        </thead>
                                                         <tbody>
                                                             <tr>
                                                                 <td>
@@ -1203,7 +1215,8 @@
                                     <div class="col-xl-4">
                                         <section class="bb-card h-100" aria-labelledby="bb_dashboard_timeline">
                                             <div class="bb-card-header">
-<h2 class="bb-card-title" id="bb_dashboard_timeline">Görev planı</h2></div>
+                                                <h2 class="bb-card-title" id="bb_dashboard_timeline">Görev planı</h2>
+                                            </div>
                                             <div class="bb-card-body">
                                                 <ol class="bb-dashboard-timeline">
                                                     <li>
@@ -1260,32 +1273,31 @@
                 </div>
             </main>
             <!--/::Main-->
-        </div>
-
-        <!--::Footer-->
-        <footer class="bb-shell-footer bb-footer">
-            <div class="bb-footer-bar">
-                <div class="bb-footer-inner">
-                    <div class="bb-footer-left">
-                        <span>2026 ©</span>
-                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+            <!--::Footer-->
+            <footer class="bb-shell-footer bb-footer">
+                <div class="bb-footer-bar">
+                    <div class="bb-footer-inner">
+                        <div class="bb-footer-left">
+                            <span>2026 ©</span>
+                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                        </div>
+                        <nav class="bb-footer-right" aria-label="Sub Links">
+                            <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                            <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                        </nav>
                     </div>
-                    <nav class="bb-footer-right" aria-label="Sub Links">
-                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
-                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
-                    </nav>
                 </div>
-            </div>
-        </footer>
-        <!--/::Footer-->
+            </footer>
+            <!--/::Footer-->
+        </div>
     </div>
-
     <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-<h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">Filtre içeriği Faz 9 kapsamında hazırlanacaktır.</div>
             </div>
         </div>
@@ -1299,6 +1311,7 @@
     <script src="../../assets/js/panel/bb-panel-header.js"></script>
     <script src="../../assets/js/panel/bb-panel-user.js"></script>
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

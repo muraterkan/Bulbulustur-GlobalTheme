@@ -4,7 +4,7 @@
 ===================================== */
 /* 1. Foundation / Tokens */
 /* =====================================
-   Bulbulustur Theme — Theme Prifilee
+   Bulbulustur Theme — Theme Profile
    Bootstrap-parallel token names
    Source: bb-* tokens
    Theme attribute: html[data-bs-theme="light|dark"]
@@ -15314,7 +15314,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     box-shadow: none;
   }
 }
-/* User Prifilee — shared Metronic-style identity card and subpage layout. */
+/* User Profile — shared Metronic-style identity card and subpage layout. */
 .bb-panel .bb-profile-hero {
   overflow: visible;
 }

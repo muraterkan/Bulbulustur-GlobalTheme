@@ -106,6 +106,120 @@
         <!--/::Main-->
 
     </div>script src="../../assets/js/panel/bb-panel-auth.js"></script>
+<!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Bulbulustur Panel — Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body">
+    <!--::Wrapper-->
+    <div class="bb-wrapper">
+        <!--::Main-->
+        <main class="bb-main">
+
+            <div class="bb-container">
+                <div class="bb-app bb-panel bb-panel-auth bb-panel-auth-login" data-bb-panel-layout="auth">
+
+                    <!--::Main-->
+                    <main class="bb-panel-login-layout">
+                        <aside class="bb-panel-login-brand" aria-label="Bulbulustur marka alanı">
+                            <div class="bb-panel-login-brand-art" aria-hidden="true"></div>
+                            <div class="bb-panel-login-brand-copy">
+                                <div class="bb-panel-login-logo">
+                                    <span class="material-symbols-outlined" aria-hidden="true">layers</span>
+                                    <strong>Bulbulustur</strong>
+                                </div>
+                                <p>İşinizi büyüten dijital çözümler</p>
+                            </div>
+                        </aside>
+
+                        <section class="bb-panel-login-surface" aria-label="Login">
+                            <div class="bb-panel-login-main">
+                                <div class="bb-panel-login-form-wrapper">
+                                    <header class="bb-panel-login-intro">
+                                        <h1>Login</h1>
+                                        <p>Bulbulustur yönetim paneline hoş geldiniz.</p>
+                                    </header>
+
+                                    <div class="bb-panel-login-providers" aria-label="Social giriş seçenekleri">
+                                        <button class="btn bb-panel-login-provider" type="button" disabled title="Google ile giriş henüz bağlı değil">
+                                            <span class="bb-panel-login-google" aria-hidden="true">G</span>
+                                            Google ile giriş
+                                        </button>
+                                        <button class="btn bb-panel-login-provider" type="button" disabled title="Apple ile giriş henüz bağlı değil">
+                                            <span class="bb-panel-login-apple" aria-hidden="true">●</span>
+                                            Apple ile giriş
+                                        </button>
+                                    </div>
+
+                                    <div class="bb-panel-login-divider"><span>E-posta ile devam et</span></div>
+
+                                    <form data-bb-auth-form="login">
+                                        <div class="bb-panel-login-field">
+                                            <label class="visually-hidden" for="bb_auth_email">E-posta adresi</label>
+                                            <input class="form-control form-control-solid" id="bb_auth_email" name="email" type="email" autocomplete="username" placeholder="E-posta adresi" required>
+                                        </div>
+                                        <div class="bb-panel-login-field">
+                                            <label class="visually-hidden" for="bb_auth_password">Şifre</label>
+                                            <div class="bb-panel-login-password">
+                                                <input class="form-control form-control-solid" id="bb_auth_password" data-bb-auth-password name="password" type="password" autocomplete="current-password" minlength="8" placeholder="Şifre" required>
+                                                <button class="bb-panel-login-password-toggle" type="button" data-bb-auth-password-toggle aria-pressed="false" aria-controls="bb_auth_password">Göster</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-panel-login-forgot">
+                                            <a href="reset-password.html">Forgot Pasword</a>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary bb-panel-login-submit">Login</button>
+                                    </form>
+
+                                    <div class="bb-alert bb-alert-success bb-panel-auth-result mt-3" data-bb-auth-result role="status" tabindex="-1" hidden></div>
+
+                                    <p class="bb-panel-login-signup">Hesabınız yok mu? <a href="sign-up.html">Register olun</a></p>
+                                    <p class="bb-panel-login-demo">Arayüz demosu: Oturum açılmaz ve veri gönderilmez.</p>
+                                </div>
+                            </div>
+
+                            <!--::Footer-->
+                            <footer class="bb-panel-login-footer">
+                                <span>
+                                    Türkçe <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                                </span>
+                                <nav aria-label="Sub Links">
+                                    <a href="dashboard.html">Panel demosu</a>
+                                    <a href="sign-up.html">Register</a>
+                                    <a href="reset-password.html">Help</a>
+                                </nav>
+                            </footer>
+                            <!--/::Footer-->
+                        </section>
+                    </main>
+                    <!--/::Main-->
+
+                </div>
+            </div>
+        </main>
+        <!--/::Main-->
+
+    </div>
+    <script src="../../assets/js/panel/bb-panel-auth.js"></script>
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

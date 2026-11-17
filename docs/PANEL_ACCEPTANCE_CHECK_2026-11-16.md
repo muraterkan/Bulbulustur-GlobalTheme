@@ -46,7 +46,7 @@ Ekran genişlikleri: 375px, 768px, 1024px, 1440px. Her genişlikte `data-bs-them
 - [ ] **Faz 9 List:** arama, durum filtreleme, sıralama, 5/10/20 kayıt, tekli/toplu seçim, toplu güncelleme (demo), detay; 375px tabloda kaydırma
 - [ ] **Faz 10 Form:** gerekli alanları boş bırakınca ilerleme engeli; geçerli giriş, dosya tür ve boyut sınırları, sürükle-bırak, özet, geri ve sıfırla
 - [ ] **Faz 11 Auth/error:** giriş/kayıt/e-posta sıfırlama alan doğrulaması, şifre eşleme, görünür şifre, gerçek oturum olmadığının mesajı; 404/500 yönlendirme
-- [ ] **Faz 12 Prifile/hesap/fatura:** profil başlığı ve avatar, hesap e-posta doğrulaması, tercihler/sıfırla, fatura tutarları ve Yazdır/PDF baskı görünümü
+- [ ] **Faz 12 Profil/hesap/fatura:** profil başlığı ve avatar, hesap e-posta doğrulaması, tercihler/sıfırla, fatura tutarları ve Yazdır/PDF baskı görünümü
 - [ ] Görsel referansla son karşılaştırma: sol sidebar, header yükseklikleri, kart yüzeyleri, boşluklar, koyu/açık renklerde kontrast
 - [ ] DevTools Console: JavaScript hata ve beklenmeyen ağ isteği bulunmuyor
 - [ ] Klavye ile gizlenmiş menü bağlantısına ulaşılmıyor; sidebar/popup Escape sonrası odak mantıklı öğeye dönüyor

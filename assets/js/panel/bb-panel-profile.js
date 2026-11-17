@@ -1,19 +1,19 @@
-/* Prifilee pages — shared visual structure and content-only demo interactions. */
+/* Profile pages — shared visual structure and content-only demo interactions. */
 (function () {
 "use strict";
 var root = document.querySelector("[data-bb-profile-root]");
 if (!root) return;
-var view = root.dataset.bbPrifileeView || "overview";
+var view = root.dataset.bbProfileView || "overview";
 var pages = [
   ["overview", "Genel Bakış", "profile.html"],
-  ["settings", "Adjustr", "profile-settings.html"],
-  ["security", "Güvenlik", "profile-security.html"],
-  ["activity", "Etkinlik", "profile-activity.html"],
+  ["settings", "Settings", "profile-settings.html"],
+  ["security", "Security", "profile-security.html"],
+  ["activity", "Activity", "profile-activity.html"],
   ["billing", "Faturalandırma", "profile-billing.html"],
   ["statements", "Ekstreler", "profile-statements.html"],
-  ["referrals", "Referanslar", "profile-referrals.html"],
+  ["referrals", "References", "profile-referrals.html"],
   ["api", "API Anahtarları", "profile-api.html"],
-  ["logs", "Registerlar", "profile-logs.html"]
+  ["logs", "Logs", "profile-logs.html"]
 ];
 var extras = [
   ["projects", "Projeler"],
@@ -21,7 +21,7 @@ var extras = [
   ["documents", "Belgeler"],
   ["followers", "Takipçiler"]
 ];
-var title = (pages.find(function(p){return p[0] === view;}) || extras.find(function(p){return p[0] === view;}) || ["", "Prifile"])[1];
+var title = (pages.find(function(p){return p[0] === view;}) || extras.find(function(p){return p[0] === view;}) || ["", "Profil"])[1];
 var outer = document.createElement("div");
 outer.className = "bb-panel-content-container";
 root.appendChild(outer);
@@ -62,7 +62,7 @@ function profileActionsMenu() {
     '<li><a class="dropdown-item" href="profile-statements.html">Ekstreler</a></li>' +
     '<li><a class="dropdown-item bb-action-menu-has-arrow" href="profile-billing.html"><span>Subscription</span><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a></li>' +
     '<li><hr class="dropdown-divider"></li>' +
-    '<li><a class="dropdown-item" href="profile-settings.html">Adjustr</a></li>' +
+    '<li><a class="dropdown-item" href="profile-settings.html">Settings</a></li>' +
     '</ul></div>';
 }
 function profileHero() {
@@ -71,36 +71,36 @@ function profileHero() {
   }).join("");
   return '<section class="bb-card bb-profile-hero mb-4" aria-label="User profil kartı">' +
     '<div class="bb-card-body"><div class="bb-profile-hero-main">' +
-    '<div class="bb-profile-portrait"><img src="../../assets/media/avatars/300-3.jpg" alt="Örnek kullanıcı profil fotoğrafı"><span class="bb-profile-presence" title="Çevrimiçi" aria-label="Çevrimiçi"></span></div>' +
+    '<div class="bb-profile-portrait"><img src="../../assets/media/avatars/300-3.webp" alt="Örnek kullanıcı profil fotoğrafı"><span class="bb-profile-presence" title="Çevrimiçi" aria-label="Çevrimiçi"></span></div>' +
     '<div class="bb-profile-hero-content"><div class="bb-profile-hero-top">' +
     '<div><h2 class="bb-profile-hero-name">Örnek User <span class="material-symbols-outlined" aria-label="Demo doğrulama işareti">verified</span></h2>' +
     '<div class="bb-profile-hero-meta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>Developer</span>' +
     '<span><span class="material-symbols-outlined" aria-hidden="true">location_on</span>İstanbul, Türkiye</span>' +
     '<span><span class="material-symbols-outlined" aria-hidden="true">mail</span>demo@example.com</span></div></div>' +
     '<div class="bb-profile-hero-actions"><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-profile-follow aria-pressed="false">Takip et</button>' +
-    '<a href="profile-settings.html" class="btn btn-primary btn-sm">Prifilei Düzenle</a>' +
+    '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profle Edit</a>' +
     profileActionsMenu() + '</div>' +
     '</div><div class="bb-profile-hero-bottom"><div class="bb-profile-stat-list">' +
     '<div class="bb-profile-stat"><strong>₺4.500</strong><small>Kazanç (demo)</small></div>' +
     '<div class="bb-profile-stat"><strong>80</strong><small>Proje (demo)</small></div>' +
     '<div class="bb-profile-stat"><strong>%60</strong><small>Başarı (demo)</small></div></div>' +
-    '<div class="bb-profile-completion"><div class="bb-profile-completion-line"><span>Prifile tamamlanma oranı</span><strong>%50</strong></div>' +
-    '<div class="bb-profile-completion-track" role="progressbar" aria-label="Prifile tamamlanma" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div></div>' +
+    '<div class="bb-profile-completion"><div class="bb-profile-completion-line"><span>Profil tamamlanma oranı</span><strong>%50</strong></div>' +
+    '<div class="bb-profile-completion-track" role="progressbar" aria-label="Profil tamamlanma" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div></div>' +
     '</div></div></div></div>' +
-    '<nav class="bb-profile-tabs" aria-label="Prifile sayfaları">' + tabs + '</nav></section>';
+    '<nav class="bb-profile-tabs" aria-label="Profil sayfaları">' + tabs + '</nav></section>';
 }
 function pageOverview() {
-  return '<div class="row g-4"><div class="col-xl-8">' + card("Prifile Detayları",detailRows([
-    ["Tam ad", "Örnek User"],["Şirket","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
-    ["Web sitesi","bulbulustur.com"],["Ülke","Türkiye"],["İletişim","E-posta, Telefon"],["Değişiklik izni","Evet"]
-  ]) + '<div class="mt-4">' + note("Prifile bilgilerini tamamlayın", "Eksik alanları Adjustr sayfasından güncelleyebilirsiniz. Bu örnekte veriler kaydedilmez.") + '</div>',
-  '<a href="profile-settings.html" class="btn btn-primary btn-sm">Prifilei Düzenle</a>') +
-  '</div><div class="col-xl-4">' + card("Prifile Durumu",'<div class="bb-profile-metric-grid">' +
+  return '<div class="row g-4"><div class="col-xl-8">' + card("Profile Details",detailRows([
+    ["Full Name", "Örnek User"],["Company","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
+    ["Web sitesi","bulbulustur.com"],["Country","Türkiye"],["Contact","E-posta, Telefon"],["Değişiklik izni","Evet"]
+  ]) + '<div class="mt-4">' + note("Profil bilgilerini tamamlayın", "Eksik alanları Settings sayfasından güncelleyebilirsiniz. Bu örnekte veriler kaydedilmez.") + '</div>',
+  '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profle Edit</a>') +
+  '</div><div class="col-xl-4">' + card("Profil Durumu",'<div class="bb-profile-metric-grid">' +
     metric("Aktif projeler","12") + metric("Takipçi","86") + metric("Bildirim","3") +
     '</div><p class="text-body-secondary mt-4 mb-0">İstatistikler örnek verilerden oluşur.</p>') + '</div></div>';
 }
 function pageSettings() {
-  return card("Prifile Adjustrı",'<form data-bb-profile-form><div class="row g-4">' +
+  return card("Profil Settingsı",'<form data-bb-profile-form><div class="row g-4">' +
     '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Örnek User" maxlength="120" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_email">E-posta</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_city">Şehir</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
@@ -113,16 +113,16 @@ function pageSettings() {
 function pageSecurity() {
   var heights=[41,59,72,90,65,53,64,75,92,76,56,68];
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Güvenlik Özeti", '<div class="bb-profile-metric-grid">' +
+    card("Security Özeti", '<div class="bb-profile-metric-grid">' +
       metric("User girişi","36.899","success") + metric("Yönetici girişi","72","primary") + metric("Başarısız deneme","291","danger") +
-      '</div><h3 class="h6 mt-4">Etkinlik Grafiği</h3><div class="bb-profile-activity-bars" role="img" aria-label="Ocaktan Aralığa örnek güvenlik etkinliği çubuk grafiği">' +
+      '</div><h3 class="h6 mt-4">Activity Grafiği</h3><div class="bb-profile-activity-bars" role="img" aria-label="Ocaktan Aralığa örnek güvenlik etkinliği çubuk grafiği">' +
       heights.map(function(h){return '<div style="--bar-height:'+h+'%"></div>';}).join("") + '</div>' +
       '<div class="bb-profile-activity-labels">Oca Şub Mar Nis May Haz Tem Ağu Eyl Eki Kas Ara</div>' +
       '<small class="text-body-secondary d-block mt-3">Tüm istatistikler temsilidir.</small>') +
     '</div><div class="col-xl-4">' +
     card("Son Uyarılar",'<strong>Hesap güvenliği</strong><p class="text-body-secondary mt-2">Hesabınız için güçlü parola ve iki aşamalı doğrulama önerilir.</p>' +
-      '<div class="mt-4"><span class="badge bb-badge bb-badge-light-primary">Güvenlik önerisi</span></div>') +
-    '<div class="mt-4">' + card("Güvenlik Kuralları",'<strong>Oturum koruması</strong><p class="text-body-secondary mt-2 mb-0">Oturumların ve cihazların düzenli kontrolü önerilir.</p>') + '</div></div></div>' +
+      '<div class="mt-4"><span class="badge bb-badge bb-badge-light-primary">Security önerisi</span></div>') +
+    '<div class="mt-4">' + card("Security Kuralları",'<strong>Oturum koruması</strong><p class="text-body-secondary mt-2 mb-0">Oturumların ve cihazların düzenli kontrolü önerilir.</p>') + '</div></div></div>' +
     '<div class="mt-4">' + card("Oturumlar",table(["Konum","Durum","Cihaz","IP adresi","Zaman"],[
     ["İstanbul, TR",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"Chrome · Windows","192.0.2.10","2 dakika önce"],
     ["Ankara, TR",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"Safari · macOS","192.0.2.20","Dün"],
@@ -131,14 +131,14 @@ function pageSecurity() {
 }
 function pageActivity() {
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Son Etkinlikler", '<ol class="bb-dashboard-timeline">' + [
+    card("Son Activityler", '<ol class="bb-dashboard-timeline">' + [
       ["Ürün bilgileri güncellendi","Katalog üzerinde örnek değişiklik yapıldı","Bugün 11:20"],
-      ["Prifile görüntülendi","Genel bakış sayfası açıldı","Dün 16:45"],
+      ["Profil görüntülendi","Genel bakış sayfası açıldı","Dün 16:45"],
       ["Proje tamamlandı","Panel bileşen düzeni incelendi","14 Kasım 2026"],
       ["Yeni bildirim","Örnek görev bildirimi oluşturuldu","12 Kasım 2026"]
     ].map(function(r,i){return '<li><span class="bb-dashboard-timeline-rail"><span class="bb-dashboard-timeline-marker"></span><span class="bb-dashboard-timeline-line"></span></span>' +
       '<div class="bb-dashboard-timeline-content"><strong>'+r[0]+'</strong><p>'+r[1]+'</p><small>'+r[2]+'</small></div></li>';}).join("")+'</ol>') +
-    '</div><div class="col-xl-4">' + card("Etkinlik Dağılımı",'<div class="bb-profile-metric-grid">'+metric("Bugün","4")+metric("Bu hafta","12")+metric("Bu ay","48")+'</div><p class="text-body-secondary mt-4 mb-0">Örnek aktivite kayıtlarıdır.</p>')+'</div></div>';
+    '</div><div class="col-xl-4">' + card("Activity Dağılımı",'<div class="bb-profile-metric-grid">'+metric("Bugün","4")+metric("Bu hafta","12")+metric("Bu ay","48")+'</div><p class="text-body-secondary mt-4 mb-0">Örnek aktivite kayıtlarıdır.</p>')+'</div></div>';
 }
 function pageBilling() {
   return '<div class="bb-card mb-4"><div class="bb-card-body">' + note("Ödeme bilgileri örnektir", "Bu tasarım gerçek abonelik veya ödeme yönetimi yapmaz.") +
@@ -175,9 +175,9 @@ function pageApi() {
     '<p class="text-body-secondary mt-3 mb-0" role="status" data-bb-profile-status>Test modu örneği; gerçek anahtar veya API çağrısı yok.</p>');
 }
 function pageLogs() {
-  return card("Action Registerları",'<p class="text-body-secondary">Temsili denetim kayıtları; gerçek kullanıcı izleme verisi içermez.</p>' +
+  return card("Action Logsı",'<p class="text-body-secondary">Temsili denetim kayıtları; gerçek kullanıcı izleme verisi içermez.</p>' +
     table(["Action","Kaynak","Sonuç","Tarih"],[
-      ["Prifile görüntüleme","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"16.11.2026"],
+      ["Profil görüntüleme","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"16.11.2026"],
       ["Giriş kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"15.11.2026"],
       ["API demo isteği","Developer",'<span class="badge bb-badge bb-badge-light-warning">Test</span>',"14.11.2026"],
       ["Şifre kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-danger">Reddedildi</span>',"13.11.2026"]
@@ -226,11 +226,11 @@ var content = {
 outer.innerHTML = profileHero() + '<div data-bb-profile-page-content>' +
   (content[view] || pageOverview)() + '</div>';
 var pageTitle = document.querySelector(".bb-page-title");
-if (pageTitle) pageTitle.textContent = "User Prifilei / " + title;
+if (pageTitle) pageTitle.textContent = "User Profili / " + title;
 var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
 if (breadcrumb) {
   breadcrumb.replaceChildren();
-  ["PAGES","User Prifilei",title].forEach(function(t,i,items){
+  ["PAGES","User Profili",title].forEach(function(t,i,items){
     var li=document.createElement("li");
     li.className="breadcrumb-item" + (i===items.length-1 ? " active":"");
     li.textContent=t;
@@ -238,7 +238,7 @@ if (breadcrumb) {
     breadcrumb.appendChild(li);
   });
 }
-/* Keep the User Prifilee sidebar group expanded on tabs without direct sidebar links. */
+/* Keep the User Profile sidebar group expanded on tabs without direct sidebar links. */
 var profileMenuLink = document.querySelector('[data-bb-panel-page="profile-overview"]');
 if (profileMenuLink) {
   var groupNode = profileMenuLink.parentElement;

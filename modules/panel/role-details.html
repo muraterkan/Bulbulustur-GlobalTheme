@@ -3,7 +3,8 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Bulbulustur Theme — Rol Detayı</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -61,7 +62,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">person</span>
                             </span>
-                            <span class="bb-menu-title">User Prifilee</span>
+                            <span class="bb-menu-title">User Profile</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile">
@@ -779,7 +780,7 @@
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
                                         <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="profile.html">Prifile</a>
+                                            <a class="bb-menu-link" href="profile.html">Profil</a>
                                         </div>
                                         <div class="bb-menu-item">
                                             <a class="bb-menu-link" href="account.html">Manage Account</a>
@@ -822,13 +823,15 @@
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
                             </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                                <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
                             </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-<h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                                <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
@@ -857,7 +860,7 @@
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>My Prifilee</span>
+                                        <span>My Profile</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
                                         <span>Projects</span>
@@ -904,7 +907,7 @@
             <!--::Main-->
             <main class="bb-main">
                 <!--::Wrapper-->
-<div class="bb-wrapper">
+                <div class="bb-wrapper">
                     <div class="bb-container">
                         <div class="bb-toolbar">
                             <div class="bb-panel-content-container">
@@ -922,16 +925,22 @@
                                 <div class="bb-role-detail">
                                     <aside class="bb-showcase-card" data-bb-role-sidebar><h2 data-bb-role-name>Developer</h2><ul class="bb-role-points" data-bb-role-permissions><li>Sınırlı yönetim kontrolleri</li><li>Finansal özetleri görüntüle</li><li>API kontrollerini yönet</li><li>Ödemeleri görüntüle</li><li>İtirazları yönet</li></ul><button class="btn bb-btn-secondary" type="button" data-bb-role-edit="Developer">Rolü Düzenle</button></aside><section class="bb-showcase-card" aria-label="Atanan kullanıcılar">
                                         <div class="bb-showcase-filters">
-<h2 class="mb-0">Atanan Users <span class="bb-showcase-muted" data-bb-users-total>(14)</span></h2><input class="form-control" type="search" data-bb-users-search aria-label="Usersda ara" placeholder="User ara"></div>
-                                        <div class="bb-showcase-table-wrap"><table class="bb-showcase-table"><thead><tr>
-<th scope="col"><input class="form-check-input" type="checkbox" data-bb-users-all aria-label="Görünen kullanıcıları seç"></th>
-<th scope="col">ID</th>
-<th scope="col">User</th>
-<th scope="col">Join Date</th>
-<th scope="col">Action</th>
-</tr>
-</thead><tbody data-bb-users-rows></tbody></table>
-</div>
+                                            <h2 class="mb-0">Atanan Users <span class="bb-showcase-muted" data-bb-users-total>(14)</span></h2><input class="form-control" type="search" data-bb-users-search aria-label="Usersda ara" placeholder="User ara">
+                                        </div>
+                                        <div class="bb-showcase-table-wrap">
+                                            <table class="bb-showcase-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"><input class="form-check-input" type="checkbox" data-bb-users-all aria-label="Görünen kullanıcıları seç"></th>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">User</th>
+                                                        <th scope="col">Join Date</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody data-bb-users-rows></tbody>
+                                            </table>
+                                        </div>
                                         <div class="bb-showcase-pagination" data-bb-users-pages></div>
                                     </section>
                                 </div><dialog class="bb-showcase-dialog" data-bb-admin-dialog aria-labelledby="bb_admin_dialog_title">
@@ -949,38 +958,37 @@
                 </div>
             </main>
             <!--/::Main-->
-
-        </div>
-
-        <!--::Footer-->
-        <footer class="bb-shell-footer bb-footer">
-            <div class="bb-footer-bar">
-                <div class="bb-footer-inner">
-                    <div class="bb-footer-left">
-                        <span>2026 ©</span>
-                        <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+            <!--::Footer-->
+            <footer class="bb-shell-footer bb-footer">
+                <div class="bb-footer-bar">
+                    <div class="bb-footer-inner">
+                        <div class="bb-footer-left">
+                            <span>2026 ©</span>
+                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                        </div>
+                        <nav class="bb-footer-right" aria-label="Sub Links">
+                            <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                            <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                        </nav>
                     </div>
-                    <nav class="bb-footer-right" aria-label="Sub Links">
-                        <a class="bb-footer-link" href="../components/cards.html">Components</a>
-                        <a class="bb-footer-link" href="../components/menu.html">Menus</a>
-                    </nav>
                 </div>
-            </div>
-        </footer>
-        <!--/::Footer-->
-
+            </footer>
+            <!--/::Footer-->
+        </div>
     </div>
     <!--::Modals-->
     <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-<h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">Filtre içeriği Faz 9 kapsamında hazırlanacaktır.</div>
             </div>
         </div>
     </div>
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/panel/bb-panel.js"></script>
     <script src="../../assets/js/panel/bb-panel-theme.js"></script>
     <script src="../../assets/js/panel/bb-panel-menu.js"></script>
@@ -988,6 +996,7 @@
     <script src="../../assets/js/panel/bb-panel-user.js"></script>
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
     <script src="../../assets/js/panel/bb-panel-administration.js"></script>
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

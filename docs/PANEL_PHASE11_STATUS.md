@@ -47,4 +47,4 @@ git push origin main
 
 ## Sonraki faz
 
-Faz 12: Prifile, hesap ve fatura sayfaları. User doğrulayıp onaylamadan başlatılmaz.
+Faz 12: Profil, hesap ve fatura sayfaları. User doğrulayıp onaylamadan başlatılmaz.

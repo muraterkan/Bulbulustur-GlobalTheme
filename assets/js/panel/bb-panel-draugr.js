@@ -9,7 +9,7 @@ var views={
  theme:{title:"Draugr / Tema & View Mode",label:"Tema & View Mode"},
  domain:{title:"Draugr / Domain & SEO",label:"Domain & SEO"},
  localization:{title:"Draugr / Dil & Yerelleştirme",label:"Dil & Yerelleştirme"},
- settings:{title:"Draugr / Kanal Adjustrı",label:"Kanal Adjustrı"},
+ settings:{title:"Draugr / Kanal Settingsı",label:"Kanal Settingsı"},
  subscription:{title:"Draugr / Subscription",label:"Subscription"}
 };
 var view=new URLSearchParams(location.search).get("view")||"dashboard";

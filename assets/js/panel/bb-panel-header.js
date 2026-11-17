@@ -23,7 +23,7 @@ if (topnav) {
               <div class="bb-panel-mega-items">
                 <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="profile.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
-                  <span><strong>Prifilee</strong><small>User overview and activity</small></span>
+                  <span><strong>Profile</strong><small>User overview and activity</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-success" href="account.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
@@ -50,7 +50,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
               <strong>More Pages</strong>
               <a href="social-feed.html">Social Feed</a>
-              <a href="profile-settings.html">Prifilee Settings</a>
+              <a href="profile-settings.html">Profile Settings</a>
               <a href="statistics.html">Statistics</a>
               <a href="charts.html">Charts</a>
               <a href="widget-lists.html">Widget Lists</a>
