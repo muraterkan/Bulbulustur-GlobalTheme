@@ -8128,7 +8128,6 @@ button.bb-link:focus-visible,
   flex-direction: column;
   min-height: 0;
   min-width: 0;
-  background-color: var(--bb-tertiary-bg);
 }
 
 /* -------------------------------------------------
