@@ -28401,3 +28401,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }
+
+/* Public page spacing hotfix — 2026-11-17 */
+.bb-panel .bb-public-section{padding-block:calc(var(--bb-space-6)*1.45)}
+.bb-panel .bb-public-section-head{margin-bottom:calc(var(--bb-space-5)*1.25)}
