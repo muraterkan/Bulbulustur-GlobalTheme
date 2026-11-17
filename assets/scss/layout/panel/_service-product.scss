@@ -70,3 +70,235 @@
 @media(max-width:1199.98px){.bb-panel .bb-service-hero .bb-card-body{grid-template-columns:1fr}.bb-panel .bb-service-visual{min-height:19rem}.bb-panel .bb-service-proof{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:991.98px){.bb-panel .bb-service-benefits,.bb-panel .bb-service-usecases,.bb-panel .bb-service-stories{grid-template-columns:1fr}.bb-panel .bb-service-faq{grid-template-columns:1fr}.bb-panel .bb-service-cta .bb-card-body{grid-template-columns:1fr}}
 @media(max-width:575.98px){.bb-panel .bb-service-proof{grid-template-columns:1fr}.bb-panel .bb-service-pos-terminal{grid-template-columns:1fr}.bb-panel .bb-service-pos-receipt{display:none}.bb-panel .bb-service-browser-body{grid-template-columns:1fr}.bb-panel .bb-service-browser-art{grid-template-columns:repeat(4,1fr)}}
+
+
+/* 2026-11 editorial refinement:
+   marketing pages must read as one composed page, not a stack of component demos. */
+.bb-panel .bb-service-shell {
+  max-width: 88rem;
+  margin-inline: auto;
+  gap: 0;
+}
+
+.bb-panel .bb-service-shell > * + * {
+  margin-top: calc(var(--bb-space-6) * 1.25);
+}
+
+.bb-panel .bb-service-section-heading + * {
+  margin-top: var(--bb-space-4);
+}
+
+.bb-panel .bb-service-hero {
+  position: relative;
+  border-color: transparent;
+  background:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 16%, transparent), transparent 32%),
+    linear-gradient(135deg, var(--bb-surface-elevated), var(--bb-surface-soft));
+  box-shadow: none;
+}
+
+.bb-panel .bb-service-hero .bb-card-body {
+  min-height: 30rem;
+  padding: calc(var(--bb-space-6) * 1.35);
+}
+
+.bb-panel .bb-service-kicker {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.bb-panel .bb-service-hero h2 {
+  max-width: 37rem;
+  font-size: clamp(var(--bb-fs-2xl), 3vw, var(--bb-fs-display-sm));
+  letter-spacing: var(--bb-heading-letter-spacing);
+}
+
+.bb-panel .bb-service-hero p {
+  max-width: 38rem;
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-service-visual {
+  min-height: 23rem;
+  border-color: color-mix(in srgb, var(--bb-border-color-strong) 72%, transparent);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--bb-primary) 5%, var(--bb-surface-soft)), var(--bb-surface-muted));
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-panel .bb-service-section-heading {
+  max-width: 40rem;
+}
+
+.bb-panel .bb-service-section-heading h2 {
+  font-size: var(--bb-h2);
+  letter-spacing: var(--bb-heading-letter-spacing);
+}
+
+.bb-panel .bb-service-section-heading p {
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-service-benefits {
+  gap: 0;
+  overflow: hidden;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-elevated);
+}
+
+.bb-panel .bb-service-benefit {
+  min-height: 12rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: calc(var(--bb-space-4) * 1.35);
+}
+
+.bb-panel .bb-service-benefit + .bb-service-benefit {
+  border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-service-benefit-icon {
+  width: 3rem;
+  height: 3rem;
+  background: var(--bb-primary-light);
+}
+
+.bb-panel .bb-service-benefit strong {
+  font-size: var(--bb-fs-base);
+}
+
+.bb-panel .bb-service-benefit p {
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-service-shell > .bb-card:not(.bb-service-hero):not(.bb-service-cta) {
+  border-color: var(--bb-border-color);
+  box-shadow: none;
+}
+
+.bb-panel .bb-service-proof {
+  gap: 0;
+  overflow: hidden;
+  border-radius: var(--bb-radius);
+}
+
+.bb-panel .bb-service-proof-card {
+  min-height: 9rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.bb-panel .bb-service-proof-card + .bb-service-proof-card {
+  border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-service-proof-card strong {
+  font-size: var(--bb-fs-display-sm);
+}
+
+.bb-panel .bb-service-usecases {
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-service-usecase {
+  min-height: 9rem;
+  padding: calc(var(--bb-space-4) * 1.35);
+  border: 0;
+  border-top: calc(var(--bb-border-width) * 3) solid var(--bb-primary);
+  border-radius: var(--bb-radius);
+  background: var(--bb-surface-elevated);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-panel .bb-service-usecase strong {
+  font-size: var(--bb-fs-base);
+}
+
+.bb-panel .bb-service-usecase span {
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-service-stories {
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-service-story {
+  min-height: 15rem;
+  padding: calc(var(--bb-space-4) * 1.35);
+  border-color: transparent;
+  background: var(--bb-surface-elevated);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-panel .bb-service-story blockquote {
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-service-logo-pill {
+  min-width: 8.5rem;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  background: var(--bb-surface-soft);
+}
+
+.bb-panel .bb-service-faq {
+  padding-block: calc(var(--bb-space-5) * 1.2);
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+  border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-service-faq-copy {
+  position: sticky;
+  top: calc(var(--bb-header-height, 4rem) + var(--bb-space-4));
+}
+
+.bb-panel .bb-service-cta {
+  border-color: transparent;
+  background:
+    linear-gradient(110deg, color-mix(in srgb, var(--bb-primary) 18%, var(--bb-surface-elevated)), var(--bb-surface-elevated));
+  box-shadow: none;
+}
+
+.bb-panel .bb-service-cta .bb-card-body {
+  padding: calc(var(--bb-space-6) * 1.15);
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel .bb-service-shell > * + * {
+    margin-top: var(--bb-space-6);
+  }
+
+  .bb-panel .bb-service-benefits {
+    border: 0;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .bb-panel .bb-service-benefit {
+    border: var(--bb-border-width) solid var(--bb-border-color);
+    border-radius: var(--bb-radius-lg);
+    background: var(--bb-surface-elevated);
+  }
+
+  .bb-panel .bb-service-benefit + .bb-service-benefit {
+    border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
+    margin-top: var(--bb-space-3);
+  }
+
+  .bb-panel .bb-service-faq-copy {
+    position: static;
+  }
+}
