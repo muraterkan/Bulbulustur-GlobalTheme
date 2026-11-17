@@ -1440,6 +1440,8 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
   --bb-space-4: 1rem;
   --bb-space-5: 1.25rem;
   --bb-space-6: 1.5rem;
+  --bb-space-5: 1.25rem;
+  --bb-space-6: 1.5rem;
   --bb-heading-margin-bottom: var(--bb-space-2);
   --bb-paragraph-margin-bottom: var(--bb-space-4);
   /* -------------------------------------
@@ -8655,7 +8657,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     display: block;
     border: 0;
     background: color-mix(in srgb, var(--bb-black) 45%, transparent);
-    z-index: calc(var(--bb-z-drawer, 1055) - 1);
+    z-index: calc(var(--bb-z-drawer) - 1);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -8893,7 +8895,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   min-width: var(--bb-menu-sub-min-width, 12rem);
   max-width: min(90vw, 24rem);
   padding: var(--bb-menu-sub-padding, 0.5rem);
-  z-index: var(--bb-z-dropdown, 1050);
+  z-index: var(--bb-z-dropdown);
   background: var(--bb-body-bg);
   color: var(--bb-body-color);
   border: var(--bb-border-width, 1px) solid var(--bb-border-color);
