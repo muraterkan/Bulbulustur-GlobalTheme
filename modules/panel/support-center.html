@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
 <head>
   <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
-<body>
+<body class="bb-body">
   <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="support-tickets" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
     <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
       <div class="bb-sidebar-header">
@@ -112,8 +112,10 @@
         </div>
       </header>
 
-      <div class="bb-body">
-      <main class="bb-main">
+      <div class="bb-wrapper">
+      <header>
+</header>
+<main class="bb-main">
         <div class="bb-main-inner bb-wrapper">
         <div class="bb-container">
           <div class="bb-toolbar">
@@ -195,8 +197,9 @@
 <div id="bb_support_view_contact" role="tabpanel" aria-labelledby="bb_support_tab_contact" data-bb-support-view="contact" class="bb-support-view mt-4" hidden><section class="bb-card"><div class="bb-card-body"><div class="bb-support-card-heading"><h3>Destek Talebi Oluştur</h3></div><p class="bb-support-notice">Demo formudur. Kaydetme, gönderme veya destek kaydı açma işlemi yapılmaz.</p><form data-bb-support-ticket><div class="row g-3"><div class="col-md-6"><label class="form-label" for="bb_support_name">Ad soyad</label><input class="form-control form-control-solid" id="bb_support_name" name="name" required maxlength="100"></div><div class="col-md-6"><label class="form-label" for="bb_support_email">E-posta</label><input class="form-control form-control-solid" id="bb_support_email" name="email" type="email" required></div><div class="col-12"><label class="form-label" for="bb_support_subject">Konu</label><select class="form-select form-select-solid" id="bb_support_subject" name="subject" required><option value="">Konu seçin</option><option>Hesap</option><option>Ürünler</option><option>Teknik sorun</option><option>Diğer</option></select></div><div class="col-12"><label class="form-label" for="bb_support_message">Açıklama</label><textarea class="form-control form-control-solid" id="bb_support_message" name="message" rows="4" required maxlength="1000"></textarea></div><div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Talebi kontrol et</button></div></div></form><div class="alert alert-info mt-3" role="status" tabindex="-1" data-bb-support-ticket-result hidden></div></div></section></div>
 </div></section>
         
-        </div></div>
-      </main>
+        </div></main>
+<footer>
+</footer>
       </div>
 
       <footer class="bb-shell-footer bb-footer">

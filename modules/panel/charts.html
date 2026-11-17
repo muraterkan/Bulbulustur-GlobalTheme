@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
 <head>
   <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
-<body>
+<body class="bb-body">
   <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="widgets-charts" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
     <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
       <div class="bb-sidebar-header">
@@ -113,8 +113,10 @@
         </div>
       </header>
 
-      <div class="bb-body">
-      <main class="bb-main">
+      <div class="bb-wrapper">
+      <header>
+</header>
+<main class="bb-main">
         <div class="bb-main-inner bb-wrapper">
         <div class="bb-container">
 <div class="bb-toolbar"><div class="bb-panel-content-container"><div class="bb-toolbar-row"><div class="bb-toolbar-col-left"><h1 class="bb-page-title">Widget'lar / Grafikler</h1><nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li><li class="breadcrumb-item">Widget'lar</li><li class="breadcrumb-item active" aria-current="page">Grafikler</li></ol></nav></div><div class="bb-toolbar-col-right bb-panel-toolbar-actions"><button class="btn bb-btn-secondary" type="button"><span class="material-symbols-outlined" aria-hidden="true">filter_alt</span> Filtreler</button><button class="btn btn-primary" type="button">Oluştur</button></div></div></div></div><section class="bb-content bb-chart-showcase" data-bb-chart-page><div class="bb-panel-content-container"><div class="bb-chart-grid">
@@ -128,8 +130,9 @@
 <section class="bb-card bb-chart-card" data-bb-chart-card><div class="bb-card-header"><div class="bb-chart-heading"><h2 class="bb-card-title">Finans Özeti</h2><p class="bb-chart-subtitle">Net kâr, gelir ve gider</p></div><div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div></div><div class="bb-card-body"><div class="bb-chart-host"><canvas data-bb-chart="finance" role="img" aria-label="Finans Özeti grafiği"></canvas></div></div></section>
 </div><p class="bb-chart-status" data-bb-chart-status role="status">Grafikler hazırlanıyor…</p></div></section>
         
-        </div></div>
-      </main>
+        </div></main>
+<footer>
+</footer>
       </div>
 
       <footer class="bb-shell-footer bb-footer">

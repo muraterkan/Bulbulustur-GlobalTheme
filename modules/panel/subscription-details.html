@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
 <head>
   <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
-<body>
+<body class="bb-body">
   <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="subscription-overview" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
     <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
       <div class="bb-sidebar-header">
@@ -113,14 +113,17 @@
         </div>
       </header>
 
-      <div class="bb-body">
-      <main class="bb-main">
+      <div class="bb-wrapper">
+      <header>
+</header>
+<main class="bb-main">
         <div class="bb-main-inner bb-wrapper">
         <div class="bb-container">
 <div class="bb-toolbar"><div class="bb-panel-content-container"><div class="bb-toolbar-row"><div class="bb-toolbar-col-left"><h1 class="bb-page-title">Abonelik Detayı</h1><nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li><li class="breadcrumb-item">Abonelik</li><li class="breadcrumb-item active" aria-current="page">Detay</li></ol></nav></div><div class="bb-toolbar-col-right bb-panel-toolbar-actions"><button class="btn bb-btn-secondary" type="button" data-bb-showcase-filter><span class="material-symbols-outlined" aria-hidden="true">filter_alt</span> Filtre</button><button class="btn btn-primary" type="button" data-bb-showcase-create>Oluştur</button></div></div></div></div><section class="bb-content bb-admin-showcase" data-bb-admin-page="subscription-details.html"><div class="bb-panel-content-container"><div class="bb-showcase-split"><div class="bb-showcase-stack"><section class="bb-showcase-card"><div class="bb-showcase-card-heading"><h2>Ürün Detayları</h2><a class="btn bb-btn-secondary" href="subscription.html">Ürünü Güncelle (Demo)</a></div><h3 class="bb-showcase-subtitle">Fatura Adresi</h3><dl class="bb-showcase-kv"><dt>Alıcı e-postası</dt><dd>smith@kpmg.com</dd><dt>Müşteri</dt><dd>Emma Smith</dd><dt>Adres</dt><dd>Örnek Sokak No: 101, New York, NY, ABD</dd><dt>Telefon</dt><dd>+1 555 555 1234</dd><dt>Abonelik Paketi</dt><dd>Başlangıç Paketi</dd><dt>Abonelik Ücreti</dt><dd>$149.99 / Yıl</dd><dt>Fatura Dönemi</dt><dd>Yıllık</dd><dt>Para Birimi</dt><dd>USD</dd></dl><h3 class="bb-showcase-subtitle">Abone Olunan Ürünler</h3><div class="bb-showcase-table-wrap"><table class="bb-showcase-table"><thead><tr><th>Ürün</th><th>Abonelik ID</th><th>Adet</th><th>Toplam</th></tr></thead><tbody><tr><td>Başlangıç Paketi<small class="d-block bb-showcase-muted">Yıllık paket</small></td><td>sub_demo_8765</td><td>1</td><td>$149.99 / Yıl</td></tr><tr><td>Pro Paket<small class="d-block bb-showcase-muted">Yıllık paket</small></td><td>sub_demo_3433</td><td>5</td><td>$949.99 / Yıl</td></tr></tbody></table></div></section><section class="bb-showcase-card"><div class="bb-showcase-card-heading"><h2>Son Olaylar</h2><button class="btn bb-btn-secondary" type="button" data-bb-events-toggle>Tüm Olaylar</button></div><ul class="bb-role-points" data-bb-sub-events><li>Demo fatura #2299 onaylandı · 22 Eyl 2025</li><li>Emma Smith örnek ödeme yaptı · 22 Eyl 2025</li><li>Melody Macy örnek ödeme yaptı · 19 Ağu 2025</li><li>Örnek fatura #8929 işlemde · 15 Nis 2025</li></ul></section><section class="bb-showcase-card"><div class="bb-showcase-card-heading"><h2>Faturalar</h2><div class="bb-showcase-toolbar-buttons" data-bb-invoices-years><button class="btn btn-primary btn-sm" type="button" data-year="2025">2025</button><button class="btn bb-btn-secondary btn-sm" type="button" data-year="2024">2024</button><button class="btn bb-btn-secondary btn-sm" type="button" data-year="2023">2023</button></div></div><div class="bb-showcase-table-wrap"><table class="bb-showcase-table"><thead><tr><th>Sipariş ID</th><th>Tutar</th><th>Durum</th><th>Tarih</th><th>Fatura</th></tr></thead><tbody data-bb-sub-invoices></tbody></table></div></section></div><aside class="bb-showcase-card"><h2>Özet</h2><div class="bb-user-cell"><span class="bb-user-circle">S</span><div><strong>Sean Bean</strong><small>sean@dellito.com</small></div></div><div class="bb-showcase-divider"></div><h3 class="bb-showcase-subtitle">Ürün Detayları</h3><p class="bb-showcase-muted"><span class="bb-showcase-badge">Başlangıç Paketi</span> $149.99 / Yıl</p><div class="bb-showcase-divider"></div><h3 class="bb-showcase-subtitle">Ödeme Bilgileri</h3><p class="bb-showcase-muted">Mastercard •••• 3733 (Demo)</p><div class="bb-showcase-divider"></div><h3 class="bb-showcase-subtitle">Abonelik Detayları</h3><dl class="bb-showcase-kv"><dt>ID</dt><dd>sub_demo_8765</dd><dt>Başlangıç</dt><dd>15 Nis 2025</dd><dt>Durum</dt><dd><span class="badge bb-badge bb-badge-light-success">Aktif</span></dd><dt>Sonraki Fatura</dt><dd>15 Nis 2027</dd></dl><a class="btn btn-primary mt-4" href="subscription.html">Aboneliği Düzenle (Demo)</a></aside></div><p class="bb-showcase-notice">Abonelik ve ödeme kayıtları örnektir; sunucu işlemi veya gerçek tahsilat yapılmaz.</p></div></section>
         
-        </div></div>
-      </main>
+        </div></main>
+<footer>
+</footer>
       </div>
 
       <footer class="bb-shell-footer bb-footer">
