@@ -13161,7 +13161,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 .bb-panel .bb-public-section {
-  padding-block: calc(var(--bb-space-6) * 1.15);
+  padding-block: calc(var(--bb-space-6) * 1.45);
 }
 
 .bb-panel .bb-public-section + .bb-public-section {
@@ -13420,7 +13420,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: var(--bb-space-6);
   align-items: end;
-  margin-bottom: var(--bb-space-5);
+  margin-bottom: calc(var(--bb-space-5) * 1.25);
 }
 
 .bb-panel .bb-public-section-head h2 {
@@ -28401,7 +28401,3 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: var(--bb-form-control-bg-focus);
   border-color: var(--bb-form-control-border-focus-color);
 }
-
-/* Public page spacing hotfix — 2026-11-17 */
-.bb-panel .bb-public-section{padding-block:calc(var(--bb-space-6)*1.45)}
-.bb-panel .bb-public-section-head{margin-bottom:calc(var(--bb-space-5)*1.25)}
