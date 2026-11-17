@@ -44,7 +44,7 @@ function createPost(content){
  commentForm.append(input,submit);body.append(head,paragraph,actions,comments,commentForm);article.append(body);
  return article;
 }
-root.addEventListner("click",function(event){
+root.addEventListener("click",function(event){
  var filterButton=event.target.closest("[data-bb-social-filter]");
  if(filterButton){filter=filterButton.dataset.bbSocialFilter;refresh();return;}
  var follow=event.target.closest("[data-bb-social-follow]");
@@ -56,7 +56,7 @@ root.addEventListner("click",function(event){
  var copy=event.target.closest("[data-bb-social-copy]");
  if(copy){var post=copy.closest("[data-bb-social-post]"),message=post.querySelector(".bb-social-post-text")?.textContent||"";if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(message).then(function(){status.textContent="Demo gönderi metni kopyalandı.";}).catch(function(){status.textContent="Kopyalama engellendi.";});else status.textContent="Kopyalama için güvenli bir bağlantı gerekiyor.";return;}
 });
-root.addEventListner("submit",function(event){
+root.addEventListener("submit",function(event){
  var commentForm=event.target.closest("[data-bb-social-comment-form]");
  if(!commentForm)return;
  event.preventDefault();
@@ -69,7 +69,7 @@ root.addEventListner("submit",function(event){
  var count=post.querySelector("[data-bb-social-comment-count]");count.textContent=comments.children.length+" yorum";
  commentForm.reset();field.focus();
 });
-form.addEventListner("submit",function(event){
+form.addEventListener("submit",function(event){
  event.preventDefault();if(!form.reportValidity())return;
  var text=textarea.value.trim();if(!text)return;
  var post=createPost(text);list.prepend(post);form.reset();filter="all";refresh();post.scrollIntoView({block:"nearest",behavior:"auto"});

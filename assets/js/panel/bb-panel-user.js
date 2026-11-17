@@ -111,19 +111,19 @@
   }
 
   appearance.querySelectorAll("[data-bb-theme-choice]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       applyTheme(button.dataset.bbThemeChoice);
     });
   });
 
   var languageToggle = language.querySelector(".bb-panel-user-language-toggle");
-  languageToggle.addEventListner("click", function () {
+  languageToggle.addEventListener("click", function () {
     var open = languageToggle.getAttribute("aria-expanded") === "true";
     languageToggle.setAttribute("aria-expanded", String(!open));
     languageMenu.hidden = open;
   });
 
-  languageMenu.addEventListner("click", function (event) {
+  languageMenu.addEventListener("click", function (event) {
     var button = event.target.closest("[data-bb-language]");
     if (!button) return;
     setStored(STORAGE_LANGUAGE, button.dataset.bbLanguage);
@@ -132,13 +132,13 @@
     languageToggle.setAttribute("aria-expanded", "false");
   });
 
-  document.addEventListner("click", function (event) {
+  document.addEventListener("click", function (event) {
     if (language.contains(event.target)) return;
     languageMenu.hidden = true;
     languageToggle.setAttribute("aria-expanded", "false");
   });
 
-  document.addEventListner("bb:panel-theme-change", syncTheme);
+  document.addEventListener("bb:panel-theme-change", syncTheme);
   syncTheme();
   syncLanguage();
 })();

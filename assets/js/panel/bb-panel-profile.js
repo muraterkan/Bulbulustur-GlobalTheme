@@ -255,20 +255,20 @@ if (profileMenuLink) {
 }
 
 var form = root.querySelector("[data-bb-profile-form]");
-if (form) form.addEventListner("submit",function(event){
+if (form) form.addEventListener("submit",function(event){
   event.preventDefault();
   if (!form.reportValidity()) return;
   var status=form.querySelector("[data-bb-profile-status]");
   if(status) status.textContent="Form doğrulandı. Demo verileri kaydedilmedi.";
 });
 var follow = root.querySelector("[data-bb-profile-follow]");
-if(follow) follow.addEventListner("click",function(){
+if(follow) follow.addEventListener("click",function(){
   var active=follow.getAttribute("aria-pressed")==="true";
   follow.setAttribute("aria-pressed",String(!active));
   follow.textContent=active?"Takip et":"Takip ediliyor";
 });
 var copy=root.querySelector("[data-bb-profile-copy]");
-if(copy) copy.addEventListner("click",function(){
+if(copy) copy.addEventListener("click",function(){
   var status=root.querySelector("[data-bb-profile-status]");
   var input=root.querySelector("#bb_profile_referral");
   if(navigator.clipboard && window.isSecureContext){
@@ -278,12 +278,12 @@ if(copy) copy.addEventListner("click",function(){
   } else {input.focus();input.select();if(status)status.textContent="Kodu seçip kopyalayabilirsiniz.";}
 });
 var rule=root.querySelector("[data-bb-profile-rule]");
-if(rule)rule.addEventListner("click",function(){
+if(rule)rule.addEventListener("click",function(){
   var status=root.querySelector("[data-bb-profile-status]");
   if(status)status.textContent="Örnek kural görüntülendi; gerçek API kuralı oluşturulmadı.";
 });
 var toggle=root.querySelector("[data-bb-profile-api-test]");
-if(toggle)toggle.addEventListner("change",function(){
+if(toggle)toggle.addEventListener("change",function(){
   var status=root.querySelector("[data-bb-profile-status]");
   if(status)status.textContent=toggle.checked?"Test modu açık (demo).":"Test modu kapalı (demo).";
 });

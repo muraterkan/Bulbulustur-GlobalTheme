@@ -47,7 +47,7 @@
     if (empty) empty.hidden = !q || found > 0;
     if (status) status.textContent = q ? found + " eşleşen örnek içerik" : "Örnek Destek Merkezi · Gerçek talep verisi bulunmuyor";
   }
-  root.addEventListner("click", function (event) {
+  root.addEventListener("click", function (event) {
     var tab = event.target.closest("[data-bb-support-tab]");
     if (tab) { selectTab(tab.dataset.bbSupportTab, false); return; }
     var toggle = event.target.closest("[data-bb-support-question]");
@@ -59,15 +59,15 @@
     answer.hidden = !next;
   });
   tabs.forEach(function (tab, i) {
-    tab.addEventListner("keydown", function (event) {
+    tab.addEventListener("keydown", function (event) {
       var next = event.key === "ArrowRight" ? (i + 1) % tabs.length : event.key === "ArrowLeft" ? (i + tabs.length - 1) % tabs.length : event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : -1;
       if (next < 0) return;
       event.preventDefault();
       selectTab(tabs[next].dataset.bbSupportTab, true);
     });
   });
-  search.addEventListner("input", applySearch);
-  if (ticket) ticket.addEventListner("submit", function (event) {
+  search.addEventListener("input", applySearch);
+  if (ticket) ticket.addEventListener("submit", function (event) {
     event.preventDefault();
     if (!ticket.reportValidity()) return;
     var result = root.querySelector("[data-bb-support-ticket-result]");

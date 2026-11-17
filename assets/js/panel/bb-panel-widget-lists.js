@@ -19,8 +19,8 @@ function update(){
  empty.hidden=count>0;
  status.textContent=count+" / "+cards.length+" widget gösteriliyor · Demo";
 }
-input.addEventListner("input",update);
-root.addEventListner("click",function(event){
+input.addEventListener("input",update);
+root.addEventListener("click",function(event){
  var hidden=event.target.closest("[data-bb-widget-hide]");
  if(hidden){var card=hidden.closest("[data-bb-widget-card]");if(card)card.dataset.bbWidgetDismissed="true";update();return;}
  var reset=event.target.closest("[data-bb-widget-reset]");

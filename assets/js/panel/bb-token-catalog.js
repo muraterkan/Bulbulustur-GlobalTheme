@@ -10,6 +10,6 @@
     });
   }
 
-  document.addEventListner("bb:panel-theme-change", syncTokenValues);
+  document.addEventListener("bb:panel-theme-change", syncTokenValues);
   syncTokenValues();
 }());

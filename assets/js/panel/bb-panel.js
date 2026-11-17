@@ -38,17 +38,17 @@
     }
   }
 
-  if (mobileToggle) mobileToggle.addEventListner("click", function () {
+  if (mobileToggle) mobileToggle.addEventListener("click", function () {
     setOpen(panel.getAttribute("data-bb-sidebar-open") !== "true");
   });
-  if (closeButton) closeButton.addEventListner("click", function () { setOpen(false); });
-  if (backdrop) backdrop.addEventListner("click", function () { setOpen(false); });
-  if (collapseButton) collapseButton.addEventListner("click", function () {
+  if (closeButton) closeButton.addEventListener("click", function () { setOpen(false); });
+  if (backdrop) backdrop.addEventListener("click", function () { setOpen(false); });
+  if (collapseButton) collapseButton.addEventListener("click", function () {
     panel.setAttribute("data-bb-sidebar-collapsed", String(panel.getAttribute("data-bb-sidebar-collapsed") !== "true"));
     updateControls();
   });
 
-  document.addEventListner("keydown", function (event) {
+  document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && panel.getAttribute("data-bb-sidebar-open") === "true") setOpen(false);
     if (event.key !== "Tab" || desktop.matches || panel.getAttribute("data-bb-sidebar-open") !== "true" || !sidebar) return;
     var focusables = Array.prototype.slice.call(sidebar.querySelectorAll("a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])"))
@@ -64,8 +64,8 @@
     panel.setAttribute("data-bb-sidebar-open", "false");
     updateControls();
   }
-  if (desktop.addEventListner) desktop.addEventListner("change", onViewportChange);
-  else desktop.addListner(onViewportChange);
+  if (desktop.addEventListener) desktop.addEventListener("change", onViewportChange);
+  else desktop.addListener(onViewportChange);
   updateControls();
 
   /* Channel Registry dashboard: one list for owned and connected sales channels. */
@@ -215,9 +215,9 @@
     var inWindow = window.scrollY > 160;
     backToTop.hidden = !(inContent || inWindow);
   }
-  if (contentScroll) contentScroll.addEventListner("scroll", updateBackToTop, { passive: true });
-  window.addEventListner("scroll", updateBackToTop, { passive: true });
-  backToTop.addEventListner("click", function () {
+  if (contentScroll) contentScroll.addEventListener("scroll", updateBackToTop, { passive: true });
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
+  backToTop.addEventListener("click", function () {
     var behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
     if (contentScroll) contentScroll.scrollTo({ top: 0, behavior: behavior });
     window.scrollTo({ top: 0, behavior: behavior });

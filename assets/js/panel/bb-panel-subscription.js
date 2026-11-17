@@ -37,7 +37,7 @@ function sync(){
   root.querySelector("[data-bb-sub-payment-summary]").textContent=method?method.dataset.label:"Ödeme yöntemi seçilmedi";
   root.querySelectorAll("[data-bb-sub-payment-detail]").forEach(function(el){el.hidden=!method||el.dataset.bbSubPaymentDetail!==method.value;});
 }
-root.addEventListner("click",function(event){
+root.addEventListener("click",function(event){
  var remove=event.target.closest("[data-bb-sub-remove]");
  if(remove){selected=selected.filter(function(id){return id!==remove.dataset.bbSubRemove;});rows();return;}
  if(event.target.closest("[data-bb-sub-add-custom]")){
@@ -51,13 +51,13 @@ root.addEventListner("click",function(event){
  if(removeCustom){removeCustom.closest(".bb-subscription-custom-row").remove();return;}
  if(event.target.closest("[data-bb-sub-new-method]")){status.hidden=false;status.textContent="Yeni ödeme yöntemi ekleme bu statik demoda kullanılmıyor.";return;}
 });
-root.querySelector("[data-bb-sub-add]").addEventListner("click",function(){
+root.querySelector("[data-bb-sub-add]").addEventListener("click",function(){
  var control=root.querySelector("[data-bb-sub-plan-select]"),id=control.value;
  if(id&&plans[id]&&!selected.includes(id)){selected.push(id);rows();}
 });
-customer.addEventListner("change",sync);
-methods.forEach(function(method){method.addEventListner("change",sync);});
-root.querySelector("[data-bb-sub-form]").addEventListner("submit",function(event){
+customer.addEventListener("change",sync);
+methods.forEach(function(method){method.addEventListener("change",sync);});
+root.querySelector("[data-bb-sub-form]").addEventListener("submit",function(event){
  event.preventDefault();
  if(!event.currentTarget.reportValidity()||!selected.length)return;
  status.hidden=false;status.textContent="Subscription bilgileri doğrulandı. Demo sürümünde abonelik oluşturulmadı, ödeme alınmadı.";

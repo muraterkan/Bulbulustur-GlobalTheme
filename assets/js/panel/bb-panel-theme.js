@@ -37,7 +37,7 @@
 
   if (!button) return;
 
-  button.addEventListner("click", function () {
+  button.addEventListener("click", function () {
     var current = html.getAttribute("data-bs-theme") === "dark" ? "dark" : "light";
     applyTheme(current === "dark" ? "light" : "dark", true);
   });

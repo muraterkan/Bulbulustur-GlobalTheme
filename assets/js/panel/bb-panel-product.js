@@ -21,8 +21,8 @@ function selectTab(name,focus){
  root.querySelectorAll("[data-bb-product-pane]").forEach(function(p){p.hidden=p.dataset.bbProductPane!==name;});
 }
 tabs.forEach(function(tab,i){
- tab.addEventListner("click",function(){selectTab(tab.dataset.bbProductTab,false);});
- tab.addEventListner("keydown",function(e){var n=e.key==="ArrowRight"?(i+1)%tabs.length:e.key==="ArrowLeft"?(i+tabs.length-1)%tabs.length:e.key==="Home"?0:e.key==="End"?tabs.length-1:-1;if(n<0)return;e.preventDefault();selectTab(tabs[n].dataset.bbProductTab,true);});
+ tab.addEventListener("click",function(){selectTab(tab.dataset.bbProductTab,false);});
+ tab.addEventListener("keydown",function(e){var n=e.key==="ArrowRight"?(i+1)%tabs.length:e.key==="ArrowLeft"?(i+tabs.length-1)%tabs.length:e.key==="Home"?0:e.key==="End"?tabs.length-1:-1;if(n<0)return;e.preventDefault();selectTab(tabs[n].dataset.bbProductTab,true);});
 });
 var files=root.querySelector("[data-bb-product-files]"),thumb=root.querySelector("[data-bb-product-thumb]"),list=root.querySelector("[data-bb-product-media-list]"),upload=root.querySelector("[data-bb-product-upload]");
 var urls=[];
@@ -34,23 +34,23 @@ function accept(incoming){
  valid.forEach(function(file,index){var url=URL.createObjectURL(file);urls.push(url);var li=document.createElement("li"),img=document.createElement("img");img.src=url;img.alt="Seçilen görsel "+(index+1);var span=document.createElement("span");span.textContent=file.name;li.append(img,span);list.append(li);if(index===0){var preview=document.createElement("img");preview.src=url;preview.alt="Ürün küçük görsel ön izlemesi";thumb.append(preview);}});
  root.querySelector("[data-bb-product-file-status]").textContent=valid.length+" / 10 geçerli görsel seçildi. PNG/JPEG, en fazla 5 MB. Dosyalar gönderilmez.";
 }
-files.addEventListner("change",function(){accept(files.files);});
-["dragenter","dragover"].forEach(function(name){upload.addEventListner(name,function(e){e.preventDefault();upload.dataset.dragover="true";});});
-["dragleave","drop"].forEach(function(name){upload.addEventListner(name,function(e){e.preventDefault();delete upload.dataset.dragover;if(name==="drop")accept(e.dataTransfer.files);});});
-window.addEventListner("pagehide",release);
+files.addEventListener("change",function(){accept(files.files);});
+["dragenter","dragover"].forEach(function(name){upload.addEventListener(name,function(e){e.preventDefault();upload.dataset.dragover="true";});});
+["dragleave","drop"].forEach(function(name){upload.addEventListener(name,function(e){e.preventDefault();delete upload.dataset.dragover;if(name==="drop")accept(e.dataTransfer.files);});});
+window.addEventListener("pagehide",release);
 var price=root.querySelector("[data-bb-product-price]"),discount=root.querySelector("[data-bb-product-discount]"),value=root.querySelector("[data-bb-product-discount-value]"),result=root.querySelector("[data-bb-product-result]");
 function updateDiscount(){
  var type=root.querySelector('[name="discountType"]:checked').value;
  value.hidden=type==="none";value.required=type!=="none";value.min=type==="percentage"?"0":"0.01";value.max=type==="percentage"?"100":"";value.placeholder=type==="percentage"?"Yüzde (%)":"İndirimli fiyat";
  discount.textContent=type==="none"?"İndirim uygulanmıyor":type==="percentage"?"Yüzde indirim":"Sabit indirimli fiyat";
 }
-root.querySelectorAll('[name="discountType"]').forEach(function(r){r.addEventListner("change",updateDiscount);});
-root.querySelectorAll("[data-bb-product-editor-command]").forEach(function(button){button.addEventListner("click",function(){var field=root.querySelector("[data-bb-product-description]");var mark=button.dataset.bbProductEditorCommand;var start=field.selectionStart,end=field.selectionEnd,selected=field.value.slice(start,end)||"metin";var prefix=mark==="bold"?"**":mark==="italic"?"*":"__";field.setRangeText(prefix+selected+prefix,start,end,"select");field.focus();});});
-form.addEventListner("submit",function(e){
+root.querySelectorAll('[name="discountType"]').forEach(function(r){r.addEventListener("change",updateDiscount);});
+root.querySelectorAll("[data-bb-product-editor-command]").forEach(function(button){button.addEventListener("click",function(){var field=root.querySelector("[data-bb-product-description]");var mark=button.dataset.bbProductEditorCommand;var start=field.selectionStart,end=field.selectionEnd,selected=field.value.slice(start,end)||"metin";var prefix=mark==="bold"?"**":mark==="italic"?"*":"__";field.setRangeText(prefix+selected+prefix,start,end,"select");field.focus();});});
+form.addEventListener("submit",function(e){
  e.preventDefault();selectTab("general",false);
  if(!form.reportValidity()){var invalid=form.querySelector(":invalid");if(invalid){var pane=invalid.closest("[data-bb-product-pane]");if(pane)selectTab(pane.dataset.bbProductPane,false);invalid.focus();}return;}
  result.hidden=false;result.textContent="Ürün bilgileri doğrulandı. Bu ekran demo olduğu için ürün oluşturulmadı veya kaydedilmedi.";result.focus();
 });
-root.querySelector("[data-bb-product-reset]").addEventListner("click",function(){form.reset();accept([]);result.hidden=true;selectTab("general",false);updateDiscount();});
+root.querySelector("[data-bb-product-reset]").addEventListener("click",function(){form.reset();accept([]);result.hidden=true;selectTab("general",false);updateDiscount();});
 updateDiscount();selectTab("general",false);
 })();
