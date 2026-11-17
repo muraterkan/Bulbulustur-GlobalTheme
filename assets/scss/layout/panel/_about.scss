@@ -302,3 +302,202 @@
     padding: var(--bb-space-4);
   }
 }
+
+
+/* 2026-11 editorial refinement:
+   About should read as one corporate narrative, not alternating demo cards. */
+.bb-panel .bb-about-shell {
+  max-width: 88rem;
+  margin-inline: auto;
+  gap: calc(var(--bb-space-6) * 1.1);
+}
+
+.bb-panel .bb-about-hero {
+  border-color: transparent;
+  background:
+    radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--bb-primary) 16%, transparent), transparent 30%),
+    linear-gradient(135deg, var(--bb-surface-elevated), var(--bb-surface-soft));
+  box-shadow: none;
+}
+
+.bb-panel .bb-about-hero .bb-card-body {
+  min-height: 26rem;
+  padding: calc(var(--bb-space-6) * 1.25);
+}
+
+.bb-panel .bb-about-kicker {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.bb-panel .bb-about-hero h2 {
+  max-width: 40rem;
+  font-size: clamp(var(--bb-fs-2xl), 3vw, var(--bb-fs-display-sm));
+}
+
+.bb-panel .bb-about-hero p {
+  max-width: 42rem;
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-about-hero-visual {
+  min-height: 19rem;
+  border-color: color-mix(in srgb, var(--bb-border-color-strong) 72%, transparent);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--bb-primary) 9%, var(--bb-surface-soft)), var(--bb-surface-muted));
+}
+
+.bb-panel .bb-about-story {
+  overflow: hidden;
+  gap: 0;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-elevated);
+}
+
+.bb-panel .bb-about-story-row {
+  grid-template-columns: minmax(0, 1fr) 11rem;
+  min-height: 12rem;
+  gap: var(--bb-space-5);
+  padding: calc(var(--bb-space-5) * 1.15) calc(var(--bb-space-6) * 1.05);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.bb-panel .bb-about-story-row + .bb-about-story-row {
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-about-story-row:nth-child(even) {
+  grid-template-columns: 11rem minmax(0, 1fr);
+}
+
+.bb-panel .bb-about-story-copy {
+  align-self: center;
+  max-width: 44rem;
+}
+
+.bb-panel .bb-about-story-copy h3 {
+  font-size: var(--bb-h4);
+}
+
+.bb-panel .bb-about-story-copy p {
+  margin-top: var(--bb-space-3);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-about-story-media {
+  min-height: 8rem;
+  aspect-ratio: 1;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background:
+    linear-gradient(145deg, var(--bb-primary-light), var(--bb-surface-soft));
+}
+
+.bb-panel .bb-about-story-media::before {
+  inset: 18%;
+  border-style: solid;
+  opacity: .65;
+}
+
+.bb-panel .bb-about-story-media .material-symbols-outlined {
+  font-size: var(--bb-fs-display-sm);
+}
+
+.bb-panel .bb-about-metrics {
+  gap: 0;
+  overflow: hidden;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-elevated);
+}
+
+.bb-panel .bb-about-metric {
+  min-height: 10rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.bb-panel .bb-about-metric + .bb-about-metric {
+  border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-about-team {
+  padding-top: var(--bb-space-2);
+}
+
+.bb-panel .bb-about-section-heading h2 {
+  font-size: var(--bb-h2);
+}
+
+.bb-panel .bb-about-section-heading p {
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-panel .bb-about-team-grid {
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-about-person {
+  min-height: 15rem;
+  padding: calc(var(--bb-space-4) * 1.35);
+  border-color: transparent;
+  background: var(--bb-surface-elevated);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-panel .bb-about-social {
+  border: 0;
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: 0;
+  background: transparent;
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel .bb-about-story-row,
+  .bb-panel .bb-about-story-row:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-panel .bb-about-story-media {
+    width: 8rem;
+    min-height: 8rem;
+    aspect-ratio: 1;
+  }
+
+  .bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-copy,
+  .bb-panel .bb-about-story-row:nth-child(even) .bb-about-story-media {
+    order: initial;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-panel .bb-about-metrics {
+    border: 0;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .bb-panel .bb-about-metric {
+    border: var(--bb-border-width) solid var(--bb-border-color);
+    border-radius: var(--bb-radius-lg);
+    background: var(--bb-surface-elevated);
+  }
+
+  .bb-panel .bb-about-metric + .bb-about-metric {
+    border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
+    margin-top: var(--bb-space-3);
+  }
+}
