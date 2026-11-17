@@ -446,7 +446,7 @@
   flex-direction: column;
   min-width: 0;
   padding: calc(var(--bb-space-4) * 2);
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
 }
 .bb-panel.bb-panel-auth-creative .bb-creative-auth-card {
   width: min(100%, 34rem);
@@ -454,7 +454,7 @@
   padding: calc(var(--bb-space-4) * 2);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius-lg);
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
   box-shadow: var(--bb-shadow-sm);
 }
 .bb-panel.bb-panel-auth-creative .bb-creative-auth-card header { margin-bottom: calc(var(--bb-space-4) + var(--bb-space-2)); }
