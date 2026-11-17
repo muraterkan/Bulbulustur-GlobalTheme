@@ -14,6 +14,21 @@ main {
 }
 
 /* -------------------------------------
+   Body shell
+------------------------------------- */
+
+.bb-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    color: var(--bb-body-color);
+    background: var(--bb-body-bg);
+}
+
+/* -------------------------------------
    Page wrapper base
 ------------------------------------- */
 
