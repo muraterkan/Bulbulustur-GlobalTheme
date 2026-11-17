@@ -1,0 +1,532 @@
+/* =====================================
+   Bulbulustur Cookie Consent Banner
+   Scope: _CookieConsentBanner.cshtml
+
+   Purpose:
+   - Floating cookie consent component
+   - No conflict with /cookie settings page
+   - Token-driven
+   - Dark/light compatible
+===================================== */
+
+.bb-cookie-banner {
+  --bb-cookie-banner-max-width: 74rem;
+  --bb-cookie-banner-offset: clamp(2.5rem, 5vw, 4.5rem);
+
+  --bb-cookie-banner-bg: color-mix(
+    in srgb,
+    var(--bb-surface-elevated) 95%,
+    var(--bb-body-bg)
+  );
+
+  --bb-cookie-banner-border-color: color-mix(
+    in srgb,
+    var(--bb-primary) 24%,
+    var(--bb-border-color)
+  );
+
+  --bb-cookie-banner-title-color: var(--bb-emphasis-color);
+
+  --bb-cookie-banner-text-color: color-mix(
+    in srgb,
+    var(--bb-secondary-color) 88%,
+    var(--bb-emphasis-color)
+  );
+
+  --bb-cookie-banner-icon-size: 4.25rem;
+
+  --bb-cookie-banner-icon-bg: color-mix(
+    in srgb,
+    var(--bb-primary) 18%,
+    var(--bb-body-bg)
+  );
+
+  --bb-cookie-banner-icon-color: color-mix(
+    in srgb,
+    var(--bb-primary) 88%,
+    var(--bb-emphasis-color)
+  );
+
+  --bb-cookie-banner-shadow:
+    0 2.75rem 6rem color-mix(in srgb, var(--bb-black, #000000) 24%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 30%, transparent);
+
+  position: fixed;
+  left: 50%;
+  bottom: var(--bb-cookie-banner-offset);
+  z-index: 1080;
+
+  width: min(calc(100% - 2rem), var(--bb-cookie-banner-max-width));
+
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.bb-cookie-banner-card {
+  position: relative;
+  pointer-events: auto;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+
+  padding: 1.35rem 1.5rem;
+
+  color: var(--bb-cookie-banner-title-color);
+
+  background:
+    radial-gradient(
+      circle at 4% 28%,
+      color-mix(in srgb, var(--bb-primary) 18%, transparent),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 88% 64%,
+      color-mix(in srgb, var(--bb-primary) 10%, transparent),
+      transparent 20rem
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--bb-cookie-banner-bg) 96%, var(--bb-primary)),
+      var(--bb-cookie-banner-bg) 48%,
+      color-mix(in srgb, var(--bb-cookie-banner-bg) 90%, var(--bb-primary))
+    );
+
+  border: var(--bb-border-width) solid var(--bb-cookie-banner-border-color);
+  border-radius: var(--bb-radius-2xl);
+  box-shadow: var(--bb-cookie-banner-shadow);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bb-cookie-banner-card::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  border-radius: calc(var(--bb-radius-2xl) + 0.5rem);
+
+  background:
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--bb-primary) 12%, transparent),
+      transparent 68%
+    );
+
+  filter: blur(18px);
+  opacity: 0.9;
+}
+
+.bb-cookie-banner-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 42%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--bb-black, #000000) 4%, transparent);
+}
+
+/* -------------------------------------
+   Icon
+------------------------------------- */
+
+.bb-cookie-banner-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-cookie-banner-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--bb-cookie-banner-icon-size);
+  height: var(--bb-cookie-banner-icon-size);
+
+  color: var(--bb-cookie-banner-icon-color);
+  background-color: var(--bb-cookie-banner-icon-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 34%, transparent);
+  border-radius: var(--bb-radius-2xl);
+
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 40%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-primary) 18%, transparent);
+}
+
+.bb-cookie-banner-icon .material-symbols-outlined {
+  font-size: 2.125rem;
+  line-height: 1;
+}
+
+/* -------------------------------------
+   Content
+------------------------------------- */
+
+.bb-cookie-banner-content {
+  min-width: 0;
+}
+
+.bb-cookie-banner-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.bb-cookie-banner-title {
+  margin: 0 0 0.425rem;
+
+  color: var(--bb-cookie-banner-title-color);
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.025em);
+}
+
+.bb-cookie-banner-text {
+  max-width: 58rem;
+  margin: 0;
+
+  color: var(--bb-cookie-banner-text-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-cookie-banner-link {
+  color: var(--bb-emphasis-color);
+  font-weight: var(--bb-fw-bold);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.bb-cookie-banner-link:hover {
+  color: var(--bb-primary);
+}
+
+/* -------------------------------------
+   Close
+------------------------------------- */
+
+.bb-cookie-banner-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+
+  color: var(--bb-secondary-color);
+  background-color: transparent;
+  border: 0;
+  border-radius: var(--bb-radius-pill);
+
+  transition:
+    color var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.bb-cookie-banner-close:hover {
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 86%, transparent);
+}
+
+.bb-cookie-banner-close .material-symbols-outlined {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* -------------------------------------
+   Actions
+------------------------------------- */
+
+.bb-cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+
+  white-space: nowrap;
+}
+
+.bb-cookie-banner-btn {
+  min-height: 3.35rem;
+  padding-right: 1.45rem;
+  padding-left: 1.45rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  border-radius: var(--bb-radius-pill);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-bold);
+  transition:
+    transform var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast);
+}
+
+.bb-cookie-banner-btn:hover {
+  transform: translateY(-1px);
+}
+
+.bb-cookie-banner-btn .material-symbols-outlined {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.bb-cookie-banner-manage {
+  --bb-btn-bg: var(--bb-emphasis-color);
+  --bb-btn-color: var(--bb-body-bg);
+  --bb-btn-border-color: var(--bb-emphasis-color);
+
+  --bb-btn-hover-bg: color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-primary));
+  --bb-btn-hover-color: var(--bb-body-bg);
+  --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
+
+  box-shadow:
+    0 1rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 14%, transparent),
+    0 0 0 0.125rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent);
+}
+
+.bb-cookie-banner-reject {
+  --bb-cookie-banner-reject-color: #e73543;
+  --bb-cookie-banner-reject-hover: #c92634;
+
+  --bb-btn-bg: var(--bb-cookie-banner-reject-color);
+  --bb-btn-color: var(--bb-black, #000000);
+  --bb-btn-border-color: var(--bb-cookie-banner-reject-color);
+
+  --bb-btn-hover-bg: var(--bb-cookie-banner-reject-hover);
+  --bb-btn-hover-color: var(--bb-black, #000000);
+  --bb-btn-hover-border-color: var(--bb-cookie-banner-reject-hover);
+
+  box-shadow:
+    0 1.1rem 2rem color-mix(in srgb, var(--bb-cookie-banner-reject-color) 34%, transparent),
+    0 0 0 0.25rem color-mix(in srgb, var(--bb-cookie-banner-reject-color) 10%, transparent);
+}
+
+.bb-cookie-banner-accept {
+  --bb-cookie-banner-accept-color: #16d77a;
+  --bb-cookie-banner-accept-hover: #10bf6a;
+
+  --bb-btn-bg: var(--bb-cookie-banner-accept-color);
+  --bb-btn-color: var(--bb-black, #000000);
+  --bb-btn-border-color: var(--bb-cookie-banner-accept-color);
+
+  --bb-btn-hover-bg: var(--bb-cookie-banner-accept-hover);
+  --bb-btn-hover-color: var(--bb-black, #000000);
+  --bb-btn-hover-border-color: var(--bb-cookie-banner-accept-hover);
+
+  box-shadow:
+    0 1.25rem 2.25rem color-mix(in srgb, var(--bb-cookie-banner-accept-color) 38%, transparent),
+    0 0 0 0.25rem color-mix(in srgb, var(--bb-cookie-banner-accept-color) 12%, transparent);
+}
+
+.bb-cookie-banner-reject,
+.bb-cookie-banner-reject:hover,
+.bb-cookie-banner-reject:focus,
+.bb-cookie-banner-reject:active,
+.bb-cookie-banner-accept,
+.bb-cookie-banner-accept:hover,
+.bb-cookie-banner-accept:focus,
+.bb-cookie-banner-accept:active {
+  color: var(--bb-black, #000000);
+}
+
+/* -------------------------------------
+   State
+------------------------------------- */
+
+.bb-cookie-banner.is-hidden {
+  display: none;
+}
+
+.bb-cookie-banner.is-leaving {
+  opacity: 0;
+  transform: translateX(-50%) translateY(0.75rem);
+
+  transition:
+    opacity var(--bb-transition-normal),
+    transform var(--bb-transition-normal);
+}
+
+/* -------------------------------------
+   Dark
+------------------------------------- */
+
+[data-bs-theme="dark"] .bb-cookie-banner {
+  --bb-cookie-banner-bg: color-mix(
+    in srgb,
+    var(--bb-surface-elevated) 88%,
+    var(--bb-body-bg)
+  );
+
+  --bb-cookie-banner-border-color: color-mix(
+    in srgb,
+    var(--bb-primary) 22%,
+    var(--bb-border-color)
+  );
+
+  --bb-cookie-banner-text-color: color-mix(
+    in srgb,
+    var(--bb-secondary-color) 86%,
+    var(--bb-emphasis-color)
+  );
+
+  --bb-cookie-banner-icon-bg: color-mix(
+    in srgb,
+    var(--bb-primary) 14%,
+    var(--bb-body-bg)
+  );
+
+  --bb-cookie-banner-shadow:
+    0 2.75rem 6rem color-mix(in srgb, var(--bb-black, #000000) 58%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-black, #000000) 34%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 7%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-card {
+  background:
+    radial-gradient(
+      circle at 4% 28%,
+      color-mix(in srgb, var(--bb-primary) 15%, transparent),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 88% 64%,
+      color-mix(in srgb, var(--bb-info, #3b82f6) 9%, transparent),
+      transparent 20rem
+    ),
+    var(--bb-cookie-banner-bg);
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-card::before {
+  background:
+    radial-gradient(
+      circle at center,
+      color-mix(in srgb, var(--bb-primary) 10%, transparent),
+      transparent 68%
+    );
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-icon {
+  border-color: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
+
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-black, #000000) 24%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-manage {
+  --bb-btn-bg: var(--bb-emphasis-color);
+  --bb-btn-color: var(--bb-body-bg);
+  --bb-btn-border-color: var(--bb-emphasis-color);
+
+  --bb-btn-hover-bg: color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-primary));
+  --bb-btn-hover-color: var(--bb-body-bg);
+  --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-reject {
+  --bb-cookie-banner-reject-color: #ff4d5a;
+  --bb-cookie-banner-reject-hover: #e73543;
+
+  --bb-btn-bg: var(--bb-cookie-banner-reject-color);
+  --bb-btn-color: var(--bb-black, #000000);
+  --bb-btn-border-color: var(--bb-cookie-banner-reject-color);
+
+  --bb-btn-hover-bg: var(--bb-cookie-banner-reject-hover);
+  --bb-btn-hover-color: var(--bb-black, #000000);
+  --bb-btn-hover-border-color: var(--bb-cookie-banner-reject-hover);
+}
+
+[data-bs-theme="dark"] .bb-cookie-banner-accept {
+  --bb-cookie-banner-accept-color: #25e28a;
+  --bb-cookie-banner-accept-hover: #16d77a;
+
+  --bb-btn-bg: var(--bb-cookie-banner-accept-color);
+  --bb-btn-color: var(--bb-black, #000000);
+  --bb-btn-border-color: var(--bb-cookie-banner-accept-color);
+
+  --bb-btn-hover-bg: var(--bb-cookie-banner-accept-hover);
+  --bb-btn-hover-color: var(--bb-black, #000000);
+  --bb-btn-hover-border-color: var(--bb-cookie-banner-accept-hover);
+}
+
+.bb-cookie-banner-reject,
+.bb-cookie-banner-reject:hover,
+.bb-cookie-banner-reject:focus,
+.bb-cookie-banner-reject:active {
+  color: var(--bb-black, #000000);
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .bb-cookie-banner-card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .bb-cookie-banner-actions {
+    grid-column: 1 / -1;
+    justify-content: stretch;
+    white-space: normal;
+  }
+
+  .bb-cookie-banner-btn {
+    flex: 1 1 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-cookie-banner {
+    --bb-cookie-banner-offset: 1rem;
+  }
+
+  .bb-cookie-banner-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.875rem;
+
+    padding: 1rem;
+    border-radius: var(--bb-radius-xl);
+  }
+
+  .bb-cookie-banner-visual {
+    display: none;
+  }
+
+  .bb-cookie-banner-close {
+    display: inline-flex;
+  }
+
+  .bb-cookie-banner-title {
+    padding-right: 2rem;
+    font-size: var(--bb-fs-lg);
+  }
+
+  .bb-cookie-banner-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bb-cookie-banner-manage {
+    grid-column: 1 / -1;
+  }
+
+  .bb-cookie-banner-btn {
+    width: 100%;
+    min-height: 2.875rem;
+  }
+}

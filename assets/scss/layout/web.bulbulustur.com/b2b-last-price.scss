@@ -1,0 +1,426 @@
+/* =====================================
+   Wholesale Last Price Request
+   FormLight page-specific
+===================================== */
+
+.bb-wholesale-last-price-page {
+  width: 100%;
+}
+
+.bb-wholesale-last-price-head {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+}
+
+.bb-wholesale-last-price-title {
+  margin: 0.625rem 0 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.035em);
+}
+
+.bb-wholesale-last-price-text {
+  margin: 0.625rem 0 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-wholesale-last-price-product-chip {
+  width: fit-content;
+  max-width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+  padding: 0.625rem 0.875rem;
+
+  color: var(--bb-emphasis-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-pill);
+
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-wholesale-last-price-product-chip .material-symbols-outlined {
+  color: var(--bb-primary);
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+.bb-wholesale-last-price-product-chip span:last-child {
+  min-width: 0;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Layout */
+
+.bb-wholesale-last-price-layout {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.42fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Info card */
+
+.bb-wholesale-last-price-info-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 1.375rem;
+
+  color: var(--bb-white);
+  background:
+    radial-gradient(
+      circle at 88% 10%,
+      color-mix(in srgb, var(--bb-primary) 34%, transparent),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 12% 92%,
+      color-mix(in srgb, var(--bb-warning) 16%, transparent),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--bb-coal-300) 82%, var(--bb-primary)) 0%,
+      var(--bb-coal-400) 100%
+    );
+
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 24%, var(--bb-border-color));
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-wholesale-last-price-info-card::after {
+  content: "";
+  position: absolute;
+  right: -3.75rem;
+  bottom: -4.375rem;
+
+  width: 10.625rem;
+  height: 10.625rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 8%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bb-wholesale-last-price-info-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.bb-wholesale-last-price-info-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  color: var(--bb-white);
+  background-color: var(--bb-primary);
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-wholesale-last-price-info-icon .material-symbols-outlined {
+  font-size: var(--bb-icon-size-xl);
+  line-height: 1;
+}
+
+.bb-wholesale-last-price-info-card h2 {
+  margin: 0;
+
+  color: var(--bb-white);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: -0.025em;
+}
+
+.bb-wholesale-last-price-info-card p {
+  margin: 0.625rem 0 1rem;
+
+  color: color-mix(in srgb, var(--bb-white) 78%, transparent);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+/* Product summary */
+
+.bb-wholesale-last-price-product-summary {
+  margin-top: 1rem;
+  padding: 0.875rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 8%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 10%, transparent);
+  border-radius: var(--bb-radius);
+}
+
+.bb-wholesale-last-price-summary-label {
+  display: block;
+  margin-bottom: 0.375rem;
+
+  color: color-mix(in srgb, var(--bb-white) 62%, transparent);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-bold);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.bb-wholesale-last-price-product-summary strong {
+  display: block;
+
+  color: var(--bb-white);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-wholesale-last-price-product-summary small {
+  display: block;
+  margin-top: 0.25rem;
+
+  color: color-mix(in srgb, var(--bb-white) 66%, transparent);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-base);
+}
+
+/* Info list */
+
+.bb-wholesale-last-price-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+
+  margin-top: 1rem;
+}
+
+.bb-wholesale-last-price-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  padding: 0.6875rem;
+
+  color: color-mix(in srgb, var(--bb-white) 90%, transparent);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 8%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 10%, transparent);
+  border-radius: var(--bb-radius);
+
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-wholesale-last-price-info-item .material-symbols-outlined {
+  flex: 0 0 auto;
+
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Form card */
+
+.bb-wholesale-last-price-form-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: clamp(1.125rem, 3vw, 1.5rem);
+
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-wholesale-last-price-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bb-wholesale-last-price-form-head {
+  margin-bottom: 1rem;
+}
+
+.bb-wholesale-last-price-form-head h2 {
+  margin: 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.02em);
+}
+
+.bb-wholesale-last-price-form-head p {
+  max-width: 42rem;
+  margin: 0.375rem 0 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-wholesale-last-price-input {
+  min-height: 2.75rem;
+}
+
+.bb-wholesale-last-price-textarea {
+  min-height: 10.5rem;
+  resize: vertical;
+}
+
+.bb-wholesale-last-price-helper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  margin-top: 0.875rem;
+  padding: 0.8125rem 0.875rem;
+
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-table-line-height);
+}
+
+.bb-wholesale-last-price-helper .material-symbols-outlined {
+  flex: 0 0 auto;
+
+  color: var(--bb-info);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-wholesale-last-price-actions {
+  margin-top: 1rem;
+}
+
+.bb-wholesale-last-price-actions .btn {
+  width: 100%;
+  min-height: 3rem;
+
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-wholesale-last-price-actions .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+/* Result */
+
+.bb-wholesale-last-price-result {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: flex-start;
+
+  padding: 1.25rem;
+
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-wholesale-last-price-result-icon {
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-primary);
+  background-color: color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated));
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-wholesale-last-price-result-icon .material-symbols-outlined {
+  font-size: var(--bb-fs-3xl);
+  line-height: 1;
+}
+
+.bb-wholesale-last-price-result h2 {
+  margin: 0 0 0.375rem;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-wholesale-last-price-result p {
+  margin: 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+/* FormLight width override */
+
+.bb-layout-light-page:has(.bb-wholesale-last-price-page) .bb-layout-light-content-col {
+  width: 100%;
+  max-width: 70rem;
+  flex: 0 0 auto;
+}
+
+.bb-layout-light-page:has(.bb-wholesale-last-price-page) .bb-layout-light-card-body {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+  .bb-wholesale-last-price-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-wholesale-last-price-layout {
+    gap: 1rem;
+  }
+
+  .bb-wholesale-last-price-form-card,
+  .bb-wholesale-last-price-info-card,
+  .bb-wholesale-last-price-result {
+    border-radius: var(--bb-radius-lg);
+  }
+
+  .bb-wholesale-last-price-result {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-wholesale-last-price-actions .btn {
+    border-radius: var(--bb-radius);
+  }
+}

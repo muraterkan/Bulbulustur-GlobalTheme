@@ -1,0 +1,645 @@
+/* =====================================
+   Category Menu Top - Main CSS Pilot
+   Clean Rebuild
+   Component: _CategoryMenuTopMainCssPilot
+===================================== */
+
+/* =====================================
+   Root / Layer
+===================================== */
+
+.bb-category-menu-root {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+
+    --bb-category-overlay-top: 0px;
+    --bb-category-panel-z: 1080;
+    --bb-category-overlay-z: 1070;
+    --bb-category-panel-width: 1430px;
+}
+
+/* =====================================
+   Trigger
+===================================== */
+
+.bb-category-menu-trigger {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 0 16px;
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    cursor: pointer;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-category-menu-trigger:hover,
+.bb-category-menu-trigger:focus {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border-color: var(--bb-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
+}
+
+.bb-category-menu-root.is-open .bb-category-menu-trigger {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border-color: var(--bb-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
+}
+
+.bb-category-menu-trigger-icon,
+.bb-category-menu-trigger-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.bb-category-menu-trigger-icon .material-symbols-outlined,
+.bb-category-menu-trigger-arrow .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-category-menu-trigger-label {
+    color: inherit;
+    white-space: nowrap;
+}
+
+.bb-category-menu-trigger-badge {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 10px;
+    color: var(--bb-web-orange);
+    background-color: color-mix(in srgb, var(--bb-primary) 14%, var(--bb-body-bg));
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-bold);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.bb-category-menu-trigger-arrow {
+    transition: transform var(--bb-transition-fast);
+}
+
+.bb-category-menu-root.is-open .bb-category-menu-trigger-arrow {
+    transform: rotate(180deg);
+}
+
+/* =====================================
+   Overlay
+   Header main altından başlar.
+   JS --bb-category-overlay-top değerini header bottom'a set eder.
+===================================== */
+
+.bb-category-menu-overlay {
+    position: fixed;
+    top: var(--bb-category-overlay-top);
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: var(--bb-category-overlay-z);
+
+    background-color: rgba(17, 24, 39, 0.58);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity var(--bb-transition-normal),
+        visibility var(--bb-transition-normal);
+}
+
+.bb-category-menu-root.is-open .bb-category-menu-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+body.bb-category-menu-open {
+    overflow: hidden;
+}
+
+/* =====================================
+   Panel
+   Trigger genişliğine sıkışmaz.
+   Viewport merkezinde container genişliğinde açılır.
+===================================== */
+
+.bb-category-menu-panel {
+    position: fixed;
+    top: var(--bb-category-overlay-top);
+    left: 50%;
+
+    z-index: var(--bb-category-panel-z);
+
+    width: min(var(--bb-category-panel-width), calc(100vw - 48px));
+    max-width: min(var(--bb-category-panel-width), calc(100vw - 48px));
+
+    max-height: calc(100vh - var(--bb-category-overlay-top) - 24px);
+    overflow: hidden;
+
+    color: var(--bb-body-color);
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: 0 0 var(--bb-radius-2xl) var(--bb-radius-2xl);
+    box-shadow: var(--bb-shadow-lg);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(8px);
+    pointer-events: none;
+
+    transition:
+        opacity var(--bb-transition-normal),
+        visibility var(--bb-transition-normal),
+        transform var(--bb-transition-normal);
+}
+
+.bb-category-menu-root.is-open .bb-category-menu-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+/* =====================================
+   Panel Head
+===================================== */
+
+.bb-category-menu-panel-head {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 18px 24px;
+    background-color: var(--bb-body-bg);
+    border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-category-menu-panel-head-text {
+    min-width: 0;
+}
+
+.bb-category-menu-panel-title {
+    display: block;
+    margin: 0 0 5px;
+
+    color: var(--bb-heading-color);
+    font-size: var(--bb-icon-size-md);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-heading);
+    letter-spacing: -.02em;
+}
+
+.bb-category-menu-panel-subtitle {
+    margin: 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-base);
+}
+
+/* =====================================
+   Mode Switch
+===================================== */
+
+.bb-category-menu-mode-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 7px;
+    background-color: var(--bb-secondary-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-pill);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-category-menu-mode {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0 18px;
+    color: var(--bb-secondary-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-category-menu-mode:hover {
+    color: var(--bb-heading-color);
+    text-decoration: none;
+}
+
+.bb-category-menu-mode.is-active {
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-category-menu-mode .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* =====================================
+   Panel Body
+===================================== */
+
+.bb-category-menu-panel-body {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    align-items: stretch;
+
+    min-height: 0;
+    max-height: calc(100vh - var(--bb-category-overlay-top) - 100px);
+
+    background-color: var(--bb-body-bg);
+}
+
+/* =====================================
+   Left Side
+===================================== */
+
+.bb-category-menu-side {
+    min-height: 0;
+    background-color: var(--bb-secondary-bg);
+    border-right: 1px solid var(--bb-border-color);
+}
+
+.bb-category-menu-side-scroll {
+    max-height: calc(100vh - var(--bb-category-overlay-top) - 100px);
+    overflow-y: auto;
+    padding: 14px;
+}
+
+.bb-category-menu-side-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.bb-category-menu-side-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bb-category-menu-side-scroll::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--bb-secondary-color) 30%, transparent);
+    border: 2px solid transparent;
+    border-radius: var(--bb-radius-pill);
+    background-clip: padding-box;
+}
+
+.bb-category-menu-side-item {
+    width: 100%;
+    min-height: 56px;
+
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 12px;
+    color: var(--bb-heading-color);
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--bb-radius-xl);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1.3;
+    text-align: left;
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-category-menu-side-item + .bb-category-menu-side-item {
+    margin-top: 8px;
+}
+
+.bb-category-menu-side-item:hover {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 26%, var(--bb-border-color));
+    text-decoration: none;
+}
+
+.bb-category-menu-side-item.is-active {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 42%, var(--bb-border-color));
+    box-shadow: var(--bb-shadow-xs);
+    text-decoration: none;
+}
+
+.bb-category-menu-side-item-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-primary);
+    background-color: color-mix(in srgb, var(--bb-primary) 13%, var(--bb-body-bg));
+    border-radius: var(--bb-radius-lg);
+}
+
+.bb-category-menu-side-item-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-category-menu-side-item-text {
+    min-width: 0;
+    color: inherit;
+    line-height: var(--bb-line-height-base);
+}
+
+.bb-category-menu-side-item-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bb-secondary-color);
+}
+
+.bb-category-menu-side-item-arrow .material-symbols-outlined {
+    font-size: var(--bb-fs-xl);
+    line-height: 1;
+}
+
+/* =====================================
+   Stage / Content Visibility
+   Sadece aktif kategori görünsün.
+===================================== */
+
+.bb-category-menu-stage {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+
+    background-color: var(--bb-body-bg);
+    overflow: hidden;
+}
+
+.bb-category-menu-panel .bb-category-menu-content {
+    display: none !important;
+}
+
+.bb-category-menu-panel .bb-category-menu-content.is-active {
+    display: block !important;
+}
+
+.bb-category-menu-content {
+    height: 100%;
+    max-height: calc(100vh - var(--bb-category-overlay-top) - 100px);
+
+    overflow-y: auto;
+    padding: 28px 30px 32px;
+    background-color: var(--bb-body-bg);
+}
+
+.bb-category-menu-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.bb-category-menu-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bb-category-menu-content::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--bb-secondary-color) 28%, transparent);
+    border: 2px solid transparent;
+    border-radius: var(--bb-radius-pill);
+    background-clip: padding-box;
+}
+
+/* =====================================
+   Content Head
+===================================== */
+
+.bb-category-menu-content-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.bb-category-menu-content-title {
+    margin: 0 0 7px;
+
+    color: var(--bb-heading-color);
+    font-size: var(--bb-h3);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-heading);
+    letter-spacing: -.03em;
+}
+
+.bb-category-menu-content-subtitle {
+    margin: 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-table-line-height);
+}
+
+.bb-category-menu-content-link {
+    flex: 0 0 auto;
+
+    color: var(--bb-primary);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-bold);
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.bb-category-menu-content-link:hover {
+    color: var(--bb-primary);
+    text-decoration: underline;
+}
+
+/* =====================================
+   Columns
+===================================== */
+
+.bb-category-menu-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    align-items: start;
+    gap: 30px 42px;
+}
+
+.bb-category-menu-column {
+    min-width: 0;
+}
+
+.bb-category-menu-column-title {
+    display: inline-flex;
+    margin: 0 0 11px;
+
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-md);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-base);
+    text-decoration: none;
+}
+
+.bb-category-menu-column-title:hover {
+    color: var(--bb-primary);
+    text-decoration: none;
+}
+
+.bb-category-menu-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bb-category-menu-links li + li {
+    margin-top: 8px;
+}
+
+.bb-category-menu-links a {
+    display: inline-flex;
+
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-base);
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-category-menu-links a:hover {
+    color: var(--bb-heading-color);
+    text-decoration: none;
+    transform: translateX(2px);
+}
+
+.bb-category-menu-more-link {
+    display: inline-flex;
+    margin-top: 10px;
+
+    color: var(--bb-primary);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-bold);
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.bb-category-menu-more-link:hover {
+    color: var(--bb-primary);
+    text-decoration: underline;
+}
+
+/* =====================================
+   Empty State
+===================================== */
+
+.bb-category-menu-empty-state {
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 48px 24px;
+    text-align: center;
+
+    background-color: var(--bb-secondary-bg);
+    border: 1px dashed var(--bb-border-color);
+    border-radius: var(--bb-radius-2xl);
+}
+
+.bb-category-menu-empty-state .material-symbols-outlined {
+    color: var(--bb-primary);
+    font-size: var(--bb-icon-size-4xl);
+    line-height: 1;
+}
+
+.bb-category-menu-empty-state h3 {
+    margin: 0;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-xl);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-heading);
+}
+
+.bb-category-menu-empty-state p {
+    max-width: 520px;
+    margin: 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 1479.98px) {
+    .bb-category-menu-root {
+        --bb-category-panel-width: 1200px;
+    }
+
+    .bb-category-menu-columns {
+        grid-template-columns: repeat(3, minmax(190px, 1fr));
+        gap: 26px 30px;
+    }
+
+    .bb-category-menu-content-title {
+        font-size: var(--bb-fs-2xl);
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .bb-category-menu-root {
+        display: none;
+    }
+}

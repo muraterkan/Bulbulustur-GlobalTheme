@@ -1,0 +1,284 @@
+.bb-b2b-related-products {
+  --bb-b2b-related-product-primary: var(--bb-primary);
+  --bb-b2b-related-product-primary-soft: color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated));
+  --bb-b2b-related-product-ink: var(--bb-emphasis-color);
+  --bb-b2b-related-product-muted: var(--bb-secondary-color);
+  --bb-b2b-related-product-border: var(--bb-border-color);
+  --bb-b2b-related-product-shadow: var(--bb-shadow-xs);
+  --bb-b2b-related-product-shadow-hover: var(--bb-shadow-sm);
+
+  padding-top: 1.5rem;
+}
+
+.bb-b2b-related-products-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.bb-b2b-related-products-head-copy {
+  max-width: 48rem;
+}
+
+.bb-b2b-related-products-label {
+  margin-bottom: 0.75rem;
+}
+
+.bb-b2b-related-products-label .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+.bb-b2b-related-products-title {
+  margin: 0;
+
+  color: var(--bb-b2b-related-product-ink);
+  font-size: clamp(1.375rem, 2.6vw, 1.75rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: -0.025em;
+}
+
+.bb-b2b-related-products-title::after {
+  content: "";
+  display: block;
+
+  width: 4.5rem;
+  height: 0.125rem;
+
+  margin-top: 0.625rem;
+
+  background-color: var(--bb-warning);
+  border-radius: var(--bb-radius-pill);
+}
+
+.bb-b2b-related-products-text {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+
+  color: var(--bb-b2b-related-product-muted);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+/* Carousel */
+
+.bb-b2b-related-products-carousel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 1.5rem 3.375rem 2.875rem;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--bb-primary) 7%, transparent),
+      transparent 32%
+    ),
+    var(--bb-body-bg);
+
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-b2b-related-product-shadow);
+}
+
+.bb-b2b-related-products-carousel-inner {
+  overflow: hidden;
+}
+
+.bb-b2b-related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bb-b2b-related-product-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: color-mix(in srgb, var(--bb-primary) 36%, transparent);
+}
+
+.bb-b2b-related-product-placeholder .material-symbols-outlined {
+  font-size: var(--bb-icon-size-4xl);
+  line-height: 1;
+}
+
+.bb-b2b-related-product-favorite {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  z-index: 4;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-secondary-color) !important;
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 78%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 68%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0.375rem 0.875rem rgba(16, 24, 40, 0.1);
+  backdrop-filter: blur(0.5rem);
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.bb-b2b-related-product-favorite:hover {
+  transform: translateY(-0.0625rem);
+  color: var(--bb-danger) !important;
+  background-color: var(--bb-surface-elevated);
+}
+
+.bb-b2b-related-product-favorite .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 20;
+}
+
+.bb-b2b-related-product-category {
+  display: -webkit-box;
+  overflow: hidden;
+
+  margin-bottom: 0.375rem;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-base);
+
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
+/* Controls */
+
+.bb-b2b-related-products-control {
+  top: 50%;
+  z-index: 5;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 94%, transparent);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow-xs);
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+}
+
+.bb-b2b-related-products-control:hover {
+  color: var(--bb-primary);
+  background-color: var(--bb-surface-elevated);
+}
+
+.bb-b2b-related-products-control-prev {
+  left: 0.625rem;
+}
+
+.bb-b2b-related-products-control-next {
+  right: 0.625rem;
+}
+
+.bb-b2b-related-products-control .material-symbols-outlined {
+  font-size: var(--bb-fs-2xl);
+  line-height: 1;
+}
+
+/* Indicators */
+
+.bb-b2b-related-products-indicators {
+  right: 0;
+  bottom: 0.8125rem;
+  left: 0;
+
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.bb-b2b-related-products-indicators [data-bs-target] {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  min-width: 0.4375rem;
+
+  margin: 0;
+
+  background-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  border: 0;
+  border-radius: var(--bb-radius-pill);
+  opacity: 1;
+
+  transition:
+    width 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.bb-b2b-related-products-indicators .active {
+  width: 1.375rem;
+  background-color: var(--bb-warning);
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2b-related-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2b-related-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bb-b2b-related-products-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2b-related-products-carousel {
+    padding: 0.875rem 2.25rem 2.5rem;
+    border-radius: var(--bb-radius-lg);
+  }
+
+  .bb-b2b-related-products-grid {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2b-related-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-b2b-related-product-media {
+    aspect-ratio: 16 / 10;
+  }
+}

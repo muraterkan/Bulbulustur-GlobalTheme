@@ -1,0 +1,265 @@
+/* =====================================
+   Web Bulbulustur - Layout Light
+   Scope: _LayoutLight.cshtml
+
+   Purpose:
+   - Lightweight web/form pages
+   - No legacy theme dependency
+   - No jQuery/vendor dependency
+   - Main CSS token-driven premium form stage
+===================================== */
+
+.bb-layout-light-page {
+  --bb-layout-light-content-width: 32rem;
+  --bb-layout-light-header-action-offset: 0;
+
+  min-height: 100vh;
+
+  color: var(--bb-body-color);
+
+  background:
+    radial-gradient(
+      circle at 50% -8%,
+      color-mix(in srgb, var(--bb-primary) 14%, transparent),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 16% 26%,
+      color-mix(in srgb, var(--bb-info, #3b82f6) 6%, transparent),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 86% 82%,
+      color-mix(in srgb, var(--bb-primary) 8%, transparent),
+      transparent 26rem
+    ),
+    linear-gradient(
+      180deg,
+      var(--bb-body-bg),
+      color-mix(in srgb, var(--bb-tertiary-bg) 70%, var(--bb-body-bg))
+    );
+
+  overflow-x: hidden;
+}
+
+/* -------------------------------------
+   Shell
+------------------------------------- */
+
+.bb-layout-light-shell {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+/* -------------------------------------
+   Header
+------------------------------------- */
+
+.bb-layout-light-header {
+  flex: 0 0 auto;
+
+  padding-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.bb-layout-light-header-inner {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  min-height: 3rem;
+}
+
+.bb-layout-light-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.bb-layout-light-logo {
+  display: block;
+
+  width: auto;
+  max-width: clamp(11rem, 18vw, 15rem);
+  height: auto;
+}
+
+.bb-layout-light-header-inner > :not(.bb-layout-light-logo-link) {
+  position: absolute;
+  top: var(--bb-layout-light-header-action-offset);
+  right: 0;
+}
+
+/* -------------------------------------
+   Main
+------------------------------------- */
+
+.bb-layout-light-main {
+  flex: 1 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+.bb-layout-light-main-inner {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.bb-layout-light-content-col {
+  width: 100%;
+  max-width: var(--bb-layout-light-content-width);
+}
+
+/* -------------------------------------
+   Card
+------------------------------------- */
+
+.bb-layout-light-card {
+  width: 100%;
+  overflow: hidden;
+
+  background-color: color-mix(
+    in srgb,
+    var(--bb-surface-elevated) 96%,
+    var(--bb-body-bg)
+  );
+
+  border: var(--bb-border-width) solid color-mix(
+    in srgb,
+    var(--bb-border-color) 76%,
+    transparent
+  );
+
+  border-radius: var(--bb-radius-xl);
+
+  box-shadow:
+    0 2.25rem 5.5rem color-mix(in srgb, var(--bb-emphasis-color) 9%, transparent),
+    0 0.25rem 1rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
+}
+
+.bb-layout-light-card-body {
+  padding: clamp(1.65rem, 4vw, 2.45rem);
+}
+
+/* -------------------------------------
+   Footer
+------------------------------------- */
+
+.bb-layout-light-footer {
+  flex: 0 0 auto;
+
+  padding-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.bb-layout-light-footer-text {
+  max-width: 42rem;
+  margin: 0 auto;
+
+  color: color-mix(in srgb, var(--bb-secondary-color) 88%, transparent);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  text-align: center;
+}
+
+/* -------------------------------------
+   Dark
+------------------------------------- */
+
+[data-bs-theme="dark"] .bb-layout-light-page {
+  background:
+    radial-gradient(
+      circle at 50% -8%,
+      color-mix(in srgb, var(--bb-primary) 12%, transparent),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 16% 26%,
+      color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 86% 82%,
+      color-mix(in srgb, var(--bb-primary) 7%, transparent),
+      transparent 26rem
+    ),
+    linear-gradient(
+      180deg,
+      var(--bb-body-bg),
+      color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg))
+    );
+}
+
+[data-bs-theme="dark"] .bb-layout-light-card {
+  background-color: color-mix(
+    in srgb,
+    var(--bb-surface-elevated) 92%,
+    var(--bb-body-bg)
+  );
+
+  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+
+  box-shadow:
+    0 2rem 5rem rgba(0, 0, 0, 0.28),
+    0 0.25rem 1rem rgba(0, 0, 0, 0.18);
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 767.98px) {
+  .bb-layout-light-header {
+    padding-top: 1rem;
+  }
+
+  .bb-layout-light-header-inner {
+    justify-content: flex-start;
+  }
+
+  .bb-layout-light-header-inner > :not(.bb-layout-light-logo-link) {
+    position: static;
+    margin-left: auto;
+  }
+
+  .bb-layout-light-logo {
+    max-width: 11rem;
+  }
+
+  .bb-layout-light-main {
+    align-items: flex-start;
+    padding-top: 1.25rem;
+  }
+
+  .bb-layout-light-card-body {
+    padding: 1.35rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-layout-light-page {
+    --bb-layout-light-content-width: 100%;
+  }
+
+  .bb-layout-light-card {
+    border-radius: var(--bb-radius-lg);
+  }
+
+  .bb-layout-light-footer {
+    padding-bottom: 1.25rem;
+  }
+}

@@ -1,0 +1,69 @@
+/* =====================================
+   B2B Homepage Featured Products
+   Scope: _B2BHomepageFeaturedProducts
+===================================== */
+
+.bb-b2b-featured-products {
+    padding-top: clamp(2.25rem, 4vw, 3.75rem);
+    padding-bottom: clamp(2.25rem, 4vw, 3.75rem);
+}
+
+.bb-b2b-featured-products-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.bb-b2b-featured-products-head-copy {
+    min-width: 0;
+    max-width: 48rem;
+}
+
+.bb-b2b-featured-products-label {
+    margin-bottom: 0.875rem;
+}
+
+.bb-b2b-featured-products-label .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-b2b-featured-products-title {
+    margin: 0 0 0.65rem;
+
+    color: var(--bb-emphasis-color);
+    font-size: clamp(1.875rem, 3vw, 2.875rem);
+    font-weight: var(--bb-fw-extrabold, 800);
+    line-height: 1.05;
+    letter-spacing: var(--bb-letter-spacing-tight, -0.045em);
+}
+
+.bb-b2b-featured-products-text {
+    max-width: 42rem;
+    margin: 0;
+
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-medium);
+    line-height: var(--bb-line-height-content);
+}
+
+@media (max-width: 767.98px) {
+    .bb-b2b-featured-products {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .bb-b2b-featured-products-title {
+        font-size: var(--bb-fs-3xl);
+        line-height: 1.08;
+    }
+
+    .bb-b2b-featured-products-text {
+        font-size: var(--bb-fs-sm);
+    }
+}

@@ -1,0 +1,229 @@
+/* =====================================
+   B2C Product Size Variants
+   Component-specific
+   Uses Main CSS: bb-chip
+===================================== */
+
+.bb-b2c-product-size-variants {
+  margin: 0;
+  padding: 1.125rem 1.375rem 1.375rem;
+
+  border-bottom: var(--bb-border-width) dashed var(--bb-border-color);
+}
+
+.bb-b2c-product-size-variants:first-child {
+  padding-top: 0;
+}
+
+.bb-b2c-product-size-variants:last-child {
+  border-bottom: 0;
+}
+
+.bb-b2c-product-size-variants-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.bb-b2c-product-size-variants-title {
+  margin: 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-b2c-product-size-variants-title strong {
+  color: var(--bb-emphasis-color);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-b2c-product-size-variants-title span {
+  color: var(--bb-secondary-color);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-b2c-product-size-guide {
+  flex: 0 0 auto;
+}
+
+.bb-b2c-product-size-guide .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+/* -------------------------------------
+   List
+------------------------------------- */
+
+.bb-b2c-product-size-variants-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bb-b2c-product-size-variant {
+  position: relative;
+
+  min-width: 2.625rem;
+  min-height: 2.625rem;
+  padding: 0 0.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-emphasis-color) !important;
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  text-decoration: none !important;
+  cursor: pointer;
+
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-heading);
+
+  transition:
+    border-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast),
+    transform var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    color var(--bb-transition-fast);
+}
+
+.bb-b2c-product-size-variant:hover {
+  transform: translateY(-1px);
+
+  border-color: color-mix(in srgb, var(--bb-primary) 32%, var(--bb-border-color));
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-b2c-product-size-variant.is-active {
+  color: var(--bb-emphasis-color) !important;
+  background-color: var(--bb-primary);
+  border-color: var(--bb-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--bb-primary) 16%, transparent);
+}
+
+.bb-b2c-product-size-variant.is-active::after {
+  content: "";
+
+  width: 0.3125rem;
+  height: 0.3125rem;
+  margin-left: 0.375rem;
+
+  background-color: currentColor;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.bb-b2c-product-size-variant.is-disabled {
+  opacity: 0.64;
+
+  color: var(--bb-secondary-color) !important;
+  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-white));
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.bb-b2c-product-size-variant.is-disabled:hover {
+  transform: none;
+
+  border-color: var(--bb-border-color);
+  box-shadow: none;
+}
+
+.bb-b2c-product-size-variant.is-disabled::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 50%;
+
+  height: 1px;
+
+  background-color: color-mix(in srgb, var(--bb-emphasis-color) 28%, transparent);
+
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+/* -------------------------------------
+   Tooltip
+------------------------------------- */
+
+.bb-b2c-product-size-variant-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5625rem);
+  z-index: 20;
+
+  min-width: 9.375rem;
+  max-width: 13.125rem;
+  padding: 0.5rem 0.625rem;
+
+  color: var(--bb-white);
+  color: var(--bb-white);
+  border-radius: var(--bb-radius);
+
+  opacity: 0;
+  pointer-events: none;
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+  text-align: center;
+
+  transform: translateX(-50%) translateY(4px);
+
+  transition:
+    opacity var(--bb-transition-fast),
+    transform var(--bb-transition-fast);
+}
+
+.bb-b2c-product-size-variant-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: var(--bb-dark) transparent transparent;
+
+  transform: translateX(-50%);
+}
+
+.bb-b2c-product-size-variant.is-disabled:hover .bb-b2c-product-size-variant-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 575.98px) {
+  .bb-b2c-product-size-variants {
+    padding: 0.875rem 1rem 1rem;
+  }
+
+  .bb-b2c-product-size-variants-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bb-b2c-product-size-variant {
+    min-width: 2.6875rem;
+    min-height: 2.25rem;
+    padding: 0 0.625rem;
+
+    font-size: var(--bb-fs-sm);;
+  }
+}

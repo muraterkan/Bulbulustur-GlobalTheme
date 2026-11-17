@@ -1,0 +1,182 @@
+/* =====================================
+   B2C Homepage Banner Type 2
+   Component-specific
+===================================== */
+
+.bb-home-banner-type2 {
+  position: relative;
+  z-index: 3;
+
+  padding: 0.875rem 1.875rem;
+
+  color: var(--bb-white);
+  color: var(--bb-white);
+}
+
+.bb-home-banner-type2-row {
+  min-height: 4.875rem;
+}
+
+/* -------------------------------------
+   Left / Badge
+------------------------------------- */
+
+.bb-home-banner-type2-left,
+.bb-home-banner-type2-center,
+.bb-home-banner-type2-right {
+  height: 100%;
+}
+
+.bb-home-banner-type2-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bb-home-banner-type2-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bb-home-banner-type2-badge img {
+  display: block;
+  width: auto;
+  max-height: 3.5rem;
+  object-fit: contain;
+}
+
+/* -------------------------------------
+   Center
+------------------------------------- */
+
+.bb-home-banner-type2-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  text-align: center;
+}
+
+.bb-home-banner-type2-title {
+  max-width: 100%;
+  margin: 0 0 0.25rem;
+
+  overflow: hidden;
+
+  color: currentColor;
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-heading);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bb-home-banner-type2-subtitle {
+  max-width: 100%;
+  margin: 0;
+
+  overflow: hidden;
+
+  color: color-mix(in srgb, currentColor 92%, transparent);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-base);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* -------------------------------------
+   Right / Button
+------------------------------------- */
+
+.bb-home-banner-type2-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bb-home-banner-type2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 7.5rem;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+
+  color: var(--bb-primary-inverse) !important;
+  background-color: var(--bb-primary);
+  border: 0;
+  border-radius: var(--bb-radius-pill);
+  text-decoration: none !important;
+
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-semibold);
+
+  transition:
+    background-color var(--bb-transition-fast),
+    transform var(--bb-transition-fast);
+}
+
+.bb-home-banner-type2-btn:hover {
+  color: var(--bb-primary-inverse) !important;
+  background-color: color-mix(in srgb, var(--bb-primary) 88%, var(--bb-white));
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .bb-home-banner-type2 {
+    padding: 0.75rem 1.125rem;
+  }
+
+  .bb-home-banner-type2-row {
+    min-height: auto;
+  }
+
+  .bb-home-banner-type2-badge img {
+    max-height: 3rem;
+  }
+
+  .bb-home-banner-type2-title {
+    font-size: var(--bb-icon-size-md);
+  }
+
+  .bb-home-banner-type2-subtitle {
+    font-size: var(--bb-fs-xs);
+  }
+
+  .bb-home-banner-type2-btn {
+    min-width: 6.75rem;
+    min-height: 2.75rem;
+    padding: 0 1.125rem;
+    font-size: var(--bb-fs-sm);;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-home-banner-type2-left,
+  .bb-home-banner-type2-center,
+  .bb-home-banner-type2-right {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bb-home-banner-type2-title,
+  .bb-home-banner-type2-subtitle {
+    overflow: visible;
+    text-overflow: initial;
+    white-space: normal;
+  }
+
+  .bb-home-banner-type2-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}

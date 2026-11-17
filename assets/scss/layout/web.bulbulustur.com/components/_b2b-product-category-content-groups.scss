@@ -1,0 +1,99 @@
+/* =====================================
+   B2C Category Content Groups
+   Inner component / product cards only
+===================================== */
+
+.bb-b2c-category-content-group {
+  min-width: 0;
+}
+
+.bb-b2c-category-content-group + .bb-b2c-category-content-group {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+}
+
+.bb-b2c-category-content-group-products {
+  min-width: 0;
+}
+
+/* Product cards */
+
+.bb-b2c-category-contents {
+  min-width: 0;
+}
+
+.bb-b2c-category-contents-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bb-b2c-category-contents-media {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 13.75rem;
+  padding: 0.875rem;
+
+  background:
+    radial-gradient(
+      circle at 82% 12%,
+      color-mix(in srgb, var(--bb-primary) 7%, transparent),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      var(--bb-body-bg) 0%,
+      color-mix(in srgb, var(--bb-tertiary-bg) 78%, var(--bb-white)) 100%
+    );
+
+  border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-b2c-category-contents-media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background-color: var(--bb-primary);
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2c-category-content-group + .bb-b2c-category-content-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .bb-b2c-category-contents-media {
+    min-height: 11.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-b2c-category-contents-media {
+    min-height: 13rem;
+  }
+}

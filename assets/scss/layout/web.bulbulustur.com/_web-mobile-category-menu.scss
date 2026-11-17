@@ -1,0 +1,103 @@
+/* =====================================
+   Web Mobile Category Menu
+   Main CSS Pilot
+===================================== */
+
+.bb-mobile-category-menu {
+    width: 100%;
+}
+
+.bb-mobile-category-menu-list,
+.bb-mobile-category-submenu,
+.bb-mobile-category-third-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bb-mobile-category-menu-item {
+    border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-mobile-category-menu-toggle,
+.bb-mobile-category-menu-link,
+.bb-mobile-category-submenu-toggle,
+.bb-mobile-category-submenu-link,
+.bb-mobile-category-third-menu-link {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 0;
+    background-color: transparent;
+    color: var(--bb-heading-color);
+    text-align: left;
+    text-decoration: none;
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: var(--bb-line-height-base);
+}
+
+.bb-mobile-category-menu-toggle,
+.bb-mobile-category-menu-link {
+    padding: 12px 0;
+}
+
+.bb-mobile-category-submenu {
+    padding: 4px 0 10px 12px;
+}
+
+.bb-mobile-category-submenu-item {
+    border-left: 1px solid var(--bb-border-color);
+}
+
+.bb-mobile-category-submenu-toggle,
+.bb-mobile-category-submenu-link {
+    padding: 10px 0 10px 14px;
+    color: var(--bb-secondary-color);
+    font-weight: var(--bb-fw-medium);
+}
+
+.bb-mobile-category-third-menu {
+    padding: 2px 0 8px 18px;
+}
+
+.bb-mobile-category-third-menu-item {
+    border-left: 1px dashed var(--bb-border-color);
+}
+
+.bb-mobile-category-third-menu-link {
+    min-height: 38px;
+    padding: 8px 0 8px 14px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-normal);
+}
+
+.bb-mobile-category-menu-toggle:hover,
+.bb-mobile-category-menu-link:hover,
+.bb-mobile-category-submenu-toggle:hover,
+.bb-mobile-category-submenu-link:hover,
+.bb-mobile-category-third-menu-link:hover {
+    color: var(--bb-primary);
+    text-decoration: none;
+}
+
+.bb-mobile-category-menu-text {
+    min-width: 0;
+}
+
+.bb-mobile-category-menu-icon {
+    flex: 0 0 auto;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-xl);
+    line-height: 1;
+    transition: transform var(--bb-transition-fast);
+}
+
+.bb-mobile-category-menu-toggle:not(.collapsed) .bb-mobile-category-menu-icon,
+.bb-mobile-category-submenu-toggle:not(.collapsed) .bb-mobile-category-menu-icon {
+    transform: rotate(180deg);
+}

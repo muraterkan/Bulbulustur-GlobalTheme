@@ -1,0 +1,164 @@
+.bb-b2b-banner-strip {
+    --bb-b2b-banner-strip-primary: var(--bb-b2b-category-primary, var(--bb-primary, #155eef));
+    --bb-b2b-banner-strip-primary-dark: var(--bb-b2b-category-primary-dark, #0f2747);
+    --bb-b2b-banner-strip-primary-deep: var(--bb-b2b-category-primary-deep, #123764);
+    --bb-b2b-banner-strip-yellow: var(--bb-warning, #f7c600);
+    --bb-b2b-banner-strip-radius: var(--bb-radius-xl, 28px);
+    --bb-b2b-banner-strip-shadow: var(--bb-shadow-md, 0 16px 36px rgba(16, 24, 40, 0.09));
+
+    position: relative;
+    z-index: 3;
+}
+
+.bb-b2b-banner-strip-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--bb-b2b-banner-strip-radius);
+    background:
+        radial-gradient(circle at top right, rgba(247, 198, 0, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--bb-b2b-banner-strip-primary-dark) 0%, var(--bb-b2b-banner-strip-primary-deep) 52%, var(--bb-b2b-banner-strip-primary) 100%);
+    color: var(--bb-b2b-banner-strip-text-color, #ffffff);
+    padding: 18px 24px;
+    box-shadow: var(--bb-b2b-banner-strip-shadow);
+}
+
+.bb-b2b-banner-strip-inner::before {
+    content: "";
+    position: absolute;
+    left: -72px;
+    bottom: -90px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--bb-white) 6%, transparent);
+    pointer-events: none;
+}
+
+.bb-b2b-banner-strip-inner::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -80px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--bb-white) 7%, transparent);
+    pointer-events: none;
+}
+
+.bb-b2b-banner-strip-inner > .row {
+    position: relative;
+    z-index: 2;
+}
+
+.bb-b2b-banner-strip-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 72px;
+}
+
+.bb-b2b-banner-strip-image {
+    display: block;
+    max-width: 100%;
+    max-height: 58px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.14));
+}
+
+.bb-b2b-banner-strip-placeholder {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--bb-radius-xl);
+    background: color-mix(in srgb, var(--bb-white) 12%, transparent);
+    color: var(--bb-b2b-banner-strip-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-b2b-banner-strip-placeholder .material-symbols-outlined {
+    font-size: var(--bb-h2);
+    line-height: 1;
+}
+
+.bb-b2b-banner-strip-content {
+    min-width: 0;
+    text-align: center;
+}
+
+.bb-b2b-banner-strip-title {
+    color: var(--bb-b2b-banner-strip-text-color, #ffffff);
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-extrabold);
+    letter-spacing: -0.025em;
+    margin-bottom: 4px;
+    overflow-wrap: anywhere;
+}
+
+.bb-b2b-banner-strip-text {
+    color: var(--bb-b2b-banner-strip-text-color, #ffffff);
+    opacity: 0.86;
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-table-line-height);
+    font-weight: var(--bb-fw-medium);
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+.bb-b2b-banner-strip-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bb-b2b-banner-strip-btn {
+    min-height: 46px;
+    border-radius: var(--bb-radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    font-weight: var(--bb-fw-extrabold);
+    white-space: nowrap;
+}
+
+.bb-b2b-banner-strip-btn .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .bb-b2b-banner-strip-inner {
+        padding: 16px 18px;
+    }
+
+    .bb-b2b-banner-strip-media {
+        justify-content: center;
+        min-height: auto;
+    }
+
+    .bb-b2b-banner-strip-image {
+        max-height: 50px;
+    }
+
+    .bb-b2b-banner-strip-action {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-b2b-banner-strip-inner {
+        border-radius: var(--bb-radius-2xl);
+        padding: 18px;
+    }
+
+    .bb-b2b-banner-strip-content {
+        text-align: center;
+    }
+
+    .bb-b2b-banner-strip-btn {
+        width: 100%;
+    }
+}

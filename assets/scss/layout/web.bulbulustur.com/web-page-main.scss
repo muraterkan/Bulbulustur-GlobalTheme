@@ -1,0 +1,119 @@
+/* =====================================
+   Page Main
+   Shared page shell for Bulbulustur web pages
+===================================== */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--bb-surface-elevated);
+}
+
+/* -------------------------------------
+   Base main shell
+------------------------------------- */
+
+.bb-page-main {
+    min-height: 100%;
+    color: var(--bb-body-color);
+    background-color: var(--bb-body-bg);
+
+    padding-top: 0;
+    padding-bottom: 4rem;
+}
+
+/* -------------------------------------
+   Background variants
+------------------------------------- */
+
+.bb-page-main-white {
+    background-color: var(--bb-surface-elevated);
+}
+
+.bb-page-main-soft {
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-primary) 3%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 18rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+.bb-page-main-muted {
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-white)) 0%,
+            var(--bb-body-bg) 16rem,
+            var(--bb-body-bg) 100%
+        );
+}
+
+.bb-page-main-gray {
+    background-color: var(--bb-tertiary-bg);
+}
+
+/* -------------------------------------
+   Spacing variants
+------------------------------------- */
+
+.bb-page-main-spaced {
+    padding-top: 3rem;
+}
+
+.bb-page-main-compact {
+    padding-bottom: 2.5rem;
+}
+
+.bb-page-main-loose {
+    padding-bottom: 5.5rem;
+}
+
+.bb-page-main-flush {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* -------------------------------------
+   Footer CTA protection
+------------------------------------- */
+
+.bb-page-main-has-bottom-cta {
+    padding-bottom: 5.5rem;
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .bb-page-main {
+        padding-bottom: 3.25rem;
+    }
+
+    .bb-page-main-spaced {
+        padding-top: 2.25rem;
+    }
+
+    .bb-page-main-has-bottom-cta {
+        padding-bottom: 4.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bb-page-main {
+        padding-bottom: 2.75rem;
+    }
+
+    .bb-page-main-spaced {
+        padding-top: 1.75rem;
+    }
+
+    .bb-page-main-has-bottom-cta {
+        padding-bottom: 4rem;
+    }
+}

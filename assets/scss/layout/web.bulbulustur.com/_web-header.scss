@@ -1,0 +1,733 @@
+/* =====================================
+   Web Header Main - Main CSS Pilot
+   Clean rebuild
+===================================== */
+
+/* =====================================
+   Header Base / Layer Order
+===================================== */
+
+.bb-web-header {
+    position: relative;
+    z-index: 1040;
+
+    background-color: var(--bb-body-bg);
+    border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+    box-shadow:
+        0 1px 0 rgba(15, 23, 42, .03),
+        0 10px 26px rgba(15, 23, 42, .055);
+}
+
+.bb-web-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+    height: 18px;
+
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 23, 42, .045),
+        rgba(15, 23, 42, 0)
+    );
+}
+
+.bb-web-header-main {
+    position: relative;
+    z-index: 1040;
+
+    background-color: var(--bb-body-bg);
+    border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+}
+
+.bb-web-header-main,
+.bb-web-header-main .bb-web-container,
+.bb-web-header-main-shell,
+.bb-web-header-inner,
+.bb-web-header-brand-wrap,
+.bb-web-header-category-host,
+.bb-web-header-category {
+    overflow: visible;
+}
+
+.bb-web-header-main-shell {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+/* Mega menu açıldığında shadow header altında kaybolmasın */
+.bb-category-menu-root,
+.bb-category-menu-panel {
+    position: relative;
+    z-index: 1050;
+}
+
+/* Koyu tema için gölge biraz daha sakin */
+[data-bs-theme="dark"] .bb-web-header {
+    border-bottom-color: rgba(255, 255, 255, .08);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, .04),
+        0 10px 26px rgba(0, 0, 0, .22);
+}
+
+[data-bs-theme="dark"] .bb-web-header::after {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, .22),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+/* =====================================
+   Main Header Grid
+===================================== */
+
+.bb-web-header-inner {
+    min-height: 96px;
+    display: grid;
+    grid-template-columns: auto minmax(360px, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+}
+
+.bb-web-header-brand-wrap {
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.bb-web-header-logo {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+.bb-web-header-logo img {
+    display: block;
+    width: auto;
+    height: 40px;
+}
+
+/* =====================================
+   Category Host
+   Category menu panel/overlay için host temiz tutulur.
+===================================== */
+
+.bb-web-header-category-host {
+    position: relative;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.bb-web-header-category {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/* =====================================
+   Search
+===================================== */
+
+.bb-web-header-search {
+    min-width: 0;
+    width: 100%;
+}
+
+.bb-web-header-search-form {
+    width: 100%;
+    margin: 0;
+}
+
+.bb-web-header-search-group {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+
+    background-color: var(--bb-body-bg);
+    border: 2px solid var(--bb-primary);
+    border-radius: var(--bb-radius-pill);
+
+    transition:
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-web-header-search-group:focus-within {
+    border-color: var(--bb-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 16%, transparent);
+}
+
+.bb-web-header-search-input {
+    min-width: 0;
+    height: 48px;
+    flex: 1 1 auto;
+
+    padding: 0 22px;
+    color: var(--bb-heading-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: var(--bb-radius-none);
+    box-shadow: none !important;
+    font-size: var(--bb-fs-sm);;
+}
+
+.bb-web-header-search-input::placeholder {
+    color: var(--bb-secondary-color);
+}
+
+.bb-web-header-search-input:focus {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none !important;
+}
+
+.bb-web-header-search-select {
+    width: 160px;
+    min-width: 160px;
+    height: 48px;
+
+    color: var(--bb-secondary-color);
+    background-color: var(--bb-body-bg);
+    border: 0;
+    border-left: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-none);
+    box-shadow: none !important;
+    font-size: var(--bb-fs-sm);;
+}
+
+.bb-web-header-search-select:focus {
+    border-left-color: var(--bb-border-color);
+    box-shadow: none !important;
+}
+
+.bb-web-header-search-button {
+    width: 58px;
+    min-width: 58px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary);
+    border: 0;
+    border-radius: var(--bb-radius-none);
+
+    transition:
+        background-color var(--bb-transition-fast),
+        color var(--bb-transition-fast);
+}
+
+.bb-web-header-search-button:hover,
+.bb-web-header-search-button:focus {
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary-hover);
+}
+
+.bb-web-header-search-button .material-symbols-outlined {
+    font-size: var(--bb-icon-size-lg);
+    line-height: 1;
+}
+
+/* =====================================
+   Header Actions
+===================================== */
+
+.bb-web-header-actions {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bb-web-header-utility-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bb-web-header-utility-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.bb-web-header-utility-chip {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 16px;
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-web-header-utility-chip:hover {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-tertiary-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color));
+    box-shadow: var(--bb-shadow-xs);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.bb-web-header-utility-circle,
+.bb-web-header-icon-button {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-pill);
+    box-shadow: none;
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-web-header-utility-circle:hover,
+.bb-web-header-icon-button:hover {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-tertiary-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color));
+    box-shadow: var(--bb-shadow-xs);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.bb-web-header-utility-circle .material-symbols-outlined,
+.bb-web-header-icon-button .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-web-header-action-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    z-index: 2;
+
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary);
+    border: 2px solid var(--bb-body-bg);
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-bold);
+    line-height: 1;
+}
+
+/* =====================================
+   Basket Component Integration
+   _BasketDropdownMainCssPilot içinde kendi classları varsa onları bozmaz.
+   Eski #basketInvoker davranışını da normalize eder.
+===================================== */
+
+.bb-web-header-utility-item-basket {
+    position: relative;
+}
+
+.bb-web-header-utility-item-basket #basketInvoker {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-heading-color) !important;
+    background-color: var(--bb-body-bg) !important;
+    border: 1px solid var(--bb-border-color) !important;
+    border-radius: var(--bb-radius-pill) !important;
+    box-shadow: none;
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-web-header-utility-item-basket #basketInvoker:hover {
+    color: var(--bb-heading-color) !important;
+    background-color: var(--bb-tertiary-bg) !important;
+    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color)) !important;
+    box-shadow: var(--bb-shadow-xs);
+    transform: translateY(-1px);
+}
+
+.bb-web-header-utility-item-basket #basketInvoker .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-web-header-utility-item-basket #headerBasketCount {
+    position: absolute !important;
+    top: -0.25rem !important;
+    right: -0.25rem !important;
+    left: auto !important;
+
+    width: auto !important;
+    min-width: 19px !important;
+    height: 19px !important;
+    padding: 0 5px !important;
+
+    color: var(--bb-primary-inverse) !important;
+    background-color: var(--bb-primary) !important;
+    border: 0.125rem solid var(--bb-body-bg) !important;
+    border-radius: var(--bb-radius-pill) !important;
+
+    font-size: var(--bb-fs-2xs) !important;
+    font-weight: var(--bb-fw-bold) !important;
+    line-height: 1 !important;
+}
+
+/* =====================================
+   Mobile Controls / Mobile Search
+===================================== */
+
+.bb-web-header-mobile-controls {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bb-web-header-mobile-search {
+    display: none;
+    padding: 14px 0 18px;
+    border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-web-header-mobile-search.is-open {
+    display: block;
+}
+
+/* =====================================
+   Sidebar
+===================================== */
+
+.bb-web-header-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 1120;
+
+    width: min(88vw, 390px);
+    background-color: var(--bb-body-bg);
+    box-shadow: var(--bb-shadow-lg);
+
+    transform: translateX(-105%);
+    transition: transform var(--bb-transition-normal);
+}
+
+.bb-web-header-sidebar.is-open {
+    transform: translateX(0);
+}
+
+.bb-web-header-sidebar-head {
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-web-header-sidebar-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bb-web-header-sidebar-logo img {
+    display: block;
+    width: auto;
+    height: 38px;
+}
+
+.bb-web-header-sidebar-body {
+    height: calc(100vh - 74px);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.bb-web-header-sidebar-category {
+    margin-bottom: 24px;
+}
+
+.bb-web-header-sidebar-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bb-web-header-sidebar-menu li + li {
+    margin-top: 10px;
+}
+
+.bb-web-header-sidebar-link {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 14px;
+    color: var(--bb-heading-color);
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-lg);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast);
+}
+
+.bb-web-header-sidebar-link:hover {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-tertiary-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color));
+    text-decoration: none;
+}
+
+.bb-web-header-sidebar-link .material-symbols-outlined {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* =====================================
+   Sidebar Overlay
+===================================== */
+
+.bb-web-header-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1110;
+
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: rgba(17, 24, 39, 0.52);
+
+    transition:
+        opacity var(--bb-transition-normal),
+        visibility var(--bb-transition-normal);
+}
+
+.bb-web-header-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.bb-web-sidebar-open {
+    overflow: hidden;
+}
+
+/* =====================================
+   Desktop Helpers
+===================================== */
+
+.is-desktop-only {
+    display: inline-flex;
+}
+
+.bb-web-header-logo {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+.bb-web-header-logo-img {
+    display: block;
+    width: auto;
+    height: 2.25rem;
+    object-fit: contain;
+}
+
+.bb-web-header-logo-img-dark {
+    display: none;
+}
+
+html[data-bs-theme="dark"] .bb-web-header-logo-img-light {
+    display: none;
+}
+
+html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
+    display: block;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 1399.98px) {
+    .bb-web-header-inner {
+        gap: 1.125rem;
+    }
+
+    .bb-web-header-brand-wrap {
+        gap: 1.125rem;
+    }
+
+    .bb-web-header-logo img {
+        height: 38px;
+    }
+
+    .bb-web-header-search-select {
+        width: 145px;
+        min-width: 145px;
+    }
+
+    .bb-web-header-utility-list {
+        gap: 0.4375rem;
+    }
+
+    .bb-web-header-utility-chip {
+        padding: 0 14px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .bb-web-header-inner {
+        min-height: 76px;
+        grid-template-columns: auto 1fr auto;
+        gap: 16px;
+    }
+
+    .bb-web-header-mobile-controls {
+        display: inline-flex;
+    }
+
+    .bb-web-header-category-host,
+    .bb-web-header-search,
+    .is-desktop-only {
+        display: none !important;
+    }
+
+    .bb-web-header-brand-wrap {
+        justify-content: center;
+        gap: 0;
+    }
+
+    .bb-web-header-logo img {
+        height: 36px;
+    }
+
+    .bb-web-header-actions {
+        justify-content: flex-end;
+    }
+
+    .bb-web-header-utility-list {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-web-header-inner {
+        min-height: 70px;
+        gap: 12px;
+    }
+
+    .bb-web-header-logo img {
+        height: 34px;
+    }
+
+    .bb-web-header-utility-circle,
+    .bb-web-header-icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .bb-web-header-sidebar {
+        width: min(92vw, 370px);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bb-web-header-inner {
+        gap: 0.5rem;
+    }
+
+    .bb-web-header-logo img {
+        height: 32px;
+    }
+
+    .bb-web-header-utility-list {
+        gap: 6px;
+    }
+
+    .bb-web-header-utility-circle,
+    .bb-web-header-icon-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .bb-web-header-utility-circle .material-symbols-outlined,
+    .bb-web-header-icon-button .material-symbols-outlined {
+        font-size: var(--bb-icon-size-sm);
+    }
+}

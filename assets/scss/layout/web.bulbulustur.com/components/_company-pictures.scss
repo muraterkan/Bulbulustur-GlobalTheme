@@ -1,0 +1,292 @@
+/* =====================================
+   B2B Company Pictures
+   Component
+===================================== */
+
+.bb-b2b-company-pictures {
+  --bb-b2b-company-pictures-primary: var(--bb-primary);
+  --bb-b2b-company-pictures-primary-soft: color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated));
+  --bb-b2b-company-pictures-ink: var(--bb-emphasis-color);
+  --bb-b2b-company-pictures-muted: var(--bb-secondary-color);
+  --bb-b2b-company-pictures-border: var(--bb-border-color);
+  --bb-b2b-company-pictures-shadow: var(--bb-shadow-xs);
+  --bb-b2b-company-pictures-shadow-hover: var(--bb-shadow-sm);
+
+  min-width: 0;
+}
+
+.bb-b2b-company-pictures-carousel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 1.125rem 3.25rem 2.75rem;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--bb-primary) 7%, transparent),
+      transparent 32%
+    ),
+    var(--bb-body-bg);
+
+  border: var(--bb-border-width) solid var(--bb-b2b-company-pictures-border);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-b2b-company-pictures-shadow);
+}
+
+.bb-b2b-company-pictures-carousel-inner {
+  overflow: hidden;
+}
+
+.bb-b2b-company-pictures-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Card */
+
+.bb-b2b-company-picture-card {
+  min-width: 0;
+}
+
+.bb-b2b-company-picture-button {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 13.5rem;
+  aspect-ratio: 16 / 11;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: inherit;
+  background:
+    radial-gradient(
+      circle at top right,
+      color-mix(in srgb, var(--bb-primary) 8%, transparent),
+      transparent 36%
+    ),
+    var(--bb-tertiary-bg);
+
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 90%, transparent);
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-b2b-company-pictures-shadow);
+  appearance: none;
+  cursor: zoom-in;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.bb-b2b-company-picture-button:hover {
+  transform: translateY(-0.125rem);
+  border-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  box-shadow: var(--bb-b2b-company-pictures-shadow-hover);
+}
+
+.bb-b2b-company-picture-button img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.32s ease;
+}
+
+.bb-b2b-company-picture-button:hover img {
+  transform: scale(1.045);
+}
+
+.bb-b2b-company-picture-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 13.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: color-mix(in srgb, var(--bb-primary) 38%, transparent);
+  background-color: var(--bb-body-bg);
+}
+
+.bb-b2b-company-picture-placeholder .material-symbols-outlined {
+  font-size: var(--bb-icon-size-4xl);
+  line-height: 1;
+}
+
+/* Overlay */
+
+.bb-b2b-company-picture-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  color: var(--bb-white);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bb-coal-300) 8%, transparent) 0%,
+      color-mix(in srgb, var(--bb-coal-300) 54%, transparent) 100%
+    );
+
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.bb-b2b-company-picture-button:hover .bb-b2b-company-picture-overlay {
+  opacity: 1;
+}
+
+.bb-b2b-company-picture-overlay-icon {
+  width: 2.625rem;
+  height: 2.625rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-white);
+  background-color: var(--bb-primary);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-b2b-company-picture-overlay-icon .material-symbols-outlined {
+  font-size: var(--bb-fs-xl);
+  line-height: 1;
+}
+
+.bb-b2b-company-picture-overlay-text {
+  color: var(--bb-white);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-bold);
+  line-height: 1;
+}
+
+/* Controls */
+
+.bb-b2b-company-pictures-control {
+  top: 50%;
+  z-index: 5;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 94%, transparent);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow-xs);
+  opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+}
+
+.bb-b2b-company-pictures-control:hover {
+  color: var(--bb-primary);
+  background-color: var(--bb-surface-elevated);
+}
+
+.bb-b2b-company-pictures-control-prev {
+  left: 0.625rem;
+}
+
+.bb-b2b-company-pictures-control-next {
+  right: 0.625rem;
+}
+
+.bb-b2b-company-pictures-control .material-symbols-outlined {
+  font-size: var(--bb-fs-2xl);
+  line-height: 1;
+}
+
+/* Indicators */
+
+.bb-b2b-company-pictures-indicators {
+  right: 0;
+  bottom: 0.8125rem;
+  left: 0;
+
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.bb-b2b-company-pictures-indicators [data-bs-target] {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  min-width: 0.4375rem;
+
+  margin: 0;
+
+  background-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  border: 0;
+  border-radius: var(--bb-radius-pill);
+  opacity: 1;
+
+  transition:
+    width 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.bb-b2b-company-pictures-indicators .active {
+  width: 1.375rem;
+  background-color: var(--bb-warning);
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2b-company-pictures-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2b-company-pictures-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2b-company-pictures-carousel {
+    padding: 0.875rem 2.25rem 2.5rem;
+    border-radius: var(--bb-radius-lg);
+  }
+
+  .bb-b2b-company-pictures-grid {
+    gap: 0.75rem;
+  }
+
+  .bb-b2b-company-picture-button {
+    min-height: 12rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2b-company-pictures-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-b2b-company-picture-button {
+    min-height: 14rem;
+  }
+}

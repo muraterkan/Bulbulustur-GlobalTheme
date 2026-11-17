@@ -1,0 +1,39 @@
+/* =====================================
+   B2C Product Category Contents
+   Component-specific
+===================================== */
+
+.bb-b2c-category-contents {
+  margin-top: 1.125rem;
+}
+
+.bb-b2c-category-contents-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.125rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2c-category-contents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-b2c-category-contents-quickbar {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,359 @@
+/* =====================================
+   Hero
+===================================== */
+
+.bb-community-topic-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 88% 18%, var(--bb-primary-light) 0, transparent 26%),
+        linear-gradient(180deg, var(--bb-tertiary-bg) 0%, var(--bb-secondary-bg) 100%);
+    border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-community-topic-hero::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -40px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--bb-coal-300) 6%, transparent);
+}
+
+.bb-community-topic-hero::after {
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 120px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--bb-primary) 14%, transparent);
+}
+
+.bb-community-topic-hero .bb-web-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.bb-community-topic-title {
+    max-width: 960px;
+    margin-top: 12px;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.bb-community-topic-submeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.bb-community-topic-submeta span {
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-sm);;
+}
+
+/* =====================================
+   Layout
+===================================== */
+
+.bb-community-topic-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.bb-community-topic-main {
+    min-width: 0;
+}
+
+/* =====================================
+   Shared Cards
+===================================== */
+
+.bb-community-topic-card {
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-2xl);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-community-topic-post {
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.bb-community-topic-post-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.bb-community-topic-post-user {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bb-community-topic-avatar {
+    width: 46px;
+    height: 46px;
+    margin-right: 14px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--bb-primary);
+    color: var(--bb-primary-inverse);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-community-topic-avatar-secondary {
+    background-color: var(--bb-secondary-bg);
+    color: var(--bb-heading-color);
+}
+
+.bb-community-topic-user-name {
+    margin-bottom: 3px;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-community-topic-user-meta {
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-community-topic-post-time {
+    margin-left: 16px;
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-sm);;
+    white-space: nowrap;
+}
+
+.bb-community-topic-post-body {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-base);
+    line-height: 1.95;
+}
+
+.bb-community-topic-post-body p:last-child {
+    margin-bottom: 0;
+}
+
+.bb-community-topic-post-body ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.bb-community-topic-post-body li {
+    line-height: 1.9;
+    margin-bottom: 6px;
+}
+
+.bb-community-topic-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-community-topic-action {
+    margin-right: 16px;
+    margin-bottom: 7px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+}
+
+/* =====================================
+   Comments Component Compatibility
+===================================== */
+
+.bb-community-topic-replies-title {
+    margin-top: 32px;
+    margin-bottom: 20px;
+    color: var(--bb-heading-color);
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: -.03em;
+}
+
+.bb-community-topic-reply-card {
+    padding: 22px 24px;
+    margin-bottom: 1rem;
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-2xl);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-community-topic-reply-card:last-child {
+    margin-bottom: 0;
+}
+
+.bb-community-topic-reply-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =====================================
+   Reply Box
+===================================== */
+
+.bb-community-topic-reply-box {
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.bb-community-topic-reply-box h2 {
+    margin-bottom: 1rem;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-h3);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-community-topic-reply-box .form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.bb-community-topic-reply-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.bb-community-topic-reply-message {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+}
+
+/* =====================================
+   Sidebar Compatibility
+===================================== */
+
+.bb-community-topic-side-card {
+    padding: 24px;
+    margin-bottom: 20px;
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-2xl);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-community-topic-side-card h4 {
+    margin-bottom: 1rem;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-h3);
+    line-height: 1.3;
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-community-topic-side-row {
+    padding: 0.8125rem 0;
+    border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-community-topic-side-row:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.bb-community-topic-side-row strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-sm);;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.bb-community-topic-side-row span {
+    display: block;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+    font-weight: var(--bb-fw-semibold);
+}
+
+.bb-community-topic-side-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.bb-community-topic-side-list li {
+    padding: 12px 0;
+    border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-community-topic-side-list li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.bb-community-topic-side-list a {
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: var(--bb-line-height-content);
+    text-decoration: none;
+}
+
+.bb-community-topic-side-list a:hover {
+    color: var(--bb-link-color);
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 991.98px) {
+    .bb-community-topic-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-community-topic-post,
+    .bb-community-topic-reply-box,
+    .bb-community-topic-reply-card,
+    .bb-community-topic-side-card {
+        padding: 20px;
+    }
+
+    .bb-community-topic-post-header {
+        flex-direction: column;
+    }
+
+    .bb-community-topic-post-time {
+        margin-left: 0;
+        margin-top: 11px;
+    }
+
+    .bb-community-topic-reply-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .bb-community-topic-reply-footer .btn {
+        width: 100%;
+    }
+}

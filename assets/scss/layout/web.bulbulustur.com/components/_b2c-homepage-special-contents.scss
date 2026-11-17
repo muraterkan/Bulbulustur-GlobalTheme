@@ -1,0 +1,206 @@
+/* =====================================
+   B2C Homepage Special Contents
+   Component-specific
+   Uses Main CSS: bb-card, bb-chip, buttons, Bootstrap tabs
+===================================== */
+
+.bb-b2c-home-specials {
+  position: relative;
+}
+
+.bb-b2c-home-specials-shell {
+  --bb-card-radius: var(--bb-radius-2xl);
+  --bb-card-shadow: var(--bb-shadow-sm);
+
+  padding: clamp(1rem, 3vw, 1.5rem);
+
+  background:
+    radial-gradient(
+      circle at 94% 8%,
+      color-mix(in srgb, var(--bb-primary) 14%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      var(--bb-body-bg) 0%,
+      color-mix(in srgb, var(--bb-tertiary-bg) 74%, var(--bb-body-bg)) 100%
+    );
+}
+
+/* Head */
+
+.bb-b2c-home-specials-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-bottom: 1rem;
+}
+
+.bb-b2c-home-specials-title {
+  margin: 0.625rem 0 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.035em);
+}
+
+.bb-b2c-home-specials-text {
+  max-width: 44rem;
+  margin: 0.5rem 0 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+/* Tabs */
+
+.bb-b2c-home-specials-tabs-wrap {
+  overflow-x: auto;
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+
+  scrollbar-width: thin;
+}
+
+.bb-b2c-home-specials-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.bb-b2c-home-specials-tab {
+  border-color: var(--bb-border-color);
+  background-color: var(--bb-body-bg);
+  color: var(--bb-body-color);
+}
+
+.bb-b2c-home-specials-tab.active {
+  --bb-chip-bg: var(--bb-primary);
+  --bb-chip-color: var(--bb-primary-inverse);
+  --bb-chip-border-color: var(--bb-primary);
+}
+
+.bb-b2c-home-specials-content {
+  min-width: 0;
+
+  padding-top: 0.25rem;
+}
+
+/* Product grid */
+
+.bb-b2c-home-special-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bb-b2c-home-special-product-badge {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 2;
+}
+
+.bb-b2c-home-special-product-price {
+  display: block;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1;
+  letter-spacing: var(--bb-letter-spacing-tight, -0.035em);
+}
+
+.bb-b2c-home-special-product-price span {
+  font-size: var(--bb-fs-sm);;
+  letter-spacing: 0;
+}
+
+/* Empty */
+
+.bb-b2c-home-special-products-empty {
+  padding: 2rem;
+
+  text-align: center;
+
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) dashed var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+}
+
+.bb-b2c-home-special-products-empty-icon {
+  width: 4rem;
+  height: 4rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  color: var(--bb-primary);
+  background-color: var(--bb-primary-light);
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-b2c-home-special-products-empty-icon .material-symbols-outlined {
+  font-size: var(--bb-fs-3xl);
+  line-height: 1;
+}
+
+.bb-b2c-home-special-products-empty strong {
+  display: block;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-b2c-home-special-products-empty p {
+  max-width: 34rem;
+  margin: 0.5rem auto 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-base);
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2c-home-special-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2c-home-special-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2c-home-specials-shell {
+    border-radius: var(--bb-radius-xl);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2c-home-special-products-grid {
+    grid-template-columns: 1fr;
+  }
+}

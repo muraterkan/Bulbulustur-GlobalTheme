@@ -1,0 +1,287 @@
+/* =====================================
+   B2C Product Color Variants
+   Component-specific
+   Uses Main CSS: bb-chip
+===================================== */
+
+.bb-b2c-product-color-variants {
+  margin: 0;
+  padding: 1.125rem 1.375rem;
+
+  border-bottom: var(--bb-border-width) dashed var(--bb-border-color);
+}
+
+.bb-b2c-product-color-variants:first-child {
+  padding-top: 0;
+}
+
+.bb-b2c-product-color-variants:last-child {
+  border-bottom: 0;
+}
+
+.bb-b2c-product-color-variants-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.bb-b2c-product-color-variants-title {
+  margin: 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-b2c-product-color-variants-title strong {
+  color: var(--bb-emphasis-color);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-b2c-product-color-variants-title span {
+  color: var(--bb-secondary-color);
+  font-weight: var(--bb-fw-semibold);
+}
+
+/* -------------------------------------
+   List
+------------------------------------- */
+
+.bb-b2c-product-color-variants-list {
+  display: flex;
+  align-items: stretch;
+  gap: 0.625rem;
+  overflow-x: auto;
+
+  padding: 0.1875rem 0.125rem 0.5rem;
+
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+}
+
+.bb-b2c-product-color-variant {
+  position: relative;
+
+  width: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
+  flex: 0 0 4rem;
+  overflow: visible;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-emphasis-color) !important;
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  text-decoration: none !important;
+  cursor: pointer;
+
+  scroll-snap-align: start;
+
+  transition:
+    border-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast),
+    transform var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.bb-b2c-product-color-variant:hover {
+  transform: translateY(-1px);
+
+  border-color: color-mix(in srgb, var(--bb-primary) 32%, var(--bb-border-color));
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-b2c-product-color-variant.is-active {
+  border-color: var(--bb-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--bb-primary) 16%, transparent);
+}
+
+.bb-b2c-product-color-variant.is-disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+  border-style: dashed;
+  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 74%, var(--bb-white));
+}
+
+.bb-b2c-product-color-variant.is-disabled:hover {
+  transform: none;
+  border-color: var(--bb-border-color);
+  box-shadow: none;
+}
+
+.bb-b2c-product-color-variant.is-disabled::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 50%;
+
+  height: 1px;
+
+  background-color: color-mix(in srgb, var(--bb-emphasis-color) 28%, transparent);
+
+  transform: rotate(-22deg);
+  pointer-events: none;
+}
+
+/* -------------------------------------
+   Image / Text
+------------------------------------- */
+
+.bb-b2c-product-color-variant-image {
+  width: 100%;
+  height: 100%;
+  min-height: 4rem;
+  padding: 0.1875rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-b2c-product-color-variant-image img {
+  display: block;
+
+  width: 100%;
+  height: 3.625rem;
+
+  object-fit: contain;
+  border-radius: calc(var(--bb-radius) - 0.125rem);
+}
+
+.bb-b2c-product-color-variant-text {
+  min-width: 3.625rem;
+  min-height: 2.5rem;
+  padding: 0 0.625rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-emphasis-color);
+  text-align: center;
+
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-b2c-product-color-variant-more {
+  min-width: 4.75rem;
+  min-height: 4rem;
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0.75rem;
+
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  text-align: center;
+}
+
+/* -------------------------------------
+   Tooltip
+------------------------------------- */
+
+.bb-b2c-product-variant-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5625rem);
+  z-index: 20;
+
+  min-width: 9.375rem;
+  max-width: 13.125rem;
+  padding: 0.5rem 0.625rem;
+
+  color: var(--bb-white);
+  color: var(--bb-white);
+  border-radius: var(--bb-radius);
+
+  opacity: 0;
+  pointer-events: none;
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-base);
+  text-align: center;
+
+  transform: translateX(-50%) translateY(4px);
+
+  transition:
+    opacity var(--bb-transition-fast),
+    transform var(--bb-transition-fast);
+}
+
+.bb-b2c-product-variant-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: var(--bb-dark) transparent transparent;
+
+  transform: translateX(-50%);
+}
+
+.bb-b2c-product-color-variant.is-disabled:hover .bb-b2c-product-variant-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+
+@media (max-width: 575.98px) {
+  .bb-b2c-product-color-variants {
+    padding: 0.875rem 1rem;
+  }
+
+  .bb-b2c-product-color-variants-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bb-b2c-product-color-variants-list {
+    gap: 0.5rem;
+  }
+
+  .bb-b2c-product-color-variant {
+    width: 3.625rem;
+    min-width: 3.625rem;
+    min-height: 3.625rem;
+    flex-basis: 3.625rem;
+  }
+
+  .bb-b2c-product-color-variant-image {
+    min-height: 3.625rem;
+  }
+
+  .bb-b2c-product-color-variant-image img {
+    height: 3.25rem;
+  }
+
+  .bb-b2c-product-color-variant-more {
+    min-height: 3.625rem;
+  }
+}

@@ -1,0 +1,1087 @@
+/* =====================================
+   Web Project Scope
+   Main CSS tokenlarını web projesi içinde kullanır.
+   Electro renk ritmini sadece bu proje scope'u içinde bb token sistemine bağlar.
+===================================== */
+
+/* =====================================
+   Web Project Scope
+   Main CSS tokenlarını web projesi içinde kullanır.
+   Core theme token override etmez.
+===================================== */
+
+.bb-web-page {
+    /* =====================================
+       Web Project Legacy Aliases
+       Eski Electro renk sözlüğü.
+       Sadece eski web componentleri için alias olarak kalır.
+       Core --bb-* theme tokenlarını ezmez.
+    ===================================== */
+
+    --bb-web-blue: var(--bb-blue-700);
+    --bb-web-indigo: #2d1582;
+    --bb-web-purple: var(--bb-purple-500);
+    --bb-web-pink: var(--bb-pink-500);
+    --bb-web-red: var(--bb-red-500);
+    --bb-web-orange: var(--bb-orange-500);
+    --bb-web-yellow: var(--bb-primary);
+    --bb-web-green: var(--bb-green-500);
+    --bb-web-teal: var(--bb-turquoise-500);
+    --bb-web-cyan: var(--bb-turquoise-500);
+
+    --bb-web-white: var(--bb-white);
+    --bb-web-black: var(--bb-black);
+
+    --bb-web-gray: var(--bb-secondary-color);
+    --bb-web-gray-dark: var(--bb-emphasis-color);
+
+    --bb-web-primary: var(--bb-primary);
+    --bb-web-primary-2: var(--bb-link-color);
+    --bb-web-secondary: var(--bb-secondary-color);
+    --bb-web-success: var(--bb-success);
+    --bb-web-info: var(--bb-info);
+    --bb-web-warning: var(--bb-warning);
+    --bb-web-danger: var(--bb-danger);
+    --bb-web-light: var(--bb-surface-soft);
+    --bb-web-dark: var(--bb-emphasis-color);
+    --bb-web-sale: var(--bb-danger);
+
+    /* =====================================
+       Web Project Semantic Helpers
+    ===================================== */
+
+    --bb-web-link-color: var(--bb-link-color);
+    --bb-web-link-hover-color: var(--bb-link-hover-color);
+    --bb-web-heading-color: var(--bb-heading-color);
+    --bb-web-body-color: var(--bb-body-color);
+    --bb-web-muted-color: var(--bb-secondary-color);
+
+    /* =====================================
+       Web Project Layout Tokens
+    ===================================== */
+
+    --bb-web-section-y: 4.5rem;
+    --bb-web-section-y-sm: 3rem;
+
+    --bb-web-card-bg: var(--bb-surface-elevated);
+    --bb-web-card-border-color: var(--bb-border-color);
+    --bb-web-card-border: var(--bb-border-width) solid var(--bb-web-card-border-color);
+    --bb-web-card-radius: var(--bb-radius-2xl);
+    --bb-web-card-inner-radius: var(--bb-radius-lg);
+    --bb-web-card-shadow: var(--bb-shadow-xs);
+    --bb-web-card-padding: 1.5rem;
+
+    --bb-web-panel-bg: var(--bb-surface-elevated);
+    --bb-web-panel-border: var(--bb-border-width) solid var(--bb-border-color);
+    --bb-web-panel-radius: var(--bb-radius-lg);
+
+    --bb-web-section-soft-bg: var(--bb-surface-soft);
+    --bb-web-section-muted-bg: var(--bb-surface-muted);
+
+    min-height: 100vh;
+    background-color: var(--bb-body-bg);
+    color: var(--bb-body-color);
+}
+
+/* =====================================
+   Bootstrap Container Bridge
+   Eski Electro theme container genişliğini Bootstrap 5 üstüne taşır.
+===================================== */
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 30px;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1480px) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        max-width: 1430px;
+    }
+}
+
+/* =====================================
+   Web Container
+   Bootstrap container davranışını bb-web-container için de uygular.
+===================================== */
+
+.bb-web-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .bb-web-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bb-web-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .bb-web-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bb-web-container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1480px) {
+    .bb-web-container {
+        max-width: 1430px;
+    }
+}
+
+/* =====================================
+   Web Project Utilities
+===================================== */
+
+.bb-web-section {
+    padding: var(--bb-web-section-y) 0;
+}
+
+.bb-web-section-sm {
+    padding: var(--bb-web-section-y-sm) 0;
+}
+
+.bb-web-section-soft {
+    background-color: var(--bb-web-section-soft-bg);
+}
+
+.bb-web-section-muted {
+    background-color: var(--bb-web-section-muted-bg);
+}
+
+.bb-web-card {
+    background-color: var(--bb-web-card-bg);
+    border: var(--bb-web-card-border);
+    border-radius: var(--bb-web-card-radius);
+    box-shadow: var(--bb-web-card-shadow);
+}
+
+.bb-web-panel {
+    background-color: var(--bb-web-panel-bg);
+    border: var(--bb-web-panel-border);
+    border-radius: var(--bb-web-panel-radius);
+}
+
+.bb-web-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.bb-web-title {
+    color: var(--bb-heading-color);
+    font-weight: var(--bb-fw-extrabold);
+    letter-spacing: -.03em;
+    line-height: 1.08;
+}
+
+.bb-web-lead {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-xl);
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-web-text {
+    color: var(--bb-secondary-color);
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-web-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.bb-web-dark-section {
+    background-color: var(--bb-theme-dark);
+    color: var(--bb-white);
+}
+
+.bb-web-dark-section .bb-web-title,
+.bb-web-dark-section h1,
+.bb-web-dark-section h2,
+.bb-web-dark-section h3,
+.bb-web-dark-section h4,
+.bb-web-dark-section h5,
+.bb-web-dark-section h6 {
+    color: var(--bb-white);
+}
+
+.bb-web-dark-section .bb-web-text,
+.bb-web-dark-section .bb-web-lead {
+    color: color-mix(in srgb, var(--bb-theme-on-dark) 78%, transparent);
+}
+
+/* =====================================
+   Web Account Shell
+   Hesap / profil / ayar / iç form sayfaları ortak kabuk.
+===================================== */
+
+.bb-account-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4375rem;
+    white-space: nowrap;
+}
+
+.bb-account-sidebar-toggle .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* =====================================
+   Layout
+===================================== */
+
+.bb-account-shell-section {
+    padding: 28px 0 56px;
+}
+
+.bb-account-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.bb-account-sidebar {
+    position: sticky;
+    top: 24px;
+    min-width: 0;
+}
+
+.bb-account-main {
+    min-width: 0;
+}
+
+.bb-account-panel {
+    padding: 26px;
+    border: 1px solid var(--bb-account-border);
+    border-radius: var(--bb-radius-2xl);
+    background-color: var(--bb-body-bg);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-account-panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.125rem;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bb-account-border-soft);
+}
+
+.bb-account-panel-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4375rem;
+    min-height: 30px;
+    padding: 0 11px;
+    margin-bottom: 0.625rem;
+    border-radius: var(--bb-radius-pill);
+    background-color: var(--bb-account-accent-soft);
+    color: var(--bb-account-accent-text);
+    font-size: var(--bb-fs-sm);;
+    line-height: 1;
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.bb-account-panel-kicker .material-symbols-outlined {
+    font-size: var(--bb-fs-base);
+    line-height: 1;
+}
+
+.bb-account-panel-title {
+    margin: 0 0 7px;
+    color: var(--bb-heading-color);
+    font-size: clamp(1.45rem, 2.4vw, 2rem);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: -.025em;
+}
+
+.bb-account-panel-text {
+    max-width: 720px;
+    margin: 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+}
+
+/* =====================================
+   Inner Cards / Tables
+===================================== */
+
+.bb-account-table-card,
+.bb-account-empty-card,
+.bb-account-form-card,
+.bb-account-info-card {
+    border: 1px solid var(--bb-account-border);
+    border-radius: var(--bb-radius-2xl);
+    background-color: var(--bb-body-bg);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-account-table-card {
+    overflow: hidden;
+}
+
+.bb-account-table {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.bb-account-table thead th {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--bb-account-border);
+    background-color: var(--bb-tertiary-bg);
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: 1.4;
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.bb-account-table tbody td {
+    padding: 17px 18px;
+    border-bottom: 1px solid var(--bb-account-border-soft);
+    color: var(--bb-body-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-table-line-height);
+}
+
+.bb-account-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.bb-account-table-main-link {
+    color: var(--bb-heading-color);
+    font-weight: var(--bb-fw-bold);
+    text-decoration: none;
+}
+
+.bb-account-table-main-link:hover {
+    color: var(--bb-link-color);
+}
+
+.bb-account-table-muted {
+    color: var(--bb-secondary-color);
+}
+
+/* =====================================
+   Empty State
+===================================== */
+
+.bb-account-empty-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    padding: 34px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--bb-account-accent) 16%, transparent) 0, transparent 32%),
+        var(--bb-body-bg);
+}
+
+.bb-account-empty-icon {
+        width: 72px;
+    height: 72px;
+    border-radius: var(--bb-radius-xl);
+    margin-bottom: 18px;
+    background-color: var(--bb-account-accent-soft);
+    color: var(--bb-account-accent-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-account-empty-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-3xl);
+    line-height: 1;
+}
+
+.bb-account-empty-card h3 {
+    margin-bottom: 0.625rem;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-h3);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-account-empty-card p {
+    max-width: 560px;
+    margin-bottom: 20px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+}
+
+/* =====================================
+   Form Page Helpers
+   Profile / workspace / settings gibi sayfalar için.
+===================================== */
+
+.bb-account-form-card {
+    padding: 24px;
+}
+
+.bb-account-form-section {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--bb-account-border-soft);
+}
+
+.bb-account-form-section:first-child {
+    padding-top: 0;
+}
+
+.bb-account-form-section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.bb-account-form-section-grid {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 34px;
+    align-items: flex-start;
+}
+
+.bb-account-form-section-title {
+    margin: 0;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-base);
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-account-form-section-text {
+    margin: 6px 0 0;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-base);
+}
+
+.bb-account-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.125rem;
+}
+
+.bb-account-form-grid-full {
+    grid-column: 1 / -1;
+}
+
+.bb-account-form-help {
+    margin-top: 6px;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-table-line-height);
+}
+
+.bb-account-form-note {
+    padding: 18px;
+    border: 1px solid var(--bb-account-border);
+    border-radius: var(--bb-radius-xl);
+    background-color: var(--bb-tertiary-bg);
+    color: var(--bb-body-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-account-form-note strong {
+    color: var(--bb-heading-color);
+    font-weight: var(--bb-fw-bold);
+}
+
+/* =====================================
+   Offcanvas
+===================================== */
+
+.bb-account-sidebar-offcanvas {
+    --bs-offcanvas-width: 320px;
+}
+
+.bb-account-sidebar-offcanvas .offcanvas-body {
+    background-color: var(--bb-tertiary-bg);
+}
+
+/* =====================================
+   Account Sidebar Navigation
+   _AccountSidebar component
+===================================== */
+
+.bb-account-nav {
+    overflow: hidden;
+    border: 1px solid var(--bb-account-border);
+    border-radius: var(--bb-radius-2xl);
+    background-color: var(--bb-body-bg);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-account-nav-head {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid var(--bb-account-border-soft);
+    background:
+        radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-account-accent) 16%, transparent) 0, transparent 32%),
+        linear-gradient(135deg, var(--bb-body-bg) 0%, var(--bb-account-accent-soft) 100%);
+}
+
+.bb-account-nav-head-icon {
+    width: 2.625rem;
+    height: 42px;
+    border-radius: var(--bb-radius-xl);
+    background-color: var(--bb-account-accent);
+    color: var(--bb-primary-inverse);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-account-nav-head-icon .material-symbols-outlined,
+.bb-account-nav-head-icon .material-symbols-outlined {
+    font-size: var(--bb-fs-xl);
+    line-height: 1;
+}
+
+.bb-account-nav-head strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-base);
+    line-height: var(--bb-line-height-heading);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-account-nav-head span {
+    display: block;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-semibold);
+}
+
+.bb-account-nav-group {
+    padding: 10px;
+}
+
+.bb-account-nav-group-title {
+    padding: 0.4375rem 0.625rem 0.5rem;
+    color: var(--bb-tertiary-color);
+    font-size: var(--bb-fs-2xs);
+    line-height: 1;
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.bb-account-nav-list {
+    display: grid;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bb-account-nav-divider {
+    height: 1px;
+    margin: 0 10px;
+    background-color: var(--bb-account-border-soft);
+}
+
+.bb-account-nav-link {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+    min-height: 42px;
+    padding: 8px 10px;
+    border-radius: var(--bb-radius-lg);
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);;
+    line-height: var(--bb-line-height-base);
+    font-weight: var(--bb-fw-semibold);
+    text-decoration: none !important;
+    transition:
+        background-color var(--bb-transition-normal),
+        color var(--bb-transition-normal),
+        transform var(--bb-transition-normal),
+        box-shadow var(--bb-transition-normal);
+}
+
+.bb-account-nav-link-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--bb-radius-md);
+    color: var(--bb-tertiary-color);
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--bb-fs-xl);
+    line-height: 1;
+    transition:
+        background-color var(--bb-transition-normal),
+        color var(--bb-transition-normal);
+}
+
+.bb-account-nav-link span:last-child {
+    min-width: 0;
+}
+
+.bb-account-nav-link:hover {
+    background-color: var(--bb-tertiary-bg);
+    color: var(--bb-heading-color);
+    transform: translateX(2px);
+}
+
+.bb-account-nav-link:hover .bb-account-nav-link-icon {
+    color: var(--bb-heading-color);
+}
+
+.bb-account-nav-link.active,
+.bb-account-nav-link[aria-current="page"] {
+    background-color: var(--bb-account-accent-soft);
+    color: var(--bb-heading-color);
+    box-shadow: inset 3px 0 0 var(--bb-account-accent);
+}
+
+.bb-account-nav-link.active .bb-account-nav-link-icon,
+.bb-account-nav-link[aria-current="page"] .bb-account-nav-link-icon {
+    background-color: var(--bb-account-accent);
+    color: var(--bb-primary-inverse);
+}
+
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 1199.98px) {
+    .bb-account-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bb-account-panel-head {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .bb-account-shell-section {
+        padding-top: 20px;
+        padding-bottom: 36px;
+    }
+
+    .bb-account-panel {
+        padding: 18px;
+        border-radius: var(--bb-radius-xl);
+    }
+
+    .bb-account-form-section-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .bb-account-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bb-account-empty-card {
+        min-height: 280px;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-web-section {
+        padding: 48px 0;
+    }
+
+    .bb-web-section-sm {
+        padding: 36px 0;
+    }
+
+    .bb-web-lead {
+        font-size: var(--bb-icon-size-md);
+    }
+
+    .bb-web-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .bb-web-actions .btn {
+        width: 100%;
+    }
+}
+
+/* =====================================
+   Bulbulustur Web - Compact Hero
+   Shared image hero for content pages
+===================================== */
+
+.bb-web-compact-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: clamp(14rem, 28vw, 22rem);
+  padding: clamp(2rem, 4.5vw, 3.75rem) 0;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--bb-white);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.76) 0%,
+      rgba(15, 23, 42, 0.46) 56%,
+      rgba(15, 23, 42, 0.18) 100%
+    ),
+    var(--bb-web-compact-hero-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bb-web-compact-hero-content {
+  max-width: 44rem;
+}
+
+.bb-web-compact-hero-chip {
+  margin-bottom: 0.75rem;
+
+  color: var(--bb-primary-inverse) !important;
+  background-color: var(--bb-primary) !important;
+  border-color: var(--bb-primary) !important;
+}
+
+.bb-web-compact-hero-chip .material-symbols-outlined {
+  font-size: var(--bb-fs-sm);;
+  line-height: 1;
+}
+
+.bb-web-compact-hero-title {
+  margin: 0;
+
+  color: var(--bb-white);
+  font-size: clamp(1.875rem, 3.6vw, 3rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.bb-web-compact-hero-title strong,
+.bb-web-compact-hero-title b {
+  color: var(--bb-primary);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-web-compact-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 1.25rem;
+}
+
+.bb-web-compact-hero-btn {
+  min-height: 2.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+
+  color: var(--bb-primary-inverse) !important;
+  background-color: var(--bb-primary) !important;
+  border-color: var(--bb-primary) !important;
+  border-radius: var(--bb-radius-pill);
+
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-web-compact-hero-btn .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+@media (max-width: 767.98px) {
+  .bb-web-compact-hero {
+    padding: 2.25rem 0;
+    min-height: 13rem;
+  }
+
+  .bb-web-compact-hero-content {
+    max-width: 100%;
+  }
+
+  .bb-web-compact-hero-title {
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
+  }
+
+  .bb-web-compact-hero-btn {
+    width: 100%;
+    border-radius: var(--bb-radius);
+  }
+}
+
+/* =====================================
+   Bulbulustur Web - Footer Theme Mode
+   Shared image hero for content pages
+===================================== */
+
+/* =====================================
+   Web Preferences Panel
+===================================== */
+
+.bb-web-preferences-panel {
+    --bs-offcanvas-width: 26rem;
+
+    color: var(--bb-body-color);
+    background-color: var(--bb-surface-elevated);
+    border-left: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-web-preferences-panel-head {
+    align-items: flex-start;
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-web-preferences-panel-kicker {
+    display: inline-flex;
+    margin-bottom: 0.375rem;
+    color: var(--bb-primary);
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-bold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.bb-web-preferences-panel-title {
+    margin: 0;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-xl);
+    font-weight: var(--bb-fw-bold);
+    line-height: var(--bb-line-height-heading);
+}
+
+.bb-web-preferences-panel-body {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    padding: 1.25rem;
+}
+
+.bb-web-preferences-group {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border: var(--bb-border-width) solid var(--bb-border-color);
+    border-radius: var(--bb-radius-xl);
+    background-color: var(--bb-surface-soft);
+}
+
+.bb-web-preferences-group-head {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.bb-web-preferences-group-head > .material-symbols-outlined {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bb-primary);
+    background-color: var(--bb-primary-clarity);
+    border-radius: var(--bb-radius-lg);
+    font-size: var(--bb-icon-size-md);
+}
+
+.bb-web-preferences-group-head strong {
+    display: block;
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-bold);
+    line-height: var(--bb-line-height-heading);
+}
+
+.bb-web-preferences-group-head span {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-base);
+}
+
+/* =====================================
+   Theme Choices
+===================================== */
+
+.bb-web-theme-choice-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.bb-web-theme-choice {
+    position: relative;
+    width: 100%;
+    min-height: 4.25rem;
+    display: grid;
+    grid-template-columns: 2.375rem minmax(0, 1fr) 1.25rem;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.875rem;
+    color: var(--bb-body-color);
+    background-color: var(--bb-surface-elevated);
+    border: var(--bb-border-width) solid var(--bb-border-color);
+    border-radius: var(--bb-radius-xl);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-web-theme-choice:hover {
+    color: var(--bb-heading-color);
+    border-color: var(--bb-border-color-strong);
+    box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-web-theme-choice:active {
+    transform: translateY(1px);
+}
+
+.bb-web-theme-choice-icon {
+    width: 2.375rem;
+    height: 2.375rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bb-primary);
+    background-color: var(--bb-primary-clarity);
+    border-radius: var(--bb-radius-lg);
+}
+
+.bb-web-theme-choice-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-web-theme-choice-content {
+    min-width: 0;
+    display: grid;
+    gap: 0.125rem;
+}
+
+.bb-web-theme-choice-content strong {
+    color: var(--bb-heading-color);
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-bold);
+    line-height: var(--bb-line-height-heading);
+}
+
+.bb-web-theme-choice-content small {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-base);
+}
+
+.bb-web-theme-choice-check {
+    opacity: 0;
+    color: var(--bb-primary);
+    font-size: var(--bb-icon-size-sm);
+    line-height: 1;
+    transition: opacity var(--bb-transition-fast);
+}
+
+.bb-web-theme-choice.is-active {
+    border-color: color-mix(in srgb, var(--bb-primary) 60%, var(--bb-border-color));
+    box-shadow:
+        0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-primary) 24%, transparent) inset,
+        var(--bb-shadow-xs);
+}
+
+.bb-web-theme-choice.is-active .bb-web-theme-choice-check {
+    opacity: 1;
+}
+
+.bb-web-theme-choice.is-active .bb-web-theme-choice-icon {
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary);
+}
+
+.bb-web-preferences-note {
+    display: grid;
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: flex-start;
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-base);
+}
+
+.bb-web-preferences-note .material-symbols-outlined {
+    color: var(--bb-primary);
+    font-size: var(--bb-icon-size-sm);
+    line-height: 1;
+}

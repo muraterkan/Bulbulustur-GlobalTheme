@@ -1,0 +1,539 @@
+/* =====================================
+   Web Header Top - Main CSS Pilot
+   Scope:
+   - Header top layout
+   - RFQ top action
+   - Auth links
+   - B2B / B2C trade switch
+   Not included:
+   - Account dropdown menu styles
+   - Language dropdown styles
+   - Generic dropdown menu styles
+===================================== */
+
+/* =====================================
+   Header Shell
+===================================== */
+
+.bb-web-header {
+    position: relative;
+    z-index: 1040;
+}
+
+/* =====================================
+   Header Top Tokens
+   Top header is always brand-yellow based.
+   Text/icon color must stay readable on yellow in both themes.
+===================================== */
+
+.bb-web-header-top {
+    --bb-web-header-top-bg: var(--bb-header-top-bg, var(--bb-primary));
+    --bb-web-header-top-color: var(--bb-header-top-color, var(--bb-primary-inverse));
+    --bb-web-header-top-muted-color: var(--bb-header-top-muted-color, color-mix(in srgb, var(--bb-primary-inverse) 74%, transparent));
+    --bb-web-header-top-border-color: var(--bb-header-top-border-color, color-mix(in srgb, var(--bb-primary-inverse) 12%, transparent));
+    --bb-web-header-top-action-bg: var(--bb-header-top-action-bg, color-mix(in srgb, var(--bb-primary-inverse) 8%, transparent));
+    --bb-web-header-top-action-hover-bg: var(--bb-header-top-action-hover-bg, color-mix(in srgb, var(--bb-primary-inverse) 12%, transparent));
+    --bb-web-header-top-action-border-color: color-mix(in srgb, var(--bb-primary-inverse) 14%, transparent);
+    --bb-web-header-top-action-hover-border-color: color-mix(in srgb, var(--bb-primary-inverse) 22%, transparent);
+    --bb-web-header-top-shadow: 0 0.5rem 1.25rem color-mix(in srgb, var(--bb-primary-inverse) 8%, transparent);
+
+    position: relative;
+    z-index: 1100;
+    display: none;
+    padding-top: 0.625rem;
+    background-color: var(--bb-web-header-top-bg);
+    color: var(--bb-web-header-top-color);
+    border-bottom: var(--bb-border-width) solid var(--bb-web-header-top-border-color);
+}
+
+/* =====================================
+   Overflow / Dropdown Stack
+===================================== */
+
+.bb-web-header-top .bb-web-container,
+.bb-web-header-top-inner,
+.bb-web-header-top-nav,
+.bb-web-header-top-item {
+    overflow: visible;
+}
+
+.bb-web-header-top .dropdown,
+.bb-web-header-top .dropup {
+    position: relative;
+    z-index: 1110;
+}
+
+.bb-web-header-top .dropdown-menu {
+    z-index: 1120;
+}
+
+/* =====================================
+   Layout
+===================================== */
+
+.bb-web-header-top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.bb-web-header-top-left,
+.bb-web-header-top-right {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.bb-web-header-top-right {
+    margin-left: auto;
+}
+
+.bb-web-header-top-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bb-web-header-top-item {
+    position: relative;
+    min-height: 2.375rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.875rem;
+}
+
+.bb-web-header-top-item + .bb-web-header-top-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: var(--bb-border-width);
+    height: 1.125rem;
+    transform: translateY(-50%);
+    background-color: var(--bb-web-header-top-border-color);
+}
+
+/* =====================================
+   Header Top Base Link
+===================================== */
+
+.bb-web-header-top-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--bb-web-header-top-color);
+    background-color: transparent;
+
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-medium);
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-web-header-top-link:hover,
+.bb-web-header-top-link:focus {
+    color: var(--bb-web-header-top-color);
+    text-decoration: none;
+    outline: 0;
+}
+
+.bb-web-header-top a,
+.bb-web-header-top button,
+.bb-web-header-top .dropdown-toggle {
+    color: var(--bb-web-header-top-color);
+}
+
+.bb-web-header-top .text-muted,
+.bb-web-header-top-muted {
+    color: var(--bb-web-header-top-muted-color) !important;
+}
+
+/* =====================================
+   Header Top Icon
+===================================== */
+
+.bb-web-header-top-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 1.25rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: currentColor;
+    line-height: 1;
+}
+
+.bb-web-header-top-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* =====================================
+   RFQ Top Action
+===================================== */
+
+.bb-web-header-rfq-link {
+    min-height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0 0.875rem;
+
+    color: var(--bb-web-header-top-color);
+    background-color: var(--bb-web-header-top-action-bg);
+    border: var(--bb-border-width) solid var(--bb-web-header-top-action-border-color);
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-bold);
+    line-height: 1;
+    text-decoration: none;
+
+    transition:
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
+}
+
+.bb-web-header-rfq-link:hover,
+.bb-web-header-rfq-link:focus {
+    color: var(--bb-web-header-top-color);
+    background-color: var(--bb-web-header-top-action-hover-bg);
+    border-color: var(--bb-web-header-top-action-hover-border-color);
+    box-shadow: var(--bb-web-header-top-shadow);
+    text-decoration: none;
+    outline: 0;
+}
+
+.bb-web-header-rfq-link:active {
+    transform: translateY(1px);
+}
+
+.bb-web-header-rfq-link .bb-web-header-top-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.bb-web-header-rfq-link .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* =====================================
+   Auth Links
+===================================== */
+
+.bb-web-header-auth-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    flex-wrap: nowrap;
+}
+
+.bb-web-header-auth-sep {
+    color: var(--bb-web-header-top-muted-color);
+    font-weight: var(--bb-fw-semibold);
+}
+
+/* =====================================
+   Trade Switch - B2B / B2C
+===================================== */
+
+.bb-trade-switch {
+    --bb-trade-switch-accent: var(--bb-primary);
+    --bb-trade-switch-accent-inverse: var(--bb-primary-inverse);
+
+    --bb-trade-switch-home-bg: var(--bb-coal-500);
+    --bb-trade-switch-home-bg-hover: var(--bb-coal-400);
+    --bb-trade-switch-home-color: var(--bb-white);
+    --bb-trade-switch-home-border: color-mix(in srgb, var(--bb-white) 10%, transparent);
+    --bb-trade-switch-home-icon-bg: color-mix(in srgb, var(--bb-white) 9%, transparent);
+    --bb-trade-switch-home-icon-border: color-mix(in srgb, var(--bb-white) 10%, transparent);
+
+    --bb-trade-switch-area-bg: var(--bb-surface-elevated);
+    --bb-trade-switch-area-bg-hover: var(--bb-surface-soft);
+    --bb-trade-switch-area-color: var(--bb-heading-color);
+    --bb-trade-switch-area-border: var(--bb-border-color);
+    --bb-trade-switch-area-border-hover: var(--bb-border-color-strong);
+    --bb-trade-switch-area-icon-bg: color-mix(in srgb, var(--bb-heading-color) 7%, transparent);
+    --bb-trade-switch-area-icon-border: color-mix(in srgb, var(--bb-heading-color) 10%, transparent);
+
+    --bb-trade-switch-shadow-soft: var(--bb-shadow-xs);
+    --bb-trade-switch-shadow-strong: var(--bb-shadow-sm);
+
+    position: relative;
+    z-index: 20;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bb-trade-switch-item {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+
+    min-height: 3.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0 1.125rem;
+
+    border-radius: var(--bb-radius-lg) var(--bb-radius-lg) 0 0;
+    text-decoration: none;
+
+    transition:
+        background-color var(--bb-transition-normal),
+        border-color var(--bb-transition-normal),
+        color var(--bb-transition-normal),
+        box-shadow var(--bb-transition-normal),
+        transform var(--bb-transition-normal);
+}
+
+.bb-trade-switch-item::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: -0.5rem;
+    z-index: -1;
+
+    height: 0.875rem;
+    border-radius: var(--bb-radius-pill);
+
+    background: color-mix(in srgb, var(--bb-heading-color) 8%, transparent);
+    filter: blur(0.625rem);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.bb-trade-switch-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    min-width: 1.75rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--bb-radius-pill);
+
+    transition:
+        background-color var(--bb-transition-normal),
+        color var(--bb-transition-normal),
+        border-color var(--bb-transition-normal);
+}
+
+.bb-trade-switch-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-trade-switch-text {
+    color: currentColor;
+    font-size: var(--bb-fs-base);
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* =====================================
+   Trade Switch - Home Variant
+   Both switches dark.
+===================================== */
+
+.bb-trade-switch.is-home .bb-trade-switch-item {
+    color: var(--bb-trade-switch-home-color);
+    background-color: var(--bb-trade-switch-home-bg);
+    border: var(--bb-border-width) solid var(--bb-trade-switch-home-border);
+    box-shadow: var(--bb-trade-switch-shadow-soft);
+}
+
+.bb-trade-switch.is-home .bb-trade-switch-icon {
+    color: var(--bb-trade-switch-accent);
+    background-color: var(--bb-trade-switch-home-icon-bg);
+    border: var(--bb-border-width) solid var(--bb-trade-switch-home-icon-border);
+}
+
+.bb-trade-switch.is-home .bb-trade-switch-item:hover,
+.bb-trade-switch.is-home .bb-trade-switch-item:focus {
+    color: var(--bb-trade-switch-home-color);
+    background-color: var(--bb-trade-switch-home-bg-hover);
+    box-shadow: var(--bb-trade-switch-shadow-strong);
+    text-decoration: none;
+    outline: 0;
+}
+
+.bb-trade-switch.is-home .bb-trade-switch-item:hover .bb-trade-switch-icon,
+.bb-trade-switch.is-home .bb-trade-switch-item:focus .bb-trade-switch-icon {
+    color: var(--bb-trade-switch-accent);
+    background-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
+}
+
+.bb-trade-switch.is-home .bb-trade-switch-item.is-active {
+    background-color: var(--bb-trade-switch-home-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 36%, var(--bb-trade-switch-home-border));
+    box-shadow:
+        0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-primary) 36%, transparent) inset,
+        var(--bb-trade-switch-shadow-strong);
+}
+
+.bb-trade-switch.is-home .bb-trade-switch-item.is-active .bb-trade-switch-icon {
+    color: var(--bb-trade-switch-accent);
+    background-color: color-mix(in srgb, var(--bb-primary) 16%, transparent);
+    border-color: color-mix(in srgb, var(--bb-primary) 26%, transparent);
+}
+
+/* =====================================
+   Trade Switch - Area Variant
+   Light/dark surface aware.
+===================================== */
+
+.bb-trade-switch.is-area .bb-trade-switch-item {
+    color: var(--bb-trade-switch-area-color);
+    background-color: var(--bb-trade-switch-area-bg);
+    border: var(--bb-border-width) solid var(--bb-trade-switch-area-border);
+}
+
+.bb-trade-switch.is-area .bb-trade-switch-icon {
+    color: var(--bb-trade-switch-area-color);
+    background-color: var(--bb-trade-switch-area-icon-bg);
+    border: var(--bb-border-width) solid var(--bb-trade-switch-area-icon-border);
+}
+
+.bb-trade-switch.is-area .bb-trade-switch-item:hover,
+.bb-trade-switch.is-area .bb-trade-switch-item:focus {
+    color: var(--bb-trade-switch-area-color);
+    background-color: var(--bb-trade-switch-area-bg-hover);
+    border-color: var(--bb-trade-switch-area-border-hover);
+    box-shadow: var(--bb-trade-switch-shadow-strong);
+    text-decoration: none;
+    outline: 0;
+}
+
+.bb-trade-switch.is-area .bb-trade-switch-item:hover .bb-trade-switch-icon,
+.bb-trade-switch.is-area .bb-trade-switch-item:focus .bb-trade-switch-icon {
+    background-color: color-mix(in srgb, var(--bb-heading-color) 10%, transparent);
+}
+
+.bb-trade-switch.is-area .bb-trade-switch-item.is-active {
+    background-color: var(--bb-trade-switch-area-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 30%, var(--bb-trade-switch-area-border));
+    box-shadow:
+        0 0 0 var(--bb-border-width) color-mix(in srgb, var(--bb-primary) 20%, transparent) inset,
+        var(--bb-trade-switch-shadow-strong);
+}
+
+.bb-trade-switch.is-area .bb-trade-switch-item.is-active .bb-trade-switch-icon {
+    color: var(--bb-primary-inverse);
+    background-color: var(--bb-primary);
+    border-color: var(--bb-primary);
+}
+
+/* =====================================
+   Focus
+===================================== */
+
+.bb-trade-switch-item:focus-visible {
+    outline: 0;
+    box-shadow:
+        0 0 0 var(--bb-focus-ring-width, 0.2rem) color-mix(in srgb, var(--bb-primary) 35%, transparent),
+        var(--bb-trade-switch-shadow-strong);
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (min-width: 1200px) {
+    .bb-web-header-top {
+        display: block;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .bb-web-header-top-inner {
+        gap: 1rem;
+    }
+
+    .bb-web-header-top-item {
+        padding: 0 0.625rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bb-trade-switch {
+        gap: 0.625rem;
+    }
+
+    .bb-trade-switch-item {
+        min-height: 3rem;
+        padding: 0 1rem;
+        gap: 0.625rem;
+        border-radius: var(--bb-radius-xl);
+    }
+
+    .bb-trade-switch-text {
+        font-size: var(--bb-fs-sm);
+    }
+
+    .bb-trade-switch-icon {
+        width: 1.625rem;
+        height: 1.625rem;
+        min-width: 1.625rem;
+    }
+
+    .bb-trade-switch-icon .material-symbols-outlined {
+        font-size: var(--bb-icon-size-sm);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-trade-switch {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.625rem;
+    }
+
+    .bb-trade-switch-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bb-trade-switch-text {
+        font-size: var(--bb-fs-sm);
+    }
+}
+
+/* =====================================
+   Reduced Motion
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .bb-web-header-top-link,
+    .bb-web-header-rfq-link,
+    .bb-trade-switch-item,
+    .bb-trade-switch-icon {
+        transition: none;
+    }
+
+    .bb-web-header-rfq-link:active {
+        transform: none;
+    }
+}

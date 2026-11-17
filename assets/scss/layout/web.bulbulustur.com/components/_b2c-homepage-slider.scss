@@ -1,0 +1,443 @@
+/* =====================================
+   B2C Homepage Slider
+   Component-specific
+   Uses Bootstrap carousel + Main CSS tokens/chips/buttons
+===================================== */
+
+.bb-b2c-homepage-slider {
+  position: relative;
+}
+
+.bb-b2c-homepage-slider-carousel {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 31.25rem;
+
+  background:
+    radial-gradient(
+      circle at 86% 12%,
+      color-mix(in srgb, var(--bb-primary) 22%, transparent),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      color-mix(in srgb, var(--bb-success) 12%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated)) 0%,
+      color-mix(in srgb, var(--bb-primary) 6%, var(--bb-white, #ffffff)) 46%,
+      color-mix(in srgb, var(--bb-warning) 12%, var(--bb-white, #ffffff)) 100%
+    );
+
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  border-radius: var(--bb-radius-2xl);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-b2c-homepage-slider-carousel::before {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  top: -5rem;
+  z-index: 1;
+
+  width: 17.5rem;
+  height: 17.5rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 26%, transparent);
+  border-radius: 50%;
+}
+
+.bb-b2c-homepage-slider-carousel::after {
+  content: "";
+  position: absolute;
+  left: -4.375rem;
+  bottom: -5.625rem;
+  z-index: 1;
+
+  width: 15rem;
+  height: 15rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 20%, transparent);
+  border-radius: 50%;
+}
+
+.bb-b2c-homepage-slider-inner {
+  position: relative;
+  z-index: 2;
+
+  min-height: 31.25rem;
+}
+
+.bb-b2c-homepage-slider-item {
+  min-height: 31.25rem;
+}
+
+.bb-b2c-homepage-slider-slide {
+  min-height: 31.25rem;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.88fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+
+  padding:
+    clamp(1.75rem, 4vw, 3rem)
+    clamp(4.5rem, 6vw, 5.5rem);
+}
+
+/* Copy */
+
+.bb-b2c-homepage-slider-copy {
+  position: relative;
+  z-index: 3;
+
+  min-width: 0;
+  max-width: 44rem;
+
+  padding-left: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.bb-b2c-homepage-slider-label {
+  margin-bottom: 1rem;
+}
+
+.bb-b2c-homepage-slider-label .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+.bb-b2c-homepage-slider-title {
+  margin: 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: clamp(2rem, 5vw, 3.125rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.bb-b2c-homepage-slider-text {
+  max-width: 37.5rem;
+  margin: 1rem 0 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-loose);
+}
+
+.bb-b2c-homepage-slider-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 1.25rem;
+}
+
+.bb-b2c-homepage-slider-btn {
+  min-height: 3rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  border-radius: var(--bb-radius-pill);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-b2c-homepage-slider-btn .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+.bb-b2c-homepage-slider-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+}
+
+/* Visual */
+
+.bb-b2c-homepage-slider-visual {
+  position: relative;
+  z-index: 3;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-b2c-homepage-slider-picture-card {
+  width: min(100%, 27.5rem);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.625rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 78%, transparent);
+  border-radius: var(--bb-radius-2xl);
+  box-shadow: 0 1.25rem 2.875rem color-mix(in srgb, var(--bb-primary) 18%, transparent);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.bb-b2c-homepage-slider-picture-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: calc(var(--bb-radius-2xl) - 0.625rem);
+}
+
+.bb-b2c-homepage-slider-picture-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-primary);
+  background-color: var(--bb-tertiary-bg);
+  border-radius: calc(var(--bb-radius-2xl) - 0.625rem);
+}
+
+.bb-b2c-homepage-slider-picture-placeholder .material-symbols-outlined {
+  font-size: var(--bb-fs-display-lg);
+  line-height: 1;
+}
+
+/* Indicators */
+
+.bb-b2c-homepage-slider-indicators {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  bottom: 1.25rem;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+
+  width: auto;
+  margin: 0;
+
+  transform: translateX(-50%);
+}
+
+.bb-b2c-homepage-slider-dot {
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+
+  margin: 0 !important;
+
+  background-color: color-mix(in srgb, var(--bb-emphasis-color) 22%, transparent) !important;
+  border: 0 !important;
+  border-radius: var(--bb-radius-pill) !important;
+  opacity: 1 !important;
+
+  transition:
+    width var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast);
+}
+
+.bb-b2c-homepage-slider-dot.active {
+  width: 1.625rem !important;
+  background-color: var(--bb-primary) !important;
+  box-shadow: 0 0.375rem 1rem color-mix(in srgb, var(--bb-primary) 32%, transparent);
+}
+
+/* Controls */
+
+.bb-b2c-homepage-slider-control {
+  top: 50%;
+  z-index: 6;
+
+  width: 3.125rem;
+  height: 3.125rem;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 76%, transparent);
+  border-radius: var(--bb-radius-pill);
+  box-shadow:
+    0 0.75rem 1.75rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 22%, transparent);
+
+  opacity: 0.86;
+  transform: translateY(-50%);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    opacity var(--bb-transition-fast),
+    background-color var(--bb-transition-fast),
+    transform var(--bb-transition-fast),
+    box-shadow var(--bb-transition-fast),
+    border-color var(--bb-transition-fast);
+}
+
+.bb-b2c-homepage-slider-control:hover {
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 92%, transparent);
+  border-color: color-mix(in srgb, var(--bb-primary) 32%, var(--bb-white, #ffffff));
+  box-shadow:
+    0 1rem 2.25rem color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent),
+    0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 12%, transparent);
+
+  opacity: 1;
+  transform: translateY(-50%) scale(1.045);
+}
+
+.bb-b2c-homepage-slider-control-prev {
+  left: 1.25rem;
+}
+
+.bb-b2c-homepage-slider-control-next {
+  right: 1.25rem;
+}
+
+.bb-b2c-homepage-slider-control .material-symbols-outlined {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+/* Dark */
+
+[data-bs-theme="dark"] .bb-b2c-homepage-slider-carousel {
+  background:
+    radial-gradient(
+      circle at 86% 12%,
+      color-mix(in srgb, var(--bb-primary) 14%, transparent),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      color-mix(in srgb, var(--bb-success) 9%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--bb-primary) 10%, var(--bb-body-bg)) 0%,
+      color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg)) 46%,
+      color-mix(in srgb, var(--bb-warning) 8%, var(--bb-body-bg)) 100%
+    );
+
+  border-color: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
+}
+
+[data-bs-theme="dark"] .bb-b2c-homepage-slider-control {
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 68%, transparent);
+  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  box-shadow:
+    0 0.75rem 1.75rem rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-b2c-homepage-slider-control:hover {
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
+  border-color: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
+}
+
+[data-bs-theme="dark"] .bb-b2c-homepage-slider-dot {
+  background-color: color-mix(in srgb, var(--bb-white, #ffffff) 28%, transparent) !important;
+}
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+  .bb-b2c-homepage-slider-carousel,
+  .bb-b2c-homepage-slider-inner,
+  .bb-b2c-homepage-slider-item,
+  .bb-b2c-homepage-slider-slide {
+    min-height: auto;
+  }
+
+  .bb-b2c-homepage-slider-slide {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .bb-b2c-homepage-slider-copy {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .bb-b2c-homepage-slider-picture-card {
+    width: min(100%, 22.5rem);
+  }
+
+  .bb-b2c-homepage-slider-indicators {
+    position: static;
+
+    width: 100%;
+    padding: 0 1.5rem 1.25rem;
+
+    transform: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2c-homepage-slider-carousel {
+    border-radius: var(--bb-radius-xl);
+  }
+
+  .bb-b2c-homepage-slider-slide {
+    padding: 1.25rem;
+  }
+
+  .bb-b2c-homepage-slider-title {
+    font-size: var(--bb-fs-3xl);
+  }
+
+  .bb-b2c-homepage-slider-text {
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-content);
+  }
+
+  .bb-b2c-homepage-slider-actions {
+    flex-direction: column;
+  }
+
+  .bb-b2c-homepage-slider-btn {
+    width: 100%;
+  }
+
+  .bb-b2c-homepage-slider-pills {
+    display: none;
+  }
+
+  .bb-b2c-homepage-slider-picture-card {
+    width: min(100%, 18rem);
+    border-radius: var(--bb-radius-xl);
+  }
+
+  .bb-b2c-homepage-slider-picture-card img,
+  .bb-b2c-homepage-slider-picture-placeholder {
+    border-radius: calc(var(--bb-radius-xl) - 0.625rem);
+  }
+}

@@ -1,0 +1,213 @@
+/* =====================================
+   Web Language Dropdown
+   Header top içinde kullanılan dil seçici.
+   Main CSS dropdown ritmini bozmadan hizalama + okunabilirlik sağlar.
+===================================== */
+
+.bb-web-language-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Trigger */
+.bb-web-language-trigger {
+    min-height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0 0.625rem;
+
+    color: var(--bb-heading-color);
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--bb-radius-pill);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-web-language-trigger:hover,
+.bb-web-language-trigger:focus,
+.bb-web-language-trigger[aria-expanded="true"] {
+    color: var(--bb-heading-color);
+    background-color: color-mix(in srgb, var(--bb-body-bg) 22%, transparent);
+    border-color: color-mix(in srgb, var(--bb-heading-color) 14%, transparent);
+    box-shadow: 0 6px 14px color-mix(in srgb, var(--bb-coal-300) 6%, transparent);
+    text-decoration: none;
+    outline: 0;
+}
+
+/* Bootstrap default caret kapalı */
+.bb-web-language-trigger::after {
+    display: none !important;
+}
+
+/* Trigger icon + arrow */
+.bb-web-language-trigger-icon,
+.bb-web-language-arrow {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: currentColor;
+    line-height: 1;
+}
+
+.bb-web-language-trigger-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-web-language-arrow {
+    transition: transform var(--bb-transition-fast);
+}
+
+.bb-web-language-arrow .material-symbols-outlined {
+    font-size: var(--bb-fs-xl);
+    line-height: 1;
+}
+
+.bb-web-language-trigger[aria-expanded="true"] .bb-web-language-arrow {
+    transform: rotate(180deg);
+}
+
+/* Current text */
+.bb-web-language-current {
+    display: inline-flex;
+    align-items: center;
+
+    color: currentColor;
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+}
+
+/* Menu */
+.bb-web-language-menu {
+    min-width: 190px;
+    padding: 0.5rem;
+
+    background-color: var(--bb-body-bg);
+    border: 1px solid var(--bb-border-color);
+    border-radius: var(--bb-radius-xl);
+    box-shadow:
+        0 18px 46px rgba(15, 23, 42, .14),
+        0 4px 12px rgba(15, 23, 42, .08);
+}
+
+/* Item */
+.bb-web-language-item {
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 10px;
+
+    color: var(--bb-heading-color);
+    background-color: transparent;
+    border-radius: var(--bb-radius-lg);
+
+    font-size: var(--bb-fs-sm);;
+    font-weight: var(--bb-fw-medium);
+    line-height: 1;
+    text-decoration: none;
+
+    transition:
+        color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast);
+}
+
+.bb-web-language-item:hover,
+.bb-web-language-item:focus,
+.bb-web-language-item.active {
+    color: var(--bb-heading-color);
+    background-color: var(--bb-secondary-bg);
+    text-decoration: none;
+    outline: 0;
+}
+
+.bb-web-language-item-flag-wrap {
+    width: 24px;
+    height: 18px;
+    flex: 0 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-web-language-flag {
+    width: 22px;
+    height: auto;
+    display: block;
+    flex: 0 0 22px;
+    border-radius: var(--bb-radius-xs);
+}
+
+.bb-web-language-item-text {
+    flex: 1 1 auto;
+    min-width: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bb-web-language-item-check {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-primary);
+}
+
+.bb-web-language-item-check .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+/* Dark mode */
+[data-bs-theme="dark"] .bb-web-language-menu {
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, .32),
+        0 4px 12px rgba(0, 0, 0, .20);
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .bb-web-language-current {
+        display: none;
+    }
+
+    .bb-web-language-trigger {
+        width: 36px;
+        padding: 0;
+    }
+
+    .bb-web-language-arrow {
+        display: none;
+    }
+}

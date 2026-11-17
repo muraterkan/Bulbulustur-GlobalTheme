@@ -1,0 +1,88 @@
+/* =====================================
+   B2C Sponsored Adverts
+   Component-specific
+===================================== */
+
+.bb-b2c-sponsored-adverts {
+  margin-top: 1.125rem;
+}
+
+.bb-b2c-sponsored-adverts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.125rem;
+}
+
+
+/* Quickbar */
+
+.bb-b2c-sponsored-adverts-quickbar {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 3;
+
+  min-height: 2.5rem;
+  padding: 0 0.875rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  color: var(--bb-emphasis-color) !important;
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 82%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-shadow-xs);
+  text-decoration: none !important;
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    opacity var(--bb-transition-fast),
+    transform var(--bb-transition-fast),
+    background-color var(--bb-transition-fast);
+}
+
+.bb-b2c-sponsored-adverts-quickbar:hover {
+  background-color: var(--bb-surface-elevated);
+}
+
+.bb-b2c-sponsored-adverts-quickbar .material-symbols-outlined {
+  font-size: var(--bb-fs-xl);
+  line-height: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2c-sponsored-adverts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2c-sponsored-adverts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2c-sponsored-adverts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-b2c-sponsored-adverts-quickbar {
+    opacity: 1;
+    transform: none;
+  }
+}

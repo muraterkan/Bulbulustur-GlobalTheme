@@ -1,0 +1,845 @@
+/* =====================================
+   B2B Special Category Page
+   Scope: category/special.cshtml
+   Token-driven | Light/Dark compatible
+
+   Razor roots:
+   - .bb-b2b-special-page
+   - .bb-b2b-special-hero
+   - .bb-b2b-special-quick-nav
+   - .bb-b2b-special-products-section
+   - .bb-b2b-special-products-grid
+
+   Product cards:
+   - Visual card anatomy comes from .bb-product-card
+===================================== */
+
+/* =====================================
+   Page Root
+===================================== */
+
+.bb-b2b-special-page {
+    --bb-b2b-special-primary: var(--bb-primary, #155eef);
+    --bb-b2b-special-navy: #0f2747;
+    --bb-b2b-special-navy-soft: #123b66;
+    --bb-b2b-special-yellow: var(--bb-warning, #f7c600);
+
+    --bb-b2b-special-ink: var(--bb-emphasis-color);
+    --bb-b2b-special-muted: var(--bb-secondary-color);
+    --bb-b2b-special-border: color-mix(
+        in srgb,
+        var(--bb-border-color) 84%,
+        transparent
+    );
+
+    --bb-b2b-special-radius-md: var(--bb-radius-xl);
+    --bb-b2b-special-radius-lg: var(--bb-radius-2xl);
+    --bb-b2b-special-radius-xl: calc(var(--bb-radius-2xl) + 0.25rem);
+
+    --bb-b2b-special-shadow:
+        0 0.875rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent);
+
+    --bb-b2b-special-shadow-hover:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent);
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--bb-body-bg);
+    color: var(--bb-body-color);
+}
+
+/* =====================================
+   Hero
+===================================== */
+
+.bb-b2b-special-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: clamp(2.75rem, 5vw, 4.25rem);
+    padding-bottom: clamp(4.25rem, 7vw, 6.25rem);
+
+    color: var(--bb-b2b-special-hero-text, var(--bb-white, #ffffff));
+
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #0f2747) 88%, var(--bb-black, #000000)),
+            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #0f2747) 70%, transparent)
+        ),
+        var(--bb-b2b-special-hero-image),
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--bb-b2b-special-yellow) 20%, transparent),
+            transparent 18rem
+        ),
+        linear-gradient(
+            135deg,
+            var(--bb-b2b-special-navy),
+            var(--bb-b2b-special-navy-soft)
+        );
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bb-b2b-special-hero::before {
+    content: "";
+    position: absolute;
+    left: -7rem;
+    bottom: -8rem;
+
+    width: 18rem;
+    height: 18rem;
+
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent);
+    pointer-events: none;
+}
+
+.bb-b2b-special-hero::after {
+    content: "";
+    position: absolute;
+    right: -6rem;
+    top: -7rem;
+
+    width: 17rem;
+    height: 17rem;
+
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 7%, transparent);
+    pointer-events: none;
+}
+
+.bb-b2b-special-hero .bb-container {
+    position: relative;
+    z-index: 2;
+}
+
+.bb-b2b-special-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.06fr) minmax(18rem, 0.94fr);
+    align-items: center;
+    gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.bb-b2b-special-hero-copy {
+    min-width: 0;
+    max-width: 48rem;
+}
+
+.bb-b2b-special-hero-label {
+    margin-bottom: 1.125rem;
+
+    color: var(--bb-white, #ffffff);
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 14%, transparent);
+
+    border-color: color-mix(
+        in srgb,
+        var(--bb-white, #ffffff) 20%,
+        transparent
+    );
+
+    box-shadow:
+        0 0.75rem 1.5rem color-mix(in srgb, var(--bb-black, #000000) 10%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 20%, transparent);
+}
+
+.bb-b2b-special-hero-label .material-symbols-outlined {
+    color: currentColor;
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-b2b-special-hero-title {
+    max-width: 48rem;
+    margin: 0 0 1rem;
+
+    color: currentColor;
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: var(--bb-fw-extrabold, 800);
+    line-height: 0.98;
+    letter-spacing: var(--bb-letter-spacing-tight, -0.055em);
+}
+
+.bb-b2b-special-hero-text {
+    max-width: 45rem;
+    margin: 0 0 1.375rem;
+
+    color: color-mix(in srgb, currentColor 88%, transparent);
+    font-size: clamp(var(--bb-fs-sm), 1.2vw, var(--bb-fs-lg));
+    font-weight: var(--bb-fw-medium);
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-b2b-special-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.bb-b2b-special-hero-btn {
+    min-height: 3.25rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+
+    padding-right: 1.35rem;
+    padding-left: 1.35rem;
+
+    border-radius: var(--bb-radius-pill);
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-bold);
+    text-decoration: none !important;
+}
+
+.bb-b2b-special-hero-btn .material-symbols-outlined {
+    color: currentColor;
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-b2b-special-hero-actions .btn-primary {
+    color: var(--bb-emphasis-color);
+    background-color: var(--bb-b2b-special-yellow);
+    border-color: color-mix(in srgb, var(--bb-b2b-special-yellow) 86%, var(--bb-emphasis-color));
+
+    box-shadow:
+        0 1rem 2rem color-mix(in srgb, var(--bb-b2b-special-yellow) 24%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 24%, transparent);
+}
+
+.bb-b2b-special-hero-actions .btn-light {
+    color: var(--bb-white, #ffffff);
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 13%, transparent);
+
+    border-color: color-mix(
+        in srgb,
+        var(--bb-white, #ffffff) 18%,
+        transparent
+    );
+
+    box-shadow:
+        0 1rem 2rem color-mix(in srgb, var(--bb-black, #000000) 10%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 14%, transparent);
+}
+
+.bb-b2b-special-hero-actions .btn-light:hover,
+.bb-b2b-special-hero-actions .btn-light:focus {
+    color: var(--bb-white, #ffffff);
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 18%, transparent);
+}
+
+.bb-b2b-special-hero-visual {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-b2b-special-hero-picture {
+    position: relative;
+
+    width: min(100%, 25rem);
+    min-height: clamp(15rem, 24vw, 21rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(1rem, 2vw, 1.5rem);
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-white, #ffffff) 22%,
+        transparent
+    );
+
+    border-radius: var(--bb-radius-2xl);
+
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 11%, transparent);
+
+    box-shadow:
+        0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black, #000000) 18%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 20%, transparent);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.bb-b2b-special-hero-picture img {
+    display: block;
+
+    max-width: 100%;
+    max-height: clamp(14rem, 22vw, 19rem);
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 1.25rem 1.75rem color-mix(in srgb, var(--bb-black, #000000) 18%, transparent)
+    );
+}
+
+.bb-b2b-special-hero-placeholder {
+    width: 6rem;
+    height: 6rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--bb-white, #ffffff);
+    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 12%, transparent);
+    border-radius: var(--bb-radius-2xl);
+}
+
+.bb-b2b-special-hero-placeholder .material-symbols-outlined {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* =====================================
+   Quick Nav
+===================================== */
+
+.bb-b2b-special-quick-nav {
+    position: relative;
+    z-index: 5;
+
+    margin-top: -2.75rem;
+}
+
+.bb-b2b-special-quick-nav-card {
+    overflow: hidden;
+
+    padding: clamp(1rem, 2vw, 1.25rem);
+
+    background-color: color-mix(
+        in srgb,
+        var(--bb-surface-elevated) 94%,
+        transparent
+    );
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-border-color) 84%,
+        transparent
+    );
+
+    border-radius: var(--bb-b2b-special-radius-xl);
+
+    box-shadow:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 42%, transparent);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.bb-b2b-special-quick-nav-head {
+    margin-bottom: 0.875rem;
+}
+
+.bb-b2b-special-quick-nav-eyebrow {
+    display: inline-flex;
+
+    margin-bottom: 0.4rem;
+
+    color: var(--bb-b2b-special-primary);
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: 1;
+    letter-spacing: var(--bb-letter-spacing-wide, 0.075em);
+    text-transform: uppercase;
+}
+
+.bb-b2b-special-quick-nav-title {
+    margin: 0;
+
+    color: var(--bb-b2b-special-ink);
+    font-size: clamp(var(--bb-fs-base), 1.3vw, var(--bb-fs-xl));
+    font-weight: var(--bb-fw-extrabold, 800);
+    line-height: var(--bb-line-height-heading);
+    letter-spacing: var(--bb-letter-spacing-tight, -0.02em);
+}
+
+.bb-b2b-special-quick-nav-list {
+    display: flex;
+    gap: 0.875rem;
+
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+
+    scrollbar-width: thin;
+}
+
+.bb-b2b-special-quick-nav-list::-webkit-scrollbar {
+    height: 0.375rem;
+}
+
+.bb-b2b-special-quick-nav-list::-webkit-scrollbar-thumb {
+    border-radius: var(--bb-radius-pill);
+    background-color: color-mix(in srgb, var(--bb-border-color) 72%, var(--bb-secondary-color));
+}
+
+.bb-b2b-special-quick-nav-item {
+    min-width: 9.5rem;
+    min-height: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem;
+
+    color: var(--bb-b2b-special-ink) !important;
+    background-color: color-mix(in srgb, var(--bb-surface-soft) 74%, var(--bb-body-bg));
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-border-color) 86%,
+        transparent
+    );
+
+    border-radius: var(--bb-b2b-special-radius-md);
+
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-base);
+    text-align: center;
+    text-decoration: none !important;
+
+    transition:
+        transform var(--bb-transition-fast),
+        border-color var(--bb-transition-fast),
+        background-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast);
+}
+
+.bb-b2b-special-quick-nav-item:hover,
+.bb-b2b-special-quick-nav-item:focus {
+    transform: translateY(-2px);
+
+    background-color: var(--bb-surface-elevated);
+    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 20%, var(--bb-border-color));
+
+    box-shadow:
+        0 0.875rem 1.75rem color-mix(in srgb, var(--bb-emphasis-color) 7%, transparent);
+}
+
+.bb-b2b-special-quick-nav-item.active {
+    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 8%, var(--bb-surface-elevated));
+    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 24%, var(--bb-border-color));
+
+    box-shadow:
+        0 0.875rem 1.75rem color-mix(in srgb, var(--bb-b2b-special-primary) 8%, transparent);
+}
+
+.bb-b2b-special-quick-nav-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: color-mix(in srgb, var(--bb-b2b-special-primary) 82%, var(--bb-emphasis-color));
+    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 10%, var(--bb-white, #ffffff));
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-b2b-special-primary) 12%,
+        var(--bb-border-color)
+    );
+
+    border-radius: 1rem;
+}
+
+.bb-b2b-special-quick-nav-icon .material-symbols-outlined {
+    color: currentColor;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 500,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+/* =====================================
+   Products Section
+===================================== */
+
+.bb-b2b-special-products-section {
+    padding-top: clamp(2.25rem, 4vw, 3.75rem);
+    padding-bottom: clamp(2.25rem, 4vw, 3.75rem);
+}
+
+.bb-b2b-special-section-head {
+    margin-bottom: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.bb-b2b-special-section-copy {
+    max-width: 54rem;
+}
+
+.bb-b2b-special-section-label {
+    margin-bottom: 0.75rem;
+}
+
+.bb-b2b-special-section-label .material-symbols-outlined {
+    font-size: var(--bb-icon-size-md);
+    line-height: 1;
+}
+
+.bb-b2b-special-section-title {
+    color: var(--bb-b2b-special-ink);
+}
+
+.bb-b2b-special-section-text {
+    max-width: 54rem;
+    color: var(--bb-b2b-special-muted);
+}
+
+/* Product Grid */
+
+.bb-b2b-special-products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(0.875rem, 1.25vw, 1.125rem);
+    align-items: stretch;
+}
+
+.bb-b2b-special-products-grid .bb-product-card {
+    height: 100%;
+}
+
+/* =====================================
+   Pagination
+===================================== */
+
+.bb-b2b-special-pagination {
+    margin-top: 1.375rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 0.875rem 1.125rem;
+
+    background-color: var(--bb-surface-elevated);
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-border-color) 84%,
+        transparent
+    );
+
+    border-radius: var(--bb-b2b-special-radius-lg);
+
+    box-shadow:
+        0 0.75rem 1.5rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent);
+}
+
+.bb-b2b-special-pagination-summary {
+    color: var(--bb-b2b-special-ink);
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-bold);
+}
+
+.bb-b2b-special-pagination-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =====================================
+   Empty State
+===================================== */
+
+.bb-b2b-special-empty {
+    padding: clamp(2rem, 4vw, 3rem) 1.5rem;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            color-mix(in srgb, var(--bb-b2b-special-primary) 7%, transparent),
+            transparent 18rem
+        ),
+        var(--bb-surface-elevated);
+
+    border: var(--bb-border-width) solid color-mix(
+        in srgb,
+        var(--bb-border-color) 86%,
+        transparent
+    );
+
+    border-radius: var(--bb-b2b-special-radius-xl);
+
+    box-shadow:
+        0 0.875rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent);
+}
+
+.bb-b2b-special-empty-icon {
+    width: 4.25rem;
+    height: 4.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 1.125rem;
+
+    color: var(--bb-b2b-special-primary);
+    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 10%, var(--bb-body-bg));
+
+    border-radius: var(--bb-radius-2xl);
+}
+
+.bb-b2b-special-empty-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-2xl);
+    line-height: 1;
+}
+
+.bb-b2b-special-empty-title {
+    margin: 0 0 0.65rem;
+
+    color: var(--bb-b2b-special-ink);
+    font-size: var(--bb-fs-2xl);
+    font-weight: var(--bb-fw-extrabold);
+    line-height: var(--bb-line-height-heading);
+}
+
+.bb-b2b-special-empty-text {
+    max-width: 35rem;
+    margin: 0 auto 1.25rem;
+
+    color: var(--bb-b2b-special-muted);
+    font-size: var(--bb-fs-sm);
+    line-height: var(--bb-line-height-content);
+}
+
+.bb-b2b-special-empty-btn {
+    min-height: 2.75rem;
+    border-radius: var(--bb-radius-pill);
+    font-weight: var(--bb-fw-extrabold);
+}
+
+/* =====================================
+   Bottom Banner
+===================================== */
+
+.bb-b2b-special-bottom-banner {
+    padding-top: 0;
+    padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* =====================================
+   Dark
+===================================== */
+
+[data-bs-theme="dark"] .bb-b2b-special-page {
+    --bb-b2b-special-border: color-mix(
+        in srgb,
+        var(--bb-border-color) 74%,
+        transparent
+    );
+
+    --bb-b2b-special-shadow:
+        0 0.875rem 2rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent);
+
+    --bb-b2b-special-shadow-hover:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 28%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-hero {
+    background:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #071b34) 88%, var(--bb-black, #000000)),
+            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #071b34) 66%, transparent)
+        ),
+        var(--bb-b2b-special-hero-image),
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--bb-b2b-special-yellow) 12%, transparent),
+            transparent 18rem
+        ),
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, #071b34 82%, var(--bb-body-bg)),
+            color-mix(in srgb, #0f3b74 34%, var(--bb-body-bg))
+        );
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-card {
+    background-color: color-mix(
+        in srgb,
+        var(--bb-surface-elevated) 86%,
+        transparent
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--bb-border-color) 74%,
+        transparent
+    );
+
+    box-shadow:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 26%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 6%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item {
+    background-color: color-mix(
+        in srgb,
+        var(--bb-surface-elevated) 82%,
+        var(--bb-body-bg)
+    );
+
+    border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item.active,
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item:hover,
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item:focus {
+    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 14%, var(--bb-surface-elevated));
+    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 28%, var(--bb-border-color));
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-quick-nav-icon {
+    color: color-mix(in srgb, var(--bb-white, #ffffff) 86%, var(--bb-b2b-special-primary));
+
+    background-color: color-mix(
+        in srgb,
+        var(--bb-b2b-special-primary) 24%,
+        var(--bb-surface-elevated)
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--bb-b2b-special-primary) 20%,
+        var(--bb-border-color)
+    );
+}
+
+[data-bs-theme="dark"] .bb-b2b-special-pagination,
+[data-bs-theme="dark"] .bb-b2b-special-empty {
+    background-color: color-mix(
+        in srgb,
+        var(--bb-surface-elevated) 90%,
+        var(--bb-body-bg)
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--bb-border-color) 74%,
+        transparent
+    );
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 1399.98px) {
+    .bb-b2b-special-products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .bb-b2b-special-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bb-b2b-special-hero-visual {
+        justify-content: flex-start;
+    }
+
+    .bb-b2b-special-products-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bb-b2b-special-quick-nav {
+        margin-top: -2.125rem;
+    }
+
+    .bb-b2b-special-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bb-b2b-special-pagination {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .bb-b2b-special-pagination-summary {
+        text-align: center;
+    }
+
+    .bb-b2b-special-pagination-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bb-b2b-special-hero {
+        padding-top: 2rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .bb-b2b-special-hero-title {
+        font-size: clamp(2rem, 13vw, 3rem);
+    }
+
+    .bb-b2b-special-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .bb-b2b-special-hero-btn {
+        width: 100%;
+    }
+
+    .bb-b2b-special-quick-nav {
+        margin-top: -1.75rem;
+    }
+
+    .bb-b2b-special-quick-nav-card {
+        border-radius: var(--bb-radius-2xl);
+    }
+
+    .bb-b2b-special-products-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .bb-b2b-special-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bb-b2b-special-hero-picture {
+        width: 100%;
+        min-height: 13rem;
+    }
+}

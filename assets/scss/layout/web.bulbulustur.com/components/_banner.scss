@@ -1,0 +1,355 @@
+/* =====================================
+   Banner Component
+   Type-based banner system
+===================================== */
+
+.bb-banner {
+  --bb-banner-text-color: var(--bb-emphasis-color);
+  --bb-banner-bg-image: none;
+
+  position: relative;
+  overflow: hidden;
+
+  color: var(--bb-banner-text-color);
+  background-image: var(--bb-banner-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: var(--bb-radius-xl);
+}
+
+.bb-banner-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.bb-banner-label {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 1.875rem;
+  margin-bottom: 0.875rem;
+  padding: 0 0.75rem;
+
+  color: var(--bb-primary);
+  background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
+  border-radius: var(--bb-radius-pill);
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-banner-title {
+  margin: 0;
+
+  color: inherit;
+  font-size: clamp(1.75rem, 3vw, 2.625rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1.08;
+  letter-spacing: var(--bb-letter-spacing-tight, -0.035em);
+}
+
+.bb-banner-text {
+  max-width: 42rem;
+  margin: 0.875rem 0 0;
+
+  color: color-mix(in srgb, currentColor 78%, transparent);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-loose);
+}
+
+.bb-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 1.25rem;
+}
+
+.bb-banner-actions .btn {
+  min-height: 2.75rem;
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-semibold);
+}
+
+/* =====================================
+   Type 1
+   Large visual CTA
+===================================== */
+
+.bb-banner-type-1 {
+  padding: clamp(1.25rem, 3vw, 2rem);
+
+  background:
+    radial-gradient(circle at 88% 16%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 28%),
+    linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated)) 0%, var(--bb-body-bg) 100%),
+    var(--bb-banner-bg-image);
+
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-banner-type-1-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.8fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.bb-banner-type-1-visuals {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.875rem;
+  align-items: center;
+}
+
+.bb-banner-picture {
+  overflow: hidden;
+
+  min-height: 13.75rem;
+
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-banner-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 13.75rem;
+  object-fit: cover;
+}
+
+.bb-banner-picture.is-secondary {
+  transform: translateY(1.25rem);
+}
+
+/* =====================================
+   Type 2
+   Horizontal CTA box
+===================================== */
+
+.bb-banner-type-2 {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+
+  color: var(--bb-banner-text-color);
+  background:
+    radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28%),
+    linear-gradient(135deg, var(--bb-coal-300) 0%, color-mix(in srgb, var(--bb-coal-300) 86%, var(--bb-primary)) 100%),
+    var(--bb-banner-bg-image);
+
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-banner-type-2 .bb-banner-label {
+  color: var(--bb-primary);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 14%, transparent);
+}
+
+.bb-banner-type-2 .bb-banner-title {
+  color: var(--bb-white);
+}
+
+.bb-banner-type-2 .bb-banner-text {
+  color: color-mix(in srgb, var(--bb-white) 78%, transparent);
+}
+
+.bb-banner-type-2-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.bb-banner-type-2-actions {
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+/* =====================================
+   Type 3
+   B2C list CTA v2
+===================================== */
+
+.bb-banner-type-3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem;
+  gap: 1.5rem;
+  align-items: center;
+
+  min-height: 15.625rem;
+  padding: clamp(1.25rem, 3vw, 1.875rem);
+
+  color: var(--bb-white);
+  background:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 22%, transparent), transparent 28%),
+    radial-gradient(circle at 8% 88%, color-mix(in srgb, var(--bb-warning) 16%, transparent), transparent 30%),
+    linear-gradient(135deg, #21162f 0%, #2d1f45 45%, #111827 100%),
+    var(--bb-banner-bg-image);
+
+  box-shadow: 0 1.125rem 2.5rem color-mix(in srgb, var(--bb-coal-300) 18%, transparent);
+}
+
+.bb-banner-type-3::before {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  top: -5rem;
+
+  width: 14.375rem;
+  height: 14.375rem;
+
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 6%, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bb-banner-type-3-copy,
+.bb-banner-type-3-panel {
+  position: relative;
+  z-index: 2;
+}
+
+.bb-banner-type-3-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+
+  min-height: 2rem;
+  margin-bottom: 0.875rem;
+  padding: 0 0.75rem;
+
+  color: var(--bb-primary);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 11%, transparent);
+  border-radius: var(--bb-radius-pill);
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-banner-type-3-label .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+.bb-banner-type-3-title {
+  max-width: 40rem;
+  margin: 0;
+
+  color: var(--bb-white);
+  font-size: clamp(1.75rem, 4vw, 2.375rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.bb-banner-type-3-text {
+  max-width: 41.25rem;
+  margin: 0.75rem 0 0;
+
+  color: color-mix(in srgb, var(--bb-white) 82%, transparent);
+  font-size: var(--bb-fs-sm);;
+  line-height: 1.85;
+}
+
+.bb-banner-type-3-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+
+  margin-top: 1.125rem;
+}
+
+.bb-banner-type-3-actions .btn {
+  min-height: 2.75rem;
+  border-radius: var(--bb-radius-pill);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-banner-type-3-panel {
+  display: grid;
+  gap: 0.625rem;
+}
+
+.bb-banner-type-3-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  min-height: 3.375rem;
+  padding: 0 0.875rem;
+
+  color: color-mix(in srgb, var(--bb-white) 90%, transparent);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 10%, transparent);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 13%, transparent);
+  border-radius: var(--bb-radius-lg);
+
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-semibold);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bb-banner-type-3-stat .material-symbols-outlined {
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-xl);
+  line-height: 1;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+
+@media (max-width: 991.98px) {
+  .bb-banner-type-1-grid,
+  .bb-banner-type-2-grid,
+  .bb-banner-type-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-banner-type-2-actions {
+    justify-content: flex-start;
+  }
+
+  .bb-banner-type-3-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-banner {
+    border-radius: var(--bb-radius-lg);
+  }
+
+  .bb-banner-type-1-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-banner-picture.is-secondary {
+    transform: none;
+  }
+
+  .bb-banner-actions,
+  .bb-banner-type-3-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bb-banner-actions .btn,
+  .bb-banner-type-3-actions .btn {
+    width: 100%;
+  }
+
+  .bb-banner-type-3-panel {
+    grid-template-columns: 1fr;
+  }
+}

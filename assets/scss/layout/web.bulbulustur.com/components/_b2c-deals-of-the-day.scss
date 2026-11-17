@@ -1,0 +1,219 @@
+/* =====================================
+   B2C Deals Of The Day
+   Component-specific
+   Stable product grid version
+===================================== */
+
+.bb-b2c-deals-day {
+  position: relative;
+}
+
+.bb-b2c-deals-day-shell {
+  --bb-card-radius: var(--bb-radius-2xl);
+  --bb-card-shadow: var(--bb-shadow-sm);
+
+  padding: clamp(1rem, 3vw, 1.5rem);
+
+  background:
+    radial-gradient(
+      circle at 94% 8%,
+      color-mix(in srgb, var(--bb-warning) 16%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      var(--bb-body-bg) 0%,
+      color-mix(in srgb, var(--bb-warning) 5%, var(--bb-body-bg)) 100%
+    );
+}
+
+/* Head */
+
+.bb-b2c-deals-day-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-bottom: 1.25rem;
+}
+
+.bb-b2c-deals-day-head-copy {
+  min-width: 0;
+  max-width: 48rem;
+}
+
+.bb-b2c-deals-day-title {
+  margin: 0.625rem 0 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.035em);
+}
+
+.bb-b2c-deals-day-text {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-b2c-deals-day-head-right {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.bb-b2c-deals-day-timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bb-b2c-deals-day-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.bb-b2c-deals-day-timer span {
+  min-width: 2rem;
+  height: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bb-white);
+  background-color: var(--bb-danger);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow-xs);
+
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1;
+}
+
+.bb-b2c-deals-day-all-link {
+  min-height: 2.625rem;
+  border-radius: var(--bb-radius-pill);
+  font-size: var(--bb-fs-sm);;
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-b2c-deals-day-all-link .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+/* Grid */
+
+.bb-b2c-deals-day-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Empty */
+
+.bb-b2c-deals-day-empty {
+  --bb-card-radius: var(--bb-radius-xl);
+  --bb-card-shadow: var(--bb-shadow-xs);
+
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bb-body-bg);
+}
+
+.bb-b2c-deals-day-empty-icon {
+  width: 4rem;
+  height: 4rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  color: var(--bb-danger);
+  background-color: var(--bb-danger-light);
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-b2c-deals-day-empty-icon .material-symbols-outlined {
+  font-size: var(--bb-fs-3xl);
+  line-height: 1;
+}
+
+.bb-b2c-deals-day-empty h2 {
+  margin: 0;
+
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-xl);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-b2c-deals-day-empty p {
+  max-width: 34rem;
+  margin: 0.5rem auto 1rem;
+
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);;
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-b2c-deals-day-empty .btn {
+  min-height: 2.75rem;
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-bold);
+}
+
+/* Responsive */
+
+@media (max-width: 1199.98px) {
+  .bb-b2c-deals-day-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bb-b2c-deals-day-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bb-b2c-deals-day-shell {
+    border-radius: var(--bb-radius-xl);
+  }
+
+  .bb-b2c-deals-day-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bb-b2c-deals-day-head-right {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .bb-b2c-deals-day-all-link {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  .bb-b2c-deals-day-grid {
+    grid-template-columns: 1fr;
+  }
+}
