@@ -166,14 +166,27 @@
 
   removeDemoControls();
 
-  var preserved = [];
-  Array.from(body.childNodes).forEach(function (node) {
-    if (node.nodeType === Node.ELEMENT_NODE && node.tagName === "SCRIPT") return;
-    preserved.push(node);
-  });
+  /*
+   * Component pages now follow the canonical Core page contract:
+   *
+   * body.bb-body
+   *   main.bb-main
+   *     .bb-wrapper
+   *       .bb-container
+   *         .bb-section
+   *
+   * The adapter must not reinterpret or normalize that markup. It only
+   * extracts the existing wrapper and mounts it inside the panel shell.
+   */
+  var sourceMain = body.querySelector(":scope > main.bb-main");
+  var sourceWrapper = sourceMain && sourceMain.querySelector(":scope > .bb-wrapper");
+
+  if (!sourceMain || !sourceWrapper) return;
+
+  sourceWrapper.remove();
 
   body.replaceChildren();
-  body.className = "";
+  body.className = "bb-body";
   body.setAttribute("data-bb-component-panel-ready", "true");
 
   var app = document.createElement("div");
@@ -212,136 +225,34 @@
               '<button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_component_user_pop" aria-label="User menu"><span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.jpg" alt="Demo user avatar"></span></button>',
               '<div id="bb_component_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>',
                 '<div class="bb-panel-user-summary"><span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.jpg" alt=""></span><span class="bb-panel-user-info"><span class="bb-panel-user-name">Demo User <span class="bb-badge bb-badge-success">Demo</span></span><small>demo@example.com</small></span></div>',
-                '<div class="bb-panel-user-group"><a class="bb-panel-user-item" href="../panel/profile.html"><span>Prifilee</span></a><a class="bb-panel-user-item" href="../panel/account.html"><span>Account Settings</span></a></div>',
+                '<div class="bb-panel-user-group"><a class="bb-panel-user-item" href="../panel/profile.html"><span>Profile</span></a><a class="bb-panel-user-item" href="../panel/account.html"><span>Account Settings</span></a></div>',
                 '<div class="bb-panel-user-group"><button class="bb-panel-user-item" type="button" id="bb_panel_user_theme"><span>Appearance</span><span class="bb-panel-user-meta"><span data-bb-panel-user-mode-text>Light</span><span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">light_mode</span></span></button><div class="bb-panel-user-item"><span>Languages</span><span class="bb-panel-user-meta">Türkçe</span></div></div>',
               '</div>',
             '</div>',
           '</div>',
         '</div>',
       '</header>',
-      '<!--::Main--><main class="bb-main">',
-        '<div class="bb-main-inner">',
-          '<div class="bb-toolbar bb-component-toolbar">',
-            '<div class="bb-panel-content-container">',
-              '<div class="bb-toolbar-row">',
-                '<div class="bb-toolbar-col-left">',
-                  '<h1 class="bb-page-title"></h1>',
-                  '<nav class="bb-breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../panel/dashboard.html">Panel</a></li><li class="breadcrumb-item">Components</li><li class="breadcrumb-item active" aria-current="page"></li></ol></nav>',
-                '</div>',
+      '<main class="bb-main">',
+        '<div class="bb-toolbar bb-component-toolbar">',
+          '<div class="bb-panel-content-container">',
+            '<div class="bb-toolbar-row">',
+              '<div class="bb-toolbar-col-left">',
+                '<h1 class="bb-page-title"></h1>',
+                '<nav class="bb-breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="../panel/dashboard.html">Panel</a></li><li class="breadcrumb-item">Components</li><li class="breadcrumb-item active" aria-current="page"></li></ol></nav>',
               '</div>',
             '</div>',
           '</div>',
-          '<section class="bb-content bb-component-showcase" data-bb-component-showcase>',
-            '<div class="bb-panel-content-container bb-component-showcase-content"></div>',
-          '</section>',
         '</div>',
-      '</main><!--/::Main-->',
-      '<!--::Footer--><footer class="bb-shell-footer bb-footer"><div class="bb-footer-bar"><div class="bb-footer-inner"><div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="../panel/dashboard.html">Bulbulustur</a></div><div class="bb-footer-right"><span class="bb-footer-link">Core component demo / Panel shell</span></div></div></div></footer><!--/::Footer-->',
+        '<div data-bb-component-host></div>',
+      '</main>',
+      '<footer class="bb-shell-footer bb-footer"><div class="bb-footer-bar"><div class="bb-footer-inner"><div class="bb-footer-left"><span>2026 ©</span><a class="bb-footer-brand" href="../panel/dashboard.html">Bulbulustur</a></div><div class="bb-footer-right"><span class="bb-footer-link">Core component demo / Panel shell</span></div></div></div></footer>',
     '</div>'
   ].join("");
 
   body.appendChild(app);
 
-  var contentHost = app.querySelector(".bb-component-showcase-content");
-  var demoRoot = document.createElement("div");
-  demoRoot.className = "bb-component-demo-root";
-  preserved.forEach(function (node) {
-    demoRoot.appendChild(node);
-  });
-  contentHost.appendChild(demoRoot);
-
-  function removeUtilityClasses(element, pattern) {
-    Array.from(element.classList).forEach(function (name) {
-      if (pattern.test(name)) element.classList.remove(name);
-    });
-  }
-
-  function unwrapElement(element) {
-    var parent = element.parentNode;
-    if (!parent) return;
-    while (element.firstChild) parent.insertBefore(element.firstChild, element);
-    element.remove();
-  }
-
-  demoRoot.querySelectorAll(":scope > main").forEach(function (main) {
-    unwrapElement(main);
-  });
-
-  demoRoot.querySelectorAll(
-    ":scope > .container, :scope > .container-fluid, :scope > .container-sm, :scope > .container-md, :scope > .container-lg, :scope > .container-xl, :scope > .container-xxl, :scope > .demo-shell"
-  ).forEach(function (wrapper) {
-    Array.from(wrapper.classList).forEach(function (name) {
-      if (/^container(?:-(?:fluid|sm|md|lg|xl|xxl))?$/.test(name) || name === "demo-shell") {
-        wrapper.classList.remove(name);
-      }
-    });
-    removeUtilityClasses(wrapper, /^(?:p|px|py|pt|pb|ps|pe|m|mx|my|mt|mb|ms|me)-[0-5]$/);
-    wrapper.classList.remove("min-vh-100", "bb-main");
-    wrapper.classList.add("bb-component-showcase-root");
-  });
-
-  var directElements = Array.from(demoRoot.children);
-  if (directElements.length === 1 &&
-      directElements[0].tagName === "DIV" &&
-      !directElements[0].classList.contains("bb-app") &&
-      !directElements[0].classList.contains("row")) {
-    directElements[0].classList.add("bb-component-showcase-root");
-  }
-
-  function normalizeDemoCards(root) {
-    root.querySelectorAll(".card, .bb-card").forEach(function (card) {
-      var hadLegacyPadding = Array.from(card.classList).some(function (name) {
-        return /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/.test(name);
-      });
-
-      card.classList.add("bb-card");
-      card.classList.remove("shadow", "shadow-sm", "shadow-lg");
-      removeUtilityClasses(card, /^(?:p|px|py|pt|pb|ps|pe|mb)-[0-5]$/);
-
-      card.querySelectorAll(":scope > .card-header, :scope > .bb-card-header").forEach(function (section) {
-        section.classList.add("bb-card-header");
-        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
-      });
-      card.querySelectorAll(":scope > .card-body, :scope > .bb-card-body").forEach(function (section) {
-        section.classList.add("bb-card-body");
-        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
-      });
-      card.querySelectorAll(":scope > .card-footer, :scope > .bb-card-footer").forEach(function (section) {
-        section.classList.add("bb-card-footer");
-        removeUtilityClasses(section, /^(?:p|px|py|pt|pb|ps|pe)-[0-5]$/);
-      });
-      card.querySelectorAll(".card-title, .bb-card-title").forEach(function (titleElement) {
-        titleElement.classList.add("bb-card-title");
-      });
-
-      var hasCanonicalSection = card.querySelector(":scope > .bb-card-header, :scope > .bb-card-body, :scope > .bb-card-footer");
-      if (!hasCanonicalSection && hadLegacyPadding) {
-        var bodySection = document.createElement("div");
-        bodySection.className = "bb-card-body";
-        while (card.firstChild) bodySection.appendChild(card.firstChild);
-        card.appendChild(bodySection);
-      }
-    });
-  }
-
-  normalizeDemoCards(demoRoot);
-
-  function removeLegacyPageIntro() {
-    var root = demoRoot.querySelector(".bb-component-showcase-root") || demoRoot;
-    var first = root.firstElementChild;
-    if (!first) return;
-
-    if (slug === "ribbons" && first.classList.contains("mb-4")) {
-      first.remove();
-      return;
-    }
-
-    if (slug === "tiny-slider-advanced" && first.querySelector("h4")) {
-      first.remove();
-    }
-  }
-
-  removeLegacyPageIntro();
+  var contentHost = app.querySelector("[data-bb-component-host]");
+  contentHost.replaceWith(sourceWrapper);
 
   var pageTitle = app.querySelector(".bb-page-title");
   var breadcrumbCurrent = app.querySelector(".breadcrumb-item.active");
