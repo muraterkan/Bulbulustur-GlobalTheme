@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur Theme - Indicator</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur Theme - Indicator</title>
 
-      <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -19,209 +19,209 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container py-4">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-    <!-- Top bar -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-      <div>
-        <h1 class="h4 mb-1">Indicator</h1>
-        <div class="bb-text-muted small">data-bb-indicator="on" ile label/progress toggle (vendor-free).</div>
-      </div>
+            <div class="bb-container">
+                <div class="container py-4">
 
-      <div class="d-flex align-items-center gap-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme-btn="light">
-          Light
-        </button>
-        <button type="button" class="btn btn-sm btn-outline-dark" data-bb-theme-btn="dark">
-          Dark
-        </button>
-      </div>
-    </div>
+                    <!-- Top bar -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">Indicator</h1>
+                            <div class="bb-text-muted small">data-bb-indicator="on" ile label/progress toggle (vendor-free).</div>
+                        </div>
 
-    <!-- Card: Basics -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header">
-        <div class="card-title mb-0">Basics</div>
-      </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme-btn="light">
+                                Light
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-dark" data-bb-theme-btn="dark">
+                                Dark
+                            </button>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <div class="d-flex flex-wrap align-items-center gap-3">
+                    <!-- Card: Basics -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header">
+                            <div class="card-title mb-0">Basics</div>
+                        </div>
 
-          <!-- Primary submit -->
-          <button type="button"
-                  class="btn btn-primary"
-                  id="bb_indicator_btn_submit">
-            <span class="bb-indicator" data-bb-indicator-root>
-              <span class="bb-indicator-label">
-                <span class="material-symbols-outlined">send</span>
-                Submit
-              </span>
+                        <div class="bb-card-body">
+                            <div class="d-flex flex-wrap align-items-center gap-3">
 
-              <span class="bb-indicator-progress" role="status" aria-live="polite">
-                Please wait...
-                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-              </span>
-            </span>
-          </button>
+                                <!-- Primary submit -->
+                                <button type="button"
+                                        class="btn btn-primary"
+                                        id="bb_indicator_btn_submit">
+                                    <span class="bb-indicator" data-bb-indicator-root>
+                                        <span class="bb-indicator-label">
+                                            <span class="material-symbols-outlined">send</span>
+                                            Submit
+                                        </span>
 
-          <!-- Save (starts ON to show state) -->
-          <button type="button"
-                  class="btn btn-success"
-                  data-bb-indicator="on"
-                  aria-busy="true">
-            <span class="bb-indicator" data-bb-indicator-root>
-              <span class="bb-indicator-label">
-                Save
-              </span>
+                                        <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                            Please wait...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                        </span>
+                                    </span>
+                                </button>
 
-              <span class="bb-indicator-progress" role="status" aria-live="polite">
-                Saving...
-                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-              </span>
-            </span>
-          </button>
+                                <!-- Save (starts ON to show state) -->
+                                <button type="button"
+                                        class="btn btn-success"
+                                        data-bb-indicator="on"
+                                        aria-busy="true">
+                                    <span class="bb-indicator" data-bb-indicator-root>
+                                        <span class="bb-indicator-label">
+                                            Save
+                                        </span>
 
-          <!-- Disable ON (opt-in) -->
-          <button type="button"
-                  class="btn btn-dark"
-                  id="bb_indicator_btn_process"
-                  data-bb-indicator-disable="true">
-            <span class="bb-indicator" data-bb-indicator-root>
-              <span class="bb-indicator-label">
-                Process
-              </span>
+                                        <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                            Saving...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                        </span>
+                                    </span>
+                                </button>
 
-              <span class="bb-indicator-progress" role="status" aria-live="polite">
-                Processing...
-                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-              </span>
-            </span>
-          </button>
+                                <!-- Disable ON (opt-in) -->
+                                <button type="button"
+                                        class="btn btn-dark"
+                                        id="bb_indicator_btn_process"
+                                        data-bb-indicator-disable="true">
+                                    <span class="bb-indicator" data-bb-indicator-root>
+                                        <span class="bb-indicator-label">
+                                            Process
+                                        </span>
 
-        </div>
+                                        <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                            Processing...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                        </span>
+                                    </span>
+                                </button>
 
-        <div class="bb-text-muted small mt-3">
-          Not: Progress katmanı overlay olduğu için buton genişliği “zıplamaz”.
-        </div>
-      </div>
-    </div>
+                            </div>
 
-    <!-- Card: Patterns -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header">
-        <div class="card-title mb-0">Common Patterns</div>
-      </div>
+                            <div class="bb-text-muted small mt-3">
+                                Not: Progress katmanı overlay olduğu için buton genişliği “zıplamaz”.
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <div class="row g-4">
+                    <!-- Card: Patterns -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header">
+                            <div class="card-title mb-0">Common Patterns</div>
+                        </div>
 
-          <!-- Icon-only + text -->
-          <div class="col-lg-6">
-            <div class="text-muted small mb-2">Icon + Text</div>
+                        <div class="bb-card-body">
+                            <div class="row g-4">
 
-            <button type="button" class="btn btn-outline-primary" id="bb_indicator_btn_sync">
-              <span class="bb-indicator" data-bb-indicator-root>
-                <span class="bb-indicator-label">
-                  <span class="material-symbols-outlined">sync</span>
-                  Sync
-                </span>
+                                <!-- Icon-only + text -->
+                                <div class="col-lg-6">
+                                    <div class="text-muted small mb-2">Icon + Text</div>
 
-                <span class="bb-indicator-progress" role="status" aria-live="polite">
-                  Syncing...
-                  <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-                </span>
-              </span>
-            </button>
-          </div>
+                                    <button type="button" class="btn btn-outline-primary" id="bb_indicator_btn_sync">
+                                        <span class="bb-indicator" data-bb-indicator-root>
+                                            <span class="bb-indicator-label">
+                                                <span class="material-symbols-outlined">sync</span>
+                                                Sync
+                                            </span>
 
-          <!-- Button group -->
-          <div class="col-lg-6">
-            <div class="text-muted small mb-2">Inline Actions</div>
+                                            <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                                Syncing...
+                                                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </div>
 
-            <div class="d-flex flex-wrap align-items-center gap-2">
-              <button type="button" class="btn btn-light" id="bb_indicator_btn_refresh">
-                <span class="bb-indicator" data-bb-indicator-root>
-                  <span class="bb-indicator-label">
-                    <span class="material-symbols-outlined">refresh</span>
-                    Refresh
-                  </span>
+                                <!-- Button group -->
+                                <div class="col-lg-6">
+                                    <div class="text-muted small mb-2">Inline Actions</div>
 
-                  <span class="bb-indicator-progress" role="status" aria-live="polite">
-                    Loading...
-                    <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-                  </span>
-                </span>
-              </button>
+                                    <div class="d-flex flex-wrap align-items-center gap-2">
+                                        <button type="button" class="btn btn-light" id="bb_indicator_btn_refresh">
+                                            <span class="bb-indicator" data-bb-indicator-root>
+                                                <span class="bb-indicator-label">
+                                                    <span class="material-symbols-outlined">refresh</span>
+                                                    Refresh
+                                                </span>
 
-              <button type="button" class="btn btn-outline-secondary" id="bb_indicator_force_off_all">
-                Force OFF
-              </button>
-            </div>
-          </div>
+                                                <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                                    Loading...
+                                                    <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                                </span>
+                                            </span>
+                                        </button>
 
-        </div>
-      </div>
-    </div>
+                                        <button type="button" class="btn btn-outline-secondary" id="bb_indicator_force_off_all">
+                                            Force OFF
+                                        </button>
+                                    </div>
+                                </div>
 
-    <!-- Card: Form-like demo -->
-    <div class="bb-card">
-      <div class="bb-card-header">
-        <div class="card-title mb-0">Form Submit Demo</div>
-      </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <div class="row g-3 align-items-end">
-          <div class="col-md-5">
-            <label class="form-label">Email</label>
-            <input class="form-control" placeholder="name@example.com" />
-          </div>
+                    <!-- Card: Form-like demo -->
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="card-title mb-0">Form Submit Demo</div>
+                        </div>
 
-          <div class="col-md-4">
-            <label class="form-label">Type</label>
-            <select class="form-select">
-              <option selected>Standard</option>
-              <option>Fast</option>
-              <option>Safe</option>
-            </select>
-          </div>
+                        <div class="bb-card-body">
+                            <div class="row g-3 align-items-end">
+                                <div class="col-md-5">
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control" placeholder="name@example.com" />
+                                </div>
 
-          <div class="col-md-3 d-grid">
-            <button type="button" class="btn btn-primary" id="bb_indicator_btn_form_save" data-bb-indicator-disable="true">
-              <span class="bb-indicator" data-bb-indicator-root>
-                <span class="bb-indicator-label">
-                  <span class="material-symbols-outlined">check</span>
-                  Save Changes
-                </span>
+                                <div class="col-md-4">
+                                    <label class="form-label">Type</label>
+                                    <select class="form-select">
+                                        <option selected>Standard</option>
+                                        <option>Fast</option>
+                                        <option>Safe</option>
+                                    </select>
+                                </div>
 
-                <span class="bb-indicator-progress" role="status" aria-live="polite">
-                  Saving...
-                  <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
-                </span>
-              </span>
-            </button>
-          </div>
-        </div>
+                                <div class="col-md-3 d-grid">
+                                    <button type="button" class="btn btn-primary" id="bb_indicator_btn_form_save" data-bb-indicator-disable="true">
+                                        <span class="bb-indicator" data-bb-indicator-root>
+                                            <span class="bb-indicator-label">
+                                                <span class="material-symbols-outlined">check</span>
+                                                Save Changes
+                                            </span>
 
-        <div class="text-muted small mt-3">
-          Öneri: ON state’te butona <code>aria-busy="true"</code> eklemek erişilebilirliği güçlendirir.
-        </div>
-      </div>
-    </div>
+                                            <span class="bb-indicator-progress" role="status" aria-live="polite">
+                                                Saving...
+                                                <span class="spinner-border spinner-border-sm align-middle ms-2" aria-hidden="true"></span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
 
-  </div>
+                            <div class="text-muted small mt-3">
+                                Öneri: ON state’te butona <code>aria-busy="true"</code> eklemek erişilebilirliği güçlendirir.
+                            </div>
+                        </div>
+                    </div>
 
-    <script src="../../assets/js/panel/bb-component-indicator-demo.js"></script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                </div>
+
+                <script src="../../assets/js/panel/bb-component-indicator-demo.js"></script>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

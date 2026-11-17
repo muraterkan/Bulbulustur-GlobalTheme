@@ -1,374 +1,374 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Chips</title>
+    <title>Chips</title>
 
-  <!-- Main Theme CSS -->
-  <link rel="stylesheet" href="../../assets/css/main.css" />
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
 
-  <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-  <!-- Google Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-    <!-- Page Header -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-      <div>
-        <h1 class="h4 mb-1">Chips</h1>
-        <div class="text-body-secondary">bb-chip component test sayfası (light/dark + density)</div>
-      </div>
+            <div class="bb-container">
+                <div class="container">
 
-      <div class="d-flex align-items-center gap-2">
-        <div class="btn-group" role="group" aria-label="Theme switcher">
-          <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
-          <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button>
-        </div>
+                    <!-- Page Header -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">Chips</h1>
+                            <div class="text-body-secondary">bb-chip component test sayfası (light/dark + density)</div>
+                        </div>
 
-        <button type="button" class="btn btn-outline-secondary btn-sm" id="bbDensityToggle">
-          Compact Density
-        </button>
-      </div>
-    </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="btn-group" role="group" aria-label="Theme switcher">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button>
+                            </div>
 
-    <div class="row g-4">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="bbDensityToggle">
+                                Compact Density
+                            </button>
+                        </div>
+                    </div>
 
-      <!-- Card: Basic -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Basic</div>
-            <div class="text-body-secondary small">Default + semantic</div>
-          </div>
+                    <div class="row g-4">
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip">Default</span>
+                        <!-- Card: Basic -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Basic</div>
+                                    <div class="text-body-secondary small">Default + semantic</div>
+                                </div>
 
-              <span class="bb-chip bb-chip-primary">Primary</span>
-              <span class="bb-chip bb-chip-success">Success</span>
-              <span class="bb-chip bb-chip-info">Info</span>
-              <span class="bb-chip bb-chip-warning">Warning</span>
-              <span class="bb-chip bb-chip-danger">Danger</span>
-              <span class="bb-chip bb-chip-dark">Dark</span>
-            </div>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip">Default</span>
 
-            <div class="mt-4 text-body-secondary small">
-              Not: Chip, badge değildir. Daha çok ikon/dot/metin taşıyan kompakt yüzeydir.
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <span class="bb-chip bb-chip-primary">Primary</span>
+                                        <span class="bb-chip bb-chip-success">Success</span>
+                                        <span class="bb-chip bb-chip-info">Info</span>
+                                        <span class="bb-chip bb-chip-warning">Warning</span>
+                                        <span class="bb-chip bb-chip-danger">Danger</span>
+                                        <span class="bb-chip bb-chip-dark">Dark</span>
+                                    </div>
 
-      <!-- Card: Light / Soft -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Light / Soft</div>
-            <div class="text-body-secondary small">Status / metadata feel</div>
-          </div>
+                                    <div class="mt-4 text-body-secondary small">
+                                        Not: Chip, badge değildir. Daha çok ikon/dot/metin taşıyan kompakt yüzeydir.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-light-primary">Light Primary</span>
-              <span class="bb-chip bb-chip-light-success">Light Success</span>
-              <span class="bb-chip bb-chip-light-info">Light Info</span>
-              <span class="bb-chip bb-chip-light-warning">Light Warning</span>
-              <span class="bb-chip bb-chip-light-danger">Light Danger</span>
-              <span class="bb-chip bb-chip-light-dark">Light Dark</span>
-            </div>
+                        <!-- Card: Light / Soft -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Light / Soft</div>
+                                    <div class="text-body-secondary small">Status / metadata feel</div>
+                                </div>
 
-            <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-light-success">
-                <span class="bb-chip-dot"></span>
-                Operational
-              </span>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-light-primary">Light Primary</span>
+                                        <span class="bb-chip bb-chip-light-success">Light Success</span>
+                                        <span class="bb-chip bb-chip-light-info">Light Info</span>
+                                        <span class="bb-chip bb-chip-light-warning">Light Warning</span>
+                                        <span class="bb-chip bb-chip-light-danger">Light Danger</span>
+                                        <span class="bb-chip bb-chip-light-dark">Light Dark</span>
+                                    </div>
 
-              <span class="bb-chip bb-chip-light-warning">
-                <span class="bb-chip-dot"></span>
-                Warning
-              </span>
+                                    <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-light-success">
+                                            <span class="bb-chip-dot"></span>
+                                            Operational
+                                        </span>
 
-              <span class="bb-chip bb-chip-light-danger">
-                <span class="bb-chip-dot"></span>
-                Error
-              </span>
+                                        <span class="bb-chip bb-chip-light-warning">
+                                            <span class="bb-chip-dot"></span>
+                                            Warning
+                                        </span>
 
-              <span class="bb-chip bb-chip-light-info">
-                <span class="bb-chip-dot"></span>
-                Maintenance
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <span class="bb-chip bb-chip-light-danger">
+                                            <span class="bb-chip-dot"></span>
+                                            Error
+                                        </span>
 
-      <!-- Card: Icon + Dot -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Icon & Dot</div>
-            <div class="text-body-secondary small">material-symbols + dot</div>
-          </div>
+                                        <span class="bb-chip bb-chip-light-info">
+                                            <span class="bb-chip-dot"></span>
+                                            Maintenance
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-light-primary">
-                <span class="material-symbols-outlined">api</span>
-                API
-              </span>
+                        <!-- Card: Icon + Dot -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Icon & Dot</div>
+                                    <div class="text-body-secondary small">material-symbols + dot</div>
+                                </div>
 
-              <span class="bb-chip bb-chip-light-success">
-                <span class="material-symbols-outlined">check_circle</span>
-                Healthy
-              </span>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-light-primary">
+                                            <span class="material-symbols-outlined">api</span>
+                                            API
+                                        </span>
 
-              <span class="bb-chip bb-chip-light-warning">
-                <span class="material-symbols-outlined">schedule</span>
-                Scheduled
-              </span>
+                                        <span class="bb-chip bb-chip-light-success">
+                                            <span class="material-symbols-outlined">check_circle</span>
+                                            Healthy
+                                        </span>
 
-              <span class="bb-chip bb-chip-light-danger">
-                <span class="material-symbols-outlined">error</span>
-                Incident
-              </span>
-            </div>
+                                        <span class="bb-chip bb-chip-light-warning">
+                                            <span class="material-symbols-outlined">schedule</span>
+                                            Scheduled
+                                        </span>
 
-            <hr class="my-4" />
+                                        <span class="bb-chip bb-chip-light-danger">
+                                            <span class="material-symbols-outlined">error</span>
+                                            Incident
+                                        </span>
+                                    </div>
 
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-muted">
-                <span class="bb-chip-dot"></span>
-                Email
-              </span>
+                                    <hr class="my-4" />
 
-              <span class="bb-chip bb-chip-muted">
-                <span class="bb-chip-dot"></span>
-                Webhook
-              </span>
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-muted">
+                                            <span class="bb-chip-dot"></span>
+                                            Email
+                                        </span>
 
-              <span class="bb-chip bb-chip-muted">
-                <span class="bb-chip-dot"></span>
-                Slack
-              </span>
+                                        <span class="bb-chip bb-chip-muted">
+                                            <span class="bb-chip-dot"></span>
+                                            Webhook
+                                        </span>
 
-              <span class="bb-chip bb-chip-muted">
-                <span class="bb-chip-dot"></span>
-                RSS
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <span class="bb-chip bb-chip-muted">
+                                            <span class="bb-chip-dot"></span>
+                                            Slack
+                                        </span>
 
-      <!-- Card: Sizes & Shapes -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Sizes & Shapes</div>
-            <div class="text-body-secondary small">sm / default / lg + shapes</div>
-          </div>
+                                        <span class="bb-chip bb-chip-muted">
+                                            <span class="bb-chip-dot"></span>
+                                            RSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-sm">Small</span>
-              <span class="bb-chip">Default</span>
-              <span class="bb-chip bb-chip-lg">Large</span>
-            </div>
+                        <!-- Card: Sizes & Shapes -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Sizes & Shapes</div>
+                                    <div class="text-body-secondary small">sm / default / lg + shapes</div>
+                                </div>
 
-            <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-pill bb-chip-light-success">
-                <span class="bb-chip-dot"></span>
-                Pill
-              </span>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-sm">Small</span>
+                                        <span class="bb-chip">Default</span>
+                                        <span class="bb-chip bb-chip-lg">Large</span>
+                                    </div>
 
-              <span class="bb-chip bb-chip-rounded bb-chip-light-info">
-                <span class="material-symbols-outlined">info</span>
-                Rounded
-              </span>
+                                    <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-pill bb-chip-light-success">
+                                            <span class="bb-chip-dot"></span>
+                                            Pill
+                                        </span>
 
-              <span class="bb-chip bb-chip-square bb-chip-light-warning">
-                <span class="material-symbols-outlined">category</span>
-                Square
-              </span>
-            </div>
+                                        <span class="bb-chip bb-chip-rounded bb-chip-light-info">
+                                            <span class="material-symbols-outlined">info</span>
+                                            Rounded
+                                        </span>
 
-            <div class="mt-4 text-body-secondary small">
-              Shape varyantları local token <code>--bb-chip-radius</code> üzerinden çalışır.
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <span class="bb-chip bb-chip-square bb-chip-light-warning">
+                                            <span class="material-symbols-outlined">category</span>
+                                            Square
+                                        </span>
+                                    </div>
 
-      <!-- Card: Outline -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Outline</div>
-            <div class="text-body-secondary small">transparent + semantic border</div>
-          </div>
+                                    <div class="mt-4 text-body-secondary small">
+                                        Shape varyantları local token <code>--bb-chip-radius</code> üzerinden çalışır.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-outline bb-chip-primary">Outline Primary</span>
-              <span class="bb-chip bb-chip-outline bb-chip-success">Outline Success</span>
-              <span class="bb-chip bb-chip-outline bb-chip-info">Outline Info</span>
-              <span class="bb-chip bb-chip-outline bb-chip-warning">Outline Warning</span>
-              <span class="bb-chip bb-chip-outline bb-chip-danger">Outline Danger</span>
-              <span class="bb-chip bb-chip-outline bb-chip-dark">Outline Dark</span>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <!-- Card: Outline -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Outline</div>
+                                    <div class="text-body-secondary small">transparent + semantic border</div>
+                                </div>
 
-      <!-- Card: Interactive -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Interactive</div>
-            <div class="text-body-secondary small">link / button / disabled</div>
-          </div>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-outline bb-chip-primary">Outline Primary</span>
+                                        <span class="bb-chip bb-chip-outline bb-chip-success">Outline Success</span>
+                                        <span class="bb-chip bb-chip-outline bb-chip-info">Outline Info</span>
+                                        <span class="bb-chip bb-chip-outline bb-chip-warning">Outline Warning</span>
+                                        <span class="bb-chip bb-chip-outline bb-chip-danger">Outline Danger</span>
+                                        <span class="bb-chip bb-chip-outline bb-chip-dark">Outline Dark</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <a href="javascript:void(0)" class="bb-chip bb-chip-light-primary">
-                <span class="material-symbols-outlined">link</span>
-                Clickable Link
-              </a>
+                        <!-- Card: Interactive -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Interactive</div>
+                                    <div class="text-body-secondary small">link / button / disabled</div>
+                                </div>
 
-              <button type="button" class="bb-chip bb-chip-light-success">
-                <span class="material-symbols-outlined">touch_app</span>
-                Clickable Button
-              </button>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <a href="javascript:void(0)" class="bb-chip bb-chip-light-primary">
+                                            <span class="material-symbols-outlined">link</span>
+                                            Clickable Link
+                                        </a>
 
-              <a href="javascript:void(0)" class="bb-chip bb-chip-outline bb-chip-danger" aria-disabled="true">
-                Disabled Link
-              </a>
+                                        <button type="button" class="bb-chip bb-chip-light-success">
+                                            <span class="material-symbols-outlined">touch_app</span>
+                                            Clickable Button
+                                        </button>
 
-              <button type="button" class="bb-chip bb-chip-outline bb-chip-primary" disabled>
-                Disabled Button
-              </button>
-            </div>
+                                        <a href="javascript:void(0)" class="bb-chip bb-chip-outline bb-chip-danger" aria-disabled="true">
+                                            Disabled Link
+                                        </a>
 
-            <div class="mt-4 text-body-secondary small">
-              Klavye ile (Tab) gez: interactive chip’lerde global focus ring görünmeli.
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <button type="button" class="bb-chip bb-chip-outline bb-chip-primary" disabled>
+                                            Disabled Button
+                                        </button>
+                                    </div>
 
-      <!-- Card: Removable -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Removable</div>
-            <div class="text-body-secondary small">filter chip pattern</div>
-          </div>
+                                    <div class="mt-4 text-body-secondary small">
+                                        Klavye ile (Tab) gez: interactive chip’lerde global focus ring görünmeli.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-light-primary">
-                Category: API
-                <button type="button" class="bb-chip-remove" aria-label="Remove API filter">
-                  <span class="material-symbols-outlined">close</span>
-                </button>
-              </span>
+                        <!-- Card: Removable -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Removable</div>
+                                    <div class="text-body-secondary small">filter chip pattern</div>
+                                </div>
 
-              <span class="bb-chip bb-chip-light-success">
-                Status: Operational
-                <button type="button" class="bb-chip-remove" aria-label="Remove status filter">
-                  <span class="material-symbols-outlined">close</span>
-                </button>
-              </span>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-light-primary">
+                                            Category: API
+                                            <button type="button" class="bb-chip-remove" aria-label="Remove API filter">
+                                                <span class="material-symbols-outlined">close</span>
+                                            </button>
+                                        </span>
 
-              <span class="bb-chip bb-chip-light-warning">
-                Type: Scheduled
-                <button type="button" class="bb-chip-remove" aria-label="Remove type filter">
-                  <span class="material-symbols-outlined">close</span>
-                </button>
-              </span>
-            </div>
+                                        <span class="bb-chip bb-chip-light-success">
+                                            Status: Operational
+                                            <button type="button" class="bb-chip-remove" aria-label="Remove status filter">
+                                                <span class="material-symbols-outlined">close</span>
+                                            </button>
+                                        </span>
 
-            <div class="mt-4 text-body-secondary small">
-              Remove button küçük aksiyon slotudur. Gerçek silme davranışı JS tarafında bağlanır.
-            </div>
-          </div>
-        </div>
-      </div>
+                                        <span class="bb-chip bb-chip-light-warning">
+                                            Type: Scheduled
+                                            <button type="button" class="bb-chip-remove" aria-label="Remove type filter">
+                                                <span class="material-symbols-outlined">close</span>
+                                            </button>
+                                        </span>
+                                    </div>
 
-      <!-- Card: Status Page Example -->
-      <div class="col-12 col-xl-6">
-        <div class="bb-card">
-          <div class="bb-card-header d-flex align-items-center justify-content-between">
-            <div class="bb-card-title">Status Example</div>
-            <div class="text-body-secondary small">Bulbulustur Status usage</div>
-          </div>
+                                    <div class="mt-4 text-body-secondary small">
+                                        Remove button küçük aksiyon slotudur. Gerçek silme davranışı JS tarafında bağlanır.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="bb-card-body">
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-light-success">
-                <span class="bb-chip-dot"></span>
-                Tüm Sistemler Çalışıyor
-              </span>
+                        <!-- Card: Status Page Example -->
+                        <div class="col-12 col-xl-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header d-flex align-items-center justify-content-between">
+                                    <div class="bb-card-title">Status Example</div>
+                                    <div class="text-body-secondary small">Bulbulustur Status usage</div>
+                                </div>
 
-              <a href="javascript:void(0)" class="bb-chip bb-chip-light-success">
-                <span class="bb-chip-dot"></span>
-                Operational
-              </a>
+                                <div class="bb-card-body">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-light-success">
+                                            <span class="bb-chip-dot"></span>
+                                            Tüm Sistemler Çalışıyor
+                                        </span>
 
-              <span class="bb-chip bb-chip-dark">
-                <span class="bb-chip-dot"></span>
-                Live status
-              </span>
+                                        <a href="javascript:void(0)" class="bb-chip bb-chip-light-success">
+                                            <span class="bb-chip-dot"></span>
+                                            Operational
+                                        </a>
 
-              <span class="bb-chip bb-chip-light-warning">
-                Son kontrol
-                <strong>28.04.2026 07:18</strong>
-              </span>
-            </div>
+                                        <span class="bb-chip bb-chip-dark">
+                                            <span class="bb-chip-dot"></span>
+                                            Live status
+                                        </span>
 
-            <hr class="my-4" />
+                                        <span class="bb-chip bb-chip-light-warning">
+                                            Son kontrol
+                                            <strong>28.04.2026 07:18</strong>
+                                        </span>
+                                    </div>
 
-            <div class="d-flex flex-wrap align-items-center gap-3">
-              <span class="bb-chip bb-chip-muted">Email</span>
-              <span class="bb-chip bb-chip-muted">Webhook</span>
-              <span class="bb-chip bb-chip-muted">Slack</span>
-              <span class="bb-chip bb-chip-muted">Teams</span>
-              <span class="bb-chip bb-chip-muted">RSS</span>
-              <span class="bb-chip bb-chip-muted">Atom</span>
-              <span class="bb-chip bb-chip-muted">API</span>
-            </div>
-          </div>
-        </div>
-      </div>
+                                    <hr class="my-4" />
 
-    </div>
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <span class="bb-chip bb-chip-muted">Email</span>
+                                        <span class="bb-chip bb-chip-muted">Webhook</span>
+                                        <span class="bb-chip bb-chip-muted">Slack</span>
+                                        <span class="bb-chip bb-chip-muted">Teams</span>
+                                        <span class="bb-chip bb-chip-muted">RSS</span>
+                                        <span class="bb-chip bb-chip-muted">Atom</span>
+                                        <span class="bb-chip bb-chip-muted">API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="text-body-secondary small mt-4">
-      Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
-    </div>
+                    </div>
 
-  </div>
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                    <div class="text-body-secondary small mt-4">
+                        Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
+                    </div>
+
+                </div>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

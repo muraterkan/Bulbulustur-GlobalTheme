@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8">
     <title>Overlay Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -19,69 +19,69 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-<div class="container">
-    <div class="row g-4">
+            <div class="bb-container">
 
-        <!-- ================= IMAGE OVERLAY ================= -->
-        <div class="col-md-4">
-            <div class="card bb-overlay bb-overlay-hover bb-overlay-rounded">
-                <div class="bb-overlay-wrapper">
-                    <img src="https://picsum.photos/600/400" class="w-100">
+                <div class="container">
+                    <div class="row g-4">
+
+                        <!-- ================= IMAGE OVERLAY ================= -->
+                        <div class="col-md-4">
+                            <div class="card bb-overlay bb-overlay-hover bb-overlay-rounded">
+                                <div class="bb-overlay-wrapper">
+                                    <img src="https://picsum.photos/600/400" class="w-100">
+                                </div>
+
+                                <div class="bb-overlay-layer bg-dark bg-opacity-25">
+                                    <a class="btn btn-primary btn-sm">Explore</a>
+                                    <a class="btn btn-light btn-sm ms-2">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================= CARD BODY BLOCK ================= -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body bb-overlay bb-overlay-block bb-overlay-rounded">
+                                    <div class="bb-overlay-wrapper">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </div>
+
+                                    <div class="bb-overlay-layer bg-dark bg-opacity-10">
+                                        <div class="spinner-border text-primary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ================= FORM BLOCK ================= -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body bb-overlay bb-overlay-block bb-overlay-rounded">
+                                    <div class="bb-overlay-wrapper">
+                                        <input class="form-control mb-2" placeholder="Name">
+                                        <input class="form-control" placeholder="Email">
+                                    </div>
+
+                                    <div class="bb-overlay-layer bg-dark bg-opacity-10">
+                                        <div class="spinner-border text-primary"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="bb-overlay-layer bg-dark bg-opacity-25">
-                    <a class="btn btn-primary btn-sm">Explore</a>
-                    <a class="btn btn-light btn-sm ms-2">Buy</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ================= CARD BODY BLOCK ================= -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body bb-overlay bb-overlay-block bb-overlay-rounded">
-                    <div class="bb-overlay-wrapper">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-
-                    <div class="bb-overlay-layer bg-dark bg-opacity-10">
-                        <div class="spinner-border text-primary"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ================= FORM BLOCK ================= -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body bb-overlay bb-overlay-block bb-overlay-rounded">
-                    <div class="bb-overlay-wrapper">
-                        <input class="form-control mb-2" placeholder="Name">
-                        <input class="form-control" placeholder="Email">
-                    </div>
-
-                    <div class="bb-overlay-layer bg-dark bg-opacity-10">
-                        <div class="spinner-border text-primary"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
-  <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bulbulustur Theme – CountUp</title>
@@ -18,443 +18,420 @@
 
     <!-- Demo-only polish -->
     <style>
-      .bb-demo-hero {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 1.25rem;
-        border-radius: var(--bb-radius-lg, 0.75rem);
-        background: color-mix(
-          in srgb,
-          var(--bb-body-bg) 85%,
-          var(--bb-tertiary-bg)
-        );
-        border: 1px solid var(--bb-border-color);
-        margin-bottom: 1.25rem;
-      }
-      .bb-demo-title {
-        margin: 0;
-        font-weight: 800;
-      }
-      .bb-demo-sub {
-        margin: 0.25rem 0 0 0;
-        color: var(--bb-secondary-color);
-      }
-
-      .bb-demo-kv {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.85rem;
-        color: var(--bb-secondary-color);
-      }
-      .bb-demo-kv code {
-        color: inherit;
-      }
-
-      .bb-demo-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-      }
-      @media (max-width: 1199.98px) {
-        .bb-demo-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .bb-demo-hero {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem;
+            border-radius: var(--bb-radius-lg, 0.75rem);
+            background: color-mix( in srgb, var(--bb-body-bg) 85%, var(--bb-tertiary-bg) );
+            border: 1px solid var(--bb-border-color);
+            margin-bottom: 1.25rem;
         }
-      }
-      @media (max-width: 575.98px) {
-        .bb-demo-grid {
-          grid-template-columns: 1fr;
+
+        .bb-demo-title {
+            margin: 0;
+            font-weight: 800;
         }
-      }
 
-      /* demo: clickable cards align */
-      .bb-countup-stat.is-clickable {
-        display: flex;
-        width: 100%;
-      }
+        .bb-demo-sub {
+            margin: 0.25rem 0 0 0;
+            color: var(--bb-secondary-color);
+        }
 
-      /* demo: icon chip (optional) */
-      .bb-demo-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: var(--bb-radius-lg, 0.75rem);
-        background: color-mix(in srgb, var(--bb-tertiary-bg) 70%, transparent);
-        border: 1px solid var(--bb-border-color);
-        flex: 0 0 auto;
-      }
-      .bb-demo-icon .material-symbols-outlined {
-        font-size: 20px;
-      }
+        .bb-demo-kv {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--bb-secondary-color);
+        }
+
+            .bb-demo-kv code {
+                color: inherit;
+            }
+
+        .bb-demo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 1199.98px) {
+            .bb-demo-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .bb-demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* demo: clickable cards align */
+        .bb-countup-stat.is-clickable {
+            display: flex;
+            width: 100%;
+        }
+
+        /* demo: icon chip (optional) */
+        .bb-demo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: var(--bb-radius-lg, 0.75rem);
+            background: color-mix(in srgb, var(--bb-tertiary-bg) 70%, transparent);
+            border: 1px solid var(--bb-border-color);
+            flex: 0 0 auto;
+        }
+
+            .bb-demo-icon .material-symbols-outlined {
+                font-size: 20px;
+            }
     </style>
-  </head>
+</head>
 
-  <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-    <div>
-      <!-- Top bar -->
-      <div class="bb-demo-hero">
-        <div>
-          <h1 class="bb-demo-title h4">CountUp</h1>
-          <p class="bb-demo-sub small">bb-countup — lightweight, vendor-free, tab + viewport trigger</p>
-        </div>
+<body class="bb-body">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-        <div class="d-flex align-items-center gap-2">
-          <div class="btn-group" role="group" aria-label="Theme switcher">
-            <button
-              type="button"
-              class="btn btn-sm btn-outline-secondary"
-              data-bb-theme="light">
-              <span class="material-symbols-outlined" style="font-size: 18px">light_mode</span>
-              Light
-            </button>
-            <button
-              type="button"
-              class="btn btn-sm btn-outline-secondary"
-              data-bb-theme="dark">
-              <span class="material-symbols-outlined" style="font-size: 18px">dark_mode</span>
-              Dark
-            </button>
-          </div>
-
-          <button
-            type="button"
-            class="btn btn-sm btn-outline-secondary"
-            id="bbDensityToggle">
-            Compact
-          </button>
-        </div>
-      </div>
-
-      <!-- Tabs (inside a bb-card) -->
-      <div class="bb-card bb-card-hover-elevate mb-4">
-        <div class="bb-card-header">
-          <div class="bb-card-title d-flex align-items-center gap-2">
-            <span class="material-symbols-outlined" aria-hidden="true">tab</span>
-            Demo Tabs
-          </div>
-
-          <div class="bb-demo-kv">
-            <span
-              class="material-symbols-outlined"
-              aria-hidden="true"
-              style="font-size: 18px">code</span>
-            <code>[data-bb-countup="true"]</code>
-          </div>
-        </div>
-
-        <div class="bb-card-body">
-          <ul class="nav nav-tabs nav-line-tabs mb-4 fs-6" role="tablist">
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link active"
-                data-bs-toggle="tab"
-                data-bb-countup-tabs="true"
-                href="#bb_countup_tab_1"
-                role="tab">
-                Overview
-              </a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bb-countup-tabs="true"
-                href="#bb_countup_tab_2"
-                role="tab">
-                Traffic
-              </a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bb-countup-tabs="true"
-                href="#bb_countup_tab_3"
-                role="tab">
-                Risk
-              </a>
-            </li>
-          </ul>
-
-          <div class="tab-content">
-            <!-- TAB 1 -->
-            <div id="bb_countup_tab_1" class="tab-pane fade show active" role="tabpanel">
-              <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+            <div class="bb-container">
                 <div>
-                  <div class="fw-bold">Overview Metrics</div>
-                  <div class="text-body-secondary small">
-                    Viewport’a girince otomatik başlar. Tab değişince ilgili
-                    alan çalışır.
-                  </div>
-                </div>
+                    <!-- Top bar -->
+                    <div class="bb-demo-hero">
+                        <div>
+                            <h1 class="bb-demo-title h4">CountUp</h1>
+                            <p class="bb-demo-sub small">bb-countup — lightweight, vendor-free, tab + viewport trigger</p>
+                        </div>
 
-                <button type="button" class="btn btn-sm bb-btn-outline bb-btn-outline-dark" id="bbCountUpRestart1">
-                  <span class="material-symbols-outlined" style="font-size: 18px">refresh</span>
-                  Restart
-                </button>
-              </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="btn-group" role="group" aria-label="Theme switcher">
+                                <button type="button"
+                                        class="btn btn-sm btn-outline-secondary"
+                                        data-bb-theme="light">
+                                    <span class="material-symbols-outlined" style="font-size: 18px">light_mode</span>
+                                    Light
+                                </button>
+                                <button type="button"
+                                        class="btn btn-sm btn-outline-secondary"
+                                        data-bb-theme="dark">
+                                    <span class="material-symbols-outlined" style="font-size: 18px">dark_mode</span>
+                                    Dark
+                                </button>
+                            </div>
 
-              <div class="bb-demo-grid">
-                <!-- Stat 1 (clickable) -->
-                <a href="javascript:void(0)" class="bb-countup bb-countup-stat is-clickable">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-success">trending_up</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="6800"
-                        data-bb-countup-prefix="$"
-                        data-bb-countup-duration="1200"
-                        data-bb-countup-separator=",">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Earnings</div>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-secondary"
+                                    id="bbDensityToggle">
+                                Compact
+                            </button>
+                        </div>
                     </div>
-                  </div>
-                </a>
 
-                <!-- Stat 2 -->
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-primary">shopping_cart</span>
-                    </span>
+                    <!-- Tabs (inside a bb-card) -->
+                    <div class="bb-card bb-card-hover-elevate mb-4">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title d-flex align-items-center gap-2">
+                                <span class="material-symbols-outlined" aria-hidden="true">tab</span>
+                                Demo Tabs
+                            </div>
 
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="245"
-                        data-bb-countup-duration="900">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Orders</div>
+                            <div class="bb-demo-kv">
+                                <span class="material-symbols-outlined"
+                                      aria-hidden="true"
+                                      style="font-size: 18px">code</span>
+                                <code>[data-bb-countup="true"]</code>
+                            </div>
+                        </div>
+
+                        <div class="bb-card-body">
+                            <ul class="nav nav-tabs nav-line-tabs mb-4 fs-6" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active"
+                                       data-bs-toggle="tab"
+                                       data-bb-countup-tabs="true"
+                                       href="#bb_countup_tab_1"
+                                       role="tab">
+                                        Overview
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link"
+                                       data-bs-toggle="tab"
+                                       data-bb-countup-tabs="true"
+                                       href="#bb_countup_tab_2"
+                                       role="tab">
+                                        Traffic
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link"
+                                       data-bs-toggle="tab"
+                                       data-bb-countup-tabs="true"
+                                       href="#bb_countup_tab_3"
+                                       role="tab">
+                                        Risk
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <!-- TAB 1 -->
+                                <div id="bb_countup_tab_1" class="tab-pane fade show active" role="tabpanel">
+                                    <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+                                        <div>
+                                            <div class="fw-bold">Overview Metrics</div>
+                                            <div class="text-body-secondary small">
+                                                Viewport’a girince otomatik başlar. Tab değişince ilgili
+                                                alan çalışır.
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn btn-sm bb-btn-outline bb-btn-outline-dark" id="bbCountUpRestart1">
+                                            <span class="material-symbols-outlined" style="font-size: 18px">refresh</span>
+                                            Restart
+                                        </button>
+                                    </div>
+
+                                    <div class="bb-demo-grid">
+                                        <!-- Stat 1 (clickable) -->
+                                        <a href="javascript:void(0)" class="bb-countup bb-countup-stat is-clickable">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-success">trending_up</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="6800"
+                                                         data-bb-countup-prefix="$"
+                                                         data-bb-countup-duration="1200"
+                                                         data-bb-countup-separator=",">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Earnings</div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <!-- Stat 2 -->
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="245"
+                                                         data-bb-countup-duration="900">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Orders</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Stat 3 (decimals) -->
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-warning">bolt</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="97.45"
+                                                         data-bb-countup-decimals="2"
+                                                         data-bb-countup-suffix="%"
+                                                         data-bb-countup-duration="1400">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Conversion</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Stat 4 (TR formatting example) -->
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-info">paid</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="1245000"
+                                                         data-bb-countup-separator="."
+                                                         data-bb-countup-suffix=" ₺"
+                                                         data-bb-countup-duration="1600">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Monthly Revenue</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 2 -->
+                                <div id="bb_countup_tab_2" class="tab-pane fade" role="tabpanel">
+                                    <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+                                        <div>
+                                            <div class="fw-bold">Traffic</div>
+                                            <div class="text-body-secondary small">
+                                                Tab açılınca countuplar çalışır.
+                                            </div>
+                                        </div>
+
+                                        <button type="button"
+                                                class="btn btn-sm bb-btn-outline bb-btn-outline-dark"
+                                                id="bbCountUpRestart2">
+                                            <span class="material-symbols-outlined"
+                                                  style="font-size: 18px">refresh</span>
+                                            Restart
+                                        </button>
+                                    </div>
+
+                                    <div class="bb-demo-grid">
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-info">visibility</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="1250000"
+                                                         data-bb-countup-separator="."
+                                                         data-bb-countup-duration="1600">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Views</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-primary">group</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="84232"
+                                                         data-bb-countup-separator="."
+                                                         data-bb-countup-duration="1200">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Visitors</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TAB 3 -->
+                                <div id="bb_countup_tab_3" class="tab-pane fade" role="tabpanel">
+                                    <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+                                        <div>
+                                            <div class="fw-bold">Risk</div>
+                                            <div class="text-body-secondary small">
+                                                Negatif/alert metrik örneği.
+                                            </div>
+                                        </div>
+
+                                        <button type="button"
+                                                class="btn btn-sm bb-btn-outline bb-btn-outline-dark"
+                                                id="bbCountUpRestart3">
+                                            <span class="material-symbols-outlined"
+                                                  style="font-size: 18px">refresh</span>
+                                            Restart
+                                        </button>
+                                    </div>
+
+                                    <div class="bb-demo-grid">
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-danger">cancel</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value"
+                                                         data-bb-countup="true"
+                                                         data-bb-countup-value="38"
+                                                         data-bb-countup-duration="800">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Refunds</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-countup bb-countup-stat">
+                                            <div class="bb-countup-number">
+                                                <span class="bb-demo-icon">
+                                                    <span class="material-symbols-outlined text-warning">report</span>
+                                                </span>
+
+                                                <div>
+                                                    <div class="bb-countup-value" data-bb-countup="true" data-bb-countup-value="12" data-bb-countup-duration="900">
+                                                        0
+                                                    </div>
+                                                    <div class="bb-countup-label">Chargebacks</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /tab-content -->
+                        </div>
+                        <!-- /card-body -->
                     </div>
-                  </div>
-                </div>
-
-                <!-- Stat 3 (decimals) -->
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-warning">bolt</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="97.45"
-                        data-bb-countup-decimals="2"
-                        data-bb-countup-suffix="%"
-                        data-bb-countup-duration="1400">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Conversion</div>
+                    <!-- /card -->
+                    <!-- Note card -->
+                    <div class="bb-card bb-card-bordered">
+                        <div class="bb-card-body">
+                            <div class="small text-body-secondary">
+                                <div class="fw-semibold text-body-emphasis mb-2">Behavior</div>
+                                <ul class="mb-0">
+                                    <li>
+                                        <code>IntersectionObserver</code> varsa: element viewport’a
+                                        girince başlar.
+                                    </li>
+                                    <li>
+                                        Tab değişince: sadece o tab içindeki countuplar tetiklenir.
+                                    </li>
+                                    <li>
+                                        <code>prefers-reduced-motion</code> aktifse animasyon atlanır.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
 
-                <!-- Stat 4 (TR formatting example) -->
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-info"
-                        >paid</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="1245000"
-                        data-bb-countup-separator="."
-                        data-bb-countup-suffix=" ₺"
-                        data-bb-countup-duration="1600">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Monthly Revenue</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 2 -->
-            <div id="bb_countup_tab_2" class="tab-pane fade" role="tabpanel">
-              <div
-                class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
-                <div>
-                  <div class="fw-bold">Traffic</div>
-                  <div class="text-body-secondary small">
-                    Tab açılınca countuplar çalışır.
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  class="btn btn-sm bb-btn-outline bb-btn-outline-dark"
-                  id="bbCountUpRestart2">
-                  <span
-                    class="material-symbols-outlined"
-                    style="font-size: 18px"
-                    >refresh</span>
-                  Restart
-                </button>
-              </div>
-
-              <div class="bb-demo-grid">
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-info"
-                        >visibility</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="1250000"
-                        data-bb-countup-separator="."
-                        data-bb-countup-duration="1600">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Views</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-primary">group</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="84232"
-                        data-bb-countup-separator="."
-                        data-bb-countup-duration="1200">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Visitors</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 3 -->
-            <div id="bb_countup_tab_3" class="tab-pane fade" role="tabpanel">
-              <div
-                class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
-                <div>
-                  <div class="fw-bold">Risk</div>
-                  <div class="text-body-secondary small">
-                    Negatif/alert metrik örneği.
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  class="btn btn-sm bb-btn-outline bb-btn-outline-dark"
-                  id="bbCountUpRestart3">
-                  <span
-                    class="material-symbols-outlined"
-                    style="font-size: 18px">refresh</span>
-                  Restart
-                </button>
-              </div>
-
-              <div class="bb-demo-grid">
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-danger"
-                        >cancel</span>
-                    </span>
-
-                    <div>
-                      <div
-                        class="bb-countup-value"
-                        data-bb-countup="true"
-                        data-bb-countup-value="38"
-                        data-bb-countup-duration="800">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Refunds</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="bb-countup bb-countup-stat">
-                  <div class="bb-countup-number">
-                    <span class="bb-demo-icon">
-                      <span class="material-symbols-outlined text-warning">report</span>
-                    </span>
-
-                    <div>
-                      <div class="bb-countup-value" data-bb-countup="true" data-bb-countup-value="12" data-bb-countup-duration="900">
-                        0
-                      </div>
-                      <div class="bb-countup-label">Chargebacks</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /tab-content -->
-        </div>
-        <!-- /card-body -->
-      </div>
-      <!-- /card -->
-
-      <!-- Note card -->
-      <div class="bb-card bb-card-bordered">
-        <div class="bb-card-body">
-          <div class="small text-body-secondary">
-            <div class="fw-semibold text-body-emphasis mb-2">Behavior</div>
-            <ul class="mb-0">
-              <li>
-                <code>IntersectionObserver</code> varsa: element viewport’a
-                girince başlar.
-              </li>
-              <li>
-                Tab değişince: sadece o tab içindeki countuplar tetiklenir.
-              </li>
-              <li>
-                <code>prefers-reduced-motion</code> aktifse animasyon atlanır.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-      <script src="../../assets/js/core/bb-countup.js"></script>
-    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                <script src="../../assets/js/core/bb-countup.js"></script>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur - Pagination</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur - Pagination</title>
 
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
@@ -18,213 +18,227 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-    <!-- Page Header -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-      <div>
-        <h1 class="h4 mb-1">Pagination</h1>
-        <div class="text-muted small">
-          Bootstrap 5 uyumlu, token’lı, bb- wrapper’lı pagination.
-          Variants: <code>.bb-pagination--outline</code> / <code>--pill</code> / <code>--circle</code> / <code>--compact</code>.
-        </div>
-      </div>
+            <div class="bb-container">
+                <div class="container">
 
-      <div class="d-flex align-items-center gap-2">
-        <button type="button" class="btn btn-light" id="bb_theme_light">Light</button>
-        <button type="button" class="btn btn-dark" id="bb_theme_dark">Dark</button>
-      </div>
-    </div>
+                    <!-- Page Header -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">Pagination</h1>
+                            <div class="text-muted small">
+                                Bootstrap 5 uyumlu, token’lı, bb- wrapper’lı pagination.
+                                Variants: <code>.bb-pagination--outline</code> / <code>--pill</code> / <code>--circle</code> / <code>--compact</code>.
+                            </div>
+                        </div>
 
-    <!-- Demo Card -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-          <div class="bb-card-title mb-0">Default</div>
-          <div class="text-muted small">Active / Disabled / Focus ring kontrol et.</div>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <span class="badge text-bg-light">.bb-pagination</span>
-        </div>
-      </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-light" id="bb_theme_light">Light</button>
+                            <button type="button" class="btn btn-dark" id="bb_theme_dark">Dark</button>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <nav class="bb-pagination" aria-label="Pagination Default">
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
-              </a>
-            </li>
+                    <!-- Demo Card -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <div class="bb-card-title mb-0">Default</div>
+                                <div class="text-muted small">Active / Disabled / Focus ring kontrol et.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge text-bg-light">.bb-pagination</span>
+                            </div>
+                        </div>
 
-            <li class="page-item active">
-<a class="page-link" href="#">1</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">2</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">3</a></li>
+                        <div class="bb-card-body">
+                            <nav class="bb-pagination" aria-label="Pagination Default">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
+                                        </a>
+                                    </li>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
 
-    <!-- Outline + Pill -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-          <div class="bb-card-title mb-0">Outline + Pill</div>
-          <div class="text-muted small">Border görünür + pill radius.</div>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <span class="badge text-bg-light">--outline</span>
-          <span class="badge text-bg-light">--pill</span>
-        </div>
-      </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <nav class="bb-pagination bb-pagination--outline bb-pagination--pill" aria-label="Pagination Outline Pill">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="First">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">keyboard_double_arrow_left</span>
-              </a>
-            </li>
+                    <!-- Outline + Pill -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <div class="bb-card-title mb-0">Outline + Pill</div>
+                                <div class="text-muted small">Border görünür + pill radius.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge text-bg-light">--outline</span>
+                                <span class="badge text-bg-light">--pill</span>
+                            </div>
+                        </div>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
-              </a>
-            </li>
+                        <div class="bb-card-body">
+                            <nav class="bb-pagination bb-pagination--outline bb-pagination--pill" aria-label="Pagination Outline Pill">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="First">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">keyboard_double_arrow_left</span>
+                                        </a>
+                                    </li>
 
-            <li class="page-item">
-<a class="page-link" href="#">4</a></li>
-            <li class="page-item active">
-<a class="page-link" href="#">5</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">6</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
+                                        </a>
+                                    </li>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
-              </a>
-            </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">4</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">5</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">6</a>
+                                    </li>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Last">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">keyboard_double_arrow_right</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
+                                        </a>
+                                    </li>
 
-    <!-- Circle -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-          <div class="bb-card-title mb-0">Circle</div>
-          <div class="text-muted small">Tam yuvarlak item’lar.</div>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <span class="badge text-bg-light">--circle</span>
-        </div>
-      </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Last">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">keyboard_double_arrow_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <nav class="bb-pagination bb-pagination--circle" aria-label="Pagination Circle">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
-              </a>
-            </li>
+                    <!-- Circle -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <div class="bb-card-title mb-0">Circle</div>
+                                <div class="text-muted small">Tam yuvarlak item’lar.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge text-bg-light">--circle</span>
+                            </div>
+                        </div>
 
-            <li class="page-item">
-<a class="page-link" href="#">1</a></li>
-            <li class="page-item active">
-<a class="page-link" href="#">2</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">3</a></li>
+                        <div class="bb-card-body">
+                            <nav class="bb-pagination bb-pagination--circle" aria-label="Pagination Circle">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
+                                        </a>
+                                    </li>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
 
-    <!-- Compact + Disabled -->
-    <div class="bb-card">
-      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-          <div class="bb-card-title mb-0">Compact + Disabled</div>
-          <div class="text-muted small">Daha küçük + ellipsis.</div>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <span class="badge text-bg-light">--compact</span>
-          <span class="badge text-bg-light">--outline</span>
-        </div>
-      </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <nav class="bb-pagination bb-pagination--compact bb-pagination--outline" aria-label="Pagination Compact">
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
-              </a>
-            </li>
+                    <!-- Compact + Disabled -->
+                    <div class="bb-card">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <div class="bb-card-title mb-0">Compact + Disabled</div>
+                                <div class="text-muted small">Daha küçük + ellipsis.</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge text-bg-light">--compact</span>
+                                <span class="badge text-bg-light">--outline</span>
+                            </div>
+                        </div>
 
-            <li class="page-item">
-<a class="page-link" href="#">1</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">2</a></li>
-            <li class="page-item disabled">
-<a class="page-link" href="#" tabindex="-1">…</a></li>
-            <li class="page-item active">
-<a class="page-link" href="#">8</a></li>
-            <li class="page-item">
-<a class="page-link" href="#">9</a></li>
+                        <div class="bb-card-body">
+                            <nav class="bb-pagination bb-pagination--compact bb-pagination--outline" aria-label="Pagination Compact">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous" tabindex="-1">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_left</span>
+                                        </a>
+                                    </li>
 
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">…</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">8</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">9</a>
+                                    </li>
 
-    <div class="text-muted small mt-4">
-      SCSS import: <code>@use "components/_pagination.scss";</code>
-    </div>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span class="material-symbols-outlined" style="font-size: 18px; line-height: 1;">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 
-  </div>
+                    <div class="text-muted small mt-4">
+                        SCSS import: <code>@use "components/_pagination.scss";</code>
+                    </div>
 
-  <!-- Bootstrap JS -->
-  <!-- Theme Toggle (demo only) -->
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                </div>
+
+                <!-- Bootstrap JS -->
+                <!-- Theme Toggle (demo only) -->
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

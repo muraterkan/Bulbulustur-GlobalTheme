@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur - Lightbox</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur - Lightbox</title>
 
-  <    <!-- Main Theme CSS -->
+    <    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -18,141 +18,129 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-    <!-- Page Header -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-      <div>
-        <h1 class="h4 mb-1">Lightbox</h1>
-        <div class="text-muted small">
-          Vendor-free galeri. <code>.bb-lightbox-trigger</code> + <code>data-bb-lightbox-group</code>.
-          (ESC / ← → / dblclick zoom / Z)
-        </div>
-      </div>
+            <div class="bb-container">
+                <div class="container">
 
-      <div class="d-flex align-items-center gap-2">
-        <button type="button" class="btn btn-light" id="bb_theme_light">
-          Light
-        </button>
-        <button type="button" class="btn btn-dark" id="bb_theme_dark">
-          Dark
-        </button>
-      </div>
-    </div>
+                    <!-- Page Header -->
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">Lightbox</h1>
+                            <div class="text-muted small">
+                                Vendor-free galeri. <code>.bb-lightbox-trigger</code> + <code>data-bb-lightbox-group</code>.
+                                (ESC / ← → / dblclick zoom / Z)
+                            </div>
+                        </div>
 
-    <!-- Demo Card (Bulbulustur Card) -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-          <div class="bb-card-title mb-0">Gallery Demo</div>
-          <div class="text-muted small">Tıklayınca açılır. Backdrop’a tıklayınca kapanır.</div>
-        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-light" id="bb_theme_light">
+                                Light
+                            </button>
+                            <button type="button" class="btn btn-dark" id="bb_theme_dark">
+                                Dark
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="d-flex align-items-center gap-2">
-          <span class="badge text-bg-light">Group: gallery</span>
-        </div>
-      </div>
+                    <!-- Demo Card (Bulbulustur Card) -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <div class="bb-card-title mb-0">Gallery Demo</div>
+                                <div class="text-muted small">Tıklayınca açılır. Backdrop’a tıklayınca kapanır.</div>
+                            </div>
 
-      <div class="bb-card-body">
-        <div class="row g-3">
-          <div class="col-12 col-md-4">
-            <a
-              href="https://picsum.photos/id/1015/1600/1200"
-              class="d-block"
-            >
-              <img
-                src="https://picsum.photos/id/1015/800/600"
-                class="img-fluid rounded bb-lightbox-trigger"
-                data-bb-lightbox-group="gallery"
-                data-bb-lightbox-src="https://picsum.photos/id/1015/1600/1200"
-                alt="Dağ manzarası"
-              />
-            </a>
-          </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge text-bg-light">Group: gallery</span>
+                            </div>
+                        </div>
 
-          <div class="col-12 col-md-4">
-            <a
-              href="https://picsum.photos/id/1025/1600/1200"
-              class="d-block"
-            >
-              <img
-                src="https://picsum.photos/id/1025/800/600"
-                class="img-fluid rounded bb-lightbox-trigger"
-                data-bb-lightbox-group="gallery"
-                data-bb-lightbox-src="https://picsum.photos/id/1025/1600/1200"
-                alt="Köpek portresi"
-              />
-            </a>
-          </div>
+                        <div class="bb-card-body">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-4">
+                                    <a href="https://picsum.photos/id/1015/1600/1200"
+                                       class="d-block">
+                                        <img src="https://picsum.photos/id/1015/800/600"
+                                             class="img-fluid rounded bb-lightbox-trigger"
+                                             data-bb-lightbox-group="gallery"
+                                             data-bb-lightbox-src="https://picsum.photos/id/1015/1600/1200"
+                                             alt="Dağ manzarası" />
+                                    </a>
+                                </div>
 
-          <div class="col-12 col-md-4">
-            <a
-              href="https://picsum.photos/id/1035/1600/1200"
-              class="d-block"
-            >
-              <img
-                src="https://picsum.photos/id/1035/800/600"
-                class="img-fluid rounded bb-lightbox-trigger"
-                data-bb-lightbox-group="gallery"
-                data-bb-lightbox-src="https://picsum.photos/id/1035/1600/1200"
-                alt="Şehir silüeti"
-              />
-            </a>
-          </div>
-        </div>
+                                <div class="col-12 col-md-4">
+                                    <a href="https://picsum.photos/id/1025/1600/1200"
+                                       class="d-block">
+                                        <img src="https://picsum.photos/id/1025/800/600"
+                                             class="img-fluid rounded bb-lightbox-trigger"
+                                             data-bb-lightbox-group="gallery"
+                                             data-bb-lightbox-src="https://picsum.photos/id/1025/1600/1200"
+                                             alt="Köpek portresi" />
+                                    </a>
+                                </div>
 
-        <div class="mt-3 text-muted small">
-          Öneri: Trigger elemanına <code>href</code> veriyoruz; JS <code>data-bb-lightbox-src</code> varsa onu, yoksa <code>href/src</code>’yi kullanır.
-        </div>
-      </div>
-    </div>
+                                <div class="col-12 col-md-4">
+                                    <a href="https://picsum.photos/id/1035/1600/1200"
+                                       class="d-block">
+                                        <img src="https://picsum.photos/id/1035/800/600"
+                                             class="img-fluid rounded bb-lightbox-trigger"
+                                             data-bb-lightbox-group="gallery"
+                                             data-bb-lightbox-src="https://picsum.photos/id/1035/1600/1200"
+                                             alt="Şehir silüeti" />
+                                    </a>
+                                </div>
+                            </div>
 
-    <!-- Usage Card -->
-    <div class="bb-card">
-      <div class="bb-card-header">
-        <div class="bb-card-title mb-0">Kullanım</div>
-        <div class="text-muted small">Markup + script include.</div>
-      </div>
+                            <div class="mt-3 text-muted small">
+                                Öneri: Trigger elemanına <code>href</code> veriyoruz; JS <code>data-bb-lightbox-src</code> varsa onu, yoksa <code>href/src</code>’yi kullanır.
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="bb-card-body">
-        <div class="row g-4">
-          <div class="col-12 col-lg-6">
-            <div class="fw-semibold mb-2">HTML</div>
-            <pre class="mb-0"><code>&lt;img
+                    <!-- Usage Card -->
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title mb-0">Kullanım</div>
+                            <div class="text-muted small">Markup + script include.</div>
+                        </div>
+
+                        <div class="bb-card-body">
+                            <div class="row g-4">
+                                <div class="col-12 col-lg-6">
+                                    <div class="fw-semibold mb-2">HTML</div>
+                                    <pre class="mb-0"><code>&lt;img
   class="bb-lightbox-trigger"
   data-bb-lightbox-group="gallery"
   data-bb-lightbox-src="https://..."
   src="https://..."
   alt=""
 /&gt;</code></pre>
-          </div>
+                                </div>
 
-          <div class="col-12 col-lg-6">
-            <div class="fw-semibold mb-2">JS</div>
-            <pre class="mb-0"><code>&lt;script src="../../assets/js/core/bb-lightbox.js"&gt;&lt;/script&gt;</code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="fw-semibold mb-2">JS</div>
+                                    <pre class="mb-0"><code>&lt;script src="../../assets/js/core/bb-lightbox.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  </div>
+                </div>
 
-  <!-- Bootstrap JS -->
-  <!-- Component JS -->
-  <script src="../../assets/js/core/bb-lightbox.js"></script>
+                <!-- Bootstrap JS -->
+                <!-- Component JS -->
+                <script src="../../assets/js/core/bb-lightbox.js"></script>
 
-  <!-- Theme Toggle (demo only) -->
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                <!-- Theme Toggle (demo only) -->
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

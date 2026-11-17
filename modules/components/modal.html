@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8">
-  <title>Bulbulustur Theme – Modal Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <title>Bulbulustur Theme – Modal Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -18,116 +18,116 @@
 </head>
 
 <body class="bb-root bg-body">
-  <!-- Topbar -->
-  <header class="border-bottom" style="border-color: var(--bb-border-color) !important;">
-    <div class="container py-3">
-      <div class="d-flex align-items-center justify-content-between gap-3">
-        <div class="d-flex align-items-center gap-2">
-          <span class="material-symbols-outlined">crop_square</span>
-          <div class="fw-semibold">bb-modal demo</div>
-          <span class="text-muted small d-none d-md-inline">Modal + Light/Dark</span>
-        </div>
+    <!-- Topbar -->
+    <header class="border-bottom" style="border-color: var(--bb-border-color) !important;">
+        <div class="container py-3">
+            <div class="d-flex align-items-center justify-content-between gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined">crop_square</span>
+                    <div class="fw-semibold">bb-modal demo</div>
+                    <span class="text-muted small d-none d-md-inline">Modal + Light/Dark</span>
+                </div>
 
-        <button id="bb_theme_toggle"
-                class="btn bb-btn-light d-inline-flex align-items-center gap-2"
-                type="button"
-                aria-label="Tema değiştir">
-          <span id="bb_theme_icon" class="material-symbols-outlined">dark_mode</span>
-          <span id="bb_theme_text" class="d-none d-md-inline">Dark</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- PAGE -->
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 73px);">
-      
-        <div class="bb-container">
-    <div class="text-center">
-      <div class="mb-3">
-        <div class="fw-semibold">Modal Test</div>
-        <div class="text-muted small">Bootstrap modal davranışı + bb-modal görünümü</div>
-      </div>
-
-      <button type="button"
-              class="btn bb-btn-primary btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#bbTestModal">
-        Modal Aç
-      </button>
-
-      <div class="text-muted small mt-3">
-        Not: Tema değiştirince modal + backdrop token’ları otomatik uyumlu kalmalı.
-      </div>
-    </div>
-  
-        </div>
-      </main>
-<footer>
-</footer>
-  </div>
-
-  <!-- ================= MODAL ================= -->
-  <div class="modal fade" id="bbTestModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bb-modal">
-
-        <!-- Header -->
-        <div class="modal-header bb-modal-header">
-          <h5 class="bb-modal-title">Gerçek Modal Testi</h5>
-
-          <div class="bb-modal-actions">
-            <!-- bb-modal-close (püür modal SCSS ile uyumlu) -->
-            <button type="button"
-                    class="bb-modal-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Kapat">
-              <span class="material-symbols-outlined">close</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Body -->
-        <div class="modal-body bb-modal-body">
-          <p class="text-muted mb-2">Bu modal:</p>
-          <ul class="text-muted mb-0">
-            <li>Sayfanın üstünde overlay ile açılır</li>
-            <li>Arka planı kilitler</li>
-            <li>Ortalanır</li>
-            <li><strong>bb-modal</strong> stillerini kullanır</li>
-          </ul>
-
-          <div class="mt-4">
-            <div class="fw-semibold mb-2">Örnek içerik</div>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-secondary">Token-first</span>
-              <span class="badge text-bg-secondary">Dark/Light safe</span>
-              <span class="badge text-bg-secondary">Bootstrap 5</span>
+                <button id="bb_theme_toggle"
+                        class="btn bb-btn-light d-inline-flex align-items-center gap-2"
+                        type="button"
+                        aria-label="Tema değiştir">
+                    <span id="bb_theme_icon" class="material-symbols-outlined">dark_mode</span>
+                    <span id="bb_theme_text" class="d-none d-md-inline">Dark</span>
+                </button>
             </div>
-          </div>
         </div>
+    </header>
 
-        <!-- Footer -->
-        <div class="modal-footer bb-modal-footer">
-          <button type="button"
-                  class="btn bb-btn-light"
-                  data-bs-dismiss="modal">
-            Kapat
-          </button>
-          <button type="button"
-                  class="btn bb-btn-primary">
-            Onayla
-          </button>
-        </div>
+    <!-- PAGE -->
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 73px);">
 
-      </div>
+            <div class="bb-container">
+                <div class="text-center">
+                    <div class="mb-3">
+                        <div class="fw-semibold">Modal Test</div>
+                        <div class="text-muted small">Bootstrap modal davranışı + bb-modal görünümü</div>
+                    </div>
+
+                    <button type="button"
+                            class="btn bb-btn-primary btn-lg"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bbTestModal">
+                        Modal Aç
+                    </button>
+
+                    <div class="text-muted small mt-3">
+                        Not: Tema değiştirince modal + backdrop token’ları otomatik uyumlu kalmalı.
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer>
+        </footer>
     </div>
-  </div>
 
-  <!-- Theme Toggle -->
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!-- ================= MODAL ================= -->
+    <div class="modal fade" id="bbTestModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bb-modal">
+
+                <!-- Header -->
+                <div class="modal-header bb-modal-header">
+                    <h5 class="bb-modal-title">Gerçek Modal Testi</h5>
+
+                    <div class="bb-modal-actions">
+                        <!-- bb-modal-close (püür modal SCSS ile uyumlu) -->
+                        <button type="button"
+                                class="bb-modal-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Kapat">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body bb-modal-body">
+                    <p class="text-muted mb-2">Bu modal:</p>
+                    <ul class="text-muted mb-0">
+                        <li>Sayfanın üstünde overlay ile açılır</li>
+                        <li>Arka planı kilitler</li>
+                        <li>Ortalanır</li>
+                        <li><strong>bb-modal</strong> stillerini kullanır</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <div class="fw-semibold mb-2">Örnek içerik</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge text-bg-secondary">Token-first</span>
+                            <span class="badge text-bg-secondary">Dark/Light safe</span>
+                            <span class="badge text-bg-secondary">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer bb-modal-footer">
+                    <button type="button"
+                            class="btn bb-btn-light"
+                            data-bs-dismiss="modal">
+                        Kapat
+                    </button>
+                    <button type="button"
+                            class="btn bb-btn-primary">
+                        Onayla
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>

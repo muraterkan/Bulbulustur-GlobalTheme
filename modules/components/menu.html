@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur Theme - Depo (bb-menu demo)</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur Theme - Depo (bb-menu demo)</title>
 
-      <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -19,504 +19,504 @@
 </head>
 
 <body class="bg-body">
-  <div class="bb-app d-flex">
+    <div class="bb-app d-flex">
 
-    <!-- Sidebar -->
-    <aside class="bb-sidebar">
-      <div class="p-3">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <div class="fw-semibold">Bulbulustur</div>
-          <span class="badge text-bg-secondary">Depo</span>
-        </div>
-
-        <!-- Sidebar Menu (Accordion) -->
-        <div class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-here-bg bb-menu-sub-indention w-100"
-             data-bb-menu="true">
-
-          <div class="bb-menu-section">MENÜ</div>
-
-          <!-- Dashboards (simple) -->
-          <div class="bb-menu-item active here">
-            <a href="#" class="bb-menu-link active">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">dashboard</span>
-              </span>
-              <span class="bb-menu-title">Dashboards</span>
-            </a>
-          </div>
-
-          <div class="bb-menu-separator"></div>
-
-          <div class="bb-menu-section">PAGES</div>
-
-          <!-- User Profile (accordion) -->
-          <div class="bb-menu-item"
-               data-bb-menu-trigger="click"
-               aria-expanded="true">
-            <a href="#" class="bb-menu-link">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">person</span>
-              </span>
-              <span class="bb-menu-title">User Profile</span>
-              <span class="bb-menu-arrow"></span>
-            </a>
-
-            <div class="bb-menu-sub bb-menu-sub-accordion">
-              <div class="bb-menu-sub-content">
-
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Overview</span>
-                  </a>
+        <!-- Sidebar -->
+        <aside class="bb-sidebar">
+            <div class="p-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="fw-semibold">Bulbulustur</div>
+                    <span class="badge text-bg-secondary">Depo</span>
                 </div>
 
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Projects</span>
-                  </a>
-                </div>
+                <!-- Sidebar Menu (Accordion) -->
+                <div class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-here-bg bb-menu-sub-indention w-100"
+                     data-bb-menu="true">
 
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Campaigns</span>
-                  </a>
-                </div>
+                    <div class="bb-menu-section">MENÜ</div>
 
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Documents</span>
-                  </a>
-                </div>
-
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Followers</span>
-                  </a>
-                </div>
-
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Activity</span>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Account (accordion) -->
-          <div class="bb-menu-item"
-               data-bb-menu-trigger="click"
-               aria-expanded="false">
-            <a href="#" class="bb-menu-link">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">settings</span>
-              </span>
-              <span class="bb-menu-title">Account</span>
-              <span class="bb-menu-arrow"></span>
-            </a>
-
-            <div class="bb-menu-sub bb-menu-sub-accordion">
-              <div class="bb-menu-sub-content">
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Settings</span>
-                  </a>
-                </div>
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Billing</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Authentication (nested accordion) -->
-          <div class="bb-menu-item"
-               data-bb-menu-trigger="click"
-               aria-expanded="false">
-            <a href="#" class="bb-menu-link">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">lock</span>
-              </span>
-              <span class="bb-menu-title">Authentication</span>
-              <span class="bb-menu-arrow"></span>
-            </a>
-
-            <div class="bb-menu-sub bb-menu-sub-accordion">
-              <div class="bb-menu-sub-content">
-
-                <!-- Corporate Layout (nested) -->
-                <div class="bb-menu-item"
-                     data-bb-menu-trigger="click"
-                     aria-expanded="false">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Corporate Layout</span>
-                    <span class="bb-menu-arrow"></span>
-                  </a>
-
-                  <div class="bb-menu-sub bb-menu-sub-accordion">
-                    <div class="bb-menu-sub-content">
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Sign-in</span>
+                    <!-- Dashboards (simple) -->
+                    <div class="bb-menu-item active here">
+                        <a href="#" class="bb-menu-link active">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">dashboard</span>
+                            </span>
+                            <span class="bb-menu-title">Dashboards</span>
                         </a>
-                      </div>
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Sign-up</span>
-                        </a>
-                      </div>
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Two-Factor</span>
-                        </a>
-                      </div>
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Reset Password</span>
-                        </a>
-                      </div>
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">New Password</span>
-                        </a>
-                      </div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- Overlay Layout (simple) -->
-                <div class="bb-menu-item" data-bb-menu-trigger="click" aria-expanded="false">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Overlay Layout</span>
-                    <span class="bb-menu-arrow"></span>
-                  </a>
+                    <div class="bb-menu-separator"></div>
 
-                  <div class="bb-menu-sub bb-menu-sub-accordion">
-                    <div class="bb-menu-sub-content">
-                      <div class="bb-menu-item">
+                    <div class="bb-menu-section">PAGES</div>
+
+                    <!-- User Profile (accordion) -->
+                    <div class="bb-menu-item"
+                         data-bb-menu-trigger="click"
+                         aria-expanded="true">
                         <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Sign-in</span>
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">person</span>
+                            </span>
+                            <span class="bb-menu-title">User Profile</span>
+                            <span class="bb-menu-arrow"></span>
                         </a>
-                      </div>
-                      <div class="bb-menu-item">
-                        <a href="#" class="bb-menu-link">
-                          <span class="bb-menu-bullet"></span>
-                          <span class="bb-menu-title">Sign-up</span>
-                        </a>
-                      </div>
+
+                        <div class="bb-menu-sub bb-menu-sub-accordion">
+                            <div class="bb-menu-sub-content">
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Projects</span>
+                                    </a>
+                                </div>
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Campaigns</span>
+                                    </a>
+                                </div>
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Documents</span>
+                                    </a>
+                                </div>
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Followers</span>
+                                    </a>
+                                </div>
+
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Activity</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
 
-              </div>
-            </div>
-          </div>
+                    <!-- Account (accordion) -->
+                    <div class="bb-menu-item"
+                         data-bb-menu-trigger="click"
+                         aria-expanded="false">
+                        <a href="#" class="bb-menu-link">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">settings</span>
+                            </span>
+                            <span class="bb-menu-title">Account</span>
+                            <span class="bb-menu-arrow"></span>
+                        </a>
 
-          <div class="bb-menu-separator"></div>
-
-          <div class="bb-menu-section">DEPO</div>
-
-          <!-- Depo Yönetimi -->
-          <div class="bb-menu-item active">
-            <a href="#" class="bb-menu-link active">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">warehouse</span>
-              </span>
-              <span class="bb-menu-title">Depolar</span>
-              <span class="bb-menu-badge">
-                <span class="badge rounded-pill text-bg-secondary">3</span>
-              </span>
-            </a>
-          </div>
-
-          <!-- Stok (accordion) -->
-          <div class="bb-menu-item"
-               data-bb-menu-trigger="click"
-               aria-expanded="true">
-            <a href="#" class="bb-menu-link">
-              <span class="bb-menu-icon">
-                <span class="material-symbols-outlined">inventory_2</span>
-              </span>
-              <span class="bb-menu-title">Stok</span>
-              <span class="bb-menu-arrow"></span>
-            </a>
-
-            <div class="bb-menu-sub bb-menu-sub-accordion">
-              <div class="bb-menu-sub-content">
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Stok Listesi</span>
-                  </a>
-                </div>
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Sayım</span>
-                  </a>
-                </div>
-                <div class="bb-menu-item">
-                  <a href="#" class="bb-menu-link">
-                    <span class="bb-menu-bullet"></span>
-                    <span class="bb-menu-title">Transfer</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main -->
-    <div class="bb-content d-flex flex-column">
-
-      <!-- Topbar -->
-      <header class="border-bottom" style="border-color: var(--bb-border-color) !important;">
-        <div class="container-fluid py-3">
-          <div class="d-flex align-items-center justify-content-between gap-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined">warehouse</span>
-              <div class="fw-semibold">Depo Yönetimi</div>
-              <span class="text-muted small d-none d-md-inline">/ Bulbulustur Theme Demo</span>
-            </div>
-
-            <div class="d-flex align-items-center gap-2">
-
-              <!-- Apps dropdown (bb-menu floating bottom-end) -->
-              <div class="position-relative">
-                <button class="btn btn-outline-secondary d-inline-flex align-items-center gap-2"
-                        type="button"
-                        data-bb-menu-trigger="click"
-                        data-bb-menu-target="#bb_apps_menu"
-                        aria-controls="bb_apps_menu"
-                        aria-expanded="false">
-                  <span class="material-symbols-outlined">apps</span>
-                  Apps
-                </button>
-
-                <div id="bb_apps_menu"
-                     class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg"
-                     data-bb-menu="true"
-                     style="display:none; position:absolute; right:0; top:calc(100% + 0.5rem); min-width: 260px;">
-
-                  <div class="bb-menu-item">
-                    <a href="#" class="bb-menu-link">
-                      <span class="bb-menu-icon">
-                        <span class="material-symbols-outlined">assignment</span>
-                      </span>
-                      <span class="bb-menu-title fw-semibold">Quick Actions</span>
-                    </a>
-                  </div>
-
-                  <div class="bb-menu-separator"></div>
-
-                  <div class="bb-menu-item">
-                    <a href="#" class="bb-menu-link">
-                      <span class="bb-menu-icon">
-                        <span class="material-symbols-outlined">add</span>
-                      </span>
-                      <span class="bb-menu-title">Yeni Depo</span>
-                    </a>
-                  </div>
-
-                  <div class="bb-menu-item">
-                    <a href="#" class="bb-menu-link">
-                      <span class="bb-menu-icon">
-                        <span class="material-symbols-outlined">swap_horiz</span>
-                      </span>
-                      <span class="bb-menu-title">Transfer Create</span>
-                    </a>
-                  </div>
-
-                  <div class="bb-menu-item">
-                    <a href="#" class="bb-menu-link">
-                      <span class="bb-menu-icon">
-                        <span class="material-symbols-outlined">inventory</span>
-                      </span>
-                      <span class="bb-menu-title">Sayım Başlat</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Theme toggle -->
-              <button id="bb_theme_toggle"
-                      class="btn btn-outline-secondary d-inline-flex align-items-center gap-2"
-                      type="button"
-                      aria-label="Tema değiştir">
-                <span id="bb_theme_icon" class="material-symbols-outlined">dark_mode</span>
-                <span id="bb_theme_text" class="d-none d-md-inline">Dark</span>
-              </button>
-
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Content -->
-      <div class="bb-wrapper">
-    <header>
-</header>
-<main class="container-fluid py-4 bb-main">
-      <body class="bb-amcuk">
-        <div class="bb-container">
-        <div class="row g-4">
-
-          <!-- Stats -->
-          <div class="col-12">
-            <div class="row g-3">
-              <div class="col-md-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body">
-                    <div class="text-muted small">Toplam Depo</div>
-                    <div class="h4 mb-0">3</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body">
-                    <div class="text-muted small">Toplam SKU</div>
-                    <div class="h4 mb-0">1,284</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body">
-                    <div class="text-muted small">Kritik Stok</div>
-                    <div class="h4 mb-0">27</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Warehouses table -->
-          <div class="col-12">
-            <div class="card border-0 shadow-sm">
-              <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
-                  <div>
-                    <div class="fw-semibold">Depolar</div>
-                    <div class="text-muted small">Depo listesi ve kapasite özeti</div>
-                  </div>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-primary d-inline-flex align-items-center gap-2">
-                      <span class="material-symbols-outlined">add</span>
-                      Yeni Depo
-                    </button>
-                    <button class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
-                      <span class="material-symbols-outlined">download</span>
-                      Dışa Aktar
-                    </button>
-                  </div>
-                </div>
-
-                <div class="table-responsive">
-                  <table class="table align-middle mb-0">
-                    <thead>
-                      <tr class="text-muted small">
-                        <th>Depo</th>
-                        <th>Şehir</th>
-                        <th>Kapasite</th>
-                        <th>Doluluk</th>
-                        <th class="text-end">Aksiyon</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="fw-semibold">Merkez Depo</td>
-                        <td>İstanbul</td>
-                        <td>10,000</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-2">
-                            <div class="progress flex-grow-1" style="height: 6px;">
-                              <div class="progress-bar" style="width: 62%;"></div>
+                        <div class="bb-menu-sub bb-menu-sub-accordion">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Settings</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Billing</span>
+                                    </a>
+                                </div>
                             </div>
-                            <span class="small text-muted">62%</span>
-                          </div>
-                        </td>
-                        <td class="text-end">
-                          <button class="btn btn-sm btn-outline-secondary">Detay</button>
-                        </td>
-                      </tr>
+                        </div>
+                    </div>
 
-                      <tr>
-                        <td class="fw-semibold">Ankara Bölge</td>
-                        <td>Ankara</td>
-                        <td>6,500</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-2">
-                            <div class="progress flex-grow-1" style="height: 6px;">
-                              <div class="progress-bar" style="width: 41%;"></div>
-                            </div>
-                            <span class="small text-muted">41%</span>
-                          </div>
-                        </td>
-                        <td class="text-end">
-                          <button class="btn btn-sm btn-outline-secondary">Detay</button>
-                        </td>
-                      </tr>
+                    <!-- Authentication (nested accordion) -->
+                    <div class="bb-menu-item"
+                         data-bb-menu-trigger="click"
+                         aria-expanded="false">
+                        <a href="#" class="bb-menu-link">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">lock</span>
+                            </span>
+                            <span class="bb-menu-title">Authentication</span>
+                            <span class="bb-menu-arrow"></span>
+                        </a>
 
-                      <tr>
-                        <td class="fw-semibold">İzmir Aktarma</td>
-                        <td>İzmir</td>
-                        <td>4,000</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-2">
-                            <div class="progress flex-grow-1" style="height: 6px;">
-                              <div class="progress-bar" style="width: 77%;"></div>
+                        <div class="bb-menu-sub bb-menu-sub-accordion">
+                            <div class="bb-menu-sub-content">
+
+                                <!-- Corporate Layout (nested) -->
+                                <div class="bb-menu-item"
+                                     data-bb-menu-trigger="click"
+                                     aria-expanded="false">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Corporate Layout</span>
+                                        <span class="bb-menu-arrow"></span>
+                                    </a>
+
+                                    <div class="bb-menu-sub bb-menu-sub-accordion">
+                                        <div class="bb-menu-sub-content">
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Sign-in</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Sign-up</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Two-Factor</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Reset Password</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">New Password</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Overlay Layout (simple) -->
+                                <div class="bb-menu-item" data-bb-menu-trigger="click" aria-expanded="false">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Overlay Layout</span>
+                                        <span class="bb-menu-arrow"></span>
+                                    </a>
+
+                                    <div class="bb-menu-sub bb-menu-sub-accordion">
+                                        <div class="bb-menu-sub-content">
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Sign-in</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a href="#" class="bb-menu-link">
+                                                    <span class="bb-menu-bullet"></span>
+                                                    <span class="bb-menu-title">Sign-up</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <span class="small text-muted">77%</span>
-                          </div>
-                        </td>
-                        <td class="text-end">
-                          <button class="btn btn-sm btn-outline-secondary">Detay</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        </div>
+                    </div>
+
+                    <div class="bb-menu-separator"></div>
+
+                    <div class="bb-menu-section">DEPO</div>
+
+                    <!-- Depo Yönetimi -->
+                    <div class="bb-menu-item active">
+                        <a href="#" class="bb-menu-link active">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">warehouse</span>
+                            </span>
+                            <span class="bb-menu-title">Depolar</span>
+                            <span class="bb-menu-badge">
+                                <span class="badge rounded-pill text-bg-secondary">3</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Stok (accordion) -->
+                    <div class="bb-menu-item"
+                         data-bb-menu-trigger="click"
+                         aria-expanded="true">
+                        <a href="#" class="bb-menu-link">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined">inventory_2</span>
+                            </span>
+                            <span class="bb-menu-title">Stok</span>
+                            <span class="bb-menu-arrow"></span>
+                        </a>
+
+                        <div class="bb-menu-sub bb-menu-sub-accordion">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Stok Listesi</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Sayım</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a href="#" class="bb-menu-link">
+                                        <span class="bb-menu-bullet"></span>
+                                        <span class="bb-menu-title">Transfer</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-              </div>
             </div>
-          </div>
+        </aside>
 
-        </div>
+        <!-- Main -->
+        <div class="bb-content d-flex flex-column">
 
+            <!-- Topbar -->
+            <header class="border-bottom" style="border-color: var(--bb-border-color) !important;">
+                <div class="container-fluid py-3">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined">warehouse</span>
+                            <div class="fw-semibold">Depo Yönetimi</div>
+                            <span class="text-muted small d-none d-md-inline">/ Bulbulustur Theme Demo</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+
+                            <!-- Apps dropdown (bb-menu floating bottom-end) -->
+                            <div class="position-relative">
+                                <button class="btn btn-outline-secondary d-inline-flex align-items-center gap-2"
+                                        type="button"
+                                        data-bb-menu-trigger="click"
+                                        data-bb-menu-target="#bb_apps_menu"
+                                        aria-controls="bb_apps_menu"
+                                        aria-expanded="false">
+                                    <span class="material-symbols-outlined">apps</span>
+                                    Apps
+                                </button>
+
+                                <div id="bb_apps_menu"
+                                     class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg"
+                                     data-bb-menu="true"
+                                     style="display:none; position:absolute; right:0; top:calc(100% + 0.5rem); min-width: 260px;">
+
+                                    <div class="bb-menu-item">
+                                        <a href="#" class="bb-menu-link">
+                                            <span class="bb-menu-icon">
+                                                <span class="material-symbols-outlined">assignment</span>
+                                            </span>
+                                            <span class="bb-menu-title fw-semibold">Quick Actions</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="bb-menu-separator"></div>
+
+                                    <div class="bb-menu-item">
+                                        <a href="#" class="bb-menu-link">
+                                            <span class="bb-menu-icon">
+                                                <span class="material-symbols-outlined">add</span>
+                                            </span>
+                                            <span class="bb-menu-title">Yeni Depo</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="bb-menu-item">
+                                        <a href="#" class="bb-menu-link">
+                                            <span class="bb-menu-icon">
+                                                <span class="material-symbols-outlined">swap_horiz</span>
+                                            </span>
+                                            <span class="bb-menu-title">Transfer Create</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="bb-menu-item">
+                                        <a href="#" class="bb-menu-link">
+                                            <span class="bb-menu-icon">
+                                                <span class="material-symbols-outlined">inventory</span>
+                                            </span>
+                                            <span class="bb-menu-title">Sayım Başlat</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Theme toggle -->
+                            <button id="bb_theme_toggle"
+                                    class="btn btn-outline-secondary d-inline-flex align-items-center gap-2"
+                                    type="button"
+                                    aria-label="Tema değiştir">
+                                <span id="bb_theme_icon" class="material-symbols-outlined">dark_mode</span>
+                                <span id="bb_theme_text" class="d-none d-md-inline">Dark</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="bb-wrapper">
+                <header>
+                </header>
+                <main class="container-fluid py-4 bb-main">
+                    <body class="bb-amcuk">
+                        <div class="bb-container">
+                            <div class="row g-4">
+
+                                <!-- Stats -->
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="text-muted small">Toplam Depo</div>
+                                                    <div class="h4 mb-0">3</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="text-muted small">Toplam SKU</div>
+                                                    <div class="h4 mb-0">1,284</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="text-muted small">Kritik Stok</div>
+                                                    <div class="h4 mb-0">27</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Warehouses table -->
+                                <div class="col-12">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                                                <div>
+                                                    <div class="fw-semibold">Depolar</div>
+                                                    <div class="text-muted small">Depo listesi ve kapasite özeti</div>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <button class="btn btn-primary d-inline-flex align-items-center gap-2">
+                                                        <span class="material-symbols-outlined">add</span>
+                                                        Yeni Depo
+                                                    </button>
+                                                    <button class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
+                                                        <span class="material-symbols-outlined">download</span>
+                                                        Dışa Aktar
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive">
+                                                <table class="table align-middle mb-0">
+                                                    <thead>
+                                                        <tr class="text-muted small">
+                                                            <th>Depo</th>
+                                                            <th>Şehir</th>
+                                                            <th>Kapasite</th>
+                                                            <th>Doluluk</th>
+                                                            <th class="text-end">Aksiyon</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="fw-semibold">Merkez Depo</td>
+                                                            <td>İstanbul</td>
+                                                            <td>10,000</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                                                        <div class="progress-bar" style="width: 62%;"></div>
+                                                                    </div>
+                                                                    <span class="small text-muted">62%</span>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <button class="btn btn-sm btn-outline-secondary">Detay</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="fw-semibold">Ankara Bölge</td>
+                                                            <td>Ankara</td>
+                                                            <td>6,500</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                                                        <div class="progress-bar" style="width: 41%;"></div>
+                                                                    </div>
+                                                                    <span class="small text-muted">41%</span>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <button class="btn btn-sm btn-outline-secondary">Detay</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="fw-semibold">İzmir Aktarma</td>
+                                                            <td>İzmir</td>
+                                                            <td>4,000</td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                                                        <div class="progress-bar" style="width: 77%;"></div>
+                                                                    </div>
+                                                                    <span class="small text-muted">77%</span>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end">
+                                                                <button class="btn btn-sm btn-outline-secondary">Detay</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+            </div></main>
+            <footer>
+            </footer>
         </div>
-      </div></main>
-<footer>
-</footer>
-  </div>
 
     </div>
-  </div>
+    </div>
 
-  <!-- Menu JS + Theme Toggle -->
+    <!-- Menu JS + Theme Toggle -->
     <script src="../../assets/js/core/bb-menu.js"></script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>

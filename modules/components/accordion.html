@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <title>Bulbulustur Theme – Accordion Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <title>Bulbulustur Theme – Accordion Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -18,373 +18,333 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-    <div class="container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-      <!-- =========================================
-           ICON TOGGLE (ROTATE)
-      ========================================== -->
-      <div class="bb-card mb-4">
-        <div class="bb-card-header d-flex align-items-center justify-content-between">
-          <h5 class="card-title mb-0">Icon Toggle Accordion (Rotate)</h5>
-          <span class="text-muted small">.bb-accordion-icon-toggle</span>
-        </div>
+            <div class="bb-container">
+                <div class="container">
 
-        <div class="bb-card-body">
-          <div class="accordion bb-accordion bb-accordion-icon-toggle" id="bbAccordionToggle">
+                    <!-- =========================================
+                         ICON TOGGLE (ROTATE)
+                    ========================================== -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Icon Toggle Accordion (Rotate)</h5>
+                            <span class="text-muted small">.bb-accordion-icon-toggle</span>
+                        </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionToggleHeading1">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionToggleCollapse1"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionToggleCollapse1"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Genel Bilgiler
-                </button>
-              </h2>
+                        <div class="bb-card-body">
+                            <div class="accordion bb-accordion bb-accordion-icon-toggle" id="bbAccordionToggle">
 
-              <div
-                id="bbAccordionToggleCollapse1"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionToggleHeading1"
-                data-bs-parent="#bbAccordionToggle"
-              >
-                <div class="accordion-body">
-                  Ürün veya modül hakkında genel açıklamalar burada yer alır.
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionToggleHeading1">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionToggleCollapse1"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionToggleCollapse1">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Genel Bilgiler
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionToggleCollapse1"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionToggleHeading1"
+                                         data-bs-parent="#bbAccordionToggle">
+                                        <div class="accordion-body">
+                                            Ürün veya modül hakkında genel açıklamalar burada yer alır.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionToggleHeading2">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionToggleCollapse2"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionToggleCollapse2">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Teknik Detaylar
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionToggleCollapse2"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionToggleHeading2"
+                                         data-bs-parent="#bbAccordionToggle">
+                                        <div class="accordion-body">
+                                            Teknik spesifikasyonlar ve yapı bilgileri burada bulunur.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionToggleHeading3">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionToggleCollapse3"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionToggleCollapse3">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Dokümanlar
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionToggleCollapse3"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionToggleHeading3"
+                                         data-bs-parent="#bbAccordionToggle">
+                                        <div class="accordion-body">
+                                            Kılavuz, sözleşme ve ek dokümanlar bu alanda listelenebilir.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================
+                         ICON COLLAPSE (SWAP)
+                    ========================================== -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Icon Collapse Accordion (Swap)</h5>
+                            <span class="text-muted small">.bb-accordion-icon-collapse</span>
+                        </div>
+
+                        <div class="bb-card-body">
+                            <div class="accordion bb-accordion bb-accordion-icon-collapse" id="bbAccordionSwap">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionSwapHeading1">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionSwapCollapse1"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionSwapCollapse1">
+                                            <span class="bb-accordion-icon" aria-hidden="true">
+                                                <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
+                                                <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
+                                            </span>
+                                            Fiyatlandırma
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionSwapCollapse1"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionSwapHeading1"
+                                         data-bs-parent="#bbAccordionSwap">
+                                        <div class="accordion-body">
+                                            Fiyat, kampanya ve indirim bilgileri burada gösterilir.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionSwapHeading2">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionSwapCollapse2"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionSwapCollapse2">
+                                            <span class="bb-accordion-icon" aria-hidden="true">
+                                                <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
+                                                <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
+                                            </span>
+                                            Kargo ve Teslimat
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionSwapCollapse2"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionSwapHeading2"
+                                         data-bs-parent="#bbAccordionSwap">
+                                        <div class="accordion-body">
+                                            Teslimat süreleri, kargo firması ve takip detayları burada bulunur.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionSwapHeading3">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionSwapCollapse3"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionSwapCollapse3">
+                                            <span class="bb-accordion-icon" aria-hidden="true">
+                                                <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
+                                                <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
+                                            </span>
+                                            İade Koşulları
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionSwapCollapse3"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionSwapHeading3"
+                                         data-bs-parent="#bbAccordionSwap">
+                                        <div class="accordion-body">
+                                            İade politikası ve süreç bilgileri burada sunulabilir.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================
+                         BORDERLESS
+                    ========================================== -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Borderless</h5>
+                            <span class="text-muted small">.bb-accordion-borderless</span>
+                        </div>
+
+                        <div class="bb-card-body">
+                            <div class="accordion bb-accordion bb-accordion-borderless bb-accordion-icon-toggle" id="bbAccordionBorderless">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionBorderlessHeading1">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionBorderlessCollapse1"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionBorderlessCollapse1">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Özet
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionBorderlessCollapse1"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionBorderlessHeading1"
+                                         data-bs-parent="#bbAccordionBorderless">
+                                        <div class="accordion-body">
+                                            Borderless kullanım; kart içinde sade bir görünüm verir.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionBorderlessHeading2">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionBorderlessCollapse2"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionBorderlessCollapse2">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Detay
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionBorderlessCollapse2"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionBorderlessHeading2"
+                                         data-bs-parent="#bbAccordionBorderless">
+                                        <div class="accordion-body">
+                                            Araya çizgi koymadan, tamamen temiz.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =========================================
+                         FLUSH
+                    ========================================== -->
+                    <div class="bb-card">
+                        <div class="bb-card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title mb-0">Flush</h5>
+                            <span class="text-muted small">.bb-accordion-flush</span>
+                        </div>
+
+                        <div class="bb-card-body">
+                            <div class="accordion bb-accordion bb-accordion-flush bb-accordion-icon-toggle" id="bbAccordionFlush">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionFlushHeading1">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionFlushCollapse1"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionFlushCollapse1">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Flush Başlık
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionFlushCollapse1"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionFlushHeading1"
+                                         data-bs-parent="#bbAccordionFlush">
+                                        <div class="accordion-body">
+                                            Flush modunda padding left/right sıfırlanır, çizgiler kalkar.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="bbAccordionFlushHeading2">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#bbAccordionFlushCollapse2"
+                                                aria-expanded="false"
+                                                aria-controls="bbAccordionFlushCollapse2">
+                                            <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                            Flush İçerik
+                                        </button>
+                                    </h2>
+
+                                    <div id="bbAccordionFlushCollapse2"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="bbAccordionFlushHeading2"
+                                         data-bs-parent="#bbAccordionFlush">
+                                        <div class="accordion-body">
+                                            Menü gibi listelerde güzel durur.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER NOTE -->
+                    <div class="text-muted small mt-4">
+                        Not: Bu sayfa sadece component test içindir. Bootstrap data-bs-toggle kullanır.
+                    </div>
+
                 </div>
-              </div>
+
             </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionToggleHeading2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionToggleCollapse2"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionToggleCollapse2"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Teknik Detaylar
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionToggleCollapse2"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionToggleHeading2"
-                data-bs-parent="#bbAccordionToggle"
-              >
-                <div class="accordion-body">
-                  Teknik spesifikasyonlar ve yapı bilgileri burada bulunur.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionToggleHeading3">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionToggleCollapse3"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionToggleCollapse3"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Dokümanlar
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionToggleCollapse3"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionToggleHeading3"
-                data-bs-parent="#bbAccordionToggle"
-              >
-                <div class="accordion-body">
-                  Kılavuz, sözleşme ve ek dokümanlar bu alanda listelenebilir.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================
-           ICON COLLAPSE (SWAP)
-      ========================================== -->
-      <div class="bb-card mb-4">
-        <div class="bb-card-header d-flex align-items-center justify-content-between">
-          <h5 class="card-title mb-0">Icon Collapse Accordion (Swap)</h5>
-          <span class="text-muted small">.bb-accordion-icon-collapse</span>
-        </div>
-
-        <div class="bb-card-body">
-          <div class="accordion bb-accordion bb-accordion-icon-collapse" id="bbAccordionSwap">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionSwapHeading1">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionSwapCollapse1"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionSwapCollapse1"
-                >
-                  <span class="bb-accordion-icon" aria-hidden="true">
-                    <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
-                    <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
-                  </span>
-                  Fiyatlandırma
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionSwapCollapse1"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionSwapHeading1"
-                data-bs-parent="#bbAccordionSwap"
-              >
-                <div class="accordion-body">
-                  Fiyat, kampanya ve indirim bilgileri burada gösterilir.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionSwapHeading2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionSwapCollapse2"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionSwapCollapse2"
-                >
-                  <span class="bb-accordion-icon" aria-hidden="true">
-                    <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
-                    <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
-                  </span>
-                  Kargo ve Teslimat
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionSwapCollapse2"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionSwapHeading2"
-                data-bs-parent="#bbAccordionSwap"
-              >
-                <div class="accordion-body">
-                  Teslimat süreleri, kargo firması ve takip detayları burada bulunur.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionSwapHeading3">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionSwapCollapse3"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionSwapCollapse3"
-                >
-                  <span class="bb-accordion-icon" aria-hidden="true">
-                    <span class="bb-accordion-icon-on material-symbols-outlined">remove</span>
-                    <span class="bb-accordion-icon-off material-symbols-outlined">add</span>
-                  </span>
-                  İade Koşulları
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionSwapCollapse3"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionSwapHeading3"
-                data-bs-parent="#bbAccordionSwap"
-              >
-                <div class="accordion-body">
-                  İade politikası ve süreç bilgileri burada sunulabilir.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================
-           BORDERLESS
-      ========================================== -->
-      <div class="bb-card mb-4">
-        <div class="bb-card-header d-flex align-items-center justify-content-between">
-          <h5 class="card-title mb-0">Borderless</h5>
-          <span class="text-muted small">.bb-accordion-borderless</span>
-        </div>
-
-        <div class="bb-card-body">
-          <div class="accordion bb-accordion bb-accordion-borderless bb-accordion-icon-toggle" id="bbAccordionBorderless">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionBorderlessHeading1">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionBorderlessCollapse1"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionBorderlessCollapse1"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Özet
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionBorderlessCollapse1"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionBorderlessHeading1"
-                data-bs-parent="#bbAccordionBorderless"
-              >
-                <div class="accordion-body">
-                  Borderless kullanım; kart içinde sade bir görünüm verir.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionBorderlessHeading2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionBorderlessCollapse2"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionBorderlessCollapse2"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Detay
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionBorderlessCollapse2"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionBorderlessHeading2"
-                data-bs-parent="#bbAccordionBorderless"
-              >
-                <div class="accordion-body">
-                  Araya çizgi koymadan, tamamen temiz.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================
-           FLUSH
-      ========================================== -->
-      <div class="bb-card">
-        <div class="bb-card-header d-flex align-items-center justify-content-between">
-          <h5 class="card-title mb-0">Flush</h5>
-          <span class="text-muted small">.bb-accordion-flush</span>
-        </div>
-
-        <div class="bb-card-body">
-          <div class="accordion bb-accordion bb-accordion-flush bb-accordion-icon-toggle" id="bbAccordionFlush">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionFlushHeading1">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionFlushCollapse1"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionFlushCollapse1"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Flush Başlık
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionFlushCollapse1"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionFlushHeading1"
-                data-bs-parent="#bbAccordionFlush"
-              >
-                <div class="accordion-body">
-                  Flush modunda padding left/right sıfırlanır, çizgiler kalkar.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="bbAccordionFlushHeading2">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#bbAccordionFlushCollapse2"
-                  aria-expanded="false"
-                  aria-controls="bbAccordionFlushCollapse2"
-                >
-                  <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                  Flush İçerik
-                </button>
-              </h2>
-
-              <div
-                id="bbAccordionFlushCollapse2"
-                class="accordion-collapse collapse"
-                aria-labelledby="bbAccordionFlushHeading2"
-                data-bs-parent="#bbAccordionFlush"
-              >
-                <div class="accordion-body">
-                  Menü gibi listelerde güzel durur.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- FOOTER NOTE -->
-      <div class="text-muted small mt-4">
-        Not: Bu sayfa sadece component test içindir. Bootstrap data-bs-toggle kullanır.
-      </div>
-
+        </main>
+        <footer>
+        </footer>
     </div>
-  
-        </div>
-      </main>
-<footer>
-</footer>
-  </div>
 
 
 
-  <!-- Tiny local theme toggle (demo only) -->
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!-- Tiny local theme toggle (demo only) -->
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 </html>

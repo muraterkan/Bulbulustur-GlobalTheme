@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur Theme - Breadcrumb</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur Theme - Breadcrumb</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
@@ -15,211 +15,222 @@
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-  <!-- Demo-only helpers (sadece demo görünümü için) -->
-  <style>
-    .bb-demo-hero {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.25rem;
-      border-radius: var(--bb-radius-lg, 0.75rem);
-      background: color-mix(in srgb, var(--bb-body-bg) 85%, var(--bb-tertiary-bg));
-      border: 1px solid var(--bb-border-color);
-      margin-bottom: 1.25rem;
-    }
-    .bb-demo-title { margin: 0; font-weight: 700; }
-    .bb-demo-sub { margin: 0.25rem 0 0 0; color: var(--bb-secondary-color); }
+    <!-- Demo-only helpers (sadece demo görünümü için) -->
+    <style>
+        .bb-demo-hero {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem;
+            border-radius: var(--bb-radius-lg, 0.75rem);
+            background: color-mix(in srgb, var(--bb-body-bg) 85%, var(--bb-tertiary-bg));
+            border: 1px solid var(--bb-border-color);
+            margin-bottom: 1.25rem;
+        }
 
-    .bb-demo-kv {
-      display: flex;
-      gap: .5rem;
-      align-items: center;
-      color: var(--bb-secondary-color);
-      font-size: .85rem;
-    }
-    .bb-demo-kv code { color: inherit; }
-  </style>
+        .bb-demo-title {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .bb-demo-sub {
+            margin: 0.25rem 0 0 0;
+            color: var(--bb-secondary-color);
+        }
+
+        .bb-demo-kv {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            color: var(--bb-secondary-color);
+            font-size: .85rem;
+        }
+
+            .bb-demo-kv code {
+                color: inherit;
+            }
+    </style>
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-    <!-- Top / Standard toolbar -->
-    <div class="bb-demo-hero">
-      <div>
-        <h1 class="bb-demo-title h4">Breadcrumb</h1>
-        <p class="bb-demo-sub small">bb-breadcrumb / dot / line — light & dark demo</p>
-      </div>
+            <div class="bb-container">
+                <div class="container">
 
-      <div class="d-flex align-items-center gap-2">
-        <div class="btn-group" role="group" aria-label="Theme switcher">
-          <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="light">
-            <span class="material-symbols-outlined" style="font-size:18px;">light_mode</span>
-            Light
-          </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="dark">
-            <span class="material-symbols-outlined" style="font-size:18px;">dark_mode</span>
-            Dark
-          </button>
-        </div>
+                    <!-- Top / Standard toolbar -->
+                    <div class="bb-demo-hero">
+                        <div>
+                            <h1 class="bb-demo-title h4">Breadcrumb</h1>
+                            <p class="bb-demo-sub small">bb-breadcrumb / dot / line — light & dark demo</p>
+                        </div>
 
-        <button type="button" class="btn btn-sm btn-outline-secondary" id="bbDensityToggle">
-          Compact
-        </button>
-      </div>
-    </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="btn-group" role="group" aria-label="Theme switcher">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="light">
+                                    <span class="material-symbols-outlined" style="font-size:18px;">light_mode</span>
+                                    Light
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme="dark">
+                                    <span class="material-symbols-outlined" style="font-size:18px;">dark_mode</span>
+                                    Dark
+                                </button>
+                            </div>
 
-    <div class="row g-4">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="bbDensityToggle">
+                                Compact
+                            </button>
+                        </div>
+                    </div>
 
-      <!-- Default -->
-      <div class="col-12">
-        <div class="card bb-card bb-card-hover-elevate">
-          <div class="card-header bb-card-header">
-            <div class="bb-card-title d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-              Default Separator
-            </div>
-            <div class="bb-demo-kv">
-              <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">code</span>
-              <code>.bb-breadcrumb</code>
-            </div>
-          </div>
+                    <div class="row g-4">
 
-          <div class="card-body bb-card-body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb bb-breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit</li>
-              </ol>
-            </nav>
+                        <!-- Default -->
+                        <div class="col-12">
+                            <div class="card bb-card bb-card-hover-elevate">
+                                <div class="card-header bb-card-header">
+                                    <div class="bb-card-title d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                        Default Separator
+                                    </div>
+                                    <div class="bb-demo-kv">
+                                        <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">code</span>
+                                        <code>.bb-breadcrumb</code>
+                                    </div>
+                                </div>
 
-            <div class="small text-body-secondary mt-3">
-              Not: Link üstünde hover + klavye ile <kbd>Tab</kbd> focus ring görülmeli.
-            </div>
-          </div>
-        </div>
-      </div>
+                                <div class="card-body bb-card-body">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb bb-breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                                        </ol>
+                                    </nav>
 
-      <!-- Dot -->
-      <div class="col-12 col-xl-6">
-        <div class="card bb-card bb-card-hover-elevate bb-card-bordered">
-          <div class="card-header bb-card-header">
-            <div class="bb-card-title d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-              Dot Variant
-            </div>
-            <div class="bb-demo-kv">
-              <code>.bb-breadcrumb-dot</code>
-            </div>
-          </div>
+                                    <div class="small text-body-secondary mt-3">
+                                        Not: Link üstünde hover + klavye ile <kbd>Tab</kbd> focus ring görülmeli.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="card-body bb-card-body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-dot mb-0">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Orders</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Detail</li>
-              </ol>
-            </nav>
+                        <!-- Dot -->
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card bb-card-hover-elevate bb-card-bordered">
+                                <div class="card-header bb-card-header">
+                                    <div class="bb-card-title d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                        Dot Variant
+                                    </div>
+                                    <div class="bb-demo-kv">
+                                        <code>.bb-breadcrumb-dot</code>
+                                    </div>
+                                </div>
 
-            <div class="mt-3">
-              <div class="small text-body-secondary">Uzun path testi:</div>
-              <nav aria-label="breadcrumb" class="mt-2">
-                <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-dot mb-0">
-                  <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                  <li class="breadcrumb-item"><a href="javascript:void(0)">Catalog</a></li>
-                  <li class="breadcrumb-item"><a href="javascript:void(0)">Electronics</a></li>
-                  <li class="breadcrumb-item"><a href="javascript:void(0)">Accessories</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">USB-C Hub</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+                                <div class="card-body bb-card-body">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-dot mb-0">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Orders</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Detail</li>
+                                        </ol>
+                                    </nav>
 
-      <!-- Line -->
-      <div class="col-12 col-xl-6">
-        <div class="card bb-card bb-card-hover-elevate bb-card-dashed">
-          <div class="card-header bb-card-header">
-            <div class="bb-card-title d-flex align-items-center gap-2">
-              <span class="material-symbols-outlined" aria-hidden="true">horizontal_rule</span>
-              Line Variant
-            </div>
-            <div class="bb-demo-kv">
-              <code>.bb-breadcrumb-line</code>
-            </div>
-          </div>
+                                    <div class="mt-3">
+                                        <div class="small text-body-secondary">Uzun path testi:</div>
+                                        <nav aria-label="breadcrumb" class="mt-2">
+                                            <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-dot mb-0">
+                                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                                <li class="breadcrumb-item"><a href="javascript:void(0)">Catalog</a></li>
+                                                <li class="breadcrumb-item"><a href="javascript:void(0)">Electronics</a></li>
+                                                <li class="breadcrumb-item"><a href="javascript:void(0)">Accessories</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">USB-C Hub</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-          <div class="card-body bb-card-body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-line mb-0">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Company</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Settings</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Integrations</li>
-              </ol>
-            </nav>
+                        <!-- Line -->
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card bb-card-hover-elevate bb-card-dashed">
+                                <div class="card-header bb-card-header">
+                                    <div class="bb-card-title d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined" aria-hidden="true">horizontal_rule</span>
+                                        Line Variant
+                                    </div>
+                                    <div class="bb-demo-kv">
+                                        <code>.bb-breadcrumb-line</code>
+                                    </div>
+                                </div>
 
-            <div class="small text-body-secondary mt-3">
-              Line separator “soft” olmalı (opacity yerine color-mix).
-            </div>
-          </div>
-        </div>
-      </div>
+                                <div class="card-body bb-card-body">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb bb-breadcrumb bb-breadcrumb-line mb-0">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Company</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Settings</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Integrations</li>
+                                        </ol>
+                                    </nav>
 
-      <!-- Inside a header usage example -->
-      <div class="col-12">
-        <div class="card bb-card bb-card-hover-elevate">
-          <div class="card-header bb-card-header">
-            <div>
-              <div class="bb-card-title">Header Usage</div>
-              <div class="small text-body-secondary">Breadcrumb, header içinde çok kullanılan senaryo</div>
-            </div>
+                                    <div class="small text-body-secondary mt-3">
+                                        Line separator “soft” olmalı (opacity yerine color-mix).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="d-flex align-items-center gap-2">
-              <button type="button" class="btn btn-sm bb-btn-light-primary">
-                <span class="material-symbols-outlined" style="font-size:18px;">add</span>
-                New
-              </button>
-              <button type="button" class="btn btn-sm bb-btn-outline bb-btn-outline-dark">
-                Manage
-              </button>
-            </div>
-          </div>
+                        <!-- Inside a header usage example -->
+                        <div class="col-12">
+                            <div class="card bb-card bb-card-hover-elevate">
+                                <div class="card-header bb-card-header">
+                                    <div>
+                                        <div class="bb-card-title">Header Usage</div>
+                                        <div class="small text-body-secondary">Breadcrumb, header içinde çok kullanılan senaryo</div>
+                                    </div>
 
-          <div class="card-body bb-card-body">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb bb-breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Catalog</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button type="button" class="btn btn-sm bb-btn-light-primary">
+                                            <span class="material-symbols-outlined" style="font-size:18px;">add</span>
+                                            New
+                                        </button>
+                                        <button type="button" class="btn btn-sm bb-btn-outline bb-btn-outline-dark">
+                                            Manage
+                                        </button>
+                                    </div>
+                                </div>
 
-    </div>
+                                <div class="card-body bb-card-body">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb bb-breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Catalog</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="text-body-secondary small mt-4">
-      Not: Theme toggle <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
-    </div>
+                    </div>
 
-  </div>
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                    <div class="text-body-secondary small mt-4">
+                        Not: Theme toggle <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
+                    </div>
+
+                </div>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bulbulustur • FormRepeater</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bulbulustur • FormRepeater</title>
 
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
@@ -18,179 +18,179 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div>
-    <div class="d-flex align-items-center justify-content-between mb-4">
-      <div>
-        <h1 class="h4 mb-1">FormRepeater</h1>
-        <div class="text-muted">Bootstrap 5 + bb- prefix + token-first (dark/light safe)</div>
-      </div>
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-      <div class="btn-group" role="group" aria-label="Theme toggle">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button><!--  -->
-      </div>
-    </div>
+            <div class="bb-container">
+                <div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">FormRepeater</h1>
+                            <div class="text-muted">Bootstrap 5 + bb- prefix + token-first (dark/light safe)</div>
+                        </div>
 
-    <!-- BASIC -->
-    <div class="bb-card mb-4">
-      <div class="bb-card-body">
-        <div class="bb-formrepeater" data-bb-repeater id="bb_fr_basic">
-          <div class="bb-formrepeater-header">
-            <div>
-              <h2 class="bb-formrepeater-title h5">Basic Example</h2>
-              <p class="bb-formrepeater-subtitle">Ad / Telefon alanlarını çoğalt</p>
-            </div>
+                        <div class="btn-group" role="group" aria-label="Theme toggle">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button><!--  -->
+                        </div>
+                    </div>
 
-            <div class="bb-formrepeater-actions">
-              <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
-                <span class="material-symbols-outlined align-middle me-1">add</span>
-                Satır Ekle
-              </button>
-            </div>
-          </div>
+                    <!-- BASIC -->
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-body">
+                            <div class="bb-formrepeater" data-bb-repeater id="bb_fr_basic">
+                                <div class="bb-formrepeater-header">
+                                    <div>
+                                        <h2 class="bb-formrepeater-title h5">Basic Example</h2>
+                                        <p class="bb-formrepeater-subtitle">Ad / Telefon alanlarını çoğalt</p>
+                                    </div>
 
-          <div class="bb-formrepeater-list" data-bb-repeater-list></div>
+                                    <div class="bb-formrepeater-actions">
+                                        <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
+                                            <span class="material-symbols-outlined align-middle me-1">add</span>
+                                            Satır Ekle
+                                        </button>
+                                    </div>
+                                </div>
 
-          <!-- TEMPLATE -->
-          <template data-bb-repeater-template>
-            <div class="bb-formrepeater-item" data-bb-repeater-item>
-              <div class="bb-formrepeater-item-head">
-                <div class="bb-formrepeater-item-meta">
-                  <span class="bb-formrepeater-handle" title="Move">
-                    <span class="material-symbols-outlined">drag_indicator</span>
-                  </span>
-                  <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
-                  <h3 class="bb-formrepeater-item-title">Kişi</h3>
+                                <div class="bb-formrepeater-list" data-bb-repeater-list></div>
+
+                                <!-- TEMPLATE -->
+                                <template data-bb-repeater-template>
+                                    <div class="bb-formrepeater-item" data-bb-repeater-item>
+                                        <div class="bb-formrepeater-item-head">
+                                            <div class="bb-formrepeater-item-meta">
+                                                <span class="bb-formrepeater-handle" title="Move">
+                                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                                </span>
+                                                <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
+                                                <h3 class="bb-formrepeater-item-title">Kişi</h3>
+                                            </div>
+
+                                            <div class="bb-formrepeater-item-actions">
+                                                <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
+                                                    <span class="material-symbols-outlined align-middle">delete</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-formrepeater-item-body">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label" data-bb-for="Contacts___index___FullName">Name</label>
+                                                    <input type="text" class="form-control"
+                                                           data-bb-id="Contacts___index___FullName"
+                                                           data-bb-name="Contacts[__index__].FullName"
+                                                           placeholder="Enter full name" />
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label class="form-label" data-bb-for="Contacts___index___Phone">Number</label>
+                                                    <input type="text" class="form-control"
+                                                           data-bb-id="Contacts___index___Phone"
+                                                           data-bb-name="Contacts[__index__].Phone"
+                                                           placeholder="Enter contact number" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ADVANCED -->
+                    <div class="bb-card">
+                        <div class="bb-card-body">
+                            <div class="bb-formrepeater" data-bb-repeater id="bb_fr_advanced">
+                                <div class="bb-formrepeater-header">
+                                    <div>
+                                        <h2 class="bb-formrepeater-title h5">Advanced Example</h2>
+                                        <p class="bb-formrepeater-subtitle">
+                                            Select / Date / Tags gibi “vendor” input’lar için event hook bırakırız (kopya yok).
+                                        </p>
+                                    </div>
+
+                                    <div class="bb-formrepeater-actions">
+                                        <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
+                                            <span class="material-symbols-outlined align-middle me-1">add</span>
+                                            Satır Ekle
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="bb-formrepeater-list" data-bb-repeater-list></div>
+
+                                <template data-bb-repeater-template>
+                                    <div class="bb-formrepeater-item" data-bb-repeater-item>
+                                        <div class="bb-formrepeater-item-head">
+                                            <div class="bb-formrepeater-item-meta">
+                                                <span class="bb-formrepeater-handle" title="Move">
+                                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                                </span>
+                                                <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
+                                                <h3 class="bb-formrepeater-item-title">Item</h3>
+                                            </div>
+
+                                            <div class="bb-formrepeater-item-actions">
+                                                <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
+                                                    <span class="material-symbols-outlined align-middle">delete</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="bb-formrepeater-item-body">
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <label class="form-label" data-bb-for="Advanced___index___Option">Select Options</label>
+                                                    <select class="form-select"
+                                                            data-bb-id="Advanced___index___Option"
+                                                            data-bb-name="Advanced[__index__].Option"
+                                                            data-bb-repeater-hook="select2">
+                                                        <option value="">Choose...</option>
+                                                        <option value="a">Option A</option>
+                                                        <option value="b">Option B</option>
+                                                        <option value="c">Option C</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label class="form-label" data-bb-for="Advanced___index___Date">Datepicker</label>
+                                                    <input type="text" class="form-control"
+                                                           data-bb-id="Advanced___index___Date"
+                                                           data-bb-name="Advanced[__index__].Date"
+                                                           data-bb-repeater-hook="datepicker"
+                                                           placeholder="Pick a date" />
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label class="form-label" data-bb-for="Advanced___index___Tags">Tags</label>
+                                                    <input type="text" class="form-control"
+                                                           data-bb-id="Advanced___index___Tags"
+                                                           data-bb-name="Advanced[__index__].Tags"
+                                                           data-bb-repeater-hook="tagify"
+                                                           placeholder="tag1, tag2, tag3" />
+                                                    <div class="form-text">Hook: <code>bb.repeater.added</code> event’i ile re-init yapılır.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="bb-formrepeater-item-actions">
-                  <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
-                    <span class="material-symbols-outlined align-middle">delete</span>
-                  </button>
-                </div>
-              </div>
 
-              <div class="bb-formrepeater-item-body">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label" data-bb-for="Contacts___index___FullName">Name</label>
-                    <input type="text" class="form-control"
-                           data-bb-id="Contacts___index___FullName"
-                           data-bb-name="Contacts[__index__].FullName"
-                           placeholder="Enter full name" />
-                  </div>
-
-                  <div class="col-md-6">
-                    <label class="form-label" data-bb-for="Contacts___index___Phone">Number</label>
-                    <input type="text" class="form-control"
-                           data-bb-id="Contacts___index___Phone"
-                           data-bb-name="Contacts[__index__].Phone"
-                           placeholder="Enter contact number" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </template>
-        </div>
-      </div>
-    </div>
-
-    <!-- ADVANCED -->
-    <div class="bb-card">
-      <div class="bb-card-body">
-        <div class="bb-formrepeater" data-bb-repeater id="bb_fr_advanced">
-          <div class="bb-formrepeater-header">
-            <div>
-              <h2 class="bb-formrepeater-title h5">Advanced Example</h2>
-              <p class="bb-formrepeater-subtitle">
-                Select / Date / Tags gibi “vendor” input’lar için event hook bırakırız (kopya yok).
-              </p>
-            </div>
-
-            <div class="bb-formrepeater-actions">
-              <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
-                <span class="material-symbols-outlined align-middle me-1">add</span>
-                Satır Ekle
-              </button>
-            </div>
-          </div>
-
-          <div class="bb-formrepeater-list" data-bb-repeater-list></div>
-
-          <template data-bb-repeater-template>
-            <div class="bb-formrepeater-item" data-bb-repeater-item>
-              <div class="bb-formrepeater-item-head">
-                <div class="bb-formrepeater-item-meta">
-                  <span class="bb-formrepeater-handle" title="Move">
-                    <span class="material-symbols-outlined">drag_indicator</span>
-                  </span>
-                  <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
-                  <h3 class="bb-formrepeater-item-title">Item</h3>
-                </div>
-
-                <div class="bb-formrepeater-item-actions">
-                  <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
-                    <span class="material-symbols-outlined align-middle">delete</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="bb-formrepeater-item-body">
-                <div class="row g-3">
-                  <div class="col-md-4">
-                    <label class="form-label" data-bb-for="Advanced___index___Option">Select Options</label>
-                    <select class="form-select"
-                            data-bb-id="Advanced___index___Option"
-                            data-bb-name="Advanced[__index__].Option"
-                            data-bb-repeater-hook="select2">
-                      <option value="">Choose...</option>
-                      <option value="a">Option A</option>
-                      <option value="b">Option B</option>
-                      <option value="c">Option C</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md-4">
-                    <label class="form-label" data-bb-for="Advanced___index___Date">Datepicker</label>
-                    <input type="text" class="form-control"
-                           data-bb-id="Advanced___index___Date"
-                           data-bb-name="Advanced[__index__].Date"
-                           data-bb-repeater-hook="datepicker"
-                           placeholder="Pick a date" />
-                  </div>
-
-                  <div class="col-md-4">
-                    <label class="form-label" data-bb-for="Advanced___index___Tags">Tags</label>
-                    <input type="text" class="form-control"
-                           data-bb-id="Advanced___index___Tags"
-                           data-bb-name="Advanced[__index__].Tags"
-                           data-bb-repeater-hook="tagify"
-                           placeholder="tag1, tag2, tag3" />
-                    <div class="form-text">Hook: <code>bb.repeater.added</code> event’i ile re-init yapılır.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </template>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-    <script src="../../assets/js/core/bb-formrepeater.js"></script>
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                <script src="../../assets/js/core/bb-formrepeater.js"></script>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

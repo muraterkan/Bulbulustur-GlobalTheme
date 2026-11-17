@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bulbulustur - Dropdowns</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bulbulustur - Dropdowns</title>
 
 
-      <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -19,334 +19,372 @@
 </head>
 
 <body class="bg-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
-  <div class="container py-4">
-    <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
-      <div>
-        <h1 class="h4 mb-1">Dropdowns</h1>
-        <div class="text-body-secondary">Bootstrap dropdown JS + bb-* polish</div>
-      </div>
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-      <button type="button" class="btn btn-outline-secondary" id="bbThemeToggle">
-        <span class="material-symbols-outlined me-1">dark_mode</span>
-        Theme Toggle
-      </button>
-    </div>
+            <div class="bb-container">
+                <div class="container py-4">
+                    <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">Dropdowns</h1>
+                            <div class="text-body-secondary">Bootstrap dropdown JS + bb-* polish</div>
+                        </div>
 
-    <div class="row g-4">
-      <!-- Basic -->
-      <div class="col-12 col-lg-6">
-        <div class="bb-card">
-          <div class="bb-card-body">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <div class="fw-semibold">Basic Button Dropdown</div>
-              <span class="text-body-secondary small">.dropdown-menu + .bb-dropdown-menu</span>
-            </div>
+                        <button type="button" class="btn btn-outline-secondary" id="bbThemeToggle">
+                            <span class="material-symbols-outlined me-1">dark_mode</span>
+                            Theme Toggle
+                        </button>
+                    </div>
 
-            <div class="dropdown">
-              <button class="btn btn-primary bb-btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="material-symbols-outlined">more_horiz</span>
-                Actions
-              </button>
+                    <div class="row g-4">
+                        <!-- Basic -->
+                        <div class="col-12 col-lg-6">
+                            <div class="bb-card">
+                                <div class="bb-card-body">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="fw-semibold">Basic Button Dropdown</div>
+                                        <span class="text-body-secondary small">.dropdown-menu + .bb-dropdown-menu</span>
+                                    </div>
 
-              <ul class="dropdown-menu bb-dropdown-menu">
-                <li><h6 class="dropdown-header">Quick</h6></li>
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary bb-btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                            Actions
+                                        </button>
 
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">edit</span>
-                    <span class="bb-dropdown-item-text">Edit</span>
-                    <span class="bb-dropdown-item-meta">⌘E</span>
-                  </a>
-                </li>
+                                        <ul class="dropdown-menu bb-dropdown-menu">
+                                            <li><h6 class="dropdown-header">Quick</h6></li>
 
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">content_copy</span>
-                    <span class="bb-dropdown-item-text">Duplicate</span>
-                  </a>
-                </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">edit</span>
+                                                    <span class="bb-dropdown-item-text">Edit</span>
+                                                    <span class="bb-dropdown-item-meta">⌘E</span>
+                                                </a>
+                                            </li>
 
-                <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">content_copy</span>
+                                                    <span class="bb-dropdown-item-text">Duplicate</span>
+                                                </a>
+                                            </li>
 
-                <li>
-                  <a class="dropdown-item text-danger" href="#">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">delete</span>
-                    <span class="bb-dropdown-item-text">Delete</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                                            <li><hr class="dropdown-divider"></li>
 
-          </div>
-        </div>
-      </div>
+                                            <li>
+                                                <a class="dropdown-item text-danger" href="#">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">delete</span>
+                                                    <span class="bb-dropdown-item-text">Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-      <!-- Split -->
-      <div class="col-12 col-lg-6">
-        <div class="bb-card">
-          <div class="bb-card-body">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <div class="fw-semibold">Split Button Dropdown</div>
-              <span class="text-body-secondary small">btn-group + dropdown-toggle-split</span>
-            </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="btn-group bb-btn-dropdown-split" role="group">
-              <button type="button" class="btn btn-success">
-                Save
-              </button>
+                        <!-- Split -->
+                        <div class="col-12 col-lg-6">
+                            <div class="bb-card">
+                                <div class="bb-card-body">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="fw-semibold">Split Button Dropdown</div>
+                                        <span class="text-body-secondary small">btn-group + dropdown-toggle-split</span>
+                                    </div>
 
-              <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
+                                    <div class="btn-group bb-btn-dropdown-split" role="group">
+                                        <button type="button" class="btn btn-success">
+                                            Save
+                                        </button>
 
-              <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-solid">
-                <li>
-<a class="dropdown-item" href="#">Save &amp; Close</a></li>
-                <li>
-<a class="dropdown-item" href="#">Save as Draft</a></li>
-                <li>
-<a class="dropdown-item" href="#">Save &amp; New</a></li>
-              </ul>
-            </div>
+                                        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
 
-          </div>
-        </div>
-      </div>
+                                        <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-solid">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Save &amp; Close</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Save as Draft</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Save &amp; New</a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-      <!-- Directions -->
-      <div class="col-12">
-        <div class="bb-card">
-          <div class="bb-card-body">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <div class="fw-semibold">Drop Directions</div>
-              <span class="text-body-secondary small">dropup / dropend / dropstart</span>
-            </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="d-flex flex-wrap gap-3">
-              <div class="dropdown">
-                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Default
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu">
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                </ul>
-              </div>
+                        <!-- Directions -->
+                        <div class="col-12">
+                            <div class="bb-card">
+                                <div class="bb-card-body">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="fw-semibold">Drop Directions</div>
+                                        <span class="text-body-secondary small">dropup / dropend / dropstart</span>
+                                    </div>
 
-              <div class="dropup">
-                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropup
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu">
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                </ul>
-              </div>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Default
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-              <div class="dropend">
-                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropend
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu">
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                </ul>
-              </div>
+                                        <div class="dropup">
+                                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropup
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-              <div class="dropstart">
-                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropstart
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu">
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Item</a></li>
-                </ul>
-              </div>
-            </div>
+                                        <div class="dropend">
+                                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropend
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-          </div>
-        </div>
-      </div>
+                                        <div class="dropstart">
+                                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropstart
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Item</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-      <!-- Sizes -->
-      <div class="col-12 col-lg-6">
-        <div class="bb-card">
-          <div class="bb-card-body">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <div class="fw-semibold">Menu Sizes</div>
-              <span class="text-body-secondary small">sm / default / lg</span>
-            </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="d-flex flex-wrap gap-3">
-              <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Small
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-sm">
-                  <li>
-<a class="dropdown-item" href="#">One</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Two</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Three</a></li>
-                </ul>
-              </div>
+                        <!-- Sizes -->
+                        <div class="col-12 col-lg-6">
+                            <div class="bb-card">
+                                <div class="bb-card-body">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="fw-semibold">Menu Sizes</div>
+                                        <span class="text-body-secondary small">sm / default / lg</span>
+                                    </div>
 
-              <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Default
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu">
-                  <li>
-<a class="dropdown-item" href="#">One</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Two</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Three</a></li>
-                </ul>
-              </div>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Small
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-sm">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">One</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Two</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Three</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-              <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Large
-                </button>
-                <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-lg">
-                  <li>
-<a class="dropdown-item" href="#">One</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Two</a></li>
-                  <li>
-<a class="dropdown-item" href="#">Three</a></li>
-                </ul>
-              </div>
-            </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Default
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">One</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Two</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Three</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-          </div>
-        </div>
-      </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Large
+                                            </button>
+                                            <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-lg">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">One</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Two</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Three</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-      <!-- States + Scroll -->
-      <div class="col-12 col-lg-6">
-        <div class="bb-card">
-          <div class="bb-card-body">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <div class="fw-semibold">States + Scroll</div>
-              <span class="text-body-secondary small">active / disabled / scroll</span>
-            </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="dropdown">
-              <button class="btn btn-warning bb-btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="material-symbols-outlined">tune</span>
-                Filters
-              </button>
+                        <!-- States + Scroll -->
+                        <div class="col-12 col-lg-6">
+                            <div class="bb-card">
+                                <div class="bb-card-body">
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="fw-semibold">States + Scroll</div>
+                                        <span class="text-body-secondary small">active / disabled / scroll</span>
+                                    </div>
 
-              <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-scroll">
-                <li><h6 class="dropdown-header">Status</h6></li>
+                                    <div class="dropdown">
+                                        <button class="btn btn-warning bb-btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="material-symbols-outlined">tune</span>
+                                            Filters
+                                        </button>
 
-                <li>
-                  <a class="dropdown-item active" href="#">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">check_circle</span>
-                    <span class="bb-dropdown-item-text">Active</span>
-                  </a>
-                </li>
+                                        <ul class="dropdown-menu bb-dropdown-menu bb-dropdown-menu-scroll">
+                                            <li><h6 class="dropdown-header">Status</h6></li>
 
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">pause_circle</span>
-                    <span class="bb-dropdown-item-text">Paused</span>
-                  </a>
-                </li>
+                                            <li>
+                                                <a class="dropdown-item active" href="#">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">check_circle</span>
+                                                    <span class="bb-dropdown-item-text">Active</span>
+                                                </a>
+                                            </li>
 
-                <li>
-                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">
-                    <span class="bb-dropdown-item-icon material-symbols-outlined">block</span>
-                    <span class="bb-dropdown-item-text">Disabled option</span>
-                  </a>
-                </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">pause_circle</span>
+                                                    <span class="bb-dropdown-item-text">Paused</span>
+                                                </a>
+                                            </li>
 
-                <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">
+                                                    <span class="bb-dropdown-item-icon material-symbols-outlined">block</span>
+                                                    <span class="bb-dropdown-item-text">Disabled option</span>
+                                                </a>
+                                            </li>
 
-                <li><h6 class="dropdown-header">Long list</h6></li>
-                <li>
-<a class="dropdown-item" href="#">Item 01</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 02</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 03</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 04</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 05</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 06</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 07</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 08</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 09</a></li>
-                <li>
-<a class="dropdown-item" href="#">Item 10</a></li>
-              </ul>
-            </div>
+                                            <li><hr class="dropdown-divider"></li>
 
-          </div>
-        </div>
-      </div>
+                                            <li><h6 class="dropdown-header">Long list</h6></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 01</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 02</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 03</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 04</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 05</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 06</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 07</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 08</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 09</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Item 10</a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-      <!-- Reusable card / toolbar action dropdown -->
-      <div class="col-12 col-lg-6">
-        <div class="bb-card">
-          <div class="bb-card-header"><h2 class="bb-card-title">Kart aksiyon menüsü</h2>
-<span class="badge bb-badge bb-badge-light-primary">Tekrar kullanılabilir</span></div>
-          <div class="bb-card-body">
-            <p class="text-body-secondary">Profil kartları, liste satırları veya toolbar aksiyonlarında aynı dropdown sınıfları kullanılabilir.</p>
-            <div class="dropdown bb-action-menu">
-              <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Kart işlemleri">
-                <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
-                <li><h3 class="dropdown-header">ÖDEMELER</h3></li>
-                <li>
-<a class="dropdown-item" href="../panel/fatura.html">Fatura ön izlemesi</a></li>
-                <li>
-<a class="dropdown-item" href="../panel/profil-faturalandirma.html">Ödeme yöntemleri</a></li>
-                <li>
-<a class="dropdown-item" href="../panel/profil-ekstreler.html">Ekstreler</a></li>
-                <li>
-<a class="dropdown-item bb-action-menu-has-arrow" href="../panel/profil-faturalandirma.html"><span>Abonelik</span>
-<span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li>
-<a class="dropdown-item" href="../panel/profil-ayarlar.html">Account Settings</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+                                </div>
+                            </div>
+                        </div>
 
-    </div>
-  </div>
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                        <!-- Reusable card / toolbar action dropdown -->
+                        <div class="col-12 col-lg-6">
+                            <div class="bb-card">
+                                <div class="bb-card-header">
+                                    <h2 class="bb-card-title">Kart aksiyon menüsü</h2>
+                                    <span class="badge bb-badge bb-badge-light-primary">Tekrar kullanılabilir</span>
+                                </div>
+                                <div class="bb-card-body">
+                                    <p class="text-body-secondary">Profil kartları, liste satırları veya toolbar aksiyonlarında aynı dropdown sınıfları kullanılabilir.</p>
+                                    <div class="dropdown bb-action-menu">
+                                        <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Kart işlemleri">
+                                            <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">
+                                            <li><h3 class="dropdown-header">ÖDEMELER</h3></li>
+                                            <li>
+                                                <a class="dropdown-item" href="../panel/fatura.html">Fatura ön izlemesi</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="../panel/profil-faturalandirma.html">Ödeme yöntemleri</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="../panel/profil-ekstreler.html">Ekstreler</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item bb-action-menu-has-arrow" href="../panel/profil-faturalandirma.html">
+                                                    <span>Abonelik</span>
+                                                    <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item" href="../panel/profil-ayarlar.html">Account Settings</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

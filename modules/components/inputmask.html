@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-  <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbulustur Theme - Inputmask</title>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbulustur Theme - Inputmask</title>
 
-      <!-- Main Theme CSS -->
+    <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
@@ -18,142 +18,142 @@
 </head>
 
 <body class="bb-body">
-  <div class="bb-wrapper">
-    <header>
-</header>
-<main class="bb-main">
-      
-        <div class="bb-container">
+    <div class="bb-wrapper">
+        <header>
+        </header>
+        <main class="bb-main">
 
-  <div class="container py-5">
+            <div class="bb-container">
 
-    <div class="bb-card">
-      <div class="bb-card-header">
-        <div class="card-title mb-0">Inputmask</div>
-        <div class="bb-card-actions">
-          <button class="btn btn-sm btn-primary" type="button">Action</button>
-        </div>
-      </div>
+                <div class="container py-5">
 
-      <div class="bb-card-body">
-        <div class="row g-4">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="card-title mb-0">Inputmask</div>
+                            <div class="bb-card-actions">
+                                <button class="btn btn-sm btn-primary" type="button">Action</button>
+                            </div>
+                        </div>
 
-          <!-- Date -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Tarih (mm/dd/yyyy)</label>
-            <div class="input-group bb-inputmask-group">
-              <span class="input-group-text bb-inputmask-addon">
-                <span class="material-symbols-outlined">calendar_month</span>
-              </span>
-              <input id="bb_im_date"
-                     type="text"
-                     class="form-control bb-inputmask bb-inputmask-monospace"
-                     placeholder="12/31/2026"
-                     data-inputmask="'mask': '99/99/9999'">
-            </div>
-            <div class="bb-inputmask-hint">Mask: 99/99/9999</div>
-          </div>
+                        <div class="bb-card-body">
+                            <div class="row g-4">
 
-          <!-- Phone -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Telefon</label>
-            <div class="input-group bb-inputmask-group">
-              <span class="input-group-text bb-inputmask-addon">
-                <span class="material-symbols-outlined">call</span>
-              </span>
-              <input id="bb_im_phone"
-                     type="text"
-                     class="form-control bb-inputmask bb-inputmask-monospace"
-                     placeholder="(555) 123-4567"
-                     data-inputmask="'mask': '(999) 999-9999'">
-            </div>
-            <div class="bb-inputmask-hint">Mask: (999) 999-9999</div>
-          </div>
+                                <!-- Date -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Tarih (mm/dd/yyyy)</label>
+                                    <div class="input-group bb-inputmask-group">
+                                        <span class="input-group-text bb-inputmask-addon">
+                                            <span class="material-symbols-outlined">calendar_month</span>
+                                        </span>
+                                        <input id="bb_im_date"
+                                               type="text"
+                                               class="form-control bb-inputmask bb-inputmask-monospace"
+                                               placeholder="12/31/2026"
+                                               data-inputmask="'mask': '99/99/9999'">
+                                    </div>
+                                    <div class="bb-inputmask-hint">Mask: 99/99/9999</div>
+                                </div>
 
-          <!-- Placeholder style -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Placeholder</label>
-            <input id="bb_im_placeholder"
-                   type="text"
-                   class="form-control bb-inputmask bb-inputmask-monospace"
-                   data-inputmask="'mask': '(999) 999-9999', 'placeholder': '(999) 999-9999'">
-            <div class="bb-inputmask-hint">Placeholder kendi mask’i gibi görünsün</div>
-          </div>
+                                <!-- Phone -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Telefon</label>
+                                    <div class="input-group bb-inputmask-group">
+                                        <span class="input-group-text bb-inputmask-addon">
+                                            <span class="material-symbols-outlined">call</span>
+                                        </span>
+                                        <input id="bb_im_phone"
+                                               type="text"
+                                               class="form-control bb-inputmask bb-inputmask-monospace"
+                                               placeholder="(555) 123-4567"
+                                               data-inputmask="'mask': '(999) 999-9999'">
+                                    </div>
+                                    <div class="bb-inputmask-hint">Mask: (999) 999-9999</div>
+                                </div>
 
-          <!-- Repeating -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Repeating (10 hane)</label>
-            <input id="bb_im_repeat"
-                   type="text"
-                   class="form-control bb-inputmask bb-inputmask-monospace"
-                   placeholder="##########"
-                   data-inputmask="'mask': '9', 'repeat': 10, 'greedy': false">
-            <div class="bb-inputmask-hint">Mask: '9' repeat: 10</div>
-          </div>
+                                <!-- Placeholder style -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Placeholder</label>
+                                    <input id="bb_im_placeholder"
+                                           type="text"
+                                           class="form-control bb-inputmask bb-inputmask-monospace"
+                                           data-inputmask="'mask': '(999) 999-9999', 'placeholder': '(999) 999-9999'">
+                                    <div class="bb-inputmask-hint">Placeholder kendi mask’i gibi görünsün</div>
+                                </div>
 
-          <!-- Decimal (rightAlign false) -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Decimal (rightAlign false)</label>
-            <input id="bb_im_decimal"
-                   type="text"
-                   class="form-control bb-inputmask bb-inputmask-monospace"
-                   placeholder="12345.67"
-                   data-inputmask="'alias': 'decimal', 'rightAlign': false">
-            <div class="bb-inputmask-hint">Alias: decimal</div>
-          </div>
+                                <!-- Repeating -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Repeating (10 hane)</label>
+                                    <input id="bb_im_repeat"
+                                           type="text"
+                                           class="form-control bb-inputmask bb-inputmask-monospace"
+                                           placeholder="##########"
+                                           data-inputmask="'mask': '9', 'repeat': 10, 'greedy': false">
+                                    <div class="bb-inputmask-hint">Mask: '9' repeat: 10</div>
+                                </div>
 
-          <!-- Currency (manual init example) -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Currency (manuel init)</label>
-            <input id="bb_im_currency"
-                   type="text"
-                   class="form-control bb-inputmask bb-inputmask-monospace bb-inputmask-right"
-                   placeholder="€ 0,00">
-            <div class="bb-inputmask-hint">Manuel init: "€ 999.999.999,99" + numericInput</div>
-          </div>
+                                <!-- Decimal (rightAlign false) -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Decimal (rightAlign false)</label>
+                                    <input id="bb_im_decimal"
+                                           type="text"
+                                           class="form-control bb-inputmask bb-inputmask-monospace"
+                                           placeholder="12345.67"
+                                           data-inputmask="'alias': 'decimal', 'rightAlign': false">
+                                    <div class="bb-inputmask-hint">Alias: decimal</div>
+                                </div>
 
-          <!-- IP (manual init example) -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">IP Address (manuel init)</label>
-            <input id="bb_im_ip"
-                   type="text"
-                   class="form-control bb-inputmask bb-inputmask-monospace"
-                   placeholder="192.168.001.010">
-            <div class="bb-inputmask-hint">Mask: 999.999.999.999</div>
-          </div>
+                                <!-- Currency (manual init example) -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Currency (manuel init)</label>
+                                    <input id="bb_im_currency"
+                                           type="text"
+                                           class="form-control bb-inputmask bb-inputmask-monospace bb-inputmask-right"
+                                           placeholder="€ 0,00">
+                                    <div class="bb-inputmask-hint">Manuel init: "€ 999.999.999,99" + numericInput</div>
+                                </div>
 
-          <!-- Email (manual init example) -->
-          <div class="col-12 col-lg-6">
-            <label class="form-label fw-semibold">Email (manuel init)</label>
-            <input id="bb_im_email"
-                   type="text"
-                   class="form-control bb-inputmask"
-                   placeholder="name@domain.com">
-            <div class="bb-inputmask-hint">Custom mask + lowercase paste</div>
-          </div>
+                                <!-- IP (manual init example) -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">IP Address (manuel init)</label>
+                                    <input id="bb_im_ip"
+                                           type="text"
+                                           class="form-control bb-inputmask bb-inputmask-monospace"
+                                           placeholder="192.168.001.010">
+                                    <div class="bb-inputmask-hint">Mask: 999.999.999.999</div>
+                                </div>
 
-        </div>
-      </div>
+                                <!-- Email (manual init example) -->
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label fw-semibold">Email (manuel init)</label>
+                                    <input id="bb_im_email"
+                                           type="text"
+                                           class="form-control bb-inputmask"
+                                           placeholder="name@domain.com">
+                                    <div class="bb-inputmask-hint">Custom mask + lowercase paste</div>
+                                </div>
 
-      <div class="bb-card-footer">
-        <div class="bb-card-footer-text">
-          Inputmask örnekleri (data-init + manuel init)
-        </div>
-      </div>
-    </div>
+                            </div>
+                        </div>
 
-  </div>
+                        <div class="bb-card-footer">
+                            <div class="bb-card-footer-text">
+                                Inputmask örnekleri (data-init + manuel init)
+                            </div>
+                        </div>
+                    </div>
 
-  <!-- Inputmask (test only via CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
+                </div>
 
-    <script src="../../assets/js/core/bb-inputmask.js"></script>
+                <!-- Inputmask (test only via CDN) -->
+                <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
 
-  <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+                <script src="../../assets/js/core/bb-inputmask.js"></script>
+
+                <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 
         </main>
-<footer>
-</footer>
-  </div>
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>
