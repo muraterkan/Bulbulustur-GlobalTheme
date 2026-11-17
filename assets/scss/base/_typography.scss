@@ -140,6 +140,8 @@
   --bb-space-2: 0.5rem;
   --bb-space-3: 0.75rem;
   --bb-space-4: 1rem;
+  --bb-space-5: 1.25rem;
+  --bb-space-6: 1.5rem;
 
   --bb-heading-margin-bottom: var(--bb-space-2);
   --bb-paragraph-margin-bottom: var(--bb-space-4);
@@ -512,7 +514,7 @@ abbr[title] {
 mark {
   padding: var(--bb-mark-padding-y) var(--bb-mark-padding-x);
 
-  color: var(--bb-warning-inverse);
+  color: var(--bb-body-color);
   background-color: var(--bb-warning-light);
   border-radius: var(--bb-mark-radius);
 }
