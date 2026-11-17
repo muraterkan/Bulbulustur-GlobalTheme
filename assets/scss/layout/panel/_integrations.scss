@@ -260,6 +260,10 @@
   color: var(--bb-secondary-color);
 }
 
+.bb-panel .bb-integration-card-action.bb-action-menu-toggle {
+  display: grid;
+}
+
 .bb-panel .bb-integration-card-action:hover {
   background: var(--bb-tertiary-bg);
   color: var(--bb-primary-text);
