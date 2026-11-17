@@ -200,6 +200,11 @@ body {
   white-space: nowrap;
 }
 
+.bb-status-footer-links a:first-child {
+  color: var(--bb-heading-color);
+  font-weight: var(--bb-fw-bold);
+}
+
 .bb-status-footer-links a:hover {
   color: var(--bb-primary);
   text-decoration: none;
