@@ -6,7 +6,7 @@
   min-width: 0;
 }
 .bb-panel .bb-panel-topnav .bb-menu {
-  --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
+  --bb-menu-sub-z: var(--bb-z-dropdown);
   --bb-menu-link-font-size: var(--bb-panel-nav-size);
   --bb-menu-link-font-weight: var(--bb-panel-nav-weight);
   --bb-menu-link-color: var(--bb-panel-muted-color);
@@ -108,7 +108,7 @@
   min-width: var(--bb-menu-sub-min-width, 12rem);
   max-width: min(90vw, 24rem);
   padding: var(--bb-menu-sub-padding, 0.5rem);
-  z-index: var(--bb-z-dropdown, 1050);
+  z-index: var(--bb-z-dropdown);
   background: var(--bb-body-bg);
   color: var(--bb-body-color);
   border: var(--bb-border-width, 1px) solid var(--bb-border-color);
