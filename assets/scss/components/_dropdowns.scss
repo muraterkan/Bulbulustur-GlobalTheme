@@ -67,7 +67,7 @@
   top: calc(100% + 0.5rem);
   min-width: var(--bb-dd-minw, 140px);
   display: none;
-  z-index: 100;
+  z-index: var(--bb-z-dropdown);
 }
 
 .bb-dropdown.is-open .bb-dropdown-menu {
@@ -220,7 +220,7 @@
   --bb-dd-pad-y: var(--bb-space-2);
   --bb-dd-item-px: var(--bb-space-3);
   --bb-dd-item-py: var(--bb-space-3);
-  z-index: var(--bb-z-dropdown, 1050);
+  z-index: var(--bb-z-dropdown);
   font-size: var(--bb-fs-xs);
 }
 .bb-action-menu .bb-action-menu-list .dropdown-header {
