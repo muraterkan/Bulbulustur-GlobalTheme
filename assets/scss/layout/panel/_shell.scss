@@ -204,7 +204,7 @@
     position: fixed;
     inset-block: 0;
     inset-inline-start: 0;
-    z-index: var(--bb-z-drawer, 1055);
+    z-index: var(--bb-z-drawer);
     transform: translateX(-100%);
     transition: transform var(--bb-transition-normal);
     width: var(--bb-panel-sidebar-width);
@@ -221,7 +221,7 @@
     display: block;
     border: 0;
     background: color-mix(in srgb, var(--bb-black) 45%, transparent);
-    z-index: calc(var(--bb-z-drawer, 1055) - 1);
+    z-index: calc(var(--bb-z-drawer) - 1);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
