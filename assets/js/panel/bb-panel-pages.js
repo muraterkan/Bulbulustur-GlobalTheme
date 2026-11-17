@@ -82,6 +82,8 @@
     "utility-maintenance": {title:"Maintenance", group:"Utility Pages", section:"PAGES"},
     "widgets-tables": {title:"Tables", group:"Widget'lar", section:"PAGES"},
     "widgets-lists": {title:"Lists", group:"Widget'lar", section:"PAGES"},
+    "widgets-statistics": {title:"Statistics", group:"Widget\'lar", section:"PAGES"},
+    "widgets-charts": {title:"Charts", group:"Widget\'lar", section:"PAGES"},
     "projects-list": {title:"List", group:"Projects", section:"APPLICATIONS"},
     "projects-overview": {title:"Overview", group:"Projects", section:"APPLICATIONS"},
     "projects-create": {title:"Create", group:"Projects", section:"APPLICATIONS"},
