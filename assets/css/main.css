@@ -13115,6 +13115,40 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     position: static;
   }
 }
+/* Legacy service-page spacing fallback.
+   Keeps pre-public markup readable while older local HTML is still present. */
+.bb-panel .bb-service-page .bb-service-shell {
+  row-gap: 0;
+}
+
+.bb-panel .bb-service-page .bb-service-hero {
+  margin-bottom: calc(var(--bb-space-6) * 1.35);
+}
+
+.bb-panel .bb-service-page .bb-service-section-heading {
+  margin: 0 auto var(--bb-space-4);
+  padding-top: calc(var(--bb-space-5) * 1.15);
+}
+
+.bb-panel .bb-service-page .bb-service-benefits,
+.bb-panel .bb-service-page .bb-service-usecases,
+.bb-panel .bb-service-page .bb-service-stories,
+.bb-panel .bb-service-page .bb-service-faq,
+.bb-panel .bb-service-page > .bb-panel-content-container > .bb-service-shell > .bb-card:not(.bb-service-hero):not(.bb-service-cta) {
+  margin-bottom: calc(var(--bb-space-6) * 1.15);
+}
+
+.bb-panel .bb-service-page .bb-service-benefits + .bb-card,
+.bb-panel .bb-service-page .bb-service-usecases + .bb-service-section-heading,
+.bb-panel .bb-service-page .bb-service-stories + .bb-card,
+.bb-panel .bb-service-page .bb-card + .bb-service-faq {
+  margin-top: calc(var(--bb-space-4) * 1.15);
+}
+
+.bb-panel .bb-service-page .bb-service-cta {
+  margin-top: calc(var(--bb-space-6) * 1.35);
+}
+
 /* Public-facing product and corporate pages inside the panel shell.
    These pages deliberately avoid dashboard-card composition. */
 .bb-panel .bb-public-page {
