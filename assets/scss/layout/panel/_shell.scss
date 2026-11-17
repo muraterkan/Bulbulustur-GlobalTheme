@@ -8,13 +8,13 @@
   --bb-panel-content-gap: var(--bb-layout-gap, 1.5rem);
   --bb-panel-header-height: var(--bb-shell-header-height, 4rem);
   --bb-container-max-width: var(--bb-main-max-width, 1320px);
-  /* Panel typography: compact dashboard rhythm, sourced from global tokens. */
-  --bb-panel-title-size: var(--bb-h4);
+  /* Panel typography: readable dashboard rhythm, sourced from global tokens. */
+  --bb-panel-title-size: var(--bb-h3);
   --bb-panel-title-weight: var(--bb-fw-semibold);
   --bb-panel-title-color: var(--bb-emphasis-color);
-  --bb-panel-nav-size: var(--bb-fs-sm);
+  --bb-panel-nav-size: var(--bb-fs-base);
   --bb-panel-nav-weight: var(--bb-fw-medium);
-  --bb-panel-crumb-size: var(--bb-fs-xs);
+  --bb-panel-crumb-size: var(--bb-fs-sm);
   --bb-panel-muted-color: var(--bb-secondary-color);
   background: var(--bb-tertiary-bg);
   color: var(--bb-body-color);
@@ -39,10 +39,10 @@
   font-weight: var(--bb-fw-semibold);
 }
 
-/* Compact panel actions; keep global button scale and explicit sizes unchanged. */
+/* Panel actions use the base UI scale; explicit sm/lg sizes remain unchanged. */
 .bb-panel .btn:not(.btn-sm):not(.btn-lg),
 .bb-panel .bb-btn:not(.bb-btn-sm):not(.bb-btn-lg):not(.btn-sm):not(.btn-lg) {
-  --bb-btn-font-size: var(--bb-fs-sm);
+  --bb-btn-font-size: var(--bb-fs-base);
   --bb-btn-padding-x: var(--bb-space-4);
   --bb-btn-line-height: var(--bb-line-height-heading);
 }
