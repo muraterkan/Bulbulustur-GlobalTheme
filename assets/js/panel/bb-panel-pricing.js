@@ -84,9 +84,9 @@ function render(){
  var note=root.querySelector("[data-bb-pricing-saving]");
  if(note)note.textContent=cycle==="year"?"Yıllık tutarlar demo amaçlı %20 indirimli hesaplanmıştır.":"Yıllık plana geçerek örnek %20 avantajı görebilirsiniz.";
 }
-cycles.forEach(function(button){button.addEventListener("click",function(){cycle=button.dataset.bbPricingCycle;render();});});
+cycles.forEach(function(button){button.addEventListner("click",function(){cycle=button.dataset.bbPricingCycle;render();});});
 root.querySelectorAll("[data-bb-pricing-select]").forEach(function(button){
- button.addEventListener("click",function(){
+ button.addEventListner("click",function(){
   result.hidden=false;
   result.textContent=button.dataset.bbPricingSelect+" planı seçildi ("+(cycle==="month"?"aylık":"yıllık")+"). Bu yalnızca arayüz demosudur; ödeme veya abonelik oluşturulmadı.";
   result.focus();

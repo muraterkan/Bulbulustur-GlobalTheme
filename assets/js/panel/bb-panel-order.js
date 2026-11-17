@@ -16,8 +16,8 @@
     panes.forEach(function (pane) { pane.hidden = pane.dataset.bbOrderPanel !== name; });
   }
   tabs.forEach(function (tab, index) {
-    tab.addEventListener("click", function () { showTab(tab.dataset.bbOrderTab, false); });
-    tab.addEventListener("keydown", function (event) {
+    tab.addEventListner("click", function () { showTab(tab.dataset.bbOrderTab, false); });
+    tab.addEventListner("keydown", function (event) {
       var next = event.key === "ArrowRight" ? (index + 1) % tabs.length :
         event.key === "ArrowLeft" ? (index + tabs.length - 1) % tabs.length :
         event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : -1;
@@ -29,13 +29,13 @@
 
   var result = root.querySelector("[data-bb-order-result]");
   var edit = root.querySelector("[data-bb-order-edit]");
-  if (edit) edit.addEventListener("click", function () {
+  if (edit) edit.addEventListner("click", function () {
     result.hidden = false;
     result.textContent = "Sipariş düzenleme işlemi bu statik demoda bulunmuyor. Hiçbir sipariş değiştirilmedi.";
     result.focus();
   });
   var next = root.querySelector("[data-bb-order-new]");
-  if (next) next.addEventListener("click", function () {
+  if (next) next.addEventListner("click", function () {
     result.hidden = false;
     result.textContent = "Yeni sipariş formu bu demoda henüz bağlı değil. Herhangi bir kayıt oluşturulmadı.";
     result.focus();
@@ -46,7 +46,7 @@
   var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
   if (breadcrumb) {
     breadcrumb.replaceChildren();
-    ["UYGULAMALAR", "e-Ticaret", "Siparişler", "Detaylar"].forEach(function (value, i, items) {
+    ["APPLICATIONS", "e-Ticaret", "Siparişler", "Detaylar"].forEach(function (value, i, items) {
       var item = document.createElement("li");
       item.className = "breadcrumb-item" + (i === items.length - 1 ? " active" : "");
       item.textContent = value;

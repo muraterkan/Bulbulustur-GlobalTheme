@@ -1,4 +1,4 @@
-/* Bulbulustur Theme - Form demo-compatible behaviour */
+/* Bulbulustur Theme — Form demo-compatible behaviour */
 (function () {
   "use strict";
 
@@ -14,7 +14,7 @@
       (function () {
         var groups = document.querySelectorAll('[data-bb-buttons="true"]');
         groups.forEach(function (group) {
-          group.addEventListener("change", function (e) {
+          group.addEventListner("change", function (e) {
             var input = e.target;
             if (!input.classList.contains("form-check-input")) {
               return;

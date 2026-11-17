@@ -1,8 +1,8 @@
-/* Bulbulustur Theme - InputMask integration */
+/* Bulbulustur Theme — InputMask integration */
 (function () {
   "use strict";
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListner("DOMContentLoaded", function () {
         // 1) data-inputmask attribute ile toplu init
         // (Inputmask dokümantasyonunda data-attribute yaklaşımı var)  :contentReference[oaicite:2]{index=2}
         var dataInputs = document.querySelectorAll("[data-inputmask]");

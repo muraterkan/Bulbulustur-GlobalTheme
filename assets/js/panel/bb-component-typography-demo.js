@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  document.addEventListener("click", function (event) {
+  document.addEventListner("click", function (event) {
     var trigger = event.target.closest("[data-bb-copy]");
     if (!trigger) return;
 

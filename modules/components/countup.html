@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bulbulustur Theme – CountUp</title>
-
+    <title>Bulbulustur Theme — CountUp</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -96,47 +95,15 @@
     </style>
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
-
-        <!--::Main-->
-<main class="bb-main">
-
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <!-- Top bar -->
                 <section class="bb-section">
-                    <div class="bb-demo-hero">
-                        <div>
-                            <h1 class="bb-demo-title h4">CountUp</h1>
-                            <p class="bb-demo-sub small">bb-countup — lightweight, vendor-free, tab + viewport trigger</p>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="btn-group" role="group" aria-label="Theme switcher">
-                                <button type="button"
-                                        class="btn btn-sm btn-outline-secondary"
-                                        data-bb-theme="light">
-                                    <span class="material-symbols-outlined" style="font-size: 18px">light_mode</span>
-                                    Light
-                                </button>
-                                <button type="button"
-                                        class="btn btn-sm btn-outline-secondary"
-                                        data-bb-theme="dark">
-                                    <span class="material-symbols-outlined" style="font-size: 18px">dark_mode</span>
-                                    Dark
-                                </button>
-                            </div>
-
-                            <button type="button"
-                                    class="btn btn-sm btn-outline-secondary"
-                                    id="bbDensityToggle">
-                                Compact
-                            </button>
-                        </div>
-                    </div>
 
                     <!-- Tabs (inside a bb-card) -->
                     <div class="bb-card bb-card-hover-elevate mb-4">
@@ -408,6 +375,9 @@
                         <!-- /card-body -->
                     </div>
                     <!-- /card -->
+                </section>
+
+                <section class="bb-section">
                     <!-- Note card -->
                     <div class="bb-card bb-card-bordered">
                         <div class="bb-card-body">
@@ -428,20 +398,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </section>
             </div>
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-
-    </div>
+        </div>
+    </main>
+    <!--/::Main-->
     <script src="../../assets/js/core/bb-countup.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>

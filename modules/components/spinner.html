@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spinner</title>
-
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Bulbulustur Theme — Spinner</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
-
-        <!--::Main-->
-<main class="bb-main">
-
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
+
                 <section class="bb-section">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div>
@@ -41,7 +38,9 @@
                             <span class="bb-btn-spinner__label">Theme Toggle</span>
                         </button>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- 1) Border spinners -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-body">
@@ -59,7 +58,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- 2) Grow spinners -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-body">
@@ -77,7 +78,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- 3) Inside buttons -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-body">
@@ -91,7 +94,7 @@
 
                                 <button class="btn btn-success bb-btn-spinner" type="button" disabled>
                                     <span class="spinner-grow bb-spinner bb-spinner-xs bb-spinner-light bb-spinner-inline" role="status" aria-hidden="true"></span>
-                                    <span class="bb-btn-spinner__label">Onaylanıyor</span>
+                                    <span class="bb-btn-spinner__label">Approvenıyor</span>
                                 </button>
 
                                 <button class="btn btn-light bb-btn-spinner" type="button" disabled>
@@ -101,7 +104,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- 4) Card overlay -->
                     <div class="bb-card mb-4 bb-spinner-overlay-wrap">
                         <div class="bb-card-body">
@@ -123,32 +128,29 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        <!-- overlay layer -->
-                        <div class="bb-spinner-overlay is-active">
-                            <div class="d-flex flex-column align-items-center gap-2">
-                                <div class="spinner-border bb-spinner bb-spinner-lg bb-spinner-primary" role="status" aria-label="Loading"></div>
-                                <div class="text-muted small">Lütfen bekleyin…</div>
-                            </div>
+                <section class="bb-section">
+                    <!-- overlay layer -->
+                    <div class="bb-spinner-overlay is-active">
+                        <div class="d-flex flex-column align-items-center gap-2">
+                            <div class="spinner-border bb-spinner bb-spinner-lg bb-spinner-primary" role="status" aria-label="Loading"></div>
+                            <div class="text-muted small">Lütfen bekleyin…</div>
                         </div>
                     </div>
-
-                    <!-- footer hint -->
-                    <div class="text-muted small">
-                        İpucu: spinner rengi <code>color</code> üstünden gider (Bootstrap currentColor). Biz sadece token bridge yaptık.
-                    </div>
-
-
-
                 </section>
-            </div>
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
 
-    </div>
+            </div>
+
+            <!-- footer hint -->
+            <div class="text-muted small">
+                İpucu: spinner rengi <code>color</code> üstünden gider (Bootstrap currentColor). Biz sadece token bridge yaptık.
+            </div>
+            
+        </div>
+    </main>
+    <!--/::Main-->
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 <!--/::Body-->

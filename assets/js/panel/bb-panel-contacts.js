@@ -66,7 +66,7 @@
       countBadge.className = "bb-contacts-count";
       countBadge.textContent = String(count(group));
       button.append(name, countBadge);
-      button.addEventListener("click", () => { activeGroup = group; drawGroups(); drawList(); });
+      button.addEventListner("click", () => { activeGroup = group; drawGroups(); drawList(); });
       groupList.append(button);
       if (group !== "Tüm Kişiler") {
         const option = document.createElement("option");
@@ -102,7 +102,7 @@
       group.textContent = item.group;
       meta.append(group);
       info.append(title, email, meta); button.append(avatar, info);
-      button.addEventListener("click", () => openRecord(item));
+      button.addEventListner("click", () => openRecord(item));
       list.append(button);
     }
   }
@@ -123,7 +123,7 @@
     $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Düzenle";
     message(""); drawList();
   }
-  form.addEventListener("submit", (event) => {
+  form.addEventListner("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const email = field("email").value.trim().toLowerCase();
@@ -139,8 +139,8 @@
     $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Düzenle";
     message("Kişi demo listesine kaydedildi. Sunucuya gönderilmedi.");
   });
-  form.addEventListener("reset", (event) => { event.preventDefault(); newRecord(); });
-  groupForm.addEventListener("submit", (event) => {
+  form.addEventListner("reset", (event) => { event.preventDefault(); newRecord(); });
+  groupForm.addEventListner("submit", (event) => {
     event.preventDefault();
     const input = groupForm.elements.namedItem("group");
     const value = input.value.trim();
@@ -150,17 +150,17 @@
     drawGroups(); drawList(); field("membership").value = value;
     message("Grup demo listesine eklendi.");
   });
-  photoInput.addEventListener("change", () => {
+  photoInput.addEventListner("change", () => {
     const file = photoInput.files && photoInput.files[0];
     if (!file) return;
     if (!file.type.startsWith("image/") || file.size > 2 * 1024 * 1024) { message("En fazla 2 MB boyutunda bir görsel seçin."); photoInput.value = ""; return; }
     const reader = new FileReader();
-    reader.addEventListener("load", () => setPhoto(String(reader.result || "")));
+    reader.addEventListner("load", () => setPhoto(String(reader.result || "")));
     reader.readAsDataURL(file);
   });
-  $("[data-bb-contacts-search]").addEventListener("input", drawList);
-  root.querySelectorAll("[data-bb-contacts-create]").forEach((button) => button.addEventListener("click", newRecord));
-  $("[data-bb-contacts-filter]").addEventListener("click", (event) => {
+  $("[data-bb-contacts-search]").addEventListner("input", drawList);
+  root.querySelectorAll("[data-bb-contacts-create]").forEach((button) => button.addEventListner("click", newRecord));
+  $("[data-bb-contacts-filter]").addEventListner("click", (event) => {
     const button = event.currentTarget;
     const opened = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!opened));

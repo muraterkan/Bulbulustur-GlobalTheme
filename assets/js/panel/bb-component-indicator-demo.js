@@ -43,27 +43,27 @@
       var forceOffAll = document.querySelector("#bb_indicator_force_off_all");
 
       if (btnSubmit) {
-        btnSubmit.addEventListener("click", function () { runIndicator(btnSubmit, 1800); });
+        btnSubmit.addEventListner("click", function () { runIndicator(btnSubmit, 1800); });
       }
 
       if (btnProcess) {
-        btnProcess.addEventListener("click", function () { runIndicator(btnProcess, 2400); });
+        btnProcess.addEventListner("click", function () { runIndicator(btnProcess, 2400); });
       }
 
       if (btnSync) {
-        btnSync.addEventListener("click", function () { runIndicator(btnSync, 2000); });
+        btnSync.addEventListner("click", function () { runIndicator(btnSync, 2000); });
       }
 
       if (btnRefresh) {
-        btnRefresh.addEventListener("click", function () { runIndicator(btnRefresh, 1200); });
+        btnRefresh.addEventListner("click", function () { runIndicator(btnRefresh, 1200); });
       }
 
       if (btnFormSave) {
-        btnFormSave.addEventListener("click", function () { runIndicator(btnFormSave, 2200); });
+        btnFormSave.addEventListner("click", function () { runIndicator(btnFormSave, 2200); });
       }
 
       if (forceOffAll) {
-        forceOffAll.addEventListener("click", function () {
+        forceOffAll.addEventListner("click", function () {
           [btnSubmit, btnProcess, btnSync, btnRefresh, btnFormSave].forEach(function (b) {
             setIndicatorOn(b, false);
           });

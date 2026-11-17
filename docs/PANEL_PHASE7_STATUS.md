@@ -8,11 +8,11 @@ Tarih: 2026-11-15
 - `assets/js/bb-panel-pages.js`: Statik `?page=<id>` navigasyonu, seçili menü, aria-current, breadcrumb ve başlığın eşleştirilmesi. Tanımsız sayfa kimliği güvenli varsayılana döner.
 - `assets/scss/layout/_panel-pages.scss`: Yalnız boş sayfa navigasyonuna ait sınıflar; mevcut kart, breadcrumb, menu, empty-state stilinin tekrarını içermez.
 - `assets/scss/main.scss`: Faz 7 partial'ı eklendi.
-- Sayfalar bilinçli olarak ayrı ayrı HTML dosyalarına kopyalanmadı: henüz nihai menü kapsamı ve dil onayı bulunmadığı için ortak demo gösterimi uygulanıyor.
+- Pages bilinçli olarak ayrı ayrı HTML dosyalarına kopyalanmadı: henüz nihai menü kapsamı ve dil onayı bulunmadığı için ortak demo gösterimi uygulanıyor.
 
 ## Doğrulama
 
-- Kullanıcı çıktı kanıtı: `npm run build:css` başarılı; `npm run check:contracts` 22/22 PASS — **Faz 7 commit'lerinden önceki kod için**.
+- User çıktı kanıtı: `npm run build:css` başarılı; `npm run check:contracts` 22/22 PASS — **Faz 7 commit'lerinden önceki kod için**.
 - Faz 7 sonrası GitHub'dan dosyalar tekrar okundu.
 - `bb-panel-pages.js` V8 Function sözdizimi kontrolünden geçti.
 - HTML'de `div`, `nav`, `aside`, `header`, `main`, `section`, `footer`, `button`, `span` başlangıç/bitiş adetlerinde eşitsizlik görülmedi.

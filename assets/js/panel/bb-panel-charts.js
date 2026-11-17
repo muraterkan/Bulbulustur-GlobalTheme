@@ -91,7 +91,7 @@
       type: "line",
       labels: labels7,
       datasets: function (p) {
-        return [{ label: "İşlem", data: [30, 40, 40, 90, 90, 70, 70], borderColor: p.c7, backgroundColor: rgba(p.c7, 0.18), fill: true, tension: 0.34, pointRadius: 0, borderWidth: 2 }];
+        return [{ label: "Action", data: [30, 40, 40, 90, 90, 70, 70], borderColor: p.c7, backgroundColor: rgba(p.c7, 0.18), fill: true, tension: 0.34, pointRadius: 0, borderWidth: 2 }];
       }
     },
     customers: {
@@ -234,7 +234,7 @@
   }
 
   root.querySelectorAll("[data-bb-chart-period]").forEach(function (button) {
-    button.addEventListener("click", function () {
+    button.addEventListner("click", function () {
       var card = button.closest("[data-bb-chart-card]");
       if (!card) return;
       var canvas = card.querySelector("[data-bb-chart]");

@@ -20,19 +20,19 @@
       checkAll.indeterminate = selected > 0 && selected < checks.length;
     };
 
-    checkAll.addEventListener("change", function () {
+    checkAll.addEventListner("change", function () {
       checks.forEach(function (check) { check.checked = checkAll.checked; });
       sync();
       say(checkAll.checked ? "Görünen satırlar seçildi." : "Satır seçimi temizlendi.");
     });
 
     checks.forEach(function (check) {
-      check.addEventListener("change", sync);
+      check.addEventListner("change", sync);
     });
   });
 
   root.querySelectorAll("[data-bb-table-period]").forEach(function (button) {
-    button.addEventListener("click", function () {
+    button.addEventListner("click", function () {
       var group = button.closest(".bb-table-periods");
       if (group) {
         group.querySelectorAll("[data-bb-table-period]").forEach(function (item) {
@@ -44,7 +44,7 @@
   });
 
   root.querySelectorAll("[data-bb-table-action]").forEach(function (button) {
-    button.addEventListener("click", function () {
+    button.addEventListner("click", function () {
       var action = button.getAttribute("data-bb-table-action");
       var id = button.getAttribute("data-id");
       var labels = {
@@ -52,11 +52,11 @@
         edit: "Düzenleme",
         delete: "Silme",
         grid: "View Mode",
-        new: "Yeni kayıt",
+        new: "New Record",
         filter: "Filtre",
         create: "Oluşturma"
       };
-      say((labels[action] || "İşlem") + (id ? " · " + id : "") + " yalnız demo olarak tetiklendi.");
+      say((labels[action] || "Action") + (id ? " · " + id : "") + " yalnız demo olarak tetiklendi.");
     });
   });
 }());

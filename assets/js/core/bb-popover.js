@@ -1,4 +1,4 @@
-/* Bulbulustur Theme - Popover integration */
+/* Bulbulustur Theme — Popover integration */
 (function () {
   "use strict";
 

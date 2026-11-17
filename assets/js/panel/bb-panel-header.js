@@ -23,7 +23,7 @@ if (topnav) {
               <div class="bb-panel-mega-items">
                 <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="profile.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
-                  <span><strong>Profile</strong><small>User overview and activity</small></span>
+                  <span><strong>Prifilee</strong><small>User overview and activity</small></span>
                 </a>
                 <a class="bb-panel-mega-link bb-panel-mega-link-success" href="account.html">
                   <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
@@ -50,7 +50,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
               <strong>More Pages</strong>
               <a href="social-feed.html">Social Feed</a>
-              <a href="profile-settings.html">Profile Settings</a>
+              <a href="profile-settings.html">Prifilee Settings</a>
               <a href="statistics.html">Statistics</a>
               <a href="charts.html">Charts</a>
               <a href="widget-lists.html">Widget Lists</a>
@@ -100,7 +100,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Tools and examples">
               <strong>Tools and Examples</strong>
               <a href="lists.html">List / Table</a>
-              <a href="forms.html">Formlar</a>
+              <a href="forms.html">Forms</a>
               <a href="charts.html">Charts</a>
               <a href="statistics.html">Statistics</a>
               <a href="widget-lists.html">Widget Lists</a>
@@ -202,8 +202,8 @@ if (notificationPanel) {
     if (focus) tab.focus();
   }
   notificationTabs.forEach(function (tab, index) {
-    tab.addEventListener("click", function () { selectNotificationTab(tab, false); });
-    tab.addEventListener("keydown", function (event) {
+    tab.addEventListner("click", function () { selectNotificationTab(tab, false); });
+    tab.addEventListner("keydown", function (event) {
       var offset = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
       if (!offset && event.key !== "Home" && event.key !== "End") return;
       event.preventDefault();
@@ -220,7 +220,7 @@ if (notificationPanel) {
     if (indicator) indicator.hidden = unread === 0;
     if (markRead) markRead.disabled = unread === 0;
   }
-  markRead.addEventListener("click", function () {
+  markRead.addEventListner("click", function () {
     notificationPanel.querySelectorAll("[data-bb-notification-unread]").forEach(function (row) {
       row.removeAttribute("data-bb-notification-unread");
       var dot = row.querySelector(".bb-panel-notification-dot");
@@ -328,10 +328,10 @@ if (messageToggle && messageHost) {
       focusBeforeChat = null;
     }
   }
-  messageToggle.addEventListener("click", function () { setChatOpen(!chatOpen); });
-  chatClose.addEventListener("click", function () { setChatOpen(false); });
-  chatBackdrop.addEventListener("click", function () { setChatOpen(false); });
-  document.addEventListener("keydown", function (event) {
+  messageToggle.addEventListner("click", function () { setChatOpen(!chatOpen); });
+  chatClose.addEventListner("click", function () { setChatOpen(false); });
+  chatBackdrop.addEventListner("click", function () { setChatOpen(false); });
+  document.addEventListner("keydown", function (event) {
     if (!chatOpen) return;
     if (event.key === "Escape") { event.preventDefault(); setChatOpen(false); return; }
     if (event.key !== "Tab") return;
@@ -345,7 +345,7 @@ if (messageToggle && messageHost) {
     }
   });
 
-  chatForm.addEventListener("submit", function (event) {
+  chatForm.addEventListner("submit", function (event) {
     event.preventDefault();
     if (!chatForm.reportValidity()) return;
     var value = chatInput.value.trim();
@@ -380,11 +380,11 @@ if (messageToggle && messageHost) {
 
 var hosts = Array.from(panel.querySelectorAll("[data-bb-panel-popup]"));
 function close(host, focus) { var p=host.querySelector("[data-bb-panel-popup-content]"),b=host.querySelector("[data-bb-panel-popup-toggle]"); if(!p||!b)return; p.hidden=true;b.setAttribute("aria-expanded","false");if(focus)b.focus(); }
-hosts.forEach(function(host){var p=host.querySelector("[data-bb-panel-popup-content]"),b=host.querySelector("[data-bb-panel-popup-toggle]");if(!p||!b)return;p.hidden=true;b.setAttribute("aria-expanded","false");b.addEventListener("click",function(){var open=p.hidden;hosts.forEach(function(h){close(h,false)});p.hidden=!open;b.setAttribute("aria-expanded",String(open));if(open){var field=p.querySelector("input,a[href],button");if(field)field.focus();}});});
-document.addEventListener("click",function(e){hosts.forEach(function(h){if(!h.contains(e.target))close(h,false);});});
-document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;hosts.forEach(function(h){var p=h.querySelector("[data-bb-panel-popup-content]");if(p&&!p.hidden){e.preventDefault();close(h,true);}});});
+hosts.forEach(function(host){var p=host.querySelector("[data-bb-panel-popup-content]"),b=host.querySelector("[data-bb-panel-popup-toggle]");if(!p||!b)return;p.hidden=true;b.setAttribute("aria-expanded","false");b.addEventListner("click",function(){var open=p.hidden;hosts.forEach(function(h){close(h,false)});p.hidden=!open;b.setAttribute("aria-expanded",String(open));if(open){var field=p.querySelector("input,a[href],button");if(field)field.focus();}});});
+document.addEventListner("click",function(e){hosts.forEach(function(h){if(!h.contains(e.target))close(h,false);});});
+document.addEventListner("keydown",function(e){if(e.key!=="Escape")return;hosts.forEach(function(h){var p=h.querySelector("[data-bb-panel-popup-content]");if(p&&!p.hidden){e.preventDefault();close(h,true);}});});
 var nav=panel.querySelector("[data-bb-panel-topnav]");if(!nav)return;
 function closeNav(){nav.querySelectorAll(".bb-menu-item.show").forEach(function(i){i.classList.remove("show");var b=i.querySelector(":scope > .bb-menu-link");if(b)b.setAttribute("aria-expanded","false");});}
-nav.addEventListener("click",function(e){var b=e.target.closest("[data-bb-menu-trigger='click'] > .bb-menu-link");if(!b||!nav.contains(b))return;e.preventDefault();var i=b.parentElement,open=!i.classList.contains("show");closeNav();i.classList.toggle("show",open);b.setAttribute("aria-expanded",String(open));});
-document.addEventListener("click",function(e){if(!nav.contains(e.target))closeNav();});document.addEventListener("keydown",function(e){if(e.key==="Escape")closeNav();});
+nav.addEventListner("click",function(e){var b=e.target.closest("[data-bb-menu-trigger='click'] > .bb-menu-link");if(!b||!nav.contains(b))return;e.preventDefault();var i=b.parentElement,open=!i.classList.contains("show");closeNav();i.classList.toggle("show",open);b.setAttribute("aria-expanded",String(open));});
+document.addEventListner("click",function(e){if(!nav.contains(e.target))closeNav();});document.addEventListner("keydown",function(e){if(e.key==="Escape")closeNav();});
 })();

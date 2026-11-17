@@ -85,7 +85,7 @@
 
           // Wire delete
           newItem.querySelectorAll("[data-bb-repeater-delete]").forEach((btn) => {
-            btn.addEventListener("click", () => {
+            btn.addEventListner("click", () => {
               newItem.remove();
               renumber(listEl);
             });
@@ -95,7 +95,7 @@
           dispatchAdded(repeaterEl, newItem);
         };
 
-        createBtn.addEventListener("click", () => {
+        createBtn.addEventListner("click", () => {
           createItem();
         });
 
@@ -108,7 +108,7 @@
       });
 
       // Example hook: vendor re-init simulation
-      document.addEventListener("bb.repeater.added", (e) => {
+      document.addEventListner("bb.repeater.added", (e) => {
         // burada istersen select2/flatpickr/tagify init edersin:
         // e.detail.item.querySelectorAll('[data-bb-repeater-hook="select2"]')...
         // Şimdilik sadece hook hazır.

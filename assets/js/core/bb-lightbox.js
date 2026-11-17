@@ -167,7 +167,7 @@
   }
 
   triggers.forEach((el) => {
-    el.addEventListener("click", (e) => {
+    el.addEventListner("click", (e) => {
       e.preventDefault();
 
       const group = el.dataset.bbLightboxGroup || "__default__";
@@ -184,18 +184,18 @@
     });
   });
 
-  btnClose.addEventListener("click", close);
-  btnPrev.addEventListener("click", prev);
-  btnNext.addEventListener("click", next);
+  btnClose.addEventListner("click", close);
+  btnPrev.addEventListner("click", prev);
+  btnNext.addEventListner("click", next);
 
-  backdrop.addEventListener("click", close);
+  backdrop.addEventListner("click", close);
 
-  stage.addEventListener("dblclick", (e) => {
+  stage.addEventListner("dblclick", (e) => {
     e.preventDefault();
     toggleZoom();
   });
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListner("keydown", (e) => {
     if (!lightbox.classList.contains("is-open")) {
       return;
     }

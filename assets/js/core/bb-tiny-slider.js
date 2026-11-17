@@ -1,4 +1,4 @@
-/* Bulbulustur Theme - Tiny Slider family */
+/* Bulbulustur Theme — Tiny Slider family */
 
 (function () {
       "use strict";
@@ -27,7 +27,7 @@
           dot.type = 'button';
           dot.className = 'bb-ts-dot';
           dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-          dot.addEventListener('click', function () {
+          dot.addEventListner('click', function () {
             goTo(i);
           });
           nav.appendChild(dot);
@@ -73,15 +73,15 @@
 
         // Click controls
         if (btnPrev) {
-          btnPrev.addEventListener('click', function () { goTo(state.index - 1); });
+          btnPrev.addEventListner('click', function () { goTo(state.index - 1); });
         }
         if (btnNext) {
-          btnNext.addEventListener('click', function () { goTo(state.index + 1); });
+          btnNext.addEventListner('click', function () { goTo(state.index + 1); });
         }
 
         // Active state by scroll (light)
         var ticking = false;
-        track.addEventListener('scroll', function () {
+        track.addEventListner('scroll', function () {
           if (ticking) return;
           ticking = true;
 
@@ -106,7 +106,7 @@
         goTo(0);
 
         // Recalc on resize
-        window.addEventListener('resize', function () {
+        window.addEventListner('resize', function () {
           goTo(state.index);
         });
       }
@@ -118,13 +118,13 @@
       // Demo: item count buttons
       var slider = document.querySelector('[data-bb-slider]');
       if (slider) {
-        document.getElementById('btnItems1').addEventListener('click', function () {
+        document.getElementById('btnItems1').addEventListner('click', function () {
           slider.setAttribute('data-bb-items', '1');
         });
-        document.getElementById('btnItems2').addEventListener('click', function () {
+        document.getElementById('btnItems2').addEventListner('click', function () {
           slider.setAttribute('data-bb-items', '2');
         });
-        document.getElementById('btnItems3').addEventListener('click', function () {
+        document.getElementById('btnItems3').addEventListner('click', function () {
           slider.setAttribute('data-bb-items', '3');
         });
       }
@@ -234,30 +234,30 @@
         var btnNext = document.querySelector('[data-bb-adv-next]');
 
         if (btnPrev) {
-          btnPrev.addEventListener('click', function () {
+          btnPrev.addEventListner('click', function () {
             prevPage();
             startAutoplay();
           });
         }
 
         if (btnNext) {
-          btnNext.addEventListener('click', function () {
+          btnNext.addEventListner('click', function () {
             nextPage();
             startAutoplay();
           });
         }
 
         // Pause on hover (desktop)
-        root.addEventListener('mouseenter', function () {
+        root.addEventListner('mouseenter', function () {
           stopAutoplay();
         });
-        root.addEventListener('mouseleave', function () {
+        root.addEventListner('mouseleave', function () {
           startAutoplay();
         });
 
         // Keep state roughly in sync with scroll
         var ticking = false;
-        track.addEventListener('scroll', function () {
+        track.addEventListner('scroll', function () {
           if (ticking) {
             return;
           }
@@ -289,7 +289,7 @@
         startAutoplay();
 
         // Resize fix
-        window.addEventListener('resize', function () {
+        window.addEventListner('resize', function () {
           goToPage(state.page);
         });
       }
@@ -424,7 +424,7 @@
 
         // Thumb click
         thumbs.forEach(function (t, idx) {
-          t.addEventListener('click', function () {
+          t.addEventListner('click', function () {
             goToIndex(idx);
             startAutoplay();
           });
@@ -435,26 +435,26 @@
         var btnNext = document.querySelector('[data-bb-thumb-next]');
 
         if (btnPrev) {
-          btnPrev.addEventListener('click', function () {
+          btnPrev.addEventListner('click', function () {
             prev();
             startAutoplay();
           });
         }
 
         if (btnNext) {
-          btnNext.addEventListener('click', function () {
+          btnNext.addEventListner('click', function () {
             next();
             startAutoplay();
           });
         }
 
         // Pause on hover
-        root.addEventListener('mouseenter', function () { stopAutoplay(); });
-        root.addEventListener('mouseleave', function () { startAutoplay(); });
+        root.addEventListner('mouseenter', function () { stopAutoplay(); });
+        root.addEventListner('mouseleave', function () { startAutoplay(); });
 
         // Sync on scroll (light)
         var ticking = false;
-        track.addEventListener('scroll', function () {
+        track.addEventListner('scroll', function () {
           if (ticking) {
             return;
           }
@@ -487,7 +487,7 @@
         goToIndex(0);
         startAutoplay();
 
-        window.addEventListener('resize', function () {
+        window.addEventListner('resize', function () {
           goToIndex(state.index);
         });
       }

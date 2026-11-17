@@ -3,7 +3,7 @@
 Tarih: 2026-11-15  
 Depo: `muraterkan/Bulbulustur-GlobalTheme` / `main`
 
-## İncelenen kaynaklar
+## Examinenen kaynaklar
 
 - `assets/scss/main.scss`, `layout/_layout.scss`, `_sidebar.scss`, `_header.scss`, `_toolbar1.scss`, `_footer.scss`
 - `components/_menu.scss`, `_dropdowns.scss`, `_drawer.scss`, `_cards.scss`

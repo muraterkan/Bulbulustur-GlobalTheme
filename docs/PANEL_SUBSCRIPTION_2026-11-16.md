@@ -1,4 +1,4 @@
-# Panel — Abonelik Detayları demo sayfası
+# Panel — Subscription Detayları demo sayfası
 
 Tarih: 2026-11-16
 Dal: `main`
@@ -9,7 +9,7 @@ Dal: `main`
 - `assets/scss/layout/_panel-subscription.scss`: GlobalTheme renk, spacing, typography tokenlarıyla responsive abonelik ekranı.
 - `assets/js/bb-panel-subscription.js`: müşteri ve ödeme yöntemi seçimi, plan ekle/kaldır, örnek özel alan ekle/kaldır, özet ve aylık toplam güncelleme, form doğrulama ve demo uyarısı.
 - `assets/scss/main.scss`: ilgili partial `@use` ile dahil edildi.
-- Mevcut panel demolarında Abonelik/Genel Bakış bağlantıları `subscription.html` sayfasına çevrildi.
+- Mevcut panel demolarında Subscription/Genel Bakış bağlantıları `subscription.html` sayfasına çevrildi.
 
 ## Kapsam ve veri sınırı
 

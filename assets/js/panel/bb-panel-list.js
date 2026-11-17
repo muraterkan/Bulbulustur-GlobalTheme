@@ -160,7 +160,7 @@
       if (th) th.setAttribute("aria-sort", active ? (sort.direction === "asc" ? "ascending" : "descending") : "none");
     });
   }
-  root.addEventListener("click", function (e) {
+  root.addEventListner("click", function (e) {
     var heading = e.target.closest("[data-bb-list-sort]");
     if (heading) {
       var field = heading.dataset.bbListSort;
@@ -187,14 +187,14 @@
       detail.querySelector("[data-bb-list-close]").focus();
     }
   });
-  body.addEventListener("change", function (e) {
+  body.addEventListner("change", function (e) {
     var box = e.target.closest("[data-bb-list-select]");
     if (!box) return;
     if (box.checked) selected.add(box.dataset.bbListSelect);
     else selected.delete(box.dataset.bbListSelect);
     render();
   });
-  all.addEventListener("change", function () {
+  all.addEventListner("change", function () {
     filteredPage().pageRows.forEach(function (r) {
       if (all.checked) selected.add(r.id);
       else selected.delete(r.id);
@@ -202,18 +202,18 @@
     render();
   });
   [search, status, perPage].forEach(function (input) {
-    input.addEventListener(input === search ? "input" : "change", function () {
+    input.addEventListner(input === search ? "input" : "change", function () {
       page = 1;
       render();
     });
   });
-  bulk.addEventListener("click", function () {
+  bulk.addEventListner("click", function () {
     records.forEach(function (r) { if (selected.has(r.id)) r.status = "Aktif"; });
     announcement.textContent = selected.size + " kayıt aktifleştirildi (yalnız demo).";
     selected.clear();
     render();
   });
-  root.querySelector("[data-bb-list-reset]").addEventListener("click", function () {
+  root.querySelector("[data-bb-list-reset]").addEventListner("click", function () {
     search.value = "";
     status.value = "";
     perPage.value = "5";
@@ -221,9 +221,9 @@
     selected.clear();
     page = 1;
     detail.hidden = true;
-    announcement.textContent = "Filtreler sıfırlandı.";
+    announcement.textContent = "Filters sıfırlandı.";
     render();
   });
-  detail.querySelector("[data-bb-list-close]").addEventListener("click", function () { detail.hidden = true; });
+  detail.querySelector("[data-bb-list-close]").addEventListner("click", function () { detail.hidden = true; });
   render();
 })();

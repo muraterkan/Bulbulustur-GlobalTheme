@@ -1,5 +1,5 @@
 /* =====================================
-   Bulbulustur Theme - Dialer (PURE)
+   Bulbulustur Theme — Dialer (PURE)
    Data API: data-bb-dialer="true"
    Controls:
      [data-bb-dialer-control="decrease"]
@@ -132,10 +132,10 @@
       this._onIncreaseClick = this._onIncreaseClick.bind(this);
 
       if (this._btnDecrease) {
-        this._btnDecrease.addEventListener("click", this._onDecreaseClick);
+        this._btnDecrease.addEventListner("click", this._onDecreaseClick);
       }
       if (this._btnIncrease) {
-        this._btnIncrease.addEventListener("click", this._onIncreaseClick);
+        this._btnIncrease.addEventListner("click", this._onIncreaseClick);
       }
 
       // init
@@ -285,10 +285,10 @@
 
     destroy() {
       if (this._btnDecrease) {
-        this._btnDecrease.removeEventListener("click", this._onDecreaseClick);
+        this._btnDecrease.removeEventListner("click", this._onDecreaseClick);
       }
       if (this._btnIncrease) {
-        this._btnIncrease.removeEventListener("click", this._onIncreaseClick);
+        this._btnIncrease.removeEventListner("click", this._onIncreaseClick);
       }
 
       BBDialer.instances.delete(this._el);
@@ -299,7 +299,7 @@
   window.BBDialer = BBDialer;
 
   // Auto init
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListner("DOMContentLoaded", function () {
     BBDialer.createInstances();
   });
 })();

@@ -28,7 +28,7 @@ function render(){
   var name=element("a","",o.customer);name.href=link.href;person.append(avatar,name);customer.append(person);
   var state=element("td"),badge=element("span","badge bb-badge "+(o.status==="Tamamlandı"?"bb-badge-light-success":o.status==="Beklemede"?"bb-badge-light-warning":o.status==="İade"?"bb-badge-light-primary":"bb-badge-light-danger"),o.status);state.append(badge);
   var total=element("td","",money(o.total)),added=element("td","",labelDate(o.created)),modified=element("td","",labelDate(o.modified));
-  var actions=element("td"),dropdown=element("div","dropdown bb-action-menu"),trigger=element("button","btn bb-btn-secondary btn-sm bb-action-menu-toggle","İşlemler");trigger.type="button";trigger.setAttribute("data-bs-toggle","dropdown");trigger.setAttribute("aria-expanded","false");trigger.setAttribute("aria-label","Sipariş "+o.id+" işlemleri");
+  var actions=element("td"),dropdown=element("div","dropdown bb-action-menu"),trigger=element("button","btn bb-btn-secondary btn-sm bb-action-menu-toggle","Actionler");trigger.type="button";trigger.setAttribute("data-bs-toggle","dropdown");trigger.setAttribute("aria-expanded","false");trigger.setAttribute("aria-label","Sipariş "+o.id+" işlemleri");
   var menu=element("ul","dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list");
   [["Görüntüle","view"],["Düzenle","edit"],["Sil","delete"]].forEach(function(action){var li=element("li");if(action[1]==="view"){var a=element("a","dropdown-item",action[0]);a.href=link.href;a.title="Örnek sipariş #14534 (bu satırın gerçek detayı değil)";li.append(a);}else{var b=element("button","dropdown-item",action[0]);b.type="button";b.dataset.bbOrdersAction=action[1];b.dataset.bbOrdersId=o.id;li.append(b);}menu.append(li);});dropdown.append(trigger,menu);actions.append(dropdown);
   tr.append(select,id,customer,state,total,added,modified,actions);body.append(tr);
@@ -42,16 +42,16 @@ function render(){
  function pageButton(label,target,disabled,active){var li=element("li","page-item"+(disabled?" disabled":"")+(active?" active":""));var button=element("button","page-link",label);button.type="button";button.disabled=disabled;button.dataset.bbOrdersPage=String(target);if(active)button.setAttribute("aria-current","page");li.append(button);pages.append(li);}
  pageButton("‹",page-1,page===1,false);for(var i=1;i<=maxPage;i++)pageButton(String(i),i,false,i===page);pageButton("›",page+1,page===maxPage,false);
 }
-[search,from,to,status,limit].forEach(function(control){control.addEventListener(control===search?"input":"change",function(){page=1;render();});});
-root.addEventListener("change",function(event){var selected=event.target.closest("[data-bb-orders-select]");if(selected){if(selected.checked)selection.add(selected.dataset.bbOrdersSelect);else selection.delete(selected.dataset.bbOrdersSelect);render();}});
-checkAll.addEventListener("change",function(){var size=Number(limit.value);filtered().slice((page-1)*size,page*size).forEach(function(o){if(checkAll.checked)selection.add(o.id);else selection.delete(o.id);});render();});
-root.addEventListener("click",function(event){var button=event.target.closest("[data-bb-orders-page]");if(button&&!button.disabled){page=Number(button.dataset.bbOrdersPage);render();return;}
+[search,from,to,status,limit].forEach(function(control){control.addEventListner(control===search?"input":"change",function(){page=1;render();});});
+root.addEventListner("change",function(event){var selected=event.target.closest("[data-bb-orders-select]");if(selected){if(selected.checked)selection.add(selected.dataset.bbOrdersSelect);else selection.delete(selected.dataset.bbOrdersSelect);render();}});
+checkAll.addEventListner("change",function(){var size=Number(limit.value);filtered().slice((page-1)*size,page*size).forEach(function(o){if(checkAll.checked)selection.add(o.id);else selection.delete(o.id);});render();});
+root.addEventListner("click",function(event){var button=event.target.closest("[data-bb-orders-page]");if(button&&!button.disabled){page=Number(button.dataset.bbOrdersPage);render();return;}
  var action=event.target.closest("[data-bb-orders-action]");if(action){info(action.dataset.bbOrdersAction==="edit"?"#"+action.dataset.bbOrdersId+" düzenleme demosu: Sipariş değiştirilmedi.":"#"+action.dataset.bbOrdersId+" silme demosu: Hiçbir kayıt silinmedi.");return;}
  if(event.target.closest("[data-bb-orders-bulk]")){info(selection.size+" seçili sipariş. Toplu işlem demo kapsamındadır; veri değiştirilmedi.");return;}
  if(event.target.closest("[data-bb-orders-new]"))info("Yeni sipariş işlemi demo kapsamındadır; kayıt oluşturulmadı.");
  if(event.target.closest("[data-bb-orders-clear]")){search.value="";from.value="";to.value="";status.value="";limit.value="10";selection.clear();page=1;notice.hidden=true;render();}
 });
-var title=document.querySelector(".bb-page-title");if(title)title.textContent="Sipariş Listesi";
-var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");if(crumb){crumb.replaceChildren();["UYGULAMALAR","e-Ticaret","Siparişler"].forEach(function(value,i){var li=element("li","breadcrumb-item"+(i===2?" active":""),value);if(i===2)li.setAttribute("aria-current","page");crumb.append(li);});}
+var title=document.querySelector(".bb-page-title");if(title)title.textContent="Sipariş Listsi";
+var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");if(crumb){crumb.replaceChildren();["APPLICATIONS","e-Ticaret","Siparişler"].forEach(function(value,i){var li=element("li","breadcrumb-item"+(i===2?" active":""),value);if(i===2)li.setAttribute("aria-current","page");crumb.append(li);});}
 render();
 })();

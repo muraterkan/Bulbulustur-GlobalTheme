@@ -3,9 +3,10 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bulbulustur — Panel Kabuk (Faz 2)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Panel Kabuk (Faz 2)</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -23,7 +24,7 @@
                 <button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet">
                     <span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span>
                 </button>
-                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Menüyü kapat">
+                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Close Menu">
                     <span class="material-symbols-outlined" aria-hidden="true">close</span>
                 </button>
             </div>
@@ -44,7 +45,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined">person</span>
                             </span>
-                            <span class="bb-menu-title">User Profile</span>
+                            <span class="bb-menu-title">User Prifilee</span>
                             <span class="bb-menu-arrow"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_menu_profile">
@@ -106,7 +107,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="../components/forms.html">
                                         <span class="bb-menu-bullet"></span>
-                                        <span class="bb-menu-title">Formlar</span>
+                                        <span class="bb-menu-title">Forms</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -118,13 +119,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">UYGULAMALAR</div>
+                    <div class="bb-menu-section">APPLICATIONS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_menu_apps">
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined">apps</span>
                             </span>
-                            <span class="bb-menu-title">Uygulamalar</span>
+                            <span class="bb-menu-title">Applications</span>
                             <span class="bb-menu-arrow"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_menu_apps">
@@ -160,7 +161,7 @@
             </div>
         </aside>
 
-        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Menüyü kapat" aria-hidden="true" tabindex="-1"></button>
+        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close Menu" aria-hidden="true" tabindex="-1"></button>
 
         <div class="bb-shell">
             <header class="bb-shell-header">
@@ -182,10 +183,9 @@
                 </div>
             </header>
 
-
-
             <!--::Main-->
             <main class="bb-main">
+                <!--::Wrapper-->
                 <div class="bb-wrapper">
                     <div class="bb-container">
                         <div class="bb-toolbar">
@@ -209,8 +209,10 @@
 
                         <section class="bb-content" aria-label="Sayfa içeriği">
                             <div class="bb-panel-content-container">
-                                <div class="bb-card">
-                                    <div class="bb-card-header"><h2 class="bb-card-title">Boş sayfa şablonu</h2></div>
+                                <div class="card bb-card">
+                                    <div class="bb-card-header">
+                                        <h2 class="bb-card-title">Boş sayfa şablonu</h2>
+                                    </div>
                                     <div class="bb-card-body">
                                         <p class="mb-0">Sidebar üç seviyeli accordion yapısıyla dolduruldu. Menü öğelerini ve daraltma düğmesini deneyin.</p>
                                     </div>
@@ -232,7 +234,7 @@
                         <span>2026 ©</span>
                         <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
                     </div>
-                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                    <nav class="bb-footer-right" aria-label="Sub Links">
                         <a class="bb-footer-link" href="../components/cards.html">Components</a>
                         <a class="bb-footer-link" href="../components/menu.html">Menus</a>
                     </nav>

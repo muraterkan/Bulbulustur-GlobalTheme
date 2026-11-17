@@ -5,7 +5,7 @@ Tarih: 2026-11-15
 ## Murat'ın kesinleştirdiği kararlar
 
 - Menü dili: **Türkçe**.
-- Ana bölüm kapsamı: **Gösterge Panelleri, Sayfalar, Uygulamalar, Düzenler**.
+- Ana bölüm kapsamı: **Gösterge Panelleri, Pages, Applications, Layouts**.
 - İkon: **Material Symbols** (mevcut yapı devam eder).
 - Help bölümü ilk sürüm sidebar ağacına dahil değildir. Mevcut component demoları kendi adreslerinde kalır.
 

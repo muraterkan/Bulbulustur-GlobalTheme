@@ -8,7 +8,7 @@
   var menu = panel.querySelector("[data-bb-panel-menu]");
   if (!menu) return;
 
-  menu.addEventListener("click", function (event) {
+  menu.addEventListner("click", function (event) {
     var trigger = event.target.closest("[data-bb-menu-trigger='click'] > .bb-menu-link");
     if (!trigger || !menu.contains(trigger)) return;
 

@@ -1,61 +1,36 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bulbulustur - Button Groups</title>
-
+    <title>Bulbulustur Theme — Bulbulustur - Button Groups</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header>
-        </header>
-        <!--::Main-->
-<main class="bb-main">
-
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
-                    <!-- Header -->
-                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-                        <div>
-                            <h1 class="h3 mb-1">Button Groups</h1>
-                            <div class="text-muted">
-                                Bootstrap base korunur. Renkler bizim button class’larından gelir.
-                            </div>
-                        </div>
 
-                        <div class="d-flex align-items-center gap-2">
-                            <button id="bbThemeToggle" type="button" class="btn btn-sm bb-btn-light-dark">
-                                <span class="material-symbols-outlined">dark_mode</span>
-                                Theme
-                            </button>
-
-                            <a href="#" class="btn btn-sm bb-btn-outline-primary">
-                                <span class="material-symbols-outlined">open_in_new</span>
-                                Docs
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row g-4">
+                    <div class="row">
 
                         <!-- 1) Solid segmented -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Solid (btn-*)</h2>
 
@@ -83,7 +58,7 @@
 
                         <!-- 2) Light segmented -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Light (bb-btn-light-*)</h2>
 
@@ -111,7 +86,7 @@
 
                         <!-- 3) Outline segmented -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Outline (bb-btn-outline-*)</h2>
 
@@ -136,7 +111,7 @@
 
                         <!-- 4) Icon-only + mixed -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Icon + Mixed</h2>
 
@@ -169,7 +144,7 @@
 
                         <!-- 5) btn-check toggle -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Toggle (btn-check)</h2>
 
@@ -189,7 +164,7 @@
 
                         <!-- 6) Vertical -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Vertical</h2>
 
@@ -210,7 +185,7 @@
 
                         <!-- 7) Toolbar -->
                         <div class="col-12">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Toolbar (bb-btn-toolbar)</h2>
 
@@ -253,7 +228,7 @@
 
                         <!-- 8) Split dropdown -->
                         <div class="col-12">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <h2 class="h5 mb-3">Split Dropdown (Bootstrap + bb wrapper)</h2>
 
@@ -263,10 +238,7 @@
                                         </button>
 
                                         <div class="btn-group" role="group">
-                                            <button type="button"
-                                                    class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split"
-                                                    data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <span class="visually-hidden">Toggle Dropdown</span>
                                             </button>
 
@@ -294,14 +266,9 @@
                     </div><!-- /row -->
                 </section>
             </div><!-- /container -->
-
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-
-    </div>
+        </div>
+    </main>
+    <!--/::Main-->
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 <!--/::Body-->

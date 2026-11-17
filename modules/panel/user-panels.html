@@ -3,9 +3,10 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bulbulustur — Panel Kabuk (Faz 2)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Panel Kabuk (Faz 2)</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -23,7 +24,7 @@
                 <button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet">
                     <span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span>
                 </button>
-                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Menüyü kapat">
+                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Close Menu">
                     <span class="material-symbols-outlined" aria-hidden="true">close</span>
                 </button>
             </div>
@@ -44,7 +45,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined">person</span>
                             </span>
-                            <span class="bb-menu-title">User Profile</span>
+                            <span class="bb-menu-title">User Prifilee</span>
                             <span class="bb-menu-arrow"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_menu_profile">
@@ -106,7 +107,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="../components/forms.html">
                                         <span class="bb-menu-bullet"></span>
-                                        <span class="bb-menu-title">Formlar</span>
+                                        <span class="bb-menu-title">Forms</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -118,13 +119,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bb-menu-section">UYGULAMALAR</div>
+                    <div class="bb-menu-section">APPLICATIONS</div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_menu_apps">
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined">apps</span>
                             </span>
-                            <span class="bb-menu-title">Uygulamalar</span>
+                            <span class="bb-menu-title">Applications</span>
                             <span class="bb-menu-arrow"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_menu_apps">
@@ -160,7 +161,7 @@
             </div>
         </aside>
 
-        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Menüyü kapat" aria-hidden="true" tabindex="-1"></button>
+        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close Menu" aria-hidden="true" tabindex="-1"></button>
 
         <div class="bb-shell">
             <header class="bb-shell-header">
@@ -181,7 +182,7 @@
                                     </button>
                                     <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
                                         <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="../../pages/demo1/account/overview.html">Profile</a>
+                                            <a class="bb-menu-link" href="../../pages/demo1/account/overview.html">Prifilee</a>
                                         </div>
                                         <div class="bb-menu-item">
                                             <a class="bb-menu-link" href="../../pages/demo1/account/settings.html">Account</a>
@@ -223,19 +224,23 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p></div>
+                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden><h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p></div>
+                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
+                            </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
                             </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-                                <a class="bb-dropdown-item" href="../components/forms.html">Formlar</a>
-                                <a class="bb-dropdown-item" href="../components/cards.html">Kartlar</a>
+                                <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
+                                <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
                             </div>
                         </div>
@@ -243,7 +248,7 @@
                             <span class="material-symbols-outlined">contrast</span>
                         </button>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="Kullanıcı menüsü">
+                            <button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="User menüsü">
                                 <span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/300-3.webp" alt="Örnek kullanıcı"></span>
                             </button>
                             <div id="bb_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>
@@ -251,19 +256,19 @@
                                     <span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/300-3.webp" alt=""></span>
                                     <span class="bb-panel-user-info">
                                         <span class="bb-panel-user-name">
-                                            Demo Kullanıcı <span class="bb-badge bb-badge-success">Demo</span>
+                                            Demo User <span class="bb-badge bb-badge-success">Demo</span>
                                         </span><small>demo@example.com</small>
                                     </span>
                                 </div>
                                 <div class="bb-panel-user-group">
                                     <a class="bb-panel-user-item" href="profile.html">
-                                        <span>My Profile</span>
+                                        <span>My Prifilee</span>
                                     </a>
                                     <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
                                         <span>Projects</span>
                                         <span class="bb-panel-user-meta">Yakında</span>
                                     </button>
-                                    <button class="bb-panel-user-item" type="button" disabled title="Abonelik demo sayfası henüz hazırlanmadı">
+                                    <button class="bb-panel-user-item" type="button" disabled title="Subscription demo sayfası henüz hazırlanmadı">
                                         <span>My Subscriptions</span>
                                         <span class="bb-panel-user-meta">
                                             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
@@ -299,17 +304,16 @@
                 </div>
             </header>
 
-
-
             <!--::Main-->
             <main class="bb-main">
+                <!--::Wrapper-->
                 <div class="bb-wrapper">
                     <div class="bb-container">
                         <div class="bb-toolbar">
                             <div class="bb-panel-content-container">
                                 <div class="bb-toolbar-row">
                                     <div class="bb-toolbar-col-left">
-                                        <h1 class="bb-page-title">Kullanıcı menüsü ve paneller</h1>
+                                        <h1 class="bb-page-title">User menüsü ve paneller</h1>
                                         <nav class="bb-breadcrumb" aria-label="İçerik yolu">
                                             <ol class="breadcrumb mb-0">
                                                 <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>
@@ -326,8 +330,10 @@
 
                         <section class="bb-content" aria-label="Sayfa içeriği">
                             <div class="bb-panel-content-container">
-                                <div class="bb-card">
-                                    <div class="bb-card-header"><h2 class="bb-card-title">Boş sayfa şablonu</h2></div>
+                                <div class="card bb-card">
+                                    <div class="bb-card-header">
+                                        <h2 class="bb-card-title">Boş sayfa şablonu</h2>
+                                    </div>
                                     <div class="bb-card-body">
                                         <p class="mb-0">Sidebar üç seviyeli accordion yapısıyla dolduruldu. Menü öğelerini ve daraltma düğmesini deneyin.</p>
                                     </div>
@@ -349,7 +355,7 @@
                         <span>2026 ©</span>
                         <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
                     </div>
-                    <nav class="bb-footer-right" aria-label="Alt bağlantılar">
+                    <nav class="bb-footer-right" aria-label="Sub Links">
                         <a class="bb-footer-link" href="../components/cards.html">Components</a>
                         <a class="bb-footer-link" href="../components/menu.html">Menus</a>
                     </nav>
@@ -358,7 +364,7 @@
         </footer>
         <!--/::Footer-->
     </div>
-    
+
     <script src="../../assets/js/panel/bb-panel.js"></script>
     <script src="../../assets/js/panel/bb-panel-theme.js"></script>
     <script src="../../assets/js/panel/bb-panel-menu.js"></script>

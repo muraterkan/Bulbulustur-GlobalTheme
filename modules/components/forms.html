@@ -5,27 +5,25 @@
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bulbulustur Theme – Forms Test</title>
+    <title>Bulbulustur Theme — Forms Test</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
+    <!--::Main-->
+    <main class="bb-main">
 
-        <!--::Main-->
-<main class="bb-main">
-
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
 
@@ -36,7 +34,8 @@
                         </div>
                         <a class="btn btn-primary" href="#">Action</a>
                     </div>
-
+                </section>
+                <section class="bb-section">
 
                     <div class="d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-sm btn-outline-secondary" data-bb-theme-btn="light">
@@ -55,7 +54,8 @@
                             Action
                         </a>
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <!-- Form Control -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header">
@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="bb-card-body">
-                            <div class="row g-4">
+                            <div class="row">
                                 <div class="col-md-4">
                                     <label class="form-label">Default</label>
                                     <input type="text" class="form-control" placeholder="name@example.com" />
@@ -103,14 +103,15 @@
                             </div>
                         </div>
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <!-- Select & Range -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header">
                             <div class="card-title">Select & Range</div>
                         </div>
                         <div class="bb-card-body">
-                            <div class="row g-4">
+                            <div class="row">
                                 <div class="col-md-4">
                                     <label class="form-label">Default select</label>
                                     <select class="form-select" aria-label="Select example">
@@ -151,7 +152,8 @@
                             </div>
                         </div>
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <!-- Checks / Radios -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header">
@@ -159,7 +161,7 @@
                         </div>
 
                         <div class="bb-card-body">
-                            <div class="row g-4">
+                            <div class="row">
 
                                 <div class="col-lg-4">
                                     <div class="fw-semibold mb-2">Checkbox (default)</div>
@@ -274,7 +276,8 @@
                             </div>
                         </div>
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <!-- Image Checks -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header">
@@ -328,15 +331,16 @@
                             </div>
                         </div>
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <!-- Input Group Icons -->
-                    <div class="bb-card">
+                    <div class="card bb-card">
                         <div class="bb-card-header">
                             <div class="card-title">Input Group (icons)</div>
                         </div>
 
                         <div class="bb-card-body">
-                            <div class="row g-4">
+                            <div class="row">
                                 <div class="col-md-6">
                                     <label class="form-label">Username</label>
                                     <div class="input-group">
@@ -359,23 +363,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
                 </section>
             </div>
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-
-    </div>
+        </div>
+    </main>
+    <!--/::Main-->
     <script src="../../assets/js/core/bb-forms.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>

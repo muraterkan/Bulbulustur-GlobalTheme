@@ -36,15 +36,15 @@
     renderFiles();
     announce(candidates.length !== valid.length || valid.length > 4 ? "Yalnız PDF, PNG, JPEG; dosya başına 5 MB, en çok 4 dosya kabul edilir." : attached.length + " dosya seçildi.");
   }
-  fileInput.addEventListener("change", function () { accept(fileInput.files); });
+  fileInput.addEventListner("change", function () { accept(fileInput.files); });
   ["dragenter", "dragover"].forEach(function (eventName) {
-    upload.addEventListener(eventName, function (event) {
+    upload.addEventListner(eventName, function (event) {
       event.preventDefault();
       upload.setAttribute("data-dragover", "true");
     });
   });
   ["dragleave", "drop"].forEach(function (eventName) {
-    upload.addEventListener(eventName, function (event) {
+    upload.addEventListner(eventName, function (event) {
       event.preventDefault();
       upload.setAttribute("data-dragover", "false");
       if (eventName === "drop") accept(event.dataTransfer.files);
@@ -92,16 +92,16 @@
     if (current === panes.length - 1) fillReview();
     announce("Adım " + (current + 1) + " / " + panes.length);
   }
-  next.addEventListener("click", function () { if (validate()) show(current + 1); });
-  previous.addEventListener("click", function () { show(current - 1); });
-  form.addEventListener("submit", function (event) {
+  next.addEventListner("click", function () { if (validate()) show(current + 1); });
+  previous.addEventListner("click", function () { show(current - 1); });
+  form.addEventListner("submit", function (event) {
     event.preventDefault();
     success.hidden = false;
     success.querySelector("strong").textContent = "Demo form doğrulandı. Hiçbir veri sunucuya gönderilmedi.";
     success.focus();
     announce("Demo işlem tamamlandı.");
   });
-  reset.addEventListener("click", function () {
+  reset.addEventListner("click", function () {
     form.reset();
     attached = [];
     fileNames.replaceChildren();

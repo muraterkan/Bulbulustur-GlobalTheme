@@ -35,6 +35,6 @@ var BBToast = (function () {
 })();
 
 // auto init
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListner('DOMContentLoaded', function () {
     BBToast.init();
 });

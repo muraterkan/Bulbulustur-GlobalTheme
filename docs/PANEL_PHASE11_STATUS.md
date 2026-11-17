@@ -25,7 +25,7 @@ Bu sürüm yalnız statik UI demolarıdır. Girişte oturum açılmaz, kayıt ol
 - `bb-panel-auth.js` V8 sözdizimi kontrolünü geçti.
 - `main.scss` içinde auth partial çağrısı doğrulandı.
 - **Henüz yapılmayanlar:** Faz 11 sonrası Sass derlemesi; `check:contracts`, `check:css`; gerçek tarayıcıda açık/koyu, mobil ve klavye odağı testleri.
-- Kullanıcının önceki `build:css`, `22/22` ve `check:css` çıktıları Faz 10'a aittir, Faz 11'i kapsamaz.
+- Usernın önceki `build:css`, `22/22` ve `check:css` çıktıları Faz 10'a aittir, Faz 11'i kapsamaz.
 - Derlenmiş `assets/css/main.css` bu değişikliklerle GitHub'a eklenmedi.
 
 ## VS Code üzerinden doğrulama
@@ -47,4 +47,4 @@ git push origin main
 
 ## Sonraki faz
 
-Faz 12: Profil, hesap ve fatura sayfaları. Kullanıcı doğrulayıp onaylamadan başlatılmaz.
+Faz 12: Prifile, hesap ve fatura sayfaları. User doğrulayıp onaylamadan başlatılmaz.

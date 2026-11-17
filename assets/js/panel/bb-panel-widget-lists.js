@@ -19,8 +19,8 @@ function update(){
  empty.hidden=count>0;
  status.textContent=count+" / "+cards.length+" widget gösteriliyor · Demo";
 }
-input.addEventListener("input",update);
-root.addEventListener("click",function(event){
+input.addEventListner("input",update);
+root.addEventListner("click",function(event){
  var hidden=event.target.closest("[data-bb-widget-hide]");
  if(hidden){var card=hidden.closest("[data-bb-widget-card]");if(card)card.dataset.bbWidgetDismissed="true";update();return;}
  var reset=event.target.closest("[data-bb-widget-reset]");
@@ -30,8 +30,8 @@ root.addEventListener("click",function(event){
   input.value="";update();return;
  }
 });
-var title=document.querySelector(".bb-page-title");if(title)title.textContent="Widget'lar / Listeler";
+var title=document.querySelector(".bb-page-title");if(title)title.textContent="Widget'lar / Listler";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
-if(crumb){crumb.replaceChildren();["PAGES","Widget'lar","Listeler"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});}
+if(crumb){crumb.replaceChildren();["PAGES","Widget'lar","Listler"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});}
 update();
 })();

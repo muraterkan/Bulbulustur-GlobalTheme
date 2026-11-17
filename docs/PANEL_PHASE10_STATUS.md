@@ -24,7 +24,7 @@ Dal: `main`
 
 ## Git merge uyarısı
 
-Kullanıcının son `git status` çıktısı merge devam ettiğini, tüm çatışmalar çözülmüş olmasına rağmen commit henüz atılmadığını gösteriyor. O durum temizlenmeden `git pull` / `git push` tekrarlanmamalı. Önce `git commit -m "merge: yerel ve uzak main"` ile merge sonlandırılmalı. `package-lock.json` üzerinde merge'e dahil edilmemiş yerel değişiklik var; otomatik silinmemeli.
+Usernın son `git status` çıktısı merge devam ettiğini, tüm çatışmalar çözülmüş olmasına rağmen commit henüz atılmadığını gösteriyor. O durum temizlenmeden `git pull` / `git push` tekrarlanmamalı. Önce `git commit -m "merge: yerel ve uzak main"` ile merge sonlandırılmalı. `package-lock.json` üzerinde merge'e dahil edilmemiş yerel değişiklik var; otomatik silinmemeli.
 
 ## VS Code testi
 

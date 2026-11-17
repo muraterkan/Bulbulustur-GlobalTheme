@@ -28,7 +28,7 @@ function createPost(content){
  var body=document.createElement("div");body.className="bb-card-body";
  var head=document.createElement("div");head.className="bb-social-post-header";
  head.append(avatar("ÖK"));var detail=document.createElement("div");detail.className="flex-grow-1";
- var name=document.createElement("strong");name.textContent="Örnek Kullanıcı";
+ var name=document.createElement("strong");name.textContent="Örnek User";
  var date=document.createElement("small");date.textContent="Şimdi · Demo";
  detail.append(name,date);head.append(detail);
  var paragraph=document.createElement("p");paragraph.className="bb-social-post-text";paragraph.textContent=content;
@@ -44,7 +44,7 @@ function createPost(content){
  commentForm.append(input,submit);body.append(head,paragraph,actions,comments,commentForm);article.append(body);
  return article;
 }
-root.addEventListener("click",function(event){
+root.addEventListner("click",function(event){
  var filterButton=event.target.closest("[data-bb-social-filter]");
  if(filterButton){filter=filterButton.dataset.bbSocialFilter;refresh();return;}
  var follow=event.target.closest("[data-bb-social-follow]");
@@ -56,7 +56,7 @@ root.addEventListener("click",function(event){
  var copy=event.target.closest("[data-bb-social-copy]");
  if(copy){var post=copy.closest("[data-bb-social-post]"),message=post.querySelector(".bb-social-post-text")?.textContent||"";if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(message).then(function(){status.textContent="Demo gönderi metni kopyalandı.";}).catch(function(){status.textContent="Kopyalama engellendi.";});else status.textContent="Kopyalama için güvenli bir bağlantı gerekiyor.";return;}
 });
-root.addEventListener("submit",function(event){
+root.addEventListner("submit",function(event){
  var commentForm=event.target.closest("[data-bb-social-comment-form]");
  if(!commentForm)return;
  event.preventDefault();
@@ -65,11 +65,11 @@ root.addEventListener("submit",function(event){
  if(!text)return;
  var post=commentForm.closest("[data-bb-social-post]"),comments=post.querySelector("[data-bb-social-comments]");
  var row=document.createElement("div");row.className="bb-social-comment";row.append(avatar("ÖK"));
- var wrapper=document.createElement("div"),name=document.createElement("strong"),p=document.createElement("p");name.textContent="Örnek Kullanıcı";p.textContent=text;wrapper.append(name,p);row.append(wrapper);comments.append(row);
+ var wrapper=document.createElement("div"),name=document.createElement("strong"),p=document.createElement("p");name.textContent="Örnek User";p.textContent=text;wrapper.append(name,p);row.append(wrapper);comments.append(row);
  var count=post.querySelector("[data-bb-social-comment-count]");count.textContent=comments.children.length+" yorum";
  commentForm.reset();field.focus();
 });
-form.addEventListener("submit",function(event){
+form.addEventListner("submit",function(event){
  event.preventDefault();if(!form.reportValidity())return;
  var text=textarea.value.trim();if(!text)return;
  var post=createPost(text);list.prepend(post);form.reset();filter="all";refresh();post.scrollIntoView({block:"nearest",behavior:"auto"});

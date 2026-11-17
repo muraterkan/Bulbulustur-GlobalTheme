@@ -38,17 +38,17 @@
     }
   }
 
-  if (mobileToggle) mobileToggle.addEventListener("click", function () {
+  if (mobileToggle) mobileToggle.addEventListner("click", function () {
     setOpen(panel.getAttribute("data-bb-sidebar-open") !== "true");
   });
-  if (closeButton) closeButton.addEventListener("click", function () { setOpen(false); });
-  if (backdrop) backdrop.addEventListener("click", function () { setOpen(false); });
-  if (collapseButton) collapseButton.addEventListener("click", function () {
+  if (closeButton) closeButton.addEventListner("click", function () { setOpen(false); });
+  if (backdrop) backdrop.addEventListner("click", function () { setOpen(false); });
+  if (collapseButton) collapseButton.addEventListner("click", function () {
     panel.setAttribute("data-bb-sidebar-collapsed", String(panel.getAttribute("data-bb-sidebar-collapsed") !== "true"));
     updateControls();
   });
 
-  document.addEventListener("keydown", function (event) {
+  document.addEventListner("keydown", function (event) {
     if (event.key === "Escape" && panel.getAttribute("data-bb-sidebar-open") === "true") setOpen(false);
     if (event.key !== "Tab" || desktop.matches || panel.getAttribute("data-bb-sidebar-open") !== "true" || !sidebar) return;
     var focusables = Array.prototype.slice.call(sidebar.querySelectorAll("a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])"))
@@ -64,8 +64,8 @@
     panel.setAttribute("data-bb-sidebar-open", "false");
     updateControls();
   }
-  if (desktop.addEventListener) desktop.addEventListener("change", onViewportChange);
-  else desktop.addListener(onViewportChange);
+  if (desktop.addEventListner) desktop.addEventListner("change", onViewportChange);
+  else desktop.addListner(onViewportChange);
   updateControls();
 
   /* Channel Registry dashboard: one list for owned and connected sales channels. */
@@ -82,7 +82,7 @@
   var panelMenu = panel.querySelector("[data-bb-panel-menu]");
   if (panelMenu && !panelMenu.querySelector("#bb_tree_draugr")) {
     var applicationsSection = Array.from(panelMenu.querySelectorAll(".bb-menu-section")).find(function (node) {
-      return node.textContent.trim() === "UYGULAMALAR";
+      return node.textContent.trim() === "APPLICATIONS";
     });
     var draugrSection = document.createElement("div");
     draugrSection.className = "bb-menu-section";
@@ -96,12 +96,12 @@
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=dashboard" data-bb-panel-page="draugr-dashboard" data-bb-draugr-view-link="dashboard"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Dashboard</span></a></div>' +
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=storefront" data-bb-panel-page="draugr-storefront" data-bb-draugr-view-link="storefront"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Vitrin</span></a></div>' +
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=navigation" data-bb-panel-page="draugr-navigation" data-bb-draugr-view-link="navigation"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kategoriler & Navigasyon</span></a></div>' +
-        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=content" data-bb-panel-page="draugr-content" data-bb-draugr-view-link="content"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Sayfalar & İçerik</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=content" data-bb-panel-page="draugr-content" data-bb-draugr-view-link="content"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Pages & İçerik</span></a></div>' +
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=theme" data-bb-panel-page="draugr-theme" data-bb-draugr-view-link="theme"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Tema & View Mode</span></a></div>' +
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=domain" data-bb-panel-page="draugr-domain" data-bb-draugr-view-link="domain"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Domain & SEO</span></a></div>' +
         '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=localization" data-bb-panel-page="draugr-localization" data-bb-draugr-view-link="localization"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Languages & Yerelleştirme</span></a></div>' +
-        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=settings" data-bb-panel-page="draugr-settings" data-bb-draugr-view-link="settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kanal Ayarları</span></a></div>' +
-        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=subscription" data-bb-panel-page="draugr-subscription" data-bb-draugr-view-link="subscription"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Abonelik</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=settings" data-bb-panel-page="draugr-settings" data-bb-draugr-view-link="settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Kanal Adjustrı</span></a></div>' +
+        '<div class="bb-menu-item"><a class="bb-menu-link" href="draugr.html?view=subscription" data-bb-panel-page="draugr-subscription" data-bb-draugr-view-link="subscription"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Subscription</span></a></div>' +
       '</div></div>';
     if (applicationsSection) {
       panelMenu.insertBefore(draugrSection, applicationsSection);
@@ -115,7 +115,7 @@
   var posbPanelMenu = panel.querySelector("[data-bb-panel-menu]");
   if (posbPanelMenu && !posbPanelMenu.querySelector("#bb_tree_posb")) {
     var posbApplicationsSection = Array.from(posbPanelMenu.querySelectorAll(".bb-menu-section")).find(function (node) {
-      return node.textContent.trim() === "UYGULAMALAR";
+      return node.textContent.trim() === "APPLICATIONS";
     });
     var posbSection = document.createElement("div");
     posbSection.className = "bb-menu-section";
@@ -137,8 +137,8 @@
         '</div></div></div>' +
 
         '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_invoice"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Fatura</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_invoice"><div class="bb-menu-sub-content">' +
-          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoices" data-bb-panel-page="posb-invoices" data-bb-posb-view-link="invoices"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Faturalar</span></a></div>' +
-          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoice-settings" data-bb-panel-page="posb-invoice-settings" data-bb-posb-view-link="invoice-settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Fatura Ayarları</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoices" data-bb-panel-page="posb-invoices" data-bb-posb-view-link="invoices"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Invoices</span></a></div>' +
+          '<div class="bb-menu-item"><a class="bb-menu-link" href="posb.html?view=invoice-settings" data-bb-panel-page="posb-invoice-settings" data-bb-posb-view-link="invoice-settings"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Fatura Adjustrı</span></a></div>' +
         '</div></div></div>' +
 
         '<div class="bb-menu-item" data-bb-menu-trigger="click"><button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_posb_stock"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Stok & Transfer</span><span class="bb-menu-arrow" aria-hidden="true"></span></button><div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_posb_stock"><div class="bb-menu-sub-content">' +
@@ -183,8 +183,8 @@
       '<div class="bb-footer-bar">' +
         '<div class="bb-footer-inner">' +
           '<div class="bb-footer-left"><span>2015-2026 ©</span><span>Copyright © 2026</span><a class="bb-footer-brand" href="' + panelPrefix + 'dashboard.html">Bulbulustur</a></div>' +
-          '<nav class="bb-footer-right" aria-label="Alt bağlantılar">' +
-            '<a class="bb-footer-link" href="' + panelPrefix + 'about.html">Hakkında</a>' +
+          '<nav class="bb-footer-right" aria-label="Sub Links">' +
+            '<a class="bb-footer-link" href="' + panelPrefix + 'about.html">About</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'integrations.html">Entegrasyon</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'product-draugr.html">Draugr</a>' +
             '<a class="bb-footer-link" href="' + panelPrefix + 'product-posb.html">PosB</a>' +
@@ -215,9 +215,9 @@
     var inWindow = window.scrollY > 160;
     backToTop.hidden = !(inContent || inWindow);
   }
-  if (contentScroll) contentScroll.addEventListener("scroll", updateBackToTop, { passive: true });
-  window.addEventListener("scroll", updateBackToTop, { passive: true });
-  backToTop.addEventListener("click", function () {
+  if (contentScroll) contentScroll.addEventListner("scroll", updateBackToTop, { passive: true });
+  window.addEventListner("scroll", updateBackToTop, { passive: true });
+  backToTop.addEventListner("click", function () {
     var behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
     if (contentScroll) contentScroll.scrollTo({ top: 0, behavior: behavior });
     window.scrollTo({ top: 0, behavior: behavior });

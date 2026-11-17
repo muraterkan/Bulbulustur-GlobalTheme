@@ -106,25 +106,25 @@
       var btnUpdate = document.getElementById("bb_scroll_update");
 
       if (btnTop && scrollEl) {
-        btnTop.addEventListener("click", function () {
+        btnTop.addEventListner("click", function () {
           scrollEl.scrollTop = 0;
         });
       }
 
       if (btnBottom && scrollEl) {
-        btnBottom.addEventListener("click", function () {
+        btnBottom.addEventListner("click", function () {
           scrollEl.scrollTop = scrollEl.scrollHeight;
         });
       }
 
       if (btnUpdate && scrollEl) {
-        btnUpdate.addEventListener("click", function () {
+        btnUpdate.addEventListner("click", function () {
           init();
         });
       }
 
       // Auto update on resize
-      window.addEventListener("resize", function () {
+      window.addEventListner("resize", function () {
         init();
       });
 

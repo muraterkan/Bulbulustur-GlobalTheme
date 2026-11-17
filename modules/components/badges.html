@@ -1,85 +1,36 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Badges</title>
+    <title>Bulbulustur Theme — Badges</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
-
-        <!--::Main-->
-<main class="bb-main">
-
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
 
-                    <!-- Page Header -->
-                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-                        <div>
-                            <h1 class="h4 mb-1">Badges</h1>
-                            <div class="text-body-secondary">bb-badge component test sayfası (light/dark + density)</div>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="btn-group" role="group" aria-label="Theme switcher">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="light">Light</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" data-bb-theme="dark">Dark</button>
-                            </div>
-
-                            <button type="button" class="btn btn-outline-secondary btn-sm" id="bbDensityToggle">
-                                Compact Density
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row g-4">
-
-                        <!-- Card: Basics -->
-                        <div class="col-12 col-xl-6">
-                            <div class="bb-card">
-                                <div class="bb-card-header d-flex align-items-center justify-content-between">
-                                    <div class="bb-card-title">Basic</div>
-                                    <div class="text-body-secondary small">Default + semantic</div>
-                                </div>
-
-                                <div class="bb-card-body">
-                                    <div class="d-flex flex-wrap align-items-center gap-3">
-                                        <span class="badge bb-badge">Default</span>
-
-                                        <span class="badge bb-badge bb-badge-primary">Primary</span>
-                                        <span class="badge bb-badge bb-badge-success">Success</span>
-                                        <span class="badge bb-badge bb-badge-info">Info</span>
-                                        <span class="badge bb-badge bb-badge-warning">Warning</span>
-                                        <span class="badge bb-badge bb-badge-danger">Danger</span>
-                                        <span class="badge bb-badge bb-badge-dark">Dark</span>
-                                    </div>
-
-                                    <div class="mt-4 text-body-secondary small">
-                                        Not: Default badge, surface/text token’larına bağlı olmalı (dark’ta patlamasın).
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row">
 
                         <!-- Card: Light / Soft -->
                         <div class="col-12 col-xl-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-header d-flex align-items-center justify-content-between">
                                     <div class="bb-card-title">Light / Soft</div>
                                     <div class="text-body-secondary small">Metronic feel</div>
@@ -105,7 +56,7 @@
 
                         <!-- Card: Sizes & Shapes -->
                         <div class="col-12 col-xl-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-header d-flex align-items-center justify-content-between">
                                     <div class="bb-card-title">Sizes & Shapes</div>
                                     <div class="text-body-secondary small">sm / default / lg + pill / circle</div>
@@ -138,7 +89,7 @@
 
                         <!-- Card: Outline + Interactive -->
                         <div class="col-12 col-xl-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-header d-flex align-items-center justify-content-between">
                                     <div class="bb-card-title">Outline & Interactive</div>
                                     <div class="text-body-secondary small">focus-visible + disabled</div>
@@ -169,21 +120,17 @@
                         </div>
 
                     </div>
-
+                </section>
+                <section class="bb-section">
                     <div class="text-body-secondary small mt-4">
                         Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
                     </div>
                 </section>
             </div>
+        </div>
+    </main>
+    <!--/::Main-->
 
-
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-
-    </div>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 <!--/::Body-->

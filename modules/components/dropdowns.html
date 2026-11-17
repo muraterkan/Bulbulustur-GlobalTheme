@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bulbulustur - Dropdowns</title>
-
-
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Bulbulustur Theme — Bulbulustur - Dropdowns</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
-
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <body class="bg-body">
-    <div class="bb-wrapper">
-        <header></header>
-        
-        <!--::Main-->
-<main class="bb-main">
-
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
-                    <div class="d-flex align-items-center justify-content-between gap-3 mb-4">
-                        <div>
-                            <h1 class="h4 mb-1">Dropdowns</h1>
-                            <div class="text-body-secondary">Bootstrap dropdown JS + bb-* polish</div>
-                        </div>
-
-                        <button type="button" class="btn btn-outline-secondary" id="bbThemeToggle">
-                            <span class="material-symbols-outlined me-1">dark_mode</span>
-                            Theme Toggle
-                        </button>
-                    </div>
-
-                    <div class="row g-4">
+ 
+                    <div class="row">
                         <!-- Basic -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="fw-semibold">Basic Button Dropdown</div>
@@ -92,7 +74,7 @@
 
                         <!-- Split -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="fw-semibold">Split Button Dropdown</div>
@@ -127,7 +109,7 @@
 
                         <!-- Directions -->
                         <div class="col-12">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="fw-semibold">Drop Directions</div>
@@ -198,7 +180,7 @@
 
                         <!-- Sizes -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="fw-semibold">Menu Sizes</div>
@@ -264,7 +246,7 @@
 
                         <!-- States + Scroll -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="d-flex align-items-center justify-content-between mb-3">
                                         <div class="fw-semibold">States + Scroll</div>
@@ -343,13 +325,13 @@
 
                         <!-- Reusable card / toolbar action dropdown -->
                         <div class="col-12 col-lg-6">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-header">
                                     <h2 class="bb-card-title">Kart aksiyon menüsü</h2>
                                     <span class="badge bb-badge bb-badge-light-primary">Tekrar kullanılabilir</span>
                                 </div>
                                 <div class="bb-card-body">
-                                    <p class="text-body-secondary">Profil kartları, liste satırları veya toolbar aksiyonlarında aynı dropdown sınıfları kullanılabilir.</p>
+                                    <p class="text-body-secondary">Prifile kartları, liste satırları veya toolbar aksiyonlarında aynı dropdown sınıfları kullanılabilir.</p>
                                     <div class="dropdown bb-action-menu">
                                         <button class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Kart işlemleri">
                                             <span class="material-symbols-outlined" aria-hidden="true">more_horiz</span>
@@ -367,7 +349,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item bb-action-menu-has-arrow" href="../panel/profil-faturalandirma.html">
-                                                    <span>Abonelik</span>
+                                                    <span>Subscription</span>
                                                     <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                                                 </a>
                                             </li>
@@ -380,17 +362,13 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                
-
-        </section></div></main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-        
-    </div>
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script></body>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+</body>
 <!--/::Body-->
 </html>

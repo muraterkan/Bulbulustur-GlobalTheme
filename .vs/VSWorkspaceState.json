@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\media\\avatars",
-    "\\modules"
+    "\\modules",
+    "\\modules\\panel"
   ],
-  "SelectedNode": "\\modules\\panel",
+  "SelectedNode": "\\modules\\panel\\product-posb.html",
   "PreviewInSolutionExplorer": false
 }

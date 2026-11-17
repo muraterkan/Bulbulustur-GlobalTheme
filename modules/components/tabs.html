@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bulbulustur Theme – Nav / Tabs Test</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/main.css">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Nav / Tabs Test</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
+    <!--::Main-->
+    <main class="bb-main">
 
-        <!--::Main-->
-<main class="bb-main">
-
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
                     <div class="mb-4">
@@ -26,22 +31,24 @@
                     </div>
 
                     <ul class="nav nav-tabs bb-nav bb-nav-tabs" role="tablist">
-                        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-general" type="button" role="tab" aria-controls="tab-general" aria-selected="true">Genel</button></li>
+                        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-general" type="button" role="tab" aria-controls="tab-general" aria-selected="true">General</button></li>
                         <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-settings" type="button" role="tab" aria-controls="tab-settings" aria-selected="false">Account Settings</button></li>
-                        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-logs" type="button" role="tab" aria-controls="tab-logs" aria-selected="false">Loglar</button></li>
+                        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-logs" type="button" role="tab" aria-controls="tab-logs" aria-selected="false">Logs</button></li>
                     </ul>
+                </section>
+                <section class="bb-section">
 
                     <div class="tab-content pt-4">
                         <div class="tab-pane fade show active" id="tab-general" role="tabpanel">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
-                                    <div class="fw-semibold mb-1">Genel</div>
+                                    <div class="fw-semibold mb-1">General</div>
                                     <div class="text-muted">Burası genel ayarlar içeriği.</div>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="tab-settings" role="tabpanel">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
                                     <div class="fw-semibold mb-1">Account Settings</div>
                                     <div class="text-muted">Sistem ayarları burada.</div>
@@ -49,15 +56,17 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="tab-logs" role="tabpanel">
-                            <div class="bb-card">
+                            <div class="card bb-card">
                                 <div class="bb-card-body">
-                                    <div class="fw-semibold mb-1">Loglar</div>
+                                    <div class="fw-semibold mb-1">Logs</div>
                                     <div class="text-muted">Sistem logları burada listelenir.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                </section>
+                <section class="bb-section">
                     <div class="mt-5">
                         <div class="fw-semibold mb-3">Quick variants</div>
 
@@ -69,82 +78,72 @@
                             </ul>
                             <div class="tab-content pt-3">
                                 <div class="tab-pane fade show active" id="soft-one" role="tabpanel">
-                                    <div class="bb-card">
+                                    <div class="card bb-card">
                                         <div class="bb-card-body">Soft variant — first pane.</div>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="soft-two" role="tabpanel">
-                                    <div class="bb-card">
+                                    <div class="card bb-card">
                                         <div class="bb-card-body">Soft variant — second pane.</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-4">
-                            <ul class="nav bb-nav bb-nav-pills" role="tablist">
-                                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#pill-one" type="button" role="tab" aria-selected="true">Pill Active</button></li>
-                                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pill-two" type="button" role="tab" aria-selected="false">Pill</button></li>
-                                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pill-three" type="button" role="tab" aria-selected="false">Pill</button></li>
-                            </ul>
-                            <div class="tab-content pt-3">
-                                <div class="tab-pane fade show active" id="pill-one" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Pill variant — first pane.</div>
-                                    </div>
+                        <ul class="nav bb-nav bb-nav-pills" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#pill-one" type="button" role="tab" aria-selected="true">Pill Active</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pill-two" type="button" role="tab" aria-selected="false">Pill</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pill-three" type="button" role="tab" aria-selected="false">Pill</button></li>
+                        </ul>
+                        <div class="tab-content pt-3">
+                            <div class="tab-pane fade show active" id="pill-one" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Pill variant — first pane.</div>
                                 </div>
-                                <div class="tab-pane fade" id="pill-two" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Pill variant — second pane.</div>
-                                    </div>
+                            </div>
+                            <div class="tab-pane fade" id="pill-two" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Pill variant — second pane.</div>
                                 </div>
-                                <div class="tab-pane fade" id="pill-three" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Pill variant — third pane.</div>
-                                    </div>
+                            </div>
+                            <div class="tab-pane fade" id="pill-three" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Pill variant — third pane.</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div>
-                            <ul class="nav bb-nav bb-nav-underline" role="tablist">
-                                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#underline-one" type="button" role="tab" aria-selected="true">Underline</button></li>
-                                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#underline-two" type="button" role="tab" aria-selected="false">Underline</button></li>
-                                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#underline-three" type="button" role="tab" aria-selected="false">Underline</button></li>
-                            </ul>
-                            <div class="tab-content pt-3">
-                                <div class="tab-pane fade show active" id="underline-one" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Underline variant — first pane.</div>
-                                    </div>
+                        <ul class="nav bb-nav bb-nav-underline" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#underline-one" type="button" role="tab" aria-selected="true">Underline</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#underline-two" type="button" role="tab" aria-selected="false">Underline</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#underline-three" type="button" role="tab" aria-selected="false">Underline</button></li>
+                        </ul>
+                        <div class="tab-content pt-3">
+                            <div class="tab-pane fade show active" id="underline-one" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Underline variant — first pane.</div>
                                 </div>
-                                <div class="tab-pane fade" id="underline-two" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Underline variant — second pane.</div>
-                                    </div>
+                            </div>
+                            <div class="tab-pane fade" id="underline-two" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Underline variant — second pane.</div>
                                 </div>
-                                <div class="tab-pane fade" id="underline-three" role="tabpanel">
-                                    <div class="bb-card">
-                                        <div class="bb-card-body">Underline variant — third pane.</div>
-                                    </div>
+                            </div>
+                            <div class="tab-pane fade" id="underline-three" role="tabpanel">
+                                <div class="card bb-card">
+                                    <div class="bb-card-body">Underline variant — third pane.</div>
                                 </div>
                             </div>
                         </div>
 
-
-
-
-
+                    </div>
                 </section>
-                </div>
-</main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
+            </div>
+        </div>
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </main>
+    <!--/::Main-->
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 </body>
 <!--/::Body-->

@@ -4,34 +4,29 @@
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
-    <title>Bulbulustur Theme – Accordion Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title>Bulbulustur Theme — Accordion Test</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
-        <!--::Main-->
-<main class="bb-main">
+    <!--::Main-->
+    <main class="bb-main">
 
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
 
-                    <!-- =========================================
-                         ICON TOGGLE (ROTATE)
-                    ========================================== -->
+
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between">
                             <h5 class="card-title mb-0">Icon Toggle Accordion (Rotate)</h5>
@@ -50,7 +45,7 @@
                                                 aria-expanded="false"
                                                 aria-controls="bbAccordionToggleCollapse1">
                                             <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                                            Genel Bilgiler
+                                            General Bilgiler
                                         </button>
                                     </h2>
 
@@ -113,10 +108,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <!-- =========================================
-                         ICON COLLAPSE (SWAP)
-                    ========================================== -->
+                <section class="bb-section">
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between">
                             <h5 class="card-title mb-0">Icon Collapse Accordion (Swap)</h5>
@@ -207,10 +201,9 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <!-- =========================================
-                         BORDERLESS
-                    ========================================== -->
+                <section class="bb-section">
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between">
                             <h5 class="card-title mb-0">Borderless</h5>
@@ -269,11 +262,10 @@
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <!-- =========================================
-                         FLUSH
-                    ========================================== -->
-                    <div class="bb-card">
+                <section class="bb-section">
+                    <div class="card bb-card">
                         <div class="bb-card-header d-flex align-items-center justify-content-between">
                             <h5 class="card-title mb-0">Flush</h5>
                             <span class="text-muted small">.bb-accordion-flush</span>
@@ -331,24 +323,20 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- FOOTER NOTE -->
+                </section>
+                <!-- FOOTER NOTE -->
+                <section class="bb-section">
                     <div class="text-muted small mt-4">
                         Not: Bu sayfa sadece component test içindir. Bootstrap data-bs-toggle kullanır.
                     </div>
-
-                
-            
-        </section></div></main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-    </div>
-
-
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
     <!-- Tiny local theme toggle (demo only) -->
-    
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script></body>
+
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+</body>
 <!--/::Body-->
 </html>

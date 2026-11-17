@@ -77,7 +77,7 @@
         el.innerHTML = `
           <div class="bb-datetime-popover-header">
             <p class="bb-datetime-title mb-0">Tarih Seç</p>
-            <button type="button" class="bb-datetime-close" aria-label="Kapat">
+            <button type="button" class="bb-datetime-close" aria-label="Close">
               <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
           </div>
@@ -225,7 +225,7 @@
               }
             }
 
-            btn.addEventListener("click", function () {
+            btn.addEventListner("click", function () {
               const clicked = new Date(btn.getAttribute("data-bb-date"));
 
               if (mode === "single") {
@@ -374,12 +374,12 @@
         }
 
         // input interactions
-        input.addEventListener("click", function () {
+        input.addEventListner("click", function () {
           openPopover();
         });
 
         // close on outside click
-        document.addEventListener("mousedown", function (e) {
+        document.addEventListner("mousedown", function (e) {
           if (!open) { return; }
           const t = e.target;
           if (root.contains(t) || pop.contains(t)) {
@@ -389,23 +389,23 @@
         });
 
         // close button
-        pop.querySelector(".bb-datetime-close")?.addEventListener("click", function () {
+        pop.querySelector(".bb-datetime-close")?.addEventListner("click", function () {
           closePopover();
         });
 
         // footer buttons
-        pop.querySelector('[data-bb-action="apply"]')?.addEventListener("click", function () { apply(); });
-        pop.querySelector('[data-bb-action="cancel"]')?.addEventListener("click", function () { cancel(); });
-        pop.querySelector('[data-bb-action="clear"]')?.addEventListener("click", function () { clear(); });
+        pop.querySelector('[data-bb-action="apply"]')?.addEventListner("click", function () { apply(); });
+        pop.querySelector('[data-bb-action="cancel"]')?.addEventListner("click", function () { cancel(); });
+        pop.querySelector('[data-bb-action="clear"]')?.addEventListner("click", function () { clear(); });
 
         // nav month
-        pop.querySelector('[data-bb-cal="left"] [data-bb-nav="prev"]')?.addEventListener("click", function () {
+        pop.querySelector('[data-bb-cal="left"] [data-bb-nav="prev"]')?.addEventListner("click", function () {
           anchorMonthLeft = addMonths(anchorMonthLeft, -1);
           anchorMonthRight = addMonths(anchorMonthLeft, 1);
           renderAll();
         });
 
-        pop.querySelector('[data-bb-cal="left"] [data-bb-nav="next"]')?.addEventListener("click", function () {
+        pop.querySelector('[data-bb-cal="left"] [data-bb-nav="next"]')?.addEventListner("click", function () {
           anchorMonthLeft = addMonths(anchorMonthLeft, 1);
           anchorMonthRight = addMonths(anchorMonthLeft, 1);
           renderAll();
@@ -414,7 +414,7 @@
         // presets
         const presetBtns = pop.querySelectorAll("[data-bb-preset]");
         presetBtns.forEach(function (btn) {
-          btn.addEventListener("click", function () {
+          btn.addEventListner("click", function () {
             setPreset(btn.getAttribute("data-bb-preset"));
           });
         });

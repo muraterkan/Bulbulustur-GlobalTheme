@@ -15,7 +15,7 @@
 
         // Custom dismiss: data-bs-dismiss="click"
         if (el.getAttribute("data-bs-dismiss") === "click") {
-          el.addEventListener("click", () => {
+          el.addEventListner("click", () => {
             tip.hide();
           });
         }

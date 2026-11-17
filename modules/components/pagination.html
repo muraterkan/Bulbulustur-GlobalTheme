@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bulbulustur - Pagination</title>
-
+    <title>Bulbulustur Theme — Bulbulustur - Pagination</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
 <!--::Body-->
 <body class="bb-body">
-    <div class="bb-wrapper">
-        <header></header>
-        
-        <!--::Main-->
-<main class="bb-main">
+    <!--::Main-->
+    <main class="bb-main">
 
+        <!--::Wrapper-->
+<div class="bb-wrapper">
             <div class="bb-container">
+
                 <section class="bb-section">
-
-                    <!-- Page Header -->
-                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
-                        <div>
-                            <h1 class="h4 mb-1">Pagination</h1>
-                            <div class="text-muted small">
-                                Bootstrap 5 uyumlu, token’lı, bb- wrapper’lı pagination.
-                                Variants: <code>.bb-pagination--outline</code> / <code>--pill</code> / <code>--circle</code> / <code>--compact</code>.
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-2">
-                            <button type="button" class="btn btn-light" id="bb_theme_light">Light</button>
-                            <button type="button" class="btn btn-dark" id="bb_theme_dark">Dark</button>
-                        </div>
-                    </div>
 
                     <!-- Demo Card -->
                     <div class="bb-card mb-4">
@@ -86,7 +68,9 @@
                             </nav>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- Outline + Pill -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -140,7 +124,9 @@
                             </nav>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- Circle -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -181,9 +167,11 @@
                             </nav>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <!-- Compact + Disabled -->
-                    <div class="bb-card">
+                    <div class="card bb-card">
                         <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
                             <div>
                                 <div class="bb-card-title mb-0">Compact + Disabled</div>
@@ -229,24 +217,21 @@
                             </nav>
                         </div>
                     </div>
+                </section>
 
+                <section class="bb-section">
                     <div class="text-muted small mt-4">
                         SCSS import: <code>@use "components/_pagination.scss";</code>
                     </div>
+                    <!-- Bootstrap JS -->
+                    <!-- Theme Toggle (demo only) -->
+                </section>
 
-
-
-                <!-- Bootstrap JS -->
-                <!-- Theme Toggle (demo only) -->
-                
-
-        </section></div></main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer></footer>
-<!--/::Footer-->
-        
-    </div>
-<script src="../../assets/js/panel/bb-component-panel-shell.js"></script></body>
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+</body>
 <!--/::Body-->
 </html>

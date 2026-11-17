@@ -36,7 +36,7 @@ var orderTitle=root.querySelector("[data-bb-channel-order-title]");
 var filters=Array.from(root.querySelectorAll("[data-bb-channel-filter]"));
 var selectedOrderChannel=null;
 
-document.addEventListener("error",function(event){
+document.addEventListner("error",function(event){
  var img=event.target;
  if(!img || !img.matches || !img.matches("[data-bb-channel-logo-img]"))return;
  var host=img.parentElement;
@@ -72,7 +72,7 @@ function renderCards(){
    '<span class="bb-channel-card-head">'+logoMarkup(c,false)+'<span class="bb-channel-title"><strong>'+c.name+'</strong><small>'+c.type+'</small></span><span class="bb-channel-health" data-health="'+c.health+'" title="'+healthLabel(c.health)+'"></span></span>'+
    '<span class="bb-channel-card-meta"><span class="bb-channel-card-stat"><strong>'+c.orders+'</strong><small>Bugünkü sipariş</small></span><span class="bb-channel-card-stat"><strong>'+c.pending+'</strong><small>Bekleyen işlem</small></span></span>'+
    '<span class="bb-channel-card-foot"><span class="bb-badge '+(c.ownership==="owned"?"bb-badge-success":"bb-badge-light")+'">'+ownershipLabel(c.ownership)+'</span><code>#'+c.id+' · '+c.code+'</code></span>';
-  card.addEventListener("click",function(){openDetail(c.id);});
+  card.addEventListner("click",function(){openDetail(c.id);});
   grid.append(card);
  });
  count.textContent=visible.length+" kanal";
@@ -117,14 +117,14 @@ function openDetail(id){
  drawer.querySelector("[data-bb-channel-detail-status]").textContent="";
  window.BBDrawer.open("#bb_channel_detail_drawer");
 }
-filters.forEach(function(btn){btn.addEventListener("click",function(){filters.forEach(function(x){x.setAttribute("aria-pressed",String(x===btn));});renderCards();});});
-search.addEventListener("input",renderCards);
-root.querySelector("[data-bb-channel-show-all-orders]").addEventListener("click",function(){renderOrders(null);});
-document.querySelector("[data-bb-channel-orders-action]").addEventListener("click",function(){
+filters.forEach(function(btn){btn.addEventListner("click",function(){filters.forEach(function(x){x.setAttribute("aria-pressed",String(x===btn));});renderCards();});});
+search.addEventListner("input",renderCards);
+root.querySelector("[data-bb-channel-show-all-orders]").addEventListner("click",function(){renderOrders(null);});
+document.querySelector("[data-bb-channel-orders-action]").addEventListner("click",function(){
  var drawer=document.getElementById("bb_channel_detail_drawer");var id=drawer?drawer.dataset.channelId:null;
  if(!id)return;renderOrders(id);window.BBDrawer.close();root.querySelector(".bb-channel-orders").scrollIntoView({behavior:"smooth",block:"start"});
 });
-document.querySelector("[data-bb-channel-sync]").addEventListener("click",function(){
+document.querySelector("[data-bb-channel-sync]").addEventListner("click",function(){
  var drawer=document.getElementById("bb_channel_detail_drawer");var id=drawer?drawer.dataset.channelId:null;var c=channelById(id);var s=document.querySelector("[data-bb-channel-detail-status]");
  if(c&&s)s.textContent="#"+c.id+" "+c.code+" için demo senkron isteği hazırlandı.";
 });

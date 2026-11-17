@@ -62,7 +62,7 @@ const border = file('assets/scss/utilities/_border.scss');
 const text = file('assets/scss/utilities/_text.scss');
 const dropdown = file('assets/scss/components/_dropdowns.scss');
 
-check('reset declared once', count(reset, /Bulbulustur Theme - Reset/g) === 1);
+check('reset declared once', count(reset, /Bulbulustur Theme — Reset/g) === 1);
 check('reduced-motion support preserved', reset.includes('prefers-reduced-motion: reduce'));
 check('sidebar belongs to sidebar partial', count(layout, /^\.bb-sidebar\s*\{/gm) === 0 && count(sidebar, /^\.bb-sidebar\s*\{/gm) === 1);
 check('toolbar belongs to toolbar partial', count(layout, /^\.bb-toolbar\s*\{/gm) === 0 && count(toolbar, /^\.bb-toolbar\s*\{/gm) === 1);

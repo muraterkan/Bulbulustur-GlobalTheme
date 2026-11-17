@@ -16,7 +16,7 @@ Durum: **Kabul süreci açık; tarayıcı testleri henüz sonuçlandırılmadı.
 - `scripts/check-panel.mjs` ve `npm run check:panel` eklendi. Link/script dosyası varlığı, ID/aria-controls, menü ID eşleştirmesi ve JS sözdizimi testleri için yerel çalıştırma komutu; **bu dosya doğrulama betiği henüz kullanıcının yerel deposunda çalıştırılmadı**.
 - Gerçek ekran görüntüsü karşılaştırması, mobil CSS görünümü, popup odak yönetimi, form etkileşimi ve yazıcı çıktısı henüz gözlemlenmedi.
 
-## 2026-11-16 — Kullanıcı ekran görüntüsü sonrası somut kusurlar
+## 2026-11-16 — User ekran görüntüsü sonrası somut kusurlar
 
 - **Kritik / düzeltildi (kaynak):** `_menu.scss` içerisindeki yatay `.bb-menu-item` flex düzeni sidebar accordion alt öğelerini sağa, içerik alanına taşıyordu. `layout/_panel-sidebar.scss` içinde yalnız sidebar öğelerine `flex-direction: column`, genişlik ve min-width sınırlaması eklendi. Tarayıcıda yeniden test gerekli.
 - **Kritik / düzeltildi (kaynak):** 13 panel sayfası depoda olmayan `assets/media/logos/default-dark.svg` görüntüsünü çağırıyordu. `bb-panel-brand-text` ile metin marka başlığına geçildi.
@@ -43,10 +43,10 @@ Ekran genişlikleri: 375px, 768px, 1024px, 1440px. Her genişlikte `data-bs-them
 - [ ] **Faz 3–4 Header/popup:** arama, bildirim, mesaj, uygulamalar, avatar popup; açılma, kapanma, tema; dışarı tıkla ve Escape; tab odak sırası
 - [ ] **Faz 5–7 Toolbar/layout/menü:** breadcrumb, aksiyon butonları, sidebar/top/auth varyantları, boş sayfa fallback, Türkçe menü ve 58 sayfa kimliği
 - [ ] **Faz 8 Dashboard:** 4 KPI, halka grafik/legend, hafta şeridi, proje tablosu, timeline, vurgu kartı; yatay taşma yok; light/dark renkleri
-- [ ] **Faz 9 Liste:** arama, durum filtreleme, sıralama, 5/10/20 kayıt, tekli/toplu seçim, toplu güncelleme (demo), detay; 375px tabloda kaydırma
+- [ ] **Faz 9 List:** arama, durum filtreleme, sıralama, 5/10/20 kayıt, tekli/toplu seçim, toplu güncelleme (demo), detay; 375px tabloda kaydırma
 - [ ] **Faz 10 Form:** gerekli alanları boş bırakınca ilerleme engeli; geçerli giriş, dosya tür ve boyut sınırları, sürükle-bırak, özet, geri ve sıfırla
 - [ ] **Faz 11 Auth/error:** giriş/kayıt/e-posta sıfırlama alan doğrulaması, şifre eşleme, görünür şifre, gerçek oturum olmadığının mesajı; 404/500 yönlendirme
-- [ ] **Faz 12 Profil/hesap/fatura:** profil başlığı ve avatar, hesap e-posta doğrulaması, tercihler/sıfırla, fatura tutarları ve Yazdır/PDF baskı görünümü
+- [ ] **Faz 12 Prifile/hesap/fatura:** profil başlığı ve avatar, hesap e-posta doğrulaması, tercihler/sıfırla, fatura tutarları ve Yazdır/PDF baskı görünümü
 - [ ] Görsel referansla son karşılaştırma: sol sidebar, header yükseklikleri, kart yüzeyleri, boşluklar, koyu/açık renklerde kontrast
 - [ ] DevTools Console: JavaScript hata ve beklenmeyen ağ isteği bulunmuyor
 - [ ] Klavye ile gizlenmiş menü bağlantısına ulaşılmıyor; sidebar/popup Escape sonrası odak mantıklı öğeye dönüyor

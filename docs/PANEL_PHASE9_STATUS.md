@@ -25,7 +25,7 @@ Veriler temsili, hiçbir sunucu isteği veya kalıcı güncelleme yapılmaz. Se�
 - `main.scss` partial bağlantısı mevcut.
 - 18 örnek veri satırı doğrulandı; dashboard'dan sızmış önceki içerik temizlendi.
 - **Gerçek yerel Sass derlemesi, 22/22 kontrat, `check:css` ve tarayıcı ile responsive/klavye kontrolü yeni Faz 9 commit'leri için yapılmadı.**
-- Kullanıcının önceki Faz 8 sonucunda `npm run check:css` başarılı. Bu, yeni kod için test kanıtı değildir.
+- Usernın önceki Faz 8 sonucunda `npm run check:css` başarılı. Bu, yeni kod için test kanıtı değildir.
 - `assets/css/main.css` bu oturumda derlenmedi, GitHub'da güncellenmedi.
 
 ## Yerel doğrulama

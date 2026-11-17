@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /* =====================================
-   Bulbulustur Theme - Main Stylesheet
+   Bulbulustur Theme — Main Stylesheet
 ===================================== */
 /* 1. Foundation / Tokens */
 /* =====================================
-   Bulbulustur Theme - Theme Profile
+   Bulbulustur Theme — Theme Prifilee
    Bootstrap-parallel token names
    Source: bb-* tokens
    Theme attribute: html[data-bs-theme="light|dark"]
@@ -848,7 +848,7 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Radius Tokens
+   Bulbulustur Theme — Radius Tokens
    Bootstrap-parallel radius scale
    Source: bb-* radius tokens
 ===================================== */
@@ -864,7 +864,7 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Token Engine
+   Bulbulustur Theme — Token Engine
    Produces semantic tokens from theme base tokens
    Dark/Light aware mixing
    Includes fallback for browsers without color-mix()
@@ -999,7 +999,7 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Data Viz & Status Tokens
+   Bulbulustur Theme — Data Viz & Status Tokens
    Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
    Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
    Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
@@ -1072,7 +1072,7 @@ html[data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Renk Paketi: WORKSHOP
+   Bulbulustur Theme — Renk Paketi: WORKSHOP
    El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
    Kullanım: <html data-bb-pack="workshop"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
    Yalnız GİRDİ tokenları (palet, marka, nötr, kabuk). hover/active/light/clarity
@@ -1318,7 +1318,7 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
 }
 
 /* =====================================
-   Bulbulustur Theme - Typography
+   Bulbulustur Theme — Typography
    Bootstrap-parallel token names
    Theme: data-bs-theme="light|dark"
    Density: data-bb-density="compact"
@@ -1994,7 +1994,7 @@ hr {
 }
 
 /* =====================================
-   Bulbulustur Theme - Bootstrap Bridge
+   Bulbulustur Theme — Bootstrap Bridge
    Source: bb-* tokens
    Target: Bootstrap --bs-* compatibility
 ===================================== */
@@ -2089,7 +2089,7 @@ hr {
 }
 
 /* =====================================
-   Bulbulustur Theme - Bootstrap Container Bridge
+   Bulbulustur Theme — Bootstrap Container Bridge
    Electro theme container genişliğini Bootstrap 5 üstüne taşır.
 
    Eski Electro theme:
@@ -2130,7 +2130,7 @@ hr {
 }
 /* 2. Core */
 /* =====================================
-   Bulbulustur Theme - Reset
+   Bulbulustur Theme — Reset
 ===================================== */
 *,
 *::before,
@@ -2202,7 +2202,7 @@ textarea:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Page Wrapper
+   Bulbulustur Theme — Page Wrapper
    Main element remains neutral.
    Page mood and spacing are controlled by bb-wrapper-* modifiers.
 ===================================== */
@@ -2420,7 +2420,7 @@ main {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Icons
+   Bulbulustur Theme — Icons
    Google Material Symbols Outlined
 
    CDN Include should be placed in layout/head:
@@ -2968,7 +2968,7 @@ main {
 }
 
 /* =====================================
-   Bulbulustur Theme - State System
+   Bulbulustur Theme — State System
    Global state helpers + Focus Ring Standard
    File: assets/scss/base/_state.scss
 ===================================== */
@@ -3161,13 +3161,13 @@ button.bb-link:focus-visible,
 }
 
 /* =====================================
-   Bulbulustur Theme - Motion Accessibility
+   Bulbulustur Theme — Motion Accessibility
    Global reduced-motion safety layer
    File: assets/scss/base/_motion.scss
 ===================================== */
 /* -------------------------------------
    Reduced motion
-   Kullanıcı işletim sistemi seviyesinde
+   User işletim sistemi seviyesinde
    "reduce motion" seçtiyse animasyonları minimuma indirir.
 ------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
@@ -3299,7 +3299,7 @@ button.bb-link:focus-visible,
 }
 /* 3. Utilities */
 /* =====================================
-   Bulbulustur Theme - Utilities (bb-)
+   Bulbulustur Theme — Utilities (bb-)
    Mechanical utilities only (layout/size/flow)
    Works with CDN Bootstrap too
    ===================================== */
@@ -7133,7 +7133,7 @@ button.bb-link:focus-visible,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Text Utilities
+   Bulbulustur Theme — Text Utilities
    bb- prefix | token-driven | state aware | PURE
 
    Scope:
@@ -15314,7 +15314,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     box-shadow: none;
   }
 }
-/* User Profile — shared Metronic-style identity card and subpage layout. */
+/* User Prifilee — shared Metronic-style identity card and subpage layout. */
 .bb-panel .bb-profile-hero {
   overflow: visible;
 }
@@ -19559,7 +19559,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 /* 5. Components */
 /* =====================================
-   Bulbulustur Theme - Buttons
+   Bulbulustur Theme — Buttons
    Bootstrap 5 base preserved
    Token-first | Dark/Light safe | PURE
 ===================================== */
@@ -20128,7 +20128,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Cards (v2 PURE)
+   Bulbulustur Theme — Cards (v2 PURE)
    Metronic DNA: in, copy: out
    Bootstrap 5 compatible, token-first
    ===================================== */
@@ -20354,7 +20354,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Modal (PURE)
+   Bulbulustur Theme — Modal (PURE)
    Metronic-inspired | Bootstrap 5 compatible
    Token-first | Dark/Light safe
    Root: .bb-modal
@@ -20525,7 +20525,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Tables (PURE)
+   Bulbulustur Theme — Tables (PURE)
    Bootstrap 5 friendly: use with .table
    Root: .table.bb-table
    Wrapper (optional): .bb-table-wrap
@@ -20801,7 +20801,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Charts
+   Bulbulustur Theme — Charts
    Chart.js host/layout only. All visual colors come from DataViz tokens.
 ===================================== */
 .bb-panel .bb-chart-showcase {
@@ -20895,7 +20895,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Statistics Widgets
+   Bulbulustur Theme — Statistics Widgets
    Token-first statistics card patterns.
 ===================================== */
 .bb-panel .bb-statistics-page {
@@ -21164,7 +21164,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Corporate Team Page
+   Bulbulustur Theme — Corporate Team Page
    Token-first team/culture composition.
 ===================================== */
 .bb-panel .bb-team-page {
@@ -21748,7 +21748,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Accordion
+   Bulbulustur Theme — Accordion
    Bootstrap 5 base preserved
    Root: .bb-accordion
 ===================================== */
@@ -21880,7 +21880,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Alerts (Pure)
+   Bulbulustur Theme — Alerts (Pure)
    Token-first, Bootstrap 5 safe
    ===================================== */
 .bb-alert {
@@ -22013,7 +22013,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
-   Bulbulustur Theme - Nav / Tabs (PURE)
+   Bulbulustur Theme — Nav / Tabs (PURE)
    Token-first | Dark/Light safe
    Root: .bb-nav
    Variants: .bb-nav-tabs .bb-nav-pills .bb-nav-soft .bb-nav-group .bb-nav-underline
@@ -22216,7 +22216,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Badges (Pure)
+   Bulbulustur Theme — Badges (Pure)
    Bootstrap 5 compatible, token-first
    ===================================== */
 .badge.bb-badge {
@@ -22379,7 +22379,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Chips
+   Bulbulustur Theme — Chips
    Compact metadata / filter / status pills
    Bootstrap-independent, token-first
 ===================================== */
@@ -22564,7 +22564,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Breadcrumb (PURE)
+   Bulbulustur Theme — Breadcrumb (PURE)
    Bootstrap 5 tokens + bb- layer
 ===================================== */
 /* -------------------------------------
@@ -22788,7 +22788,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Carousel (PURE)
+   Bulbulustur Theme — Carousel (PURE)
    Metronic inspired (no copy)
    Bootstrap 5 compatible, bb-* modifiers
    ===================================== */
@@ -22930,7 +22930,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Separator (PURE)
+   Bulbulustur Theme — Separator (PURE)
    Token-first | Dark/Light safe
    Root: .bb-separator
    Variants: .is-dashed | .is-dotted | .has-content
@@ -23021,7 +23021,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Overlay (PURE)
+   Bulbulustur Theme — Overlay (PURE)
    Token-first | Dark/Light safe
    Root: .bb-overlay
    States: .bb-overlay-hover | .bb-overlay-show | .bb-overlay-block
@@ -23102,7 +23102,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Toasts
+   Bulbulustur Theme — Toasts
    Scope: .toast.bb-toast
    Bootstrap 5 friendly | Token-first
 ===================================== */
@@ -23203,7 +23203,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Symbols
+   Bulbulustur Theme — Symbols
    Token-first | Dark/Light safe
    Root: .bb-symbol
    Variants: .is-circle | .is-square
@@ -23350,7 +23350,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Drawer
+   Bulbulustur Theme — Drawer
    Overlay side panel (start/end)
    Bootstrap 5 compatible, bb-* prefixed
 ===================================== */
@@ -23517,7 +23517,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Lightbox
+   Bulbulustur Theme — Lightbox
    Fullscreen backdrop + fixed controls
    Token-first | Dark/Light safe | PURE
 ===================================== */
@@ -23639,7 +23639,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - CountUp (PURE)
+   Bulbulustur Theme — CountUp (PURE)
    Lightweight, Bootstrap 5 friendly
    ===================================== */
 .bb-countup {
@@ -23753,7 +23753,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Tiny Slider (PURE)
+   Bulbulustur Theme — Tiny Slider (PURE)
    CSS-only (scroll-snap) | Token-first | Dark/Light safe
    Root: .bb-tiny-slider
    ===================================== */
@@ -23977,7 +23977,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Sticky
+   Bulbulustur Theme — Sticky
    JS-free: position sticky
    Token-first | Dark/Light safe
    Root: .bb-sticky
@@ -24108,7 +24108,7 @@ button.badge.bb-badge:disabled {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Scroll
+   Bulbulustur Theme — Scroll
    CSS-only custom scrollbar styling
    Optional hover scrollbar behavior
    Token-first | Dark/Light safe
@@ -24255,7 +24255,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Menu (PURE)
+   Bulbulustur Theme — Menu (PURE)
    Bootstrap 5 compatible
    Prefix: bb-
    Supports:
@@ -24602,7 +24602,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Password Meter
+   Bulbulustur Theme — Password Meter
    Bootstrap 5 compatible | bb-* prefixed
    Token-first | Dark/Light safe | PURE
    Root: .bb-password-meter
@@ -24852,7 +24852,7 @@ button.badge.bb-badge:disabled {
 }
 
 /* =====================================
-   Bulbulustur Theme - Forms
+   Bulbulustur Theme — Forms
    Bootstrap 5 base classes preserved
    Token-first | Global premium form object system | PURE
 ===================================== */
@@ -25505,7 +25505,7 @@ label.required::after {
 }
 
 /* =====================================
-   Bulbulustur Theme - Ribbons (PURE)
+   Bulbulustur Theme — Ribbons (PURE)
    Bootstrap 5 base class'lar korunur.
    Token-first | Dark/Light safe
    Root: .bb-ribbon
@@ -25775,7 +25775,7 @@ label.required::after {
 }
 
 /* =====================================
-   Bulbulustur Theme - Rating (PURE)
+   Bulbulustur Theme — Rating (PURE)
    Bootstrap 5 friendly | Token-first | Dark/Light safe
    Root: .bb-rating
    Variants: .bb-rating-sm | .bb-rating-lg
@@ -25939,7 +25939,7 @@ label.required::after {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Indicator (PURE)
+   Bulbulustur Theme — Indicator (PURE)
    Bootstrap 5 uyumlu
    Toggle: data-bb-indicator="on"
    ===================================== */
@@ -26015,7 +26015,7 @@ label.required::after {
 }
 
 /* =====================================
-   Bulbulustur Theme - Pagination
+   Bulbulustur Theme — Pagination
    Bootstrap 5 compatible, bb-* prefixed
    Variants: pill, circle, outline, compact
    ===================================== */
@@ -26189,7 +26189,7 @@ label.required::after {
   }
 }
 /* =====================================
-   Bulbulustur Theme - Progress
+   Bulbulustur Theme — Progress
    Bootstrap 5 compatible, token-driven
 ===================================== */
 .bb-progress {
@@ -26304,7 +26304,7 @@ label.required::after {
 }
 
 /* =====================================
-   Bulbulustur Theme - Popover
+   Bulbulustur Theme — Popover
    Bootstrap 5 compatible | bb-* prefixed
    Token-first | Dark/Light safe | PURE
    Root: .bb-popover
@@ -26401,7 +26401,7 @@ label.required::after {
 }
 
 /* =====================================
-   Bulbulustur Theme - Bullet
+   Bulbulustur Theme — Bullet
    Prefix: bb-
    Type: micro / utility-friendly
 ===================================== */
@@ -26584,7 +26584,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Datetime (PURE)
+   Bulbulustur Theme — Datetime (PURE)
    Prefix: bb-
    Vendor yok. Bootstrap 5 + token.
    ===================================== */
@@ -26836,7 +26836,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Tooltips (PURE)
+   Bulbulustur Theme — Tooltips (PURE)
    Bootstrap 5 tooltip base korunur
    Custom class ile theme: data-bs-custom-class="bb-tooltip ..."
    Dark/Light: token-first
@@ -26918,7 +26918,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Form Repeater
+   Bulbulustur Theme — Form Repeater
    Bootstrap 5 compatible (Metronic-inspired)
    Prefix: bb-
    Dark/Light: data-bs-theme="light|dark"
@@ -27109,7 +27109,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Input Group
+   Bulbulustur Theme — Input Group
    Bootstrap 5 base preserved
    Prefix: bb-
    Root: .input-group.bb-input-group
@@ -27213,7 +27213,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bulbulustur Theme - Dropdowns
+   Bulbulustur Theme — Dropdowns
    Bootstrap 5 compatible (dropdown JS)
    Prefix: bb-
    Notes:
@@ -27442,7 +27442,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bulbulustur Theme - Spinner (PURE)
+   Bulbulustur Theme — Spinner (PURE)
    Bootstrap 5 spinners preserved
    Prefix: bb-
    Supports: border + grow, size + color + overlay
@@ -27592,7 +27592,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bulbulustur Theme - Skeleton (yükleniyor yer tutucusu)
+   Bulbulustur Theme — Skeleton (yükleniyor yer tutucusu)
    Prefix: bb-
    Hareket azaltma tercihinde animasyon durur.
 ===================================== */
@@ -27669,7 +27669,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Status (durum noktası + etiket)
+   Bulbulustur Theme — Status (durum noktası + etiket)
    Prefix: bb-
    Renk tek başına anlam taşımaz: etiket (.bb-status-label) veya ekran okuyucu metni gerekir.
    Şekil de ayırt eder: çevrimdışı içi boş halka.
@@ -27745,7 +27745,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bulbulustur Theme - Kbd & Code
+   Bulbulustur Theme — Kbd & Code
    Prefix: bb-
    Klavye tuşu ve satır içi kod.
 ===================================== */
@@ -27798,7 +27798,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bulbulustur Theme - Dialer (PURE)
+   Bulbulustur Theme — Dialer (PURE)
    Bootstrap 5 compatible | bb-* prefixed
    Token-first | Dark/Light safe
    Root: .bb-dialer
@@ -27914,7 +27914,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Collapse (PURE)
+   Bulbulustur Theme — Collapse (PURE)
    Bootstrap 5 compatible | bb-* prefixed
    Token-first | Dark/Light safe
    Root: .bb-collapse
@@ -28083,7 +28083,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Bulbulustur Theme - Button Groups
+   Bulbulustur Theme — Button Groups
    Bootstrap 5 compatible (base korunur)
    Prefix: bb-
    Token-first (dark/light ready)
@@ -28210,7 +28210,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* 6. Final Overrides */
 /* Bootstrap ve page-level ezmelerden sonra form objelerini tekrar Main CSS standardına sabitler. */
 /* =====================================
-   Bulbulustur Theme - Forms Final Override
+   Bulbulustur Theme — Forms Final Override
    Purpose: Keep Bootstrap 5 form controls aligned with Main CSS form tokens
    Must be imported at the end of main.scss
 ===================================== */

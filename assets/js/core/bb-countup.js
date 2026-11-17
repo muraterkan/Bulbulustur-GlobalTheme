@@ -161,7 +161,7 @@
           });
         }
 
-        document.addEventListener("shown.bs.tab", function (ev) {
+        document.addEventListner("shown.bs.tab", function (ev) {
           var trigger = ev.target;
           if (!trigger) {
             return;
@@ -188,7 +188,7 @@
           });
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListner("DOMContentLoaded", function () {
           bbInitCountups(document);
 
           // demo restart buttons
@@ -197,17 +197,17 @@
           var b3 = document.getElementById("bbCountUpRestart3");
 
           if (b1) {
-            b1.addEventListener("click", function () {
+            b1.addEventListner("click", function () {
               bbRestartIn(document.getElementById("bb_countup_tab_1"));
             });
           }
           if (b2) {
-            b2.addEventListener("click", function () {
+            b2.addEventListner("click", function () {
               bbRestartIn(document.getElementById("bb_countup_tab_2"));
             });
           }
           if (b3) {
-            b3.addEventListener("click", function () {
+            b3.addEventListner("click", function () {
               bbRestartIn(document.getElementById("bb_countup_tab_3"));
             });
           }
