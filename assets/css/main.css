@@ -217,6 +217,13 @@ html[data-bs-theme=light] {
   --bb-shadow-lg: 0 1.20rem 2.80rem rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-lg));
   --bb-shadow-inset: inset 0 1px 2px rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-inset));
   /* -------------------------------------
+     Layering
+     Core stacking contracts shared by applications.
+  ------------------------------------- */
+  --bb-z-sticky: 1020;
+  --bb-z-dropdown: 1050;
+  --bb-z-drawer: 1055;
+  /* -------------------------------------
      Motion / Transition
   ------------------------------------- */
   --bb-motion-fast: 150ms;
@@ -1431,6 +1438,8 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
   --bb-space-2: 0.5rem;
   --bb-space-3: 0.75rem;
   --bb-space-4: 1rem;
+  --bb-space-5: 1.25rem;
+  --bb-space-6: 1.5rem;
   --bb-heading-margin-bottom: var(--bb-space-2);
   --bb-paragraph-margin-bottom: var(--bb-space-4);
   /* -------------------------------------
@@ -1754,7 +1763,7 @@ abbr[title] {
 
 mark {
   padding: var(--bb-mark-padding-y) var(--bb-mark-padding-x);
-  color: var(--bb-warning-inverse);
+  color: var(--bb-body-color);
   background-color: var(--bb-warning-light);
   border-radius: var(--bb-mark-radius);
 }
@@ -2131,6 +2140,7 @@ hr {
 
 html {
   height: 100%;
+  accent-color: var(--bb-primary);
   max-width: 100%;
   overflow-x: clip;
   scroll-behavior: smooth;
@@ -23315,7 +23325,7 @@ button.badge.bb-badge:disabled {
 ===================================== */
 .bb-drawer {
   /* Core tokens */
-  --bb-drawer-z: var(--bb-z-drawer, 1055);
+  --bb-drawer-z: var(--bb-z-drawer);
   --bb-drawer-width: 420px;
   --bb-drawer-bg: var(--bb-body-bg);
   --bb-drawer-color: var(--bb-emphasis-color);
@@ -23442,7 +23452,7 @@ button.badge.bb-badge:disabled {
 ------------------------------------- */
 .bb-drawer-backdrop,
 [data-bb-drawer-backdrop] {
-  --bb-drawer-backdrop-z: calc(var(--bb-z-drawer, 1055) - 1);
+  --bb-drawer-backdrop-z: calc(var(--bb-z-drawer) - 1);
   --bb-drawer-backdrop-color: var(--bb-overlay-color, var(--bb-black));
   --bb-drawer-backdrop-opacity: var(--bb-overlay-opacity, 0.55);
   --bb-drawer-backdrop-blur: var(--bb-overlay-blur, 0px);
@@ -23944,7 +23954,7 @@ button.badge.bb-badge:disabled {
 ===================================== */
 .bb-sticky {
   --bb-sticky-top: 0;
-  --bb-sticky-zindex: var(--bs-sticky-zindex, 1020);
+  --bb-sticky-zindex: var(--bb-z-sticky);
   position: sticky;
   top: var(--bb-sticky-top);
   z-index: var(--bb-sticky-zindex);
@@ -27227,7 +27237,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   top: calc(100% + 0.5rem);
   min-width: var(--bb-dd-minw, 140px);
   display: none;
-  z-index: 100;
+  z-index: var(--bb-z-dropdown);
 }
 
 .bb-dropdown.is-open .bb-dropdown-menu {
@@ -27377,7 +27387,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   --bb-dd-pad-y: var(--bb-space-2);
   --bb-dd-item-px: var(--bb-space-3);
   --bb-dd-item-py: var(--bb-space-3);
-  z-index: var(--bb-z-dropdown, 1050);
+  z-index: var(--bb-z-dropdown);
   font-size: var(--bb-fs-xs);
 }
 
