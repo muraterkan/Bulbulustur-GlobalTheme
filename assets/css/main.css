@@ -11321,6 +11321,10 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   color: var(--bb-secondary-color);
 }
 
+.bb-panel .bb-integration-card-action.bb-action-menu-toggle {
+  display: grid;
+}
+
 .bb-panel .bb-integration-card-action:hover {
   background: var(--bb-tertiary-bg);
   color: var(--bb-primary-text);
@@ -15032,7 +15036,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   flex-direction: column;
   min-width: 0;
   padding: calc(var(--bb-space-4) * 2);
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
 }
 
 .bb-panel.bb-panel-auth-creative .bb-creative-auth-card {
@@ -15041,7 +15045,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   padding: calc(var(--bb-space-4) * 2);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius-lg);
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
   box-shadow: var(--bb-shadow-sm);
 }
 
@@ -18792,7 +18796,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   padding: var(--bb-space-1) var(--bb-space-3);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius-pill);
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
   color: var(--bb-body-color);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-medium);
@@ -18822,7 +18826,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 .bb-panel .bb-contacts-group-item[aria-pressed=true] .bb-contacts-count {
-  background: var(--bb-surface);
+  background: var(--bb-surface-elevated);
   color: var(--bb-primary-text);
 }
 
