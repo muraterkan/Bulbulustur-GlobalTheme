@@ -1465,8 +1465,9 @@ html[data-bb-pack=workshop][data-bs-theme=dark]:not([data-bb-surface]) {
   --bb-badge-font-size: var(--bb-fs-sm);
   --bb-badge-font-size-sm: var(--bb-fs-xs);
   --bb-table-font-size: var(--bb-fs-sm);
-  --bb-table-head-font-size: var(--bb-fs-sm);
-  --bb-table-line-height: var(--bb-line-height-base);
+  --bb-table-head-font-size: var(--bb-fs-xs);
+  --bb-table-head-font-weight: var(--bb-fw-semibold);
+  --bb-table-line-height: 1.4;
   --bb-ui-font-size: var(--bb-fs-sm);
   --bb-ui-font-size-sm: var(--bb-fs-xs);
   --bb-ui-line-height: 1.4;
@@ -19408,6 +19409,25 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
    Root: .table.bb-table
    Wrapper (optional): .bb-table-wrap
    ===================================== */
+/* Base table typography.
+   Every Bootstrap .table uses the core table scale.
+   .bb-table remains the richer opt-in table composition below. */
+.table {
+  font-size: var(--bb-table-font-size);
+  line-height: var(--bb-table-line-height);
+}
+
+.table > :not(caption) > * > * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.table > thead > tr > th {
+  font-size: var(--bb-table-head-font-size);
+  font-weight: var(--bb-table-head-font-weight);
+  line-height: var(--bb-table-line-height);
+}
+
 /* Optional wrapper (rounded + clip + border) */
 .bb-table-wrap {
   --bb-table-wrap-radius: var(--bb-radius);
