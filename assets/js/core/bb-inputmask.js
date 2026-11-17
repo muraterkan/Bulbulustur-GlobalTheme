@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  document.addEventListner("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
         // 1) data-inputmask attribute ile toplu init
         // (Inputmask dokümantasyonunda data-attribute yaklaşımı var)  :contentReference[oaicite:2]{index=2}
         var dataInputs = document.querySelectorAll("[data-inputmask]");

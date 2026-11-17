@@ -14,7 +14,7 @@
     backdrop.className = "bb-drawer-backdrop";
     backdrop.setAttribute("data-bb-drawer-backdrop", "true");
 
-    backdrop.addEventListner("click", function () {
+    backdrop.addEventListener("click", function () {
       bbCloseActiveDrawer();
     });
 
@@ -88,7 +88,7 @@
     activeToggle = null;
   }
 
-  document.addEventListner("click", function (e) {
+  document.addEventListener("click", function (e) {
     var toggle = e.target.closest("[data-bb-drawer-toggle]");
     if (toggle) {
       var target = toggle.getAttribute("data-bb-drawer-toggle");
@@ -105,7 +105,7 @@
     }
   });
 
-  document.addEventListner("keydown", function (e) {
+  document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       bbCloseActiveDrawer();
     }

@@ -14,7 +14,7 @@
       (function () {
         var groups = document.querySelectorAll('[data-bb-buttons="true"]');
         groups.forEach(function (group) {
-          group.addEventListner("change", function (e) {
+          group.addEventListener("change", function (e) {
             var input = e.target;
             if (!input.classList.contains("form-check-input")) {
               return;

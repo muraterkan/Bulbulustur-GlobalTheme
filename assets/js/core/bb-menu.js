@@ -28,7 +28,7 @@
         });
       }
 
-      document.addEventListner("click", function (e) {
+      document.addEventListener("click", function (e) {
         // External toggle (display-based)
         var extToggle = e.target.closest("[data-bb-menu-trigger][data-bb-menu-target]");
         if (extToggle) {

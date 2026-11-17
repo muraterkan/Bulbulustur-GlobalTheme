@@ -132,10 +132,10 @@
       this._onIncreaseClick = this._onIncreaseClick.bind(this);
 
       if (this._btnDecrease) {
-        this._btnDecrease.addEventListner("click", this._onDecreaseClick);
+        this._btnDecrease.addEventListener("click", this._onDecreaseClick);
       }
       if (this._btnIncrease) {
-        this._btnIncrease.addEventListner("click", this._onIncreaseClick);
+        this._btnIncrease.addEventListener("click", this._onIncreaseClick);
       }
 
       // init
@@ -299,7 +299,7 @@
   window.BBDialer = BBDialer;
 
   // Auto init
-  document.addEventListner("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     BBDialer.createInstances();
   });
 })();

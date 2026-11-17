@@ -65,16 +65,16 @@
         var self = this;
 
         if (self.input) {
-          self.input.addEventListner("input", function () {
+          self.input.addEventListener("input", function () {
             self.check();
           });
-          self.input.addEventListner("blur", function () {
+          self.input.addEventListener("blur", function () {
             self.check();
           });
         }
 
         if (self.toggle) {
-          self.toggle.addEventListner("click", function () {
+          self.toggle.addEventListener("click", function () {
             self._toggleVisibility();
           });
         }
