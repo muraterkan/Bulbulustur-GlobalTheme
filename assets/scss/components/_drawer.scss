@@ -6,7 +6,7 @@
 
 .bb-drawer {
   /* Core tokens */
-  --bb-drawer-z: var(--bb-z-drawer, 1055);
+  --bb-drawer-z: var(--bb-z-drawer);
   --bb-drawer-width: 420px;
 
   --bb-drawer-bg: var(--bb-body-bg);
@@ -163,7 +163,7 @@
 
 .bb-drawer-backdrop,
 [data-bb-drawer-backdrop] {
-  --bb-drawer-backdrop-z: calc(var(--bb-z-drawer, 1055) - 1);
+  --bb-drawer-backdrop-z: calc(var(--bb-z-drawer) - 1);
   --bb-drawer-backdrop-color: var(--bb-overlay-color, var(--bb-black));
   --bb-drawer-backdrop-opacity: var(--bb-overlay-opacity, 0.55);
   --bb-drawer-backdrop-blur: var(--bb-overlay-blur, 0px);
