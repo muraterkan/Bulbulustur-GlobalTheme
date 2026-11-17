@@ -1,467 +1,414 @@
-/* assets/scss/pages/status/_index.scss */
-
-/* =====================================
-   Status Index
-   Main CSS component-first
-   Page-specific visual layer
-===================================== */
-
-
-/* -------------------------------------
-   Buttons
-------------------------------------- */
+/* Status index — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
 
 .bb-status-btn {
-    --bb-btn-radius: var(--bb-status-card-inner-radius);
-    --bb-btn-font-weight: var(--bb-fw-semibold);
-    --bb-btn-padding-x: 1.15rem;
-    --bb-btn-padding-y: .65rem;
+  --bb-btn-radius: var(--bb-status-card-inner-radius);
+  --bb-btn-font-weight: var(--bb-fw-medium);
+  --bb-btn-padding-x: 1.15rem;
+  --bb-btn-padding-y: .65rem;
 }
 
 .bb-status-btn-yellow {
-    --bb-btn-bg: var(--bb-warning);
-    --bb-btn-border-color: var(--bb-warning);
-    --bb-btn-color: var(--bb-warning-inverse);
-
-    --bb-btn-hover-bg: color-mix(in srgb, var(--bb-warning) 92%, var(--bb-body-bg));
-    --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
-    --bb-btn-hover-color: var(--bb-warning-inverse);
-
-    --bb-btn-active-bg: color-mix(in srgb, var(--bb-warning) 86%, var(--bb-body-bg));
-    --bb-btn-active-border-color: var(--bb-btn-active-bg);
-    --bb-btn-active-color: var(--bb-warning-inverse);
+  --bb-btn-bg: var(--bb-primary);
+  --bb-btn-border-color: var(--bb-primary);
+  --bb-btn-color: var(--bb-primary-inverse);
+  --bb-btn-hover-bg: color-mix(in srgb, var(--bb-primary) 90%, var(--bb-body-bg));
+  --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
+  --bb-btn-hover-color: var(--bb-primary-inverse);
+  --bb-btn-active-bg: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-body-bg));
+  --bb-btn-active-border-color: var(--bb-btn-active-bg);
+  --bb-btn-active-color: var(--bb-primary-inverse);
 }
 
 .bb-status-btn-outline {
-    --bb-btn-bg: var(--bb-body-bg);
-    --bb-btn-border-color: var(--bb-border-color);
-    --bb-btn-color: var(--bb-body-color);
-
-    --bb-btn-hover-bg: var(--bb-tertiary-bg);
-    --bb-btn-hover-border-color: var(--bb-border-color);
-    --bb-btn-hover-color: var(--bb-body-color);
-
-    --bb-btn-active-bg: var(--bb-tertiary-bg);
-    --bb-btn-active-border-color: var(--bb-border-color);
-    --bb-btn-active-color: var(--bb-body-color);
+  --bb-btn-bg: var(--bb-body-bg);
+  --bb-btn-border-color: var(--bb-border-color);
+  --bb-btn-color: var(--bb-body-color);
+  --bb-btn-hover-bg: var(--bb-tertiary-bg);
+  --bb-btn-hover-border-color: var(--bb-border-color);
+  --bb-btn-hover-color: var(--bb-body-color);
+  --bb-btn-active-bg: var(--bb-tertiary-bg);
+  --bb-btn-active-border-color: var(--bb-border-color);
+  --bb-btn-active-color: var(--bb-body-color);
 }
 
 .bb-status-btn-dark {
-    width: 100%;
-
-    --bb-btn-bg: var(--bb-dark);
-    --bb-btn-border-color: var(--bb-dark);
-    --bb-btn-color: var(--bb-dark-inverse);
-
-    --bb-btn-hover-bg: color-mix(in srgb, var(--bb-coal-300) 92%, var(--bb-body-bg));
-    --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
-    --bb-btn-hover-color: var(--bb-dark-inverse);
+  width: 100%;
+  --bb-btn-bg: var(--bb-dark);
+  --bb-btn-border-color: var(--bb-dark);
+  --bb-btn-color: var(--bb-dark-inverse);
+  --bb-btn-hover-bg: color-mix(in srgb, var(--bb-coal-300) 92%, var(--bb-body-bg));
+  --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
+  --bb-btn-hover-color: var(--bb-dark-inverse);
 }
-
-
-/* -------------------------------------
-   Cards
-------------------------------------- */
 
 .bb-status-card {
-    padding: var(--bb-status-card-padding);
+  padding: var(--bb-status-card-padding);
 }
 
-
-/* -------------------------------------
-   Live Hero
-------------------------------------- */
-
 .bb-status-index-page .bb-status-live-strip {
-    margin: 28px 0 24px;
+  margin: 28px 0 24px;
 }
 
 .bb-status-live-strip {
-    position: relative;
-    padding: 26px 28px 22px;
-    color: var(--bb-white);
-    background:
-        radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), .20), transparent 25%),
-        linear-gradient(135deg, #153966 0%, #0d315d 52%, #0a2548 100%);
-    border: 1px solid rgba(255, 255, 255, .10);
-    border-radius: var(--bb-status-card-radius);
-    box-shadow: var(--bb-shadow-lg);
-    overflow: visible;
+  position: relative;
+  padding: 26px 28px 22px;
+  color: var(--bb-white);
+  background: radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), 0.2), transparent 25%), linear-gradient(135deg, var(--bb-color-navy-600) 0%, var(--bb-color-navy-700) 52%, var(--bb-color-navy-800) 100%);
+  border: 1px solid color-mix(in srgb, var(--bb-white) 10%, transparent);
+  border-radius: var(--bb-status-card-radius);
+  box-shadow: var(--bb-shadow-lg);
+  overflow: visible;
 }
 
 .bb-status-live-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.125rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.125rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .bb-status-live-service {
-    min-width: 0;
+  min-width: 0;
 }
 
 .bb-status-live-title {
-    margin: 0;
-    color: var(--bb-white);
-    font-size: var(--bb-h2);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
+  margin: 0;
+  color: var(--bb-white);
+  font-size: var(--bb-fs-xl);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-live-subtitle {
-    margin: 5px 0 0;
-    color: rgba(255, 255, 255, .82);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-table-line-height);
-    font-weight: var(--bb-fw-medium);
+  margin: 5px 0 0;
+  color: color-mix(in srgb, var(--bb-white) 82%, transparent);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+  font-weight: var(--bb-fw-normal);
 }
 
 .bb-status-live-badges {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .bb-status-live-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.125rem;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.125rem;
+  flex-wrap: wrap;
 }
 
-
-/* -------------------------------------
-   Status Pills
-------------------------------------- */
-
 .bb-status-pill {
-    min-height: 36px;
-    padding: 0 15px;
-    border-radius: var(--bb-status-card-inner-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-semibold);
-    white-space: nowrap;
+  min-height: 36px;
+  padding: 0 15px;
+  border-radius: var(--bb-status-card-inner-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  white-space: nowrap;
 }
 
 .bb-status-pill-dark {
-    background: rgba(4, 17, 36, .54);
-    border: 1px solid rgba(255, 255, 255, .11);
-    color: var(--bb-white);
+  background: color-mix(in srgb, var(--bb-color-navy-900) 54%, transparent);
+  border: 1px solid color-mix(in srgb, var(--bb-white) 11%, transparent);
+  color: var(--bb-white);
 }
 
 .bb-status-pill-dark strong {
-    color: var(--bb-warning);
-    font-weight: var(--bb-fw-semibold);
+  color: var(--bb-brand-yellow);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-pill-green {
-    min-height: 50px;
-    padding: 0 20px;
-    border-radius: var(--bb-status-pill-radius);
-    background: rgba(var(--bb-success-rgb), .16);
-    color: #8ff0b3;
-    border: 1px solid rgba(var(--bb-success-rgb), .14);
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: var(--bb-status-pill-radius);
+  background: rgba(var(--bb-success-rgb), 0.16);
+  color: var(--bb-color-green-300);
+  border: 1px solid rgba(var(--bb-success-rgb), 0.14);
 }
 
 .bb-status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    background: currentColor;
-    flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: currentColor;
+  flex: 0 0 auto;
 }
 
-
-/* -------------------------------------
-   Uptime Bars
-------------------------------------- */
-
 .bb-status-bars-scroll {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 14px;
-    padding-bottom: 4px;
-    overflow: visible;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding-bottom: 4px;
+  overflow: visible;
 }
 
 .bb-status-bars {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(90, 8px);
-    gap: 4px;
-    width: max-content;
-    min-width: max-content;
-    overflow: visible;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(90, 8px);
+  gap: 4px;
+  width: max-content;
+  min-width: max-content;
+  overflow: visible;
 }
 
 .bb-status-bar {
-    position: relative;
-    display: block;
-    width: 8px;
-    height: 40px;
-    border-radius: var(--bb-radius-xs);
-    background: var(--bb-success);
-    cursor: pointer;
-    transform-origin: center bottom;
-    transition:
-        transform var(--bb-transition-fast),
-        box-shadow var(--bb-transition-fast),
-        filter var(--bb-transition-fast);
-    z-index: 1;
-    font-size: 0;
-    line-height: 0;
+  position: relative;
+  display: block;
+  width: 8px;
+  height: 40px;
+  border-radius: var(--bb-radius-xs);
+  background: var(--bb-success);
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition: transform var(--bb-transition-fast), box-shadow var(--bb-transition-fast), filter var(--bb-transition-fast);
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
 }
 
 .bb-status-bar.ok,
 .bb-status-bar.operational {
-    background: var(--bb-success);
+  background: var(--bb-success);
 }
 
 .bb-status-bar.warning,
 .bb-status-bar.degraded_performance {
-    background: var(--bb-warning);
+  background: var(--bb-warning);
 }
 
 .bb-status-bar.error,
 .bb-status-bar.partial_outage,
 .bb-status-bar.major_outage {
-    background: var(--bb-danger);
+  background: var(--bb-danger);
 }
 
 .bb-status-bar.maintenance {
-    background: var(--bb-info);
+  background: var(--bb-info);
 }
 
 .bb-status-bar:hover {
-    transform: scaleY(1.18) scaleX(1.14);
-    box-shadow: var(--bb-shadow);
-    filter: brightness(1.06);
-    z-index: 90;
+  transform: scaleY(1.18) scaleX(1.14);
+  box-shadow: var(--bb-shadow);
+  filter: brightness(1.06);
+  z-index: 90;
 }
 
-
-/* -------------------------------------
-   Uptime Rich Tooltip
-------------------------------------- */
-
 .bb-status-bar::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-    width: 330px;
-    height: 20px;
-    transform: translateX(-50%);
-    background: transparent;
-    display: none;
-    z-index: 70;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 330px;
+  height: 20px;
+  transform: translateX(-50%);
+  background: transparent;
+  display: none;
+  z-index: 70;
 }
 
 .bb-status-bar:hover::before {
-    display: block;
+  display: block;
 }
 
 .bb-status-bar-tooltip {
-    position: absolute;
-    left: 50%;
-    top: calc(100% + 16px);
-    bottom: auto;
-    width: 340px;
-    min-height: 138px;
-    transform: translateX(-50%) translateY(-8px);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: auto;
-    background: var(--bb-body-bg);
-    color: var(--bb-body-color);
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    box-shadow: var(--bb-shadow-lg);
-    padding: 14px;
-    transition:
-        opacity var(--bb-transition-fast),
-        visibility var(--bb-transition-fast),
-        transform var(--bb-transition-fast);
-    z-index: 100;
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-base);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 16px);
+  bottom: auto;
+  width: 340px;
+  min-height: 138px;
+  transform: translateX(-50%) translateY(-8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  background: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  box-shadow: var(--bb-shadow-lg);
+  padding: 14px;
+  transition: opacity var(--bb-transition-fast), visibility var(--bb-transition-fast), transform var(--bb-transition-fast);
+  z-index: 100;
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
 }
 
 .bb-status-bar:hover .bb-status-bar-tooltip,
 .bb-status-bar-tooltip:hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .bb-status-bar-tooltip::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -8px;
-    width: 14px;
-    height: 14px;
-    background: var(--bb-body-bg);
-    border-left: 1px solid var(--bb-border-color);
-    border-top: 1px solid var(--bb-border-color);
-    transform: translateX(-50%) rotate(45deg);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  width: 14px;
+  height: 14px;
+  background: var(--bb-body-bg);
+  border-left: 1px solid var(--bb-border-color);
+  border-top: 1px solid var(--bb-border-color);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .bb-status-bar-tooltip-head {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 0.625rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0.625rem;
 }
 
 .bb-status-bar-tooltip-title {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
 }
 
 .bb-status-bar-tooltip-title strong {
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-bar-tooltip-title span {
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-semibold);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-bar-tooltip-state {
-    min-height: 26px;
-    padding: 0 9px;
-    border-radius: var(--bb-status-pill-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    font-size: .75rem;
-    font-weight: var(--bb-fw-bold);
+  min-height: 26px;
+  padding: 0 9px;
+  border-radius: var(--bb-status-pill-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-bar-tooltip-state.ok,
 .bb-status-bar-tooltip-state.operational {
-    background: var(--bb-success-light);
-    color: var(--bb-success);
+  background: var(--bb-success-light);
+  color: var(--bb-success);
 }
 
 .bb-status-bar-tooltip-state.warning,
 .bb-status-bar-tooltip-state.degraded_performance {
-    background: var(--bb-warning-light);
-    color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
+  background: var(--bb-warning-light);
+  color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
 }
 
 .bb-status-bar-tooltip-state.error,
 .bb-status-bar-tooltip-state.partial_outage,
 .bb-status-bar-tooltip-state.major_outage {
-    background: var(--bb-danger-light);
-    color: var(--bb-danger);
+  background: var(--bb-danger-light);
+  color: var(--bb-danger);
 }
 
 .bb-status-bar-tooltip-state.maintenance {
-    background: var(--bb-info-light);
-    color: var(--bb-info);
+  background: var(--bb-info-light);
+  color: var(--bb-info);
 }
 
 .bb-status-bar-tooltip-metric {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 0.625rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .bb-status-bar-tooltip-metric-item {
-    padding: 9px 10px;
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background: var(--bb-tertiary-bg);
+  padding: 9px 10px;
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background: var(--bb-tertiary-bg);
 }
 
 .bb-status-bar-tooltip-metric-item span {
-    display: block;
-    margin-bottom: 3px;
-    color: var(--bb-secondary-color);
-    font-size: .75rem;
-    line-height: 1.3;
-    font-weight: var(--bb-fw-bold);
+  display: block;
+  margin-bottom: 3px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-2xs);
+  line-height: 1.3;
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-bar-tooltip-metric-item strong {
-    display: block;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
+  display: block;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-bar-tooltip-note {
-    margin: 0 0 12px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);
-    line-height: var(--bb-table-line-height);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0 0 12px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-table-line-height);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-bar-tooltip-note.warning,
 .bb-status-bar-tooltip-note.degraded_performance {
-    color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
+  color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
 }
 
 .bb-status-bar-tooltip-note.error,
 .bb-status-bar-tooltip-note.partial_outage,
 .bb-status-bar-tooltip-note.major_outage {
-    color: var(--bb-danger);
+  color: var(--bb-danger);
 }
 
 .bb-status-bar-tooltip-note.maintenance {
-    color: var(--bb-info);
+  color: var(--bb-info);
 }
 
 .bb-status-bar-tooltip-action {
-    min-height: 40px;
-    border-top: 1px solid var(--bb-border-color);
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-bold);
-    text-decoration: none;
+  min-height: 40px;
+  border-top: 1px solid var(--bb-border-color);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+  text-decoration: none;
 }
 
 .bb-status-bar-tooltip-action:hover {
-    color: var(--bb-primary);
-    text-decoration: none;
+  color: var(--bb-primary);
+  text-decoration: none;
 }
 
 .bb-status-bar-tooltip-action.is-passive {
-    color: var(--bb-secondary-color);
-    cursor: default;
+  color: var(--bb-secondary-color);
+  cursor: default;
 }
-
-
-/* Left edge tooltip correction */
 
 .bb-status-bar:first-child .bb-status-bar-tooltip,
 .bb-status-bar:nth-child(2) .bb-status-bar-tooltip,
@@ -471,8 +418,8 @@
 .bb-status-bar:nth-child(6) .bb-status-bar-tooltip,
 .bb-status-bar:nth-child(7) .bb-status-bar-tooltip,
 .bb-status-bar:nth-child(8) .bb-status-bar-tooltip {
-    left: 0;
-    transform: translateX(0) translateY(-8px);
+  left: 0;
+  transform: translateX(0) translateY(-8px);
 }
 
 .bb-status-bar:first-child:hover .bb-status-bar-tooltip,
@@ -483,7 +430,7 @@
 .bb-status-bar:nth-child(6):hover .bb-status-bar-tooltip,
 .bb-status-bar:nth-child(7):hover .bb-status-bar-tooltip,
 .bb-status-bar:nth-child(8):hover .bb-status-bar-tooltip {
-    transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
 }
 
 .bb-status-bar:first-child::before,
@@ -494,8 +441,8 @@
 .bb-status-bar:nth-child(6)::before,
 .bb-status-bar:nth-child(7)::before,
 .bb-status-bar:nth-child(8)::before {
-    left: 0;
-    transform: translateX(0);
+  left: 0;
+  transform: translateX(0);
 }
 
 .bb-status-bar:first-child .bb-status-bar-tooltip::after,
@@ -506,11 +453,8 @@
 .bb-status-bar:nth-child(6) .bb-status-bar-tooltip::after,
 .bb-status-bar:nth-child(7) .bb-status-bar-tooltip::after,
 .bb-status-bar:nth-child(8) .bb-status-bar-tooltip::after {
-    left: 18px;
+  left: 18px;
 }
-
-
-/* Right edge tooltip correction */
 
 .bb-status-bar:nth-last-child(1) .bb-status-bar-tooltip,
 .bb-status-bar:nth-last-child(2) .bb-status-bar-tooltip,
@@ -520,9 +464,9 @@
 .bb-status-bar:nth-last-child(6) .bb-status-bar-tooltip,
 .bb-status-bar:nth-last-child(7) .bb-status-bar-tooltip,
 .bb-status-bar:nth-last-child(8) .bb-status-bar-tooltip {
-    left: auto;
-    right: 0;
-    transform: translateX(0) translateY(-8px);
+  left: auto;
+  right: 0;
+  transform: translateX(0) translateY(-8px);
 }
 
 .bb-status-bar:nth-last-child(1):hover .bb-status-bar-tooltip,
@@ -533,7 +477,7 @@
 .bb-status-bar:nth-last-child(6):hover .bb-status-bar-tooltip,
 .bb-status-bar:nth-last-child(7):hover .bb-status-bar-tooltip,
 .bb-status-bar:nth-last-child(8):hover .bb-status-bar-tooltip {
-    transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
 }
 
 .bb-status-bar:nth-last-child(1)::before,
@@ -544,9 +488,9 @@
 .bb-status-bar:nth-last-child(6)::before,
 .bb-status-bar:nth-last-child(7)::before,
 .bb-status-bar:nth-last-child(8)::before {
-    left: auto;
-    right: 0;
-    transform: translateX(0);
+  left: auto;
+  right: 0;
+  transform: translateX(0);
 }
 
 .bb-status-bar:nth-last-child(1) .bb-status-bar-tooltip::after,
@@ -557,722 +501,659 @@
 .bb-status-bar:nth-last-child(6) .bb-status-bar-tooltip::after,
 .bb-status-bar:nth-last-child(7) .bb-status-bar-tooltip::after,
 .bb-status-bar:nth-last-child(8) .bb-status-bar-tooltip::after {
-    left: auto;
-    right: 18px;
+  left: auto;
+  right: 18px;
 }
 
-
-/* -------------------------------------
-   Legend
-------------------------------------- */
-
 .bb-status-legend {
-    display: flex;
-    align-items: center;
-    gap: 1.125rem;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  flex-wrap: wrap;
 }
 
 .bb-status-legend-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, .92);
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-bold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: color-mix(in srgb, var(--bb-white) 92%, transparent);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-legend-item.ok .bb-status-dot {
-    color: var(--bb-success);
+  color: var(--bb-success);
 }
 
 .bb-status-legend-item.warning .bb-status-dot {
-    color: var(--bb-warning);
+  color: var(--bb-warning);
 }
 
 .bb-status-legend-item.error .bb-status-dot {
-    color: var(--bb-danger);
+  color: var(--bb-danger);
 }
 
 .bb-status-legend-item.maintenance .bb-status-dot {
-    color: var(--bb-info);
+  color: var(--bb-info);
 }
 
 .bb-status-dates {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.125rem;
-    color: rgba(255, 255, 255, .92);
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-semibold);
-    white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.125rem;
+  color: color-mix(in srgb, var(--bb-white) 92%, transparent);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  white-space: nowrap;
 }
 
-
-/* -------------------------------------
-   Content Sections
-------------------------------------- */
-
 .bb-status-card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
 }
 
 .bb-status-header-link {
-    min-height: 1.75rem;
-    padding: 0 2px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-sm);
-    font-weight: var(--bb-fw-bold);
-    white-space: nowrap;
+  min-height: 1.75rem;
+  padding: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
 }
 
 .bb-status-label {
-    min-height: 26px;
-    padding: 0 0.625rem;
-    border-radius: var(--bb-status-pill-radius);
-    background: var(--bb-success-light);
-    color: var(--bb-success);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4375rem;
-    font-size: .75rem;
-    font-weight: var(--bb-fw-semibold);
-    letter-spacing: .04em;
-    text-transform: uppercase;
+  min-height: 26px;
+  padding: 0 0.625rem;
+  border-radius: var(--bb-status-pill-radius);
+  background: var(--bb-success-light);
+  color: var(--bb-success);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-medium);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .bb-status-card-title {
-    margin: 12px 0 6px;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
+  margin: 12px 0 6px;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-card-text {
-    margin: 0;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-base);
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
 }
 
 .bb-status-card-chip,
 .bb-status-component-state {
-    min-height: 34px;
-    padding: 0 14px;
-    border-radius: var(--bb-status-pill-radius);
-    background: var(--bb-success-light);
-    color: var(--bb-success);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-semibold);
-    white-space: nowrap;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: var(--bb-status-pill-radius);
+  background: var(--bb-success-light);
+  color: var(--bb-success);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  white-space: nowrap;
 }
 
 .bb-status-component-list,
 .bb-status-event-list,
 .bb-status-notice-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .bb-status-component-item,
 .bb-status-event-item {
-    padding: 15px 17px;
+  padding: 15px 17px;
 }
 
 .bb-status-component-item {
-    min-height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .bb-status-component-item-title,
 .bb-status-event-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-lg);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-bold);
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-component-item-text,
 .bb-status-event-text {
-    margin: 5px 0 0;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-table-line-height);
+  margin: 5px 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
 }
 
 .bb-status-service-row {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .bb-status-service-row:hover {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .bb-status-side-head {
-    display: flex;
-    align-items: center;
-    gap: 0.875rem;
-    margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 14px;
 }
 
 .bb-status-side-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--bb-status-card-inner-radius);
-    background: var(--bb-warning-light);
-    color: var(--bb-warning);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--bb-status-card-inner-radius);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .bb-status-side-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-status-card-heading-size);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-event-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
 .bb-status-event-badge {
-    min-height: 24px;
-    padding: 0 8px;
-    border-radius: var(--bb-status-pill-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .75rem;
-    font-weight: var(--bb-fw-semibold);
-    white-space: nowrap;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: var(--bb-status-pill-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-medium);
+  white-space: nowrap;
 }
 
 .bb-status-event-badge.warning {
-    background: var(--bb-warning-light);
-    color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
+  background: var(--bb-warning-light);
+  color: color-mix(in srgb, var(--bb-warning) 74%, var(--bb-heading-color));
 }
 
 .bb-status-event-badge.error {
-    background: var(--bb-danger-light);
-    color: var(--bb-danger);
+  background: var(--bb-danger-light);
+  color: var(--bb-danger);
 }
 
 .bb-status-event-badge.maintenance {
-    background: var(--bb-info-light);
-    color: var(--bb-info);
+  background: var(--bb-info-light);
+  color: var(--bb-info);
 }
 
 .bb-status-event-time {
-    color: var(--bb-secondary-color);
-    font-size: .975rem;
-    line-height: 1.4;
-    font-weight: var(--bb-fw-bold);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: 1.4;
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-tag-list {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin: 12px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 12px 0 14px;
 }
 
 .bb-status-tag {
-    min-height: 30px;
-    padding: 0 0.625rem;
-    border-radius: var(--bb-status-pill-radius);
-    border: var(--bb-status-panel-border);
-    background: var(--bb-tertiary-bg);
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);
-    font-weight: var(--bb-fw-semibold);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 30px;
+  padding: 0 0.875rem 1px;
+  border-radius: var(--bb-radius-pill);
+  border: var(--bb-status-panel-border);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/* -------------------------------------
-   Notice History Preview
-------------------------------------- */
-
 .bb-status-notice-item {
-    position: relative;
-    padding: 15px 58px 15px 17px;
-    display: grid;
-    grid-template-columns: 160px minmax(0, 1fr);
-    gap: 1.125rem;
-    align-items: start;
-    color: inherit;
-    text-decoration: none;
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background-color: var(--bb-status-panel-bg);
-    transition:
-        border-color var(--bb-transition-fast),
-        box-shadow var(--bb-transition-fast),
-        transform var(--bb-transition-fast);
+  position: relative;
+  padding: 15px 58px 15px 17px;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 1.125rem;
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background-color: var(--bb-status-panel-bg);
+  transition: border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
 }
 
 .bb-status-notice-arrow {
-    position: absolute;
-    top: 50%;
-    right: 17px;
-    width: 34px;
-    height: 34px;
-    transform: translateY(-50%);
-    border-radius: var(--bb-status-card-inner-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--bb-secondary-color);
-    text-decoration: none;
-    line-height: 1;
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  width: 34px;
+  height: 34px;
+  transform: translateY(-50%);
+  border-radius: var(--bb-status-card-inner-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  line-height: 1;
 }
 
 .bb-status-notice-arrow:hover {
-    color: var(--bb-primary);
-    background-color: var(--bb-tertiary-bg);
-    text-decoration: none;
+  color: var(--bb-primary);
+  background-color: var(--bb-tertiary-bg);
+  text-decoration: none;
 }
 
 .bb-status-notice-arrow .material-symbols-outlined {
-    display: block;
-    font-size: var(--bb-fs-xl);
-    line-height: 1;
+  display: block;
+  font-size: var(--bb-fs-lg);
+  line-height: 1;
 }
 
 .bb-status-notice-item.is-empty:hover {
-    transform: none;
-    box-shadow: none;
+  transform: none;
+  box-shadow: none;
 }
 
 .bb-status-notice-date {
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);
-    line-height: 1.4;
-    font-weight: var(--bb-fw-semibold);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: 1.4;
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-notice-content {
-    display: block;
-    min-width: 0;
+  display: block;
+  min-width: 0;
 }
 
 .bb-status-notice-title {
-    display: block;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-bold);
+  display: block;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-notice-text {
-    display: block;
-    margin-top: 5px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-base);
-    line-height: var(--bb-table-line-height);
+  display: block;
+  margin-top: 5px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
 }
 
 .bb-status-notice-link {
-    margin-top: 10px;
-    min-height: 52px;
-    padding: 0 17px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    color: var(--bb-heading-color);
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background-color: var(--bb-status-panel-bg);
-    font-size: var(--bb-fs-base);
-    font-weight: var(--bb-fw-semibold);
-    text-decoration: none;
+  margin-top: 10px;
+  min-height: 52px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--bb-heading-color);
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background-color: var(--bb-status-panel-bg);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  text-decoration: none;
 }
 
 .bb-status-notice-link:hover {
-    color: var(--bb-primary);
-    text-decoration: none;
+  color: var(--bb-primary);
+  text-decoration: none;
 }
-
-
-/* -------------------------------------
-   Responsive
-------------------------------------- */
 
 @media (max-width: 991.98px) {
-    .bb-status-live-strip {
-        padding: 20px 18px 18px;
-    }
-
-    .bb-status-live-top,
-    .bb-status-live-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .bb-status-live-badges {
-        margin-left: 0;
-    }
+  .bb-status-live-strip {
+    padding: 20px 18px 18px;
+  }
+  .bb-status-live-top,
+  .bb-status-live-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bb-status-live-badges {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .bb-status-index-page .bb-status-live-strip {
-        margin: 18px 0;
-    }
+  .bb-status-index-page .bb-status-live-strip {
+    margin: 18px 0;
+  }
+  .bb-status-live-title {
+    font-size: var(--bb-fs-sm);
+  }
+  .bb-status-live-subtitle {
+    font-size: var(--bb-fs-sm);
+  }
+  .bb-status-live-badges {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .bb-status-pill-green {
+    min-height: 46px;
+    padding: 0 17px;
+  }
+  .bb-status-bars-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+    padding-bottom: 8px;
+  }
+  .bb-status-bars {
+    grid-template-columns: repeat(90, 8px);
+    gap: 4px;
+    width: max-content;
+    min-width: max-content;
+  }
+  .bb-status-bar {
+    width: 8px;
+    height: 32px;
+  }
+  .bb-status-bar::before,
+  .bb-status-bar-tooltip {
+    display: none !important;
+  }
+  .bb-status-bar:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+  .bb-status-live-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .bb-status-legend {
+    gap: 12px;
+  }
+  .bb-status-legend-item {
+    font-size: var(--bb-fs-xs);
+  }
+  .bb-status-dates {
+    width: 100%;
+    justify-content: space-between;
+    font-size: var(--bb-fs-xs);
+  }
+  .bb-status-card {
+    padding: 16px;
+  }
+  .bb-status-component-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
-    .bb-status-live-title {
-        font-size: var(--bb-icon-size-md);
-    }
-
-    .bb-status-live-subtitle {
-        font-size: var(--bb-fs-base);
-    }
-
-    .bb-status-live-badges {
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .bb-status-pill-green {
-        min-height: 46px;
-        padding: 0 17px;
-    }
-
-    .bb-status-bars-scroll {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 1rem;
-        padding-bottom: 8px;
-    }
-
-    .bb-status-bars {
-        grid-template-columns: repeat(90, 8px);
-        gap: 4px;
-        width: max-content;
-        min-width: max-content;
-    }
-
-    .bb-status-bar {
-        width: 8px;
-        height: 32px;
-    }
-
-    .bb-status-bar::before,
-    .bb-status-bar-tooltip {
-        display: none !important;
-    }
-
-    .bb-status-bar:hover {
-        transform: none;
-        box-shadow: none;
-        filter: none;
-    }
-
-    .bb-status-live-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .bb-status-legend {
-        gap: 12px;
-    }
-
-    .bb-status-legend-item {
-        font-size: var(--bb-fs-sm);
-    }
-
-    .bb-status-dates {
-        width: 100%;
-        justify-content: space-between;
-        font-size: var(--bb-fs-sm);
-    }
-
-    .bb-status-card {
-        padding: 16px;
-    }
-
-    .bb-status-component-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+  .bb-status-notice-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 15px 54px 15px 17px;
+  }
+  .bb-status-notice-arrow {
+    right: 14px;
+  }
+  .bb-status-notice-item.is-empty {
+    padding-right: 17px;
+  }
+  .bb-status-notice-link {
+    width: 100%;
+  }
+}
 
 @media (max-width: 767.98px) {
-    .bb-status-notice-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 15px 54px 15px 17px;
-    }
-
-    .bb-status-notice-arrow {
-        right: 14px;
-    }
-
-    .bb-status-notice-item.is-empty {
-        padding-right: 17px;
-    }
-
-    .bb-status-notice-link {
-        width: 100%;
-    }
+  .bb-status-notice-link {
+    width: 100%;
+  }
 }
-
-    .bb-status-notice-link {
-        width: 100%;
-    }
-}
-
-/* -------------------------------------
-   Side Card Header
-------------------------------------- */
 
 .bb-status-side-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.875rem;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .bb-status-side-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.875rem;
-    min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 0;
 }
 
 .bb-status-side-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: var(--bb-status-card-inner-radius);
-    background: var(--bb-warning-light);
-    color: var(--bb-warning);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--bb-status-card-inner-radius);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 
 .bb-status-side-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-status-card-heading-size);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-header-link {
-    min-height: auto;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-sm);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
-    white-space: nowrap;
-    flex-shrink: 0;
-    text-decoration: none;
+  min-height: auto;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .bb-status-header-link:hover {
-    color: var(--bb-primary);
-    text-decoration: none;
+  color: var(--bb-primary);
+  text-decoration: none;
 }
 
-/* -------------------------------------
-   Event / Maintenance Card Body
-------------------------------------- */
-
 .bb-status-event-item {
-    padding: 18px 16px;
+  padding: 18px 16px;
 }
 
 .bb-status-event-head {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .bb-status-event-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-md);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-bold);
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-event-text {
-    margin: 0;
-    color: var(--bb-secondary-color);
-    font-size: .975rem;
-    line-height: var(--bb-line-height-base);
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
 }
 
 .bb-status-event-time {
-    margin-top: 12px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);
-    line-height: 1.4;
-    font-weight: var(--bb-fw-semibold);
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: 1.4;
+  font-weight: var(--bb-fw-medium);
 }
 
-/* -------------------------------------
-   Badges
-------------------------------------- */
-
 .bb-status-event-badge {
-    min-height: 26px;
-    padding: 0 0.625rem;
-    border-radius: var(--bb-status-pill-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .75rem;
-    line-height: 1;
-    font-weight: var(--bb-fw-bold);
-    white-space: nowrap;
-    letter-spacing: .01em;
-    border: 0;
+  min-height: 26px;
+  padding: 0 0.625rem;
+  border-radius: var(--bb-status-pill-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--bb-fs-2xs);
+  line-height: 1;
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  border: 0;
 }
 
 .bb-status-event-badge.warning {
-    background: color-mix(in srgb, var(--bb-warning) 85%, #111827);
-    color: var(--bb-white);
+  background: color-mix(in srgb, var(--bb-warning) 85%, var(--bb-color-gray-900));
+  color: var(--bb-white);
 }
 
 .bb-status-event-badge.error {
-    background: var(--bb-danger);
-    color: var(--bb-white);
+  background: var(--bb-danger);
+  color: var(--bb-white);
 }
 
 .bb-status-event-badge.maintenance {
-    background: var(--bb-navy-900);
-    color: var(--bb-white);
+  background: var(--bb-navy-900);
+  color: var(--bb-white);
 }
 
 .bb-status-event-badge.success {
-    background: var(--bb-success);
-    color: var(--bb-white);
+  background: var(--bb-success);
+  color: var(--bb-white);
 }
 
-/* -------------------------------------
-   Component Public API Card
-------------------------------------- */
-
 .bb-status-component-api-list {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .bb-status-component-api-item {
-    min-width: 0;
-    padding: 14px;
-    background-color: var(--bb-tertiary-bg);
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
+  min-width: 0;
+  padding: 14px;
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
 }
 
 .bb-status-component-api-text {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-table-line-height);
-    font-weight: var(--bb-fw-semibold);
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-component-api-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-bold);
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-component-api-method {
-    display: inline-flex;
-    align-items: center;
-    min-height: 24px;
-    margin-bottom: 6px;
-    padding: 0 8px;
-    border-radius: var(--bb-status-pill-radius);
-    color: var(--bb-white);
-    color: var(--bb-dark-inverse);
-    font-size: var(--bb-fs-sm);;
-    line-height: 1;
-    font-weight: var(--bb-fw-bold);
-    letter-spacing: .03em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 6px;
+  padding: 0 8px;
+  border-radius: var(--bb-status-pill-radius);
+  color: var(--bb-white);
+  color: var(--bb-dark-inverse);
+  font-size: var(--bb-fs-xs);
+  line-height: 1;
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: 0.03em;
 }
 
 .bb-status-component-api-code {
-    display: block;
-    max-width: 100%;
-    color: var(--bb-heading-color);
-    background-color: transparent;
-    font-size: var(--bb-fs-sm);;
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-bold);
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  display: block;
+  max-width: 100%;
+  color: var(--bb-heading-color);
+  background-color: transparent;
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-/* -------------------------------------
-   Mobile
-------------------------------------- */
-
 @media (max-width: 767.98px) {
-    .bb-status-side-head {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .bb-status-event-head {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .bb-status-header-link {
-        padding-left: 0;
-    }
+  .bb-status-side-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bb-status-event-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bb-status-header-link {
+    padding-left: 0;
+  }
 }

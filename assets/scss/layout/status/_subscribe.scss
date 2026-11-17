@@ -1,702 +1,623 @@
-/* assets/scss/pages/status/_subscribe.scss */
-
-/* =====================================
-   Status Subscribe
-   Main CSS component-first
-   Page-specific visual layer
-===================================== */
-
-
-/* -------------------------------------
-   Hero
-------------------------------------- */
+/* Status subscribe — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
 
 .bb-status-subscribe-hero-wrap {
-    background-color: var(--bb-body-bg);
-    padding: 30px 0 0;
+  background-color: var(--bb-body-bg);
+  padding: 30px 0 0;
 }
 
 .bb-status-subscribe-hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 252px;
-    padding: 34px 36px;
-    color: var(--bb-white);
-    background:
-        radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), .20), transparent 27%),
-        radial-gradient(circle at 0% 100%, rgba(var(--bb-success-rgb), .12), transparent 30%),
-        linear-gradient(135deg, #071b39 0%, #0d315d 56%, #102a45 100%);
-    border: 1px solid rgba(255, 255, 255, .10);
-    border-radius: var(--bb-status-card-radius);
-    box-shadow: var(--bb-shadow-lg);
+  position: relative;
+  overflow: hidden;
+  min-height: 252px;
+  padding: 34px 36px;
+  color: var(--bb-white);
+  background: radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), 0.2), transparent 27%), radial-gradient(circle at 0% 100%, rgba(var(--bb-success-rgb), 0.12), transparent 30%), linear-gradient(135deg, var(--bb-color-navy-800) 0%, var(--bb-color-navy-700) 56%, var(--bb-color-navy-700) 100%);
+  border: 1px solid color-mix(in srgb, var(--bb-white) 10%, transparent);
+  border-radius: var(--bb-status-card-radius);
+  box-shadow: var(--bb-shadow-lg);
 }
 
 .bb-status-subscribe-hero::before {
-    content: "";
-    position: absolute;
-    right: -120px;
-    top: -160px;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    background: rgba(var(--bb-warning-rgb), .12);
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -160px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(var(--bb-warning-rgb), 0.12);
+  pointer-events: none;
 }
 
 .bb-status-subscribe-hero::after {
-    content: "";
-    position: absolute;
-    left: -90px;
-    bottom: -120px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(var(--bb-success-rgb), .08);
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  left: -90px;
+  bottom: -120px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(var(--bb-success-rgb), 0.08);
+  pointer-events: none;
 }
 
 .bb-status-subscribe-hero-content {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 420px;
-    gap: 34px;
-    align-items: center;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 34px;
+  align-items: center;
 }
 
 .bb-status-subscribe-back {
-    --bb-chip-bg: rgba(255, 255, 255, .08);
-    --bb-chip-color: rgba(255, 255, 255, .86);
-    --bb-chip-border-color: rgba(255, 255, 255, .12);
-    --bb-chip-padding-x: .8rem;
-    --bb-chip-padding-y: .35rem;
-    --bb-chip-font-size: var(--bb-icon-size-md);
-    --bb-chip-font-weight: var(--bb-fw-bold);
-    --bb-chip-min-height: 34px;
-
-    width: fit-content;
-    margin-bottom: 1rem;
+  --bb-chip-bg: color-mix(in srgb, var(--bb-white) 8%, transparent);
+  --bb-chip-color: color-mix(in srgb, var(--bb-white) 86%, transparent);
+  --bb-chip-border-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
+  --bb-chip-padding-x: .8rem;
+  --bb-chip-padding-y: .35rem;
+  --bb-chip-font-size: var(--bb-fs-xs);
+  --bb-chip-font-weight: var(--bb-fw-semibold);
+  --bb-chip-min-height: 34px;
+  width: fit-content;
+  margin-bottom: 1rem;
 }
 
 .bb-status-subscribe-back:hover {
-    --bb-chip-bg: rgba(255, 255, 255, .12);
-    --bb-chip-color: var(--bb-white);
-    text-decoration: none;
+  --bb-chip-bg: color-mix(in srgb, var(--bb-white) 12%, transparent);
+  --bb-chip-color: var(--bb-white);
+  text-decoration: none;
 }
 
 .bb-status-subscribe-back .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
+  font-size: var(--bb-fs-sm);
 }
 
 .bb-status-subscribe-eyebrow {
-    --bb-chip-bg: rgba(var(--bb-success-rgb), .16);
-    --bb-chip-color: color-mix(in srgb, var(--bb-success) 62%, var(--bb-white));
-    --bb-chip-border-color: transparent;
-    --bb-chip-padding-x: .65rem;
-    --bb-chip-padding-y: 0.25rem;
-    --bb-chip-font-size: var(--bb-fs-sm);;
-    --bb-chip-font-weight: var(--bb-fw-bold);
-    --bb-chip-min-height: 1.75rem;
-
-    width: fit-content;
-    margin-bottom: 0.75rem;
-    letter-spacing: .05em;
-    text-transform: uppercase;
+  --bb-chip-bg: rgba(var(--bb-success-rgb), .16);
+  --bb-chip-color: color-mix(in srgb, var(--bb-success) 62%, var(--bb-white));
+  --bb-chip-border-color: transparent;
+  --bb-chip-padding-x: .65rem;
+  --bb-chip-padding-y: 0.25rem;
+  --bb-chip-font-size: var(--bb-fs-xs);
+  --bb-chip-font-weight: var(--bb-fw-semibold);
+  --bb-chip-min-height: 1.75rem;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .bb-status-subscribe-eyebrow .material-symbols-outlined {
-    font-size: var(--bb-fs-base);
+  font-size: var(--bb-fs-sm);
 }
 
 .bb-status-subscribe-title {
-    margin: 0;
-    color: var(--bb-white);
-    font-size: clamp(31px, 3vw, 38px);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-semibold);
-    letter-spacing: -.035em;
+  margin: 0;
+  color: var(--bb-white);
+  font-size: var(--bb-fs-2xl);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-medium);
+  letter-spacing: -0.035em;
 }
 
 .bb-status-subscribe-text {
-    margin: 0.875rem 0 0;
-    max-width: 47.5rem;
-    color: rgba(255, 255, 255, .78);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-content);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0.875rem 0 0;
+  max-width: 47.5rem;
+  color: color-mix(in srgb, var(--bb-white) 78%, transparent);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+  font-weight: var(--bb-fw-medium);
 }
 
-
-/* -------------------------------------
-   Hero card
-------------------------------------- */
-
 .bb-status-subscribe-hero-card {
-    padding: 20px;
-    background-color: color-mix(in srgb, var(--bb-surface-elevated) 10%, transparent);
-    border-color: rgba(255, 255, 255, .14);
-    backdrop-filter: blur(0.625rem);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+  padding: 20px;
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 10%, transparent);
+  border-color: color-mix(in srgb, var(--bb-white) 14%, transparent);
+  backdrop-filter: blur(0.625rem);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--bb-black) 12%, transparent);
 }
 
 .card.bb-card.bb-status-subscribe-hero-card {
-    background-color: color-mix(in srgb, var(--bb-surface-elevated) 10%, transparent);
-    border-color: rgba(255, 255, 255, .14);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 10%, transparent);
+  border-color: color-mix(in srgb, var(--bb-white) 14%, transparent);
 }
 
 .bb-status-subscribe-hero-card-title {
-    margin: 0 0 10px;
-    color: var(--bb-white);
-    font-size: var(--bb-fs-xl);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0 0 10px;
+  color: var(--bb-white);
+  font-size: var(--bb-fs-lg);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-subscribe-hero-card-text {
-    margin: 0;
-    color: rgba(255, 255, 255, .72);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0;
+  color: color-mix(in srgb, var(--bb-white) 72%, transparent);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-subscribe-hero-channels {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 16px;
 }
 
 .bb-status-subscribe-hero-chip {
-    --bb-chip-bg: rgba(4, 17, 36, .38);
-    --bb-chip-color: rgba(255, 255, 255, .88);
-    --bb-chip-border-color: rgba(255, 255, 255, .12);
-    --bb-chip-padding-x: .7rem;
-    --bb-chip-padding-y: .32rem;
-    --bb-chip-font-size: var(--bb-fs-sm);;
-    --bb-chip-font-weight: var(--bb-fw-bold);
-    --bb-chip-min-height: 30px;
+  --bb-chip-bg: color-mix(in srgb, var(--bb-color-navy-900) 38%, transparent);
+  --bb-chip-color: color-mix(in srgb, var(--bb-white) 88%, transparent);
+  --bb-chip-border-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
+  --bb-chip-padding-x: .7rem;
+  --bb-chip-padding-y: .32rem;
+  --bb-chip-font-size: var(--bb-fs-xs);
+  --bb-chip-font-weight: var(--bb-fw-semibold);
+  --bb-chip-min-height: 30px;
 }
 
 .bb-status-subscribe-hero-chip .material-symbols-outlined {
-    font-size: var(--bb-fs-base);
-    color: var(--bb-warning);
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-warning);
 }
 
-
-/* -------------------------------------
-   Main
-------------------------------------- */
-
 .bb-status-subscribe-main {
-    padding: 30px 0 42px;
-    margin-top: 30px;
+  padding: 30px 0 42px;
+  margin-top: 30px;
 }
 
 .bb-status-subscribe-shell {
-    display: grid;
-    grid-template-columns: 310px minmax(0, 1fr);
-    gap: 1.125rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 1.125rem;
+  align-items: start;
 }
 
-
-/* -------------------------------------
-   Channel sidebar
-------------------------------------- */
-
 .bb-status-channel-card {
-    padding: 14px;
-    position: sticky;
-    top: 20px;
+  padding: 14px;
+  position: sticky;
+  top: 20px;
 }
 
 .bb-status-channel-title {
-    margin: 0 0 10px;
-    padding: 0 4px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
-    line-height: 1.4;
-    font-weight: var(--bb-fw-bold);
-    letter-spacing: .08em;
-    text-transform: uppercase;
+  margin: 0 0 10px;
+  padding: 0 4px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: 1.4;
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .bb-status-channel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .bb-status-channel-item {
-    min-height: 52px;
-    padding: 0 13px;
-    border-radius: var(--bb-status-card-inner-radius);
-    border: 1px solid transparent;
-    background-color: var(--bb-body-bg);
-    color: var(--bb-heading-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    transition: var(--bb-transition-colors), box-shadow var(--bb-transition-fast);
+  min-height: 52px;
+  padding: 0 13px;
+  border-radius: var(--bb-status-card-inner-radius);
+  border: 1px solid transparent;
+  background-color: var(--bb-body-bg);
+  color: var(--bb-heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: var(--bb-transition-colors), box-shadow var(--bb-transition-fast);
 }
 
 .bb-status-channel-item:hover {
-    background-color: var(--bb-tertiary-bg);
-    border-color: var(--bb-border-color);
-    text-decoration: none;
+  background-color: var(--bb-tertiary-bg);
+  border-color: var(--bb-border-color);
+  text-decoration: none;
 }
 
 .bb-status-channel-item.active,
 .bb-status-channel-item.is-active {
-    color: var(--bb-white);
-    border-color: var(--bb-dark);
-    color: var(--bb-dark-inverse);
+  color: var(--bb-white);
+  border-color: var(--bb-dark);
+  color: var(--bb-dark-inverse);
 }
 
 .bb-status-channel-item-main {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
 }
 
 .bb-status-channel-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--bb-status-card-inner-radius);
-    background-color: var(--bb-tertiary-bg);
-    color: var(--bb-heading-color);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--bb-status-card-inner-radius);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-heading-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .bb-status-channel-item.active .bb-status-channel-icon,
 .bb-status-channel-item.is-active .bb-status-channel-icon {
-    background-color: color-mix(in srgb, var(--bb-surface-elevated) 12%, transparent);
-    color: var(--bb-warning);
+  background-color: color-mix(in srgb, var(--bb-surface-elevated) 12%, transparent);
+  color: var(--bb-warning);
 }
 
 .bb-status-channel-icon .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
+  font-size: var(--bb-fs-sm);
 }
 
 .bb-status-channel-name {
-    display: block;
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: block;
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bb-status-channel-desc {
-    display: block;
-    margin-top: 2px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
-    line-height: 1.3;
-    font-weight: var(--bb-fw-bold);
+  display: block;
+  margin-top: 2px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: 1.3;
+  font-weight: var(--bb-fw-semibold);
 }
 
 .bb-status-channel-item.active .bb-status-channel-desc,
 .bb-status-channel-item.is-active .bb-status-channel-desc {
-    color: rgba(255, 255, 255, .68);
+  color: color-mix(in srgb, var(--bb-white) 68%, transparent);
 }
 
 .bb-status-channel-item > .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
-    color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-secondary-color);
 }
 
 .bb-status-channel-item.active > .material-symbols-outlined,
 .bb-status-channel-item.is-active > .material-symbols-outlined {
-    color: rgba(255, 255, 255, .78);
+  color: color-mix(in srgb, var(--bb-white) 78%, transparent);
 }
 
-
-/* -------------------------------------
-   Form card
-------------------------------------- */
-
 .bb-status-form-card {
-    padding: 26px;
+  padding: 26px;
 }
 
 .bb-status-form-head {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.125rem;
-    margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.125rem;
+  margin-bottom: 24px;
 }
 
 .bb-status-form-icon {
-    width: 54px;
-    height: 54px;
-    border-radius: var(--bb-status-card-inner-radius);
-    background-color: var(--bb-warning-light);
-    color: var(--bb-heading-color);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--bb-status-card-inner-radius);
+  background-color: var(--bb-warning-light);
+  color: var(--bb-heading-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .bb-status-form-icon .material-symbols-outlined {
-    font-size: var(--bb-h2);
+  font-size: var(--bb-fs-xl);
 }
 
 .bb-status-form-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-2xl);
-    line-height: 1.22;
-    font-weight: var(--bb-fw-semibold);
-    letter-spacing: -.02em;
+  margin: 0;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-xl);
+  line-height: 1.22;
+  font-weight: var(--bb-fw-medium);
+  letter-spacing: -0.02em;
 }
 
 .bb-status-form-text {
-    margin: 8px 0 0;
-    color: var(--bb-tertiary-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-content);
-    font-weight: var(--bb-fw-semibold);
+  margin: 8px 0 0;
+  color: var(--bb-tertiary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+  font-weight: var(--bb-fw-medium);
 }
 
 .bb-status-form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.125rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
 }
 
-
-/* -------------------------------------
-   Alerts
-------------------------------------- */
-
 .bb-status-alert {
-    padding: 0.8125rem 15px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 18px;
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-table-line-height);
-    font-weight: var(--bb-fw-semibold);
+  padding: 0.8125rem 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+  font-weight: var(--bb-fw-medium);
 }
 
 .alert.bb-status-alert.alert-success,
 .bb-status-alert.success {
-    background-color: var(--bb-success-light);
-    color: var(--bb-success);
-    border-color: color-mix(in srgb, var(--bb-success) 18%, transparent);
+  background-color: var(--bb-success-light);
+  color: var(--bb-success);
+  border-color: color-mix(in srgb, var(--bb-success) 18%, transparent);
 }
 
 .alert.bb-status-alert.alert-danger,
 .bb-status-alert.error {
-    background-color: var(--bb-danger-light);
-    color: var(--bb-danger);
-    border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
+  background-color: var(--bb-danger-light);
+  color: var(--bb-danger);
+  border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
 }
 
 .bb-status-alert .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
-    flex-shrink: 0;
+  font-size: var(--bb-fs-sm);
+  flex-shrink: 0;
 }
 
-
-/* -------------------------------------
-   Fields
-------------------------------------- */
-
 .bb-status-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .bb-status-label {
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-md);
-    line-height: var(--bb-line-height-base);
-    font-weight: var(--bb-fw-semibold);
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-medium);
 }
 
 .form-control.bb-status-input {
-    min-height: 48px;
-    border-radius: var(--bb-status-card-inner-radius);
-    border-color: var(--bb-border-color-strong);
-    background-color: var(--bb-body-bg);
-    color: var(--bb-body-color);
-    padding-inline: 14px;
-    font-size: var(--bb-icon-size-md);
-    font-weight: var(--bb-fw-semibold);
+  min-height: 48px;
+  border-radius: var(--bb-status-card-inner-radius);
+  border-color: var(--bb-border-color-strong);
+  background-color: var(--bb-body-bg);
+  color: var(--bb-body-color);
+  padding-inline: 14px;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
 }
 
 .form-control.bb-status-input:focus {
-    border-color: var(--bb-dark);
+  border-color: var(--bb-dark);
 }
 
 .bb-status-help {
-    margin: 0;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
-    line-height: var(--bb-table-line-height);
-    font-weight: var(--bb-fw-semibold);
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-table-line-height);
+  font-weight: var(--bb-fw-medium);
 }
 
-
-/* -------------------------------------
-   Options
-------------------------------------- */
-
 .bb-status-options {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .form-check.bb-status-radio,
 .form-check.bb-status-checkbox {
-    min-height: 42px;
-    padding: 10px 12px;
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background-color: var(--bb-tertiary-bg);
-    color: var(--bb-heading-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: var(--bb-icon-size-md);
-    font-weight: var(--bb-fw-semibold);
-    cursor: pointer;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-heading-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  cursor: pointer;
 }
 
 .form-check.bb-status-radio .form-check-input,
 .form-check.bb-status-checkbox .form-check-input {
-    width: 17px;
-    height: 17px;
-    margin: 0;
-    flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .form-check.bb-status-radio .form-check-label,
 .form-check.bb-status-checkbox .form-check-label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .bb-status-component-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
-
-/* -------------------------------------
-   Submit actions
-------------------------------------- */
-
 .bb-status-submit-row {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .bb-status-primary-button,
 .bb-status-secondary-button {
-    min-height: 48px;
-    gap: 9px;
-    font-size: var(--bb-icon-size-md);
-    font-weight: var(--bb-fw-bold);
+  min-height: 48px;
+  gap: 9px;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
 }
 
 .btn.bb-status-primary-button {
-    --bb-btn-bg: var(--bb-dark);
-    --bb-btn-border-color: var(--bb-dark);
-    --bb-btn-color: var(--bb-dark-inverse);
-    --bb-btn-hover-bg: var(--bb-dark-hover);
-    --bb-btn-hover-border-color: var(--bb-dark-hover);
-    --bb-btn-hover-color: var(--bb-dark-inverse);
+  --bb-btn-bg: var(--bb-dark);
+  --bb-btn-border-color: var(--bb-dark);
+  --bb-btn-color: var(--bb-dark-inverse);
+  --bb-btn-hover-bg: var(--bb-dark-hover);
+  --bb-btn-hover-border-color: var(--bb-dark-hover);
+  --bb-btn-hover-color: var(--bb-dark-inverse);
 }
 
 .btn.bb-status-secondary-button {
-    --bb-btn-bg: var(--bb-body-bg);
-    --bb-btn-border-color: var(--bb-border-color);
-    --bb-btn-color: var(--bb-heading-color);
-    --bb-btn-hover-bg: var(--bb-tertiary-bg);
-    --bb-btn-hover-border-color: var(--bb-border-color-strong);
-    --bb-btn-hover-color: var(--bb-heading-color);
+  --bb-btn-bg: var(--bb-body-bg);
+  --bb-btn-border-color: var(--bb-border-color);
+  --bb-btn-color: var(--bb-heading-color);
+  --bb-btn-hover-bg: var(--bb-tertiary-bg);
+  --bb-btn-hover-border-color: var(--bb-border-color-strong);
+  --bb-btn-hover-color: var(--bb-heading-color);
 }
 
 .bb-status-primary-button .material-symbols-outlined,
 .bb-status-secondary-button .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
+  font-size: var(--bb-fs-sm);
 }
 
-
-/* -------------------------------------
-   Static / copy / endpoints
-------------------------------------- */
-
 .bb-status-static-box {
-    padding: 16px;
-    background-color: var(--bb-tertiary-bg);
-    display: grid;
-    gap: 12px;
+  padding: 16px;
+  background-color: var(--bb-tertiary-bg);
+  display: grid;
+  gap: 12px;
 }
 
 .bb-status-copy-line {
-    min-height: 48px;
-    padding: 0 14px;
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background-color: var(--bb-body-bg);
-    color: var(--bb-heading-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    font-size: var(--bb-icon-size-md);
-    font-weight: var(--bb-fw-semibold);
-    overflow: hidden;
+  min-height: 48px;
+  padding: 0 14px;
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background-color: var(--bb-body-bg);
+  color: var(--bb-heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+  overflow: hidden;
 }
 
 .bb-status-copy-line code {
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-md);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bb-status-mini-button {
-    min-height: 34px;
-    padding: 0 11px;
-    border-radius: var(--bb-radius);
-    border: 1px solid var(--bb-border-color);
-    background-color: var(--bb-body-bg);
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-sm);;
-    font-weight: var(--bb-fw-bold);
-    cursor: pointer;
-    white-space: nowrap;
+  min-height: 34px;
+  padding: 0 11px;
+  border-radius: var(--bb-radius);
+  border: 1px solid var(--bb-border-color);
+  background-color: var(--bb-body-bg);
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .bb-status-mini-button:hover {
-    background-color: var(--bb-tertiary-bg);
-    border-color: var(--bb-border-color-strong);
+  background-color: var(--bb-tertiary-bg);
+  border-color: var(--bb-border-color-strong);
 }
 
 .bb-status-endpoint-list {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .bb-status-endpoint-item {
-    padding: 0.8125rem 14px;
-    border: var(--bb-status-panel-border);
-    border-radius: var(--bb-status-panel-radius);
-    background-color: var(--bb-body-bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+  padding: 0.8125rem 14px;
+  border: var(--bb-status-panel-border);
+  border-radius: var(--bb-status-panel-radius);
+  background-color: var(--bb-body-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .bb-status-endpoint-item code {
-    color: var(--bb-heading-color);
-    font-size: var(--bb-icon-size-md);
-    font-weight: var(--bb-fw-semibold);
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
 }
 
 .badge.bb-status-method {
-    background-color: var(--bb-success-light);
-    color: var(--bb-success);
-    border: 0;
+  background-color: var(--bb-success-light);
+  color: var(--bb-success);
+  border: 0;
 }
 
-
-/* -------------------------------------
-   Responsive
-------------------------------------- */
-
 @media (max-width: 1100px) {
-    .bb-status-subscribe-hero-content {
-        grid-template-columns: 1fr;
-    }
-
-    .bb-status-subscribe-shell {
-        grid-template-columns: 1fr;
-    }
-
-    .bb-status-channel-card {
-        position: static;
-    }
-
-    .bb-status-channel-list {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+  .bb-status-subscribe-hero-content {
+    grid-template-columns: 1fr;
+  }
+  .bb-status-subscribe-shell {
+    grid-template-columns: 1fr;
+  }
+  .bb-status-channel-card {
+    position: static;
+  }
+  .bb-status-channel-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 991.98px) {
-    .bb-status-subscribe-title {
-        font-size: var(--bb-fs-3xl);
-    }
-
-    .bb-status-component-grid {
-        grid-template-columns: 1fr;
-    }
+  .bb-status-subscribe-title {
+    font-size: var(--bb-fs-2xl);
+  }
+  .bb-status-component-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .bb-status-subscribe-hero-wrap {
-        padding-top: 20px;
-    }
-
-    .bb-status-subscribe-hero {
-        padding: 24px 20px;
-        min-height: unset;
-    }
-
-    .bb-status-subscribe-title {
-        font-size: var(--bb-fs-2xl);
-    }
-
-    .bb-status-subscribe-text {
-        font-size: var(--bb-icon-size-md);
-    }
-
-    .bb-status-channel-list {
-        grid-template-columns: 1fr;
-    }
-
-    .bb-status-form-card {
-        padding: 18px;
-    }
-
-    .bb-status-form-head {
-        flex-direction: column;
-    }
-
-    .bb-status-submit-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .bb-status-primary-button,
-    .bb-status-secondary-button {
-        width: 100%;
-    }
-
-    .bb-status-endpoint-item {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+  .bb-status-subscribe-hero-wrap {
+    padding-top: 20px;
+  }
+  .bb-status-subscribe-hero {
+    padding: 24px 20px;
+    min-height: unset;
+  }
+  .bb-status-subscribe-title {
+    font-size: var(--bb-fs-xl);
+  }
+  .bb-status-subscribe-text {
+    font-size: var(--bb-fs-sm);
+  }
+  .bb-status-channel-list {
+    grid-template-columns: 1fr;
+  }
+  .bb-status-form-card {
+    padding: 18px;
+  }
+  .bb-status-form-head {
+    flex-direction: column;
+  }
+  .bb-status-submit-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bb-status-primary-button,
+  .bb-status-secondary-button {
+    width: 100%;
+  }
+  .bb-status-endpoint-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
