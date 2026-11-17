@@ -285,6 +285,6 @@
       var note = document.createElement("div");
       note.className = "alert alert-warning";
       note.textContent = "A panel behavior script could not be loaded.";
-      contentHost.prepend(note);
+      sourceWrapper.prepend(note);
     });
 }());
