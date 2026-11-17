@@ -4,7 +4,7 @@
 
   // event demo
       document.querySelectorAll(".bb-dialer").forEach(function (el) {
-        el.addEventListner("bb.dialer.changed", function () {
+        el.addEventListener("bb.dialer.changed", function () {
           const inst = window.BBDialer.getInstance(el);
           if (!inst) { return; }
           console.log("Dialer changed:", inst.getValue());

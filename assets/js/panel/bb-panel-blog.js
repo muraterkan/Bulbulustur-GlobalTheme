@@ -25,8 +25,8 @@ function render(){
  status.textContent=shown+" içerik gösteriliyor. Tüm veriler örnektir.";
  if(empty)empty.hidden=shown!==0;
 }
-buttons.forEach(function(button){button.addEventListner("click",function(){current=button.dataset.bbBlogFilter;render();});});
-search.addEventListner("input",render);
+buttons.forEach(function(button){button.addEventListener("click",function(){current=button.dataset.bbBlogFilter;render();});});
+search.addEventListener("input",render);
 var title=document.querySelector(".bb-page-title");
 if(title)title.textContent="Blog / Ana Sayfa";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");

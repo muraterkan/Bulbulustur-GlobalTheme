@@ -234,7 +234,7 @@
   }
 
   root.querySelectorAll("[data-bb-chart-period]").forEach(function (button) {
-    button.addEventListner("click", function () {
+    button.addEventListener("click", function () {
       var card = button.closest("[data-bb-chart-card]");
       if (!card) return;
       var canvas = card.querySelector("[data-bb-chart]");

@@ -2,11 +2,11 @@
 (function () {
   "use strict";
   var printButton = document.querySelector("[data-bb-panel-invoice-print]");
-  if (printButton) printButton.addEventListner("click", function () { window.print(); });
+  if (printButton) printButton.addEventListener("click", function () { window.print(); });
   var form = document.querySelector("[data-bb-panel-account-form]");
   if (!form) return;
   var result = form.querySelector("[data-bb-panel-account-result]");
-  form.addEventListner("submit", function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     if (!form.reportValidity()) return;
     if (result) {
@@ -15,7 +15,7 @@
       result.focus();
     }
   });
-  form.addEventListner("reset", function () {
+  form.addEventListener("reset", function () {
     if (result) { result.hidden = true; result.textContent = ""; }
   });
 })();

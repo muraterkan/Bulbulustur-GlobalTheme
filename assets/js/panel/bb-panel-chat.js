@@ -97,7 +97,7 @@
 
       copy.append(top, meta);
       button.append(avatar, copy);
-      button.addEventListner("click", () => {
+      button.addEventListener("click", () => {
         activeId = person.id;
         person.unread = 0;
         renderList();
@@ -152,7 +152,7 @@
     messages.scrollTop = messages.scrollHeight;
   }
 
-  form.addEventListner("submit", event => {
+  form.addEventListener("submit", event => {
     event.preventDefault();
     const value = input.value.trim();
     if (!value) {
@@ -169,17 +169,17 @@
     renderThread();
   });
 
-  search.addEventListner("input", renderList);
-  root.querySelector("[data-bb-chat-filter]").addEventListner("click", () => {
+  search.addEventListener("input", renderList);
+  root.querySelector("[data-bb-chat-filter]").addEventListener("click", () => {
     const current = root.getAttribute("data-bb-chat-online-only") === "true";
     root.setAttribute("data-bb-chat-online-only", String(!current));
     feedback.textContent = current ? "Çevrimiçi filtresi kaldırıldı." : "Çevrimiçi filtresi demo olarak etkinleştirildi.";
   });
-  root.querySelector("[data-bb-chat-new]").addEventListner("click", () => {
+  root.querySelector("[data-bb-chat-new]").addEventListener("click", () => {
     feedback.textContent = "Yeni konuşma oluşturma demo sürümünde kayıt yapmaz.";
     input.focus();
   });
-  root.querySelector("[data-bb-chat-more]").addEventListner("click", () => {
+  root.querySelector("[data-bb-chat-more]").addEventListener("click", () => {
     feedback.textContent = "Konuşma seçenekleri demo sürümünde pasiftir.";
   });
 

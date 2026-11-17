@@ -7,7 +7,7 @@
   var toggle = document.querySelector("[data-bb-auth-password-toggle]");
   var password = form.querySelector("[data-bb-auth-password]");
   if (toggle && password) {
-    toggle.addEventListner("click", function () {
+    toggle.addEventListener("click", function () {
       var visible = password.type === "text";
       password.type = visible ? "password" : "text";
       toggle.textContent = visible ? "Göster" : "Gizle";
@@ -16,14 +16,14 @@
   }
   var confirm = form.querySelector("[data-bb-auth-confirm]");
   if (password && confirm) {
-    confirm.addEventListner("input", function () {
+    confirm.addEventListener("input", function () {
       confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Şifreler eşleşmiyor." : "");
     });
-    password.addEventListner("input", function () {
+    password.addEventListener("input", function () {
       confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Şifreler eşleşmiyor." : "");
     });
   }
-  form.addEventListner("submit", function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     if (!form.reportValidity()) return;
     if (result) {
