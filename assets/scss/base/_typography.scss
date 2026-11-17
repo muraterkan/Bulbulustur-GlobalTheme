@@ -189,8 +189,9 @@
   --bb-badge-font-size-sm: var(--bb-fs-xs);
 
   --bb-table-font-size: var(--bb-fs-sm);
-  --bb-table-head-font-size: var(--bb-fs-sm);
-  --bb-table-line-height: var(--bb-line-height-base);
+  --bb-table-head-font-size: var(--bb-fs-xs);
+  --bb-table-head-font-weight: var(--bb-fw-semibold);
+  --bb-table-line-height: 1.4;
 
   --bb-ui-font-size: var(--bb-fs-sm);
   --bb-ui-font-size-sm: var(--bb-fs-xs);
