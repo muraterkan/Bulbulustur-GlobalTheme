@@ -8,7 +8,7 @@
 
 .bb-sticky {
   --bb-sticky-top: 0;
-  --bb-sticky-zindex: var(--bs-sticky-zindex, 1020);
+  --bb-sticky-zindex: var(--bb-z-sticky);
 
   position: sticky;
   top: var(--bb-sticky-top);
