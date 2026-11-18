@@ -78,22 +78,9 @@
    Form
 ------------------------------------- */
 
-.bb-firstdoor-form .form-label {
-  color: var(--bb-emphasis-color);
-  font-weight: var(--bb-fw-semibold);
-}
-
-.bb-firstdoor-form .form-control {
-  min-height: 2.95rem;
-}
-
 .bb-firstdoor-form .input-group-text {
-  min-width: 2.95rem;
+  min-width: var(--bb-form-control-min-height);
   justify-content: center;
-}
-
-.bb-firstdoor-form .input-group-text .material-symbols-outlined {
-  color: var(--bb-secondary-color);
 }
 
 /* -------------------------------------
@@ -213,7 +200,6 @@
 .bb-firstdoor-form {
   width: 100%;
 }
-
 
 /* -------------------------------------
    Responsive

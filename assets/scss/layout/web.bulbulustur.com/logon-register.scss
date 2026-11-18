@@ -156,23 +156,9 @@
    Form
 ------------------------------------- */
 
-.bb-register-form .form-label {
-  color: var(--bb-emphasis-color);
-  font-weight: var(--bb-fw-semibold);
-}
-
-.bb-register-form .form-control,
-.bb-register-form .form-select {
-  min-height: 2.95rem;
-}
-
 .bb-register-form .input-group-text {
-  min-width: 2.95rem;
+  min-width: var(--bb-form-control-min-height);
   justify-content: center;
-}
-
-.bb-register-form .input-group-text .material-symbols-outlined {
-  color: var(--bb-secondary-color);
 }
 
 /* -------------------------------------

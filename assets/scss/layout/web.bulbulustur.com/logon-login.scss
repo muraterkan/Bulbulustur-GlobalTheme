@@ -79,22 +79,9 @@
    Form
 ------------------------------------- */
 
-.bb-login-form .form-label {
-  color: var(--bb-emphasis-color);
-  font-weight: var(--bb-fw-semibold);
-}
-
-.bb-login-form .form-control {
-  min-height: 2.95rem;
-}
-
 .bb-login-form .input-group-text {
-  min-width: 2.95rem;
+  min-width: var(--bb-form-control-min-height);
   justify-content: center;
-}
-
-.bb-login-form .input-group-text .material-symbols-outlined {
-  color: var(--bb-secondary-color);
 }
 
 .bb-login-forgot-link {
