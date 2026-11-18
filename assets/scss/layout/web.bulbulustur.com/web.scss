@@ -226,7 +226,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    gap: var(--bb-space-3);
 }
 
 .bb-web-dark-section {
@@ -257,7 +257,7 @@
 .bb-account-sidebar-toggle {
     display: inline-flex;
     align-items: center;
-    gap: 0.4375rem;
+    gap: var(--bb-web-meta-gap);
     white-space: nowrap;
 }
 
@@ -271,19 +271,19 @@
 ===================================== */
 
 .bb-account-shell-section {
-    padding: 28px 0 56px;
+    padding: var(--bb-web-section-gap-tight) 0 var(--bb-web-section-gap);
 }
 
 .bb-account-layout {
     display: grid;
     grid-template-columns: 280px minmax(0, 1fr);
-    gap: 24px;
+    gap: var(--bb-space-6);
     align-items: flex-start;
 }
 
 .bb-account-sidebar {
     position: sticky;
-    top: 24px;
+    top: var(--bb-space-6);
     min-width: 0;
 }
 
@@ -292,7 +292,7 @@
 }
 
 .bb-account-panel {
-    padding: 26px;
+    padding: var(--bb-space-6);
     border: 1px solid var(--bb-account-border);
     border-radius: var(--bb-radius-2xl);
     background-color: var(--bb-body-bg);
@@ -303,26 +303,26 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1.125rem;
-    margin-bottom: 22px;
-    padding-bottom: 20px;
+    gap: var(--bb-web-section-head-gap);
+    margin-bottom: var(--bb-space-6);
+    padding-bottom: var(--bb-space-5);
     border-bottom: 1px solid var(--bb-account-border-soft);
 }
 
 .bb-account-panel-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 0.4375rem;
+    gap: var(--bb-web-meta-gap);
     min-height: 30px;
-    padding: 0 11px;
-    margin-bottom: 0.625rem;
+    padding: 0 var(--bb-space-3);
+    margin-bottom: var(--bb-web-meta-gap);
     border-radius: var(--bb-radius-pill);
     background-color: var(--bb-account-accent-soft);
     color: var(--bb-account-accent-text);
-    font-size: var(--bb-fs-sm);;
+    font-size: var(--bb-web-kicker-size);
     line-height: 1;
-    font-weight: var(--bb-fw-bold);
-    letter-spacing: .04em;
+    font-weight: var(--bb-fw-semibold);
+    letter-spacing: var(--bb-web-kicker-letter-spacing);
     text-transform: uppercase;
 }
 
@@ -332,19 +332,19 @@
 }
 
 .bb-account-panel-title {
-    margin: 0 0 7px;
+    margin: 0 0 var(--bb-space-2);
     color: var(--bb-heading-color);
-    font-size: clamp(1.45rem, 2.4vw, 2rem);
-    line-height: var(--bb-line-height-heading);
-    font-weight: var(--bb-fw-bold);
-    letter-spacing: -.025em;
+    font-size: var(--bb-web-subsection-title-size);
+    line-height: var(--bb-web-section-title-line-height);
+    font-weight: var(--bb-web-subsection-title-weight);
+    letter-spacing: var(--bb-web-section-title-letter-spacing);
 }
 
 .bb-account-panel-text {
     max-width: 720px;
     margin: 0;
     color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
+    font-size: var(--bb-web-body-size);
     line-height: var(--bb-line-height-content);
 }
 
