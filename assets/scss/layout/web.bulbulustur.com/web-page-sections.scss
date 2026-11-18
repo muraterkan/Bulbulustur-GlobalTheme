@@ -1,21 +1,22 @@
 /* =====================================
    Web Marketplace Section System
    B2B/B2C/Home/List/Search/Campaign shared carrier
+   Çekirdek .bb-section sözleşmesi (base/_page.scss) ezilmez: Web boşlukları yalnız .bb-web-page içinde (:where ile, özgüllük eskisi gibi) geçerli.
 ===================================== */
 
-.bb-section {
+:where(.bb-web-page) .bb-section {
     margin-top: 3rem;
 }
 
-.bb-section:first-child {
+:where(.bb-web-page) .bb-section:first-child {
     margin-top: 0;
 }
 
-.bb-section--tight {
+:where(.bb-web-page) .bb-section--tight {
     margin-top: 2.125rem;
 }
 
-.bb-section--last {
+:where(.bb-web-page) .bb-section--last {
     margin-bottom: 4rem;
 }
 
@@ -331,7 +332,7 @@
 ------------------------------------- */
 
 @media (max-width: 991.98px) {
-    .bb-section {
+    :where(.bb-web-page) .bb-section {
         margin-top: 2.375rem;
     }
 
@@ -351,7 +352,7 @@
 }
 
 @media (max-width: 575.98px) {
-    .bb-section {
+    :where(.bb-web-page) .bb-section {
         margin-top: 1.875rem;
     }
 

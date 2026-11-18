@@ -84,42 +84,6 @@
 }
 
 /* =====================================
-   Bootstrap Container Bridge
-   Eski Electro theme container genişliğini Bootstrap 5 üstüne taşır.
-===================================== */
-
-.container,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-    --bs-gutter-x: 30px;
-}
-
-@media (min-width: 1200px) {
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl,
-    .container-xxl {
-        max-width: 1200px;
-    }
-}
-
-@media (min-width: 1480px) {
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl,
-    .container-xxl {
-        max-width: 1430px;
-    }
-}
-
-/* =====================================
    Web Container
    Bootstrap container davranışını bb-web-container için de uygular.
 ===================================== */

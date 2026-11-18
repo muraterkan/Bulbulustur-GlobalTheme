@@ -34439,39 +34439,6 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* =====================================
-   Bootstrap Container Bridge
-   Eski Electro theme container genişliğini Bootstrap 5 üstüne taşır.
-===================================== */
-.container,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-  --bs-gutter-x: 30px;
-}
-
-@media (min-width: 1200px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: 1200px;
-  }
-}
-@media (min-width: 1480px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: 1430px;
-  }
-}
-/* =====================================
    Web Container
    Bootstrap container davranışını bb-web-container için de uygular.
 ===================================== */
@@ -36591,20 +36558,21 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* =====================================
    Web Marketplace Section System
    B2B/B2C/Home/List/Search/Campaign shared carrier
+   Çekirdek .bb-section sözleşmesi (base/_page.scss) ezilmez: Web boşlukları yalnız .bb-web-page içinde (:where ile, özgüllük eskisi gibi) geçerli.
 ===================================== */
-.bb-section {
+:where(.bb-web-page) .bb-section {
   margin-top: 3rem;
 }
 
-.bb-section:first-child {
+:where(.bb-web-page) .bb-section:first-child {
   margin-top: 0;
 }
 
-.bb-section--tight {
+:where(.bb-web-page) .bb-section--tight {
   margin-top: 2.125rem;
 }
 
-.bb-section--last {
+:where(.bb-web-page) .bb-section--last {
   margin-bottom: 4rem;
 }
 
@@ -36802,7 +36770,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
    Responsive
 ------------------------------------- */
 @media (max-width: 991.98px) {
-  .bb-section {
+  :where(.bb-web-page) .bb-section {
     margin-top: 2.375rem;
   }
   .bb-section-head {
@@ -36818,7 +36786,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 @media (max-width: 575.98px) {
-  .bb-section {
+  :where(.bb-web-page) .bb-section {
     margin-top: 1.875rem;
   }
   .bb-page-stage {

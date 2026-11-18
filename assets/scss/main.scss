@@ -174,7 +174,7 @@
 /* 8. Web Bulbulustur Pages */
 /* Ana web projesinde hafif layout, auth/form ve ileride sayfa bazlı düzenler burada. */
 
-@use "layout/web.bulbulustur.com/_layout-light";
+@use "layout/web.bulbulustur.com/layout-light";
 
 /* Bulbulustur Home Page*/
 @use "layout/web.bulbulustur.com/home";
@@ -197,7 +197,7 @@
 @use "layout/web.bulbulustur.com/web-product-complaint";
 
 @use "layout/web.bulbulustur.com/components/product-card.scss";
-@use "layout/web.bulbulustur.com/components/cookie-consent-banner.scss";
+@use "layout/web.bulbulustur.com/components/cookie-consent-banner";
 @use "layout/web.bulbulustur.com/components/brand-product-featureds.scss";
 
 
@@ -228,7 +228,6 @@
 @use "layout/web.bulbulustur.com/support-condition";
 @use "layout/web.bulbulustur.com/brand";
 @use "layout/web.bulbulustur.com/brand-detail";
-@use "layout/web.bulbulustur.com/supplier";
 @use "layout/web.bulbulustur.com/help";
 @use "layout/web.bulbulustur.com/subscription-comparison";
 
@@ -346,7 +345,6 @@
 
 /* Bulbulustur B2C Pages */
 
-@use "layout/web.bulbulustur.com/b2c-home";
 @use "layout/web.bulbulustur.com/b2c-product-index";
 @use "layout/web.bulbulustur.com/b2c-product-details";
 @use "layout/web.bulbulustur.com/b2c-history";
@@ -363,7 +361,7 @@
 @use "layout/web.bulbulustur.com/b2c-sponsored-highlights";
 @use "layout/web.bulbulustur.com/b2c-other-store-price";
 @use "layout/web.bulbulustur.com/b2c-product-special";
-@use "layout/web.bulbulustur.com/b2c-product-reviews.scss";
+@use "layout/web.bulbulustur.com/b2c-product-reviews";
 
 @use "layout/web.bulbulustur.com/components/b2c-sponsored-product-top-product-list";
 @use "layout/web.bulbulustur.com/components/b2c-product-list-filters";
@@ -371,7 +369,6 @@
 @use "layout/web.bulbulustur.com/components/b2c-product-browsing-history";
 @use "layout/web.bulbulustur.com/components/b2c-related-category-links";
 @use "layout/web.bulbulustur.com/components/b2c-popular-product-categories111";
-@use "layout/web.bulbulustur.com/components/b2c-product-customer-question";
 @use "layout/web.bulbulustur.com/components/b2c-product-color-variants";
 @use "layout/web.bulbulustur.com/components/b2c-product-size-variants";
 @use "layout/web.bulbulustur.com/components/b2c-product-installments";
@@ -384,7 +381,7 @@
 @use "layout/web.bulbulustur.com/components/from-brands";
 @use "layout/web.bulbulustur.com/components/b2c-homepage-special-contents";
 @use "layout/web.bulbulustur.com/components/product-low-price-report.scss";
-@use "layout/web.bulbulustur.com/components/b2c-submit-valuation.scss";
+@use "layout/web.bulbulustur.com/components/b2c-submit-valuation";
 @use "layout/web.bulbulustur.com/components/store-askquestion";
 @use "layout/web.bulbulustur.com/components/store-header";
 @use "layout/web.bulbulustur.com/components/b2c-product-detail-review";
