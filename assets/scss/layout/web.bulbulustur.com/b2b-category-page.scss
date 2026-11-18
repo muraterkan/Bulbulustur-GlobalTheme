@@ -188,7 +188,7 @@
     margin: 0;
 
     color: var(--bb-emphasis-color);
-    font-size: clamp(var(--bb-fs-base), 1.3vw, var(--bb-fs-xl));
+    font-size: var(--bb-fs-xl);
     font-weight: var(--bb-fw-extrabold, 800);
     line-height: 1.12;
     letter-spacing: var(--bb-letter-spacing-tight, -0.02em);

@@ -426,7 +426,7 @@
 .bb-store-index-seller-cta-title {
     margin: 0;
     color: var(--bb-heading-color);
-    font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+    font-size: var(--bb-web-section-title-size);
     font-weight: var(--bb-fw-extrabold);
     letter-spacing: -.035em;
     line-height: 1.08;
