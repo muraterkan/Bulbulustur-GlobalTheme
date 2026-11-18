@@ -360,6 +360,28 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Aynı breakpoint'te birbirini geri alan duplicate kurallar azaltılır.
 - Horizontal overflow yalnız bilinçli carousel/scroll bölgelerinde kalır.
 
+**Durum:** KOD / STATIC RESPONSIVE CLEANUP TAMAMLANDI — gerçek browser desktop/tablet/mobile + light/dark smoke testi ve repo check scriptleri bekliyor.
+
+**19.11.2026 sonucu:**
+- Faz 8 başlangıç head'i Faz 7 plan commit'i `33aa84cc`; kaynak temizlik final commit'i `b9b63d5f`, final generated CSS commit'i `ccb49818`.
+- `assets/scss/layout/web.bulbulustur.com/` altındaki **192 SCSS dosyasının tamamı** responsive media block, duplicate breakpoint, boş media block ve `overflow-x` kullanımı açısından tarandı.
+- Öncelik sırasıyla Header, Product Card/List, Hero, Account/Company form ekranları, Checkout ve Core Modal/Drawer responsive contractları ayrıca açılıp incelendi.
+- Header account dropdown içinde iki ayrı `max-width: 575.98px` kuşağı **2 → 1** indirildi. Birbirini geri alan `248px / 250px` menü genişliği kaldırıldı; mobil menü mevcut 250px hedefini koruyup dar viewportta küçülebilen `min(15.625rem, calc(100vw - 1.5rem))` contractına geçti.
+- Product Card grid tarafında aynı breakpoint için dağılmış responsive bloklar birleştirildi. Grid varyantlarının `min-width: 768px` blokları **3 → 1**, `min-width: 1200px` blokları **4 → 1** oldu; gereksiz `min-width: 1400px` 4-column tekrarı kaldırıldı.
+- Help search responsive katmanında aynı breakpointte eski kuşağın daha sonra geri alınan layout/sidebar/filter/result kuralları kaldırıldı. `767.98px` result item kolonundaki gerçek **40px → 42px** çakışmasında final 42px davranışı korunup eski 40px override silindi.
+- Support Condition içindeki birebir tekrar `767.98px` bloğu kaldırıldı. Career job detail içindeki tekrar `991.98px` layout/aside kuralları kaldırıldı; ilk bloktaki gerçek `order: -1` davranışı korundu.
+- IBAN sayfasında sonraki kuşak tarafından geri alınan `520px` owner-card max-width ve tekrar mobil `display: none` deklarasyonu kaldırıldı; final `32.5rem` ve mobil hidden davranışı değişmedi.
+- B2C Product Category ve Company Reviews içindeki tamamen boş responsive media blokları kaldırıldı.
+- `_layout-light.scss` içindeki sayfa seviyesinde `overflow-x: hidden` maskesi kaldırıldı. Layout Light artık gerçek taşmayı gizlemiyor; bilinçli scroll/carousel bölgelerindeki `overflow-x: auto` davranışlarına dokunulmadı.
+- Checkout doğrulamasında `1199.98px` altında checkout + payment method gridinin tek kolona düştüğü ve sticky summary'nin static olduğu görüldü; ek override gerekmedi. Core Drawer zaten `max-width: 100%` ile viewport-safe, Core Modal tarafında Faz 8'e ait çakışan breakpoint bulunmadı.
+- Hero, Home, Advert, Blog, Career ve benzeri dosyalarda aynı breakpoint başlığının birden fazla kez geçmesi tek başına hata kabul edilmedi. İkinci taramada farklı subcomponentlere ait sectional media blokları korundu; yalnız aynı selector/property'yi geri alan veya birebir tekrar eden kurallar temizlendi.
+- Final static re-scan'de değişen 9 SCSS dosyasında kaldırılan gerçek same-selector/property responsive çakışmalar yeniden görülmedi. Product Card finalde tek `768px` ve tek `1200px` grid breakpoint contractı kullanıyor.
+- Faz 8 karşılaştırması: **9 SCSS kaynak dosyası** + generated CSS değişti. `assets/css/main.css`: **2.876.795 → 2.874.825 byte = -1.970 byte**.
+- Kod commitleri: `d6227821` — account mobile breakpoint; `b345db2e` — redundant product grid breakpoint; `5879286d` — empty category media; `ae32a806` — Help overridden responsive rules; `73fd7096` — Support duplicate breakpoint; `16dd2bb0` — Career duplicate rules; `03282667` — IBAN overridden rules; `35d9e69f` — Company Reviews empty media; `b7391f80` — viewport-safe account dropdown; `9347da0b` — Layout Light overflow mask; `b9b63d5f` — Product Card grid breakpoint consolidation.
+- Final source commit `b9b63d5f` için GitHub **Build CSS** workflow'u başarılı tamamlandı; generated CSS commit'i `ccb49818`.
+- Workflow yalnız `npm run build:css` çalıştırıyor. `npm run check:contracts` / `npm run check:css` bu oturumda çalıştırılmış sayılmıyor. Yerel doğrulama ortamında GitHub DNS çözümlemesi olmadığı için repo clone edilip scriptler çalıştırılamadı.
+- Gerçek browser light/dark + desktop/tablet/mobile smoke testi yapılmadı. Bu nedenle Faz 8'in görsel kabul kriteri henüz tamamlanmış sayılmıyor ve Faz 9'a otomatik geçilmedi.
+
 ---
 
 ### Faz 9 — Paket mimarisi ve son izolasyon
