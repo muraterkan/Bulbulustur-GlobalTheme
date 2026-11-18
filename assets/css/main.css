@@ -86276,6 +86276,33 @@ button:not(:disabled) {
 
 /* Layout */
 .bb-b2b-homepage-slider-layout {
+  --bb-b2b-slider-carousel-bg:
+      radial-gradient(circle at 82% 28%, rgba(123, 90, 255, 0.16), transparent 28%),
+      radial-gradient(circle at 18% 85%, rgba(255, 212, 0, 0.08), transparent 22%),
+      var(--bb-home-hero-slide-bg, #0f3b74);
+  --bb-b2b-slider-carousel-border: color-mix(in srgb, var(--bb-primary) 16%, var(--bb-border-color));
+  --bb-b2b-slider-carousel-shadow:
+      0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black) 18%, transparent),
+      0 0.25rem 1rem color-mix(in srgb, var(--bb-black) 10%, transparent);
+  --bb-b2b-slider-picture-bg:
+      radial-gradient(
+          circle at 42% 34%,
+          color-mix(in srgb, var(--bb-surface-elevated) 96%, transparent),
+          color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated)) 68%,
+          color-mix(in srgb, var(--bb-primary) 13%, var(--bb-surface-elevated)) 100%
+      );
+  --bb-b2b-slider-picture-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent),
+      0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 18%, transparent);
+  --bb-b2b-slider-dot-bg: color-mix(in srgb, var(--bb-white) 30%, transparent);
+  --bb-b2b-slider-dot-active-bg: var(--bb-primary);
+  --bb-b2b-slider-dot-active-shadow: 0 0.375rem 1rem color-mix(in srgb, var(--bb-primary) 24%, transparent);
+  --bb-b2b-slider-control-color: var(--bb-white);
+  --bb-b2b-slider-control-bg: color-mix(in srgb, var(--bb-surface-elevated) 18%, transparent);
+  --bb-b2b-slider-control-shadow:
+      0 0.75rem 1.75rem color-mix(in srgb, var(--bb-black) 18%, transparent),
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 10%, transparent);
+  --bb-b2b-slider-control-hover-bg: color-mix(in srgb, var(--bb-surface-elevated) 28%, transparent);
   display: grid;
   grid-template-columns: minmax(0, 1fr) clamp(18rem, 22vw, 21rem);
   gap: 1rem;
@@ -86287,10 +86314,10 @@ button:not(:disabled) {
   min-width: 0;
   min-height: 28rem;
   overflow: hidden;
-  background: radial-gradient(circle at 82% 28%, rgba(123, 90, 255, 0.16), transparent 28%), radial-gradient(circle at 18% 85%, rgba(255, 212, 0, 0.08), transparent 22%), var(--bb-home-hero-slide-bg, #0f3b74);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 16%, var(--bb-border-color));
+  background: var(--bb-b2b-slider-carousel-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-slider-carousel-border);
   border-radius: var(--bb-b2b-slider-radius-xl, var(--bb-radius-2xl));
-  box-shadow: 0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black, #000000) 18%, transparent), 0 0.25rem 1rem color-mix(in srgb, var(--bb-black, #000000) 10%, transparent);
+  box-shadow: var(--bb-b2b-slider-carousel-shadow);
 }
 
 .bb-b2b-homepage-slider-inner,
@@ -86538,9 +86565,9 @@ button:not(:disabled) {
   width: min(100%, 20.5rem);
   aspect-ratio: 1/1;
   padding: 1.5rem;
-  background: radial-gradient(circle at 42% 34%, color-mix(in srgb, var(--bb-white, #ffffff) 96%, transparent), color-mix(in srgb, var(--bb-primary) 8%, var(--bb-white, #ffffff)) 68%, color-mix(in srgb, var(--bb-primary) 13%, var(--bb-white, #ffffff)) 100%);
+  background: var(--bb-b2b-slider-picture-bg);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 72%, transparent), 0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 18%, transparent);
+  box-shadow: var(--bb-b2b-slider-picture-shadow);
 }
 
 .bb-b2b-homepage-slider-picture-card img {
@@ -86638,7 +86665,7 @@ button:not(:disabled) {
   min-width: 0.5rem;
   height: 0.5rem;
   margin: 0;
-  background: color-mix(in srgb, var(--bb-white, #ffffff) 30%, transparent);
+  background: var(--bb-b2b-slider-dot-bg);
   border: 0;
   border-radius: var(--bb-radius-pill);
   opacity: 1;
@@ -86648,8 +86675,8 @@ button:not(:disabled) {
 .bb-b2b-homepage-slider-indicators .active,
 .bb-b2b-homepage-slider-dot.active {
   width: 1.625rem;
-  background: var(--bb-primary);
-  box-shadow: 0 0.375rem 1rem color-mix(in srgb, var(--bb-primary) 24%, transparent);
+  background: var(--bb-b2b-slider-dot-active-bg);
+  box-shadow: var(--bb-b2b-slider-dot-active-shadow);
 }
 
 /* Controls */
@@ -86660,11 +86687,11 @@ button:not(:disabled) {
   height: 3.125rem;
   align-items: center;
   justify-content: center;
-  color: var(--bb-white, #ffffff);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 18%, transparent);
+  color: var(--bb-b2b-slider-control-color);
+  background-color: var(--bb-b2b-slider-control-bg);
   border: 0;
   border-radius: var(--bb-radius-pill);
-  box-shadow: 0 0.75rem 1.75rem color-mix(in srgb, var(--bb-black, #000000) 18%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 10%, transparent);
+  box-shadow: var(--bb-b2b-slider-control-shadow);
   opacity: 0.9;
   transform: translateY(-50%);
   backdrop-filter: blur(10px);
@@ -86675,7 +86702,7 @@ button:not(:disabled) {
 .bb-b2b-homepage-slider-control:hover,
 .bb-b2b-homepage-slider-control:focus {
   color: var(--bb-white, #ffffff);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 28%, transparent);
+  background-color: var(--bb-b2b-slider-control-hover-bg);
   box-shadow: 0 1rem 2.25rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent), 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 12%, transparent);
   opacity: 1;
   transform: translateY(-50%) scale(1.045);
@@ -86694,38 +86721,33 @@ button:not(:disabled) {
   line-height: 1;
 }
 
-/* Dark */
-[data-bs-theme=dark] .bb-b2b-homepage-slider-carousel {
-  background: radial-gradient(circle at 82% 28%, rgba(123, 90, 255, 0.13), transparent 28%), radial-gradient(circle at 18% 85%, rgba(255, 212, 0, 0.06), transparent 22%), color-mix(in srgb, #0f3b74 74%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
-  box-shadow: 0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black, #000000) 36%, transparent), 0 0.25rem 1rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-homepage-slider-picture-card {
-  background: radial-gradient(circle at 42% 34%, color-mix(in srgb, var(--bb-surface-elevated) 94%, var(--bb-body-bg)), color-mix(in srgb, var(--bb-primary) 8%, var(--bb-body-bg)) 68%, color-mix(in srgb, var(--bb-primary) 12%, var(--bb-body-bg)) 100%);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent), 0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-homepage-slider-indicators [data-bs-target],
-[data-bs-theme=dark] .bb-b2b-homepage-slider-dot {
-  background: color-mix(in srgb, var(--bb-white, #ffffff) 26%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-homepage-slider-indicators .active,
-[data-bs-theme=dark] .bb-b2b-homepage-slider-dot.active {
-  background: var(--bb-primary);
-  box-shadow: 0 0.375rem 1rem color-mix(in srgb, var(--bb-primary) 26%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-homepage-slider-control {
-  color: var(--bb-white, #ffffff);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 20%, transparent);
-  box-shadow: 0 0.75rem 1.75rem color-mix(in srgb, var(--bb-black, #000000) 28%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-homepage-slider-control:hover,
-[data-bs-theme=dark] .bb-b2b-homepage-slider-control:focus {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 30%, transparent);
+/* Dark tokens */
+[data-bs-theme=dark] .bb-b2b-homepage-slider-layout {
+  --bb-b2b-slider-carousel-bg:
+      radial-gradient(circle at 82% 28%, rgba(123, 90, 255, 0.13), transparent 28%),
+      radial-gradient(circle at 18% 85%, rgba(255, 212, 0, 0.06), transparent 22%),
+      color-mix(in srgb, #0f3b74 74%, var(--bb-body-bg));
+  --bb-b2b-slider-carousel-border: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
+  --bb-b2b-slider-carousel-shadow:
+      0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black) 36%, transparent),
+      0 0.25rem 1rem color-mix(in srgb, var(--bb-black) 22%, transparent);
+  --bb-b2b-slider-picture-bg:
+      radial-gradient(
+          circle at 42% 34%,
+          color-mix(in srgb, var(--bb-surface-elevated) 94%, var(--bb-body-bg)),
+          color-mix(in srgb, var(--bb-primary) 8%, var(--bb-body-bg)) 68%,
+          color-mix(in srgb, var(--bb-primary) 12%, var(--bb-body-bg)) 100%
+      );
+  --bb-b2b-slider-picture-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 8%, transparent),
+      0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 22%, transparent);
+  --bb-b2b-slider-dot-bg: color-mix(in srgb, var(--bb-white) 26%, transparent);
+  --bb-b2b-slider-dot-active-shadow: 0 0.375rem 1rem color-mix(in srgb, var(--bb-primary) 26%, transparent);
+  --bb-b2b-slider-control-bg: color-mix(in srgb, var(--bb-surface-elevated) 20%, transparent);
+  --bb-b2b-slider-control-shadow:
+      0 0.75rem 1.75rem color-mix(in srgb, var(--bb-black) 28%, transparent),
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 8%, transparent);
+  --bb-b2b-slider-control-hover-bg: color-mix(in srgb, var(--bb-surface-elevated) 30%, transparent);
 }
 
 /* Responsive */
