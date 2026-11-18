@@ -52,6 +52,22 @@
     0 1rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent),
     0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 30%, transparent);
 
+  --bb-cookie-banner-card-bg:
+    radial-gradient(circle at 4% 28%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 18rem),
+    radial-gradient(circle at 88% 64%, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 20rem),
+    linear-gradient(90deg, color-mix(in srgb, var(--bb-cookie-banner-bg) 96%, var(--bb-primary)), var(--bb-cookie-banner-bg) 48%, color-mix(in srgb, var(--bb-cookie-banner-bg) 90%, var(--bb-primary)));
+  --bb-cookie-banner-card-glow: radial-gradient(circle at center, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 68%);
+
+  --bb-cookie-banner-icon-border-color: color-mix(in srgb, var(--bb-primary) 34%, transparent);
+  --bb-cookie-banner-icon-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 40%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-primary) 18%, transparent);
+
+  --bb-cookie-banner-reject-color: #e73543;
+  --bb-cookie-banner-reject-hover: #c92634;
+  --bb-cookie-banner-accept-color: #16d77a;
+  --bb-cookie-banner-accept-hover: #10bf6a;
+
   position: fixed;
   left: 50%;
   bottom: var(--bb-cookie-banner-offset);
@@ -76,23 +92,7 @@
 
   color: var(--bb-cookie-banner-title-color);
 
-  background:
-    radial-gradient(
-      circle at 4% 28%,
-      color-mix(in srgb, var(--bb-primary) 18%, transparent),
-      transparent 18rem
-    ),
-    radial-gradient(
-      circle at 88% 64%,
-      color-mix(in srgb, var(--bb-primary) 10%, transparent),
-      transparent 20rem
-    ),
-    linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--bb-cookie-banner-bg) 96%, var(--bb-primary)),
-      var(--bb-cookie-banner-bg) 48%,
-      color-mix(in srgb, var(--bb-cookie-banner-bg) 90%, var(--bb-primary))
-    );
+  background: var(--bb-cookie-banner-card-bg);
 
   border: var(--bb-border-width) solid var(--bb-cookie-banner-border-color);
   border-radius: var(--bb-radius-2xl);
@@ -109,12 +109,7 @@
   z-index: -1;
   border-radius: calc(var(--bb-radius-2xl) + 0.5rem);
 
-  background:
-    radial-gradient(
-      circle at center,
-      color-mix(in srgb, var(--bb-primary) 12%, transparent),
-      transparent 68%
-    );
+  background: var(--bb-cookie-banner-card-glow);
 
   filter: blur(18px);
   opacity: 0.9;
@@ -152,12 +147,10 @@
 
   color: var(--bb-cookie-banner-icon-color);
   background-color: var(--bb-cookie-banner-icon-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 34%, transparent);
+  border: var(--bb-border-width) solid var(--bb-cookie-banner-icon-border-color);
   border-radius: var(--bb-radius-2xl);
 
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 40%, transparent),
-    0 1rem 2rem color-mix(in srgb, var(--bb-primary) 18%, transparent);
+  box-shadow: var(--bb-cookie-banner-icon-shadow);
 }
 
 .bb-cookie-banner-icon .material-symbols-outlined {
@@ -299,10 +292,7 @@
 }
 
 .bb-cookie-banner-reject {
-  --bb-cookie-banner-reject-color: #e73543;
-  --bb-cookie-banner-reject-hover: #c92634;
-
-  --bb-btn-bg: var(--bb-cookie-banner-reject-color);
+--bb-btn-bg: var(--bb-cookie-banner-reject-color);
   --bb-btn-color: var(--bb-black, #000000);
   --bb-btn-border-color: var(--bb-cookie-banner-reject-color);
 
@@ -316,10 +306,7 @@
 }
 
 .bb-cookie-banner-accept {
-  --bb-cookie-banner-accept-color: #16d77a;
-  --bb-cookie-banner-accept-hover: #10bf6a;
-
-  --bb-btn-bg: var(--bb-cookie-banner-accept-color);
+--bb-btn-bg: var(--bb-cookie-banner-accept-color);
   --bb-btn-color: var(--bb-black, #000000);
   --bb-btn-border-color: var(--bb-cookie-banner-accept-color);
 
@@ -361,106 +348,34 @@
 }
 
 /* -------------------------------------
-   Dark
+   Dark tokens
 ------------------------------------- */
 
 [data-bs-theme="dark"] .bb-cookie-banner {
-  --bb-cookie-banner-bg: color-mix(
-    in srgb,
-    var(--bb-surface-elevated) 88%,
-    var(--bb-body-bg)
-  );
-
-  --bb-cookie-banner-border-color: color-mix(
-    in srgb,
-    var(--bb-primary) 22%,
-    var(--bb-border-color)
-  );
-
-  --bb-cookie-banner-text-color: color-mix(
-    in srgb,
-    var(--bb-secondary-color) 86%,
-    var(--bb-emphasis-color)
-  );
-
-  --bb-cookie-banner-icon-bg: color-mix(
-    in srgb,
-    var(--bb-primary) 14%,
-    var(--bb-body-bg)
-  );
-
+  --bb-cookie-banner-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg));
+  --bb-cookie-banner-border-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  --bb-cookie-banner-text-color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
+  --bb-cookie-banner-icon-bg: color-mix(in srgb, var(--bb-primary) 14%, var(--bb-body-bg));
   --bb-cookie-banner-shadow:
-    0 2.75rem 6rem color-mix(in srgb, var(--bb-black, #000000) 58%, transparent),
-    0 1rem 2rem color-mix(in srgb, var(--bb-black, #000000) 34%, transparent),
-    0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 7%, transparent);
-}
+    0 2.75rem 6rem color-mix(in srgb, var(--bb-black) 58%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-black) 34%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--bb-white) 7%, transparent);
 
-[data-bs-theme="dark"] .bb-cookie-banner-card {
-  background:
-    radial-gradient(
-      circle at 4% 28%,
-      color-mix(in srgb, var(--bb-primary) 15%, transparent),
-      transparent 18rem
-    ),
-    radial-gradient(
-      circle at 88% 64%,
-      color-mix(in srgb, var(--bb-info, #3b82f6) 9%, transparent),
-      transparent 20rem
-    ),
+  --bb-cookie-banner-card-bg:
+    radial-gradient(circle at 4% 28%, color-mix(in srgb, var(--bb-primary) 15%, transparent), transparent 18rem),
+    radial-gradient(circle at 88% 64%, color-mix(in srgb, var(--bb-info) 9%, transparent), transparent 20rem),
     var(--bb-cookie-banner-bg);
-}
+  --bb-cookie-banner-card-glow: radial-gradient(circle at center, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 68%);
 
-[data-bs-theme="dark"] .bb-cookie-banner-card::before {
-  background:
-    radial-gradient(
-      circle at center,
-      color-mix(in srgb, var(--bb-primary) 10%, transparent),
-      transparent 68%
-    );
-}
+  --bb-cookie-banner-icon-border-color: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
+  --bb-cookie-banner-icon-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 8%, transparent),
+    0 1rem 2rem color-mix(in srgb, var(--bb-black) 24%, transparent);
 
-[data-bs-theme="dark"] .bb-cookie-banner-icon {
-  border-color: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
-
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent),
-    0 1rem 2rem color-mix(in srgb, var(--bb-black, #000000) 24%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-cookie-banner-manage {
-  --bb-btn-bg: var(--bb-emphasis-color);
-  --bb-btn-color: var(--bb-body-bg);
-  --bb-btn-border-color: var(--bb-emphasis-color);
-
-  --bb-btn-hover-bg: color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-primary));
-  --bb-btn-hover-color: var(--bb-body-bg);
-  --bb-btn-hover-border-color: var(--bb-btn-hover-bg);
-}
-
-[data-bs-theme="dark"] .bb-cookie-banner-reject {
   --bb-cookie-banner-reject-color: #ff4d5a;
   --bb-cookie-banner-reject-hover: #e73543;
-
-  --bb-btn-bg: var(--bb-cookie-banner-reject-color);
-  --bb-btn-color: var(--bb-black, #000000);
-  --bb-btn-border-color: var(--bb-cookie-banner-reject-color);
-
-  --bb-btn-hover-bg: var(--bb-cookie-banner-reject-hover);
-  --bb-btn-hover-color: var(--bb-black, #000000);
-  --bb-btn-hover-border-color: var(--bb-cookie-banner-reject-hover);
-}
-
-[data-bs-theme="dark"] .bb-cookie-banner-accept {
   --bb-cookie-banner-accept-color: #25e28a;
   --bb-cookie-banner-accept-hover: #16d77a;
-
-  --bb-btn-bg: var(--bb-cookie-banner-accept-color);
-  --bb-btn-color: var(--bb-black, #000000);
-  --bb-btn-border-color: var(--bb-cookie-banner-accept-color);
-
-  --bb-btn-hover-bg: var(--bb-cookie-banner-accept-hover);
-  --bb-btn-hover-color: var(--bb-black, #000000);
-  --bb-btn-hover-border-color: var(--bb-cookie-banner-accept-hover);
 }
 
 .bb-cookie-banner-reject,
