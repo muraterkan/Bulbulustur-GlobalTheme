@@ -17,55 +17,28 @@
 </head>
 <!--/::Head-->
 
-<body class="bb-root bg-body">
-    <!-- Topbar -->
-    <header class="border-bottom" style="border-color: var(--bb-border-color) !important;">
-        <div class="container py-3">
-            <div class="d-flex align-items-center justify-content-between gap-3">
-                <div class="d-flex align-items-center gap-2">
-                    <span class="material-symbols-outlined">crop_square</span>
-                    <div class="fw-semibold">bb-modal demo</div>
-                    <span class="text-muted small d-none d-md-inline">Modal + Light/Dark</span>
-                </div>
-
-                <button id="bb_theme_toggle"
-                        class="btn bb-btn-light d-inline-flex align-items-center gap-2"
-                        type="button"
-                        aria-label="Tema değiştir">
-                    <span id="bb_theme_icon" class="material-symbols-outlined">dark_mode</span>
-                    <span id="bb_theme_text" class="d-none d-md-inline">Dark</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- PAGE -->
-    <!--::Wrapper-->
+<body class="bb-body">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
 <div class="bb-wrapper">
-        <header>
-        </header>
-        <!--::Main-->
-<main class="bb-main d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 73px);">
-
             <div class="bb-container">
-                <div class="text-center">
-                    <div class="mb-3">
-                        <div class="fw-semibold">Modal Test</div>
-                        <div class="text-muted small">Bootstrap modal davranışı + bb-modal görünümü</div>
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Modal Test</div>
+                            <div class="text-body-secondary small">Bootstrap modal davranışı + bb-modal görünümü</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <button type="button" class="btn bb-btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bbTestModal">
+                                Modal Aç
+                            </button>
+                            <div class="text-body-secondary small mt-3">
+                                Not: Tema değiştirince modal ve backdrop token'ları otomatik uyumlu kalır.
+                            </div>
+                        </div>
                     </div>
-
-                    <button type="button"
-                            class="btn bb-btn-primary btn-lg"
-                            data-bs-toggle="modal"
-                            data-bs-target="#bbTestModal">
-                        Modal Aç
-                    </button>
-
-                    <div class="text-muted small mt-3">
-                        Not: Tema değiştirince modal + backdrop token’ları otomatik uyumlu kalmalı.
-                    </div>
-                </div>
-
+                </section>
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
@@ -119,16 +92,6 @@
                     </div>
                 </section>
                 <!--/::Usage-->
-            </div>
-        </main>
-<!--/::Main-->
-        <!--::Footer-->
-<footer>
-        </footer>
-<!--/::Footer-->
-    </div>
-
-    <!-- ================= MODAL ================= -->
     <!--::Modals-->
 <div class="modal fade" id="bbTestModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -186,6 +149,10 @@
         </div>
     </div>
 
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
     <!-- Theme Toggle -->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>

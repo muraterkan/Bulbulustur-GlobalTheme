@@ -30,55 +30,41 @@
 }
 
 /* -------------------------------------
-   Chip background ONLY when floated
-   - height/width reset: 100% hissini kırar
+   Floated label arka planı
+   Bootstrap 5.3 label::after ile arka planı boyar; geometriyi (height/padding/transform)
+   Bootstrap yönetir, burada yalnız renk token'ı verilir.
 ------------------------------------- */
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > textarea.form-control:focus ~ label,
-.form-floating > textarea.form-control:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
-  height: auto;
-  width: auto;
-
-  display: inline-flex;
-  align-items: center;
-
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > textarea.form-control:focus ~ label::after,
+.form-floating > textarea.form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after,
+.form-floating > .form-control:-webkit-autofill ~ label::after {
   background-color: var(--bb-form-floating-label-bg);
   border-radius: var(--bb-form-floating-label-radius);
-
-  padding-left: var(--bb-form-floating-label-padding-x);
-  padding-right: var(--bb-form-floating-label-padding-x);
 }
 
-/* -------------------------------------
-   Solid style compatibility
-------------------------------------- */
-.form-floating > .form-control.form-control-solid:focus ~ label,
-.form-floating > .form-control.form-control-solid:not(:placeholder-shown) ~ label,
-.form-floating > textarea.form-control.form-control-solid:focus ~ label,
-.form-floating > textarea.form-control.form-control-solid:not(:placeholder-shown) ~ label,
-.form-floating > .form-select.form-select-solid ~ label {
+/* Solid style */
+.form-floating > .form-control.form-control-solid:focus ~ label::after,
+.form-floating > .form-control.form-control-solid:not(:placeholder-shown) ~ label::after,
+.form-floating > textarea.form-control.form-control-solid:focus ~ label::after,
+.form-floating > textarea.form-control.form-control-solid:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select.form-select-solid ~ label::after {
   background-color: var(--bb-form-control-solid-bg, var(--bb-form-floating-label-bg));
 }
 
-/* -------------------------------------
-   Transparent + Flush style compatibility
-------------------------------------- */
-.form-floating > .form-control.form-control-transparent:focus ~ label,
-.form-floating > .form-control.form-control-transparent:not(:placeholder-shown) ~ label,
-.form-floating > textarea.form-control.form-control-transparent:focus ~ label,
-.form-floating > textarea.form-control.form-control-transparent:not(:placeholder-shown) ~ label,
-.form-floating > .form-select.form-select-transparent ~ label,
-.form-floating > .form-control.form-control-flush:focus ~ label,
-.form-floating > .form-control.form-control-flush:not(:placeholder-shown) ~ label,
-.form-floating > textarea.form-control.form-control-flush:focus ~ label,
-.form-floating > textarea.form-control.form-control-flush:not(:placeholder-shown) ~ label,
-.form-floating > .form-select.form-select-flush ~ label {
+/* Transparent + Flush style */
+.form-floating > .form-control.form-control-transparent:focus ~ label::after,
+.form-floating > .form-control.form-control-transparent:not(:placeholder-shown) ~ label::after,
+.form-floating > textarea.form-control.form-control-transparent:focus ~ label::after,
+.form-floating > textarea.form-control.form-control-transparent:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select.form-select-transparent ~ label::after,
+.form-floating > .form-control.form-control-flush:focus ~ label::after,
+.form-floating > .form-control.form-control-flush:not(:placeholder-shown) ~ label::after,
+.form-floating > textarea.form-control.form-control-flush:focus ~ label::after,
+.form-floating > textarea.form-control.form-control-flush:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select.form-select-flush ~ label::after {
   background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: var(--bb-radius-none);
 }
 
 /* -------------------------------------
@@ -103,23 +89,4 @@
 .form-floating > .form-select:disabled ~ label,
 .form-floating > textarea.form-control:disabled ~ label {
   opacity: var(--bb-form-floating-disabled-opacity);
-}
-
-/* -------------------------------------
-   Optional: autofill edge-case
-   (bazı tarayıcılarda placeholder-shown şaşabiliyor)
-------------------------------------- */
-.form-floating > .form-control:-webkit-autofill ~ label,
-.form-floating > textarea.form-control:-webkit-autofill ~ label {
-  height: auto;
-  width: auto;
-
-  display: inline-flex;
-  align-items: center;
-
-  background-color: var(--bb-form-floating-label-bg);
-  border-radius: var(--bb-form-floating-label-radius);
-
-  padding-left: var(--bb-form-floating-label-padding-x);
-  padding-right: var(--bb-form-floating-label-padding-x);
 }
