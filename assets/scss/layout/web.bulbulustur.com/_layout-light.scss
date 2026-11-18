@@ -13,31 +13,22 @@
   --bb-layout-light-content-width: 32rem;
   --bb-layout-light-header-action-offset: 0;
 
+  --bb-layout-light-page-bg:
+    radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28rem),
+    radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info) 6%, transparent), transparent 24rem),
+    radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 26rem),
+    linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 70%, var(--bb-body-bg)));
+  --bb-layout-light-card-bg: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
+  --bb-layout-light-card-border: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+  --bb-layout-light-card-shadow:
+    0 2.25rem 5.5rem color-mix(in srgb, var(--bb-emphasis-color) 9%, transparent),
+    0 0.25rem 1rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
+
   min-height: 100vh;
 
   color: var(--bb-body-color);
 
-  background:
-    radial-gradient(
-      circle at 50% -8%,
-      color-mix(in srgb, var(--bb-primary) 14%, transparent),
-      transparent 28rem
-    ),
-    radial-gradient(
-      circle at 16% 26%,
-      color-mix(in srgb, var(--bb-info, #3b82f6) 6%, transparent),
-      transparent 24rem
-    ),
-    radial-gradient(
-      circle at 86% 82%,
-      color-mix(in srgb, var(--bb-primary) 8%, transparent),
-      transparent 26rem
-    ),
-    linear-gradient(
-      180deg,
-      var(--bb-body-bg),
-      color-mix(in srgb, var(--bb-tertiary-bg) 70%, var(--bb-body-bg))
-    );
+  background: var(--bb-layout-light-page-bg);
 
   overflow-x: hidden;
 }
@@ -133,23 +124,13 @@
   width: 100%;
   overflow: hidden;
 
-  background-color: color-mix(
-    in srgb,
-    var(--bb-surface-elevated) 96%,
-    var(--bb-body-bg)
-  );
+  background-color: var(--bb-layout-light-card-bg);
 
-  border: var(--bb-border-width) solid color-mix(
-    in srgb,
-    var(--bb-border-color) 76%,
-    transparent
-  );
+  border: var(--bb-border-width) solid var(--bb-layout-light-card-border);
 
   border-radius: var(--bb-radius-xl);
 
-  box-shadow:
-    0 2.25rem 5.5rem color-mix(in srgb, var(--bb-emphasis-color) 9%, transparent),
-    0 0.25rem 1rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
+  box-shadow: var(--bb-layout-light-card-shadow);
 }
 
 .bb-layout-light-card-body {
@@ -177,45 +158,20 @@
 }
 
 /* -------------------------------------
-   Dark
+   Dark tokens
 ------------------------------------- */
 
 [data-bs-theme="dark"] .bb-layout-light-page {
-  background:
-    radial-gradient(
-      circle at 50% -8%,
-      color-mix(in srgb, var(--bb-primary) 12%, transparent),
-      transparent 28rem
-    ),
-    radial-gradient(
-      circle at 16% 26%,
-      color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent),
-      transparent 24rem
-    ),
-    radial-gradient(
-      circle at 86% 82%,
-      color-mix(in srgb, var(--bb-primary) 7%, transparent),
-      transparent 26rem
-    ),
-    linear-gradient(
-      180deg,
-      var(--bb-body-bg),
-      color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg))
-    );
-}
-
-[data-bs-theme="dark"] .bb-layout-light-card {
-  background-color: color-mix(
-    in srgb,
-    var(--bb-surface-elevated) 92%,
-    var(--bb-body-bg)
-  );
-
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-
-  box-shadow:
-    0 2rem 5rem rgba(0, 0, 0, 0.28),
-    0 0.25rem 1rem rgba(0, 0, 0, 0.18);
+  --bb-layout-light-page-bg:
+    radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 28rem),
+    radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 24rem),
+    radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 7%, transparent), transparent 26rem),
+    linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg)));
+  --bb-layout-light-card-bg: color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg));
+  --bb-layout-light-card-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-layout-light-card-shadow:
+    0 2rem 5rem color-mix(in srgb, var(--bb-black) 28%, transparent),
+    0 0.25rem 1rem color-mix(in srgb, var(--bb-black) 18%, transparent);
 }
 
 /* -------------------------------------

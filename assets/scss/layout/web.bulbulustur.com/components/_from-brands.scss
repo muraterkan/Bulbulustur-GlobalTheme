@@ -13,6 +13,11 @@
   --bb-from-brand-caption-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
   --bb-from-brand-overlay-start: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
   --bb-from-brand-overlay-end: color-mix(in srgb, var(--bb-body-bg) 74%, transparent);
+  --bb-from-brand-surface-background:
+    radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 32%),
+    radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 34%),
+    var(--bb-from-brand-surface-bg);
+  --bb-from-brand-floating-border: color-mix(in srgb, var(--bb-white) 64%, transparent);
 
   position: relative;
 
@@ -40,18 +45,7 @@
 
   padding: clamp(1.375rem, 3vw, 2.25rem);
 
-  background:
-    radial-gradient(
-      circle at 92% 6%,
-      color-mix(in srgb, var(--bb-primary) 18%, transparent),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 8% 96%,
-      color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent),
-      transparent 34%
-    ),
-    var(--bb-from-brand-surface-bg);
+  background: var(--bb-from-brand-surface-background);
 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -102,6 +96,7 @@
 
 .bb-b2c-from-brand-count {
   background-color: color-mix(in srgb, var(--bb-surface-elevated) 70%, transparent);
+  border-color: var(--bb-from-brand-floating-border);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -204,7 +199,7 @@
 
   color: var(--bb-emphasis-color);
   background-color: var(--bb-from-brand-caption-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent);
+  border: var(--bb-border-width) solid var(--bb-from-brand-floating-border);
   border-radius: var(--bb-radius);
   box-shadow: var(--bb-shadow-xs);
   text-align: center;
@@ -238,7 +233,7 @@
   line-height: var(--bb-line-height-base);
 }
 
-/* Dark */
+/* Dark tokens */
 
 [data-bs-theme="dark"] .bb-b2c-from-brand {
   --bb-from-brand-surface-bg: color-mix(in srgb, var(--bb-body-bg) 34%, transparent);
@@ -246,26 +241,11 @@
   --bb-from-brand-caption-bg: color-mix(in srgb, var(--bb-surface-elevated) 78%, transparent);
   --bb-from-brand-overlay-start: color-mix(in srgb, var(--bb-body-bg) 90%, transparent);
   --bb-from-brand-overlay-end: color-mix(in srgb, var(--bb-body-bg) 68%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-b2c-from-brand-surface {
-  background:
-    radial-gradient(
-      circle at 92% 6%,
-      color-mix(in srgb, var(--bb-primary) 13%, transparent),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 8% 96%,
-      color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent),
-      transparent 34%
-    ),
+  --bb-from-brand-surface-background:
+    radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 13%, transparent), transparent 32%),
+    radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 34%),
     var(--bb-from-brand-surface-bg);
-}
-
-[data-bs-theme="dark"] .bb-b2c-from-brand-caption,
-[data-bs-theme="dark"] .bb-b2c-from-brand-count {
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-from-brand-floating-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
 }
 
 /* Responsive */
