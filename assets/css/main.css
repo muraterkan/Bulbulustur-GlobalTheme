@@ -99025,6 +99025,19 @@ body.bb-b2c-review-gallery-open {
    Uses Bootstrap carousel + Main CSS tokens/chips/buttons
 ===================================== */
 .bb-b2c-homepage-slider {
+  --bb-b2c-slider-carousel-bg:
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 22%, transparent), transparent 28%),
+    radial-gradient(circle at 12% 88%, color-mix(in srgb, var(--bb-success) 12%, transparent), transparent 30%),
+    linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated)) 0%, color-mix(in srgb, var(--bb-primary) 6%, var(--bb-surface-elevated)) 46%, color-mix(in srgb, var(--bb-warning) 12%, var(--bb-surface-elevated)) 100%);
+  --bb-b2c-slider-carousel-border: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  --bb-b2c-slider-control-bg: color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent);
+  --bb-b2c-slider-control-border: color-mix(in srgb, var(--bb-surface-elevated) 76%, transparent);
+  --bb-b2c-slider-control-shadow:
+    0 0.75rem 1.75rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-surface-elevated) 22%, transparent);
+  --bb-b2c-slider-control-hover-bg: color-mix(in srgb, var(--bb-surface-elevated) 92%, transparent);
+  --bb-b2c-slider-control-hover-border: color-mix(in srgb, var(--bb-primary) 32%, var(--bb-surface-elevated));
+  --bb-b2c-slider-dot-bg: color-mix(in srgb, var(--bb-emphasis-color) 22%, transparent);
   position: relative;
 }
 
@@ -99032,8 +99045,8 @@ body.bb-b2c-review-gallery-open {
   position: relative;
   overflow: hidden;
   min-height: 31.25rem;
-  background: radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 22%, transparent), transparent 28%), radial-gradient(circle at 12% 88%, color-mix(in srgb, var(--bb-success) 12%, transparent), transparent 30%), linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 10%, var(--bb-surface-elevated)) 0%, color-mix(in srgb, var(--bb-primary) 6%, var(--bb-white, #ffffff)) 46%, color-mix(in srgb, var(--bb-warning) 12%, var(--bb-white, #ffffff)) 100%);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
+  background: var(--bb-b2c-slider-carousel-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-slider-carousel-border);
   border-radius: var(--bb-radius-2xl);
   box-shadow: var(--bb-shadow-sm);
 }
@@ -99216,7 +99229,7 @@ body.bb-b2c-review-gallery-open {
   width: 0.5rem !important;
   height: 0.5rem !important;
   margin: 0 !important;
-  background-color: color-mix(in srgb, var(--bb-emphasis-color) 22%, transparent) !important;
+  background-color: var(--bb-b2c-slider-dot-bg) !important;
   border: 0 !important;
   border-radius: var(--bb-radius-pill) !important;
   opacity: 1 !important;
@@ -99238,10 +99251,10 @@ body.bb-b2c-review-gallery-open {
   align-items: center;
   justify-content: center;
   color: var(--bb-emphasis-color);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 76%, transparent);
+  background-color: var(--bb-b2c-slider-control-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-slider-control-border);
   border-radius: var(--bb-radius-pill);
-  box-shadow: 0 0.75rem 1.75rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 22%, transparent);
+  box-shadow: var(--bb-b2c-slider-control-shadow);
   opacity: 0.86;
   transform: translateY(-50%);
   backdrop-filter: blur(10px);
@@ -99251,8 +99264,8 @@ body.bb-b2c-review-gallery-open {
 
 .bb-b2c-homepage-slider-control:hover {
   color: var(--bb-emphasis-color);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 92%, transparent);
-  border-color: color-mix(in srgb, var(--bb-primary) 32%, var(--bb-white, #ffffff));
+  background-color: var(--bb-b2c-slider-control-hover-bg);
+  border-color: var(--bb-b2c-slider-control-hover-border);
   box-shadow: 0 1rem 2.25rem color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent), 0 0 0 0.25rem color-mix(in srgb, var(--bb-primary) 12%, transparent);
   opacity: 1;
   transform: translateY(-50%) scale(1.045);
@@ -99271,25 +99284,21 @@ body.bb-b2c-review-gallery-open {
   line-height: 1;
 }
 
-/* Dark */
-[data-bs-theme=dark] .bb-b2c-homepage-slider-carousel {
-  background: radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28%), radial-gradient(circle at 12% 88%, color-mix(in srgb, var(--bb-success) 9%, transparent), transparent 30%), linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 10%, var(--bb-body-bg)) 0%, color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg)) 46%, color-mix(in srgb, var(--bb-warning) 8%, var(--bb-body-bg)) 100%);
-  border-color: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
-}
-
-[data-bs-theme=dark] .bb-b2c-homepage-slider-control {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 68%, transparent);
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.22), inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2c-homepage-slider-control:hover {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
-  border-color: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
-}
-
-[data-bs-theme=dark] .bb-b2c-homepage-slider-dot {
-  background-color: color-mix(in srgb, var(--bb-white, #ffffff) 28%, transparent) !important;
+/* Dark tokens */
+[data-bs-theme=dark] .bb-b2c-homepage-slider {
+  --bb-b2c-slider-carousel-bg:
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28%),
+    radial-gradient(circle at 12% 88%, color-mix(in srgb, var(--bb-success) 9%, transparent), transparent 30%),
+    linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 10%, var(--bb-body-bg)) 0%, color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg)) 46%, color-mix(in srgb, var(--bb-warning) 8%, var(--bb-body-bg)) 100%);
+  --bb-b2c-slider-carousel-border: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
+  --bb-b2c-slider-control-bg: color-mix(in srgb, var(--bb-surface-elevated) 68%, transparent);
+  --bb-b2c-slider-control-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-b2c-slider-control-shadow:
+    0 0.75rem 1.75rem color-mix(in srgb, var(--bb-black) 22%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 8%, transparent);
+  --bb-b2c-slider-control-hover-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
+  --bb-b2c-slider-control-hover-border: color-mix(in srgb, var(--bb-primary) 28%, var(--bb-border-color));
+  --bb-b2c-slider-dot-bg: color-mix(in srgb, var(--bb-white) 28%, transparent);
 }
 
 /* Responsive */
