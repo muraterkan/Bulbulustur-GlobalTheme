@@ -1,57 +1,5 @@
 /* Hero */
 
-.bb-b2b-company-reviews-hero {
-  padding: 0.5rem 0 1.25rem;
-}
-
-.bb-b2b-company-reviews-hero-card {
-  position: relative;
-  overflow: hidden;
-
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.5rem;
-  align-items: center;
-
-  padding: clamp(1.125rem, 3vw, 1.5rem);
-
-  background:
-    radial-gradient(
-      circle at top right,
-      color-mix(in srgb, var(--bb-primary) 10%, transparent),
-      transparent 34%
-    ),
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--bb-primary) 6%, var(--bb-white)) 0%,
-      var(--bb-white) 74%
-    );
-
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-shadow-sm);
-}
-
-.bb-b2b-company-reviews-hero-card::after {
-  content: "";
-  position: absolute;
-  right: -5.5rem;
-  bottom: -6.5rem;
-
-  width: 15rem;
-  height: 15rem;
-
-  background-color: color-mix(in srgb, var(--bb-primary) 6%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.bb-b2b-company-reviews-hero-copy,
-.bb-b2b-company-reviews-hero-actions {
-  position: relative;
-  z-index: 2;
-}
-
 .bb-b2b-company-reviews-chip {
   margin-bottom: 0.75rem;
 }
@@ -59,33 +7,6 @@
 .bb-b2b-company-reviews-chip .material-symbols-outlined {
   font-size: var(--bb-fs-base);
   line-height: 1;
-}
-
-.bb-b2b-company-reviews-title {
-  margin: 0;
-
-  color: var(--bb-emphasis-color);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.08;
-  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
-  overflow-wrap: anywhere;
-}
-
-.bb-b2b-company-reviews-text {
-  max-width: 48rem;
-  margin: 0.5rem 0 0;
-
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);;
-  line-height: var(--bb-line-height-content);
-}
-
-.bb-b2b-company-reviews-hero-actions {
-  display: flex;
-  gap: 0.625rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .bb-b2b-company-reviews-hero-action {
@@ -547,19 +468,13 @@
 }
 
 @media (max-width: 991.98px) {
-  .bb-b2b-company-reviews-hero-card {
-    grid-template-columns: 1fr;
-  }
+  
 
-  .bb-b2b-company-reviews-hero-actions {
-    justify-content: flex-start;
-  }
+  
 }
 
 @media (max-width: 767.98px) {
-  .bb-b2b-company-reviews-hero-actions {
-    flex-direction: column;
-  }
+  
 
   .bb-b2b-company-reviews-hero-action {
     width: 100%;
@@ -588,9 +503,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .bb-b2b-company-reviews-title {
-    font-size: var(--bb-fs-2xl);
-  }
+  
 
   .bb-b2b-company-reviews-hero-card,
   .bb-b2b-company-reviews-summary-card,

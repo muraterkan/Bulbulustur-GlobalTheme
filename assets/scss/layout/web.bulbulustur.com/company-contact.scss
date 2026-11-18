@@ -55,26 +55,6 @@
   line-height: 1;
 }
 
-.bb-b2b-company-contact-title {
-  margin: 0;
-
-  color: var(--bb-emphasis-color);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.08;
-  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
-  overflow-wrap: anywhere;
-}
-
-.bb-b2b-company-contact-text {
-  max-width: 48rem;
-  margin: 0.5rem 0 0;
-
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);;
-  line-height: var(--bb-line-height-content);
-}
-
 /* Nav */
 
 .bb-b2b-company-contact-nav {
@@ -506,9 +486,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .bb-b2b-company-contact-title {
-    font-size: var(--bb-fs-2xl);
-  }
+  
 
   .bb-b2b-company-contact-person-card,
   .bb-b2b-company-contact-info-card,

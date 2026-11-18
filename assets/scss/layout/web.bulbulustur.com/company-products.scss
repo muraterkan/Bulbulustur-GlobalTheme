@@ -50,26 +50,6 @@
   line-height: 1;
 }
 
-.bb-b2b-company-products-title {
-  margin: 0;
-
-  color: var(--bb-emphasis-color);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.08;
-  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
-  overflow-wrap: anywhere;
-}
-
-.bb-b2b-company-products-text {
-  max-width: 48rem;
-  margin: 0.5rem 0 0;
-
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);;
-  line-height: var(--bb-line-height-content);
-}
-
 .bb-b2b-company-products-nav {
   display: flex;
   gap: 0.75rem;
@@ -624,9 +604,7 @@
     padding-bottom: 2.75rem;
   }
 
-  .bb-b2b-company-products-title {
-    font-size: var(--bb-fs-2xl);
-  }
+  
 
   .bb-b2b-company-products-grid {
     grid-template-columns: 1fr;
