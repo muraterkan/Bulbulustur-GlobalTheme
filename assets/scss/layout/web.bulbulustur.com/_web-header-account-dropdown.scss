@@ -107,7 +107,6 @@
     min-width: 272px;
     max-width: 272px;
     padding: 0.5rem;
-    margin-top: var(--bb-space-2);
 
     background-color: var(--bb-body-bg);
     border: 1px solid var(--bb-border-color);
@@ -115,6 +114,10 @@
     box-shadow: var(--bb-shadow-lg);
 
     overflow: hidden;
+}
+
+.bb-web-account-dropdown .bb-web-account-menu {
+    margin-top: var(--bb-space-2);
 }
 
 /* Header */
