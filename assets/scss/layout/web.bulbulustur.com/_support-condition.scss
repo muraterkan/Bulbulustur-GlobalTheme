@@ -654,14 +654,3 @@
     color: var(--bb-heading-color);
 }
 
-@media (max-width: 767.98px) {
-    .bb-support-condition-type-tabs {
-        gap: 1.125rem;
-        min-height: 52px;
-    }
-
-    .bb-support-condition-type-tab {
-        min-height: 52px;
-        font-size: var(--bb-fs-sm);;
-    }
-}
