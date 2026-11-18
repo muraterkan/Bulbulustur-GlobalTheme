@@ -174,72 +174,20 @@
   min-width: 0;
 }
 
-.bb-account-phone-create-form .form-label {
-  margin-bottom: 0.45rem;
-
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);;
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-account-phone-create-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-phone-create-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-
-  box-shadow: none;
 }
 
 .bb-account-phone-create-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-phone-create-input-group .form-control {
-  min-height: 2.625rem;
-
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-
-  font-size: var(--bb-fs-sm);;
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-phone-create-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-phone-create-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-phone-create-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
-}
-
-.bb-account-phone-create-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Helper */
