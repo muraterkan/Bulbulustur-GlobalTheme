@@ -37358,233 +37358,6 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 /* =====================================
-   Web Account Dropdown
-   Language dropdown ile aynı omurga.
-   Popper/Bootstrap kendi pozisyonunu hesaplar.
-===================================== */
-.bb-web-account-dropdown {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Trigger */
-.bb-web-account-trigger {
-  min-height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0 0.625rem;
-  color: var(--bb-heading-color);
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: var(--bb-radius-pill);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast);
-}
-
-.bb-web-account-trigger:hover,
-.bb-web-account-trigger:focus,
-.bb-web-account-trigger[aria-expanded=true] {
-  color: var(--bb-heading-color);
-  background-color: color-mix(in srgb, var(--bb-body-bg) 22%, transparent);
-  border-color: color-mix(in srgb, var(--bb-heading-color) 14%, transparent);
-  box-shadow: 0 6px 14px color-mix(in srgb, var(--bb-coal-300) 6%, transparent);
-  text-decoration: none;
-  outline: 0;
-}
-
-/* Bootstrap default caret kapalı */
-.bb-web-account-trigger::after {
-  display: none !important;
-}
-
-/* Trigger avatar */
-.bb-web-account-avatar {
-  width: 36px;
-  height: 36px;
-  flex: 0 0 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bb-heading-color);
-  background-color: var(--bb-primary);
-  border: 1px solid color-mix(in srgb, var(--bb-heading-color) 12%, transparent);
-  border-radius: var(--bb-radius-pill);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1;
-}
-
-/* Current text */
-.bb-web-account-current {
-  display: inline-flex;
-  align-items: center;
-  color: currentColor;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  line-height: 1;
-}
-
-/* Arrow */
-.bb-web-account-arrow {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: currentColor;
-  line-height: 1;
-  transition: transform var(--bb-transition-fast);
-}
-
-.bb-web-account-arrow .material-symbols-outlined {
-  font-size: var(--bb-fs-xl);
-  line-height: 1;
-}
-
-.bb-web-account-trigger[aria-expanded=true] .bb-web-account-arrow {
-  transform: rotate(180deg);
-}
-
-/* Menu */
-.bb-web-account-menu {
-  min-width: 264px;
-  padding: 0.5rem;
-  background-color: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(15, 23, 42, 0.08);
-}
-
-/* Head */
-.bb-web-account-menu-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 10px 14px;
-  margin: -2px -2px 8px;
-  border-bottom: 1px solid var(--bb-border-color);
-}
-
-.bb-web-account-menu-avatar {
-  width: 2.625rem;
-  height: 42px;
-  flex: 0 0 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bb-heading-color);
-  background-color: var(--bb-primary);
-  border-radius: var(--bb-radius-pill);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1;
-}
-
-.bb-web-account-menu-member {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.bb-web-account-menu-name {
-  color: var(--bb-heading-color);
-  font-size: var(--bb-fs-md);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: var(--bb-line-height-heading);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.bb-web-account-menu-meta {
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-xs);
-  line-height: var(--bb-line-height-base);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* Item */
-.bb-web-account-item {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 10px;
-  color: var(--bb-heading-color);
-  background-color: transparent;
-  border-radius: var(--bb-radius-lg);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-medium);
-  line-height: 1;
-  text-decoration: none;
-  transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast);
-}
-
-.bb-web-account-item:hover,
-.bb-web-account-item:focus {
-  color: var(--bb-heading-color);
-  background-color: var(--bb-secondary-bg);
-  text-decoration: none;
-  outline: 0;
-}
-
-.bb-web-account-item-icon {
-  width: 22px;
-  height: 22px;
-  flex: 0 0 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-xl);
-  line-height: 1;
-}
-
-.bb-web-account-item-text {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.bb-web-account-menu .dropdown-divider {
-  margin: 8px -8px;
-  border-top: 1px solid var(--bb-border-color);
-  opacity: 1;
-}
-
-.bb-web-account-item.is-danger {
-  color: var(--bb-danger);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-web-account-item.is-danger .bb-web-account-item-icon {
-  color: var(--bb-danger);
-}
-
-.bb-web-account-item.is-danger:hover,
-.bb-web-account-item.is-danger:focus {
-  color: var(--bb-danger);
-  background-color: color-mix(in srgb, var(--bb-danger) 8%, var(--bb-body-bg));
-}
-
-/* Dark mode */
-[data-bs-theme=dark] .bb-web-account-menu {
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32), 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* =====================================
    Web Header Account Dropdown
    Language dropdown ile aynı görsel dil
 ===================================== */
@@ -37619,13 +37392,13 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   color: var(--bb-heading-color);
   background-color: color-mix(in srgb, var(--bb-body-bg) 22%, transparent);
   border-color: color-mix(in srgb, var(--bb-heading-color) 14%, transparent);
-  box-shadow: 0 6px 14px color-mix(in srgb, var(--bb-coal-300) 6%, transparent);
+  box-shadow: var(--bb-shadow-xs);
   text-decoration: none;
   outline: 0;
 }
 
 .bb-web-account-trigger::after {
-  display: none !important;
+  display: none;
 }
 
 /* Trigger avatar */
@@ -37680,11 +37453,11 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   min-width: 272px;
   max-width: 272px;
   padding: 0.5rem;
-  margin-top: 8px !important;
+  margin-top: var(--bb-space-2);
   background-color: var(--bb-body-bg);
   border: 1px solid var(--bb-border-color);
   border-radius: var(--bb-radius-xl);
-  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--bb-shadow-lg);
   overflow: hidden;
 }
 
@@ -37810,11 +37583,6 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: color-mix(in srgb, var(--bb-danger) 8%, var(--bb-body-bg));
 }
 
-/* Dark */
-[data-bs-theme=dark] .bb-web-account-menu {
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32), 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 /* Mobile */
 @media (max-width: 575.98px) {
   .bb-web-account-current {
@@ -37860,11 +37628,25 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
    Header Base / Layer Order
 ===================================== */
 .bb-web-header {
+  --bb-web-header-bg: var(--bb-header-bg, var(--bb-body-bg));
+  --bb-web-header-border-color: color-mix(in srgb, var(--bb-header-border-color, var(--bb-border-color)) 82%, transparent);
+  --bb-web-header-shadow: var(--bb-shadow-sm);
+  --bb-web-header-shadow-fade: rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-xs));
+  --bb-web-header-overlay-bg: color-mix(in srgb, var(--bb-dark) 52%, transparent);
+  --bb-web-header-main-padding-y: 0.625rem;
+  --bb-web-header-inner-min-height: 6rem;
+  --bb-web-header-inner-gap: var(--bb-space-6);
+  --bb-web-header-brand-gap: 1.375rem;
+  --bb-web-header-logo-height: 2.5rem;
+  --bb-web-header-search-height: 3rem;
+  --bb-web-header-action-size: 2.5rem;
+  --bb-web-header-action-badge-size: 1.1875rem;
+  --bb-web-header-action-badge-offset: -0.25rem;
   position: relative;
   z-index: 1040;
-  background-color: var(--bb-body-bg);
-  border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03), 0 10px 26px rgba(15, 23, 42, 0.055);
+  background-color: var(--bb-web-header-bg);
+  border-bottom: var(--bb-border-width) solid var(--bb-web-header-border-color);
+  box-shadow: var(--bb-web-header-shadow);
 }
 
 .bb-web-header::after {
@@ -37875,14 +37657,14 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   bottom: -18px;
   height: 18px;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.045), rgba(15, 23, 42, 0));
+  background: linear-gradient(180deg, var(--bb-web-header-shadow-fade), transparent);
 }
 
 .bb-web-header-main {
   position: relative;
   z-index: 1040;
-  background-color: var(--bb-body-bg);
-  border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+  background-color: var(--bb-web-header-bg);
+  border-bottom: var(--bb-border-width) solid var(--bb-web-header-border-color);
 }
 
 .bb-web-header-main,
@@ -37898,7 +37680,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-header-main-shell {
   position: relative;
   z-index: 1;
-  padding: 10px 0;
+  padding: var(--bb-web-header-main-padding-y) 0;
 }
 
 /* Mega menu açıldığında shadow header altında kaybolmasın */
@@ -37908,32 +37690,22 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   z-index: 1050;
 }
 
-/* Koyu tema için gölge biraz daha sakin */
-[data-bs-theme=dark] .bb-web-header {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 26px rgba(0, 0, 0, 0.22);
-}
-
-[data-bs-theme=dark] .bb-web-header::after {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0));
-}
-
 /* =====================================
    Main Header Grid
 ===================================== */
 .bb-web-header-inner {
-  min-height: 96px;
+  min-height: var(--bb-web-header-inner-min-height);
   display: grid;
   grid-template-columns: auto minmax(360px, 1fr) auto;
   align-items: center;
-  gap: 24px;
+  gap: var(--bb-web-header-inner-gap);
 }
 
 .bb-web-header-brand-wrap {
   min-width: 0;
   display: inline-flex;
   align-items: center;
-  gap: 22px;
+  gap: var(--bb-web-header-brand-gap);
 }
 
 .bb-web-header-logo {
@@ -37946,7 +37718,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-header-logo img {
   display: block;
   width: auto;
-  height: 40px;
+  height: var(--bb-web-header-logo-height);
 }
 
 /* =====================================
@@ -37983,7 +37755,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-web-header-search-group {
   width: 100%;
-  min-height: 48px;
+  min-height: var(--bb-web-header-search-height);
   display: flex;
   align-items: stretch;
   overflow: hidden;
@@ -38000,14 +37772,14 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-web-header-search-input {
   min-width: 0;
-  height: 48px;
+  height: var(--bb-web-header-search-height);
   flex: 1 1 auto;
   padding: 0 22px;
   color: var(--bb-heading-color);
   background-color: transparent;
   border: 0;
   border-radius: var(--bb-radius-none);
-  box-shadow: none !important;
+  box-shadow: none;
   font-size: var(--bb-fs-sm);
 }
 
@@ -38018,31 +37790,31 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-header-search-input:focus {
   background-color: transparent;
   border: 0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .bb-web-header-search-select {
   width: 160px;
   min-width: 160px;
-  height: 48px;
+  height: var(--bb-web-header-search-height);
   color: var(--bb-secondary-color);
   background-color: var(--bb-body-bg);
   border: 0;
   border-left: 1px solid var(--bb-border-color);
   border-radius: var(--bb-radius-none);
-  box-shadow: none !important;
+  box-shadow: none;
   font-size: var(--bb-fs-sm);
 }
 
 .bb-web-header-search-select:focus {
   border-left-color: var(--bb-border-color);
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .bb-web-header-search-button {
   width: 58px;
   min-width: 58px;
-  height: 48px;
+  height: var(--bb-web-header-search-height);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38120,8 +37892,8 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-web-header-utility-circle,
 .bb-web-header-icon-button {
-  width: 40px;
-  height: 40px;
+  width: var(--bb-web-header-action-size);
+  height: var(--bb-web-header-action-size);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38152,77 +37924,26 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-web-header-action-badge {
   position: absolute;
-  top: -4px;
-  right: -4px;
+  top: var(--bb-web-header-action-badge-offset);
+  right: var(--bb-web-header-action-badge-offset);
   z-index: 2;
-  min-width: 19px;
-  height: 19px;
+  min-width: var(--bb-web-header-action-badge-size);
+  height: var(--bb-web-header-action-badge-size);
   padding: 0 5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--bb-primary-inverse);
   background-color: var(--bb-primary);
-  border: 2px solid var(--bb-body-bg);
+  border: calc(var(--bb-border-width) * 2) solid var(--bb-web-header-bg);
   border-radius: var(--bb-radius-pill);
   font-size: var(--bb-fs-xs);
   font-weight: var(--bb-fw-bold);
   line-height: 1;
 }
 
-/* =====================================
-   Basket Component Integration
-   _BasketDropdownMainCssPilot içinde kendi classları varsa onları bozmaz.
-   Eski #basketInvoker davranışını da normalize eder.
-===================================== */
 .bb-web-header-utility-item-basket {
   position: relative;
-}
-
-.bb-web-header-utility-item-basket #basketInvoker {
-  width: 40px;
-  height: 40px;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  color: var(--bb-heading-color) !important;
-  background-color: var(--bb-body-bg) !important;
-  border: 1px solid var(--bb-border-color) !important;
-  border-radius: var(--bb-radius-pill) !important;
-  box-shadow: none;
-  text-decoration: none;
-  transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
-}
-
-.bb-web-header-utility-item-basket #basketInvoker:hover {
-  color: var(--bb-heading-color) !important;
-  background-color: var(--bb-tertiary-bg) !important;
-  border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color)) !important;
-  box-shadow: var(--bb-shadow-xs);
-  transform: translateY(-1px);
-}
-
-.bb-web-header-utility-item-basket #basketInvoker .material-symbols-outlined {
-  font-size: var(--bb-icon-size-md);
-  line-height: 1;
-}
-
-.bb-web-header-utility-item-basket #headerBasketCount {
-  position: absolute !important;
-  top: -0.25rem !important;
-  right: -0.25rem !important;
-  left: auto !important;
-  width: auto !important;
-  min-width: 19px !important;
-  height: 19px !important;
-  padding: 0 5px !important;
-  color: var(--bb-primary-inverse) !important;
-  background-color: var(--bb-primary) !important;
-  border: 0.125rem solid var(--bb-body-bg) !important;
-  border-radius: var(--bb-radius-pill) !important;
-  font-size: var(--bb-fs-2xs) !important;
-  font-weight: var(--bb-fw-bold) !important;
-  line-height: 1 !important;
 }
 
 /* =====================================
@@ -38344,7 +38065,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   display: block;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(17, 24, 39, 0.52);
+  background-color: var(--bb-web-header-overlay-bg);
   transition: opacity var(--bb-transition-normal), visibility var(--bb-transition-normal);
 }
 
@@ -38360,7 +38081,7 @@ body.bb-web-sidebar-open {
 /* =====================================
    Desktop Helpers
 ===================================== */
-.is-desktop-only {
+.bb-web-header .is-desktop-only {
   display: inline-flex;
 }
 
@@ -38425,8 +38146,8 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   }
   .bb-web-header-category-host,
   .bb-web-header-search,
-  .is-desktop-only {
-    display: none !important;
+  .bb-web-header .is-desktop-only {
+    display: none;
   }
   .bb-web-header-brand-wrap {
     justify-content: center;
@@ -38443,6 +38164,9 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   }
 }
 @media (max-width: 767.98px) {
+  .bb-web-header {
+    --bb-web-header-action-size: 2.375rem;
+  }
   .bb-web-header-inner {
     min-height: 70px;
     gap: 12px;
@@ -38460,6 +38184,9 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   }
 }
 @media (max-width: 575.98px) {
+  .bb-web-header {
+    --bb-web-header-action-size: 2.25rem;
+  }
   .bb-web-header-inner {
     gap: 0.5rem;
   }
@@ -38491,7 +38218,8 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   position: static;
   display: inline-flex;
   align-items: center;
-  --bb-category-overlay-top: 0px;
+  --bb-category-overlay-top: 0;
+  --bb-category-overlay-bg: color-mix(in srgb, var(--bb-dark) 58%, transparent);
   --bb-category-panel-z: 1080;
   --bb-category-overlay-z: 1070;
   --bb-category-panel-width: 1430px;
@@ -38501,7 +38229,7 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
    Trigger
 ===================================== */
 .bb-category-menu-trigger {
-  min-height: 48px;
+  min-height: var(--bb-web-header-search-height, 3rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38587,7 +38315,7 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   bottom: 0;
   left: 0;
   z-index: var(--bb-category-overlay-z);
-  background-color: rgba(17, 24, 39, 0.58);
+  background-color: var(--bb-category-overlay-bg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -38849,11 +38577,11 @@ body.bb-category-menu-open {
 }
 
 .bb-category-menu-panel .bb-category-menu-content {
-  display: none !important;
+  display: none;
 }
 
 .bb-category-menu-panel .bb-category-menu-content.is-active {
-  display: block !important;
+  display: block;
 }
 
 .bb-category-menu-content {
@@ -39157,27 +38885,34 @@ body.bb-category-menu-open {
    Bootstrap 5 dropdown + main.css dropdown polish
 ===================================== */
 .bb-basket-dropdown {
+  --bb-basket-dropdown-trigger-size: var(--bb-web-header-action-size, 2.5rem);
+  --bb-basket-dropdown-count-size: var(--bb-web-header-action-badge-size, 1.1875rem);
+  --bb-basket-dropdown-bg: var(--bb-web-header-bg, var(--bb-body-bg));
+  --bb-basket-dropdown-border-color: var(--bb-border-color);
   position: relative;
 }
 
 .bb-basket-dropdown-trigger {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: var(--bb-basket-dropdown-trigger-size);
+  height: var(--bb-basket-dropdown-trigger-size);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--bb-heading-color);
-  background-color: transparent;
-  border: 0;
+  background-color: var(--bb-basket-dropdown-bg);
+  border: var(--bb-border-width) solid var(--bb-basket-dropdown-border-color);
   border-radius: var(--bb-radius-pill);
-  transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast);
+  transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
 }
 
 .bb-basket-dropdown-trigger:hover,
 .bb-basket-dropdown-trigger[aria-expanded=true] {
-  color: var(--bb-primary);
+  color: var(--bb-heading-color);
   background-color: var(--bb-tertiary-bg);
+  border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-basket-dropdown-border-color));
+  box-shadow: var(--bb-shadow-xs);
+  transform: translateY(-1px);
 }
 
 .bb-basket-dropdown-trigger .material-symbols-outlined {
@@ -39187,18 +38922,19 @@ body.bb-category-menu-open {
 
 .bb-basket-dropdown-count {
   position: absolute;
-  top: 2px;
-  right: 0;
-  min-width: 20px;
-  height: 20px;
+  top: -0.25rem;
+  right: -0.25rem;
+  min-width: var(--bb-basket-dropdown-count-size);
+  height: var(--bb-basket-dropdown-count-size);
   padding: 0 5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--bb-primary-inverse);
   background-color: var(--bb-primary);
+  border: calc(var(--bb-border-width) * 2) solid var(--bb-basket-dropdown-bg);
   border-radius: var(--bb-radius-pill);
-  font-size: var(--bb-fs-sm);
+  font-size: var(--bb-fs-2xs);
   font-weight: var(--bb-fw-bold);
   line-height: 1;
 }
@@ -39791,7 +39527,7 @@ body.bb-category-menu-open {
 }
 
 .bb-web-footer-language-trigger::after {
-  display: none !important;
+  display: none;
 }
 
 .bb-web-footer-language-trigger .material-symbols-outlined {
@@ -39813,10 +39549,10 @@ body.bb-category-menu-open {
   transform: rotate(180deg);
 }
 
-.bb-web-footer-language-menu {
+.bb-web-footer-language .bb-web-footer-language-menu {
   min-width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem !important;
+  padding: var(--bb-space-2);
+  margin-bottom: var(--bb-space-2);
   background-color: var(--bb-footer-bg-soft);
   border: var(--bb-border-width) solid var(--bb-footer-border-color-strong);
   border-radius: var(--bb-radius-lg);
@@ -40247,14 +39983,14 @@ body.bb-category-menu-open {
   color: var(--bb-heading-color);
   background-color: color-mix(in srgb, var(--bb-body-bg) 22%, transparent);
   border-color: color-mix(in srgb, var(--bb-heading-color) 14%, transparent);
-  box-shadow: 0 6px 14px color-mix(in srgb, var(--bb-coal-300) 6%, transparent);
+  box-shadow: var(--bb-shadow-xs);
   text-decoration: none;
   outline: 0;
 }
 
 /* Bootstrap default caret kapalı */
 .bb-web-language-trigger::after {
-  display: none !important;
+  display: none;
 }
 
 /* Trigger icon + arrow */
@@ -40305,7 +40041,7 @@ body.bb-category-menu-open {
   background-color: var(--bb-body-bg);
   border: 1px solid var(--bb-border-color);
   border-radius: var(--bb-radius-xl);
-  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--bb-shadow-lg);
 }
 
 /* Item */
@@ -40372,11 +40108,6 @@ body.bb-category-menu-open {
 .bb-web-language-item-check .material-symbols-outlined {
   font-size: var(--bb-icon-size-md);
   line-height: 1;
-}
-
-/* Dark mode */
-[data-bs-theme=dark] .bb-web-language-menu {
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Mobile */
