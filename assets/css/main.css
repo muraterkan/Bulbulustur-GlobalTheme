@@ -95445,6 +95445,20 @@ body.bb-b2c-gallery-open {
       0 0.875rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent);
   --bb-b2c-special-shadow-hover:
       0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent);
+  --bb-b2c-special-media-bg: color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent);
+  --bb-b2c-special-media-border: color-mix(in srgb, var(--bb-surface-elevated) 68%, var(--bb-border-color));
+  --bb-b2c-special-stage-bg: color-mix(in srgb, var(--bb-surface-elevated) 96%, transparent);
+  --bb-b2c-special-surface-bg: var(--bb-surface-elevated);
+  --bb-b2c-special-surface-border: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  --bb-b2c-special-chip-bg: color-mix(in srgb, var(--bb-b2c-special-accent) 8%, var(--bb-surface-elevated));
+  --bb-b2c-special-chip-border: color-mix(in srgb, var(--bb-b2c-special-accent) 22%, var(--bb-border-color));
+  --bb-b2c-special-chip-hover-bg: var(--bb-surface-elevated);
+  --bb-b2c-special-chip-hover-border: color-mix(in srgb, var(--bb-b2c-special-accent) 38%, var(--bb-border-color));
+  --bb-b2c-special-chip-active-bg: color-mix(in srgb, var(--bb-b2c-special-accent) 16%, var(--bb-surface-elevated));
+  --bb-b2c-special-chip-active-border: color-mix(in srgb, var(--bb-b2c-special-accent) 42%, var(--bb-border-color));
+  --bb-b2c-special-icon-color: color-mix(in srgb, var(--bb-b2c-special-accent) 74%, var(--bb-emphasis-color));
+  --bb-b2c-special-icon-bg: color-mix(in srgb, var(--bb-b2c-special-accent) 14%, var(--bb-surface-elevated));
+  --bb-b2c-special-icon-border: color-mix(in srgb, var(--bb-b2c-special-accent) 18%, var(--bb-border-color));
   position: relative;
   overflow: hidden;
   background-color: var(--bb-body-bg);
@@ -95498,8 +95512,8 @@ body.bb-b2c-gallery-open {
   align-items: center;
   justify-content: center;
   color: var(--bb-b2c-special-accent);
-  background-color: color-mix(in srgb, var(--bb-white, #ffffff) 72%, transparent);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 68%, var(--bb-border-color));
+  background-color: var(--bb-b2c-special-media-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-media-border);
   border-radius: var(--bb-radius-2xl);
   box-shadow: 0 1.5rem 3.5rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent), inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 42%, transparent);
   backdrop-filter: blur(12px);
@@ -95524,8 +95538,8 @@ body.bb-b2c-gallery-open {
 .bb-b2c-special-stage-card {
   overflow: hidden;
   padding: clamp(1rem, 2vw, 1.25rem);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, transparent);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  background-color: var(--bb-b2c-special-stage-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-surface-border);
   border-radius: var(--bb-b2c-special-radius-xl);
   box-shadow: 0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent), inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 42%, transparent);
   backdrop-filter: blur(14px);
@@ -95583,8 +95597,8 @@ body.bb-b2c-gallery-open {
   gap: 0.5rem;
   padding: 0.75rem;
   color: var(--bb-b2c-special-ink) !important;
-  background-color: color-mix(in srgb, var(--bb-b2c-special-accent) 8%, var(--bb-surface-elevated));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-b2c-special-accent) 22%, var(--bb-border-color));
+  background-color: var(--bb-b2c-special-chip-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-chip-border);
   border-radius: var(--bb-b2c-special-radius-md);
   font-size: var(--bb-fs-xs);
   font-weight: var(--bb-fw-extrabold);
@@ -95597,15 +95611,15 @@ body.bb-b2c-gallery-open {
 .bb-b2c-special-stage-chip:hover,
 .bb-b2c-special-stage-chip:focus {
   transform: translateY(-2px);
-  background-color: var(--bb-surface-elevated);
-  border-color: color-mix(in srgb, var(--bb-b2c-special-accent) 38%, var(--bb-border-color));
+  background-color: var(--bb-b2c-special-chip-hover-bg);
+  border-color: var(--bb-b2c-special-chip-hover-border);
   box-shadow: 0 0.875rem 1.75rem color-mix(in srgb, var(--bb-b2c-special-accent) 10%, transparent);
 }
 
 .bb-b2c-special-stage-chip.active,
 .bb-b2c-special-stage-chip.is-active {
-  background-color: color-mix(in srgb, var(--bb-b2c-special-accent) 16%, var(--bb-surface-elevated));
-  border-color: color-mix(in srgb, var(--bb-b2c-special-accent) 42%, var(--bb-border-color));
+  background-color: var(--bb-b2c-special-chip-active-bg);
+  border-color: var(--bb-b2c-special-chip-active-border);
   box-shadow: 0 0.875rem 1.75rem color-mix(in srgb, var(--bb-b2c-special-accent) 12%, transparent);
 }
 
@@ -95615,9 +95629,9 @@ body.bb-b2c-gallery-open {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: color-mix(in srgb, var(--bb-b2c-special-accent) 74%, var(--bb-emphasis-color));
-  background-color: color-mix(in srgb, var(--bb-b2c-special-accent) 14%, var(--bb-white, #ffffff));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-b2c-special-accent) 18%, var(--bb-border-color));
+  color: var(--bb-b2c-special-icon-color);
+  background-color: var(--bb-b2c-special-icon-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-icon-border);
   border-radius: 1rem;
 }
 
@@ -95640,8 +95654,8 @@ body.bb-b2c-gallery-open {
   position: relative;
   overflow: hidden;
   padding: clamp(1.25rem, 2.25vw, 1.75rem);
-  background: radial-gradient(circle at 96% 8%, color-mix(in srgb, var(--bb-b2c-special-accent) 8%, transparent), transparent 16rem), var(--bb-surface-elevated);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  background: radial-gradient(circle at 96% 8%, color-mix(in srgb, var(--bb-b2c-special-accent) 8%, transparent), transparent 16rem), var(--bb-b2c-special-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-surface-border);
   border-radius: var(--bb-b2c-special-radius-xl);
   box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent), 0 0.25rem 0.875rem color-mix(in srgb, var(--bb-emphasis-color) 3%, transparent);
 }
@@ -95697,8 +95711,8 @@ body.bb-b2c-gallery-open {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.875rem 1.125rem;
-  background-color: var(--bb-surface-elevated);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  background-color: var(--bb-b2c-special-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-surface-border);
   border-radius: var(--bb-b2c-special-radius-lg);
   box-shadow: 0 0.75rem 1.5rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent);
 }
@@ -95715,8 +95729,8 @@ body.bb-b2c-gallery-open {
 .bb-b2c-special-empty {
   padding: clamp(2rem, 4vw, 3rem) 1.5rem;
   text-align: center;
-  background: radial-gradient(circle at top right, color-mix(in srgb, var(--bb-b2c-special-accent) 9%, transparent), transparent 18rem), var(--bb-surface-elevated);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 86%, transparent);
+  background: radial-gradient(circle at top right, color-mix(in srgb, var(--bb-b2c-special-accent) 9%, transparent), transparent 18rem), var(--bb-b2c-special-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2c-special-surface-border);
   border-radius: var(--bb-b2c-special-radius-xl);
   box-shadow: 0 0.875rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent);
 }
@@ -95773,45 +95787,26 @@ body.bb-b2c-gallery-open {
 }
 
 /* =====================================
-   Dark
+   Dark tokens
 ===================================== */
 [data-bs-theme=dark] .bb-b2c-special-page {
-  --bb-b2c-special-border: color-mix(
-      in srgb,
-      var(--bb-border-color) 74%,
-      transparent
-  );
-  --bb-b2c-special-shadow:
-      0 0.875rem 2rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent);
-  --bb-b2c-special-shadow-hover:
-      0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 28%, transparent);
-}
-
-[data-bs-theme=dark] [data-bs-theme=dark] [data-bs-theme=dark] [data-bs-theme=dark] .bb-b2c-special-page .bb-hero-media-card,
-[data-bs-theme=dark] .bb-b2c-special-stage-card,
-[data-bs-theme=dark] .bb-b2c-special-products-shell,
-[data-bs-theme=dark] .bb-b2c-special-pager,
-[data-bs-theme=dark] .bb-b2c-special-empty {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2c-special-stage-chip {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 82%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2c-special-stage-chip.active,
-[data-bs-theme=dark] .bb-b2c-special-stage-chip:hover,
-[data-bs-theme=dark] .bb-b2c-special-stage-chip:focus {
-  background-color: color-mix(in srgb, var(--bb-b2c-special-accent) 12%, var(--bb-surface-elevated));
-  border-color: color-mix(in srgb, var(--bb-b2c-special-accent) 28%, var(--bb-border-color));
-}
-
-[data-bs-theme=dark] .bb-b2c-special-stage-icon {
-  color: color-mix(in srgb, var(--bb-white, #ffffff) 86%, var(--bb-b2c-special-accent));
-  background-color: color-mix(in srgb, var(--bb-b2c-special-accent) 18%, var(--bb-surface-elevated));
-  border-color: color-mix(in srgb, var(--bb-b2c-special-accent) 20%, var(--bb-border-color));
+  --bb-b2c-special-border: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
+  --bb-b2c-special-shadow: 0 0.875rem 2rem color-mix(in srgb, var(--bb-black) 22%, transparent);
+  --bb-b2c-special-shadow-hover: 0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 28%, transparent);
+  --bb-b2c-special-media-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg));
+  --bb-b2c-special-media-border: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
+  --bb-b2c-special-stage-bg: var(--bb-b2c-special-media-bg);
+  --bb-b2c-special-surface-bg: var(--bb-b2c-special-media-bg);
+  --bb-b2c-special-surface-border: var(--bb-b2c-special-media-border);
+  --bb-b2c-special-chip-bg: color-mix(in srgb, var(--bb-surface-elevated) 82%, var(--bb-body-bg));
+  --bb-b2c-special-chip-border: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
+  --bb-b2c-special-chip-hover-bg: color-mix(in srgb, var(--bb-b2c-special-accent) 12%, var(--bb-surface-elevated));
+  --bb-b2c-special-chip-hover-border: color-mix(in srgb, var(--bb-b2c-special-accent) 28%, var(--bb-border-color));
+  --bb-b2c-special-chip-active-bg: var(--bb-b2c-special-chip-hover-bg);
+  --bb-b2c-special-chip-active-border: var(--bb-b2c-special-chip-hover-border);
+  --bb-b2c-special-icon-color: color-mix(in srgb, var(--bb-white) 86%, var(--bb-b2c-special-accent));
+  --bb-b2c-special-icon-bg: color-mix(in srgb, var(--bb-b2c-special-accent) 18%, var(--bb-surface-elevated));
+  --bb-b2c-special-icon-border: color-mix(in srgb, var(--bb-b2c-special-accent) 20%, var(--bb-border-color));
 }
 
 /* =====================================
