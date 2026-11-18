@@ -452,10 +452,9 @@
   line-height: var(--bb-line-height-content);
 }
 
-.bb-b2b-company-contact-form .form-label {
-  color: var(--bb-white);
-  font-size: var(--bb-fs-sm);;
-  font-weight: var(--bb-fw-bold);
+.bb-b2b-company-contact-form {
+  --bb-form-label-color: var(--bb-white);
+  --bb-form-label-font-weight: var(--bb-fw-bold);
 }
 
 .bb-b2b-company-contact-textarea {
