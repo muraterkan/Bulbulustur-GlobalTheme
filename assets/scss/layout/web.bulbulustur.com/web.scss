@@ -60,8 +60,40 @@
        Web Project Layout Tokens
     ===================================== */
 
-    --bb-web-section-y: 4.5rem;
+    --bb-web-section-y: 4rem;
     --bb-web-section-y-sm: 3rem;
+
+    /* Semantic rhythm: Core spacing/typography is the source, Web names the role. */
+    --bb-web-section-gap: 3rem;
+    --bb-web-section-gap-tight: 2rem;
+    --bb-web-section-gap-tablet: 2.5rem;
+    --bb-web-section-gap-mobile: 2rem;
+    --bb-web-section-gap-last: 4rem;
+
+    --bb-web-stage-padding: var(--bb-space-6);
+    --bb-web-stage-padding-tablet: var(--bb-space-5);
+    --bb-web-stage-padding-mobile: var(--bb-space-4);
+    --bb-web-section-head-gap: var(--bb-space-5);
+    --bb-web-section-head-margin: var(--bb-space-6);
+    --bb-web-content-gap: var(--bb-space-4);
+    --bb-web-meta-gap: var(--bb-space-2);
+
+    --bb-web-page-title-size: clamp(var(--bb-fs-display-sm), 3.6vw, var(--bb-fs-display-lg));
+    --bb-web-section-title-size: clamp(var(--bb-fs-2xl), 2.8vw, var(--bb-fs-display-md));
+    --bb-web-subsection-title-size: clamp(var(--bb-fs-xl), 2.2vw, var(--bb-fs-display-sm));
+    --bb-web-lead-size: var(--bb-page-lead-font-size);
+    --bb-web-body-size: var(--bb-page-text-font-size);
+    --bb-web-meta-size: var(--bb-fs-sm);
+    --bb-web-kicker-size: var(--bb-fs-xs);
+    --bb-web-control-size: var(--bb-ui-font-size);
+    --bb-web-page-title-weight: var(--bb-fw-display);
+    --bb-web-section-title-weight: var(--bb-fw-title-strong);
+    --bb-web-subsection-title-weight: var(--bb-fw-title-strong);
+    --bb-web-page-title-line-height: var(--bb-line-height-display);
+    --bb-web-section-title-line-height: var(--bb-line-height-heading);
+    --bb-web-page-title-letter-spacing: var(--bb-display-letter-spacing);
+    --bb-web-section-title-letter-spacing: var(--bb-heading-letter-spacing);
+    --bb-web-kicker-letter-spacing: 0.08em;
 
     --bb-web-card-bg: var(--bb-surface-elevated);
     --bb-web-card-border-color: var(--bb-border-color);
@@ -69,7 +101,7 @@
     --bb-web-card-radius: var(--bb-radius-2xl);
     --bb-web-card-inner-radius: var(--bb-radius-lg);
     --bb-web-card-shadow: var(--bb-shadow-xs);
-    --bb-web-card-padding: 1.5rem;
+    --bb-web-card-padding: var(--bb-space-6);
 
     --bb-web-panel-bg: var(--bb-surface-elevated);
     --bb-web-panel-border: var(--bb-border-width) solid var(--bb-border-color);
@@ -162,29 +194,31 @@
 .bb-web-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: .5rem;
+    gap: var(--bb-web-meta-gap);
     color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
-    font-weight: var(--bb-fw-bold);
-    letter-spacing: .06em;
+    font-size: var(--bb-web-kicker-size);
+    font-weight: var(--bb-fw-semibold);
+    line-height: 1;
+    letter-spacing: var(--bb-web-kicker-letter-spacing);
     text-transform: uppercase;
 }
 
 .bb-web-title {
     color: var(--bb-heading-color);
-    font-weight: var(--bb-fw-extrabold);
-    letter-spacing: -.03em;
-    line-height: 1.08;
+    font-weight: var(--bb-web-section-title-weight);
+    letter-spacing: var(--bb-web-section-title-letter-spacing);
+    line-height: var(--bb-web-section-title-line-height);
 }
 
 .bb-web-lead {
     color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-xl);
+    font-size: var(--bb-web-lead-size);
     line-height: var(--bb-line-height-content);
 }
 
 .bb-web-text {
     color: var(--bb-secondary-color);
+    font-size: var(--bb-web-body-size);
     line-height: var(--bb-line-height-content);
 }
 
