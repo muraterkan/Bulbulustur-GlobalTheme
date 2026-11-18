@@ -60204,74 +60204,27 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-profile-field .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
 /* Premium input-group treatment */
-.bb-account-profile-field .bb-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-profile-field .bb-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-profile-field .bb-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-profile-field .bb-input-group .form-control,
 .bb-account-profile-field .bb-input-group .form-select {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-profile-field .bb-input-group .form-control:focus,
-.bb-account-profile-field .bb-input-group .form-select:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-profile-field .bb-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-profile-field .bb-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
 }
 
 /* Make date/select less “browser-default loud” */
 .bb-account-profile-field input[type=date].form-control {
   letter-spacing: 0.01em;
-}
-
-.bb-account-profile-field .form-select {
-  cursor: pointer;
 }
 
 /* Actions */
@@ -60510,87 +60463,25 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-address-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-address-form-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-address-form-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-address-form-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-address-form-input-group .form-control,
 .bb-address-form-input-group .form-select {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-address-form-input-group .form-control:focus,
-.bb-address-form-input-group .form-select:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-address-form-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-address-form-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
 }
 
 .bb-address-form-textarea {
   min-height: 8.75rem;
-  resize: vertical;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  line-height: var(--bb-line-height-base);
-  box-shadow: none;
-}
-
-.bb-address-form-textarea:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-address-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Default switch */
@@ -61256,63 +61147,21 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-change-mail-field .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
 /* Softer input-group treatment */
-.bb-account-change-mail-field .bb-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-change-mail-field .bb-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-change-mail-field .bb-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-change-mail-field .bb-input-group .form-control {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-change-mail-field .bb-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-change-mail-field .bb-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-change-mail-field .bb-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
 }
 
 /* Note */
@@ -61522,65 +61371,36 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-change-password-field .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
 /* Password group */
-.bb-account-password-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-password-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-password-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-password-group .form-control {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
   border-right: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-password-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
 }
 
 .bb-account-password-group:focus-within .input-group-text,
 .bb-account-password-group:focus-within .bb-account-password-toggle {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-password-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
+  min-width: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bb-form-control-color);
+  background-color: var(--bb-form-control-solid-bg);
+  border: var(--bb-form-control-border-width) solid var(--bb-form-control-solid-border-color);
+  border-left: 0;
+  border-radius: 0 var(--bb-form-control-radius) var(--bb-form-control-radius) 0;
+  box-shadow: none;
 }
 
 .bb-account-password-toggle {
@@ -61597,8 +61417,8 @@ body.bb-category-menu-open {
 }
 
 .bb-account-password-toggle:hover {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
+  color: var(--bb-form-control-color-hover);
+  background-color: var(--bb-form-control-solid-bg-hover);
 }
 
 .bb-account-password-toggle .material-symbols-outlined {
@@ -66423,64 +66243,22 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-bank-account-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-bank-account-form-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-bank-account-form-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-bank-account-form-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-bank-account-form-input-group .form-control {
-  min-height: 2.875rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
   letter-spacing: 0.03em;
-  box-shadow: none;
   text-transform: uppercase;
-}
-
-.bb-bank-account-form-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-bank-account-form-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-bank-account-form-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
 }
 
 .bb-bank-account-form-hint {
@@ -66488,11 +66266,6 @@ body.bb-category-menu-open {
   color: var(--bb-secondary-color);
   font-size: var(--bb-fs-sm);
   line-height: var(--bb-line-height-base);
-}
-
-.bb-bank-account-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Warning */
@@ -67728,67 +67501,20 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-recovery-email-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-account-recovery-email-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-recovery-email-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-recovery-email-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-recovery-email-input-group .form-control {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-recovery-email-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-recovery-email-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-recovery-email-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
-}
-
-.bb-account-recovery-email-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Helper */
@@ -68029,67 +67755,20 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-phone-create-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-account-phone-create-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-phone-create-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-phone-create-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-phone-create-input-group .form-control {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-phone-create-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-phone-create-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-phone-create-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
-}
-
-.bb-account-phone-create-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Helper */
@@ -69141,69 +68820,27 @@ body.bb-category-menu-open {
   min-width: 0;
 }
 
-.bb-account-phone-verify-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-account-phone-verify-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-account-phone-verify-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-account-phone-verify-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-account-phone-verify-input-group .form-control {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-account-phone-verify-input-group .form-control:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-account-phone-verify-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-account-phone-verify-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
 }
 
 /* Readonly */
 .bb-account-phone-verify-input-group-readonly .form-control,
 .bb-account-phone-verify-input-group-readonly .input-group-text {
-  color: var(--bb-secondary-color);
-  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 82%, var(--bb-white));
+  color: var(--bb-form-control-disabled-color);
+  background-color: var(--bb-form-control-readonly-bg);
 }
 
 .bb-account-phone-verify-input-group-readonly .form-control {
@@ -69215,11 +68852,6 @@ body.bb-category-menu-open {
 }
 
 /* Validation */
-.bb-account-phone-verify-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
-}
-
 /* Helper */
 .bb-account-phone-verify-helper {
   display: flex;
@@ -78259,87 +77891,21 @@ body.bb-b2c-other-sellers-open {
   grid-column: 1/-1;
 }
 
-.bb-company-edit-form .form-label {
-  margin-bottom: 0.45rem;
-  color: var(--bb-emphasis-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-}
-
-.bb-company-edit-form-input-group {
-  --bb-ig-radius: var(--bb-radius);
-  --bb-ig-addon-bg-local: var(--bb-tertiary-bg);
-  --bb-ig-addon-border-local: color-mix(in srgb, var(--bb-border-color) 65%, transparent);
-  --bb-ig-addon-color-local: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
-  --bb-ig-focus-border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
 .bb-company-edit-form-input-group .input-group-text {
   min-width: 2.75rem;
   padding-left: 0.875rem;
   padding-right: 0.75rem;
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-right: 0;
-  box-shadow: none;
 }
 
 .bb-company-edit-form-input-group .input-group-text .material-symbols-outlined {
-  color: color-mix(in srgb, var(--bb-secondary-color) 86%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-md);
   line-height: 1;
 }
 
 .bb-company-edit-form-input-group .form-control,
 .bb-company-edit-form-input-group .form-select {
-  min-height: 2.625rem;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
   border-left: 0;
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  box-shadow: none;
-}
-
-.bb-company-edit-form-input-group .form-control:focus,
-.bb-company-edit-form-input-group .form-select:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-company-edit-form-input-group:focus-within .input-group-text {
-  color: var(--bb-primary);
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-}
-
-.bb-company-edit-form-input-group:focus-within .input-group-text .material-symbols-outlined {
-  color: var(--bb-primary);
-}
-
-.bb-company-edit-form-textarea {
-  min-height: 8.25rem;
-  resize: vertical;
-  color: var(--bb-emphasis-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-border-color) 62%, transparent);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  line-height: var(--bb-line-height-base);
-  box-shadow: none;
-}
-
-.bb-company-edit-form-textarea:focus {
-  background-color: var(--bb-body-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-border-color));
-  box-shadow: none;
-}
-
-.bb-company-edit-form .text-danger.small {
-  font-size: var(--bb-fs-xs);
-  line-height: 1.4;
 }
 
 /* Note */
