@@ -88,13 +88,8 @@
 ===================================== */
 
 .bb-brand-detail-page-hero {
-    position: relative;
-    overflow: hidden;
-
-    padding-top: clamp(3rem, 5vw, 4.75rem);
-    padding-bottom: clamp(5.75rem, 8vw, 7.25rem);
-
-    background:
+    --bb-hero-aside-width: 25rem;
+    --bb-hero-bg:
         radial-gradient(
             circle at 90% 18%,
             color-mix(in srgb, var(--bb-brand-detail-accent) 18%, transparent),
@@ -110,8 +105,7 @@
             color-mix(in srgb, var(--bb-tertiary-bg) 86%, var(--bb-body-bg)) 0%,
             var(--bb-body-bg) 100%
         );
-
-    border-bottom: var(--bb-border-width) solid var(--bb-brand-detail-border);
+    --bb-hero-border-color: var(--bb-brand-detail-border);
 }
 
 .bb-brand-detail-page-hero::before {
@@ -142,26 +136,6 @@
     pointer-events: none;
 }
 
-.bb-brand-detail-page-hero > .bb-container {
-    position: relative;
-    z-index: 2;
-}
-
-.bb-brand-detail-page-hero-breadcrumb {
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-brand-detail-page-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(18rem, 25rem);
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-}
-
-.bb-brand-detail-page-hero-content {
-    min-width: 0;
-}
-
 .bb-brand-detail-page-hero-label {
     gap: 0.4375rem;
     margin-bottom: 1rem;
@@ -180,18 +154,6 @@
     line-height: 1;
 }
 
-.bb-brand-detail-page-hero-title {
-    max-width: 54rem;
-    margin: 0;
-
-    color: var(--bb-brand-detail-heading);
-    font-size: clamp(2.4rem, 5vw, 4.25rem);
-    font-weight: var(--bb-fw-extrabold);
-    line-height: 1.03;
-    letter-spacing: -0.058em;
-    overflow-wrap: anywhere;
-}
-
 .bb-brand-detail-page-hero-motto {
     width: fit-content;
     max-width: 100%;
@@ -207,15 +169,6 @@
     font-size: var(--bb-fs-sm);
     font-weight: var(--bb-fw-bold);
     line-height: var(--bb-line-height-heading);
-}
-
-.bb-brand-detail-page-hero-text {
-    max-width: 58rem;
-    margin-top: 1.25rem;
-
-    color: var(--bb-brand-detail-muted);
-    font-size: clamp(1rem, 1.35vw, 1.125rem);
-    line-height: 1.85;
 }
 
 .bb-brand-detail-page-hero-meta {
@@ -841,9 +794,7 @@
 ===================================== */
 
 @media (max-width: 1199.98px) {
-    .bb-brand-detail-page-hero-inner {
-        grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
-    }
+    
 
     .bb-brand-detail-trust-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -864,9 +815,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .bb-brand-detail-page-hero-inner {
-        grid-template-columns: 1fr;
-    }
+    
 
     .bb-brand-detail-page-hero-aside {
         justify-self: start;
@@ -883,14 +832,8 @@
 }
 
 @media (max-width: 767.98px) {
-    .bb-brand-detail-page-hero {
-        padding-top: 2.5rem;
-        padding-bottom: 4.5rem;
-    }
 
-    .bb-brand-detail-page-hero-title {
-        font-size: clamp(2.1rem, 10vw, 3.15rem);
-    }
+    
 
     .bb-brand-detail-page-hero-aside {
         width: 100%;

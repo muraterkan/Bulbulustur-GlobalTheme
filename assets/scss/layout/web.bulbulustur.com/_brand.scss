@@ -10,16 +10,8 @@
 ===================================== */
 
 .bb-hero.bb-hero-dark.bb-brand-page-hero {
-    --bb-hero-title-max-width: 58rem;
-    --bb-hero-lead-max-width: 54rem;
     --bb-hero-aside-width: 24rem;
-    --bb-hero-grid-gap: clamp(2.25rem, 5vw, 4.5rem);
-
-    padding-top: clamp(4.5rem, 6vw, 5.75rem);
-    padding-bottom: clamp(5.5rem, 7vw, 7rem);
-
-    color: var(--bb-theme-on-dark, var(--bb-white));
-    background:
+    --bb-hero-bg:
         radial-gradient(
             circle at 86% 18%,
             color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 20%, transparent) 0,
@@ -36,8 +28,7 @@
             var(--bb-brand-dark-2, #2d5964) 48%,
             var(--bb-brand-dark-3, #526847) 100%
         );
-
-    border-bottom-color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 10%, transparent);
+    --bb-hero-border-color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 10%, transparent);
 }
 
 .bb-hero.bb-hero-dark.bb-brand-page-hero::before {
@@ -62,10 +53,6 @@
     background-color: color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 11%, transparent);
 }
 
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-content {
-    min-width: 0;
-}
-
 .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-label {
     gap: 0.45rem;
 
@@ -87,26 +74,6 @@
     color: var(--bb-brand-accent, var(--bb-primary));
     font-size: var(--bb-fs-base);
     line-height: 1;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-title {
-    color: var(--bb-theme-on-dark, var(--bb-white));
-    font-size: clamp(2.35rem, 5vw, 4rem);
-    font-weight: var(--bb-fw-extrabold);
-    line-height: 1.04;
-    letter-spacing: -0.052em;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-text {
-    margin-top: 1rem;
-
-    color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 82%, transparent);
-    font-size: clamp(1rem, 1.35vw, 1.125rem);
-    line-height: 1.85;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-actions {
-    margin-top: 1.5rem;
 }
 
 .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-actions .bb-hero-btn-primary {
@@ -721,14 +688,8 @@
 }
 
 @media (max-width: 767.98px) {
-    .bb-hero.bb-hero-dark.bb-brand-page-hero {
-        padding-top: 3.25rem;
-        padding-bottom: 4.75rem;
-    }
 
-    .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-title {
-        font-size: clamp(2.15rem, 10vw, 3.1rem);
-    }
+    
 
     .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-card {
         display: none;

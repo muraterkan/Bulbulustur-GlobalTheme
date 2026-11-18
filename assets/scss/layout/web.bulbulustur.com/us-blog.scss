@@ -4,51 +4,6 @@
    Hero + Breadcrumb
 ===================================== */
 
-.bb-blog-hero {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 84% 12%, color-mix(in srgb, var(--bb-blog-accent) 34%, transparent) 0, transparent 31%),
-        linear-gradient(135deg, var(--bb-blog-warm) 0%, var(--bb-body-bg) 100%);
-}
-
-.bb-blog-hero::before {
-    content: "";
-    position: absolute;
-    right: -120px;
-    top: -130px;
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-blog-accent) 18%, transparent);
-    pointer-events: none;
-}
-
-.bb-blog-hero::after {
-    content: "";
-    position: absolute;
-    left: -140px;
-    bottom: -180px;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-warning) 8%, transparent);
-    pointer-events: none;
-}
-
-.bb-blog-hero-inner {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, .88fr) minmax(520px, 1.12fr);
-    gap: 32px;
-    align-items: center;
-}
-
-.bb-blog-hero-copy {
-    min-width: 0;
-}
-
 .bb-blog-eyebrow,
 .bb-blog-featured-label,
 .bb-blog-section-kicker,
@@ -78,26 +33,8 @@
     color: var(--bb-blog-accent-hover);
 }
 
-.bb-blog-hero-title {
-    max-width: 47.5rem;
-    margin: 0 0 18px;
-    color: var(--bb-heading-color);
-    font-size: clamp(2.6rem, 5.4vw, 4.75rem);
-    line-height: .95;
-    letter-spacing: -.055em;
-    font-weight: var(--bb-fw-extrabold);
-}
-
 .bb-blog-hero-title span {
     color: var(--bb-blog-accent-text);
-}
-
-.bb-blog-hero-text {
-    max-width: 670px;
-    margin: 0 0 24px;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-base);
-    line-height: 1.85;
 }
 
 /* =====================================
@@ -1111,9 +1048,7 @@
 }
 
 @media (max-width: 767.98px) {
-    .bb-blog-hero-title {
-        font-size: var(--bb-icon-size-3xl);
-    }
+    
 
     .bb-blog-search-card {
         border-radius: var(--bb-radius-xl);
@@ -1210,135 +1145,13 @@
    Default bb-hero omurgası üzerine çalışır.
 ===================================== */
 
-.bb-hero.bb-blog-page-hero {
-    --bb-hero-title-max-width: 40rem;
-    --bb-hero-lead-max-width: 42rem;
-    --bb-hero-aside-width: 42rem;
-    --bb-hero-grid-gap: clamp(2rem, 4.5vw, 4rem);
-
-    position: relative;
-    overflow: hidden;
-
-    padding-top: clamp(3.5rem, 5vw, 5rem);
-    padding-bottom: clamp(4.75rem, 7vw, 6.25rem);
-
-    background:
-        radial-gradient(
-            circle at 86% 12%,
-            color-mix(in srgb, var(--bb-primary) 28%, transparent) 0,
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 0% 100%,
-            color-mix(in srgb, var(--bb-primary) 10%, transparent) 0,
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--bb-primary) 9%, var(--bb-body-bg)) 0%,
-            var(--bb-body-bg) 58%,
-            color-mix(in srgb, var(--bb-primary) 14%, var(--bb-body-bg)) 100%
-        );
-
-    border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-}
-
-.bb-hero.bb-blog-page-hero::before {
-    content: "";
-    position: absolute;
-    right: -7.5rem;
-    top: -8.125rem;
-
-    width: 21.25rem;
-    height: 21.25rem;
-
-    background-color: color-mix(in srgb, var(--bb-primary) 18%, transparent);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.bb-hero.bb-blog-page-hero::after {
-    content: "";
-    position: absolute;
-    left: -8.75rem;
-    bottom: -11.25rem;
-
-    width: 22.5rem;
-    height: 22.5rem;
-
-    background-color: color-mix(in srgb, var(--bb-primary) 10%, transparent);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.bb-hero.bb-blog-page-hero .bb-web-container {
-    position: relative;
-    z-index: 2;
-}
-
 /* =====================================
    Blog Hero Breadcrumb
 ===================================== */
 
-.bb-blog-page-hero-breadcrumb {
-    position: relative;
-    z-index: 2;
-
-    margin-bottom: clamp(1.5rem, 3vw, 2rem);
-}
-
-.bb-blog-page-hero-breadcrumb .bb-breadcrumb,
-.bb-blog-page-hero-breadcrumb-list {
-    width: fit-content;
-    max-width: 100%;
-    min-height: 2.625rem;
-    padding: 0.35rem 0.875rem;
-
-    display: flex;
-    align-items: center;
-
-    background-color: color-mix(in srgb, var(--bb-body-bg) 86%, transparent);
-    border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-    border-radius: var(--bb-radius-pill);
-    box-shadow: var(--bb-shadow-xs);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    overflow-x: auto;
-}
-
-.bb-blog-page-hero-breadcrumb .breadcrumb-item,
-.bb-blog-page-hero-breadcrumb .breadcrumb-item a {
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-sm);;
-    font-weight: var(--bb-fw-semibold);
-    line-height: 1;
-    text-decoration: none;
-}
-
-.bb-blog-page-hero-breadcrumb .breadcrumb-item.active {
-    color: var(--bb-heading-color);
-    font-weight: var(--bb-fw-bold);
-}
-
 /* =====================================
    Blog Hero Layout
 ===================================== */
-
-.bb-blog-hero-inner {
-    position: relative;
-    z-index: 2;
-
-    display: grid;
-    grid-template-columns: minmax(0, 0.88fr) minmax(31rem, 1.12fr);
-    gap: var(--bb-hero-grid-gap);
-    align-items: center;
-}
-
-.bb-blog-hero-copy {
-    min-width: 0;
-}
 
 .bb-blog-eyebrow,
 .bb-blog-featured-label {
@@ -1381,28 +1194,8 @@
     line-height: 1;
 }
 
-.bb-blog-hero-title {
-    max-width: var(--bb-hero-title-max-width);
-    margin: 0;
-
-    color: var(--bb-heading-color);
-    font-size: clamp(3.5rem, 7vw, 5.75rem);
-    font-weight: var(--bb-fw-extrabold);
-    line-height: 0.94;
-    letter-spacing: -0.07em;
-}
-
 .bb-blog-hero-title span {
     color: color-mix(in srgb, var(--bb-primary) 58%, var(--bb-dark));
-}
-
-.bb-blog-hero-text {
-    max-width: var(--bb-hero-lead-max-width);
-    margin: 1.35rem 0 0;
-
-    color: var(--bb-secondary-color);
-    font-size: clamp(1rem, 1.35vw, 1.15rem);
-    line-height: 1.85;
 }
 
 /* =====================================
@@ -1718,9 +1511,7 @@
 ===================================== */
 
 @media (max-width: 1199.98px) {
-    .bb-blog-hero-inner {
-        grid-template-columns: 1fr;
-    }
+    
 
     .bb-blog-featured-card {
         grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1fr);
@@ -1732,9 +1523,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .bb-hero.bb-blog-page-hero {
-        padding-bottom: 5.25rem;
-    }
+    
 
     .bb-blog-featured-card {
         grid-template-columns: 1fr;
@@ -1755,14 +1544,9 @@
 }
 
 @media (max-width: 767.98px) {
-    .bb-hero.bb-blog-page-hero {
-        padding-top: 2.75rem;
-        padding-bottom: 4.25rem;
-    }
+    
 
-    .bb-blog-hero-title {
-        font-size: clamp(3rem, 13vw, 4.35rem);
-    }
+    
 
     .bb-blog-search-card {
         max-width: 100%;
