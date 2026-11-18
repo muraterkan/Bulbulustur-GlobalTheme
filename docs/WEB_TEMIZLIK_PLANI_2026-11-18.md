@@ -275,6 +275,27 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Section aralıkları gözle tutarlı hale gelir.
 - Rastgele spacing literal sayısı belirgin biçimde azalır.
 
+**Durum:** KOD / STATIC CONTRACT TAMAMLANDI — gerçek Web light/dark + responsive smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Faz 6, Faz 5 final generated CSS commit'i `f75c1411` ve plan head'i `d9324975` üzerinden yürütüldü.
+- Core spacing skalası genişletilmedi. Mevcut `--bb-space-1..6`, `--bb-fs-*`, `--bb-fw-*`, `--bb-line-height-*` tokenları kaynak kabul edildi; Web yalnız semantic rol isimleri ekledi.
+- `.bb-web-page` altında ortak rhythm contract tanımlandı: `--bb-web-page-title-size`, `--bb-web-section-title-size`, `--bb-web-subsection-title-size`, `--bb-web-lead-size`, `--bb-web-body-size`, `--bb-web-kicker-size`, `--bb-web-control-size` ve bunların weight/line-height/letter-spacing karşılıkları.
+- Spacing tarafında `--bb-web-section-gap`, `--bb-web-section-gap-tight`, `--bb-web-section-gap-tablet`, `--bb-web-section-gap-mobile`, `--bb-web-stage-padding*`, `--bb-web-section-head-gap`, `--bb-web-section-head-margin`, `--bb-web-meta-gap` gibi rol tokenları tanımlandı.
+- Shared `web-page-sections.scss` artık section/stage/head/label/title/text/action ritmini bu contract'tan alıyor. Eski `2.125rem / 2.375rem / 1.875rem / 1.375rem / 1.125rem / 1.35rem` gibi yapısal ara değerler ortak ritimden çıkarıldı.
+- Shared Account shell'de 7px/11px/20px/22px/24px/26px/28px gibi farklı dönem ölçüleri Core/Web spacing tokenlarına taşındı; account panel title/text/kicker semantic typography rollerine bağlandı.
+- Editorial, commerce ve detail sayfalarında toplam **98 ayrı `font-size: clamp(...)` deklarasyonu** merkezi typography rollerine bağlandı. Hero başlıkları `--bb-hero-title-size`, hero lead'leri `--bb-hero-lead-size`; page/section/subsection başlıkları Web semantic role tokenlarını kullanıyor.
+- Dönüştürülen başlıca yüzeyler: Help, Blog, Blog Detail, Career, Home, Product Reviews, Our Team, Contact, News, News Detail, Seller, Draugr, RFQ, B2B/B2C Product Detail, Subscription Comparison, Support Condition, Order Detail, Message, Store, Brand Detail, Checkout, Company Directory ve B2B Category.
+- Fiyat, review score, hero visual icon ve benzeri gerçek metric/display değerleri semantic title rolüne zorlanmadı; özel görsel ölçüler korundu.
+- Page-level spacing dönüşümünde **69 selector/declaration** `1.125rem / 1.375rem / 1.75rem / 2.125rem` gibi ara ölçülerden Core `space-5/space-6` veya açık Web section/card tokenlarına taşındı. Buna shared section/account normalizasyonu dahil değildir.
+- Product Detail, Blog, Career, Home, Contact, Subscription, Help, News, Our Team, Brand Detail, Company Directory, Order Detail ve Store spacing ritimleri selector bazında standardize edildi; ikon mikro-geometrisi ve tasarım gerekçeli ölçüler körlemesine yuvarlanmadı.
+- Faz 6 başlangıç generated CSS: `2.867.270` byte. Final generated CSS: `2.871.228` byte; **+3.958 byte**. Bu fazda amaç byte küçültmek değil runtime semantic token contract'ı kurmaktı; variable isimleri literal değerlerden uzun olduğu için beklenen küçük artış oluştu.
+- Kod commitleri: `d4e9ab23` — shared spacing/type rhythm; `a4dee56a` — shared account rhythm; `3c0a6f35` — editorial typography; `e1e5b806` — commerce typography; `d64aa1c6` — remaining page typography; `a3a225df` — page spacing rhythm; `cdc4a31a` — structural spacing finish.
+- Her Faz 6 kod commit'inin GitHub Build CSS workflow'u başarılı tamamlandı. Final generated CSS commit'i: `6cac0bcd` — `build(css): regenerate from main.scss`.
+- Faz 6 yalnız GlobalTheme üzerinde çalıştı; Web App Razor markup değişikliği gerekmedi.
+- `npm run check:contracts` / `npm run check:css` çalıştırılmış sayılmıyor; mevcut GitHub workflow yalnız `build:css` çalıştırıyor.
+- Gerçek tarayıcı light/dark + desktop/tablet/mobile smoke testi yapılmadı; kalan iş görsel regresyon kontrolüdür.
+
 ---
 
 ### Faz 7 — Dark mode sadeleştirme
