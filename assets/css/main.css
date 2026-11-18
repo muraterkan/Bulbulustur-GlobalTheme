@@ -60052,10 +60052,6 @@ body.bb-category-menu-open {
 ===================================== */
 .bb-account-settings-card {
   overflow: hidden;
-  border: 1px solid var(--bb-account-border);
-  border-radius: var(--bb-radius-2xl);
-  background-color: var(--bb-body-bg);
-  box-shadow: var(--bb-shadow-xs);
 }
 
 .bb-account-settings-section {
@@ -60255,14 +60251,6 @@ body.bb-category-menu-open {
 }
 
 /* Section */
-.bb-account-profile-section {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--bb-white) 98%, transparent) 0%, var(--bb-white) 100%);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-profile-section-head {
   display: flex;
   align-items: flex-start;
@@ -60367,23 +60355,11 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-profile-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
 /* Outer light card refinement for this page */
-.bb-layout-light-page:has(.bb-account-profile-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-account-profile-grid {
     grid-template-columns: 1fr;
-  }
-  .bb-account-profile-section {
-    border-radius: var(--bb-radius-lg);
   }
   .bb-account-profile-actions {
     justify-content: stretch;
@@ -64979,11 +64955,6 @@ body.bb-category-menu-open {
 .bb-account-company-panel {
   display: grid;
   gap: 1.125rem;
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: 0 1.25rem 3.25rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
 }
 
 /* Summary */
@@ -65085,13 +65056,10 @@ body.bb-category-menu-open {
 }
 
 .bb-account-company-stat-card {
+  --bb-card-bg: var(--bb-tertiary-bg);
   min-width: 0;
   display: grid;
   gap: 0.5rem;
-  padding: 0.875rem;
-  background-color: var(--bb-tertiary-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-lg);
 }
 
 .bb-account-company-stat-icon {
@@ -65136,12 +65104,10 @@ body.bb-category-menu-open {
 }
 
 .bb-account-company-info-card {
+  --bb-card-px: 1rem;
+  --bb-card-body-py: 0;
   min-width: 0;
   overflow: hidden;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
-  border-radius: var(--bb-radius-lg);
-  box-shadow: var(--bb-shadow-xs);
 }
 
 .bb-account-company-info-card--wide {
@@ -65152,8 +65118,6 @@ body.bb-category-menu-open {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 1rem;
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
 }
 
 .bb-account-company-info-icon {
@@ -65297,7 +65261,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-account-company-panel,
   .bb-account-company-summary {
     border-radius: var(--bb-radius-lg);
   }
@@ -65368,14 +65331,6 @@ body.bb-category-menu-open {
 }
 
 /* Panel */
-.bb-account-subscription-panel {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: 0 1.25rem 3.25rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 .bb-account-subscription-panel-head {
   display: flex;
   align-items: flex-start;
@@ -65439,18 +65394,12 @@ body.bb-category-menu-open {
   overflow: hidden;
   display: grid;
   gap: 1rem;
-  padding: 1rem;
   background: radial-gradient(circle at top right, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 36%), linear-gradient(180deg, var(--bb-body-bg) 0%, color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-white)) 100%);
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 86%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-shadow-xs);
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .bb-account-subscription-card:hover {
-  transform: translateY(-0.125rem);
   border-color: color-mix(in srgb, var(--bb-primary) 22%, var(--bb-border-color));
-  box-shadow: var(--bb-shadow-sm);
 }
 
 .bb-account-subscription-card::after {
@@ -66493,11 +66442,6 @@ body.bb-category-menu-open {
 .bb-account-subscription-detail-panel {
   display: grid;
   gap: 1.125rem;
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: 0 1.25rem 3.25rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
 }
 
 /* Summary */
@@ -66599,13 +66543,10 @@ body.bb-category-menu-open {
 }
 
 .bb-account-subscription-detail-stat-card {
+  --bb-card-bg: var(--bb-tertiary-bg);
   min-width: 0;
   display: grid;
   gap: 0.5rem;
-  padding: 0.875rem;
-  background-color: var(--bb-tertiary-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-lg);
 }
 
 .bb-account-subscription-detail-stat-icon {
@@ -66644,20 +66585,16 @@ body.bb-category-menu-open {
 
 /* Detail card */
 .bb-account-subscription-detail-card {
+  --bb-card-px: 1rem;
+  --bb-card-body-py: 0;
   min-width: 0;
   overflow: hidden;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
-  border-radius: var(--bb-radius-lg);
-  box-shadow: var(--bb-shadow-xs);
 }
 
 .bb-account-subscription-detail-card-head {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 1rem;
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
 }
 
 .bb-account-subscription-detail-card-icon {
