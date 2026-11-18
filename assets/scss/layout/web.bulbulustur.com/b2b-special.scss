@@ -42,6 +42,26 @@
     --bb-b2b-special-shadow-hover:
         0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent);
 
+    --bb-b2b-special-panel-bg: color-mix(in srgb, var(--bb-surface-elevated) 94%, transparent);
+    --bb-b2b-special-panel-border: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+    --bb-b2b-special-panel-shadow:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-surface-elevated) 42%, transparent);
+
+    --bb-b2b-special-item-bg: color-mix(in srgb, var(--bb-surface-soft) 74%, var(--bb-body-bg));
+    --bb-b2b-special-item-border: color-mix(in srgb, var(--bb-border-color) 86%, transparent);
+    --bb-b2b-special-item-hover-bg: var(--bb-surface-elevated);
+    --bb-b2b-special-item-hover-border: color-mix(in srgb, var(--bb-b2b-special-primary) 20%, var(--bb-border-color));
+    --bb-b2b-special-item-active-bg: color-mix(in srgb, var(--bb-b2b-special-primary) 8%, var(--bb-surface-elevated));
+    --bb-b2b-special-item-active-border: color-mix(in srgb, var(--bb-b2b-special-primary) 24%, var(--bb-border-color));
+
+    --bb-b2b-special-icon-color: color-mix(in srgb, var(--bb-b2b-special-primary) 82%, var(--bb-emphasis-color));
+    --bb-b2b-special-icon-bg: color-mix(in srgb, var(--bb-b2b-special-primary) 10%, var(--bb-surface-elevated));
+    --bb-b2b-special-icon-border: color-mix(in srgb, var(--bb-b2b-special-primary) 12%, var(--bb-border-color));
+
+    --bb-b2b-special-surface-bg: var(--bb-surface-elevated);
+    --bb-b2b-special-surface-border: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+
     position: relative;
     overflow: hidden;
 
@@ -192,23 +212,13 @@
 
     padding: clamp(1rem, 2vw, 1.25rem);
 
-    background-color: color-mix(
-        in srgb,
-        var(--bb-surface-elevated) 94%,
-        transparent
-    );
+    background-color: var(--bb-b2b-special-panel-bg);
 
-    border: var(--bb-border-width) solid color-mix(
-        in srgb,
-        var(--bb-border-color) 84%,
-        transparent
-    );
+    border: var(--bb-border-width) solid var(--bb-b2b-special-panel-border);
 
     border-radius: var(--bb-b2b-special-radius-xl);
 
-    box-shadow:
-        0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
-        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 42%, transparent);
+    box-shadow: var(--bb-b2b-special-panel-shadow);
 
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -273,13 +283,9 @@
     padding: 0.75rem;
 
     color: var(--bb-b2b-special-ink) !important;
-    background-color: color-mix(in srgb, var(--bb-surface-soft) 74%, var(--bb-body-bg));
+    background-color: var(--bb-b2b-special-item-bg);
 
-    border: var(--bb-border-width) solid color-mix(
-        in srgb,
-        var(--bb-border-color) 86%,
-        transparent
-    );
+    border: var(--bb-border-width) solid var(--bb-b2b-special-item-border);
 
     border-radius: var(--bb-b2b-special-radius-md);
 
@@ -300,16 +306,16 @@
 .bb-b2b-special-quick-nav-item:focus {
     transform: translateY(-2px);
 
-    background-color: var(--bb-surface-elevated);
-    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 20%, var(--bb-border-color));
+    background-color: var(--bb-b2b-special-item-hover-bg);
+    border-color: var(--bb-b2b-special-item-hover-border);
 
     box-shadow:
         0 0.875rem 1.75rem color-mix(in srgb, var(--bb-emphasis-color) 7%, transparent);
 }
 
 .bb-b2b-special-quick-nav-item.active {
-    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 8%, var(--bb-surface-elevated));
-    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 24%, var(--bb-border-color));
+    background-color: var(--bb-b2b-special-item-active-bg);
+    border-color: var(--bb-b2b-special-item-active-border);
 
     box-shadow:
         0 0.875rem 1.75rem color-mix(in srgb, var(--bb-b2b-special-primary) 8%, transparent);
@@ -323,14 +329,10 @@
     align-items: center;
     justify-content: center;
 
-    color: color-mix(in srgb, var(--bb-b2b-special-primary) 82%, var(--bb-emphasis-color));
-    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 10%, var(--bb-white, #ffffff));
+    color: var(--bb-b2b-special-icon-color);
+    background-color: var(--bb-b2b-special-icon-bg);
 
-    border: var(--bb-border-width) solid color-mix(
-        in srgb,
-        var(--bb-b2b-special-primary) 12%,
-        var(--bb-border-color)
-    );
+    border: var(--bb-border-width) solid var(--bb-b2b-special-icon-border);
 
     border-radius: 1rem;
 }
@@ -409,13 +411,9 @@
 
     padding: 0.875rem 1.125rem;
 
-    background-color: var(--bb-surface-elevated);
+    background-color: var(--bb-b2b-special-surface-bg);
 
-    border: var(--bb-border-width) solid color-mix(
-        in srgb,
-        var(--bb-border-color) 84%,
-        transparent
-    );
+    border: var(--bb-border-width) solid var(--bb-b2b-special-surface-border);
 
     border-radius: var(--bb-b2b-special-radius-lg);
 
@@ -449,13 +447,9 @@
             color-mix(in srgb, var(--bb-b2b-special-primary) 7%, transparent),
             transparent 18rem
         ),
-        var(--bb-surface-elevated);
+        var(--bb-b2b-special-surface-bg);
 
-    border: var(--bb-border-width) solid color-mix(
-        in srgb,
-        var(--bb-border-color) 86%,
-        transparent
-    );
+    border: var(--bb-border-width) solid var(--bb-b2b-special-surface-border);
 
     border-radius: var(--bb-b2b-special-radius-xl);
 
@@ -518,89 +512,33 @@
 }
 
 /* =====================================
-   Dark
+   Dark tokens
 ===================================== */
 
 [data-bs-theme="dark"] .bb-b2b-special-page {
-    --bb-b2b-special-border: color-mix(
-        in srgb,
-        var(--bb-border-color) 74%,
-        transparent
-    );
+    --bb-b2b-special-border: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
+    --bb-b2b-special-shadow: 0 0.875rem 2rem color-mix(in srgb, var(--bb-black) 22%, transparent);
+    --bb-b2b-special-shadow-hover: 0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 28%, transparent);
 
-    --bb-b2b-special-shadow:
-        0 0.875rem 2rem color-mix(in srgb, var(--bb-black, #000000) 22%, transparent);
+    --bb-b2b-special-panel-bg: color-mix(in srgb, var(--bb-surface-elevated) 86%, transparent);
+    --bb-b2b-special-panel-border: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
+    --bb-b2b-special-panel-shadow:
+        0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 26%, transparent),
+        inset 0 1px 0 color-mix(in srgb, var(--bb-white) 6%, transparent);
 
-    --bb-b2b-special-shadow-hover:
-        0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 28%, transparent);
-}
+    --bb-b2b-special-item-bg: color-mix(in srgb, var(--bb-surface-elevated) 82%, var(--bb-body-bg));
+    --bb-b2b-special-item-border: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
+    --bb-b2b-special-item-hover-bg: color-mix(in srgb, var(--bb-b2b-special-primary) 14%, var(--bb-surface-elevated));
+    --bb-b2b-special-item-hover-border: color-mix(in srgb, var(--bb-b2b-special-primary) 28%, var(--bb-border-color));
+    --bb-b2b-special-item-active-bg: var(--bb-b2b-special-item-hover-bg);
+    --bb-b2b-special-item-active-border: var(--bb-b2b-special-item-hover-border);
 
-[data-bs-theme="dark"] 
+    --bb-b2b-special-icon-color: color-mix(in srgb, var(--bb-white) 86%, var(--bb-b2b-special-primary));
+    --bb-b2b-special-icon-bg: color-mix(in srgb, var(--bb-b2b-special-primary) 24%, var(--bb-surface-elevated));
+    --bb-b2b-special-icon-border: color-mix(in srgb, var(--bb-b2b-special-primary) 20%, var(--bb-border-color));
 
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-card {
-    background-color: color-mix(
-        in srgb,
-        var(--bb-surface-elevated) 86%,
-        transparent
-    );
-
-    border-color: color-mix(
-        in srgb,
-        var(--bb-border-color) 74%,
-        transparent
-    );
-
-    box-shadow:
-        0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 26%, transparent),
-        inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 6%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item {
-    background-color: color-mix(
-        in srgb,
-        var(--bb-surface-elevated) 82%,
-        var(--bb-body-bg)
-    );
-
-    border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item.active,
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item:hover,
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-item:focus {
-    background-color: color-mix(in srgb, var(--bb-b2b-special-primary) 14%, var(--bb-surface-elevated));
-    border-color: color-mix(in srgb, var(--bb-b2b-special-primary) 28%, var(--bb-border-color));
-}
-
-[data-bs-theme="dark"] .bb-b2b-special-quick-nav-icon {
-    color: color-mix(in srgb, var(--bb-white, #ffffff) 86%, var(--bb-b2b-special-primary));
-
-    background-color: color-mix(
-        in srgb,
-        var(--bb-b2b-special-primary) 24%,
-        var(--bb-surface-elevated)
-    );
-
-    border-color: color-mix(
-        in srgb,
-        var(--bb-b2b-special-primary) 20%,
-        var(--bb-border-color)
-    );
-}
-
-[data-bs-theme="dark"] .bb-b2b-special-pagination,
-[data-bs-theme="dark"] .bb-b2b-special-empty {
-    background-color: color-mix(
-        in srgb,
-        var(--bb-surface-elevated) 90%,
-        var(--bb-body-bg)
-    );
-
-    border-color: color-mix(
-        in srgb,
-        var(--bb-border-color) 74%,
-        transparent
-    );
+    --bb-b2b-special-surface-bg: color-mix(in srgb, var(--bb-surface-elevated) 90%, var(--bb-body-bg));
+    --bb-b2b-special-surface-border: color-mix(in srgb, var(--bb-border-color) 74%, transparent);
 }
 
 /* =====================================
