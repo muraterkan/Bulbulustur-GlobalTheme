@@ -69,7 +69,7 @@
   gap: 0.875rem;
   align-items: flex-start;
 
-  padding: 1.25rem 1.375rem 1.75rem;
+  padding: var(--bb-space-5) var(--bb-space-6) var(--bb-web-section-gap-tight);
 
   background-color: var(--bb-body-bg);
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
@@ -229,7 +229,7 @@
 /* Variant wrapper */
 
 .bb-b2c-buy-variant-area {
-  padding: 1.125rem 1.375rem 0;
+  padding: var(--bb-space-5) var(--bb-space-6) 0;
   margin-bottom: 0;
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
 }
@@ -237,7 +237,7 @@
 /* Generic variant component compatibility */
 
 .bb-b2c-variant-group {
-  margin-bottom: 1.125rem;
+  margin-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-variant-group:last-child {
@@ -449,7 +449,7 @@
 .bb-b2c-buy-price-block {
   position: relative;
 
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
   margin-bottom: 0;
 
   background:
@@ -599,7 +599,7 @@
   grid-template-columns: 1fr;
   gap: 0.625rem;
 
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
   margin-bottom: 0;
 
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
@@ -607,7 +607,7 @@
 
 .bb-b2c-buy-btn {
   min-height: 3rem;
-  padding: 0 1.125rem;
+  padding: 0 var(--bb-space-5);
 
   display: inline-flex;
   align-items: center;
@@ -677,7 +677,7 @@
   flex-direction: column;
   gap: 0.5625rem;
 
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 }
 
 .bb-b2c-buy-trust-item {
@@ -849,7 +849,7 @@
 }
 
 .bb-b2c-detail-section {
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--bb-web-section-gap-tight);
 }
 
 .bb-b2c-detail-section-head {
@@ -886,7 +886,7 @@
 .bb-b2c-detail-component-shell {
   overflow: hidden;
 
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
 
   background-color: var(--bb-body-bg);
   border: var(--bb-border-width) solid var(--bb-border-color);
@@ -906,8 +906,8 @@
 }
 
 .bb-b2c-detail-section-card.is-question {
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  padding-top: var(--bb-space-5);
+  padding-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-detail-section-card.is-installment {
@@ -928,7 +928,7 @@
 }
 
 .bb-b2c-detail-legal-note {
-  padding: 1.125rem 1.25rem;
+  padding: var(--bb-space-5);
 
   color: var(--bb-secondary-color);
   background-color: var(--bb-body-bg);
@@ -959,7 +959,7 @@
   top: 0.75rem;
   z-index: 20;
 
-  margin-bottom: 1.125rem;
+  margin-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-detail-anchor-bar {
@@ -1135,12 +1135,12 @@
   display: flex;
   justify-content: center;
 
-  margin-top: 1.125rem;
+  margin-top: var(--bb-space-5);
 }
 
 .bb-b2c-detail-feature-toggle {
   min-height: 2.875rem;
-  padding: 0 1.125rem;
+  padding: 0 var(--bb-space-5);
 
   display: inline-flex;
   align-items: center;
@@ -1214,7 +1214,7 @@
 
 .bb-b2c-product-drawer-head {
   min-height: 4.5rem;
-  padding: 1.125rem 1.25rem;
+  padding: var(--bb-space-5);
 
   display: flex;
   align-items: center;
@@ -1612,7 +1612,7 @@ body.bb-b2c-drawer-open {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 }
 
 .bb-b2c-gallery-modal-side {

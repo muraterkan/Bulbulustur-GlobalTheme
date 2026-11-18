@@ -619,7 +619,7 @@
 .bb-contact-form-info-card,
 .bb-contact-form-note-card,
 .bb-contact-form-help-card {
-    padding: 1.125rem;
+    padding: var(--bb-space-5);
 }
 
 .bb-contact-form-info-card {
@@ -722,7 +722,7 @@
 }
 
 .bb-contact-form-card-head {
-    padding: 1.375rem 1.625rem;
+    padding: var(--bb-web-card-padding);
 
     background:
         radial-gradient(
@@ -788,7 +788,7 @@
 .bb-contact-form-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 1.125rem;
+    gap: var(--bb-space-4) var(--bb-space-5);
 }
 
 .bb-contact-form-field {
@@ -856,7 +856,7 @@
 
     display: flex;
     align-items: center;
-    gap: 1.125rem;
+    gap: var(--bb-space-5);
 
     padding-top: 0.125rem;
 }
@@ -960,7 +960,7 @@
     }
 
     .bb-contact-form-alert {
-        margin: 1.375rem 1.375rem 0;
+        margin: var(--bb-web-card-padding) var(--bb-web-card-padding) 0;
     }
 
     .bb-contact-form-grid {

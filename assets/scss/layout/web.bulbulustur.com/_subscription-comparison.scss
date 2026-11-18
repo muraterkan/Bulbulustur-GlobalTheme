@@ -142,7 +142,7 @@
     flex-direction: column;
     height: 100%;
     min-height: 100%;
-    padding: 2.125rem 1.5rem 1.5rem;
+    padding: var(--bb-web-section-gap-tight) var(--bb-space-6) var(--bb-space-6);
     border: var(--bb-border-width) solid var(--bb-pricing-muted-border);
     border-radius: var(--bb-radius-2xl);
     background-color: var(--bb-pricing-card-bg);
@@ -237,7 +237,7 @@
 .bb-pricing-divider {
     width: 100%;
     height: var(--bb-border-width);
-    margin: 1.375rem 0;
+    margin: var(--bb-space-6) 0;
     background-color: var(--bb-pricing-soft-border);
 }
 
@@ -305,7 +305,7 @@
 .bb-compare-btn {
     min-width: 8.75rem;
     min-height: 2.625rem;
-    padding: 0.6875rem 1.125rem;
+    padding: 0.6875rem var(--bb-space-5);
 }
 
 .bb-pricing-btn:hover,
@@ -361,7 +361,7 @@
 
 .bb-compare-head {
     max-width: 58.75rem;
-    margin: 0 auto 2.125rem;
+    margin: 0 auto var(--bb-web-section-gap-tight);
     text-align: center;
 }
 
@@ -416,7 +416,7 @@
 
 .bb-compare-table th,
 .bb-compare-table td {
-    padding: 1.125rem 1rem;
+    padding: var(--bb-space-5) var(--bb-space-4);
     border-right: var(--bb-border-width) solid var(--bb-pricing-soft-border);
     border-bottom: var(--bb-border-width) solid var(--bb-pricing-soft-border);
     color: var(--bb-body-color);
@@ -430,8 +430,8 @@
 }
 
 .bb-compare-table thead th {
-    padding-top: 1.375rem;
-    padding-bottom: 1.375rem;
+    padding-top: var(--bb-space-6);
+    padding-bottom: var(--bb-space-6);
     background-color: var(--bb-pricing-table-bg);
     color: var(--bb-emphasis-color);
     font-size: var(--bb-fs-base);
@@ -567,7 +567,7 @@
     }
 
     .bb-pricing-card {
-        padding: 2rem 1.375rem 1.375rem;
+        padding: var(--bb-web-section-gap-tight) var(--bb-space-6) var(--bb-space-6);
     }
 }
 
