@@ -278,8 +278,9 @@
     }
 
     .bb-web-account-menu {
-        min-width: 250px;
-        max-width: 250px;
+        width: min(15.625rem, calc(100vw - 1.5rem));
+        min-width: 0;
+        max-width: calc(100vw - 1.5rem);
     }
 
     .bb-web-account-menu-avatar {
