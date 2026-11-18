@@ -43042,49 +43042,6 @@ body.bb-category-menu-open {
 /* =====================================
    Hero + Breadcrumb
 ===================================== */
-.bb-blog-hero {
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at 84% 12%, color-mix(in srgb, var(--bb-blog-accent) 34%, transparent) 0, transparent 31%), linear-gradient(135deg, var(--bb-blog-warm) 0%, var(--bb-body-bg) 100%);
-}
-
-.bb-blog-hero::before {
-  content: "";
-  position: absolute;
-  right: -120px;
-  top: -130px;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--bb-blog-accent) 18%, transparent);
-  pointer-events: none;
-}
-
-.bb-blog-hero::after {
-  content: "";
-  position: absolute;
-  left: -140px;
-  bottom: -180px;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--bb-warning) 8%, transparent);
-  pointer-events: none;
-}
-
-.bb-blog-hero-inner {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(520px, 1.12fr);
-  gap: 32px;
-  align-items: center;
-}
-
-.bb-blog-hero-copy {
-  min-width: 0;
-}
-
 .bb-blog-eyebrow,
 .bb-blog-featured-label,
 .bb-blog-section-kicker,
@@ -43114,26 +43071,8 @@ body.bb-category-menu-open {
   color: var(--bb-blog-accent-hover);
 }
 
-.bb-blog-hero-title {
-  max-width: 47.5rem;
-  margin: 0 0 18px;
-  color: var(--bb-heading-color);
-  font-size: clamp(2.6rem, 5.4vw, 4.75rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
-  font-weight: var(--bb-fw-extrabold);
-}
-
 .bb-blog-hero-title span {
   color: var(--bb-blog-accent-text);
-}
-
-.bb-blog-hero-text {
-  max-width: 670px;
-  margin: 0 0 24px;
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-base);
-  line-height: 1.85;
 }
 
 /* =====================================
@@ -44091,9 +44030,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-blog-hero-title {
-    font-size: var(--bb-icon-size-3xl);
-  }
   .bb-blog-search-card {
     border-radius: var(--bb-radius-xl);
     align-items: stretch;
@@ -44171,104 +44107,12 @@ body.bb-category-menu-open {
    /blog index hero makyajı.
    Default bb-hero omurgası üzerine çalışır.
 ===================================== */
-.bb-hero.bb-blog-page-hero {
-  --bb-hero-title-max-width: 40rem;
-  --bb-hero-lead-max-width: 42rem;
-  --bb-hero-aside-width: 42rem;
-  --bb-hero-grid-gap: clamp(2rem, 4.5vw, 4rem);
-  position: relative;
-  overflow: hidden;
-  padding-top: clamp(3.5rem, 5vw, 5rem);
-  padding-bottom: clamp(4.75rem, 7vw, 6.25rem);
-  background: radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 28%, transparent) 0, transparent 32%), radial-gradient(circle at 0% 100%, color-mix(in srgb, var(--bb-primary) 10%, transparent) 0, transparent 28%), linear-gradient(135deg, color-mix(in srgb, var(--bb-primary) 9%, var(--bb-body-bg)) 0%, var(--bb-body-bg) 58%, color-mix(in srgb, var(--bb-primary) 14%, var(--bb-body-bg)) 100%);
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-}
-
-.bb-hero.bb-blog-page-hero::before {
-  content: "";
-  position: absolute;
-  right: -7.5rem;
-  top: -8.125rem;
-  width: 21.25rem;
-  height: 21.25rem;
-  background-color: color-mix(in srgb, var(--bb-primary) 18%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.bb-hero.bb-blog-page-hero::after {
-  content: "";
-  position: absolute;
-  left: -8.75rem;
-  bottom: -11.25rem;
-  width: 22.5rem;
-  height: 22.5rem;
-  background-color: color-mix(in srgb, var(--bb-primary) 10%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.bb-hero.bb-blog-page-hero .bb-web-container {
-  position: relative;
-  z-index: 2;
-}
-
 /* =====================================
    Blog Hero Breadcrumb
 ===================================== */
-.bb-blog-page-hero-breadcrumb {
-  position: relative;
-  z-index: 2;
-  margin-bottom: clamp(1.5rem, 3vw, 2rem);
-}
-
-.bb-blog-page-hero-breadcrumb .bb-breadcrumb,
-.bb-blog-page-hero-breadcrumb-list {
-  width: fit-content;
-  max-width: 100%;
-  min-height: 2.625rem;
-  padding: 0.35rem 0.875rem;
-  display: flex;
-  align-items: center;
-  background-color: color-mix(in srgb, var(--bb-body-bg) 86%, transparent);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-pill);
-  box-shadow: var(--bb-shadow-xs);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  overflow-x: auto;
-}
-
-.bb-blog-page-hero-breadcrumb .breadcrumb-item,
-.bb-blog-page-hero-breadcrumb .breadcrumb-item a {
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-semibold);
-  line-height: 1;
-  text-decoration: none;
-}
-
-.bb-blog-page-hero-breadcrumb .breadcrumb-item.active {
-  color: var(--bb-heading-color);
-  font-weight: var(--bb-fw-bold);
-}
-
 /* =====================================
    Blog Hero Layout
 ===================================== */
-.bb-blog-hero-inner {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(31rem, 1.12fr);
-  gap: var(--bb-hero-grid-gap);
-  align-items: center;
-}
-
-.bb-blog-hero-copy {
-  min-width: 0;
-}
-
 .bb-blog-eyebrow,
 .bb-blog-featured-label {
   display: inline-flex;
@@ -44303,26 +44147,8 @@ body.bb-category-menu-open {
   line-height: 1;
 }
 
-.bb-blog-hero-title {
-  max-width: var(--bb-hero-title-max-width);
-  margin: 0;
-  color: var(--bb-heading-color);
-  font-size: clamp(3.5rem, 7vw, 5.75rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 0.94;
-  letter-spacing: -0.07em;
-}
-
 .bb-blog-hero-title span {
   color: color-mix(in srgb, var(--bb-primary) 58%, var(--bb-dark));
-}
-
-.bb-blog-hero-text {
-  max-width: var(--bb-hero-lead-max-width);
-  margin: 1.35rem 0 0;
-  color: var(--bb-secondary-color);
-  font-size: clamp(1rem, 1.35vw, 1.15rem);
-  line-height: 1.85;
 }
 
 /* =====================================
@@ -44596,9 +44422,6 @@ body.bb-category-menu-open {
    Blog Index Responsive
 ===================================== */
 @media (max-width: 1199.98px) {
-  .bb-blog-hero-inner {
-    grid-template-columns: 1fr;
-  }
   .bb-blog-featured-card {
     grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1fr);
   }
@@ -44607,9 +44430,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 991.98px) {
-  .bb-hero.bb-blog-page-hero {
-    padding-bottom: 5.25rem;
-  }
   .bb-blog-featured-card {
     grid-template-columns: 1fr;
   }
@@ -44625,13 +44445,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-hero.bb-blog-page-hero {
-    padding-top: 2.75rem;
-    padding-bottom: 4.25rem;
-  }
-  .bb-blog-hero-title {
-    font-size: clamp(3rem, 13vw, 4.35rem);
-  }
   .bb-blog-search-card {
     max-width: 100%;
     padding-right: 0.5rem;
@@ -44679,49 +44492,6 @@ body.bb-category-menu-open {
 /* =====================================
    Hero + Breadcrumb
 ===================================== */
-.bb-blog-detail-hero {
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at 84% 10%, color-mix(in srgb, var(--bb-blog-detail-accent) 34%, transparent) 0, transparent 31%), linear-gradient(135deg, var(--bb-blog-detail-warm) 0%, var(--bb-body-bg) 100%);
-}
-
-.bb-blog-detail-hero::before {
-  content: "";
-  position: absolute;
-  right: -120px;
-  top: -130px;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--bb-blog-detail-accent) 18%, transparent);
-  pointer-events: none;
-}
-
-.bb-blog-detail-hero::after {
-  content: "";
-  position: absolute;
-  left: -140px;
-  bottom: -180px;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background-color: var(--bb-blog-detail-orange-glow);
-  pointer-events: none;
-}
-
-.bb-blog-detail-hero-inner {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
-  gap: 38px;
-  align-items: center;
-}
-
-.bb-blog-detail-hero-copy {
-  min-width: 0;
-}
-
 .bb-blog-detail-eyebrow,
 .bb-blog-detail-meta-pill,
 .bb-blog-detail-cover-badge,
@@ -44750,24 +44520,6 @@ body.bb-category-menu-open {
 .bb-blog-detail-eyebrow .material-symbols-outlined {
   font-size: var(--bb-fs-base);
   color: var(--bb-blog-detail-accent-hover);
-}
-
-.bb-blog-detail-title {
-  max-width: 820px;
-  margin: 0 0 18px;
-  color: var(--bb-heading-color);
-  font-size: clamp(2.25rem, 4.8vw, 4.125rem);
-  line-height: 1.02;
-  letter-spacing: -0.055em;
-  font-weight: var(--bb-fw-extrabold);
-}
-
-.bb-blog-detail-spot {
-  max-width: 47.5rem;
-  margin: 0 0 24px;
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-icon-size-md);
-  line-height: 1.82;
 }
 
 .bb-blog-detail-meta-row {
@@ -45480,12 +45232,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-blog-detail-title {
-    font-size: var(--bb-h2);
-  }
-  .bb-blog-detail-spot {
-    font-size: var(--bb-fs-base);
-  }
   .bb-blog-detail-cover-card {
     min-height: 0;
     padding: 12px;
@@ -55960,15 +55706,25 @@ body.bb-category-menu-open {
    Default bb-hero omurgası üzerine çalışır.
 ===================================== */
 .bb-hero.bb-hero-dark.bb-brand-page-hero {
-  --bb-hero-title-max-width: 58rem;
-  --bb-hero-lead-max-width: 54rem;
   --bb-hero-aside-width: 24rem;
-  --bb-hero-grid-gap: clamp(2.25rem, 5vw, 4.5rem);
-  padding-top: clamp(4.5rem, 6vw, 5.75rem);
-  padding-bottom: clamp(5.5rem, 7vw, 7rem);
-  color: var(--bb-theme-on-dark, var(--bb-white));
-  background: radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 20%, transparent) 0, transparent 31%), radial-gradient(circle at 4% 100%, color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 10%, transparent) 0, transparent 30%), linear-gradient(135deg, var(--bb-brand-dark, #263f48) 0%, var(--bb-brand-dark-2, #2d5964) 48%, var(--bb-brand-dark-3, #526847) 100%);
-  border-bottom-color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 10%, transparent);
+  --bb-hero-bg:
+      radial-gradient(
+          circle at 86% 18%,
+          color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 20%, transparent) 0,
+          transparent 31%
+      ),
+      radial-gradient(
+          circle at 4% 100%,
+          color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 10%, transparent) 0,
+          transparent 30%
+      ),
+      linear-gradient(
+          135deg,
+          var(--bb-brand-dark, #263f48) 0%,
+          var(--bb-brand-dark-2, #2d5964) 48%,
+          var(--bb-brand-dark-3, #526847) 100%
+      );
+  --bb-hero-border-color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 10%, transparent);
 }
 
 .bb-hero.bb-hero-dark.bb-brand-page-hero::before {
@@ -55989,10 +55745,6 @@ body.bb-category-menu-open {
   background-color: color-mix(in srgb, var(--bb-brand-accent, var(--bb-primary)) 11%, transparent);
 }
 
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-content {
-  min-width: 0;
-}
-
 .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-label {
   gap: 0.45rem;
   min-height: 2rem;
@@ -56011,25 +55763,6 @@ body.bb-category-menu-open {
   color: var(--bb-brand-accent, var(--bb-primary));
   font-size: var(--bb-fs-base);
   line-height: 1;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-title {
-  color: var(--bb-theme-on-dark, var(--bb-white));
-  font-size: clamp(2.35rem, 5vw, 4rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1.04;
-  letter-spacing: -0.052em;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-text {
-  margin-top: 1rem;
-  color: color-mix(in srgb, var(--bb-theme-on-dark, var(--bb-white)) 82%, transparent);
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  line-height: 1.85;
-}
-
-.bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-actions {
-  margin-top: 1.5rem;
 }
 
 .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-actions .bb-hero-btn-primary {
@@ -56535,13 +56268,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-hero.bb-hero-dark.bb-brand-page-hero {
-    padding-top: 3.25rem;
-    padding-bottom: 4.75rem;
-  }
-  .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-title {
-    font-size: clamp(2.15rem, 10vw, 3.1rem);
-  }
   .bb-hero.bb-hero-dark.bb-brand-page-hero .bb-brand-page-hero-card {
     display: none;
   }
@@ -56657,12 +56383,24 @@ body.bb-category-menu-open {
    Hero
 ===================================== */
 .bb-brand-detail-page-hero {
-  position: relative;
-  overflow: hidden;
-  padding-top: clamp(3rem, 5vw, 4.75rem);
-  padding-bottom: clamp(5.75rem, 8vw, 7.25rem);
-  background: radial-gradient(circle at 90% 18%, color-mix(in srgb, var(--bb-brand-detail-accent) 18%, transparent), transparent 24rem), radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-brand-detail-accent) 8%, transparent), transparent 18rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 86%, var(--bb-body-bg)) 0%, var(--bb-body-bg) 100%);
-  border-bottom: var(--bb-border-width) solid var(--bb-brand-detail-border);
+  --bb-hero-aside-width: 25rem;
+  --bb-hero-bg:
+      radial-gradient(
+          circle at 90% 18%,
+          color-mix(in srgb, var(--bb-brand-detail-accent) 18%, transparent),
+          transparent 24rem
+      ),
+      radial-gradient(
+          circle at 8% 96%,
+          color-mix(in srgb, var(--bb-brand-detail-accent) 8%, transparent),
+          transparent 18rem
+      ),
+      linear-gradient(
+          180deg,
+          color-mix(in srgb, var(--bb-tertiary-bg) 86%, var(--bb-body-bg)) 0%,
+          var(--bb-body-bg) 100%
+      );
+  --bb-hero-border-color: var(--bb-brand-detail-border);
 }
 
 .bb-brand-detail-page-hero::before {
@@ -56689,26 +56427,6 @@ body.bb-category-menu-open {
   pointer-events: none;
 }
 
-.bb-brand-detail-page-hero > .bb-container {
-  position: relative;
-  z-index: 2;
-}
-
-.bb-brand-detail-page-hero-breadcrumb {
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-brand-detail-page-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 25rem);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-
-.bb-brand-detail-page-hero-content {
-  min-width: 0;
-}
-
 .bb-brand-detail-page-hero-label {
   gap: 0.4375rem;
   margin-bottom: 1rem;
@@ -56724,17 +56442,6 @@ body.bb-category-menu-open {
   line-height: 1;
 }
 
-.bb-brand-detail-page-hero-title {
-  max-width: 54rem;
-  margin: 0;
-  color: var(--bb-brand-detail-heading);
-  font-size: clamp(2.4rem, 5vw, 4.25rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1.03;
-  letter-spacing: -0.058em;
-  overflow-wrap: anywhere;
-}
-
 .bb-brand-detail-page-hero-motto {
   width: fit-content;
   max-width: 100%;
@@ -56747,14 +56454,6 @@ body.bb-category-menu-open {
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
-}
-
-.bb-brand-detail-page-hero-text {
-  max-width: 58rem;
-  margin-top: 1.25rem;
-  color: var(--bb-brand-detail-muted);
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  line-height: 1.85;
 }
 
 .bb-brand-detail-page-hero-meta {
@@ -57288,9 +56987,6 @@ body.bb-category-menu-open {
    Responsive
 ===================================== */
 @media (max-width: 1199.98px) {
-  .bb-brand-detail-page-hero-inner {
-    grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
-  }
   .bb-brand-detail-trust-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -57306,9 +57002,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 991.98px) {
-  .bb-brand-detail-page-hero-inner {
-    grid-template-columns: 1fr;
-  }
   .bb-brand-detail-page-hero-aside {
     justify-self: start;
     width: min(100%, 24rem);
@@ -57321,13 +57014,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-brand-detail-page-hero {
-    padding-top: 2.5rem;
-    padding-bottom: 4.5rem;
-  }
-  .bb-brand-detail-page-hero-title {
-    font-size: clamp(2.1rem, 10vw, 3.15rem);
-  }
   .bb-brand-detail-page-hero-aside {
     width: 100%;
   }
