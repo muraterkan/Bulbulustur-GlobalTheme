@@ -177,7 +177,7 @@
     flex-wrap: wrap;
     gap: 0.75rem;
 
-    margin-top: 1.75rem;
+    margin-top: var(--bb-web-section-head-margin);
 }
 
 .bb-brand-detail-page-hero-meta-chip {
@@ -402,7 +402,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 1.125rem;
+    gap: var(--bb-web-section-head-gap);
 
     margin-bottom: 1.25rem;
 }
@@ -499,7 +499,7 @@
 }
 
 .bb-brand-detail-info-card-head {
-    padding: 1.125rem;
+    padding: var(--bb-space-5);
 
     background:
         radial-gradient(
@@ -532,7 +532,7 @@
 
 .bb-brand-detail-info-list {
     display: grid;
-    padding: 0.75rem 1.125rem 1.125rem;
+    padding: var(--bb-space-3) var(--bb-space-5) var(--bb-space-5);
 }
 
 .bb-brand-detail-info-item {

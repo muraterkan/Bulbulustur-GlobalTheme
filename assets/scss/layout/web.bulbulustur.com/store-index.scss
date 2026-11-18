@@ -389,7 +389,7 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.5rem;
     align-items: center;
-    padding: 1.75rem;
+    padding: var(--bb-web-section-gap-tight);
     border: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), .08);
     border-radius: var(--bb-radius-2xl, 1.5rem);
     background:
@@ -451,7 +451,7 @@
     align-items: center;
     justify-content: center;
     min-height: 3.25rem;
-    padding-inline: 1.75rem;
+    padding-inline: var(--bb-space-6);
     border-radius: .95rem;
     background: var(--bb-coal-300);
     color: var(--bb-white);

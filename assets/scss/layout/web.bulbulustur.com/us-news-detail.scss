@@ -151,7 +151,7 @@
 
 .bb-news-detail-subtitle {
   max-width: 42rem;
-  margin: 1.125rem 0 0;
+  margin: var(--bb-space-5) 0 0;
   color: var(--bb-news-detail-muted-color);
   font-size: var(--bb-hero-lead-size);
   line-height: var(--bb-line-height-loose);
@@ -289,7 +289,7 @@
 }
 
 .bb-news-detail-content h4 {
-  margin: 1.75rem 0 0.75rem;
+  margin: var(--bb-web-section-gap-tight) 0 var(--bb-space-3);
   font-size: var(--bb-fs-lg);
 }
 

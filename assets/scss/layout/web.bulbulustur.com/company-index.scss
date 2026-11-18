@@ -37,15 +37,15 @@
 
 .bb-b2b-supplier-directory-list {
   display: grid;
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
 }
 
 .bb-b2b-supplier-directory-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(17.5rem, 22rem);
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
 
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 
   background-color: var(--bb-body-bg);
   border: var(--bb-border-width) solid var(--bb-border-color);
@@ -586,7 +586,7 @@
 
 .bb-b2b-supplier-directory-pagination {
   margin-top: 1.5rem;
-  padding: 0.875rem 1.125rem;
+  padding: 0.875rem var(--bb-space-5);
 
   display: flex;
   align-items: center;
