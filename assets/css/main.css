@@ -49327,17 +49327,11 @@ body.bb-category-menu-open {
    Responsive
 ===================================== */
 @media (max-width: 1199.98px) {
-  .bb-ibans-owner-card {
-    max-width: 520px;
-  }
   .bb-ibans-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 767.98px) {
-  .bb-ibans-owner-card {
-    display: none;
-  }
   .bb-ibans-main {
     padding-top: 24px;
   }
@@ -54416,14 +54410,6 @@ body.bb-category-menu-open {
   }
 }
 /* Responsive */
-@media (max-width: 991.98px) {
-  .bb-career-job-detail-layout {
-    grid-template-columns: 1fr;
-  }
-  .bb-career-job-detail-aside {
-    position: static;
-  }
-}
 @media (max-width: 767.98px) {
   .bb-career-job-detail-card-head,
   .bb-career-rich-content {
@@ -55679,16 +55665,6 @@ body.bb-category-menu-open {
   color: var(--bb-heading-color);
 }
 
-@media (max-width: 767.98px) {
-  .bb-support-condition-type-tabs {
-    gap: 1.125rem;
-    min-height: 52px;
-  }
-  .bb-support-condition-type-tab {
-    min-height: 52px;
-    font-size: var(--bb-fs-sm);
-  }
-}
 /* =====================================
    Bulbulustur Web - Brand Listing
    Marka listeleme / marka vitrin sayfası
@@ -59060,17 +59036,6 @@ body.bb-category-menu-open {
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .bb-help-search-layout {
-    grid-template-columns: 1fr;
-  }
-  .bb-help-search-sidebar {
-    position: static;
-  }
-  .bb-help-search-filter-list {
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    overflow-x: auto;
-  }
 }
 @media (max-width: 767.98px) {
   .bb-help-search-topbar {
@@ -59079,42 +59044,10 @@ body.bb-category-menu-open {
   .bb-help-search-results-section {
     padding: 20px 0 48px;
   }
-  .bb-help-search-result-item {
-    grid-template-columns: 40px minmax(0, 1fr);
-    align-items: flex-start;
-    padding: 18px;
-  }
-  .bb-help-search-result-arrow {
-    grid-column: 2;
-    width: 36px;
-    height: 36px;
-  }
-  .bb-help-search-panel-head {
-    padding: 18px;
-  }
-  .bb-help-search-input-group {
-    flex-wrap: nowrap;
-  }
 }
 @media (max-width: 575.98px) {
-  .bb-help-search-panel,
-  .bb-help-search-filter-card,
   .bb-help-search-contact-card {
     border-radius: var(--bb-radius-xl);
-  }
-  .bb-help-search-result-item {
-    grid-template-columns: 1fr;
-  }
-  .bb-help-search-result-arrow {
-    grid-column: 1;
-  }
-  .bb-help-search-input-group {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-  .bb-help-search-input-group .btn {
-    grid-column: 1/-1;
-    width: 100%;
   }
 }
 /* =====================================
