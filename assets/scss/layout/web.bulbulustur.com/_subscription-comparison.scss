@@ -114,7 +114,7 @@
     max-width: 58rem;
     margin: 0 auto 1rem;
     color: var(--bb-emphasis-color);
-    font-size: clamp(2.1rem, 4.2vw, 3.75rem);
+    font-size: var(--bb-hero-title-size);
     line-height: var(--bb-line-height-heading);
     font-weight: var(--bb-fw-extrabold);
     letter-spacing: -.045em;
@@ -385,7 +385,7 @@
 .bb-compare-title {
     margin: 0 0 0.75rem;
     color: var(--bb-emphasis-color);
-    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: var(--bb-line-height-heading);
     font-weight: var(--bb-fw-extrabold);
     letter-spacing: -.04em;

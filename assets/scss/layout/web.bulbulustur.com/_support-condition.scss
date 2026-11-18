@@ -230,7 +230,7 @@
 .bb-support-condition-title {
     margin: 0;
     color: var(--bb-heading-color);
-    font-size: clamp(1.75rem, 3vw, 2.35rem);
+    font-size: var(--bb-web-page-title-size);
     line-height: var(--bb-line-height-heading);
     font-weight: var(--bb-fw-bold);
     letter-spacing: -.035em;
@@ -414,7 +414,7 @@
     gap: 10px;
     margin: 0 0 14px;
     color: var(--bb-heading-color);
-    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    font-size: var(--bb-web-subsection-title-size);
     line-height: var(--bb-line-height-heading);
     font-weight: var(--bb-fw-bold);
     letter-spacing: -.025em;
