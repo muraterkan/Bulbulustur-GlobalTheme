@@ -957,15 +957,7 @@
 
 /* Responsive */
 
-@media (max-width: 991.98px) {
-    .bb-career-job-detail-layout {
-        grid-template-columns: 1fr;
-    }
 
-    .bb-career-job-detail-aside {
-        position: static;
-    }
-}
 
 @media (max-width: 767.98px) {
     .bb-career-job-detail-card-head,
