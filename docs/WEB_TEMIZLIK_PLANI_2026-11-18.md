@@ -141,6 +141,27 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Validation/error/success halleri aynı sistemle görünür.
 - Web form CSS'i Core form motorunu yeniden yazmaz.
 
+**Durum:** KOD / STATIC CONTRACT TAMAMLANDI — gerçek Web smoke testi ve repo check scriptleri bekliyor.
+
+**18.11.2026 sonucu:**
+- Core referans zinciri doğrulandı: `components/_forms.scss`, `_input-group.scss`, `_floating-labels.scss` ve en sonda application guard olarak `_forms-final.scss`.
+- Gerçek Web Razor contract'ı doğrulandı: Account/Company ekranları `form-control`, `form-select`, `form-label`, `input-group` ve büyük ölçüde `bb-input-group` / `bb-input-group-solid` kullanıyor; yeni markup veya yeni form motoru eklenmedi.
+- Account, Company, Logon, RFQ ve Checkout kapsamında 20 SCSS dosyası temizlendi.
+- Account/Company input gruplarında renk, surface, border-color, typography, focus ve validation tekrarları kaldırıldı; yalnız birleşik input geometrisi, IBAN harf düzeni, readonly görünümü ve password toggle gibi gerçek application ihtiyaçları bırakıldı.
+- Readonly telefon alanı ham surface karışımı yerine `--bb-form-control-disabled-color` ve `--bb-form-control-readonly-bg` semantic tokenlarına bağlandı.
+- Password toggle surface/border/focus dili `--bb-form-control-*` token zincirine taşındı; `box-shadow: none !important` kaldırıldı.
+- Account Disable destructive seçiminde özel focus ihtiyacı selector override yerine `--bb-ig-focus-border-color` application tokenı olarak korundu.
+- Company Contact koyu yüzeyindeki beyaz label niyeti doğrudan `.form-label` override yerine form root'unda `--bb-form-label-color` / `--bb-form-label-font-weight` tokenlarıyla tanımlandı.
+- Logon ailesinde (`login`, `register`, `forgot-password`, `set-new-password`, `firstdoor`) Web'e özgü `form-control/form-select/form-label` yeniden yazımı 0'a indirildi; yalnız input-group addon geometrisi kaldı.
+- RFQ'da Core ile aynı textarea/validation tekrarları kaldırıldı; Checkout'ta Core tarafından zaten ezilen payment input-group surface override'ı kaldırıldı.
+- Temizlenen source SCSS toplamı yaklaşık 23.137 bayt küçüldü.
+- Derlenmiş `main.css`: 2.921.558 → 2.903.469 bayt (-18.089 bayt).
+- Kod commitleri: `73970e06` — `refactor(web): align account and company forms with core`; `25d578af` — `refactor(web): align auth and transaction forms with core`; `1a46294e` — `refactor(web): finish form token handoff`.
+- GitHub Build CSS üç kod commit'inde de başarılı; final derlenmiş `main.css` commit'i: `ade35869`.
+- `npm run check:contracts` ve `npm run check:css` scriptleri repoda mevcut fakat mevcut GitHub workflow yalnız `build:css` çalıştırıyor. Bu oturumun container ortamında GitHub erişimi olmadığı için bu iki script gerçekten çalıştırılamadı; çalıştırılmış sayılmıyor.
+- Gerçek tarayıcı light/dark + Account/RFQ/Checkout/Company/Logon responsive smoke testi yapılmadı; kalan iş görsel regresyon kontrolüdür.
+- `forms-final` kaldırılmadı veya mimarisi değiştirilmedi; bu fazda yalnız mevcut application guard olarak kullanıldı.
+
 ---
 
 ### Faz 4 — Card anatomisi: Account + Company
