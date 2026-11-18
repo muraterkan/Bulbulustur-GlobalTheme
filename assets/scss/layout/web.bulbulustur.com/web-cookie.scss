@@ -9,6 +9,54 @@
    - Dark/light compatible
 ===================================== */
 
+.bb-cookie-page {
+  --bb-cookie-page-card-bg:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bb-surface-elevated) 98%, var(--bb-body-bg)),
+      color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg))
+    );
+  --bb-cookie-page-card-border: color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+  --bb-cookie-page-card-shadow:
+    0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
+    0 0.25rem 0.875rem color-mix(in srgb, var(--bb-emphasis-color) 3%, transparent);
+
+  --bb-cookie-page-intro-bg:
+    radial-gradient(circle at 94% 18%, color-mix(in srgb, var(--bb-primary) 11%, transparent), transparent 16rem),
+    linear-gradient(135deg, color-mix(in srgb, var(--bb-surface-elevated) 98%, var(--bb-body-bg)), color-mix(in srgb, var(--bb-primary) 5%, var(--bb-surface-elevated)));
+
+  --bb-cookie-page-item-bg: color-mix(in srgb, var(--bb-tertiary-bg) 74%, var(--bb-body-bg));
+  --bb-cookie-page-item-border: color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+  --bb-cookie-page-toggle-bg: color-mix(in srgb, var(--bb-secondary-color) 26%, var(--bb-border-color));
+  --bb-cookie-page-help-shadow:
+    0 1.75rem 4rem color-mix(in srgb, var(--bb-black) 24%, transparent),
+    var(--bb-shadow-lg);
+}
+
+[data-bs-theme="dark"] .bb-cookie-page {
+  --bb-cookie-page-card-bg:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg)),
+      color-mix(in srgb, var(--bb-surface-elevated) 82%, var(--bb-body-bg))
+    );
+  --bb-cookie-page-card-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-cookie-page-card-shadow:
+    0 1.25rem 3rem color-mix(in srgb, var(--bb-black) 24%, transparent),
+    0 0.25rem 0.875rem color-mix(in srgb, var(--bb-black) 16%, transparent);
+
+  --bb-cookie-page-intro-bg:
+    radial-gradient(circle at 94% 18%, color-mix(in srgb, var(--bb-primary) 9%, transparent), transparent 16rem),
+    linear-gradient(135deg, color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg)), color-mix(in srgb, var(--bb-primary) 5%, var(--bb-body-bg)));
+
+  --bb-cookie-page-item-bg: color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg));
+  --bb-cookie-page-item-border: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+  --bb-cookie-page-toggle-bg: color-mix(in srgb, var(--bb-secondary-color) 22%, var(--bb-body-bg));
+  --bb-cookie-page-help-shadow:
+    0 1.75rem 4rem color-mix(in srgb, var(--bb-black) 42%, transparent),
+    var(--bb-shadow-lg);
+}
+
 /* =====================================
    Page Hero
 ===================================== */
@@ -68,24 +116,13 @@
 .bb-cookie-actions,
 .bb-cookie-vendors-card,
 .bb-cookie-side-card {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bb-surface-elevated) 98%, var(--bb-body-bg)),
-      color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg))
-    );
+  background: var(--bb-cookie-page-card-bg);
 
-  border: var(--bb-border-width) solid color-mix(
-    in srgb,
-    var(--bb-border-color) 82%,
-    transparent
-  );
+  border: var(--bb-border-width) solid var(--bb-cookie-page-card-border);
 
   border-radius: var(--bb-radius-2xl);
 
-  box-shadow:
-    0 1.25rem 3rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
-    0 0.25rem 0.875rem color-mix(in srgb, var(--bb-emphasis-color) 3%, transparent);
+  box-shadow: var(--bb-cookie-page-card-shadow);
 }
 
 .bb-cookie-intro-card {
@@ -95,17 +132,7 @@
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 
-  background:
-    radial-gradient(
-      circle at 94% 18%,
-      color-mix(in srgb, var(--bb-primary) 11%, transparent),
-      transparent 16rem
-    ),
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--bb-surface-elevated) 98%, var(--bb-body-bg)),
-      color-mix(in srgb, var(--bb-primary) 5%, var(--bb-surface-elevated))
-    );
+  background: var(--bb-cookie-page-intro-bg);
 }
 
 .bb-cookie-intro-card p,
@@ -241,7 +268,7 @@
   width: 3.625rem;
   height: 2rem;
 
-  background-color: color-mix(in srgb, var(--bb-secondary-color) 26%, var(--bb-border-color));
+  background-color: var(--bb-cookie-page-toggle-bg);
   border-radius: var(--bb-radius-pill);
 
   box-shadow:
@@ -330,8 +357,8 @@
 .bb-cookie-item {
   padding: 1rem;
 
-  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 74%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+  background-color: var(--bb-cookie-page-item-bg);
+  border: var(--bb-border-width) solid var(--bb-cookie-page-item-border);
   border-radius: var(--bb-radius-xl);
 }
 
@@ -491,9 +518,7 @@
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 10%, transparent);
   border-radius: var(--bb-radius-2xl);
 
-  box-shadow:
-    0 1.75rem 4rem color-mix(in srgb, var(--bb-black, #000000) 24%, transparent),
-    var(--bb-shadow-lg);
+  box-shadow: var(--bb-cookie-page-help-shadow);
 }
 
 .bb-cookie-help-card h2,
@@ -572,58 +597,6 @@
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-semibold);
   line-height: var(--bb-line-height-content);
-}
-
-/* =====================================
-   Dark
-===================================== */
-
-[data-bs-theme="dark"] .bb-cookie-intro-card,
-[data-bs-theme="dark"] .bb-cookie-card,
-[data-bs-theme="dark"] .bb-cookie-actions,
-[data-bs-theme="dark"] .bb-cookie-vendors-card,
-[data-bs-theme="dark"] .bb-cookie-side-card {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg)),
-      color-mix(in srgb, var(--bb-surface-elevated) 82%, var(--bb-body-bg))
-    );
-
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-
-  box-shadow:
-    0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 24%, transparent),
-    0 0.25rem 0.875rem color-mix(in srgb, var(--bb-black, #000000) 16%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-cookie-intro-card {
-  background:
-    radial-gradient(
-      circle at 94% 18%,
-      color-mix(in srgb, var(--bb-primary) 9%, transparent),
-      transparent 16rem
-    ),
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg)),
-      color-mix(in srgb, var(--bb-primary) 5%, var(--bb-body-bg))
-    );
-}
-
-[data-bs-theme="dark"] .bb-cookie-item {
-  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-cookie-toggle-slider {
-  background-color: color-mix(in srgb, var(--bb-secondary-color) 22%, var(--bb-body-bg));
-}
-
-[data-bs-theme="dark"] .bb-cookie-help-card {
-  box-shadow:
-    0 1.75rem 4rem color-mix(in srgb, var(--bb-black, #000000) 42%, transparent),
-    var(--bb-shadow-lg);
 }
 
 /* =====================================
