@@ -117,8 +117,9 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Footer language dropup'ta selector specificity düzeltilerek `!important` kaldırıldı; footer surface/link/typography yapısı mevcut `--bb-footer-*` token contract'ında korundu.
 - Faz kapsamındaki `!important` sayısı 37 → 1 oldu. Kalan tek kullanım `_web-header-top.scss` içindeki Bootstrap `.text-muted` utility override'ıdır; cascade gereği bilinçli bırakıldı.
 - Faz kapsamındaki ham sayısal `rgba()` kullanımı 23 → 0; ham hex kullanımı 0.
-- Kod commit: `a1fd6843` — `refactor(web): standardize header and footer shell`.
-- GitHub Build CSS başarılı; derlenmiş `main.css` commit'i: `756665b6`.
+- Kod commitleri: `a1fd6843` — `refactor(web): standardize header and footer shell`; `a08bfbcd` — `fix(web): preserve account dropdown popper spacing`.
+- GitHub Build CSS iki kod commit'inde de başarılı; final derlenmiş `main.css` commit'i: `787ae6a4`.
+- Derlenmiş `main.css`: 2.927.504 → 2.921.558 bayt (-5.946 bayt).
 - Gerçek tarayıcı light/dark + desktop/tablet/mobile smoke testi bu repo ortamında yapılmadı; Web uygulama ayağa kaldırıldığında yalnız görsel regresyon kontrolü kalıyor.
 
 ---
