@@ -314,6 +314,34 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Componentler Core tema değişiminden doğal şekilde renk alır.
 - Light/dark state anlamları aynı kalır.
 
+**Durum:** KOD / STATIC CONTRACT TAMAMLANDI — gerçek Web light/dark + responsive smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Faz 7 başlangıcında `assets/scss/layout/web.bulbulustur.com/` altındaki **192 SCSS dosyasının tamamı** dark selector açısından tarandı.
+- Başlangıç envanteri: **26 dosyada 119** `[data-bs-theme="dark"]` / `html[data-bs-theme="dark"]` selector occurrence.
+- Core `base/_theme.scss` dark semantic motoru tekrar doğrulandı: `--bb-body-bg`, `--bb-tertiary-bg`, `--bb-surface-elevated`, `--bb-emphasis-color`, `--bb-secondary-color`, `--bb-border-color` ve `--bb-shadow-*` dark modda merkezi olarak değişiyor. Faz 7 componentleri bu motorun üstüne bağlandı.
+- Final envanter: aynı 26 dosyada **27 dark selector occurrence**. Net **92 selector azalma (%77,3)**.
+- Kalan 27 occurrence'ın **25'i tek component/page dark token scope**. Diğer **2 selector**, Web Header'da light/dark logo dosyasını gerçekten değiştiren asset-state davranışı olduğu için bilinçli olarak korundu.
+- B2B Category: **17 → 1**. Hero label/tag/panel/item/icon, stage, quick-nav ve content-stage surface/state değerleri `.bb-b2b-category-page` component token contract'ına taşındı.
+- B2B Special: **10 → 1**; B2C Special: **14 → 1**. Quick-nav/stage, hover/active item state, icon, pagination/empty surface değerleri page-root tokenlarına taşındı; light/dark state anlamları korunuyor.
+- B2B Homepage Slider: **9 → 1**; B2C Homepage Slider: **4 → 1**. Carousel, picture, indicator/dot ve control hover değerleri component root tokenlarından geliyor.
+- B2B Homepage Stats: **3 → 1**; Vertical Spotlight: **4 → 1**. Card/icon/orbit/shadow surface tamirleri root token scope'larına indirildi.
+- B2B Featured Products: **8 → 1**. Hero/picture/shared surface/list/bottom-banner dark değerleri `.bb-b2b-featured-products-page` token contract'ına taşındı.
+- Cookie Consent Banner: **7 → 1**. Card/glow/icon/reject/accept dark değerleri `.bb-cookie-banner` scope'una taşındı; light ile aynı olan gereksiz dark manage-button override'ı tamamen kaldırıldı.
+- Cookie Settings page: **9 → 1**. Shared card/intro/item/toggle/help surface değerleri `.bb-cookie-page` root token scope'una taşındı.
+- Product Detail Review: **6 → 1**. Shared review card surface/shadow, photo frame ve photo-nav dark tamirleri mevcut `.bb-b2c-detail-review-section` token motoruna taşındı.
+- From Brands: **4 → 1**. Surface background ve floating caption/count border değerleri root token scope'una taşındı.
+- Layout Light: **2 → 1**. Page background + card surface/border/shadow inherited token contract'ına taşındı. Dark card shadow'daki ham `rgba(0,0,0,...)` değerleri `color-mix(... var(--bb-black) ...)` semantic formuna çevrildi.
+- Brand Detail: **5 → 1**. Trust/card shadow+surface, hero logo-frame ve info-head dark tamirleri mevcut Brand Detail token engine'e taşındı.
+- Blog Special Shelf: **3 → 1**; Blog Detail Author Card: **3 → 1**. Child dark selectorları component-root background/kicker/text/avatar/label tokenlarına indirildi.
+- Zaten tek root token scope'u olan Help, Seller, Subscription Comparison, Campaign Detail, B2C Product Reviews, News, News Detail, Roadmap ve B2B Home gibi dark bloklar gereksiz yere silinmedi; bunlar gerçek component/brand farkı taşıdığı için korundu.
+- Faz 7 başlangıç generated CSS: **2.871.228 byte** (`6cac0bcd`). Final generated CSS: **2.876.795 byte** (`8cfaf622`), net **+5.567 byte**. Amaç byte küçültmek değil selector-level dark tamiratlarını tek component token contract'ına indirmekti; variable indirection nedeniyle küçük boyut artışı beklenen sonuçtur.
+- Kod commitleri: `45be8be9` — B2B Category; `8f331310` — B2B Special; `e70eb879` — B2C Special; `a64b6085` — B2B Slider; `bc4cf833` — B2C Slider; `cf538c81` — B2B Stats/Spotlight; `e4e45b01` — Featured Products; `abf6c94c` — Cookie Banner; `39eda9a9` — Cookie Settings; `4dd79d14` — Product Review/From Brands/Layout Light; `0634615e` — Brand/Blog dark token consolidation.
+- Tüm Faz 7 kod commitlerinin GitHub **Build CSS** workflow'u başarıyla tamamlandı. Final generated CSS commit'i: `8cfaf622` — `build(css): regenerate from main.scss`.
+- Faz 7 GlobalTheme üzerinde çalıştı; Web App Razor contract değişikliği gerekmedi.
+- `npm run check:contracts` / `npm run check:css` bu oturumda çalıştırılmış sayılmıyor; mevcut GitHub workflow yalnız `build:css` çalıştırıyor.
+- Gerçek browser light/dark + desktop/tablet/mobile smoke testi yapılmadı; kalan iş görsel regresyon kontrolüdür.
+
 ---
 
 ### Faz 8 — Responsive davranış standardizasyonu
