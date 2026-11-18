@@ -8,14 +8,27 @@
 ===================================== */
 
 .bb-web-header {
+    --bb-web-header-bg: var(--bb-header-bg, var(--bb-body-bg));
+    --bb-web-header-border-color: color-mix(in srgb, var(--bb-header-border-color, var(--bb-border-color)) 82%, transparent);
+    --bb-web-header-shadow: var(--bb-shadow-sm);
+    --bb-web-header-shadow-fade: rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-xs));
+    --bb-web-header-overlay-bg: color-mix(in srgb, var(--bb-dark) 52%, transparent);
+    --bb-web-header-main-padding-y: 0.625rem;
+    --bb-web-header-inner-min-height: 6rem;
+    --bb-web-header-inner-gap: var(--bb-space-6);
+    --bb-web-header-brand-gap: 1.375rem;
+    --bb-web-header-logo-height: 2.5rem;
+    --bb-web-header-search-height: 3rem;
+    --bb-web-header-action-size: 2.5rem;
+    --bb-web-header-action-badge-size: 1.1875rem;
+    --bb-web-header-action-badge-offset: -0.25rem;
+
     position: relative;
     z-index: 1040;
 
-    background-color: var(--bb-body-bg);
-    border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-    box-shadow:
-        0 1px 0 rgba(15, 23, 42, .03),
-        0 10px 26px rgba(15, 23, 42, .055);
+    background-color: var(--bb-web-header-bg);
+    border-bottom: var(--bb-border-width) solid var(--bb-web-header-border-color);
+    box-shadow: var(--bb-web-header-shadow);
 }
 
 .bb-web-header::after {
@@ -29,8 +42,8 @@
     pointer-events: none;
     background: linear-gradient(
         180deg,
-        rgba(15, 23, 42, .045),
-        rgba(15, 23, 42, 0)
+        var(--bb-web-header-shadow-fade),
+        transparent
     );
 }
 
@@ -38,8 +51,8 @@
     position: relative;
     z-index: 1040;
 
-    background-color: var(--bb-body-bg);
-    border-bottom: 1px solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
+    background-color: var(--bb-web-header-bg);
+    border-bottom: var(--bb-border-width) solid var(--bb-web-header-border-color);
 }
 
 .bb-web-header-main,
@@ -55,7 +68,7 @@
 .bb-web-header-main-shell {
     position: relative;
     z-index: 1;
-    padding: 10px 0;
+    padding: var(--bb-web-header-main-padding-y) 0;
 }
 
 /* Mega menu açıldığında shadow header altında kaybolmasın */
@@ -65,39 +78,23 @@
     z-index: 1050;
 }
 
-/* Koyu tema için gölge biraz daha sakin */
-[data-bs-theme="dark"] .bb-web-header {
-    border-bottom-color: rgba(255, 255, 255, .08);
-    box-shadow:
-        0 1px 0 rgba(255, 255, 255, .04),
-        0 10px 26px rgba(0, 0, 0, .22);
-}
-
-[data-bs-theme="dark"] .bb-web-header::after {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, .22),
-        rgba(0, 0, 0, 0)
-    );
-}
-
 /* =====================================
    Main Header Grid
 ===================================== */
 
 .bb-web-header-inner {
-    min-height: 96px;
+    min-height: var(--bb-web-header-inner-min-height);
     display: grid;
     grid-template-columns: auto minmax(360px, 1fr) auto;
     align-items: center;
-    gap: 24px;
+    gap: var(--bb-web-header-inner-gap);
 }
 
 .bb-web-header-brand-wrap {
     min-width: 0;
     display: inline-flex;
     align-items: center;
-    gap: 22px;
+    gap: var(--bb-web-header-brand-gap);
 }
 
 .bb-web-header-logo {
@@ -110,7 +107,7 @@
 .bb-web-header-logo img {
     display: block;
     width: auto;
-    height: 40px;
+    height: var(--bb-web-header-logo-height);
 }
 
 /* =====================================
@@ -149,7 +146,7 @@
 
 .bb-web-header-search-group {
     width: 100%;
-    min-height: 48px;
+    min-height: var(--bb-web-header-search-height);
     display: flex;
     align-items: stretch;
     overflow: hidden;
@@ -170,7 +167,7 @@
 
 .bb-web-header-search-input {
     min-width: 0;
-    height: 48px;
+    height: var(--bb-web-header-search-height);
     flex: 1 1 auto;
 
     padding: 0 22px;
@@ -178,7 +175,7 @@
     background-color: transparent;
     border: 0;
     border-radius: var(--bb-radius-none);
-    box-shadow: none !important;
+    box-shadow: none;
     font-size: var(--bb-fs-sm);;
 }
 
@@ -189,32 +186,32 @@
 .bb-web-header-search-input:focus {
     background-color: transparent;
     border: 0;
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 .bb-web-header-search-select {
     width: 160px;
     min-width: 160px;
-    height: 48px;
+    height: var(--bb-web-header-search-height);
 
     color: var(--bb-secondary-color);
     background-color: var(--bb-body-bg);
     border: 0;
     border-left: 1px solid var(--bb-border-color);
     border-radius: var(--bb-radius-none);
-    box-shadow: none !important;
+    box-shadow: none;
     font-size: var(--bb-fs-sm);;
 }
 
 .bb-web-header-search-select:focus {
     border-left-color: var(--bb-border-color);
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 .bb-web-header-search-button {
     width: 58px;
     min-width: 58px;
-    height: 48px;
+    height: var(--bb-web-header-search-height);
 
     display: inline-flex;
     align-items: center;
@@ -307,8 +304,8 @@
 
 .bb-web-header-utility-circle,
 .bb-web-header-icon-button {
-    width: 40px;
-    height: 40px;
+    width: var(--bb-web-header-action-size);
+    height: var(--bb-web-header-action-size);
 
     display: inline-flex;
     align-items: center;
@@ -347,12 +344,12 @@
 
 .bb-web-header-action-badge {
     position: absolute;
-    top: -4px;
-    right: -4px;
+    top: var(--bb-web-header-action-badge-offset);
+    right: var(--bb-web-header-action-badge-offset);
     z-index: 2;
 
-    min-width: 19px;
-    height: 19px;
+    min-width: var(--bb-web-header-action-badge-size);
+    height: var(--bb-web-header-action-badge-size);
     padding: 0 5px;
 
     display: inline-flex;
@@ -361,7 +358,7 @@
 
     color: var(--bb-primary-inverse);
     background-color: var(--bb-primary);
-    border: 2px solid var(--bb-body-bg);
+    border: calc(var(--bb-border-width) * 2) solid var(--bb-web-header-bg);
     border-radius: var(--bb-radius-pill);
 
     font-size: var(--bb-fs-xs);
@@ -369,71 +366,8 @@
     line-height: 1;
 }
 
-/* =====================================
-   Basket Component Integration
-   _BasketDropdownMainCssPilot içinde kendi classları varsa onları bozmaz.
-   Eski #basketInvoker davranışını da normalize eder.
-===================================== */
-
 .bb-web-header-utility-item-basket {
     position: relative;
-}
-
-.bb-web-header-utility-item-basket #basketInvoker {
-    width: 40px;
-    height: 40px;
-
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--bb-heading-color) !important;
-    background-color: var(--bb-body-bg) !important;
-    border: 1px solid var(--bb-border-color) !important;
-    border-radius: var(--bb-radius-pill) !important;
-    box-shadow: none;
-    text-decoration: none;
-
-    transition:
-        color var(--bb-transition-fast),
-        background-color var(--bb-transition-fast),
-        border-color var(--bb-transition-fast),
-        box-shadow var(--bb-transition-fast),
-        transform var(--bb-transition-fast);
-}
-
-.bb-web-header-utility-item-basket #basketInvoker:hover {
-    color: var(--bb-heading-color) !important;
-    background-color: var(--bb-tertiary-bg) !important;
-    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color)) !important;
-    box-shadow: var(--bb-shadow-xs);
-    transform: translateY(-1px);
-}
-
-.bb-web-header-utility-item-basket #basketInvoker .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
-    line-height: 1;
-}
-
-.bb-web-header-utility-item-basket #headerBasketCount {
-    position: absolute !important;
-    top: -0.25rem !important;
-    right: -0.25rem !important;
-    left: auto !important;
-
-    width: auto !important;
-    min-width: 19px !important;
-    height: 19px !important;
-    padding: 0 5px !important;
-
-    color: var(--bb-primary-inverse) !important;
-    background-color: var(--bb-primary) !important;
-    border: 0.125rem solid var(--bb-body-bg) !important;
-    border-radius: var(--bb-radius-pill) !important;
-
-    font-size: var(--bb-fs-2xs) !important;
-    font-weight: var(--bb-fw-bold) !important;
-    line-height: 1 !important;
 }
 
 /* =====================================
@@ -570,7 +504,7 @@
     opacity: 0;
     visibility: hidden;
 
-    background-color: rgba(17, 24, 39, 0.52);
+    background-color: var(--bb-web-header-overlay-bg);
 
     transition:
         opacity var(--bb-transition-normal),
@@ -590,7 +524,7 @@ body.bb-web-sidebar-open {
    Desktop Helpers
 ===================================== */
 
-.is-desktop-only {
+.bb-web-header .is-desktop-only {
     display: inline-flex;
 }
 
@@ -664,8 +598,8 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
 
     .bb-web-header-category-host,
     .bb-web-header-search,
-    .is-desktop-only {
-        display: none !important;
+    .bb-web-header .is-desktop-only {
+        display: none;
     }
 
     .bb-web-header-brand-wrap {
@@ -687,6 +621,10 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
 }
 
 @media (max-width: 767.98px) {
+    .bb-web-header {
+        --bb-web-header-action-size: 2.375rem;
+    }
+
     .bb-web-header-inner {
         min-height: 70px;
         gap: 12px;
@@ -708,6 +646,10 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
 }
 
 @media (max-width: 575.98px) {
+    .bb-web-header {
+        --bb-web-header-action-size: 2.25rem;
+    }
+
     .bb-web-header-inner {
         gap: 0.5rem;
     }

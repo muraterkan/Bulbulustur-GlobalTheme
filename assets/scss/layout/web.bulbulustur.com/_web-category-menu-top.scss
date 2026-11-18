@@ -13,7 +13,8 @@
     display: inline-flex;
     align-items: center;
 
-    --bb-category-overlay-top: 0px;
+    --bb-category-overlay-top: 0;
+    --bb-category-overlay-bg: color-mix(in srgb, var(--bb-dark) 58%, transparent);
     --bb-category-panel-z: 1080;
     --bb-category-overlay-z: 1070;
     --bb-category-panel-width: 1430px;
@@ -24,7 +25,7 @@
 ===================================== */
 
 .bb-category-menu-trigger {
-    min-height: 48px;
+    min-height: var(--bb-web-header-search-height, 3rem);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +123,7 @@
 
     z-index: var(--bb-category-overlay-z);
 
-    background-color: rgba(17, 24, 39, 0.58);
+    background-color: var(--bb-category-overlay-bg);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -423,11 +424,11 @@ body.bb-category-menu-open {
 }
 
 .bb-category-menu-panel .bb-category-menu-content {
-    display: none !important;
+    display: none;
 }
 
 .bb-category-menu-panel .bb-category-menu-content.is-active {
-    display: block !important;
+    display: block;
 }
 
 .bb-category-menu-content {

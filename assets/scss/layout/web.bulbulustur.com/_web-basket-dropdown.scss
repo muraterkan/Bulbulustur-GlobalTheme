@@ -4,30 +4,40 @@
 ===================================== */
 
 .bb-basket-dropdown {
+    --bb-basket-dropdown-trigger-size: var(--bb-web-header-action-size, 2.5rem);
+    --bb-basket-dropdown-count-size: var(--bb-web-header-action-badge-size, 1.1875rem);
+    --bb-basket-dropdown-bg: var(--bb-web-header-bg, var(--bb-body-bg));
+    --bb-basket-dropdown-border-color: var(--bb-border-color);
+
     position: relative;
 }
 
 .bb-basket-dropdown-trigger {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: var(--bb-basket-dropdown-trigger-size);
+    height: var(--bb-basket-dropdown-trigger-size);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--bb-heading-color);
-    background-color: transparent;
-    border: 0;
+    background-color: var(--bb-basket-dropdown-bg);
+    border: var(--bb-border-width) solid var(--bb-basket-dropdown-border-color);
     border-radius: var(--bb-radius-pill);
     transition:
         color var(--bb-transition-fast),
         background-color var(--bb-transition-fast),
-        box-shadow var(--bb-transition-fast);
+        border-color var(--bb-transition-fast),
+        box-shadow var(--bb-transition-fast),
+        transform var(--bb-transition-fast);
 }
 
 .bb-basket-dropdown-trigger:hover,
 .bb-basket-dropdown-trigger[aria-expanded="true"] {
-    color: var(--bb-primary);
+    color: var(--bb-heading-color);
     background-color: var(--bb-tertiary-bg);
+    border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-basket-dropdown-border-color));
+    box-shadow: var(--bb-shadow-xs);
+    transform: translateY(-1px);
 }
 
 .bb-basket-dropdown-trigger .material-symbols-outlined {
@@ -37,18 +47,19 @@
 
 .bb-basket-dropdown-count {
     position: absolute;
-    top: 2px;
-    right: 0;
-    min-width: 20px;
-    height: 20px;
+    top: -0.25rem;
+    right: -0.25rem;
+    min-width: var(--bb-basket-dropdown-count-size);
+    height: var(--bb-basket-dropdown-count-size);
     padding: 0 5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--bb-primary-inverse);
     background-color: var(--bb-primary);
+    border: calc(var(--bb-border-width) * 2) solid var(--bb-basket-dropdown-bg);
     border-radius: var(--bb-radius-pill);
-    font-size: var(--bb-fs-sm);;
+    font-size: var(--bb-fs-2xs);;
     font-weight: var(--bb-fw-bold);
     line-height: 1;
 }
