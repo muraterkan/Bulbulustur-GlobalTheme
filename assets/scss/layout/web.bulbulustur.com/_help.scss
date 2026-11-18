@@ -2107,20 +2107,6 @@
         grid-template-columns: 1fr;
         align-items: start;
     }
-
-    .bb-help-search-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .bb-help-search-sidebar {
-        position: static;
-    }
-
-    .bb-help-search-filter-list {
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        overflow-x: auto;
-    }
 }
 
 @media (max-width: 767.98px) {
@@ -2131,51 +2117,11 @@
     .bb-help-search-results-section {
         padding: 20px 0 48px;
     }
-
-    .bb-help-search-result-item {
-        grid-template-columns: 40px minmax(0, 1fr);
-        align-items: flex-start;
-        padding: 18px;
-    }
-
-    .bb-help-search-result-arrow {
-        grid-column: 2;
-        width: 36px;
-        height: 36px;
-    }
-
-    .bb-help-search-panel-head {
-        padding: 18px;
-    }
-
-    .bb-help-search-input-group {
-        flex-wrap: nowrap;
-    }
 }
 
 @media (max-width: 575.98px) {
-    .bb-help-search-panel,
-    .bb-help-search-filter-card,
     .bb-help-search-contact-card {
         border-radius: var(--bb-radius-xl);
-    }
-
-    .bb-help-search-result-item {
-        grid-template-columns: 1fr;
-    }
-
-    .bb-help-search-result-arrow {
-        grid-column: 1;
-    }
-
-    .bb-help-search-input-group {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-    }
-
-    .bb-help-search-input-group .btn {
-        grid-column: 1 / -1;
-        width: 100%;
     }
 }
 
