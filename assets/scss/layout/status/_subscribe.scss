@@ -11,7 +11,7 @@
   min-height: 252px;
   padding: 34px 36px;
   color: var(--bb-white);
-  background: radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), 0.2), transparent 27%), radial-gradient(circle at 0% 100%, rgba(var(--bb-success-rgb), 0.12), transparent 30%), linear-gradient(135deg, var(--bb-color-navy-800) 0%, var(--bb-color-navy-700) 56%, var(--bb-color-navy-700) 100%);
+  background: radial-gradient(circle at 96% 0%, rgba(var(--bb-warning-rgb), 0.2), transparent 27%), radial-gradient(circle at 0% 100%, rgba(var(--bb-success-rgb), 0.12), transparent 30%), linear-gradient(135deg, var(--bb-navy-800) 0%, var(--bb-navy-700) 56%, var(--bb-navy-700) 100%);
   border: 1px solid color-mix(in srgb, var(--bb-white) 10%, transparent);
   border-radius: var(--bb-status-card-radius);
   box-shadow: var(--bb-shadow-lg);
@@ -147,7 +147,7 @@
 }
 
 .bb-status-subscribe-hero-chip {
-  --bb-chip-bg: color-mix(in srgb, var(--bb-color-navy-900) 38%, transparent);
+  --bb-chip-bg: color-mix(in srgb, var(--bb-navy-900) 38%, transparent);
   --bb-chip-color: color-mix(in srgb, var(--bb-white) 88%, transparent);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
   --bb-chip-padding-x: .7rem;

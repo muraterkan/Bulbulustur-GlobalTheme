@@ -1,20 +1,20 @@
 /* Status overrides (sayfalar arası son düzeltmeler, sayfalama, dil menüsü, tema anahtarı) — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 
 .bb-status-bar.nodata {
-  background: var(--bb-color-gray-300);
+  background: var(--bb-gray-300);
 }
 
 .bb-status-bar-tooltip-state.nodata {
-  background: var(--bb-color-gray-100);
-  color: var(--bb-color-gray-600);
+  background: var(--bb-gray-100);
+  color: var(--bb-gray-600);
 }
 
 .bb-status-bar-tooltip-note.nodata {
-  color: var(--bb-color-gray-600);
+  color: var(--bb-gray-600);
 }
 
 .bb-status-legend-item.nodata .bb-status-dot {
-  background: var(--bb-color-gray-300);
+  background: var(--bb-gray-300);
 }
 
 /* ---- Empty state / timeline title / history date ---- */
@@ -714,14 +714,14 @@
 .btn.bb-btn.bb-status-notice-link {
   --bb-btn-font-size: var(--bb-fs-base);
   font-size: var(--bb-fs-base);
-  background-color: var(--bb-color-navy-700);
-  border-color: var(--bb-color-navy-700);
+  background-color: var(--bb-navy-700);
+  border-color: var(--bb-navy-700);
   color: var(--bb-white);
 }
 
 .btn.bb-btn.bb-status-notice-link:hover {
-  background-color: var(--bb-color-navy-800);
-  border-color: var(--bb-color-navy-800);
+  background-color: var(--bb-navy-800);
+  border-color: var(--bb-navy-800);
   color: var(--bb-white);
 }
 
@@ -732,13 +732,13 @@
 }
 
 .btn.bb-btn.bb-status-notice-link {
-  background-color: var(--bb-color-navy-600);
-  border-color: var(--bb-color-navy-600);
+  background-color: var(--bb-navy-600);
+  border-color: var(--bb-navy-600);
 }
 
 .btn.bb-btn.bb-status-notice-link:hover {
-  background-color: var(--bb-color-navy-700);
-  border-color: var(--bb-color-navy-700);
+  background-color: var(--bb-navy-700);
+  border-color: var(--bb-navy-700);
 }
 
 .bb-status-live-title {
@@ -807,4 +807,20 @@
   line-height: var(--bb-line-height-heading);
   font-weight: var(--bb-fw-bold);
   text-transform: uppercase;
+}
+
+/* ---- Bileşen satırı (ana sayfa listesi): başlık, açıklama ve durum için tek boyut + tek ağırlık tokenı ---- */
+.bb-status-page {
+  --bb-status-component-fs: var(--bb-fs-base);
+  --bb-status-component-fw: var(--bb-fw-medium);
+}
+
+.bb-status-component-item-title,
+.bb-status-component-item-text,
+.bb-status-component-item .bb-status-card-chip,
+.bb-status-component-item .bb-status-component-state {
+  --bb-chip-font-size: var(--bb-status-component-fs);
+  --bb-chip-font-weight: var(--bb-status-component-fw);
+  font-size: var(--bb-status-component-fs);
+  font-weight: var(--bb-status-component-fw);
 }
