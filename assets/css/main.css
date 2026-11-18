@@ -28168,7 +28168,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* ================================================== */
 /* 7. Status Pages */
 /* Status projesinin genel token, shell, header, footer, card, border, radius ve layout varsayılanları burada. */
-/* Status project — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
+/* Status project — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-page {
   --bb-status-card-heading-size: var(--bb-fs-lg);
   --bb-status-container-max-width: 1320px;
@@ -28191,17 +28191,6 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: var(--bb-body-bg);
   color: var(--bb-body-color);
   font-size: var(--bb-fs-sm);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bb-body-bg);
-  color: var(--bb-body-color);
 }
 
 .bb-status-card,
@@ -28369,11 +28358,6 @@ body {
   white-space: nowrap;
 }
 
-.bb-status-footer-links a:first-child {
-  color: var(--bb-heading-color);
-  font-weight: var(--bb-fw-bold);
-}
-
 .bb-status-footer-links a:hover {
   color: var(--bb-primary);
   text-decoration: none;
@@ -28470,7 +28454,6 @@ body {
     display: none !important;
   }
 }
-/* Status index — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
 .bb-status-btn {
   --bb-btn-radius: var(--bb-status-card-inner-radius);
   --bb-btn-font-weight: var(--bb-fw-medium);
@@ -28516,6 +28499,7 @@ body {
   padding: var(--bb-status-card-padding);
 }
 
+/* Status index — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-index-page .bb-status-live-strip {
   margin: 28px 0 24px;
 }
@@ -29624,7 +29608,7 @@ body {
     padding-left: 0;
   }
 }
-/* Status history — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
+/* Status history — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-history-hero-wrap {
   background-color: var(--bb-body-bg);
   padding: 30px 0 0;
@@ -30102,7 +30086,7 @@ body {
     justify-content: center;
   }
 }
-/* Status incident — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
+/* Status incident — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-detail-main {
   padding: 28px 0 0;
 }
@@ -30583,7 +30567,7 @@ body {
     gap: 0.875rem;
   }
 }
-/* Status subscribe — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
+/* Status subscribe — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-subscribe-hero-wrap {
   background-color: var(--bb-body-bg);
   padding: 30px 0 0;
@@ -31203,7 +31187,7 @@ body {
     flex-direction: column;
   }
 }
-/* Status component — synchronized from Bulbulustur.Service.Status.API/wwwroot/css/status.css */
+/* Status component — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-component-hero-wrap {
   background-color: var(--bb-body-bg);
   padding: 30px 0 0;
@@ -31700,6 +31684,7 @@ body {
     padding: 0 18px 18px;
   }
 }
+/* Status overrides (sayfalar arası son düzeltmeler, sayfalama, dil menüsü, tema anahtarı) — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-bar.nodata {
   background: var(--bb-color-gray-300);
 }
