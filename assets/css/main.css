@@ -27656,7 +27656,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   background-color: var(--bb-status-color);
 }
 
-.bb-status-label {
+.bb-status .bb-status-label {
   color: var(--bb-body-color);
 }
 
@@ -28171,9 +28171,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 /* Status project — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
 .bb-status-page {
   --bb-status-card-heading-size: var(--bb-fs-lg);
-  --bb-status-container-max-width: 1320px;
-  --bb-status-container-x: 40px;
-  --bb-status-container-x-mobile: 20px;
+  --bb-container-max-width: 1320px;
   --bb-status-card-bg: var(--bb-body-bg);
   --bb-status-card-border-color: var(--bb-border-color);
   --bb-status-card-border: 1px solid var(--bb-status-card-border-color);
@@ -28228,11 +28226,6 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-status-timeline-state,
 .bb-status-component-section-label {
   border-radius: var(--bb-status-pill-radius);
-}
-
-.bb-status-container {
-  width: min(var(--bb-status-container-max-width), 100% - var(--bb-status-container-x));
-  margin: 0 auto;
 }
 
 .bb-status-header {
@@ -28400,9 +28393,8 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   }
 }
 @media (max-width: 767.98px) {
-  .bb-status-container,
   .bb-status-live-holder {
-    width: min(100%, 100% - var(--bb-status-container-x-mobile));
+    width: min(100%, 100% - 1.25rem);
   }
   .bb-status-header-inner {
     padding: 24px 0 18px;

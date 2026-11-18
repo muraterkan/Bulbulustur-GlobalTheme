@@ -2,9 +2,7 @@
 
 .bb-status-page {
   --bb-status-card-heading-size: var(--bb-fs-lg);
-  --bb-status-container-max-width: 1320px;
-  --bb-status-container-x: 40px;
-  --bb-status-container-x-mobile: 20px;
+  --bb-container-max-width: 1320px;
   --bb-status-card-bg: var(--bb-body-bg);
   --bb-status-card-border-color: var(--bb-border-color);
   --bb-status-card-border: 1px solid var(--bb-status-card-border-color);
@@ -59,11 +57,6 @@
 .bb-status-timeline-state,
 .bb-status-component-section-label {
   border-radius: var(--bb-status-pill-radius);
-}
-
-.bb-status-container {
-  width: min(var(--bb-status-container-max-width), 100% - var(--bb-status-container-x));
-  margin: 0 auto;
 }
 
 .bb-status-header {
@@ -233,9 +226,8 @@
 }
 
 @media (max-width: 767.98px) {
-  .bb-status-container,
   .bb-status-live-holder {
-    width: min(100%, 100% - var(--bb-status-container-x-mobile));
+    width: min(100%, 100% - 1.25rem);
   }
   .bb-status-header-inner {
     padding: 24px 0 18px;
