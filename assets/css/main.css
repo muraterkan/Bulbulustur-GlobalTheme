@@ -43544,13 +43544,19 @@ body.bb-category-menu-open {
       --bb-blog-accent-text,
       color-mix(in srgb, var(--bb-blog-special-accent) 76%, var(--bb-emphasis-color))
   );
+  --bb-blog-special-bg:
+      radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 20%, transparent) 0, transparent 30%),
+      linear-gradient(135deg, var(--bb-blog-special-dark-bg) 0%, color-mix(in srgb, var(--bb-blog-special-dark-bg) 86%, var(--bb-info, var(--bb-primary))) 100%);
+  --bb-blog-special-kicker-bg: color-mix(in srgb, var(--bb-blog-special-on-dark) 12%, transparent);
+  --bb-blog-special-kicker-color: color-mix(in srgb, var(--bb-blog-special-accent) 36%, var(--bb-blog-special-on-dark));
+  --bb-blog-special-text-color: color-mix(in srgb, var(--bb-blog-special-on-dark) 72%, transparent);
   position: relative;
   overflow: hidden;
   margin: 46px 0;
   padding: 30px;
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-blog-special-on-dark) 10%, transparent);
   border-radius: var(--bb-radius-2xl);
-  background: radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 20%, transparent) 0, transparent 30%), linear-gradient(135deg, var(--bb-blog-special-dark-bg) 0%, color-mix(in srgb, var(--bb-blog-special-dark-bg) 86%, var(--bb-info, var(--bb-primary))) 100%);
+  background: var(--bb-blog-special-bg);
   color: var(--bb-blog-special-on-dark);
   box-shadow: var(--bb-shadow-lg);
 }
@@ -43572,7 +43578,7 @@ body.bb-category-menu-open {
   padding: 0 0.625rem;
   margin-bottom: 9px;
   border-radius: var(--bb-radius-pill);
-  background-color: color-mix(in srgb, var(--bb-blog-special-on-dark) 12%, transparent);
+  background-color: var(--bb-blog-special-kicker-color);
   color: color-mix(in srgb, var(--bb-blog-special-accent) 36%, var(--bb-blog-special-on-dark));
   font-size: var(--bb-fs-xs);
   font-weight: var(--bb-fw-bold);
@@ -43598,7 +43604,7 @@ body.bb-category-menu-open {
 .bb-blog-special-text {
   max-width: 720px;
   margin: 7px 0 0;
-  color: color-mix(in srgb, var(--bb-blog-special-on-dark) 72%, transparent);
+  color: var(--bb-blog-special-text-color);
   font-size: var(--bb-fs-sm);
   line-height: var(--bb-line-height-content);
 }
@@ -43718,23 +43724,19 @@ body.bb-category-menu-open {
 }
 
 /* =====================================
-   Special Shelf Dark / Soft Dark
+   Special Shelf Dark Tokens
 ===================================== */
 [data-bs-theme=dark] .bb-blog-special-section {
   --bb-blog-special-dark-bg: var(--bb-body-bg);
   --bb-blog-special-on-dark: var(--bb-emphasis-color);
   --bb-blog-special-card-bg: var(--bb-surface-elevated, var(--bb-body-bg));
   --bb-blog-special-card-border: color-mix(in srgb, var(--bb-border-color) 86%, transparent);
-  background: radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 16%, transparent) 0, transparent 30%), linear-gradient(135deg, color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-blog-special-accent)) 0%, color-mix(in srgb, var(--bb-body-bg) 82%, var(--bb-blog-special-accent)) 100%);
-}
-
-[data-bs-theme=dark] .bb-blog-special-kicker {
-  background-color: color-mix(in srgb, var(--bb-blog-special-accent) 14%, var(--bb-body-bg));
-  color: color-mix(in srgb, var(--bb-blog-special-accent) 84%, var(--bb-emphasis-color));
-}
-
-[data-bs-theme=dark] .bb-blog-special-text {
-  color: var(--bb-secondary-color);
+  --bb-blog-special-bg:
+      radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 16%, transparent) 0, transparent 30%),
+      linear-gradient(135deg, color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-blog-special-accent)) 0%, color-mix(in srgb, var(--bb-body-bg) 82%, var(--bb-blog-special-accent)) 100%);
+  --bb-blog-special-kicker-bg: color-mix(in srgb, var(--bb-blog-special-accent) 14%, var(--bb-body-bg));
+  --bb-blog-special-kicker-color: color-mix(in srgb, var(--bb-blog-special-accent) 84%, var(--bb-emphasis-color));
+  --bb-blog-special-text-color: var(--bb-secondary-color);
 }
 
 /* =====================================
@@ -45393,6 +45395,15 @@ body.bb-category-menu-open {
    Blog Detail Author Card
 ===================================== */
 .bb-blog-author-card {
+  --bb-blog-author-card-border: color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+  --bb-blog-author-card-bg:
+      radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 20%, transparent) 0, transparent 34%),
+      var(--bb-surface-elevated, var(--bb-body-bg));
+  --bb-blog-author-avatar-border: color-mix(in srgb, var(--bb-white) 70%, transparent);
+  --bb-blog-author-avatar-bg:
+      linear-gradient(135deg, var(--bb-emphasis-color) 0%, color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-primary)) 100%);
+  --bb-blog-author-label-bg: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-body-bg));
+  --bb-blog-author-label-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-emphasis-color));
   position: relative;
   display: grid;
   grid-template-columns: 5.375rem minmax(0, 1fr);
@@ -45400,9 +45411,9 @@ body.bb-category-menu-open {
   align-items: center;
   overflow: hidden;
   padding: 1.375rem;
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+  border: var(--bb-border-width) solid var(--bb-blog-author-card-border);
   border-radius: var(--bb-radius-2xl);
-  background: radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 20%, transparent) 0, transparent 34%), var(--bb-surface-elevated, var(--bb-body-bg));
+  background: var(--bb-blog-author-card-bg);
   box-shadow: var(--bb-shadow-xs);
 }
 
@@ -45425,9 +45436,9 @@ body.bb-category-menu-open {
   overflow: hidden;
   width: 5.375rem;
   height: 5.375rem;
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 70%, transparent);
+  border: var(--bb-border-width) solid var(--bb-blog-author-avatar-border);
   border-radius: var(--bb-radius-2xl);
-  background: linear-gradient(135deg, var(--bb-emphasis-color) 0%, color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-primary)) 100%);
+  background: var(--bb-blog-author-avatar-bg);
   box-shadow: var(--bb-shadow-sm);
 }
 
@@ -45457,7 +45468,7 @@ body.bb-category-menu-open {
   padding: 0 0.625rem;
   margin-bottom: 0.5625rem;
   border-radius: var(--bb-radius-pill);
-  background-color: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-body-bg));
+  background-color: var(--bb-blog-author-label-color);
   color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-emphasis-color));
   font-size: var(--bb-fs-xs);
   line-height: 1;
@@ -45516,21 +45527,18 @@ body.bb-category-menu-open {
 }
 
 /* =====================================
-   Blog Detail Author Card Dark
+   Blog Detail Author Card Dark Tokens
 ===================================== */
 [data-bs-theme=dark] .bb-blog-author-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
-  background: radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 16%, transparent) 0, transparent 34%), var(--bb-surface-elevated, var(--bb-body-bg));
-}
-
-[data-bs-theme=dark] .bb-blog-author-avatar {
-  border-color: color-mix(in srgb, var(--bb-white) 14%, transparent);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-body-bg)) 0%, color-mix(in srgb, var(--bb-primary) 24%, var(--bb-body-bg)) 100%);
-}
-
-[data-bs-theme=dark] .bb-blog-author-label {
-  background-color: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-body-bg));
-  color: color-mix(in srgb, var(--bb-primary) 84%, var(--bb-emphasis-color));
+  --bb-blog-author-card-border: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  --bb-blog-author-card-bg:
+      radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 16%, transparent) 0, transparent 34%),
+      var(--bb-surface-elevated, var(--bb-body-bg));
+  --bb-blog-author-avatar-border: color-mix(in srgb, var(--bb-white) 14%, transparent);
+  --bb-blog-author-avatar-bg:
+      linear-gradient(135deg, color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-body-bg)) 0%, color-mix(in srgb, var(--bb-primary) 24%, var(--bb-body-bg)) 100%);
+  --bb-blog-author-label-bg: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-body-bg));
+  --bb-blog-author-label-color: color-mix(in srgb, var(--bb-primary) 84%, var(--bb-emphasis-color));
 }
 
 /* =====================================
@@ -56358,6 +56366,17 @@ body.bb-category-menu-open {
   --bb-brand-detail-cta-text: var(--bb-white, #fff);
   --bb-brand-detail-cta-muted: color-mix(in srgb, var(--bb-white, #fff) 78%, transparent);
   --bb-brand-detail-cta-border: color-mix(in srgb, var(--bb-white, #fff) 12%, transparent);
+  --bb-brand-detail-trust-shadow:
+      0 1.5rem 4rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+      var(--bb-shadow-xs);
+  --bb-brand-detail-card-shadow:
+      0 1rem 2.75rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
+      var(--bb-shadow-xs);
+  --bb-brand-detail-card-surface: var(--bb-brand-detail-surface-strong);
+  --bb-brand-detail-logo-frame-bg: var(--bb-body-bg);
+  --bb-brand-detail-info-head-bg:
+      radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 12%, transparent), transparent 10rem),
+      color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 [data-bs-theme=dark] {
@@ -56383,6 +56402,15 @@ body.bb-category-menu-open {
   --bb-brand-detail-cta-text: var(--bb-emphasis-color);
   --bb-brand-detail-cta-muted: color-mix(in srgb, var(--bb-emphasis-color) 76%, transparent);
   --bb-brand-detail-cta-border: color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent);
+  --bb-brand-detail-trust-shadow:
+      0 1rem 2.75rem color-mix(in srgb, var(--bb-black, #000) 20%, transparent),
+      var(--bb-shadow-xs);
+  --bb-brand-detail-card-shadow: var(--bb-brand-detail-trust-shadow);
+  --bb-brand-detail-card-surface: var(--bb-brand-detail-surface);
+  --bb-brand-detail-logo-frame-bg: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
+  --bb-brand-detail-info-head-bg:
+      radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 15%, transparent), transparent 10rem),
+      color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 /* =====================================
@@ -56546,7 +56574,7 @@ body.bb-category-menu-open {
   justify-content: center;
   min-height: clamp(12rem, 18vw, 16rem);
   padding: clamp(1.5rem, 4vw, 2.75rem);
-  background-color: var(--bb-body-bg);
+  background-color: var(--bb-brand-detail-logo-frame-bg);
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 70%, transparent);
   border-radius: calc(var(--bb-radius-2xl) - 0.375rem);
 }
@@ -56585,10 +56613,10 @@ body.bb-category-menu-open {
 
 .bb-brand-detail-trust-shell {
   overflow: hidden;
-  background-color: var(--bb-brand-detail-surface-strong);
+  background-color: var(--bb-brand-detail-card-surface);
   border: var(--bb-border-width) solid var(--bb-brand-detail-border);
   border-radius: var(--bb-radius-2xl);
-  box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent), var(--bb-shadow-xs);
+  box-shadow: var(--bb-brand-detail-trust-shadow);
 }
 
 .bb-brand-detail-trust-grid {
@@ -56711,10 +56739,10 @@ body.bb-category-menu-open {
 
 .bb-brand-detail-card {
   min-width: 0;
-  background-color: var(--bb-brand-detail-surface-strong);
+  background-color: var(--bb-brand-detail-card-surface);
   border: var(--bb-border-width) solid var(--bb-brand-detail-border);
   border-radius: var(--bb-radius-2xl);
-  box-shadow: 0 1rem 2.75rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent), var(--bb-shadow-xs);
+  box-shadow: var(--bb-brand-detail-card-shadow);
 }
 
 .bb-brand-detail-about-card {
@@ -56752,7 +56780,7 @@ body.bb-category-menu-open {
 
 .bb-brand-detail-info-card-head {
   padding: var(--bb-space-5);
-  background: radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 12%, transparent), transparent 10rem), color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
+  background: var(--bb-brand-detail-info-head-bg);
   border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 70%, transparent);
 }
 
@@ -56970,23 +56998,6 @@ body.bb-category-menu-open {
 .bb-brand-detail-banner-shell {
   overflow: hidden;
   border-radius: var(--bb-radius-2xl);
-}
-
-/* =====================================
-   Dark Mode Fine Tuning
-===================================== */
-[data-bs-theme=dark] .bb-brand-detail-trust-shell,
-[data-bs-theme=dark] .bb-brand-detail-card {
-  background-color: var(--bb-brand-detail-surface);
-  box-shadow: 0 1rem 2.75rem color-mix(in srgb, var(--bb-black, #000) 20%, transparent), var(--bb-shadow-xs);
-}
-
-[data-bs-theme=dark] .bb-brand-detail-page-hero-logo-frame {
-  background-color: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
-}
-
-[data-bs-theme=dark] .bb-brand-detail-info-card-head {
-  background: radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 15%, transparent), transparent 10rem), color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 /* =====================================
