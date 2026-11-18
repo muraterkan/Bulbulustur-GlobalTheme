@@ -42241,12 +42241,6 @@ body.bb-category-menu-open {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-/* Wide desktop */
-@media (min-width: 1400px) {
-  .bb-product-card-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
 /* Compact product sections */
 .bb-product-card-grid-compact {
   --bb-product-card-grid-gap: 0.875rem;
