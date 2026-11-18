@@ -50,6 +50,18 @@
     --bb-brand-detail-cta-text: var(--bb-white, #fff);
     --bb-brand-detail-cta-muted: color-mix(in srgb, var(--bb-white, #fff) 78%, transparent);
     --bb-brand-detail-cta-border: color-mix(in srgb, var(--bb-white, #fff) 12%, transparent);
+
+    --bb-brand-detail-trust-shadow:
+        0 1.5rem 4rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
+        var(--bb-shadow-xs);
+    --bb-brand-detail-card-shadow:
+        0 1rem 2.75rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
+        var(--bb-shadow-xs);
+    --bb-brand-detail-card-surface: var(--bb-brand-detail-surface-strong);
+    --bb-brand-detail-logo-frame-bg: var(--bb-body-bg);
+    --bb-brand-detail-info-head-bg:
+        radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 12%, transparent), transparent 10rem),
+        color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 [data-bs-theme="dark"] {
@@ -81,6 +93,16 @@
     --bb-brand-detail-cta-text: var(--bb-emphasis-color);
     --bb-brand-detail-cta-muted: color-mix(in srgb, var(--bb-emphasis-color) 76%, transparent);
     --bb-brand-detail-cta-border: color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent);
+
+    --bb-brand-detail-trust-shadow:
+        0 1rem 2.75rem color-mix(in srgb, var(--bb-black, #000) 20%, transparent),
+        var(--bb-shadow-xs);
+    --bb-brand-detail-card-shadow: var(--bb-brand-detail-trust-shadow);
+    --bb-brand-detail-card-surface: var(--bb-brand-detail-surface);
+    --bb-brand-detail-logo-frame-bg: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
+    --bb-brand-detail-info-head-bg:
+        radial-gradient(circle at 92% 10%, color-mix(in srgb, var(--bb-brand-detail-accent) 15%, transparent), transparent 10rem),
+        color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 /* =====================================
@@ -273,7 +295,7 @@
     min-height: clamp(12rem, 18vw, 16rem);
     padding: clamp(1.5rem, 4vw, 2.75rem);
 
-    background-color: var(--bb-body-bg);
+    background-color: var(--bb-brand-detail-logo-frame-bg);
     border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 70%, transparent);
     border-radius: calc(var(--bb-radius-2xl) - 0.375rem);
 }
@@ -315,12 +337,10 @@
 .bb-brand-detail-trust-shell {
     overflow: hidden;
 
-    background-color: var(--bb-brand-detail-surface-strong);
+    background-color: var(--bb-brand-detail-card-surface);
     border: var(--bb-border-width) solid var(--bb-brand-detail-border);
     border-radius: var(--bb-radius-2xl);
-    box-shadow:
-        0 1.5rem 4rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent),
-        var(--bb-shadow-xs);
+    box-shadow: var(--bb-brand-detail-trust-shadow);
 }
 
 .bb-brand-detail-trust-grid {
@@ -457,12 +477,10 @@
 .bb-brand-detail-card {
     min-width: 0;
 
-    background-color: var(--bb-brand-detail-surface-strong);
+    background-color: var(--bb-brand-detail-card-surface);
     border: var(--bb-border-width) solid var(--bb-brand-detail-border);
     border-radius: var(--bb-radius-2xl);
-    box-shadow:
-        0 1rem 2.75rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
-        var(--bb-shadow-xs);
+    box-shadow: var(--bb-brand-detail-card-shadow);
 }
 
 .bb-brand-detail-about-card {
@@ -501,13 +519,7 @@
 .bb-brand-detail-info-card-head {
     padding: var(--bb-space-5);
 
-    background:
-        radial-gradient(
-            circle at 92% 10%,
-            color-mix(in srgb, var(--bb-brand-detail-accent) 12%, transparent),
-            transparent 10rem
-        ),
-        color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
+    background: var(--bb-brand-detail-info-head-bg);
 
     border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 70%, transparent);
 }
@@ -761,32 +773,6 @@
 .bb-brand-detail-banner-shell {
     overflow: hidden;
     border-radius: var(--bb-radius-2xl);
-}
-
-/* =====================================
-   Dark Mode Fine Tuning
-===================================== */
-
-[data-bs-theme="dark"] .bb-brand-detail-trust-shell,
-[data-bs-theme="dark"] .bb-brand-detail-card {
-    background-color: var(--bb-brand-detail-surface);
-    box-shadow:
-        0 1rem 2.75rem color-mix(in srgb, var(--bb-black, #000) 20%, transparent),
-        var(--bb-shadow-xs);
-}
-
-[data-bs-theme="dark"] .bb-brand-detail-page-hero-logo-frame {
-    background-color: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
-}
-
-[data-bs-theme="dark"] .bb-brand-detail-info-card-head {
-    background:
-        radial-gradient(
-            circle at 92% 10%,
-            color-mix(in srgb, var(--bb-brand-detail-accent) 15%, transparent),
-            transparent 10rem
-        ),
-        color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
 }
 
 /* =====================================

@@ -509,23 +509,20 @@
         color-mix(in srgb, var(--bb-blog-special-accent) 76%, var(--bb-emphasis-color))
     );
 
+    --bb-blog-special-bg:
+        radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 20%, transparent) 0, transparent 30%),
+        linear-gradient(135deg, var(--bb-blog-special-dark-bg) 0%, color-mix(in srgb, var(--bb-blog-special-dark-bg) 86%, var(--bb-info, var(--bb-primary))) 100%);
+    --bb-blog-special-kicker-bg: color-mix(in srgb, var(--bb-blog-special-on-dark) 12%, transparent);
+    --bb-blog-special-kicker-color: color-mix(in srgb, var(--bb-blog-special-accent) 36%, var(--bb-blog-special-on-dark));
+    --bb-blog-special-text-color: color-mix(in srgb, var(--bb-blog-special-on-dark) 72%, transparent);
+
     position: relative;
     overflow: hidden;
     margin: 46px 0;
     padding: 30px;
     border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-blog-special-on-dark) 10%, transparent);
     border-radius: var(--bb-radius-2xl);
-    background:
-        radial-gradient(
-            circle at 90% 12%,
-            color-mix(in srgb, var(--bb-blog-special-accent) 20%, transparent) 0,
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            var(--bb-blog-special-dark-bg) 0%,
-            color-mix(in srgb, var(--bb-blog-special-dark-bg) 86%, var(--bb-info, var(--bb-primary))) 100%
-        );
+    background: var(--bb-blog-special-bg);
     color: var(--bb-blog-special-on-dark);
     box-shadow: var(--bb-shadow-lg);
 }
@@ -547,7 +544,7 @@
     padding: 0 0.625rem;
     margin-bottom: 9px;
     border-radius: var(--bb-radius-pill);
-    background-color: color-mix(in srgb, var(--bb-blog-special-on-dark) 12%, transparent);
+    background-color: var(--bb-blog-special-kicker-color);
     color: color-mix(in srgb, var(--bb-blog-special-accent) 36%, var(--bb-blog-special-on-dark));
     font-size: var(--bb-fs-xs);
     font-weight: var(--bb-fw-bold);
@@ -573,7 +570,7 @@
 .bb-blog-special-text {
     max-width: 720px;
     margin: 7px 0 0;
-    color: color-mix(in srgb, var(--bb-blog-special-on-dark) 72%, transparent);
+    color: var(--bb-blog-special-text-color);
     font-size: var(--bb-fs-sm);
     line-height: var(--bb-line-height-content);
 }
@@ -699,7 +696,7 @@
 }
 
 /* =====================================
-   Special Shelf Dark / Soft Dark
+   Special Shelf Dark Tokens
 ===================================== */
 
 [data-bs-theme="dark"] .bb-blog-special-section {
@@ -707,27 +704,12 @@
     --bb-blog-special-on-dark: var(--bb-emphasis-color);
     --bb-blog-special-card-bg: var(--bb-surface-elevated, var(--bb-body-bg));
     --bb-blog-special-card-border: color-mix(in srgb, var(--bb-border-color) 86%, transparent);
-
-    background:
-        radial-gradient(
-            circle at 90% 12%,
-            color-mix(in srgb, var(--bb-blog-special-accent) 16%, transparent) 0,
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-blog-special-accent)) 0%,
-            color-mix(in srgb, var(--bb-body-bg) 82%, var(--bb-blog-special-accent)) 100%
-        );
-}
-
-[data-bs-theme="dark"] .bb-blog-special-kicker {
-    background-color: color-mix(in srgb, var(--bb-blog-special-accent) 14%, var(--bb-body-bg));
-    color: color-mix(in srgb, var(--bb-blog-special-accent) 84%, var(--bb-emphasis-color));
-}
-
-[data-bs-theme="dark"] .bb-blog-special-text {
-    color: var(--bb-secondary-color);
+    --bb-blog-special-bg:
+        radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-blog-special-accent) 16%, transparent) 0, transparent 30%),
+        linear-gradient(135deg, color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-blog-special-accent)) 0%, color-mix(in srgb, var(--bb-body-bg) 82%, var(--bb-blog-special-accent)) 100%);
+    --bb-blog-special-kicker-bg: color-mix(in srgb, var(--bb-blog-special-accent) 14%, var(--bb-body-bg));
+    --bb-blog-special-kicker-color: color-mix(in srgb, var(--bb-blog-special-accent) 84%, var(--bb-emphasis-color));
+    --bb-blog-special-text-color: var(--bb-secondary-color);
 }
 
 /* =====================================

@@ -935,7 +935,17 @@
    Blog Detail Author Card
 ===================================== */
 
-.bb-blog-author-card {
+.bb-blog-author-card {    --bb-blog-author-card-border: color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+    --bb-blog-author-card-bg:
+        radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 20%, transparent) 0, transparent 34%),
+        var(--bb-surface-elevated, var(--bb-body-bg));
+    --bb-blog-author-avatar-border: color-mix(in srgb, var(--bb-white) 70%, transparent);
+    --bb-blog-author-avatar-bg:
+        linear-gradient(135deg, var(--bb-emphasis-color) 0%, color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-primary)) 100%);
+    --bb-blog-author-label-bg: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-body-bg));
+    --bb-blog-author-label-color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-emphasis-color));
+
+
     position: relative;
     display: grid;
     grid-template-columns: 5.375rem minmax(0, 1fr);
@@ -943,15 +953,9 @@
     align-items: center;
     overflow: hidden;
     padding: 1.375rem;
-    border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 88%, transparent);
+    border: var(--bb-border-width) solid var(--bb-blog-author-card-border);
     border-radius: var(--bb-radius-2xl);
-    background:
-        radial-gradient(
-            circle at 94% 12%,
-            color-mix(in srgb, var(--bb-primary) 20%, transparent) 0,
-            transparent 34%
-        ),
-        var(--bb-surface-elevated, var(--bb-body-bg));
+    background: var(--bb-blog-author-card-bg);
     box-shadow: var(--bb-shadow-xs);
 }
 
@@ -974,14 +978,9 @@
     overflow: hidden;
     width: 5.375rem;
     height: 5.375rem;
-    border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white) 70%, transparent);
+    border: var(--bb-border-width) solid var(--bb-blog-author-avatar-border);
     border-radius: var(--bb-radius-2xl);
-    background:
-        linear-gradient(
-            135deg,
-            var(--bb-emphasis-color) 0%,
-            color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-primary)) 100%
-        );
+    background: var(--bb-blog-author-avatar-bg);
     box-shadow: var(--bb-shadow-sm);
 }
 
@@ -1011,7 +1010,7 @@
     padding: 0 0.625rem;
     margin-bottom: 0.5625rem;
     border-radius: var(--bb-radius-pill);
-    background-color: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-body-bg));
+    background-color: var(--bb-blog-author-label-color);
     color: color-mix(in srgb, var(--bb-primary) 72%, var(--bb-emphasis-color));
     font-size: var(--bb-fs-xs);
     line-height: 1;
@@ -1070,33 +1069,19 @@
 }
 
 /* =====================================
-   Blog Detail Author Card Dark
+   Blog Detail Author Card Dark Tokens
 ===================================== */
 
 [data-bs-theme="dark"] .bb-blog-author-card {
-    border-color: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
-    background:
-        radial-gradient(
-            circle at 94% 12%,
-            color-mix(in srgb, var(--bb-primary) 16%, transparent) 0,
-            transparent 34%
-        ),
+    --bb-blog-author-card-border: color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+    --bb-blog-author-card-bg:
+        radial-gradient(circle at 94% 12%, color-mix(in srgb, var(--bb-primary) 16%, transparent) 0, transparent 34%),
         var(--bb-surface-elevated, var(--bb-body-bg));
-}
-
-[data-bs-theme="dark"] .bb-blog-author-avatar {
-    border-color: color-mix(in srgb, var(--bb-white) 14%, transparent);
-    background:
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-body-bg)) 0%,
-            color-mix(in srgb, var(--bb-primary) 24%, var(--bb-body-bg)) 100%
-        );
-}
-
-[data-bs-theme="dark"] .bb-blog-author-label {
-    background-color: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-body-bg));
-    color: color-mix(in srgb, var(--bb-primary) 84%, var(--bb-emphasis-color));
+    --bb-blog-author-avatar-border: color-mix(in srgb, var(--bb-white) 14%, transparent);
+    --bb-blog-author-avatar-bg:
+        linear-gradient(135deg, color-mix(in srgb, var(--bb-emphasis-color) 88%, var(--bb-body-bg)) 0%, color-mix(in srgb, var(--bb-primary) 24%, var(--bb-body-bg)) 100%);
+    --bb-blog-author-label-bg: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-body-bg));
+    --bb-blog-author-label-color: color-mix(in srgb, var(--bb-primary) 84%, var(--bb-emphasis-color));
 }
 
 /* =====================================
