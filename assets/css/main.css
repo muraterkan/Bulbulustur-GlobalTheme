@@ -34626,15 +34626,44 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   /* =====================================
      Web Project Layout Tokens
   ===================================== */
-  --bb-web-section-y: 4.5rem;
+  --bb-web-section-y: 4rem;
   --bb-web-section-y-sm: 3rem;
+  /* Semantic rhythm: Core spacing/typography is the source, Web names the role. */
+  --bb-web-section-gap: 3rem;
+  --bb-web-section-gap-tight: 2rem;
+  --bb-web-section-gap-tablet: 2.5rem;
+  --bb-web-section-gap-mobile: 2rem;
+  --bb-web-section-gap-last: 4rem;
+  --bb-web-stage-padding: var(--bb-space-6);
+  --bb-web-stage-padding-tablet: var(--bb-space-5);
+  --bb-web-stage-padding-mobile: var(--bb-space-4);
+  --bb-web-section-head-gap: var(--bb-space-5);
+  --bb-web-section-head-margin: var(--bb-space-6);
+  --bb-web-content-gap: var(--bb-space-4);
+  --bb-web-meta-gap: var(--bb-space-2);
+  --bb-web-page-title-size: clamp(var(--bb-fs-display-sm), 3.6vw, var(--bb-fs-display-lg));
+  --bb-web-section-title-size: clamp(var(--bb-fs-2xl), 2.8vw, var(--bb-fs-display-md));
+  --bb-web-subsection-title-size: clamp(var(--bb-fs-xl), 2.2vw, var(--bb-fs-display-sm));
+  --bb-web-lead-size: var(--bb-page-lead-font-size);
+  --bb-web-body-size: var(--bb-page-text-font-size);
+  --bb-web-meta-size: var(--bb-fs-sm);
+  --bb-web-kicker-size: var(--bb-fs-xs);
+  --bb-web-control-size: var(--bb-ui-font-size);
+  --bb-web-page-title-weight: var(--bb-fw-display);
+  --bb-web-section-title-weight: var(--bb-fw-title-strong);
+  --bb-web-subsection-title-weight: var(--bb-fw-title-strong);
+  --bb-web-page-title-line-height: var(--bb-line-height-display);
+  --bb-web-section-title-line-height: var(--bb-line-height-heading);
+  --bb-web-page-title-letter-spacing: var(--bb-display-letter-spacing);
+  --bb-web-section-title-letter-spacing: var(--bb-heading-letter-spacing);
+  --bb-web-kicker-letter-spacing: 0.08em;
   --bb-web-card-bg: var(--bb-surface-elevated);
   --bb-web-card-border-color: var(--bb-border-color);
   --bb-web-card-border: var(--bb-border-width) solid var(--bb-web-card-border-color);
   --bb-web-card-radius: var(--bb-radius-2xl);
   --bb-web-card-inner-radius: var(--bb-radius-lg);
   --bb-web-card-shadow: var(--bb-shadow-xs);
-  --bb-web-card-padding: 1.5rem;
+  --bb-web-card-padding: var(--bb-space-6);
   --bb-web-panel-bg: var(--bb-surface-elevated);
   --bb-web-panel-border: var(--bb-border-width) solid var(--bb-border-color);
   --bb-web-panel-radius: var(--bb-radius-lg);
@@ -34717,29 +34746,31 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--bb-web-meta-gap);
   color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
-  letter-spacing: 0.06em;
+  font-size: var(--bb-web-kicker-size);
+  font-weight: var(--bb-fw-semibold);
+  line-height: 1;
+  letter-spacing: var(--bb-web-kicker-letter-spacing);
   text-transform: uppercase;
 }
 
 .bb-web-title {
   color: var(--bb-heading-color);
-  font-weight: var(--bb-fw-extrabold);
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  font-weight: var(--bb-web-section-title-weight);
+  letter-spacing: var(--bb-web-section-title-letter-spacing);
+  line-height: var(--bb-web-section-title-line-height);
 }
 
 .bb-web-lead {
   color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-xl);
+  font-size: var(--bb-web-lead-size);
   line-height: var(--bb-line-height-content);
 }
 
 .bb-web-text {
   color: var(--bb-secondary-color);
+  font-size: var(--bb-web-body-size);
   line-height: var(--bb-line-height-content);
 }
 
@@ -36932,7 +36963,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
    Çekirdek .bb-section sözleşmesi (base/_page.scss) ezilmez: Web boşlukları yalnız .bb-web-page içinde (:where ile, özgüllük eskisi gibi) geçerli.
 ===================================== */
 :where(.bb-web-page) .bb-section {
-  margin-top: 3rem;
+  margin-top: var(--bb-web-section-gap);
 }
 
 :where(.bb-web-page) .bb-section:first-child {
@@ -36940,11 +36971,11 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 :where(.bb-web-page) .bb-section--tight {
-  margin-top: 2.125rem;
+  margin-top: var(--bb-web-section-gap-tight);
 }
 
 :where(.bb-web-page) .bb-section--last {
-  margin-bottom: 4rem;
+  margin-bottom: var(--bb-web-section-gap-last);
 }
 
 /* -------------------------------------
@@ -36953,7 +36984,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-page-stage {
   position: relative;
   overflow: hidden;
-  padding: 1.75rem;
+  padding: var(--bb-web-stage-padding);
   background-color: var(--bb-body-bg);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius-xl);
@@ -37028,8 +37059,8 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.125rem;
-  margin-bottom: 1.5rem;
+  gap: var(--bb-web-section-head-gap);
+  margin-bottom: var(--bb-web-section-head-margin);
 }
 
 .bb-section-head-main,
@@ -37040,13 +37071,13 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-section-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 0.625rem;
+  gap: var(--bb-web-meta-gap);
+  margin-bottom: var(--bb-web-meta-gap);
   color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-xs);
+  font-size: var(--bb-web-kicker-size);
   font-weight: var(--bb-fw-semibold);
   line-height: 1;
-  letter-spacing: 0.11em;
+  letter-spacing: var(--bb-web-kicker-letter-spacing);
   text-transform: uppercase;
 }
 
@@ -37058,17 +37089,17 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-section-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.625rem, 3vw, 2.125rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-size: var(--bb-web-section-title-size);
+  font-weight: var(--bb-web-section-title-weight);
+  line-height: var(--bb-web-section-title-line-height);
+  letter-spacing: var(--bb-web-section-title-letter-spacing);
 }
 
 .bb-section-text {
   max-width: 51.25rem;
-  margin: 0.5rem 0 0;
+  margin: var(--bb-web-meta-gap) 0 0;
   color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-sm);
+  font-size: var(--bb-section-text-font-size);
   line-height: var(--bb-line-height-content);
 }
 
@@ -37080,14 +37111,14 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  padding: 0.75rem 1.35rem;
+  gap: var(--bb-web-meta-gap);
+  padding: var(--bb-space-3) var(--bb-space-5);
   color: var(--bb-white, #ffffff);
   background-color: var(--bb-emphasis-color);
   border: var(--bb-border-width) solid var(--bb-emphasis-color);
   border-radius: var(--bb-radius);
   font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-bold);
+  font-weight: var(--bb-web-section-title-weight);
   line-height: 1;
   text-decoration: none !important;
   white-space: nowrap;
@@ -37126,11 +37157,11 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 .bb-page-component-host--spaced {
-  margin-top: 0.5rem;
+  margin-top: var(--bb-space-2);
 }
 
 .bb-page-component-host--after-head {
-  margin-top: 1.5rem;
+  margin-top: var(--bb-space-6);
 }
 
 .bb-page-component-host--content-groups {
@@ -37142,14 +37173,14 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 ------------------------------------- */
 @media (max-width: 991.98px) {
   :where(.bb-web-page) .bb-section {
-    margin-top: 2.375rem;
+    margin-top: var(--bb-web-section-gap-tablet);
   }
   .bb-section-head {
     align-items: flex-start;
     flex-direction: column;
   }
   .bb-page-stage {
-    padding: 1.375rem;
+    padding: var(--bb-web-stage-padding-tablet);
     border-radius: var(--bb-radius-lg);
   }
   .bb-section-link {
@@ -37158,10 +37189,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 @media (max-width: 575.98px) {
   :where(.bb-web-page) .bb-section {
-    margin-top: 1.875rem;
+    margin-top: var(--bb-web-section-gap-mobile);
   }
   .bb-page-stage {
-    padding: 1rem;
+    padding: var(--bb-web-stage-padding-mobile);
     border-radius: var(--bb-radius);
   }
   .bb-section-link {
