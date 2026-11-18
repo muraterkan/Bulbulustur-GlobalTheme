@@ -18,7 +18,7 @@ Genel hüküm: Core motoru doğru çalışıyor. Web SCSS (194 import edilen dos
 | P2-8 | `b2c-product-reviews.scss` (aktif, 30 KB, 37 `!important`) | AÇIK | Eski kuşaklar silindi. Sayfa sayfa `!important` sadeleştirme. |
 | P2-9 | `:root` token sızıntısı | YAPILDI | Web Razor kökleri doğrulandı. Review page tokenları `.bb-b2c-review-page`, detail review tokenları outer `.bb-b2c-detail-review-section` altına scope edildi; dark token blokları da aynı köklere bağlandı. |
 | P3-10 | `!important` borcu | AÇIK | En yüksekler: `b2c-product-reviews` 37, `b2c-product-details` 35, `_web-header` 28, `_help` 22, `order-contract` 19, `home` 17, `us-blog` 17, `_b2c-product-list-filters` 16, `order-checkout` 14. Toplu silme yok; sayfa sayfa, görünüm doğrulamasıyla. |
-| P3-11 | Sabit renk borcu | AÇIK | En çok: `b2b-category-page` 62, `_b2b-homepage-slider` 53, `b2b-special` 42, `b2b-home` 32, `_b2b-homepage-stats` 30, `_help` 30, `_cookie-consent-banner` 29, `components/product-card` 28. `product-card` renkleri önce bileşen tokenına (`--bb-product-card-sale-color` vb.), mümkünse Core semantic tokenına bağlanır. B2B hero sahneleri tasarım rengi olarak kalabilir. |
+| P3-11 | Sabit renk borcu | AÇIK | `product-card` Faz 1 içinde temizlendi: 23 benzersiz hex + 15 ham rgba → 0. Kalan yoğun alanlar: `b2b-category-page`, `_b2b-homepage-slider`, `b2b-special`, `b2b-home`, `_b2b-homepage-stats`, `_help`, `_cookie-consent-banner`. B2B hero sahneleri gerçek tasarım rengi ise kalabilir. |
 | P4-12 | Paket mimarisini ayırma | AÇIK (en son) | Bugün tek `main.css` kabul. Kalıcı hedef: Core → Panel / Status / Web / Draugr ayrı paketler. Panel 2 MB Web CSS'i, Status checkout/B2B CSS'ini indirmemeli. |
 
 ## Tasarım standardizasyon fazları
@@ -64,6 +64,23 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Aynı state aynı görsel anlamı taşır.
 - Hardcoded renk sayısı belirgin biçimde azalır.
 - Light/dark ve responsive temel ekranlar doğrulanır.
+
+**Durum:** KOD / CONTRACT TAMAMLANDI — görsel Web smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Gerçek Web Razor kullanımı doğrulandı: B2C kart 16, B2B kart 15 görünüm/component içinde kullanılıyor.
+- 65 adet `bb-product-card*` class contract'ı aynen korundu; selector kaldırılmadı veya yeni markup zorunluluğu getirilmedi.
+- 23 benzersiz ham hex ve 15 benzersiz ham `rgba()` renk kaldırıldı; Product Card kaynak dosyasında ham renk kalmadı.
+- Deal/sale → Core danger tokenları; interest/success/verified → success tokenları; MOQ/info → info tokenları ile bağlandı.
+- Rating ve trust renkleri component tokenları üzerinden Core/brand tokenlarına bağlandı.
+- Özel light/dark shadow değerleri `--bb-shadow-xs/sm` zincirine taşındı.
+- Ayrı Product Card dark palette bloğu kaldırıldı; surface/shadow/state renkleri Core light/dark token engine'den miras alıyor.
+- B2B/B2C ayrımı tek kart motorunda modifier/component tokenlarıyla korunuyor.
+- Ölü çift `padding` declaration temizlendi.
+- Dosya Sass partial contract'ına uygun olarak `components/_product-card.scss` oldu; import `components/product-card` şeklinde sadeleşti.
+- GitHub Build CSS başarılı.
+- Derlenmiş `main.css`: 2.925.985 → 2.924.813 bayt (-1.172 bayt).
+- Gerçek tarayıcı light/dark + responsive smoke testi bu repo ortamında yapılmadı; Web uygulama ayağa kaldırıldığında yalnız görsel regresyon kontrolü kalıyor.
 
 ---
 
