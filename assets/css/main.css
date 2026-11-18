@@ -56695,7 +56695,7 @@ body.bb-category-menu-open {
 .bb-brand-detail-section-title {
   margin: 0;
   color: var(--bb-brand-detail-heading);
-  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.045em;
@@ -56933,7 +56933,7 @@ body.bb-category-menu-open {
 .bb-brand-detail-management-cta h2 {
   margin: 0;
   color: var(--bb-brand-detail-cta-text);
-  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.04em;
@@ -69784,7 +69784,7 @@ body.bb-category-menu-open {
 .bb-message-panel-title {
   margin: 0 0 7px;
   color: var(--bb-heading-color);
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-size: var(--bb-web-subsection-title-size);
   line-height: var(--bb-line-height-heading);
   font-weight: var(--bb-fw-bold);
   letter-spacing: -0.025em;
@@ -77407,7 +77407,7 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-supplier-directory-section-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.025em;
@@ -77960,7 +77960,7 @@ body.bb-b2c-other-sellers-open {
   max-width: 36rem;
   margin: 0.875rem auto 0.625rem;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.025em;
@@ -83905,7 +83905,7 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-category-hero .bb-hero-panel-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(var(--bb-fs-base), 1.3vw, var(--bb-fs-xl));
+  font-size: var(--bb-fs-xl);
   font-weight: var(--bb-fw-extrabold, 800);
   line-height: 1.12;
   letter-spacing: var(--bb-letter-spacing-tight, -0.02em);
@@ -91051,7 +91051,7 @@ button:not(:disabled) {
   max-width: 65.625rem;
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: var(--bb-web-subsection-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.025em;
@@ -105507,7 +105507,7 @@ body.bb-b2c-detail-review-gallery-open {
 .bb-payment-checkout-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.875rem, 3vw, 2.375rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -108971,7 +108971,7 @@ body.bb-b2c-detail-review-gallery-open {
 .bb-store-index-seller-cta-title {
   margin: 0;
   color: var(--bb-heading-color);
-  font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   letter-spacing: -0.035em;
   line-height: 1.08;
