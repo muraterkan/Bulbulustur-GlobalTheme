@@ -229,6 +229,29 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - B2B/B2C/US sayfaları aynı tasarım sistemine ait görünür.
 - Hero componentleri Core selectorlarını ezmez.
 
+**Durum:** KOD / STATIC CONTRACT TAMAMLANDI — gerçek Web light/dark + responsive smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Faz, kullanıcının IDE'den gönderdiği güncel GlobalTheme `main` baseline'ı `77693f57` üzerinden yürütüldü; önceki generated CSS'e geri dönülmedi.
+- Ortak `web-page-hero.scss` motoruna dört semantic family eklendi: `bb-hero-editorial`, `bb-hero-marketplace`, `bb-hero-detail`, `bb-hero-branded`.
+- Base `bb-hero` padding, background, border, title ve lead kararları semantic tokenlara taşındı: `--bb-hero-padding-*`, `--bb-hero-title-*`, `--bb-hero-lead-size`, `--bb-hero-bg`, `--bb-hero-border-color`.
+- Mevcut `plain / soft / muted / dark / split` modifier contract'ı korunarak semantic family'lerle birlikte çalışacak hale getirildi.
+- Editorial family blog/news/about/career/story/investor/forum/our-team gibi içerik yüzeylerine; Marketplace family B2B/B2C category, campaign, sponsored/discovery ve supplier-directory yüzeylerine; Detail family company/store/product bağlamlarına; Branded family brand/special sahnelerine bağlandı.
+- Toplam 42 aktif Razor hero yüzeyi semantic family contract'ına alındı. Eski page-specific class'lar kaldırılmadı; application selector contract'ı additive biçimde korundu.
+- Campaign index'te hero sınıfları yalnız içerik div'inde duruyordu; gerçek `section.bb-hero.bb-hero-marketplace` anatomisine geçirildi.
+- Newsroom, Blog, Blog Detail, Career Jobs, Company detail ve Product Questions gibi sayfalarda title/lead/inner/actions yapıları ortak `bb-hero-*` anatomy sınıflarına bağlandı.
+- B2B/B2C Special için dinamik renk/görsel sözleşmesi page-specific variable'lardan generic `--bb-hero-branded-bg-color`, `--bb-hero-branded-image`, `--bb-hero-branded-color` contract'ına taşındı. B2B product special da aynı branded variable zincirini kullanıyor.
+- Branded family dinamik background image + color değerlerini ortak motor üzerinden tüketiyor; brand/special kimliği korunurken ayrı hero engine ihtiyacı kaldırıldı.
+- Blog'daki iki ayrı hero nesli, Newsroom/Career/B2B Category/Campaign Detail/Store/Product Reviews/Special sayfalarındaki generic surface/spacing/title/grid tekrarları ve Company detail/directory generic typography override'ları temizlendi.
+- Page-specific hero SCSS katmanlarından toplam yaklaşık 34.757 bayt tekrar kod kaldırıldı. Ortak `web-page-hero.scss` dört semantic family ve branded contract nedeniyle bilinçli olarak büyüdü.
+- Güncel kullanıcı baseline'ındaki derlenmiş `assets/css/main.css`: 2.893.935 → 2.867.270 bayt; net **-26.665 bayt**.
+- Web App commitleri: `50345aa4` — editorial/brand family; `3405cfad` — marketplace/detail/branded family; `09e56570` — shared hero anatomy; `cf3cf271` — remaining anatomy + campaign index; `e2af2fde` — generic branded variables; `3b55c46f` — remaining editorial coverage; `58c026e3` — remaining marketplace/detail coverage; `6998ec44` — remaining detail typography.
+- GlobalTheme commitleri: `ba92aa5a` — semantic hero families; `fc15ed7a` — duplicate semantic engines cleanup; `c0b93f97` — generic branded contract; `2cab84e1` — special heroes handoff; `190163cf` — editorial/brand consolidation; `2172206f` — remaining generic detail overrides cleanup.
+- Tüm Faz 5 GlobalTheme kod commitlerinin GitHub Build CSS run'ları başarılı. Final generated CSS commit'i: `f75c1411` — `build(css): regenerate from main.scss`.
+- Web App repository'sinde bu Razor commitleri için GitHub Actions run oluşmadı; CI sonucu varmış gibi kabul edilmedi.
+- `npm run check:contracts` / `npm run check:css` çalıştırılmış sayılmıyor; mevcut GlobalTheme workflow yalnız `build:css` çalıştırıyor.
+- Gerçek tarayıcı light/dark ve desktop/tablet/mobile smoke testi yapılmadı; kalan iş görsel regresyon kontrolüdür.
+
 ---
 
 ### Faz 6 — Spacing + Typography ritmi
