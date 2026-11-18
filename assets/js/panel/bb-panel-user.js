@@ -5,7 +5,7 @@
   var STORAGE_THEME = "bb-panel-theme";
   var STORAGE_LANGUAGE = "bb-panel-language";
   var html = document.documentElement;
-  var menu = document.querySelector(".bb-panel-user-menu");
+  var menu = document.querySelector(".bb-panel-user-menu:not(.bb-panel-sidebar-account-menu)");
   if (!menu) return;
 
   var languages = [
