@@ -46669,26 +46669,6 @@ body.bb-category-menu-open {
 /* -------------------------------------
    Hero
 ------------------------------------- */
-.bb-news-all-hero {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(3rem, 6vw, 5rem) 0;
-  background: radial-gradient(circle at top right, color-mix(in srgb, var(--bb-primary) 16%, transparent), transparent 17rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-body-bg)) 0%, var(--bb-body-bg) 100%);
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-}
-
-.bb-news-all-hero::after {
-  content: "";
-  position: absolute;
-  right: clamp(1rem, 9vw, 8rem);
-  bottom: -4rem;
-  width: 11rem;
-  height: 11rem;
-  background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .bb-news-all-hero-content {
   position: relative;
   z-index: 1;
@@ -46702,23 +46682,6 @@ body.bb-category-menu-open {
 .bb-news-all-hero-chip .material-symbols-outlined {
   font-size: var(--bb-fs-sm);
   line-height: 1;
-}
-
-.bb-news-all-hero-title {
-  margin: 0;
-  color: var(--bb-emphasis-color);
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.04;
-  letter-spacing: -0.055em;
-}
-
-.bb-news-all-hero-text {
-  max-width: 44rem;
-  margin: 1rem 0 0;
-  color: var(--bb-secondary-color);
-  font-size: clamp(1rem, 1.25vw, 1.1rem);
-  line-height: 1.85;
 }
 
 /* -------------------------------------
@@ -46961,9 +46924,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 575.98px) {
-  .bb-news-all-hero {
-    padding: 2.5rem 0;
-  }
   .bb-news-all-grid {
     grid-template-columns: 1fr;
   }
@@ -54789,15 +54749,6 @@ body.bb-category-menu-open {
    /career/jobs sayfası hero makyajı.
    Default bb-hero omurgası üzerine çalışır.
 ===================================== */
-.bb-career-jobs-page-hero {
-  --bb-hero-title-max-width: 48rem;
-  --bb-hero-lead-max-width: 50rem;
-  --bb-hero-aside-width: 25rem;
-  --bb-hero-grid-gap: clamp(2rem, 5vw, 4.75rem);
-  padding-top: clamp(2.75rem, 4vw, 3.5rem);
-  padding-bottom: clamp(3rem, 4.5vw, 3.875rem);
-}
-
 .bb-career-jobs-page-hero-content {
   min-width: 0;
 }
@@ -54815,22 +54766,6 @@ body.bb-category-menu-open {
   color: var(--bb-tertiary-color);
   font-size: var(--bb-fs-base);
   line-height: 1;
-}
-
-.bb-career-jobs-page-hero-title {
-  color: var(--bb-heading-color);
-  font-size: clamp(2.35rem, 4.2vw, 3.45rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1.06;
-  letter-spacing: -0.045em;
-}
-
-.bb-career-jobs-page-hero-text {
-  max-width: 50rem;
-  margin-top: 0.85rem;
-  color: var(--bb-secondary-color);
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  line-height: var(--bb-line-height-content);
 }
 
 .bb-career-jobs-page-hero-aside {
@@ -54891,13 +54826,6 @@ body.bb-category-menu-open {
   }
 }
 @media (max-width: 767.98px) {
-  .bb-career-jobs-page-hero {
-    padding-top: 2.25rem;
-    padding-bottom: 2.75rem;
-  }
-  .bb-career-jobs-page-hero-title {
-    font-size: clamp(2rem, 8vw, 2.55rem);
-  }
   .bb-career-jobs-page-hero-card {
     max-width: 100%;
   }
@@ -84431,62 +84359,6 @@ body.bb-b2c-other-sellers-open {
 /* =====================================
    Hero
 ===================================== */
-.bb-b2b-category-hero {
-  position: relative;
-  overflow: hidden;
-  padding-top: clamp(2.475rem, 4.4vw, 3.575rem);
-  padding-bottom: clamp(3.95rem, 6.9vw, 5.8rem);
-  background: radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--bb-info, #3b82f6) 11%, transparent), transparent 19rem), radial-gradient(circle at 70% 76%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 20rem), radial-gradient(circle at 10% 88%, color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent), transparent 16rem), linear-gradient(135deg, color-mix(in srgb, #f8fbff 92%, var(--bb-body-bg)), color-mix(in srgb, #dceaff 58%, var(--bb-body-bg)));
-}
-
-.bb-b2b-category-hero::before {
-  content: "";
-  position: absolute;
-  right: -7rem;
-  top: -8rem;
-  width: 22rem;
-  height: 22rem;
-  background-color: color-mix(in srgb, var(--bb-info, #3b82f6) 12%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.bb-b2b-category-hero::after {
-  content: "";
-  position: absolute;
-  left: -7rem;
-  bottom: -8rem;
-  width: 18rem;
-  height: 18rem;
-  background-color: color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.bb-b2b-category-hero .bb-container {
-  position: relative;
-  z-index: 2;
-}
-
-.bb-b2b-category-hero .bb-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.72fr);
-  align-items: center;
-  gap: clamp(1.75rem, 4vw, 3rem);
-}
-
-.bb-b2b-category-hero .bb-hero-content {
-  min-width: 0;
-}
-
-.bb-b2b-category-hero .bb-hero-title {
-  max-width: 48rem;
-}
-
-.bb-b2b-category-hero .bb-hero-text {
-  max-width: 47rem;
-}
-
 /* Hero label */
 .bb-b2b-category-hero-label {
   margin-bottom: 1.125rem;
@@ -84910,18 +84782,6 @@ body.bb-b2c-other-sellers-open {
 /* =====================================
    Dark
 ===================================== */
-[data-bs-theme=dark] .bb-b2b-category-hero {
-  background: radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--bb-info, #3b82f6) 10%, transparent), transparent 19rem), radial-gradient(circle at 70% 76%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 20rem), linear-gradient(135deg, color-mix(in srgb, #071b34 74%, var(--bb-body-bg)), color-mix(in srgb, #0f3b74 38%, var(--bb-body-bg)));
-}
-
-[data-bs-theme=dark] .bb-b2b-category-hero::before {
-  background-color: color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-category-hero::after {
-  background-color: color-mix(in srgb, var(--bb-white, #ffffff) 4%, transparent);
-}
-
 [data-bs-theme=dark] .bb-b2b-category-hero-label {
   background-color: color-mix(in srgb, var(--bb-success, #16a34a) 78%, var(--bb-emphasis-color));
   border-color: color-mix(in srgb, var(--bb-success, #16a34a) 54%, var(--bb-border-color));
@@ -96754,47 +96614,6 @@ body.bb-b2c-gallery-open {
 /* =====================================
    Hero
 ===================================== */
-.bb-b2c-review-hero {
-  position: relative;
-  overflow: hidden;
-  padding-top: clamp(2.5rem, 5vw, 4.75rem);
-  padding-bottom: clamp(2.75rem, 6vw, 5.25rem);
-  background: radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--bb-b2c-review-accent) 18%, transparent), transparent 23rem), radial-gradient(circle at 8% 92%, color-mix(in srgb, var(--bb-b2c-review-accent) 8%, transparent), transparent 18rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 86%, var(--bb-body-bg)) 0%, var(--bb-body-bg) 100%);
-  border-bottom: var(--bb-border-width) solid var(--bb-b2c-review-border);
-}
-
-.bb-b2c-review-hero::after {
-  content: "";
-  position: absolute;
-  right: -7rem;
-  bottom: -8rem;
-  width: 18rem;
-  height: 18rem;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-  pointer-events: none;
-}
-
-.bb-b2c-review-hero > .bb-container {
-  position: relative;
-  z-index: 2;
-}
-
-.bb-b2c-review-hero-breadcrumb {
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-b2c-review-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(28rem, 0.55fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-
-.bb-b2c-review-hero-content {
-  min-width: 0;
-}
-
 .bb-b2c-review-hero-label {
   gap: 0.4375rem;
   margin-bottom: 1rem;
@@ -96804,39 +96623,6 @@ body.bb-b2c-gallery-open {
   color: var(--bb-b2c-review-accent-strong);
   font-size: var(--bb-icon-size-sm);
   line-height: 1;
-}
-
-.bb-b2c-review-hero-title {
-  max-width: 52rem;
-  margin: 0;
-  color: var(--bb-b2c-review-heading);
-  font-size: clamp(2.35rem, 5vw, 4.35rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1.02;
-  letter-spacing: -0.06em;
-  overflow-wrap: anywhere;
-}
-
-.bb-b2c-review-hero-text {
-  max-width: 47rem;
-  margin: 1rem 0 0;
-  color: var(--bb-b2c-review-muted);
-  font-size: var(--bb-fs-md);
-  line-height: var(--bb-line-height-loose);
-}
-
-.bb-b2c-review-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-.bb-b2c-review-hero-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4375rem;
 }
 
 .bb-b2c-review-hero-btn .material-symbols-outlined {
@@ -108645,41 +108431,6 @@ body.bb-b2c-detail-review-gallery-open {
 /* =====================================
    Hero
 ===================================== */
-.bb-campaign-detail-hero {
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 22rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-body-bg)) 0%, var(--bb-body-bg) 100%);
-  border-bottom: var(--bb-border-width) solid var(--bb-campaign-detail-border);
-}
-
-.bb-campaign-detail-hero::after {
-  content: "";
-  position: absolute;
-  right: -7rem;
-  bottom: -8rem;
-  width: 18rem;
-  height: 18rem;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-  pointer-events: none;
-}
-
-.bb-campaign-detail-hero > .bb-container {
-  position: relative;
-  z-index: 2;
-}
-
-.bb-campaign-detail-hero-breadcrumb {
-  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-campaign-detail-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 0.85fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-
 .bb-campaign-detail-label {
   gap: 0.4375rem;
   margin-bottom: 1rem;
@@ -108689,25 +108440,6 @@ body.bb-b2c-detail-review-gallery-open {
   color: var(--bb-primary);
   font-size: var(--bb-icon-size-sm);
   line-height: 1;
-}
-
-.bb-campaign-detail-title {
-  max-width: 48rem;
-  margin: 0;
-  color: var(--bb-emphasis-color);
-  font-size: clamp(2.25rem, 5vw, 4.35rem);
-  font-weight: var(--bb-fw-extrabold);
-  line-height: 1.02;
-  letter-spacing: -0.06em;
-  overflow-wrap: anywhere;
-}
-
-.bb-campaign-detail-text {
-  max-width: 44rem;
-  margin: 1rem 0 0;
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-md);
-  line-height: var(--bb-line-height-loose);
 }
 
 .bb-campaign-detail-info-grid {
@@ -108769,25 +108501,6 @@ body.bb-b2c-detail-review-gallery-open {
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-base);
   overflow-wrap: anywhere;
-}
-
-.bb-campaign-detail-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-.bb-campaign-detail-hero-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4375rem;
-}
-
-.bb-campaign-detail-hero-actions .material-symbols-outlined {
-  font-size: var(--bb-icon-size-md);
-  line-height: 1;
 }
 
 /* =====================================
@@ -109538,28 +109251,6 @@ body.bb-b2c-detail-review-gallery-open {
 }
 
 /* Hero */
-.bb-store-index-hero {
-  position: relative;
-  overflow: hidden;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: radial-gradient(circle at 92% 0%, rgba(var(--bb-primary-rgb, 254, 215, 0), 0.18), transparent 20rem), linear-gradient(135deg, var(--bb-white, #ffffff), #fffdf2);
-  border-bottom: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), 0.07);
-}
-
-.bb-store-index-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(19rem, 0.65fr);
-  gap: 2rem;
-  align-items: center;
-  padding: 1.75rem;
-  border: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), 0.08);
-  border-radius: var(--bb-radius-2xl, 1.5rem);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 1rem 2.75rem rgba(var(--bb-dark-rgb, 51, 62, 72), 0.055);
-  backdrop-filter: blur(0.45rem);
-}
-
 .bb-store-index-hero-content {
   min-width: 0;
   max-width: 48rem;
@@ -109590,91 +109281,9 @@ body.bb-b2c-detail-review-gallery-open {
   font-size: var(--bb-fs-base);
 }
 
-.bb-store-index-hero-title {
-  margin: 0;
-  color: var(--bb-heading-color);
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: var(--bb-fw-black);
-  letter-spacing: -0.05em;
-  line-height: 1.05;
-}
-
-.bb-store-index-hero-text {
-  max-width: 44rem;
-  margin: 0.85rem 0 0;
-  color: var(--bb-body-color);
-  font-size: 0.98rem;
-  line-height: var(--bb-line-height-content);
-}
-
-.bb-store-index-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.2rem;
-}
-
-.bb-store-index-hero-primary-btn,
-.bb-store-index-hero-secondary-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  min-height: 2.85rem;
-  padding-inline: 1.2rem;
-  border-radius: var(--bb-radius-pill);
-  font-weight: var(--bb-fw-extrabold);
-}
-
-.bb-store-index-hero-primary-btn .material-symbols-outlined,
-.bb-store-index-hero-secondary-btn .material-symbols-outlined {
-  font-size: var(--bb-fs-md);
-}
-
 .bb-store-index-hero-aside {
   display: grid;
   gap: 0.85rem;
-}
-
-.bb-store-index-hero-card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 0.85rem;
-  row-gap: 0.15rem;
-  align-items: center;
-  padding: 0.95rem 1.05rem;
-  border: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), 0.07);
-  border-radius: var(--bb-radius-xl, 1rem);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 0.7rem 1.8rem rgba(var(--bb-dark-rgb, 51, 62, 72), 0.05);
-}
-
-.bb-store-index-hero-card-icon-container {
-  grid-row: span 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--bb-radius-pill);
-  color: var(--bb-primary-active, #d6b700);
-  background: rgba(var(--bb-primary-rgb, 254, 215, 0), 0.14);
-}
-
-.bb-store-index-hero-card-icon {
-  font-size: var(--bb-icon-size-sm);
-}
-
-.bb-store-index-hero-card-title {
-  color: var(--bb-heading-color);
-  font-size: var(--bb-fs-sm);
-  font-weight: var(--bb-fw-extrabold);
-}
-
-.bb-store-index-hero-card-text {
-  color: var(--bb-secondary, #77838f);
-  font-size: 0.78rem;
-  line-height: var(--bb-line-height-base);
 }
 
 /* Alpha */
