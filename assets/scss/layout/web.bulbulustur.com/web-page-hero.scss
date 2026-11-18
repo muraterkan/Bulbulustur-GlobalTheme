@@ -140,6 +140,36 @@
     --bb-hero-title-weight: var(--bb-fw-extrabold);
     --bb-hero-title-line-height: 0.98;
     --bb-hero-title-letter-spacing: -0.055em;
+
+    --bb-hero-branded-bg-color: var(--bb-coal-400);
+    --bb-hero-branded-image: none;
+    --bb-hero-branded-color: var(--bb-white);
+    --bb-hero-bg:
+        linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--bb-hero-branded-bg-color) 90%, var(--bb-black)),
+            color-mix(in srgb, var(--bb-hero-branded-bg-color) 70%, transparent)
+        ),
+        var(--bb-hero-branded-image),
+        radial-gradient(
+            circle at 86% 18%,
+            color-mix(in srgb, var(--bb-primary) 18%, transparent),
+            transparent 20rem
+        ),
+        var(--bb-hero-branded-bg-color);
+    --bb-hero-border-color: color-mix(in srgb, var(--bb-hero-branded-color) 14%, transparent);
+
+    color: var(--bb-hero-branded-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bb-hero-branded .bb-hero-label,
+.bb-hero-branded .bb-hero-title,
+.bb-hero-branded .bb-hero-lead,
+.bb-hero-branded .bb-hero-text {
+    color: var(--bb-hero-branded-color);
 }
 
 /* -------------------------------------
