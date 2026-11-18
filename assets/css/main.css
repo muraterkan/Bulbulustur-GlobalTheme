@@ -32722,9 +32722,19 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-layout-light-page {
   --bb-layout-light-content-width: 32rem;
   --bb-layout-light-header-action-offset: 0;
+  --bb-layout-light-page-bg:
+    radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28rem),
+    radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info) 6%, transparent), transparent 24rem),
+    radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 26rem),
+    linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 70%, var(--bb-body-bg)));
+  --bb-layout-light-card-bg: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
+  --bb-layout-light-card-border: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+  --bb-layout-light-card-shadow:
+    0 2.25rem 5.5rem color-mix(in srgb, var(--bb-emphasis-color) 9%, transparent),
+    0 0.25rem 1rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
   min-height: 100vh;
   color: var(--bb-body-color);
-  background: radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 14%, transparent), transparent 28rem), radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info, #3b82f6) 6%, transparent), transparent 24rem), radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 26rem), linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 70%, var(--bb-body-bg)));
+  background: var(--bb-layout-light-page-bg);
   overflow-x: hidden;
 }
 
@@ -32804,10 +32814,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-layout-light-card {
   width: 100%;
   overflow: hidden;
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+  background-color: var(--bb-layout-light-card-bg);
+  border: var(--bb-border-width) solid var(--bb-layout-light-card-border);
   border-radius: var(--bb-radius-xl);
-  box-shadow: 0 2.25rem 5.5rem color-mix(in srgb, var(--bb-emphasis-color) 9%, transparent), 0 0.25rem 1rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
+  box-shadow: var(--bb-layout-light-card-shadow);
 }
 
 .bb-layout-light-card-body {
@@ -32832,16 +32842,19 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* -------------------------------------
-   Dark
+   Dark tokens
 ------------------------------------- */
 [data-bs-theme=dark] .bb-layout-light-page {
-  background: radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 28rem), radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent), transparent 24rem), radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 7%, transparent), transparent 26rem), linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg)));
-}
-
-[data-bs-theme=dark] .bb-layout-light-card {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.28), 0 0.25rem 1rem rgba(0, 0, 0, 0.18);
+  --bb-layout-light-page-bg:
+    radial-gradient(circle at 50% -8%, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 28rem),
+    radial-gradient(circle at 16% 26%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 24rem),
+    radial-gradient(circle at 86% 82%, color-mix(in srgb, var(--bb-primary) 7%, transparent), transparent 26rem),
+    linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 62%, var(--bb-body-bg)));
+  --bb-layout-light-card-bg: color-mix(in srgb, var(--bb-surface-elevated) 92%, var(--bb-body-bg));
+  --bb-layout-light-card-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-layout-light-card-shadow:
+    0 2rem 5rem color-mix(in srgb, var(--bb-black) 28%, transparent),
+    0 0.25rem 1rem color-mix(in srgb, var(--bb-black) 18%, transparent);
 }
 
 /* -------------------------------------
@@ -100364,6 +100377,11 @@ body.bb-b2c-review-gallery-open {
   --bb-from-brand-caption-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, transparent);
   --bb-from-brand-overlay-start: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
   --bb-from-brand-overlay-end: color-mix(in srgb, var(--bb-body-bg) 74%, transparent);
+  --bb-from-brand-surface-background:
+    radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 32%),
+    radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 34%),
+    var(--bb-from-brand-surface-bg);
+  --bb-from-brand-floating-border: color-mix(in srgb, var(--bb-white) 64%, transparent);
   position: relative;
   margin: 1.625rem 0;
   overflow: hidden;
@@ -100378,7 +100396,7 @@ body.bb-b2c-review-gallery-open {
   position: relative;
   z-index: 1;
   padding: clamp(1.375rem, 3vw, 2.25rem);
-  background: radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 18%, transparent), transparent 32%), radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent), transparent 34%), var(--bb-from-brand-surface-bg);
+  background: var(--bb-from-brand-surface-background);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -100423,6 +100441,7 @@ body.bb-b2c-review-gallery-open {
 
 .bb-b2c-from-brand-count {
   background-color: color-mix(in srgb, var(--bb-surface-elevated) 70%, transparent);
+  border-color: var(--bb-from-brand-floating-border);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -100512,7 +100531,7 @@ body.bb-b2c-review-gallery-open {
   padding: 0.875rem 0.9375rem;
   color: var(--bb-emphasis-color);
   background-color: var(--bb-from-brand-caption-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent);
+  border: var(--bb-border-width) solid var(--bb-from-brand-floating-border);
   border-radius: var(--bb-radius);
   box-shadow: var(--bb-shadow-xs);
   text-align: center;
@@ -100541,22 +100560,18 @@ body.bb-b2c-review-gallery-open {
   line-height: var(--bb-line-height-base);
 }
 
-/* Dark */
+/* Dark tokens */
 [data-bs-theme=dark] .bb-b2c-from-brand {
   --bb-from-brand-surface-bg: color-mix(in srgb, var(--bb-body-bg) 34%, transparent);
   --bb-from-brand-card-bg: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
   --bb-from-brand-caption-bg: color-mix(in srgb, var(--bb-surface-elevated) 78%, transparent);
   --bb-from-brand-overlay-start: color-mix(in srgb, var(--bb-body-bg) 90%, transparent);
   --bb-from-brand-overlay-end: color-mix(in srgb, var(--bb-body-bg) 68%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2c-from-brand-surface {
-  background: radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 13%, transparent), transparent 32%), radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent), transparent 34%), var(--bb-from-brand-surface-bg);
-}
-
-[data-bs-theme=dark] .bb-b2c-from-brand-caption,
-[data-bs-theme=dark] .bb-b2c-from-brand-count {
-  border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  --bb-from-brand-surface-background:
+    radial-gradient(circle at 92% 6%, color-mix(in srgb, var(--bb-primary) 13%, transparent), transparent 32%),
+    radial-gradient(circle at 8% 96%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 34%),
+    var(--bb-from-brand-surface-bg);
+  --bb-from-brand-floating-border: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
 }
 
 /* Responsive */
@@ -102008,6 +102023,13 @@ body.bb-b2c-review-gallery-open {
       0 1.25rem 3.25rem color-mix(in srgb, var(--bb-emphasis-color) 10%, transparent),
       0 0.125rem 0.375rem color-mix(in srgb, var(--bb-emphasis-color) 4%, transparent);
   --bb-b2c-detail-review-gallery-overlay-bg: color-mix(in srgb, var(--bb-black, #000) 66%, transparent);
+  --bb-b2c-detail-review-card-surface: var(--bb-b2c-detail-review-surface-strong);
+  --bb-b2c-detail-review-card-shadow:
+      0 0.75rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent),
+      var(--bb-shadow-xs);
+  --bb-b2c-detail-review-photo-frame-bg: var(--bb-body-bg);
+  --bb-b2c-detail-review-photo-nav-bg: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
+  --bb-b2c-detail-review-photo-nav-hover-bg: var(--bb-body-bg);
 }
 
 [data-bs-theme=dark] .bb-b2c-detail-review-section {
@@ -102035,6 +102057,11 @@ body.bb-b2c-review-gallery-open {
       0 1.25rem 3.25rem color-mix(in srgb, var(--bb-black, #000) 28%, transparent),
       0 0.125rem 0.375rem color-mix(in srgb, var(--bb-black, #000) 14%, transparent);
   --bb-b2c-detail-review-gallery-overlay-bg: color-mix(in srgb, var(--bb-black, #000) 76%, transparent);
+  --bb-b2c-detail-review-card-surface: var(--bb-b2c-detail-review-surface);
+  --bb-b2c-detail-review-card-shadow: var(--bb-b2c-detail-review-shadow);
+  --bb-b2c-detail-review-photo-frame-bg: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
+  --bb-b2c-detail-review-photo-nav-bg: color-mix(in srgb, var(--bb-body-bg) 88%, transparent);
+  --bb-b2c-detail-review-photo-nav-hover-bg: color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-white, #fff) 4%);
 }
 
 /* =====================================
@@ -102100,10 +102127,10 @@ body.bb-b2c-review-gallery-open {
 .bb-b2c-detail-review-photos-card {
   overflow: hidden;
   padding: clamp(1.125rem, 2.5vw, 1.5rem);
-  background: radial-gradient(circle at 94% 8%, color-mix(in srgb, var(--bb-b2c-detail-review-accent) 8%, transparent), transparent 15rem), var(--bb-b2c-detail-review-surface-strong);
+  background: radial-gradient(circle at 94% 8%, color-mix(in srgb, var(--bb-b2c-detail-review-accent) 8%, transparent), transparent 15rem), var(--bb-b2c-detail-review-card-surface);
   border-color: var(--bb-b2c-detail-review-border);
   border-radius: var(--bb-radius-xl);
-  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--bb-emphasis-color) 5%, transparent), var(--bb-shadow-xs);
+  box-shadow: var(--bb-b2c-detail-review-card-shadow);
 }
 
 .bb-b2c-detail-review-card > *:first-child,
@@ -102220,7 +102247,7 @@ body.bb-b2c-review-gallery-open {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 1/1;
-  background-color: var(--bb-body-bg);
+  background-color: var(--bb-b2c-detail-review-photo-frame-bg);
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
   border-radius: var(--bb-radius-lg);
   box-shadow: var(--bb-shadow-xs);
@@ -102258,7 +102285,7 @@ body.bb-b2c-review-gallery-open {
   width: 2.75rem;
   height: 2.75rem;
   color: var(--bb-b2c-detail-review-heading);
-  background-color: color-mix(in srgb, var(--bb-body-bg) 92%, transparent);
+  background-color: var(--bb-b2c-detail-review-photo-nav-bg);
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 72%, transparent);
   border-radius: var(--bb-radius-pill);
   box-shadow: var(--bb-shadow-sm);
@@ -102268,7 +102295,7 @@ body.bb-b2c-review-gallery-open {
 }
 
 .bb-b2c-detail-review-photo-nav:hover {
-  background-color: var(--bb-body-bg);
+  background-color: var(--bb-b2c-detail-review-photo-nav-hover-bg);
   border-color: color-mix(in srgb, var(--bb-primary) 30%, var(--bb-border-color));
   transform: translateY(-50%) scale(1.04);
 }
@@ -102795,27 +102822,6 @@ body.bb-b2c-review-gallery-open {
 
 body.bb-b2c-detail-review-gallery-open {
   overflow: hidden;
-}
-
-/* =====================================
-   Dark Fine Tuning
-===================================== */
-[data-bs-theme=dark] .bb-b2c-detail-review-card,
-[data-bs-theme=dark] .bb-b2c-detail-review-photos-card {
-  background-color: var(--bb-b2c-detail-review-surface);
-  box-shadow: var(--bb-b2c-detail-review-shadow);
-}
-
-[data-bs-theme=dark] .bb-b2c-detail-review-photo-frame {
-  background-color: color-mix(in srgb, var(--bb-body-bg) 92%, var(--bb-white, #fff) 4%);
-}
-
-[data-bs-theme=dark] .bb-b2c-detail-review-photo-nav {
-  background-color: color-mix(in srgb, var(--bb-body-bg) 88%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2c-detail-review-photo-nav:hover {
-  background-color: color-mix(in srgb, var(--bb-body-bg) 94%, var(--bb-white, #fff) 4%);
 }
 
 /* =====================================
