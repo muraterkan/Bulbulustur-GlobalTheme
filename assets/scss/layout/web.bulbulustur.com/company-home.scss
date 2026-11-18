@@ -331,13 +331,6 @@
 .bb-b2b-company-home-component-card {
   min-width: 0;
   overflow: hidden;
-
-  padding: clamp(1rem, 2.4vw, 1.25rem);
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-home-shadow);
 }
 
 .bb-b2b-company-home-component-card:empty {
@@ -394,10 +387,6 @@
 
   .bb-b2b-company-home-business-types {
     font-size: var(--bb-fs-sm);;
-  }
-
-  .bb-b2b-company-home-component-card {
-    border-radius: var(--bb-radius-lg);
   }
 }
 

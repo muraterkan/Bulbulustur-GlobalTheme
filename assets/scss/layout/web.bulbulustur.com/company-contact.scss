@@ -194,13 +194,6 @@
   grid-template-columns: 6rem minmax(0, 1fr);
   gap: 1rem;
   align-items: center;
-
-  padding: 1.25rem;
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-contact-shadow);
 }
 
 .bb-b2b-company-contact-person-media {
@@ -293,15 +286,6 @@
 }
 
 /* Info */
-
-.bb-b2b-company-contact-info-card {
-  padding: 1.25rem;
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-contact-shadow);
-}
 
 .bb-b2b-company-contact-info-grid {
   display: grid;

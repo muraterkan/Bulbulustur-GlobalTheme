@@ -192,13 +192,6 @@
 
 .bb-b2b-company-reviews-summary-card {
   overflow: hidden;
-
-  padding: 1.25rem;
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-reviews-shadow);
 }
 
 .bb-b2b-company-reviews-info-card {
@@ -338,24 +331,8 @@
   gap: 0.875rem;
 }
 
-.bb-b2b-company-review-card {
-  padding: 1.125rem;
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-reviews-shadow);
-
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease,
-    transform 0.18s ease;
-}
-
 .bb-b2b-company-review-card:hover {
-  transform: translateY(-0.125rem);
   border-color: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-border-color));
-  box-shadow: var(--bb-b2b-company-reviews-shadow-hover);
 }
 
 .bb-b2b-company-review-card-head {
