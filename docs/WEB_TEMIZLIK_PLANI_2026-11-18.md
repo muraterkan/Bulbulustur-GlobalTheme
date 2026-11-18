@@ -17,7 +17,7 @@ Genel hüküm: Core motoru doğru çalışıyor. Web SCSS (194 import edilen dos
 | P2-7 | Popular categories varyantları | YAPILDI | Web Razor doğrulamasında bunların aynı componentin iki kuşağı olmadığı görüldü: `_B2CPopularProductCategories` `row/item`, `_B2CLevf/_B2CLevsPopularProductCategories` `grid/card` markup kullanıyor. İki varyant korundu; dosyalar `b2c-popular-product-categories-row.scss` ve `b2c-popular-product-categories-grid.scss` olarak net adlandırıldı, `111` ve belirsiz `_` adı kaldırıldı. |
 | P2-8 | `b2c-product-reviews.scss` (aktif, 30 KB, 37 `!important`) | AÇIK | Eski kuşaklar silindi. Sayfa sayfa `!important` sadeleştirme. |
 | P2-9 | `:root` token sızıntısı | YAPILDI | Web Razor kökleri doğrulandı. Review page tokenları `.bb-b2c-review-page`, detail review tokenları outer `.bb-b2c-detail-review-section` altına scope edildi; dark token blokları da aynı köklere bağlandı. |
-| P3-10 | `!important` borcu | AÇIK | En yüksekler: `b2c-product-reviews` 37, `b2c-product-details` 35, `_web-header` 28, `_help` 22, `order-contract` 19, `home` 17, `us-blog` 17, `_b2c-product-list-filters` 16, `order-checkout` 14. Toplu silme yok; sayfa sayfa, görünüm doğrulamasıyla. |
+| P3-10 | `!important` borcu | AÇIK | Web Header + Footer Faz 2 kapsamında 37 → 1 oldu; kalan tek kullanım Bootstrap `.text-muted` utility override'ı. En yüksek kalanlar: `b2c-product-reviews` 37, `b2c-product-details` 35, `_help` 22, `order-contract` 19, `home` 17, `us-blog` 17, `_b2c-product-list-filters` 16, `order-checkout` 14. Toplu silme yok; sayfa sayfa, görünüm doğrulamasıyla. |
 | P3-11 | Sabit renk borcu | AÇIK | `product-card` Faz 1 içinde temizlendi: 23 benzersiz hex + 15 ham rgba → 0. Kalan yoğun alanlar: `b2b-category-page`, `_b2b-homepage-slider`, `b2b-special`, `b2b-home`, `_b2b-homepage-stats`, `_help`, `_cookie-consent-banner`. B2B hero sahneleri gerçek tasarım rengi ise kalabilir. |
 | P4-12 | Paket mimarisini ayırma | AÇIK (en son) | Bugün tek `main.css` kabul. Kalıcı hedef: Core → Panel / Status / Web / Draugr ayrı paketler. Panel 2 MB Web CSS'i, Status checkout/B2B CSS'ini indirmemeli. |
 
@@ -101,6 +101,25 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Dropdown/basket/category/mobile menüler bozulmaz.
 - Footer light/dark görünümü tutarlıdır.
 - Header ve footer Core/Panel/Status selectorlarını ezmez.
+
+**Durum:** KOD / CONTRACT TAMAMLANDI — görsel Web smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Gerçek Web Razor contract'ı doğrulandı: `_Header`, `_HeaderTop`, `_CategoryMenuTop`, `_B2BMobileCategoryMenuMainCssPilot`, `_BasketDropdown` ve `_Footer` aktif uygulamada mevcut.
+- Faz kapsamındaki 8 SCSS dosyası birlikte tarandı; `_web-header-top.scss` ve `_web-mobile-category-menu.scss` mevcut contract açısından değişiklik gerektirmedi.
+- Account dropdown dosyasındaki iki ayrı jenerasyon tek kanonik tanıma indirildi; dosya 12.769 → 6.544 bayt oldu.
+- Header'ın basket componentini `#basketInvoker` / `#headerBasketCount` ID selectorları ve `!important` ile yeniden yazan katmanı kaldırıldı. Görsel contract `_web-basket-dropdown.scss` içine taşındı ve header action tokenlarını miras alıyor.
+- Header surface, border, shadow, spacing, logo/search/action boyutları `--bb-web-header-*` component tokenlarına alındı; Core `--bb-header-*`, `--bb-shadow-*`, `--bb-space-*` ve semantic token zincirinden besleniyor.
+- Header'a özel light/dark ham shadow tamiratı kaldırıldı; tema adaptasyonu Core shadow/surface tokenlarından geliyor.
+- Global `.is-desktop-only` selector sızıntısı `.bb-web-header .is-desktop-only` scope'una kapatıldı.
+- Account/language dropdown gölgeleri Core `--bb-shadow-xs/lg` tokenlarına bağlandı; ayrı dark shadow blokları kaldırıldı.
+- Category overlay rengi component tokenına alındı ve içerik state geçişlerindeki gereksiz `!important` kaldırıldı.
+- Footer language dropup'ta selector specificity düzeltilerek `!important` kaldırıldı; footer surface/link/typography yapısı mevcut `--bb-footer-*` token contract'ında korundu.
+- Faz kapsamındaki `!important` sayısı 37 → 1 oldu. Kalan tek kullanım `_web-header-top.scss` içindeki Bootstrap `.text-muted` utility override'ıdır; cascade gereği bilinçli bırakıldı.
+- Faz kapsamındaki ham sayısal `rgba()` kullanımı 23 → 0; ham hex kullanımı 0.
+- Kod commit: `a1fd6843` — `refactor(web): standardize header and footer shell`.
+- GitHub Build CSS başarılı; derlenmiş `main.css` commit'i: `756665b6`.
+- Gerçek tarayıcı light/dark + desktop/tablet/mobile smoke testi bu repo ortamında yapılmadı; Web uygulama ayağa kaldırıldığında yalnız görsel regresyon kontrolü kalıyor.
 
 ---
 
