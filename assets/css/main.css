@@ -85777,6 +85777,53 @@ body.bb-b2c-other-sellers-open {
    - .bb-b2b-featured-products-list
    - .bb-b2b-featured-products-bottom-banner
 ===================================== */
+.bb-b2b-featured-products-page {
+  --bb-b2b-featured-hero-bg:
+      radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 20rem),
+      radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 18rem),
+      linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg)), var(--bb-body-bg));
+  --bb-b2b-featured-picture-bg:
+      radial-gradient(
+          circle at 42% 34%,
+          color-mix(in srgb, var(--bb-surface-elevated) 96%, transparent),
+          color-mix(in srgb, var(--bb-primary) 7%, var(--bb-surface-elevated)) 68%,
+          color-mix(in srgb, var(--bb-primary) 12%, var(--bb-surface-elevated)) 100%
+      );
+  --bb-b2b-featured-picture-border: color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
+  --bb-b2b-featured-picture-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-surface-elevated) 72%, transparent),
+      0 1.5rem 3.5rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent);
+  --bb-b2b-featured-surface-bg: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
+  --bb-b2b-featured-surface-border: color-mix(in srgb, var(--bb-border-color) 86%, transparent);
+  --bb-b2b-featured-list-bg:
+      linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 44%, var(--bb-body-bg)));
+  --bb-b2b-featured-bottom-bg: color-mix(in srgb, var(--bb-tertiary-bg) 44%, var(--bb-body-bg));
+}
+
+[data-bs-theme=dark] .bb-b2b-featured-products-page {
+  --bb-b2b-featured-hero-bg:
+      radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 20rem),
+      radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--bb-info) 8%, transparent), transparent 18rem),
+      linear-gradient(180deg, color-mix(in srgb, var(--bb-surface-elevated) 68%, var(--bb-body-bg)), var(--bb-body-bg));
+  --bb-b2b-featured-picture-bg:
+      radial-gradient(
+          circle at 42% 34%,
+          color-mix(in srgb, var(--bb-surface-elevated) 94%, var(--bb-body-bg)),
+          color-mix(in srgb, var(--bb-primary) 8%, var(--bb-body-bg)) 68%,
+          color-mix(in srgb, var(--bb-primary) 12%, var(--bb-body-bg)) 100%
+      );
+  --bb-b2b-featured-picture-border: color-mix(in srgb, var(--bb-primary) 18%, var(--bb-border-color));
+  --bb-b2b-featured-picture-shadow:
+      inset 0 0 0 1px color-mix(in srgb, var(--bb-white) 8%, transparent),
+      0 1.5rem 3.5rem color-mix(in srgb, var(--bb-black) 22%, transparent);
+  --bb-b2b-featured-surface-bg: color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg));
+  --bb-b2b-featured-surface-border: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
+  --bb-b2b-featured-list-bg:
+      linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-surface-elevated) 44%, var(--bb-body-bg)));
+  --bb-b2b-featured-bottom-bg:
+      linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-surface-elevated) 44%, var(--bb-body-bg)));
+}
+
 /* =====================================
    Hero
 ===================================== */
@@ -85785,7 +85832,7 @@ body.bb-b2c-other-sellers-open {
   overflow: hidden;
   padding-top: clamp(2.25rem, 4vw, 4rem);
   padding-bottom: clamp(2.25rem, 4vw, 4rem);
-  background: radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 12%, transparent), transparent 20rem), radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent), transparent 18rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg)), var(--bb-body-bg));
+  background: var(--bb-b2b-featured-hero-bg);
 }
 
 .bb-b2b-featured-products-hero-grid {
@@ -85873,10 +85920,10 @@ body.bb-b2c-other-sellers-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 42% 34%, color-mix(in srgb, var(--bb-white, #ffffff) 96%, transparent), color-mix(in srgb, var(--bb-primary) 7%, var(--bb-white, #ffffff)) 68%, color-mix(in srgb, var(--bb-primary) 12%, var(--bb-white, #ffffff)) 100%);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
+  background: var(--bb-b2b-featured-picture-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-featured-picture-border);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bb-white, #ffffff) 72%, transparent), 0 1.5rem 3.5rem color-mix(in srgb, var(--bb-emphasis-color) 8%, transparent);
+  box-shadow: var(--bb-b2b-featured-picture-shadow);
 }
 
 .bb-b2b-featured-products-hero-placeholder {
@@ -85911,8 +85958,8 @@ body.bb-b2c-other-sellers-open {
   gap: 1.25rem;
   align-items: center;
   padding: clamp(1rem, 2vw, 1.25rem);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 86%, transparent);
+  background-color: var(--bb-b2b-featured-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-featured-surface-border);
   border-radius: var(--bb-radius-2xl);
   box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent), 0 0.25rem 0.875rem color-mix(in srgb, var(--bb-emphasis-color) 3%, transparent);
 }
@@ -85996,7 +86043,7 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-featured-products-list {
   padding-top: clamp(2rem, 4vw, 3.5rem);
   padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
-  background: linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-tertiary-bg) 44%, var(--bb-body-bg)));
+  background: var(--bb-b2b-featured-list-bg);
 }
 
 .bb-b2b-featured-products-section-head {
@@ -86046,8 +86093,8 @@ body.bb-b2c-other-sellers-open {
   min-height: 2.5rem;
   padding: 0.65rem 1rem;
   color: var(--bb-emphasis-color);
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 86%, transparent);
+  background-color: var(--bb-b2b-featured-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-featured-surface-border);
   border-radius: var(--bb-radius-pill);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-bold);
@@ -86086,8 +86133,8 @@ body.bb-b2c-other-sellers-open {
   flex-wrap: wrap;
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
   padding: 1rem;
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  background-color: var(--bb-b2b-featured-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-featured-surface-border);
   border-radius: var(--bb-radius-2xl);
   box-shadow: var(--bb-shadow-xs);
 }
@@ -86112,8 +86159,8 @@ body.bb-b2c-other-sellers-open {
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem);
   text-align: center;
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 96%, var(--bb-body-bg));
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
+  background-color: var(--bb-b2b-featured-surface-bg);
+  border: var(--bb-border-width) solid var(--bb-b2b-featured-surface-border);
   border-radius: var(--bb-radius-2xl);
   box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--bb-emphasis-color) 6%, transparent), var(--bb-shadow-xs);
 }
@@ -86167,28 +86214,7 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-featured-products-bottom-banner {
   padding-top: clamp(1.5rem, 3vw, 2.5rem);
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
-  background-color: color-mix(in srgb, var(--bb-tertiary-bg) 44%, var(--bb-body-bg));
-}
-
-/* =====================================
-   Dark
-===================================== */
-[data-bs-theme=dark] .bb-b2b-featured-products-hero {
-  background: radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 20rem), radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent), transparent 18rem), linear-gradient(180deg, color-mix(in srgb, var(--bb-surface-elevated) 68%, var(--bb-body-bg)), var(--bb-body-bg));
-}
-
-[data-bs-theme=dark] .bb-b2b-featured-products-hero-picture,
-[data-bs-theme=dark] .bb-b2b-featured-products-quicknav-card,
-[data-bs-theme=dark] .bb-b2b-featured-products-count,
-[data-bs-theme=dark] .bb-b2b-featured-products-pagination,
-[data-bs-theme=dark] .bb-b2b-featured-products-empty {
-  background-color: color-mix(in srgb, var(--bb-surface-elevated) 88%, var(--bb-body-bg));
-  border-color: color-mix(in srgb, var(--bb-border-color) 76%, transparent);
-}
-
-[data-bs-theme=dark] .bb-b2b-featured-products-list,
-[data-bs-theme=dark] .bb-b2b-featured-products-bottom-banner {
-  background: linear-gradient(180deg, var(--bb-body-bg), color-mix(in srgb, var(--bb-surface-elevated) 44%, var(--bb-body-bg)));
+  background: var(--bb-b2b-featured-bottom-bg);
 }
 
 /* =====================================
