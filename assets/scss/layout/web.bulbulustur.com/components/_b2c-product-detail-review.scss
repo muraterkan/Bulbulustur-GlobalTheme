@@ -8,7 +8,7 @@
    Component Tokens
 ===================================== */
 
-:root {
+.bb-b2c-detail-review-section {
     --bb-b2c-detail-review-surface: var(--bb-surface-elevated, var(--bb-body-bg));
     --bb-b2c-detail-review-surface-soft: color-mix(in srgb, var(--bb-tertiary-bg) 82%, var(--bb-body-bg));
     --bb-b2c-detail-review-surface-strong: color-mix(in srgb, var(--bb-body-bg) 96%, var(--bb-white, #fff));
@@ -50,7 +50,7 @@
     --bb-b2c-detail-review-gallery-overlay-bg: color-mix(in srgb, var(--bb-black, #000) 66%, transparent);
 }
 
-[data-bs-theme="dark"] {
+[data-bs-theme="dark"] .bb-b2c-detail-review-section {
     --bb-b2c-detail-review-surface: var(--bb-surface-elevated, var(--bb-body-bg));
     --bb-b2c-detail-review-surface-soft: color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
     --bb-b2c-detail-review-surface-strong: color-mix(in srgb, var(--bb-surface-elevated, var(--bb-body-bg)) 94%, var(--bb-white, #fff) 4%);

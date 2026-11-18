@@ -6,7 +6,7 @@
    Review Tokens
 ===================================== */
 
-:root {
+.bb-b2c-review-page {
     --bb-b2c-review-page-bg: var(--bb-body-bg);
     --bb-b2c-review-surface: var(--bb-surface-elevated, var(--bb-body-bg));
     --bb-b2c-review-surface-soft: color-mix(in srgb, var(--bb-tertiary-bg) 82%, var(--bb-body-bg));
@@ -38,7 +38,7 @@
     --bb-b2c-review-gallery-overlay-bg: color-mix(in srgb, var(--bb-black, #000) 64%, transparent);
 }
 
-[data-bs-theme="dark"] {
+[data-bs-theme="dark"] .bb-b2c-review-page {
     --bb-b2c-review-page-bg: var(--bb-body-bg);
     --bb-b2c-review-surface: var(--bb-surface-elevated, var(--bb-body-bg));
     --bb-b2c-review-surface-soft: color-mix(in srgb, var(--bb-tertiary-bg) 72%, var(--bb-body-bg));
