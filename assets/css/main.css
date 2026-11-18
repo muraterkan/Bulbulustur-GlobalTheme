@@ -60451,14 +60451,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-address-form-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-address-form-card-head {
   display: flex;
   align-items: flex-start;
@@ -60632,22 +60624,10 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-address-form-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-address-form-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-address-form-grid {
     grid-template-columns: 1fr;
-  }
-  .bb-address-form-card {
-    border-radius: var(--bb-radius-lg);
   }
   .bb-address-form-actions {
     justify-content: stretch;
@@ -61166,14 +61146,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-change-mail-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-change-mail-card-head {
   display: flex;
   align-items: flex-start;
@@ -61296,22 +61268,10 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-change-mail-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-change-mail-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-account-change-mail-grid {
     grid-template-columns: 1fr;
-  }
-  .bb-account-change-mail-card {
-    border-radius: var(--bb-radius-lg);
   }
   .bb-account-change-mail-actions {
     justify-content: stretch;
@@ -61396,14 +61356,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-change-password-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-change-password-card-head {
   display: flex;
   align-items: flex-start;
@@ -61636,20 +61588,8 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-change-password-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-change-password-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
-  .bb-account-change-password-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-account-change-password-rules {
     grid-template-columns: 1fr;
   }
@@ -62429,14 +62369,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-disable-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-disable-card-head {
   display: flex;
   align-items: flex-start;
@@ -62570,21 +62502,9 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-disable-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-disable-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-account-disable-warning,
-  .bb-account-disable-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-account-disable-actions {
     flex-direction: column-reverse;
   }
@@ -66202,14 +66122,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-bank-account-form-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-bank-account-form-card-head {
   display: flex;
   align-items: flex-start;
@@ -66359,20 +66271,8 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-bank-account-form-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-bank-account-form-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
-  .bb-bank-account-form-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-bank-account-form-actions {
     justify-content: stretch;
   }
@@ -67448,14 +67348,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-recovery-email-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-recovery-email-card-head {
   display: flex;
   align-items: flex-start;
@@ -67576,20 +67468,8 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-recovery-email-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-recovery-email-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
-  .bb-account-recovery-email-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-account-recovery-email-actions {
     justify-content: stretch;
   }
@@ -67702,14 +67582,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-phone-create-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-phone-create-card-head {
   display: flex;
   align-items: flex-start;
@@ -67830,20 +67702,8 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-phone-create-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-phone-create-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
-  .bb-account-phone-create-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-account-phone-create-actions {
     justify-content: stretch;
   }
@@ -67935,14 +67795,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-create-review-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 /* Product */
 .bb-account-create-review-product {
   display: grid;
@@ -68186,15 +68038,6 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-create-review-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-create-review-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-account-create-review-card,
@@ -68426,11 +68269,6 @@ body.bb-category-menu-open {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
 }
 
 .bb-account-subscription-create-card-head {
@@ -68553,15 +68391,6 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-subscription-create-page) .bb-layout-light-card-body {
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-.bb-layout-light-page:has(.bb-account-subscription-create-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 991.98px) {
   .bb-account-subscription-create-layout {
@@ -68666,14 +68495,6 @@ body.bb-category-menu-open {
 }
 
 /* Card */
-.bb-account-phone-verify-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-account-phone-verify-card-head {
   display: flex;
   align-items: flex-start;
@@ -68810,20 +68631,8 @@ body.bb-category-menu-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-account-phone-verify-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-account-phone-verify-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
-  .bb-account-phone-verify-card {
-    border-radius: var(--bb-radius-lg);
-  }
   .bb-account-phone-verify-actions {
     justify-content: stretch;
   }
@@ -77010,11 +76819,6 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-company-profile-component-card {
   min-width: 0;
   overflow: hidden;
-  padding: clamp(1rem, 2.4vw, 1.25rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-shadow);
 }
 
 .bb-b2b-company-profile-component-card:empty {
@@ -77152,9 +76956,6 @@ body.bb-b2c-other-sellers-open {
   }
   .bb-b2b-company-profile-action {
     width: 100%;
-  }
-  .bb-b2b-company-profile-component-card {
-    border-radius: var(--bb-radius-lg);
   }
 }
 @media (max-width: 575.98px) {
@@ -77462,11 +77263,6 @@ body.bb-b2c-other-sellers-open {
 .bb-b2b-company-home-component-card {
   min-width: 0;
   overflow: hidden;
-  padding: clamp(1rem, 2.4vw, 1.25rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-home-shadow);
 }
 
 .bb-b2b-company-home-component-card:empty {
@@ -77513,9 +77309,6 @@ body.bb-b2c-other-sellers-open {
   }
   .bb-b2b-company-home-business-types {
     font-size: var(--bb-fs-sm);
-  }
-  .bb-b2b-company-home-component-card {
-    border-radius: var(--bb-radius-lg);
   }
 }
 @media (max-width: 575.98px) {
@@ -77622,14 +77415,6 @@ body.bb-b2c-other-sellers-open {
 }
 
 /* Card */
-.bb-company-edit-form-card {
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: none;
-}
-
 .bb-company-edit-form-card-head {
   display: flex;
   align-items: flex-start;
@@ -77792,15 +77577,6 @@ body.bb-b2c-other-sellers-open {
   flex: 0 0 auto;
 }
 
-.bb-layout-light-page:has(.bb-company-edit-form-page) .bb-layout-light-card-body {
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.bb-layout-light-page:has(.bb-company-edit-form-page) .bb-layout-light-card {
-  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
-}
-
 /* Responsive */
 @media (max-width: 767.98px) {
   .bb-company-edit-form-grid {
@@ -77808,9 +77584,6 @@ body.bb-b2c-other-sellers-open {
   }
   .bb-company-edit-form-field--wide {
     grid-column: auto;
-  }
-  .bb-company-edit-form-card {
-    border-radius: var(--bb-radius-lg);
   }
   .bb-company-edit-form-actions {
     flex-direction: column-reverse;
@@ -78781,10 +78554,6 @@ body.bb-b2c-other-sellers-open {
 /* Sidebar */
 .bb-b2b-company-products-sidebar-card {
   overflow: hidden;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-products-shadow);
 }
 
 .bb-b2b-company-products-sidebar-head {
@@ -79345,11 +79114,6 @@ body.bb-b2c-other-sellers-open {
   grid-template-columns: 6rem minmax(0, 1fr);
   gap: 1rem;
   align-items: center;
-  padding: 1.25rem;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-contact-shadow);
 }
 
 .bb-b2b-company-contact-person-media {
@@ -79431,14 +79195,6 @@ body.bb-b2c-other-sellers-open {
 }
 
 /* Info */
-.bb-b2b-company-contact-info-card {
-  padding: 1.25rem;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-contact-shadow);
-}
-
 .bb-b2b-company-contact-info-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -79796,11 +79552,6 @@ body.bb-b2c-other-sellers-open {
 
 .bb-b2b-company-reviews-summary-card {
   overflow: hidden;
-  padding: 1.25rem;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-reviews-shadow);
 }
 
 .bb-b2b-company-reviews-info-card {
@@ -79909,19 +79660,8 @@ body.bb-b2c-other-sellers-open {
   gap: 0.875rem;
 }
 
-.bb-b2b-company-review-card {
-  padding: 1.125rem;
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-xl);
-  box-shadow: var(--bb-b2b-company-reviews-shadow);
-  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-}
-
 .bb-b2b-company-review-card:hover {
-  transform: translateY(-0.125rem);
   border-color: color-mix(in srgb, var(--bb-primary) 20%, var(--bb-border-color));
-  box-shadow: var(--bb-b2b-company-reviews-shadow-hover);
 }
 
 .bb-b2b-company-review-card-head {
