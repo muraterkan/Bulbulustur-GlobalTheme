@@ -142,7 +142,7 @@
   max-width: 46rem;
   margin: 0;
   color: var(--bb-news-detail-title-color);
-  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-size: var(--bb-hero-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: 1.02;
   letter-spacing: -0.065em;
@@ -153,7 +153,7 @@
   max-width: 42rem;
   margin: 1.125rem 0 0;
   color: var(--bb-news-detail-muted-color);
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  font-size: var(--bb-hero-lead-size);
   line-height: var(--bb-line-height-loose);
 }
 
@@ -280,12 +280,12 @@
 
 .bb-news-detail-content h2 {
   margin: 2.75rem 0 1rem;
-  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  font-size: var(--bb-web-section-title-size);
 }
 
 .bb-news-detail-content h3 {
   margin: 2.25rem 0 0.85rem;
-  font-size: clamp(1.45rem, 2.25vw, 1.85rem);
+  font-size: var(--bb-web-subsection-title-size);
 }
 
 .bb-news-detail-content h4 {
@@ -509,7 +509,7 @@
   }
 
   .bb-news-detail-title {
-    font-size: clamp(2.05rem, 10vw, 3.25rem);
+    font-size: var(--bb-hero-title-size);
     letter-spacing: -0.055em;
   }
 

@@ -227,7 +227,7 @@
 .bb-b2c-review-section-title {
     margin: 0.75rem 0 0;
     color: var(--bb-b2c-review-heading);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--bb-web-section-title-size);
     font-weight: var(--bb-fw-extrabold);
     line-height: var(--bb-line-height-heading);
     letter-spacing: -0.045em;
@@ -1018,7 +1018,7 @@ body.bb-b2c-review-gallery-open {
     }
 
     .bb-b2c-review-hero-title {
-        font-size: clamp(2rem, 10vw, 3.25rem);
+        font-size: var(--bb-hero-title-size);
     }
 
     .bb-b2c-review-hero-actions {

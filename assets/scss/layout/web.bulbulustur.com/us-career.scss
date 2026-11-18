@@ -63,7 +63,7 @@
     max-width: 47.5rem;
     margin-bottom: 1rem;
     color: var(--bb-heading-color);
-    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: 1.08;
     font-weight: var(--bb-fw-extrabold);
     letter-spacing: -.035em;
@@ -549,7 +549,7 @@
     max-width: 880px;
     margin-bottom: 0.75rem;
     color: var(--bb-heading-color);
-    font-size: clamp(2.2rem, 4vw, 3.45rem);
+    font-size: var(--bb-web-page-title-size);
     line-height: 1.08;
     font-weight: var(--bb-fw-extrabold);
     letter-spacing: -.04em;
@@ -1218,7 +1218,7 @@
 
 .bb-career-job-detail-page-hero-title {
     color: var(--bb-heading-color);
-    font-size: clamp(2.35rem, 4.4vw, 3.75rem);
+    font-size: var(--bb-hero-title-size);
     font-weight: var(--bb-fw-extrabold);
     line-height: 1.05;
     letter-spacing: -0.045em;
@@ -1256,7 +1256,7 @@
     }
 
     .bb-career-job-detail-page-hero-title {
-        font-size: clamp(2rem, 9vw, 2.85rem);
+        font-size: var(--bb-hero-title-size);
     }
 }
 .bb-career-job-detail-card-head .bb-career-job-detail-card-icon {

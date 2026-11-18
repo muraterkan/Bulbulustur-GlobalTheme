@@ -27,7 +27,7 @@
   margin: 0;
 
   color: var(--bb-heading-color);
-  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: 1.08;
   letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
@@ -196,7 +196,7 @@
   margin: 0;
 
   color: var(--bb-white);
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-size: var(--bb-web-subsection-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.025em;
@@ -502,7 +502,7 @@
   white-space: nowrap;
 
   color: var(--bb-home-banner-text-color, var(--bb-white));
-  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  font-size: var(--bb-fs-lg);
   font-weight: var(--bb-fw-bold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: var(--bb-letter-spacing-tight, -0.02em);
@@ -730,7 +730,7 @@
   margin: 0;
 
   color: var(--bb-home-hero-slide-text, var(--bb-white));
-  font-size: clamp(2.1rem, 3.55vw, 3.55rem);
+  font-size: var(--bb-web-page-title-size);
   font-weight: var(--bb-fw-bold);
   line-height: 1.08;
   letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
@@ -750,7 +750,7 @@
     transparent
   );
 
-  font-size: clamp(0.9375rem, 1.35vw, 1.0625rem);
+  font-size: var(--bb-web-lead-size);
   font-weight: var(--bb-fw-medium);
   line-height: 1.58;
 
@@ -1067,7 +1067,7 @@
   }
 
   .bb-home-hero-title {
-    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: var(--bb-web-page-title-size);
   }
 
   .bb-home-hero-text {
@@ -1456,7 +1456,7 @@
 
 @media (max-width: 767.98px) {
   .bb-home-section-title {
-    font-size: clamp(1.65rem, 7vw, 2.15rem);
+    font-size: var(--bb-web-section-title-size);
   }
 
   .bb-home-section-text {

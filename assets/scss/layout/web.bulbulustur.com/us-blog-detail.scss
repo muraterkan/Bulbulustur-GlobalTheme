@@ -285,18 +285,18 @@
 }
 
 .bb-blog-detail-content h1 {
-    font-size: clamp(2rem, 3vw, 2.375rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: var(--bb-line-height-heading);
 }
 
 .bb-blog-detail-content h2 {
-    font-size: clamp(1.75rem, 2.8vw, 2rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: var(--bb-line-height-heading);
     padding-top: 8px;
 }
 
 .bb-blog-detail-content h3 {
-    font-size: clamp(1.35rem, 2.2vw, 1.5625rem);
+    font-size: var(--bb-web-subsection-title-size);
     line-height: 1.24;
 }
 
@@ -422,7 +422,7 @@
 .bb-blog-detail-content-block-title {
     margin: 0 0 12px;
     color: var(--bb-heading-color);
-    font-size: clamp(1.75rem, 2.8vw, 2rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: var(--bb-line-height-heading);
     letter-spacing: -.035em;
     font-weight: var(--bb-fw-bold);
@@ -636,7 +636,7 @@
 .bb-blog-detail-section-title {
     margin: 0;
     color: var(--bb-heading-color);
-    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    font-size: var(--bb-web-section-title-size);
     line-height: var(--bb-line-height-heading);
     letter-spacing: -.03em;
     font-weight: var(--bb-fw-bold);
@@ -670,7 +670,7 @@
 .bb-blog-subscribe-card-title {
     margin: 0 0 9px;
     color: var(--bb-heading-color);
-    font-size: clamp(1.6rem, 2.4vw, 2rem);
+    font-size: var(--bb-web-subsection-title-size);
     line-height: var(--bb-line-height-heading);
     letter-spacing: -.03em;
     font-weight: var(--bb-fw-bold);
@@ -859,7 +859,7 @@
 .bb-blog-subscribe-card-title {
   margin: 0 0 9px;
   color: var(--bb-heading-color);
-  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  font-size: var(--bb-web-subsection-title-size);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.03em;
   font-weight: var(--bb-fw-bold);

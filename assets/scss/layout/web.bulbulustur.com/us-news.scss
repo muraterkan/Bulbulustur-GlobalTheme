@@ -113,7 +113,7 @@
 .bb-news-hero-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
+  font-size: var(--bb-hero-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: 1.04;
   letter-spacing: -0.055em;
@@ -123,7 +123,7 @@
   max-width: 44rem;
   margin: 1rem 0 0;
   color: var(--bb-secondary-color);
-  font-size: clamp(1rem, 1.25vw, 1.1rem);
+  font-size: var(--bb-hero-lead-size);
   line-height: var(--bb-line-height-loose);
 }
 
@@ -197,7 +197,7 @@
 .bb-news-featured-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.75rem, 3.1vw, 2.45rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.045em;
@@ -263,7 +263,7 @@
 .bb-news-media-title {
   margin: 0.55rem 0 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-size: var(--bb-web-section-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.04em;
@@ -516,7 +516,7 @@
 .bb-news-subscribe-title {
   margin: 0;
   color: var(--bb-emphasis-color);
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-size: var(--bb-web-subsection-title-size);
   font-weight: var(--bb-fw-extrabold);
   line-height: var(--bb-line-height-heading);
   letter-spacing: -0.035em;
