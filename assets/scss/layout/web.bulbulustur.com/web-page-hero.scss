@@ -20,13 +20,14 @@
     --bb-hero-aside-width: 22.5rem;
     --bb-hero-grid-gap: 2.375rem;
 
-    position: relative;
-    overflow: hidden;
-
-    padding: clamp(1.5rem, 2.5vw, 2.25rem) 0 clamp(1.625rem, 2.5vw, 2.375rem);
-
-    color: var(--bb-body-color);
-    background:
+    --bb-hero-padding-top: clamp(1.5rem, 2.5vw, 2.25rem);
+    --bb-hero-padding-bottom: clamp(1.625rem, 2.5vw, 2.375rem);
+    --bb-hero-title-size: clamp(2rem, 4.2vw, 3.5rem);
+    --bb-hero-title-weight: var(--bb-fw-bold);
+    --bb-hero-title-line-height: 1.04;
+    --bb-hero-title-letter-spacing: -0.045em;
+    --bb-hero-lead-size: clamp(1rem, 1.45vw, 1.15rem);
+    --bb-hero-bg:
         radial-gradient(
             circle at 88% 18%,
             color-mix(in srgb, var(--bb-primary-light) 92%, transparent) 0,
@@ -37,8 +38,16 @@
             color-mix(in srgb, var(--bb-tertiary-bg) 92%, var(--bb-surface-elevated)) 0%,
             color-mix(in srgb, var(--bb-secondary-bg) 86%, var(--bb-surface-elevated)) 100%
         );
+    --bb-hero-border-color: var(--bb-border-color);
 
-    border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--bb-hero-padding-top) 0 var(--bb-hero-padding-bottom);
+
+    color: var(--bb-body-color);
+    background: var(--bb-hero-bg);
+    border-bottom: var(--bb-border-width) solid var(--bb-hero-border-color);
 }
 
 .bb-hero .bb-web-container {
@@ -47,16 +56,103 @@
 }
 
 /* -------------------------------------
+   Semantic Families
+   Application pages choose intent; page CSS only composes media/content.
+------------------------------------- */
+
+.bb-hero-editorial {
+    --bb-hero-title-max-width: 48rem;
+    --bb-hero-lead-max-width: 46rem;
+    --bb-hero-aside-width: 32rem;
+    --bb-hero-grid-gap: clamp(2rem, 4.5vw, 4rem);
+    --bb-hero-padding-top: clamp(3rem, 5vw, 4.75rem);
+    --bb-hero-padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+    --bb-hero-title-size: clamp(2.35rem, 5vw, 4.25rem);
+    --bb-hero-title-weight: var(--bb-fw-extrabold);
+    --bb-hero-title-line-height: 1;
+    --bb-hero-title-letter-spacing: -0.05em;
+    --bb-hero-lead-size: clamp(1rem, 1.35vw, 1.125rem);
+    --bb-hero-bg:
+        radial-gradient(
+            circle at 86% 12%,
+            color-mix(in srgb, var(--bb-primary) 12%, transparent),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 100%
+        );
+    --bb-hero-border-color: color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+}
+
+.bb-hero-marketplace {
+    --bb-hero-title-max-width: 54rem;
+    --bb-hero-lead-max-width: 48rem;
+    --bb-hero-aside-width: 26rem;
+    --bb-hero-grid-gap: clamp(1.75rem, 4vw, 3rem);
+    --bb-hero-padding-top: clamp(2.5rem, 4.5vw, 3.75rem);
+    --bb-hero-padding-bottom: clamp(3.25rem, 5.5vw, 4.75rem);
+    --bb-hero-title-size: clamp(2.2rem, 4.6vw, 3.85rem);
+    --bb-hero-title-weight: var(--bb-fw-extrabold);
+    --bb-hero-title-line-height: 1.02;
+    --bb-hero-title-letter-spacing: -0.05em;
+    --bb-hero-bg:
+        radial-gradient(
+            circle at 88% 14%,
+            color-mix(in srgb, var(--bb-primary) 10%, transparent),
+            transparent 22rem
+        ),
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 88%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 100%
+        );
+}
+
+.bb-hero-detail {
+    --bb-hero-title-max-width: 50rem;
+    --bb-hero-lead-max-width: 46rem;
+    --bb-hero-aside-width: 28rem;
+    --bb-hero-grid-gap: clamp(1.5rem, 3.5vw, 3rem);
+    --bb-hero-padding-top: clamp(2rem, 3.75vw, 3rem);
+    --bb-hero-padding-bottom: clamp(2.25rem, 4vw, 3.5rem);
+    --bb-hero-title-size: clamp(2rem, 4vw, 3.25rem);
+    --bb-hero-title-weight: var(--bb-fw-bold);
+    --bb-hero-title-line-height: 1.04;
+    --bb-hero-title-letter-spacing: -0.04em;
+    --bb-hero-bg:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bb-tertiary-bg) 76%, var(--bb-body-bg)) 0%,
+            var(--bb-body-bg) 100%
+        );
+}
+
+.bb-hero-branded {
+    --bb-hero-title-max-width: 50rem;
+    --bb-hero-lead-max-width: 46rem;
+    --bb-hero-aside-width: 30rem;
+    --bb-hero-grid-gap: clamp(1.75rem, 4vw, 3rem);
+    --bb-hero-padding-top: clamp(2.75rem, 5vw, 4.25rem);
+    --bb-hero-padding-bottom: clamp(4rem, 6vw, 5.75rem);
+    --bb-hero-title-size: clamp(2.5rem, 5vw, 4.25rem);
+    --bb-hero-title-weight: var(--bb-fw-extrabold);
+    --bb-hero-title-line-height: 0.98;
+    --bb-hero-title-letter-spacing: -0.055em;
+}
+
+/* -------------------------------------
    Background Variants
 ------------------------------------- */
 
 .bb-hero-plain {
-    background: var(--bb-body-bg);
-    border-bottom-color: var(--bb-border-color);
+    --bb-hero-bg: var(--bb-body-bg);
+    --bb-hero-border-color: var(--bb-border-color);
 }
 
 .bb-hero-soft {
-    background:
+    --bb-hero-bg:
         radial-gradient(
             circle at 88% 18%,
             color-mix(in srgb, var(--bb-primary-light) 94%, transparent) 0,
@@ -68,11 +164,11 @@
             var(--bb-body-bg) 100%
         );
 
-    border-bottom-color: color-mix(in srgb, var(--bb-primary) 16%, var(--bb-border-color));
+    --bb-hero-border-color: color-mix(in srgb, var(--bb-primary) 16%, var(--bb-border-color));
 }
 
 .bb-hero-muted {
-    background:
+    --bb-hero-bg:
         radial-gradient(
             circle at 90% 14%,
             color-mix(in srgb, var(--bb-primary) 8%, transparent),
@@ -84,11 +180,11 @@
             var(--bb-body-bg) 100%
         );
 
-    border-bottom-color: var(--bb-border-color);
+    --bb-hero-border-color: var(--bb-border-color);
 }
 
 .bb-hero-dark {
-    background:
+    --bb-hero-bg:
         radial-gradient(
             circle at 90% 12%,
             color-mix(in srgb, var(--bb-primary) 18%, transparent),
@@ -102,7 +198,7 @@
         );
 
     color: var(--bb-white);
-    border-bottom-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
+    --bb-hero-border-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
 }
 
 .bb-hero-dark .bb-hero-label,
@@ -319,10 +415,10 @@
     margin: 0;
 
     color: var(--bb-emphasis-color);
-    font-size: clamp(2rem, 4.2vw, 3.5rem);
-    font-weight: var(--bb-fw-bold);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
+    font-size: var(--bb-hero-title-size);
+    font-weight: var(--bb-hero-title-weight);
+    line-height: var(--bb-hero-title-line-height);
+    letter-spacing: var(--bb-hero-title-letter-spacing);
 }
 
 .bb-hero-lead {
@@ -330,7 +426,7 @@
     margin: 1rem 0 0;
 
     color: var(--bb-secondary-color);
-    font-size: clamp(1rem, 1.45vw, 1.15rem);
+    font-size: var(--bb-hero-lead-size);
     font-weight: var(--bb-fw-medium);
     line-height: var(--bb-line-height-content);
 }
