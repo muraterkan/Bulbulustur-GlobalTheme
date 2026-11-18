@@ -211,7 +211,7 @@
       '</div>',
       '<div class="bb-sidebar-footer"><div class="bb-panel-overlay-host bb-panel-sidebar-account" data-bb-panel-popup>' +
         '<button class="bb-panel-sidebar-account-toggle" type="button" data-bb-panel-popup-toggle aria-controls="bb_sidebar_account_pop" aria-haspopup="true" aria-expanded="false" aria-label="Account and workspace menu"><span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span><span class="bb-panel-sidebar-account-text"><strong>Bulbulustur</strong><small>Demo User</small></span><span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button>' +
-        '<div id="bb_sidebar_account_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>' +
+        '<div id="bb_sidebar_account_pop" class="bb-panel-popover bb-panel-user-menu bb-panel-sidebar-account-menu" data-bb-panel-popup-content hidden>' +
           '<div class="bb-panel-user-summary"><span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span><span class="bb-panel-user-info"><span class="bb-panel-user-name">Bulbulustur Workspace</span><small>1 member · Store plan</small></span></div>' +
           '<div class="bb-panel-user-section">Apps</div><div class="bb-panel-user-group">' +
           '<a class="bb-panel-user-item" href="../panel/posb.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span>PosB</span><span class="bb-panel-user-meta">POS rental</span></a>' +
