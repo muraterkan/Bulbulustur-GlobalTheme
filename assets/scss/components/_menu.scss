@@ -67,7 +67,7 @@
   --bb-menu-sub-padding: 0.5rem;
   --bb-menu-sub-radius: var(--bb-menu-radius);
   --bb-menu-sub-offset: 0.5rem;
-  --bb-menu-sub-z: 1050;
+  --bb-menu-sub-z: var(--bb-z-dropdown, 1050);
   --bb-menu-sub-shadow: var(--bb-shadow, var(--bb-shadow-sm, none));
 
   /* Focus / disabled */

@@ -145,6 +145,34 @@
                 </div>
 
             </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Maskeli alan</h3>
+                                <p class="bb-usage-text"><code>bb-inputmask</code> sınıfı maske davranışını başlatır. Ek metin için <code>bb-inputmask-addon</code>, rakam hizası için <code>bb-inputmask-monospace</code>.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;input-group bb-inputmask-group&quot;&gt;
+    &lt;span class=&quot;input-group-text bb-inputmask-addon&quot;&gt;
+        &lt;span class=&quot;material-symbols-outlined&quot;&gt;calendar_month&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;input id=&quot;bb_im_date&quot;
+           type=&quot;text&quot;
+           class=&quot;form-control bb-inputmask bb-inputmask-monospace&quot;
+           placeholder=&quot;12/31/2026&quot;
+           data-inputmask=&quot;&#x27;mask&#x27;: &#x27;99/99/9999&#x27;&quot;&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
         </div>
     </div>
 </main>
@@ -153,6 +181,7 @@
    <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
 
     <script src="../../assets/js/core/bb-inputmask.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

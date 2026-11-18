@@ -188,10 +188,52 @@
                         Not: Theme toggle <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Temel carousel</h3>
+                                <p class="bb-usage-text">Bootstrap carousel davranışı kullanılır; <code>bb-carousel</code> ile tema stili gelir. Nokta stili için <code>bb-carousel-dots</code> veya <code>bb-carousel-bullets</code>.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div id=&quot;carouselDots&quot;
+     class=&quot;carousel slide bb-carousel bb-carousel-dots&quot;
+     data-bs-ride=&quot;carousel&quot;
+     data-bs-touch=&quot;true&quot;&gt;
+
+    &lt;div class=&quot;carousel-inner bb-rounded-lg bb-overflow-hidden bb-demo-slide&quot;&gt;
+        &lt;div class=&quot;carousel-item active&quot;&gt;
+            &lt;img src=&quot;https://picsum.photos/1400/700?1&quot; alt=&quot;Slide 1&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;https://picsum.photos/1400/700?2&quot; alt=&quot;Slide 2&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel-item&quot;&gt;
+            &lt;img src=&quot;https://picsum.photos/1400/700?7&quot; alt=&quot;Slide 3&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;carousel-indicators&quot;&gt;
+        &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselDots&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselDots&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselDots&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

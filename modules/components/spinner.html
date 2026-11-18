@@ -146,11 +146,57 @@
             <!-- footer hint -->
             <div class="text-muted small">
                 İpucu: spinner rengi <code>color</code> üstünden gider (Bootstrap currentColor). Biz sadece token bridge yaptık.
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Spinner</h3>
+                                <p class="bb-usage-text"><code>bb-spinner</code> + boyut (<code>xs|sm|md|lg|xl</code>) + renk (<code>bb-spinner-primary</code> vb.).</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;spinner-border bb-spinner bb-spinner-sm bb-spinner-primary bb-spinner-inline&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/div&gt;</code></pre>
+                                </div>
+                                <h3 class="bb-usage-title">Katman (overlay)</h3>
+                                <p class="bb-usage-text"><code>bb-spinner-overlay-wrap</code> kapsayıcı, içine <code>bb-spinner-overlay</code> koyun.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-card mb-4 bb-spinner-overlay-wrap&quot;&gt;
+    &lt;div class=&quot;bb-card-body&quot;&gt;
+        &lt;h2 class=&quot;h6 mb-2&quot;&gt;Card Üstünde Overlay&lt;/h2&gt;
+        &lt;div class=&quot;text-muted mb-3&quot;&gt;Statik demo (JS ile is-active toggle edebilirsin)&lt;/div&gt;
+
+        &lt;div class=&quot;row g-3&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;div class=&quot;p-3 border rounded&quot;&gt;
+                    &lt;div class=&quot;fw-semibold mb-1&quot;&gt;Sipariş #10293&lt;/div&gt;
+                    &lt;div class=&quot;text-muted&quot;&gt;Kargo etiketi hazırlanıyor…&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;div class=&quot;p-3 border rounded&quot;&gt;
+                    &lt;div class=&quot;fw-semibold mb-1&quot;&gt;Ürün Güncelleme&lt;/div&gt;
+                    &lt;div class=&quot;text-muted&quot;&gt;Stok senkronize ediliyor…&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
             
         </div>
     </main>
     <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

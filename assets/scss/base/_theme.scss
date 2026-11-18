@@ -259,6 +259,7 @@ html[data-bs-theme="light"] {
   ------------------------------------- */
 
   --bb-z-sticky: 1020;
+  --bb-z-header: 1030; /* sticky içeriğin (1020) üstünde: header menüleri sayfa nesnelerinin altında kalmaz */
   --bb-z-dropdown: 1050;
   --bb-z-drawer: 1055;
 

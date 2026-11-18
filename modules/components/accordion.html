@@ -330,12 +330,107 @@
                         Not: Bu sayfa sadece component test içindir. Bootstrap data-bs-toggle kullanır.
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Temel accordion</h3>
+                                <p class="bb-usage-text">Bootstrap <code>data-bs-toggle="collapse"</code> davranışını kullanır. <code>data-bs-parent</code> aynı anda yalnız bir panelin açık kalmasını sağlar.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;accordion bb-accordion bb-accordion-icon-toggle&quot; id=&quot;bbAccordionToggle&quot;&gt;
+
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;bbAccordionToggleHeading1&quot;&gt;
+            &lt;button class=&quot;accordion-button collapsed&quot;
+                    type=&quot;button&quot;
+                    data-bs-toggle=&quot;collapse&quot;
+                    data-bs-target=&quot;#bbAccordionToggleCollapse1&quot;
+                    aria-expanded=&quot;false&quot;
+                    aria-controls=&quot;bbAccordionToggleCollapse1&quot;&gt;
+                &lt;span class=&quot;bb-accordion-icon material-symbols-outlined&quot; aria-hidden=&quot;true&quot;&gt;chevron_right&lt;/span&gt;
+                General Bilgiler
+            &lt;/button&gt;
+        &lt;/h2&gt;
+
+        &lt;div id=&quot;bbAccordionToggleCollapse1&quot;
+             class=&quot;accordion-collapse collapse&quot;
+             aria-labelledby=&quot;bbAccordionToggleHeading1&quot;
+             data-bs-parent=&quot;#bbAccordionToggle&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                Ürün veya modül hakkında genel açıklamalar burada yer alır.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;bbAccordionToggleHeading2&quot;&gt;
+            &lt;button class=&quot;accordion-button collapsed&quot;
+                    type=&quot;button&quot;
+                    data-bs-toggle=&quot;collapse&quot;
+                    data-bs-target=&quot;#bbAccordionToggleCollapse2&quot;
+                    aria-expanded=&quot;false&quot;
+                    aria-controls=&quot;bbAccordionToggleCollapse2&quot;&gt;
+                &lt;span class=&quot;bb-accordion-icon material-symbols-outlined&quot; aria-hidden=&quot;true&quot;&gt;chevron_right&lt;/span&gt;
+&lt;!-- ... --&gt;</code></pre>
+                                </div>
+                                <h3 class="bb-usage-title">Flush görünüm</h3>
+                                <p class="bb-usage-text">Kenarlıksız, kart içinde kullanım için <code>bb-accordion-flush</code> sınıfını ekleyin.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;accordion bb-accordion bb-accordion-flush bb-accordion-icon-toggle&quot; id=&quot;bbAccordionFlush&quot;&gt;
+
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;bbAccordionFlushHeading1&quot;&gt;
+            &lt;button class=&quot;accordion-button collapsed&quot;
+                    type=&quot;button&quot;
+                    data-bs-toggle=&quot;collapse&quot;
+                    data-bs-target=&quot;#bbAccordionFlushCollapse1&quot;
+                    aria-expanded=&quot;false&quot;
+                    aria-controls=&quot;bbAccordionFlushCollapse1&quot;&gt;
+                &lt;span class=&quot;bb-accordion-icon material-symbols-outlined&quot; aria-hidden=&quot;true&quot;&gt;chevron_right&lt;/span&gt;
+                Flush Başlık
+            &lt;/button&gt;
+        &lt;/h2&gt;
+
+        &lt;div id=&quot;bbAccordionFlushCollapse1&quot;
+             class=&quot;accordion-collapse collapse&quot;
+             aria-labelledby=&quot;bbAccordionFlushHeading1&quot;
+             data-bs-parent=&quot;#bbAccordionFlush&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                Flush modunda padding left/right sıfırlanır, çizgiler kalkar.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;bbAccordionFlushHeading2&quot;&gt;
+            &lt;button class=&quot;accordion-button collapsed&quot;
+                    type=&quot;button&quot;
+                    data-bs-toggle=&quot;collapse&quot;
+                    data-bs-target=&quot;#bbAccordionFlushCollapse2&quot;
+                    aria-expanded=&quot;false&quot;
+                    aria-controls=&quot;bbAccordionFlushCollapse2&quot;&gt;
+                &lt;span class=&quot;bb-accordion-icon material-symbols-outlined&quot; aria-hidden=&quot;true&quot;&gt;chevron_right&lt;/span&gt;
+&lt;!-- ... --&gt;</code></pre>
+                                </div>
+                                <p class="bb-usage-tip">Her <code>accordion-collapse</code> için benzersiz bir <code>id</code> ve eşleşen <code>data-bs-target</code> verin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
     <!-- Tiny local theme toggle (demo only) -->
 
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

@@ -28,6 +28,8 @@
 ------------------------------------------------- */
 /* HEADER */
 .bb-shell-header {
+  position: relative;
+  z-index: var(--bb-z-header, 1030);
   flex-shrink: 0;
   background-color: var(--bb-body-bg);
   border-bottom: 1px solid var(--bb-border-color);

@@ -166,6 +166,47 @@
                     </div>
                 </section>
 
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Sayı seçici</h3>
+                                <p class="bb-usage-text"><code>data-bb-dialer</code> kökü; <code>data-bb-dialer-min|max|step|decimals|prefix</code> ile sınırlar verilir. Artı/eksi düğmelerine <code>data-bb-dialer-control</code> eklenir.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;input-group bb-dialer w-100&quot;
+     data-bb-dialer=&quot;true&quot;
+     data-bb-dialer-currency=&quot;true&quot;
+     data-bb-dialer-min=&quot;1000&quot;
+     data-bb-dialer-max=&quot;50000&quot;
+     data-bb-dialer-step=&quot;1000&quot;
+     data-bb-dialer-decimals=&quot;0&quot;
+     data-bb-dialer-prefix=&quot;$&quot;&gt;
+    &lt;button class=&quot;btn bb-dialer-btn&quot; type=&quot;button&quot; data-bb-dialer-control=&quot;decrease&quot; aria-label=&quot;Decrease&quot;&gt;
+        &lt;span class=&quot;material-symbols-outlined&quot;&gt;remove&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;input type=&quot;text&quot;
+           class=&quot;form-control bb-dialer-input&quot;
+           readonly
+           value=&quot;$10000&quot;
+           placeholder=&quot;Amount&quot;
+           data-bb-dialer-control=&quot;input&quot; /&gt;
+
+    &lt;button class=&quot;btn bb-dialer-btn&quot; type=&quot;button&quot; data-bb-dialer-control=&quot;increase&quot; aria-label=&quot;Increase&quot;&gt;
+        &lt;span class=&quot;material-symbols-outlined&quot;&gt;add&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
@@ -173,6 +214,7 @@
     <!-- Dialer JS -->
     <script src="../../assets/js/core/bb-dialer.js"></script>
     <script src="../../assets/js/panel/bb-component-dialer-demo.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

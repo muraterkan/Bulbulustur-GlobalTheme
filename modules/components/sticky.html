@@ -199,10 +199,64 @@
                         </div><!-- /row -->
                     </div><!-- /container -->
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Yapışkan kutu</h3>
+                                <p class="bb-usage-text"><code>bb-sticky</code> + <code>top</code> ayarı (<code>bb-sticky-top-100</code>). Katman sırası için <code>bb-sticky-z-95</code> gibi sınıflar; header menülerinin altında kalması için değerler 1030 altında tutulur.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-sticky bb-sticky-end bb-sticky-top-100 bb-sticky-w-lg-300 bb-sticky-z-95&quot;
+     data-kt-sticky=&quot;true&quot;
+     data-kt-sticky-name=&quot;docs-sticky-summary&quot;
+     data-kt-sticky-offset=&quot;{default: false, xl: &#x27;200px&#x27;}&quot;
+     data-kt-sticky-width=&quot;{lg: &#x27;250px&#x27;, xl: &#x27;300px&#x27;}&quot;
+     data-kt-sticky-left=&quot;auto&quot;
+     data-kt-sticky-top=&quot;100px&quot;
+     data-kt-sticky-animation=&quot;false&quot;
+     data-kt-sticky-zindex=&quot;95&quot;&gt;
+    &lt;div class=&quot;bb-card card&quot;&gt;
+        &lt;div class=&quot;bb-card-header&quot;&gt;
+            &lt;div class=&quot;card-title mb-0&quot;&gt;Sticky Summary&lt;/div&gt;
+            &lt;div class=&quot;bb-card-actions&quot;&gt;
+                &lt;button class=&quot;btn btn-sm btn-primary&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;bb-card-body&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center justify-content-between py-2&quot;
+                 style=&quot;border-bottom: 1px dashed var(--bb-border-color);&quot;&gt;
+                &lt;div class=&quot;text-muted&quot;&gt;Status&lt;/div&gt;
+                &lt;div class=&quot;fw-semibold&quot;&gt;Active&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-flex align-items-center justify-content-between py-2&quot;
+                 style=&quot;border-bottom: 1px dashed var(--bb-border-color);&quot;&gt;
+                &lt;div class=&quot;text-muted&quot;&gt;Top&lt;/div&gt;
+                &lt;div class=&quot;fw-semibold&quot;&gt;100px&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- ... aynı yapıda diğer öğeler ... --&gt;
+
+            &lt;div class=&quot;mt-3 text-muted&quot; style=&quot;font-size: 0.875rem;&quot;&gt;
+                Bu card, sayfa scroll oldukça sağ tarafta sticky kalır.
+&lt;!-- ... --&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

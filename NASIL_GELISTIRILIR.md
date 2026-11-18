@@ -694,6 +694,14 @@ Application'ı Core'a sızdırma.
 
 ---
 
+## Component sayfalarında "Nasıl kullanılır" bölümü
+
+Her `modules/components/*.html` sayfasının sonunda `<!--::Usage-->` bloğu bulunur: `bb-usage` bileşeni (başlık, açıklama, `bb-usage-code` kod bloğu, Kopyala düğmesi). Kod örneği sayfadaki gerçek demo işaretlemesinden alınır; yeni component eklerken aynı bloğu ekleyin ve sayfaya `assets/js/core/bb-usage.js` bağlayın. Stil: `assets/scss/components/_usage.scss` (yalnız token).
+
+## Katman sırası (z-index)
+
+`--bb-z-sticky` 1020 < `--bb-z-header` 1030 < `--bb-z-dropdown` 1050 < `--bb-z-drawer` 1055. Header (`.bb-header`, `.bb-shell-header`) sticky içeriğin üstündedir; header menüleri sayfa nesnelerinin altında kalmaz. Sayfa içi sticky değerleri 1030'un altında tutulur.
+
 ## Son İlke
 
 > **Core yöntemleri ve component omurgasını tanımlar.  

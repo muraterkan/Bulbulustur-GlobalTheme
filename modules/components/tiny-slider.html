@@ -120,11 +120,65 @@
                         <div class="bb-ts-nav" data-bb-nav></div>
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Slider</h3>
+                                <p class="bb-usage-text">Kök <code>bb-tiny-slider</code> + <code>data-bb-slider</code>; öğe sayısı <code>data-bb-items</code>. <code>assets/js/core/bb-tiny-slider.js</code> gerekir.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-tiny-slider&quot; data-bb-items=&quot;1&quot; data-bb-slider&gt;
+    &lt;div class=&quot;bb-ts-viewport&quot;&gt;
+        &lt;div class=&quot;bb-ts-track&quot; data-bb-track&gt;
+            &lt;!-- Slide --&gt;
+            &lt;div class=&quot;bb-ts-slide&quot;&gt;
+                &lt;div class=&quot;bb-ts-slide-inner&quot;&gt;
+                    &lt;div class=&quot;ratio ratio-16x9 bg-body-secondary&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;bb-ts-caption&quot;&gt;
+                        &lt;div class=&quot;fw-semibold&quot;&gt;Slide 1&lt;/div&gt;
+                        &lt;div class=&quot;text-body-secondary small&quot;&gt;Caption örneği&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;bb-ts-slide&quot;&gt;
+                &lt;div class=&quot;bb-ts-slide-inner&quot;&gt;
+                    &lt;div class=&quot;ratio ratio-16x9 bg-body-secondary&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;bb-ts-caption&quot;&gt;
+                        &lt;div class=&quot;fw-semibold&quot;&gt;Slide 2&lt;/div&gt;
+                        &lt;div class=&quot;text-body-secondary small&quot;&gt;Caption örneği&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- ... aynı yapıda diğer öğeler ... --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Controls --&gt;
+    &lt;div class=&quot;bb-ts-controls&quot;&gt;
+        &lt;button class=&quot;bb-ts-btn&quot; type=&quot;button&quot; data-bb-prev aria-label=&quot;Önceki&quot;&gt;
+            &lt;span class=&quot;material-symbols-outlined&quot;&gt;chevron_left&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;bb-ts-btn&quot; type=&quot;button&quot; data-bb-next aria-label=&quot;Sonraki&quot;&gt;
+&lt;!-- ... --&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
     <script src="../../assets/js/core/bb-tiny-slider.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

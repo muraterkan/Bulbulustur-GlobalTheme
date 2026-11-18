@@ -123,12 +123,40 @@
                     </div>
 
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Popover</h3>
+                                <p class="bb-usage-text">Tetikleyicide <code>data-bs-toggle="popover"</code>, <code>data-bs-title</code>, <code>data-bs-content</code>. Tema için <code>data-bs-custom-class="bb-popover"</code>.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;button type=&quot;button&quot;
+        class=&quot;btn btn-primary&quot;
+        data-bs-toggle=&quot;popover&quot;
+        data-bs-custom-class=&quot;bb-popover&quot;
+        data-bs-title=&quot;Başlık&quot;
+        data-bs-content=&quot;Bu temel bir popover örneğidir.&quot;&gt;
+    Primary
+&lt;/button&gt;</code></pre>
+                                </div>
+                                <p class="bb-usage-tip">Popover ve tooltip Bootstrap tarafında başlatılmalıdır (<code>assets/js/core/bb-popover.js</code>).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
     <!-- Bootstrap JS -->
     <script src="../../assets/js/core/bb-popover.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

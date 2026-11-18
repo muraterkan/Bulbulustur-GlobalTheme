@@ -229,11 +229,73 @@
 
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Temel kart</h3>
+                                <p class="bb-usage-text"><code>bb-card</code> kabuğu içinde <code>bb-card-header</code>, <code>bb-card-body</code> ve <code>bb-card-footer</code> kullanılır. Gölge çekirdekten gelir; <code>shadow</code> sınıfı eklemeyin.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;card bb-card bb-card-hover-elevate&quot;&gt;
+    &lt;div class=&quot;card-header bb-card-header&quot;&gt;
+        &lt;div class=&quot;bb-card-title&quot;&gt;Aylık Ciro&lt;/div&gt;
+        &lt;div class=&quot;bb-card-actions&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm bb-btn-light-primary&quot;&gt;Detay&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-body bb-card-body&quot;&gt;
+        &lt;div class=&quot;bb-card-metric&quot;&gt;
+            &lt;div class=&quot;bb-card-value&quot;&gt;1.245.000 ₺&lt;/div&gt;
+            &lt;div class=&quot;bb-card-meta positive&quot;&gt;↑ %12 geçen aya göre&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-footer bb-card-footer&quot;&gt;
+        &lt;span class=&quot;bb-card-footer-text&quot;&gt;Son güncelleme: 19 Ocak 2026&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <h3 class="bb-usage-title">Kenarlıklı kart</h3>
+                                <p class="bb-usage-text"><code>bb-card-bordered</code> ve <code>bb-card-dashed</code> kart çerçevesini değiştirir.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;card bb-card bb-card-hover-elevate bb-card-bordered&quot;&gt;
+    &lt;div class=&quot;card-header bb-card-header&quot;&gt;
+        &lt;div class=&quot;bb-card-title&quot;&gt;Toplam Sipariş&lt;/div&gt;
+        &lt;div class=&quot;bb-card-actions&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-primary&quot;&gt;Gör&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-body bb-card-body&quot;&gt;
+        &lt;div class=&quot;bb-card-metric&quot;&gt;
+            &lt;div class=&quot;bb-card-value&quot;&gt;8.432&lt;/div&gt;
+            &lt;div class=&quot;bb-card-meta negative&quot;&gt;↓ %3 bu hafta&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-footer bb-card-footer&quot;&gt;
+        &lt;span class=&quot;bb-card-footer-text&quot;&gt;Bugün dahil&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
     <script src="../../assets/js/core/bb-card.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

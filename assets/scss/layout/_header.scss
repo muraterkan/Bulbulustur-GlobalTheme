@@ -8,7 +8,7 @@
   --bb-header-border-width: var(--bb-border-width, 1px);
   --bb-header-border-color: var(--bb-border-color);
   --bb-header-height-local: var(--bb-header-height, 70px);
-  --bb-header-zindex: var(--bb-z-sticky, 1020);
+  --bb-header-zindex: var(--bb-z-header, 1030);
 
   background-color: var(--bb-header-bg);
   border-bottom: var(--bb-header-border-width) solid var(--bb-header-border-color);

@@ -1,0 +1,119 @@
+/* =====================================
+   Bulbulustur Theme — Usage
+   Prefix: bb-usage
+   Component sayfalarında "nasıl kullanılır" örnek kod bloğu.
+   Yalnız token kullanır; light / navy / dark güvenli.
+===================================== */
+
+.bb-usage {
+  --bb-usage-gap: var(--bb-space-4);
+  --bb-usage-bg: var(--bb-tertiary-bg);
+  --bb-usage-border-color: var(--bb-border-color);
+  --bb-usage-radius: var(--bb-radius-lg);
+  --bb-usage-code-fs: var(--bb-fs-sm);
+  --bb-usage-code-lh: var(--bb-line-height-content);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-usage-gap);
+}
+
+.bb-usage-title {
+  margin: 0;
+  font-size: var(--bb-fs-lg);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-line-height-heading);
+  color: var(--bb-body-color);
+}
+
+.bb-usage-text {
+  margin: 0;
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-content);
+  color: var(--bb-secondary-color);
+}
+
+.bb-usage-text code {
+  padding: var(--bb-space-1) var(--bb-space-2);
+  border-radius: var(--bb-radius-sm);
+  background-color: var(--bb-usage-bg);
+  color: var(--bb-body-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-usage-code {
+  position: relative;
+  border: var(--bb-border-width) solid var(--bb-usage-border-color);
+  border-radius: var(--bb-usage-radius);
+  background-color: var(--bb-usage-bg);
+}
+
+.bb-usage-code-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-2) var(--bb-space-3) var(--bb-space-2) var(--bb-space-4);
+  border-bottom: var(--bb-border-width) solid var(--bb-usage-border-color);
+}
+
+.bb-usage-code-lang {
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  text-transform: uppercase;
+  color: var(--bb-secondary-color);
+}
+
+.bb-usage-copy {
+  padding: var(--bb-space-1) var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-usage-border-color);
+  border-radius: var(--bb-radius-sm);
+  background-color: var(--bb-body-bg);
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+  line-height: var(--bb-line-height-base);
+  cursor: pointer;
+  transition: var(--bb-transition-fast);
+}
+
+.bb-usage-copy:hover,
+.bb-usage-copy:focus-visible {
+  border-color: var(--bb-primary);
+}
+
+.bb-usage-copy.is-copied {
+  border-color: var(--bb-success);
+  color: var(--bb-success);
+}
+
+.bb-usage-pre {
+  margin: 0;
+  padding: var(--bb-space-4);
+  overflow-x: auto;
+  color: var(--bb-body-color);
+  font-family: var(--bb-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+  font-size: var(--bb-usage-code-fs);
+  line-height: var(--bb-usage-code-lh);
+  white-space: pre;
+  tab-size: 2;
+}
+
+.bb-usage-pre code {
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+.bb-usage-tip {
+  margin: 0;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-inline-start: calc(var(--bb-border-width) * 3) solid var(--bb-primary);
+  border-radius: var(--bb-radius-sm);
+  background-color: var(--bb-primary-light);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+  color: var(--bb-body-color);
+}

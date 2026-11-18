@@ -147,6 +147,48 @@
                         </div>
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Açma düğmesi ve çekmece</h3>
+                                <p class="bb-usage-text">Düğmeye <code>data-bb-drawer-toggle</code>, çekmeceye <code>data-bb-drawer</code> verin. Konum için <code>bb-drawer-start</code> veya <code>bb-drawer-end</code>; kapatma için <code>data-bb-drawer-close</code>.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div id=&quot;drawerEnd&quot; class=&quot;bb-drawer bb-drawer-end&quot; data-bb-drawer role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;drawerEndTitle&quot; tabindex=&quot;-1&quot;&gt;
+
+    &lt;div class=&quot;bb-drawer-header&quot;&gt;
+        &lt;h2 id=&quot;drawerEndTitle&quot; class=&quot;bb-drawer-title&quot;&gt;Sağ Panel&lt;/h2&gt;
+
+        &lt;button type=&quot;button&quot; class=&quot;bb-drawer-close&quot; data-bb-drawer-close aria-label=&quot;Close&quot;&gt;
+            &lt;span class=&quot;material-symbols-outlined&quot; style=&quot;font-size:20px;&quot;&gt;close&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;bb-drawer-body&quot;&gt;
+        &lt;p&gt;Bu sağdan açılan overlay drawer.&lt;/p&gt;
+        &lt;p&gt;Filtre, ayar, quick edit için birebir.&lt;/p&gt;
+
+        &lt;div class=&quot;mt-3&quot;&gt;
+            &lt;div class=&quot;fw-semibold mb-2&quot;&gt;Scroll testi&lt;/div&gt;
+            &lt;div class=&quot;small text-body-secondary&quot;&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+                &lt;!-- ... aynı yapıda diğer öğeler ... --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
@@ -155,6 +197,7 @@
     <script src="../../assets/js/core/bb-drawer.js"></script>
 
     <!-- Demo: theme + density -->
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

@@ -217,11 +217,45 @@
                         </div>
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Yükleniyor göstergesi</h3>
+                                <p class="bb-usage-text">Düğmeye <code>data-bb-indicator</code> verin; içine <code>bb-indicator-label</code> ve <code>bb-indicator-progress</code> koyun. Sayfaya <code>assets/js/core/bb-forms.js</code> bağlı değilse indicator betiği eklenmelidir.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;button type=&quot;button&quot;
+        class=&quot;btn btn-success&quot;
+        data-bb-indicator=&quot;on&quot;
+        aria-busy=&quot;true&quot;&gt;
+    &lt;span class=&quot;bb-indicator&quot; data-bb-indicator-root&gt;
+        &lt;span class=&quot;bb-indicator-label&quot;&gt;
+            Save
+        &lt;/span&gt;
+
+        &lt;span class=&quot;bb-indicator-progress&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;
+            Saving...
+            &lt;span class=&quot;spinner-border spinner-border-sm align-middle ms-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
     <script src="../../assets/js/panel/bb-component-indicator-demo.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

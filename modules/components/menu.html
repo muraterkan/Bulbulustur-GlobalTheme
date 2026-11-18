@@ -507,6 +507,60 @@
 
                                 </div>
 
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Dikey menü</h3>
+                                <p class="bb-usage-text">Kök <code>bb-menu</code> + <code>data-bb-menu="true"</code>. Öğe: <code>bb-menu-item</code> &gt; <code>bb-menu-link</code> (ikon, başlık). Aktif öğeye <code>active</code> verin. Alt menü açılır paneli <code>bb-menu-sub</code> ile yazılır.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-here-bg bb-menu-sub-indention w-100&quot;
+     data-bb-menu=&quot;true&quot;&gt;
+
+    &lt;div class=&quot;bb-menu-section&quot;&gt;MENÜ&lt;/div&gt;
+
+    &lt;!-- Dashboards (simple) --&gt;
+    &lt;div class=&quot;bb-menu-item active here&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bb-menu-link active&quot;&gt;
+            &lt;span class=&quot;bb-menu-icon&quot;&gt;
+                &lt;span class=&quot;material-symbols-outlined&quot;&gt;dashboard&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;bb-menu-title&quot;&gt;Dashboards&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;bb-menu-separator&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;bb-menu-section&quot;&gt;PAGES&lt;/div&gt;
+
+    &lt;!-- User Profile (accordion) --&gt;
+    &lt;div class=&quot;bb-menu-item&quot;
+         data-bb-menu-trigger=&quot;click&quot;
+         aria-expanded=&quot;true&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bb-menu-link&quot;&gt;
+            &lt;span class=&quot;bb-menu-icon&quot;&gt;
+                &lt;span class=&quot;material-symbols-outlined&quot;&gt;person&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;bb-menu-title&quot;&gt;User Profile&lt;/span&gt;
+            &lt;span class=&quot;bb-menu-arrow&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+
+        &lt;div class=&quot;bb-menu-sub bb-menu-sub-accordion&quot;&gt;
+            &lt;div class=&quot;bb-menu-sub-content&quot;&gt;
+
+&lt;!-- ... --&gt;</code></pre>
+                                </div>
+                                <p class="bb-usage-tip">Header menüleri sayfa içeriğinin üstünde kalır (<code>--bb-z-header: 1030</code>); sticky içerik 1020 altında tutulmalıdır.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
                             </div>
                         </div>
                 </main>
@@ -519,6 +573,7 @@
 
     <!-- Menu JS + Theme Toggle -->
     <script src="../../assets/js/core/bb-menu.js"></script>
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>

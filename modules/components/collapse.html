@@ -168,11 +168,58 @@
                         </div>
                     </div>
                 </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">Nasıl kullanılır</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Temel collapse</h3>
+                                <p class="bb-usage-text"><code>bb-collapse-toggle</code> düğmesi <code>data-bs-toggle="collapse"</code> ile <code>bb-collapse-body</code> alanını açıp kapatır.</p>
+                                <div class="bb-usage-code">
+                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
+                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-collapse bb-collapse-bordered mb-4&quot;&gt;
+    &lt;button class=&quot;bb-collapse-toggle&quot;
+            type=&quot;button&quot;
+            data-bs-toggle=&quot;collapse&quot;
+            data-bs-target=&quot;#bbCollapseBasic&quot;
+            aria-expanded=&quot;false&quot;
+            aria-controls=&quot;bbCollapseBasic&quot;&gt;
+        &lt;span class=&quot;bb-collapse-title&quot;&gt;
+            &lt;span class=&quot;bb-collapse-heading&quot;&gt;Basic Collapse&lt;/span&gt;
+            &lt;span class=&quot;bb-collapse-subtitle&quot;&gt;Başlık + subtitle + icon rotate&lt;/span&gt;
+        &lt;/span&gt;
+
+        &lt;span class=&quot;bb-collapse-icon material-symbols-outlined&quot; aria-hidden=&quot;true&quot;&gt;expand_more&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div id=&quot;bbCollapseBasic&quot; class=&quot;collapse&quot;&gt;
+        &lt;div class=&quot;bb-collapse-body&quot;&gt;
+            &lt;p class=&quot;mb-2&quot;&gt;
+                Bu içerik Bootstrap 5’in native collapse’ı ile açılıp kapanır.
+                Biz sadece bb- tarafında token’lı görünüm veriyoruz.
+            &lt;/p&gt;
+            &lt;div class=&quot;d-flex gap-2 flex-wrap&quot;&gt;
+                &lt;button class=&quot;btn btn-sm btn-primary&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-sm btn-outline-secondary&quot; type=&quot;button&quot;&gt;Secondary&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
             </div>
         </div>
     </main>
     <!--/::Main-->
 
+    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
 <!--/::Scripts-->
 </body>
