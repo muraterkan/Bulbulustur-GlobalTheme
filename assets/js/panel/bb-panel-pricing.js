@@ -14,7 +14,7 @@ var productPlans={
   intro:"Kendi domaininizde çalışan Draugr mağazanız için uygun paketi seçin.",
   plans:[
    {name:"Draugr Basic",desc:"Hızlı başlangıç ve temel marka görünümü",year:2500,features:["Kendi domaini","Hazır tema","Temel içerik yönetimi","Merkezi ürün ve stok"]},
-   {name:"Draugr Pro",desc:"Büyüyen mağazalar için içerik ve SEO kontrolü",year:10000,features:["Gelişmiş tema ayarları","Sayfa ve içerik yönetimi","Dil ve SEO araçları","Kategori Router"]},
+   {name:"Draugr Pro",desc:"Büyüyen mağazalar için içerik ve SEO kontrolü",year:10000,features:["Gelişmiş tema ayarları","Sayfa ve içerik yönetimi","Dil ve SEO araçları","Category Router"]},
    {name:"Draugr Custom",desc:"Özel tasarım ve daha ileri ihtiyaçlar",year:100000,features:["Özel tema çalışması","İleri içerik yapısı","Özel entegrasyon ihtiyaçları","Öncelikli destek"]}
   ]
  },
@@ -23,7 +23,7 @@ var productPlans={
   intro:"Fiziksel mağaza, kasa ve şube operasyonunuz için uygun PosB paketini seçin.",
   plans:[
    {name:"PosB Basic",desc:"Tek mağaza ve temel hızlı satış akışı",year:499,features:["Hızlı satış ekranı","Temel stok görünümü","1 şube / kasa yapısı","Merkezi müşteri verisi"]},
-   {name:"PosB Pro",desc:"Çoklu şube, kasa ve operasyon yönetimi",year:999,features:["Çoklu şube & kasa","Depo ve transfer","Invoice ayarları","Vardiya & gün yönetimi"]},
+   {name:"PosB Pro",desc:"Çoklu şube, kasa ve operasyon yönetimi",year:999,features:["Çoklu şube & kasa","Warehouse ve transfer","Invoice ayarları","Vardiya & gün yönetimi"]},
    {name:"PosB Enterprise",desc:"Daha büyük mağaza operasyonları için",year:1999,features:["Gelişmiş şube yapısı","Öncelikli entegrasyonlar","Gelişmiş raporlama","Öncelikli destek"]}
   ]
  }
@@ -82,7 +82,7 @@ function render(){
  });
  root.querySelectorAll("[data-bb-pricing-period]").forEach(function(label){label.textContent=cycle==="month"?"/ ay":"/ yıl";});
  var note=root.querySelector("[data-bb-pricing-saving]");
- if(note)note.textContent=cycle==="year"?"Yıllık tutarlar demo amaçlı %20 indirimli hesaplanmıştır.":"Yıllık plana geçerek örnek %20 avantajı görebilirsiniz.";
+ if(note)note.textContent=cycle==="year"?"Annual tutarlar demo amaçlı %20 indirimli hesaplanmıştır.":"Annual plana geçerek örnek %20 avantajı görebilirsiniz.";
 }
 cycles.forEach(function(button){button.addEventListener("click",function(){cycle=button.dataset.bbPricingCycle;render();});});
 root.querySelectorAll("[data-bb-pricing-select]").forEach(function(button){

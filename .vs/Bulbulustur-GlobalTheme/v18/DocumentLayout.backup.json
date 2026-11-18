@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-up.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\creative-sign-up.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\tabs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\tabs.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\account.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\account.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\blog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\blog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\channels.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\channels.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\charts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\charts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\chat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\chat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\contacts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\contacts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\create-product.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\create-product.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-in.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\creative-sign-in.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-reset-password.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\creative-reset-password.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\pos-system.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:modules\\panel\\pos-system.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 49,
+          "SelectedChildIndex": 39,
           "Children": [
             {
               "$type": "Bookmark",
@@ -214,155 +178,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "creative-sign-in.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-in.html",
-              "RelativeDocumentMoniker": "modules\\panel\\creative-sign-in.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-in.html",
-              "RelativeToolTip": "modules\\panel\\creative-sign-in.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "tabs.html",
+              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\tabs.html",
+              "RelativeDocumentMoniker": "modules\\panel\\tabs.html",
+              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\tabs.html",
+              "RelativeToolTip": "modules\\panel\\tabs.html",
+              "ViewState": "AgIAACIDAAAAAAAAAAAYwMkDAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.501Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "creative-reset-password.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-reset-password.html",
-              "RelativeDocumentMoniker": "modules\\panel\\creative-reset-password.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-reset-password.html",
-              "RelativeToolTip": "modules\\panel\\creative-reset-password.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.432Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "create-product.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\create-product.html",
-              "RelativeDocumentMoniker": "modules\\panel\\create-product.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\create-product.html",
-              "RelativeToolTip": "modules\\panel\\create-product.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALAEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.351Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "contacts.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\contacts.html",
-              "RelativeDocumentMoniker": "modules\\panel\\contacts.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\contacts.html",
-              "RelativeToolTip": "modules\\panel\\contacts.html",
-              "ViewState": "AgIAADIEAAAAAAAAAAAowG8EAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.273Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "chat.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\chat.html",
-              "RelativeDocumentMoniker": "modules\\panel\\chat.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\chat.html",
-              "RelativeToolTip": "modules\\panel\\chat.html",
-              "ViewState": "AgIAAAcEAAAAAAAAAAAowEQEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.196Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "charts.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\charts.html",
-              "RelativeDocumentMoniker": "modules\\panel\\charts.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\charts.html",
-              "RelativeToolTip": "modules\\panel\\charts.html",
-              "ViewState": "AgIAACgEAAAAAAAAAAAowGUEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.117Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "channels.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\channels.html",
-              "RelativeDocumentMoniker": "modules\\panel\\channels.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\channels.html",
-              "RelativeToolTip": "modules\\panel\\channels.html",
-              "ViewState": "AgIAAHUEAAAAAAAAAAAowLIEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:01.04Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "blog.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\blog.html",
-              "RelativeDocumentMoniker": "modules\\panel\\blog.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\blog.html",
-              "RelativeToolTip": "modules\\panel\\blog.html",
-              "ViewState": "AgIAAFIEAAAAAAAAAAAowI8EAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:00.959Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "account.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\account.html",
-              "RelativeDocumentMoniker": "modules\\panel\\account.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\account.html",
-              "RelativeToolTip": "modules\\panel\\account.html",
-              "ViewState": "AgIAAOkDAAAAAAAAAAAowCYEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:00.882Z",
+              "WhenOpened": "2026-11-18T14:15:25.173Z",
               "EditorCaption": "",
               "OwnerCaption": "%3"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "about.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\about.html",
-              "RelativeDocumentMoniker": "modules\\panel\\about.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\about.html",
-              "RelativeToolTip": "modules\\panel\\about.html",
-              "ViewState": "AgIAACgEAAAAAAAAAAAowGUEAAAAAAAAAAAAAA==",
+              "Title": "pos-system.html",
+              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\pos-system.html",
+              "RelativeDocumentMoniker": "modules\\panel\\pos-system.html",
+              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\pos-system.html",
+              "RelativeToolTip": "modules\\panel\\pos-system.html",
+              "ViewState": "AgIAANoBAAAAAAAAAAAwwOUBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:54:00.795Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%3"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "creative-sign-up.html",
-              "DocumentMoniker": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-up.html",
-              "RelativeDocumentMoniker": "modules\\panel\\creative-sign-up.html",
-              "ToolTip": "C:\\DEV\\FRONTENT\\Bulbulustur-GlobalTheme\\modules\\panel\\creative-sign-up.html",
-              "RelativeToolTip": "modules\\panel\\creative-sign-up.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowEwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-11-18T11:53:47.496Z",
+              "WhenOpened": "2026-11-18T13:42:28.775Z",
               "EditorCaption": "",
               "OwnerCaption": "%3"
             }

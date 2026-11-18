@@ -30,8 +30,8 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 **Amaç:** Web uygulamasının Core layout sözleşmesini ezmesini engellemek ve sonraki tasarım çalışmalarına güvenli zemin hazırlamak.
 
 **Kapsam:**
-- Bütün aktif Web layout'larında `<body class="bb-web-page">` kökü doğrulanır.
-- Web'e özgü kararlar `.bb-web-page`, `bb-web-*`, `bb-b2b-*`, `bb-b2c-*`, `bb-account-*`, `bb-company-*`, `bb-store-*` scope'larında tutulur.
+- Bütün aktif Web layoutsında `<body class="bb-web-page">` kökü doğrulanır.
+- Web'e özgü kararlar `.bb-web-page`, `bb-web-*`, `bb-b2b-*`, `bb-b2c-*`, `bb-account-*`, `bb-company-*`, `bb-store-*` scopesında tutulur.
 - `bb-main`, `bb-wrapper`, `bb-container` layout/sizing görevi görür; default görsel surface üretmez.
 - Surface yalnız section/card/component seviyesinde verilir.
 - Web dosyaları çıplak Core selectorlarını yeniden tanımlamaz.
@@ -154,7 +154,7 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Company Contact koyu yüzeyindeki beyaz label niyeti doğrudan `.form-label` override yerine form root'unda `--bb-form-label-color` / `--bb-form-label-font-weight` tokenlarıyla tanımlandı.
 - Logon ailesinde (`login`, `register`, `forgot-password`, `set-new-password`, `firstdoor`) Web'e özgü `form-control/form-select/form-label` yeniden yazımı 0'a indirildi; yalnız input-group addon geometrisi kaldı.
 - RFQ'da Core ile aynı textarea/validation tekrarları kaldırıldı; Checkout'ta Core tarafından zaten ezilen payment input-group surface override'ı kaldırıldı.
-- Temizlenen source SCSS toplamı yaklaşık 23.137 bayt küçüldü.
+- Cleannen source SCSS toplamı yaklaşık 23.137 bayt küçüldü.
 - Derlenmiş `main.css`: 2.921.558 → 2.903.469 bayt (-18.089 bayt).
 - Kod commitleri: `73970e06` — `refactor(web): align account and company forms with core`; `25d578af` — `refactor(web): align auth and transaction forms with core`; `1a46294e` — `refactor(web): finish form token handoff`.
 - GitHub Build CSS üç kod commit'inde de başarılı; final derlenmiş `main.css` commit'i: `ade35869`.
@@ -169,9 +169,9 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 **Amaç:** Web içindeki en yoğun panel-benzeri sayfalarda kart/surface dilini tekleştirmek.
 
 **Kapsam:**
-- Account ve Company SCSS'lerindeki tekrar eden card/head/icon/body/actions kalıpları çıkarılır.
+- Account ve Company SCSSsindeki tekrar eden card/head/icon/body/actions kalıpları çıkarılır.
 - Uygun yerlerde Core `bb-card` anatomisi kullanılır.
-- Application'a özgü composition class'ları korunur.
+- Application'a özgü composition classsı korunur.
 - Padding, radius, border, shadow ve heading ritmi ortak Web card tokenlarına çekilir.
 - Gereksiz page-specific kart motorları azaltılır.
 - Store ve subscription kartlarıyla ortak desenler ayrıca değerlendirilir.
@@ -185,13 +185,13 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 
 **18.11.2026 sonucu:**
 - Core `components/_cards.scss` contract'ı referans alındı; yeni bir Web card component/motoru üretilmedi.
-- Web App tarafında 27 Razor dosyasında eski `bb-account-*` / `bb-b2b-company-*` class contract'ları korunarak additive biçimde Core `bb-card`, `bb-card-bordered`, `bb-card-body`, `bb-card-header`, `bb-card-px-0` ve gerektiği yerde `bb-card-hover-elevate` anatomisi eklendi.
+- Web App tarafında 27 Razor dosyasında eski `bb-account-*` / `bb-b2b-company-*` class contractsı korunarak additive biçimde Core `bb-card`, `bb-card-bordered`, `bb-card-body`, `bb-card-header`, `bb-card-px-0` ve gerektiği yerde `bb-card-hover-elevate` anatomisi eklendi.
 - Account overview, profile, company, subscription list/detail, address, bank account, e-posta/şifre, review, disable, phone, recovery email ve subscription create nötr kartları Core surface motoruna bağlandı.
 - Company create/edit, profile component, contact person/info, home component, products sidebar, reviews summary/review nötr kartları Core surface motoruna bağlandı.
-- Account Company ve Subscription Detail info kartlarında gerçek Core header/body anatomisi kullanıldı; liste body'lerinde `bb-card-px-0` ve `--bb-card-body-py: 0` ile satır tablosu geometrisi korundu.
+- Account Company ve Subscription Detail info kartlarında gerçek Core header/body anatomisi kullanıldı; liste bodysinde `bb-card-px-0` ve `--bb-card-body-py: 0` ile satır tablosu geometrisi korundu.
 - Stat kartlarında farklı bir kart motoru tutulmadı; yalnız gerçek varyant ihtiyacı olarak `--bb-card-bg: var(--bb-tertiary-bg)` bırakıldı.
 - Account Subscription ve Company Review hover davranışı Core `bb-card-hover-elevate` sistemine devredildi; page-specific transform/shadow transition tekrarları kaldırıldı.
-- Faz 3'ten kalan form sayfalarının page-specific `bb-layout-light-card` border/shadow ve card-body padding override'ları kaldırıldı; ortak `_layout-light.scss` yeniden tek sahibi oldu.
+- Faz 3'ten kalan form sayfalarının page-specific `bb-layout-light-card` border/shadow ve card-body padding overridesı kaldırıldı; ortak `_layout-light.scss` yeniden tek sahibi oldu.
 - Promo/identity kartları bilinçli olarak Core nötr kart ailesine zorlanmadı: company/subscription summary, subscription-create info, company profile side/trust, company contact message, company home trust ve company reviews hero/info kartları kendi composition rollerini koruyor.
 - Store kartları ayrıca incelendi. `store-index` hero/storefront kartları ve `store-profile` category/product kartları Account/Company nötr content kartıyla aynı görsel role sahip olmadığı için bu fazda zorla birleştirilmedi; storefront-specific legacy surface borcu ayrı temizlik olarak bırakıldı.
 - Subscription tarafında nötr panel/detail kartları Core'a taşındı; satış/plan kartının dekoratif gradient composition'ı korundu fakat Core card body + hover davranışını kullanıyor.
@@ -260,8 +260,8 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 
 **Kapsam:**
 - Tüm `[data-bs-theme="dark"]` ve `html[data-bs-theme="dark"]` blokları envanterlenir.
-- Core semantic token değişiminden otomatik çözülen dark override'lar kaldırılır.
-- Gerçek component-state ihtiyacı olan dark override'lar component scope'unda bırakılır.
+- Core semantic token değişiminden otomatik çözülen dark overrides kaldırılır.
+- Gerçek component-state ihtiyacı olan dark overrides component scope'unda bırakılır.
 - Ham dark renkler mümkünse semantic/component tokenlarına taşınır.
 - Light/dark arasında surface hierarchy ve contrast korunur.
 
@@ -311,12 +311,12 @@ Core
 - Web yalnız Core + Web CSS alır.
 - Draugr yalnız Core + Draugr CSS alır.
 - Ortak olduğu kanıtlanmamış hiçbir application CSS Core'a taşınmaz.
-- Build scriptleri ve CI application bundle'larını ayrı doğrular.
+- Build scriptleri ve CI application bundlesını ayrı doğrular.
 
 **Kabul kriteri:**
 - Panel Web marketplace CSS'i indirmez.
 - Status checkout/B2B/product CSS'i indirmez.
-- Application bundle'ları ayrı build edilir.
+- Application bundlesı ayrı build edilir.
 - Core hiçbir application katmanına bağımlı değildir.
 
 ---

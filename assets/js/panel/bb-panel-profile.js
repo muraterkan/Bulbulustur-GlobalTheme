@@ -5,7 +5,7 @@ var root = document.querySelector("[data-bb-profile-root]");
 if (!root) return;
 var view = root.dataset.bbProfileView || "overview";
 var pages = [
-  ["overview", "Genel Bakış", "profile.html"],
+  ["overview", "Overview", "profile.html"],
   ["settings", "Settings", "profile-settings.html"],
   ["security", "Security", "profile-security.html"],
   ["activity", "Activity", "profile-activity.html"],
@@ -18,7 +18,7 @@ var pages = [
 var extras = [
   ["projects", "Projeler"],
   ["campaigns", "Kampanyalar"],
-  ["documents", "Belgeler"],
+  ["documents", "Documentler"],
   ["followers", "Takipçiler"]
 ];
 var title = (pages.find(function(p){return p[0] === view;}) || extras.find(function(p){return p[0] === view;}) || ["", "Profil"])[1];
@@ -56,7 +56,7 @@ function profileActionsMenu() {
     '<button type="button" class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Other profil işlemleri">' +
     '<span class="material-symbols-outlined" aria-hidden="true">more_horiz</span></button>' +
     '<ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">' +
-    '<li><h3 class="dropdown-header">ÖDEMELER</h3></li>' +
+    '<li><h3 class="dropdown-header">PAYMENTSLER</h3></li>' +
     '<li><a class="dropdown-item" href="invoices.html">Invoice ön izlemesi</a></li>' +
     '<li><a class="dropdown-item" href="profile-billing.html">Ödeme yöntemleri</a></li>' +
     '<li><a class="dropdown-item" href="profile-statements.html">Ekstreler</a></li>' +
@@ -71,7 +71,7 @@ function profileHero() {
   }).join("");
   return '<section class="bb-card bb-profile-hero mb-4" aria-label="User profil kartı">' +
     '<div class="bb-card-body"><div class="bb-profile-hero-main">' +
-    '<div class="bb-profile-portrait"><img src="../../assets/media/avatars/300-3.webp" alt="Örnek kullanıcı profil fotoğrafı"><span class="bb-profile-presence" title="Çevrimiçi" aria-label="Çevrimiçi"></span></div>' +
+    '<div class="bb-profile-portrait"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt="Örnek kullanıcı profil fotoğrafı"><span class="bb-profile-presence" title="Çevrimiçi" aria-label="Çevrimiçi"></span></div>' +
     '<div class="bb-profile-hero-content"><div class="bb-profile-hero-top">' +
     '<div><h2 class="bb-profile-hero-name">Örnek User <span class="material-symbols-outlined" aria-label="Demo doğrulama işareti">verified</span></h2>' +
     '<div class="bb-profile-hero-meta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>Developer</span>' +
@@ -100,10 +100,10 @@ function pageOverview() {
     '</div><p class="text-body-secondary mt-4 mb-0">İstatistikler örnek verilerden oluşur.</p>') + '</div></div>';
 }
 function pageSettings() {
-  return card("Profil Settingsı",'<form data-bb-profile-form><div class="row g-4">' +
+  return card("Profil Settings",'<form data-bb-profile-form><div class="row g-4">' +
     '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Örnek User" maxlength="120" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_email">E-mail</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
-    '<div class="col-md-6"><label class="form-label" for="profile_city">Şehir</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
+    '<div class="col-md-6"><label class="form-label" for="profile_city">City</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_language">Languages</label><select class="form-select form-select-solid" id="profile_language" name="language"><option>Türkçe</option><option>English</option></select></div>' +
     '<div class="col-12"><label class="form-label" for="profile_about">Hakkımda</label><textarea class="form-control form-control-solid" id="profile_about" name="about" rows="4" maxlength="1000">Panel tasarım sistemi üzerinde çalışıyorum.</textarea></div>' +
     '<div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="profile_notify" checked><label class="form-check-label" for="profile_notify">Notificationsi etkinleştir</label></div></div>' +
@@ -113,14 +113,14 @@ function pageSettings() {
 function pageSecurity() {
   var heights=[41,59,72,90,65,53,64,75,92,76,56,68];
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Security Summaryi", '<div class="bb-profile-metric-grid">' +
+    card("Security Summary", '<div class="bb-profile-metric-grid">' +
       metric("User girişi","36.899","success") + metric("Yönetici girişi","72","primary") + metric("Başarısız deneme","291","danger") +
       '</div><h3 class="h6 mt-4">Activity Grafiği</h3><div class="bb-profile-activity-bars" role="img" aria-label="Ocaktan Aralığa örnek güvenlik etkinliği çubuk grafiği">' +
       heights.map(function(h){return '<div style="--bar-height:'+h+'%"></div>';}).join("") + '</div>' +
       '<div class="bb-profile-activity-labels">Oca Şub Mar Nis May Haz Tem Ağu Eyl Eki Kas Ara</div>' +
       '<small class="text-body-secondary d-block mt-3">Tüm istatistikler temsilidir.</small>') +
     '</div><div class="col-xl-4">' +
-    card("Son Uyarılar",'<strong>Hesap güvenliği</strong><p class="text-body-secondary mt-2">Hesabınız için güçlü parola ve iki aşamalı doğrulama önerilir.</p>' +
+    card("Last Uyarılar",'<strong>Hesap güvenliği</strong><p class="text-body-secondary mt-2">Hesabınız için güçlü parola ve iki aşamalı doğrulama önerilir.</p>' +
       '<div class="mt-4"><span class="badge bb-badge bb-badge-light-primary">Security önerisi</span></div>') +
     '<div class="mt-4">' + card("Security Kuralları",'<strong>Oturum koruması</strong><p class="text-body-secondary mt-2 mb-0">Oturumların ve cihazların düzenli kontrolü önerilir.</p>') + '</div></div></div>' +
     '<div class="mt-4">' + card("Oturumlar",table(["Konum","Durum","Cihaz","IP adresi","Zaman"],[
@@ -131,11 +131,11 @@ function pageSecurity() {
 }
 function pageActivity() {
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Son Activityler", '<ol class="bb-dashboard-timeline">' + [
+    card("Last Activityler", '<ol class="bb-dashboard-timeline">' + [
       ["Product bilgileri güncellendi","Katalog üzerinde örnek değişiklik yapıldı","Bugün 11:20"],
       ["Profil görüntülendi","Genel bakış sayfası açıldı","Dün 16:45"],
       ["Proje tamamlandı","Panel bileşen düzeni incelendi","14 Kasım 2026"],
-      ["Yeni bildirim","Örnek görev bildirimi oluşturuldu","12 Kasım 2026"]
+      ["New bildirim","Örnek görev bildirimi oluşturuldu","12 Kasım 2026"]
     ].map(function(r,i){return '<li><span class="bb-dashboard-timeline-rail"><span class="bb-dashboard-timeline-marker"></span><span class="bb-dashboard-timeline-line"></span></span>' +
       '<div class="bb-dashboard-timeline-content"><strong>'+r[0]+'</strong><p>'+r[1]+'</p><small>'+r[2]+'</small></div></li>';}).join("")+'</ol>') +
     '</div><div class="col-xl-4">' + card("Activity Dağılımı",'<div class="bb-profile-metric-grid">'+metric("Bugün","4")+metric("Bu hafta","12")+metric("Bu ay","48")+'</div><p class="text-body-secondary mt-4 mb-0">Örnek aktivite kayıtlarıdır.</p>')+'</div></div>';
@@ -150,8 +150,8 @@ function pageBilling() {
       '<p class="text-body-secondary mt-3 mb-0">Kart verisi saklanmaz; işlemler örnektir.</p>')+'</div>';
 }
 function pageStatements() {
-  return card("Ekstreler", '<p class="text-body-secondary">Dönem bazlı örnek hesap hareketleri. Belgeler gerçek mali kayıt değildir.</p>' +
-    table(["Dönem","Belge","Tutar","Durum"], [
+  return card("Ekstreler", '<p class="text-body-secondary">Dönem bazlı örnek hesap hareketleri. Documentler gerçek mali kayıt değildir.</p>' +
+    table(["Dönem","Document","Tutar","Durum"], [
       ["Kasım 2026","EKSTRE-DEMO-011","₺1.850,00",'<span class="badge bb-badge bb-badge-light-success">Hazır</span>'],
       ["Ekim 2026","EKSTRE-DEMO-010","₺1.690,00",'<span class="badge bb-badge bb-badge-light-success">Hazır</span>'],
       ["Eylül 2026","EKSTRE-DEMO-009","₺1.250,00",'<span class="badge bb-badge bb-badge-light-primary">Örnek</span>']
@@ -163,10 +163,10 @@ function pageReferrals() {
       '<label class="form-label" for="bb_profile_referral">Davet kodunuz</label><div class="input-group"><input class="form-control" id="bb_profile_referral" value="BB-DEMO-2026" readonly>' +
       '<button class="btn bb-btn-secondary" type="button" data-bb-profile-copy>Copy</button></div>' +
       '<p class="text-body-secondary mt-3 mb-0" data-bb-profile-status role="status">Bu kod yalnız demo amaçlıdır.</p>') +
-    '</div><div class="col-xl-4">' + card("Referans Summaryi",'<div class="bb-profile-metric-grid">'+metric("Davet","18")+metric("Katılım","7")+metric("Beklemede","3")+'</div>')+'</div></div>';
+    '</div><div class="col-xl-4">' + card("Referans Summary",'<div class="bb-profile-metric-grid">'+metric("Davet","18")+metric("Katılım","7")+metric("Beklemede","3")+'</div>')+'</div></div>';
 }
 function pageApi() {
-  return card("API Genel Bakış",'<div class="d-flex justify-content-end align-items-center gap-2 mb-4"><label class="form-check form-switch"><input class="form-check-input" type="checkbox" data-bb-profile-api-test checked>' +
+  return card("API Overview",'<div class="d-flex justify-content-end align-items-center gap-2 mb-4"><label class="form-check form-switch"><input class="form-check-input" type="checkbox" data-bb-profile-api-test checked>' +
     '<span class="form-check-label">Test modu</span></label></div>' +
     '<div class="row g-4"><div class="col-lg-6"><h3 class="h6">API kurulumu</h3><p class="text-body-secondary">Uygulamanın API ile bağlantısı için gerekli yetkiler ve örnek endpoint yapısı burada gösterilir.</p>' +
     '<code>/api/v1/example</code></div><div class="col-lg-6"><h3 class="h6">Developer Araçları</h3><p class="text-body-secondary">Uygulama anahtarları ve erişim kurallarını merkezi olarak yönetin.</p>' +
@@ -176,7 +176,7 @@ function pageApi() {
 }
 function pageLogs() {
   return card("Action Logsı",'<p class="text-body-secondary">Temsili denetim kayıtları; gerçek kullanıcı izleme verisi içermez.</p>' +
-    table(["Action","Kaynak","Sonuç","Tarih"],[
+    table(["Action","Kaynak","Sonuç","Date"],[
       ["Profil görüntüleme","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"16.11.2026"],
       ["Giriş kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"15.11.2026"],
       ["API demo isteği","Developer",'<span class="badge bb-badge bb-badge-light-warning">Test</span>',"14.11.2026"],
@@ -193,14 +193,14 @@ function pageProjects() {
 }
 function pageCampaigns() {
   return card("Kampanyalar", '<div class="row g-3">' + [
-    ["Yeni sezon", "Planlandı", "Aralık 2026", "Örnek kampanya vitrini"],
+    ["New sezon", "Planlandı", "Aralık 2026", "Örnek kampanya vitrini"],
     ["Butik tasarımlar", "Aktif", "Kasım 2026", "Sample Content gösterimi"],
     ["Özel koleksiyon", "Tamamlandı", "Ekim 2026", "Arşiv demo kaydı"]
   ].map(function(r){return '<div class="col-lg-4"><div class="bb-profile-method h-100"><span class="material-symbols-outlined" aria-hidden="true">campaign</span><div><strong>'+r[0]+'</strong><small>'+r[1]+' · '+r[2]+'</small><p class="text-body-secondary mt-2 mb-0">'+r[3]+'</p></div></div></div>';}).join("") + '</div>');
 }
 function pageDocuments() {
-  return card("Belgeler", '<p class="text-body-secondary">Örnek belge kayıtları. İndirilecek gerçek dosya bulunmuyor.</p>' +
-    table(["Belge adı","Tür","Güncelleme","Durum"],[
+  return card("Documentler", '<p class="text-body-secondary">Örnek belge kayıtları. İndirilecek gerçek dosya bulunmuyor.</p>' +
+    table(["Document adı","Tür","Güncelleme","Durum"],[
       ["Proje planı","PDF","15.11.2026",'<span class="badge bb-badge bb-badge-light-success">Hazır</span>'],
       ["Tema yönergesi","DOCX","12.11.2026",'<span class="badge bb-badge bb-badge-light-primary">Örnek</span>'],
       ["Bileşen envanteri","XLSX","10.11.2026",'<span class="badge bb-badge bb-badge-light-primary">Örnek</span>']

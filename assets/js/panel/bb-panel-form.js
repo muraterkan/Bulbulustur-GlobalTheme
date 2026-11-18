@@ -55,7 +55,7 @@
     var values = [
       ["Product adı", form.elements.namedItem("productName").value],
       ["Stock kodu", form.elements.namedItem("sku").value],
-      ["Kategori", form.elements.namedItem("category").selectedOptions[0].textContent],
+      ["Category", form.elements.namedItem("category").selectedOptions[0].textContent],
       ["Price", form.elements.namedItem("price").value + " TL"],
       ["Durum", form.elements.namedItem("status").value],
       ["Description", form.elements.namedItem("description").value || "—"],

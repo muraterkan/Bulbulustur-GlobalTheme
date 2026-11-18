@@ -1,6 +1,6 @@
 # Panel Menü Ağacı — Faz 7 Onaylı Kararlar
 
-Tarih: 2026-11-15
+Date: 2026-11-15
 
 ## Murat'ın kesinleştirdiği kararlar
 
@@ -15,7 +15,7 @@ Tarih: 2026-11-15
 - `assets/js/bb-panel-pages.js`: Türkçe başlık ve breadcrumb, sayfa kimliği ve aktif menü eşleştirmesi.
 - `modules/panel/dashboard.html`: dashboard genel bakış girişi doğrudan Faz 8 içerik demosuna bağlanır.
 - Other 57 menü girişi ortak, parametrik boş sayfa şablonuna gider (`pages.html?page=<id>`). Bu yöntem sayfaların iskeletini tek örnekte tutar; gerçek içerikler ilgili fazlarda geliştirilecektir.
-- Menu id'leri ve link parametreleri kalıcı, İngilizce slug biçiminde tutulmuştur. Görünen metin Türkçedir.
+- Menu idsi ve link parametreleri kalıcı, İngilizce slug biçiminde tutulmuştur. Görünen metin Türkçedir.
 - Prior Faz 1–6 demo sayfaları geçmiş aşamaları gösteren örnekler olarak korunmuştur.
 
 ## Test

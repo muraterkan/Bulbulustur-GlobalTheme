@@ -1,6 +1,6 @@
 # GlobalTheme Panel — Faz 11 Teslim
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 
 ## Dosyalar
@@ -17,7 +17,7 @@ Dal: `main`
 
 ## Kapsam sınırı
 
-Bu sürüm yalnız statik UI demolarıdır. Girişte oturum açılmaz, kayıt oluşturulmaz, şifre sıfırlama e-postası gönderilmez. JS hiçbir API çağrısı yapmaz. Metronic kodu kopyalanmadı; mevcut `bb-` ve token yapılarına bağlı kalındı.
+Bu sürüm yalnız statik UI demolarıdır. Girişte oturum açılmaz, kayıt oluşturulmaz, şifre sıfırlama e-postası gönderilmez. JS hiçbir API çağrısı yapmaz. Bulbulustur kodu kopyalanmadı; mevcut `bb-` ve token yapılarına bağlı kalındı.
 
 ## Kaynak kontrolü
 

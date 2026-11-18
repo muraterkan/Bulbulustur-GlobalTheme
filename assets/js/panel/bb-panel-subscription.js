@@ -31,7 +31,7 @@ function rows(){
 }
 function sync(){
   var option=customer.options[customer.selectedIndex];
-  root.querySelectorAll("[data-bb-sub-customer-name]").forEach(function(el){el.textContent=option.dataset.name||"Müşteri seçilmedi";});
+  root.querySelectorAll("[data-bb-sub-customer-name]").forEach(function(el){el.textContent=option.dataset.name||"Customer seçilmedi";});
   root.querySelectorAll("[data-bb-sub-customer-email]").forEach(function(el){el.textContent=option.dataset.email||"";});
   var method=root.querySelector('[name="subscriptionPayment"]:checked');
   root.querySelector("[data-bb-sub-payment-summary]").textContent=method?method.dataset.label:"Ödeme yöntemi seçilmedi";
@@ -49,7 +49,7 @@ root.addEventListener("click",function(event){
  }
  var removeCustom=event.target.closest("[data-bb-sub-remove-custom]");
  if(removeCustom){removeCustom.closest(".bb-subscription-custom-row").remove();return;}
- if(event.target.closest("[data-bb-sub-new-method]")){status.hidden=false;status.textContent="Yeni ödeme yöntemi ekleme bu statik demoda kullanılmıyor.";return;}
+ if(event.target.closest("[data-bb-sub-new-method]")){status.hidden=false;status.textContent="New ödeme yöntemi ekleme bu statik demoda kullanılmıyor.";return;}
 });
 root.querySelector("[data-bb-sub-add]").addEventListener("click",function(){
  var control=root.querySelector("[data-bb-sub-plan-select]"),id=control.value;

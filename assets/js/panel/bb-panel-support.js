@@ -13,11 +13,11 @@
   var selected = new URLSearchParams(location.search).get("tab") || "overview";
   if (!tabs.some(function (t) { return t.dataset.bbSupportTab === selected; })) selected = "overview";
   var heading = document.querySelector(".bb-page-title");
-  if (heading) heading.textContent = "Destek Merkezi / Genel Bakış";
+  if (heading) heading.textContent = "Support Center / Overview";
   var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
   if (breadcrumb) {
     breadcrumb.replaceChildren();
-    ["APPLICATIONS", "Destek Merkezi", "Genel Bakış"].forEach(function (label, i) {
+    ["APPLICATIONS", "Support Center", "Overview"].forEach(function (label, i) {
       var li = document.createElement("li");
       li.className = "breadcrumb-item" + (i === 2 ? " active" : "");
       li.textContent = label;
@@ -45,7 +45,7 @@
       if (hit) found++;
     });
     if (empty) empty.hidden = !q || found > 0;
-    if (status) status.textContent = q ? found + " eşleşen örnek içerik" : "Örnek Destek Merkezi · Gerçek talep verisi bulunmuyor";
+    if (status) status.textContent = q ? found + " eşleşen örnek içerik" : "Örnek Support Center · Gerçek talep verisi bulunmuyor";
   }
   root.addEventListener("click", function (event) {
     var tab = event.target.closest("[data-bb-support-tab]");

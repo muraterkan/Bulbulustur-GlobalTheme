@@ -1,4 +1,4 @@
-/* İstatistik widget'ları — Chart.js sparkline, renkler yalnız GlobalTheme tokenlarından. */
+/* İstatistik widgetsı — Chart.js sparkline, renkler yalnız GlobalTheme tokenlarından. */
 (function () {
   "use strict";
 
@@ -105,7 +105,7 @@
       }));
     });
 
-    say("İstatistik widget'ları örnek verilerle oluşturuldu; renkler GlobalTheme tokenlarından okunuyor.");
+    say("İstatistik widgetsı örnek verilerle oluşturuldu; renkler GlobalTheme tokenlarından okunuyor.");
   }
 
   var observer = new MutationObserver(function (mutations) {

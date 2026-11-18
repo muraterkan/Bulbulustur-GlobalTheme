@@ -31,7 +31,7 @@ function accept(incoming){
  var items=Array.from(incoming||[]).slice(0,10),valid=items.filter(function(file){return ["image/png","image/jpeg"].includes(file.type)&&file.size<=5*1024*1024;});
  release();list.replaceChildren();thumb.replaceChildren();
  if(!valid.length){var icon=document.createElement("span");icon.className="material-symbols-outlined";icon.textContent="imagesmode";thumb.append(icon);}
- valid.forEach(function(file,index){var url=URL.createObjectURL(file);urls.push(url);var li=document.createElement("li"),img=document.createElement("img");img.src=url;img.alt="Seçilen görsel "+(index+1);var span=document.createElement("span");span.textContent=file.name;li.append(img,span);list.append(li);if(index===0){var preview=document.createElement("img");preview.src=url;preview.alt="Product küçük görsel ön izlemesi";thumb.append(preview);}});
+ valid.forEach(function(file,index){var url=URL.createObjectURL(file);urls.push(url);var li=document.createElement("li"),img=document.createElement("img");img.src=url;img.alt="Selectilen görsel "+(index+1);var span=document.createElement("span");span.textContent=file.name;li.append(img,span);list.append(li);if(index===0){var preview=document.createElement("img");preview.src=url;preview.alt="Product küçük görsel ön izlemesi";thumb.append(preview);}});
  root.querySelector("[data-bb-product-file-status]").textContent=valid.length+" / 10 geçerli görsel seçildi. PNG/JPEG, en fazla 5 MB. Dosyalar gönderilmez.";
 }
 files.addEventListener("change",function(){accept(files.files);});
@@ -41,8 +41,8 @@ window.addEventListener("pagehide",release);
 var price=root.querySelector("[data-bb-product-price]"),discount=root.querySelector("[data-bb-product-discount]"),value=root.querySelector("[data-bb-product-discount-value]"),result=root.querySelector("[data-bb-product-result]");
 function updateDiscount(){
  var type=root.querySelector('[name="discountType"]:checked').value;
- value.hidden=type==="none";value.required=type!=="none";value.min=type==="percentage"?"0":"0.01";value.max=type==="percentage"?"100":"";value.placeholder=type==="percentage"?"Yüzde (%)":"İndirimli fiyat";
- discount.textContent=type==="none"?"İndirim uygulanmıyor":type==="percentage"?"Yüzde indirim":"Sabit indirimli fiyat";
+ value.hidden=type==="none";value.required=type!=="none";value.min=type==="percentage"?"0":"0.01";value.max=type==="percentage"?"100":"";value.placeholder=type==="percentage"?"Yüzde (%)":"Discountli fiyat";
+ discount.textContent=type==="none"?"Discount uygulanmıyor":type==="percentage"?"Yüzde indirim":"Sabit indirimli fiyat";
 }
 root.querySelectorAll('[name="discountType"]').forEach(function(r){r.addEventListener("change",updateDiscount);});
 root.querySelectorAll("[data-bb-product-editor-command]").forEach(function(button){button.addEventListener("click",function(){var field=root.querySelector("[data-bb-product-description]");var mark=button.dataset.bbProductEditorCommand;var start=field.selectionStart,end=field.selectionEnd,selected=field.value.slice(start,end)||"metin";var prefix=mark==="bold"?"**":mark==="italic"?"*":"__";field.setRangeText(prefix+selected+prefix,start,end,"select");field.focus();});});

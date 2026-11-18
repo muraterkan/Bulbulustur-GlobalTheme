@@ -47,7 +47,7 @@ Panel SCSS yalnız `assets/scss/layout/panel/` altında tutulur.
 ## main.scss
 
 `main.scss` mevcut cascade sırasını korumak için iki PANEL TEMPLATE ONLY bloğu taşır.
-Bu iki blok panel katmanının sökülebilir sınırıdır. Yeni panel importu yalnız bu bloklardan birine eklenir.
+Bu iki blok panel katmanının sökülebilir sınırıdır. New panel importu yalnız bu bloklardan birine eklenir.
 
 ## JavaScript
 
@@ -74,4 +74,4 @@ npm run check:components
 npm run check:panel
 ```
 
-Yeni kod bu sözleşmeleri ihlal ediyorsa önce mimari yerleşim düzeltilir.
+New kod bu sözleşmeleri ihlal ediyorsa önce mimari yerleşim düzeltilir.

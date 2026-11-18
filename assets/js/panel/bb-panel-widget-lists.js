@@ -30,8 +30,8 @@ root.addEventListener("click",function(event){
   input.value="";update();return;
  }
 });
-var title=document.querySelector(".bb-page-title");if(title)title.textContent="Widget'lar / Listler";
+var title=document.querySelector(".bb-page-title");if(title)title.textContent="Widgets / Listler";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
-if(crumb){crumb.replaceChildren();["PAGES","Widget'lar","Listler"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});}
+if(crumb){crumb.replaceChildren();["PAGES","Widgets","Listler"].forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});}
 update();
 })();

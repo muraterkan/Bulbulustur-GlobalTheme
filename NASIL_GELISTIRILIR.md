@@ -32,9 +32,9 @@ Core'un sorumlulukları:
 - color / surface sistemi
 - light / dark davranışı
 - responsive yardımcılar
-- accessibility state'leri
+- accessibility statesi
 - genel UI component omurgaları
-- component state'leri
+- component statesi
 - component density / sizing sistemi
 
 Örnek Core componentleri:
@@ -237,7 +237,7 @@ Her UI değişikliğinde aşağıdaki sıra uygulanır.
 4B. Eksikse Core'u düzelt 6B. HAYIR → Application katmanında yaz
 ```
 
-Son soru her zaman:
+Last soru her zaman:
 
 > **Yazdığım CSS yalnız bu application'a mı ait, yoksa başka Bulbulustur uygulamaları da bundan faydalanabilir mi?**
 
@@ -257,7 +257,7 @@ Bu, problemin application'a ait olduğu anlamına gelmez.
 
 ### Yanlış
 
-POSB tablosunda font büyük göründü.
+PosB tablosunda font büyük göründü.
 
 ```scss
 .bb-posb .table {
@@ -283,10 +283,10 @@ Core düzeltilir.
 Böylece:
 
 - Panel
-- POSB
+- PosB
 - Draugr yönetimi
 - gelecekte Web
-- başka application'lar
+- başka applications
 
 aynı düzeltmeden faydalanır.
 
@@ -402,7 +402,7 @@ Klasör ve root namespace ownership'i zaten belirtir.
 
 # 9. TOKEN-FIRST KURALI
 
-Yeni sabit değer yazmadan önce mevcut token aranır.
+New sabit değer yazmadan önce mevcut token aranır.
 
 ### Önce
 
@@ -446,13 +446,13 @@ color: #6b7280;
 background: #ffffff;
 ```
 
-Yeni token gerçekten gerekiyorsa mevcut token hiyerarşisine uygun olarak Core'a eklenir.
+New token gerçekten gerekiyorsa mevcut token hiyerarşisine uygun olarak Core'a eklenir.
 
 ---
 
 # 10. CORE COMPONENT KONTROL LİSTESİ
 
-Yeni component veya önemli Core değişikliği aşağıdakileri düşünmelidir:
+New component veya önemli Core değişikliği aşağıdakileri düşünmelidir:
 
 - light theme
 - dark theme
@@ -469,7 +469,7 @@ Yeni component veya önemli Core değişikliği aşağıdakileri düşünmelidir
 - density
 - token kullanımı
 - Bootstrap bridge ile çakışma
-- başka application'larda kullanım
+- başka applicationsda kullanım
 
 ---
 
@@ -549,7 +549,7 @@ main.css + applications/web.css
 main.css + applications/status.css
 ```
 
-Buradaki application CSS'leri main.css'in kopyası değildir.
+Buradaki application CSSsi main.css'in kopyası değildir.
 
 Sadece application layer'dır.
 
@@ -666,8 +666,8 @@ Bir ekran/component işi geldiğinde geliştirici veya AI şu sırayla hareket e
 Her önemli UI değişikliğinden sonra en azından şu sorular sorulur:
 
 - Core component gereksiz yere tekrar edildi mi?
-- Yeni magic value eklendi mi?
-- Yeni class aslında mevcut bir componentin varyantı mıydı?
+- New magic value eklendi mi?
+- New class aslında mevcut bir componentin varyantı mıydı?
 - Panel'e özel çözüm Core problemini saklıyor mu?
 - Dark theme doğru mu?
 - Light theme doğru mu?
@@ -702,7 +702,7 @@ Her `modules/components/*.html` sayfasının sonunda `<!--::Usage-->` bloğu bul
 
 `--bb-z-sticky` 1020 < `--bb-z-header` 1030 < `--bb-z-dropdown` 1050 < `--bb-z-drawer` 1055. Header (`.bb-header`, `.bb-shell-header`) sticky içeriğin üstündedir; header menüleri sayfa nesnelerinin altında kalmaz. Sayfa içi sticky değerleri 1030'un altında tutulur.
 
-## Son İlke
+## Last İlke
 
 > **Core yöntemleri ve component omurgasını tanımlar.  
 > Application bunları miras alır ve kendi görsel/işlevsel dünyasını kurar.  

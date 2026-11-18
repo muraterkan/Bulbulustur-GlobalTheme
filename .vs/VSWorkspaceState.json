@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
     "\\assets\\scss",
     "\\modules",
+    "\\modules\\components",
+    "\\modules\\panel",
     "\\scripts"
   ],
   "PreviewInSolutionExplorer": false

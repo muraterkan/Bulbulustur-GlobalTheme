@@ -10,7 +10,7 @@
 - **Faz 6:** `layout/_panel-variants.scss`, `assets/js/bb-panel-layout.js`, `modules/panel/layouts.html`. Sidebar, topbar ve auth yerleşim geçişi.
 - **Faz 7 taslağı:** `docs/PANEL_PHASE7_MENU_TREE_DRAFT.md`. Menusin tamamını kullanıma açma/onay yok.
 
-Bütün yeni SCSS partial'ları `assets/scss/main.scss` üzerinden çağrılıyor. `main.css` dosyasının güncel derleme çıktısı repoya yazılmadı.
+Bütün yeni SCSS partialsı `assets/scss/main.scss` üzerinden çağrılıyor. `main.css` dosyasının güncel derleme çıktısı repoya yazılmadı.
 
 ## Gerçekte doğrulanan
 

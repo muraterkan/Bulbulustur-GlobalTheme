@@ -132,7 +132,7 @@
 
   root.querySelector("[data-bb-pos-hold]").addEventListener("click", function () {
     if (!cart.size) {
-      setStatus("Bekletmek için fişe ürün ekleyin.");
+      setStatus("Waitmek için fişe ürün ekleyin.");
       return;
     }
     var total = totalEl.textContent;
@@ -145,7 +145,7 @@
     cart.clear();
     renderCart();
     renderHeldOrders();
-    setStatus("Sipariş beklemeye alındı.");
+    setStatus("Order beklemeye alındı.");
   });
 
   function renderHeldOrders() {
@@ -240,9 +240,9 @@
       if (!newCustomerForm.reportValidity()) return;
       var nameInput = newCustomerForm.querySelector("[name='customerName']");
       selectedCustomerName.textContent = nameInput.value.trim();
-      selectedCustomerMeta.textContent = "Yeni müşteri · Demo";
+      selectedCustomerMeta.textContent = "New müşteri · Demo";
       window.BBDrawer.close();
-      setStatus("Yeni müşteri demo olarak seçildi.");
+      setStatus("New müşteri demo olarak seçildi.");
       newCustomerForm.reset();
     });
   }

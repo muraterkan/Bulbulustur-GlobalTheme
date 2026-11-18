@@ -68,7 +68,7 @@
       var card = button.closest("[data-bb-integration-card]");
       if (!card || !setupDrawer) return;
       var name = card.dataset.integrationName;
-      var type = card.querySelector(".bb-integration-card-title small")?.textContent || "Entegrasyon";
+      var type = card.querySelector(".bb-integration-card-title small")?.textContent || "Integration";
       var sourceImg = card.querySelector(".bb-integration-logo img");
       var targetImg = setupLogo?.querySelector("img");
       var fallback = setupLogo?.querySelector(".bb-integration-logo-fallback");
@@ -98,7 +98,7 @@
     setupForm.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!setupForm.reportValidity()) return;
-      if (setupStatus) setupStatus.textContent = (setupName?.textContent || "Entegrasyon") + " için demo bağlantı isteği hazırlandı.";
+      if (setupStatus) setupStatus.textContent = (setupName?.textContent || "Integration") + " için demo bağlantı isteği hazırlandı.";
     });
   }
 

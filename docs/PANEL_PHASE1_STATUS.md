@@ -1,6 +1,6 @@
 # Panel Template — Faz 1 Teslim ve Kontrol
 
-Tarih: 2026-11-15
+Date: 2026-11-15
 
 ## Yapılanlar
 

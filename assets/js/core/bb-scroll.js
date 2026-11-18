@@ -1,5 +1,5 @@
 // Bulbulustur Mini Scroll (Auto Height)
-    // - Very small subset of Metronic KTScroll idea
+    // - Very small subset of Bulbulustur KTScroll idea
     // - Supports:
     //   data-bb-scroll="true"
     //   data-bb-scroll-height="auto" | "300px" | "60vh"

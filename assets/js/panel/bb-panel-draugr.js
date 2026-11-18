@@ -4,12 +4,12 @@ var page=document.querySelector("[data-bb-draugr-page]"); if(!page)return;
 var views={
  dashboard:{title:"Draugr Dashboard",label:"Dashboard"},
  storefront:{title:"Draugr / Vitrin",label:"Vitrin"},
- navigation:{title:"Draugr / Kategoriler & Navigasyon",label:"Kategoriler & Navigasyon"},
+ navigation:{title:"Draugr / Categories & Navigasyon",label:"Categories & Navigasyon"},
  content:{title:"Draugr / Pages & İçerik",label:"Pages & İçerik"},
  theme:{title:"Draugr / Tema & View Mode",label:"Tema & View Mode"},
  domain:{title:"Draugr / Domain & SEO",label:"Domain & SEO"},
  localization:{title:"Draugr / Dil & Yerelleştirme",label:"Dil & Yerelleştirme"},
- settings:{title:"Draugr / Kanal Settingsı",label:"Kanal Settingsı"},
+ settings:{title:"Draugr / Channel Settings",label:"Channel Settings"},
  subscription:{title:"Draugr / Subscription",label:"Subscription"}
 };
 var view=new URLSearchParams(location.search).get("view")||"dashboard";

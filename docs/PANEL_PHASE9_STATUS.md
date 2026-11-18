@@ -1,6 +1,6 @@
 # Panel Template — Faz 9 teslim
 
-Tarih: 2026-11-15
+Date: 2026-11-15
 Dal: `main`
 
 ## Kapsam
@@ -15,7 +15,7 @@ Dal: `main`
 
 Arama (Türkçe harf uyumlu), durum filtresi, 5/10/20 satır, 5 sütun üzerinden artan/azalan sıralama, sayfa geçişi, mevcut sayfadaki tüm satırları seçme, tekil seçim, seçilenleri aktifleştirme, tekil durum değiştirme ve ürün detayını görüntüleme.
 
-Veriler temsili, hiçbir sunucu isteği veya kalıcı güncelleme yapılmaz. Seçimler sayfalar arasında korunur; filtre sıfırlandığında temizlenir.
+Veriler temsili, hiçbir sunucu isteği veya kalıcı güncelleme yapılmaz. Selectimler sayfalar arasında korunur; filtre sıfırlandığında temizlenir.
 
 ## Doğrulama
 
@@ -24,7 +24,7 @@ Veriler temsili, hiçbir sunucu isteği veya kalıcı güncelleme yapılmaz. Se�
 - HTML'deki 15 gerekli kontrol özniteliği eşleşiyor; Faz 9 script bağlantısı mevcut.
 - `main.scss` partial bağlantısı mevcut.
 - 18 örnek veri satırı doğrulandı; dashboard'dan sızmış önceki içerik temizlendi.
-- **Gerçek yerel Sass derlemesi, 22/22 kontrat, `check:css` ve tarayıcı ile responsive/klavye kontrolü yeni Faz 9 commit'leri için yapılmadı.**
+- **Gerçek yerel Sass derlemesi, 22/22 kontrat, `check:css` ve tarayıcı ile responsive/klavye kontrolü yeni Faz 9 commitsi için yapılmadı.**
 - Usernın önceki Faz 8 sonucunda `npm run check:css` başarılı. Bu, yeni kod için test kanıtı değildir.
 - `assets/css/main.css` bu oturumda derlenmedi, GitHub'da güncellenmedi.
 

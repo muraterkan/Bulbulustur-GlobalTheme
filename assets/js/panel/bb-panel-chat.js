@@ -18,13 +18,13 @@
 
   const people = [
     {id:1,name:"Brian Cox",email:"brian@exchange.com",online:true,unread:5,last:"2 dk",avatar:"../../assets/media/avatars/300-12.webp",messages:[
-      {side:"in",text:"Yeni sezon ürünleri için stok planını bugün netleştirebilir miyiz?",time:"2 dk"},
+      {side:"in",text:"New sezon ürünleri için stok planını bugün netleştirebilir miyiz?",time:"2 dk"},
       {side:"out",text:"Evet. Öğleden sonra kategori bazında listeyi paylaşacağım.",time:"5 dk"},
       {side:"in",text:"Tamamdır, özellikle aksesuar grubunu ayrıca kontrol edelim.",time:"1 sa"},
       {side:"out",text:"Not aldım. Kritik varyantları da ayrıca işaretlerim.",time:"2 sa"}
     ]},
     {id:2,name:"Emma Smith",email:"smith@kpmg.com",online:true,unread:2,last:"18 dk",avatar:"../../assets/media/avatars/300-2.webp",messages:[
-      {side:"in",text:"Yeni mağaza başvurusundaki belgeleri kontrol ettiniz mi?",time:"18 dk"},
+      {side:"in",text:"New mağaza başvurusundaki belgeleri kontrol ettiniz mi?",time:"18 dk"},
       {side:"out",text:"Evet, bir belge eksik. Panelden tekrar yüklenmesini isteyeceğim.",time:"14 dk"}
     ]},
     {id:3,name:"Melody Macy",email:"melody@altbox.com",online:false,unread:0,last:"2 sa",avatar:"",messages:[
@@ -36,7 +36,7 @@
       {side:"out",text:"Katalog tamamlandı, fiyat deltasını bekliyoruz.",time:"3 sa"}
     ]},
     {id:5,name:"Sean Bean",email:"sean@dellito.com",online:false,unread:1,last:"Dün",avatar:"../../assets/media/avatars/300-6.webp",messages:[
-      {side:"in",text:"Sipariş raporunu CSV olarak indirebilir miyiz?",time:"Dün"},
+      {side:"in",text:"Order raporunu CSV olarak indirebilir miyiz?",time:"Dün"},
       {side:"out",text:"Demo sayfada yok; gerçek panelde rapor aksiyonuna bağlanacak.",time:"Dün"}
     ]}
   ];
@@ -176,7 +176,7 @@
     feedback.textContent = current ? "Çevrimiçi filtresi kaldırıldı." : "Çevrimiçi filtresi demo olarak etkinleştirildi.";
   });
   root.querySelector("[data-bb-chat-new]").addEventListener("click", () => {
-    feedback.textContent = "Yeni konuşma oluşturma demo sürümünde kayıt yapmaz.";
+    feedback.textContent = "New konuşma oluşturma demo sürümünde kayıt yapmaz.";
     input.focus();
   });
   root.querySelector("[data-bb-chat-more]").addEventListener("click", () => {

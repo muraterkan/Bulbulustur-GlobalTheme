@@ -1,4 +1,4 @@
-/* Grafik widget'ları — Chart.js 4.x, renkler yalnız GlobalTheme DataViz tokenlarından gelir. */
+/* Grafik widgetsı — Chart.js 4.x, renkler yalnız GlobalTheme DataViz tokenlarından gelir. */
 (function () {
   "use strict";
 
@@ -82,7 +82,7 @@
       labels: labels6,
       datasets: function (p) {
         return [
-          { label: "Sipariş", data: [43, 54, 57, 55, 60, 57], backgroundColor: p.c4, borderRadius: 5, barPercentage: 0.48, categoryPercentage: 0.56 },
+          { label: "Order", data: [43, 54, 57, 55, 60, 57], backgroundColor: p.c4, borderRadius: 5, barPercentage: 0.48, categoryPercentage: 0.56 },
           { label: "Hedef", data: [75, 85, 100, 97, 87, 104], backgroundColor: p.tertiary, borderRadius: 5, barPercentage: 0.48, categoryPercentage: 0.56 }
         ];
       }
@@ -99,7 +99,7 @@
       labels: labels6,
       datasets: function (p) {
         return [
-          { label: "Yeni müşteri", data: [70, 61, 110, 40, 51, 70], borderColor: p.c4, backgroundColor: rgba(p.c4, 0.82), fill: true, tension: 0.38, pointRadius: 0, borderWidth: 2 },
+          { label: "New müşteri", data: [70, 61, 110, 40, 51, 70], borderColor: p.c4, backgroundColor: rgba(p.c4, 0.82), fill: true, tension: 0.38, pointRadius: 0, borderWidth: 2 },
           { label: "Tekrar gelen", data: [null, null, null, 40, 100, 42], borderColor: p.c3, backgroundColor: rgba(p.c3, 0.82), fill: true, tension: 0.38, pointRadius: 0, borderWidth: 2, spanGaps: false }
         ];
       }

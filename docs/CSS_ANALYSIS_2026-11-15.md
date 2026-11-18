@@ -15,12 +15,12 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 
 | # | Sorun | Doğrulama | Karar |
 |---|-------|-----------|-------|
-| B1 | `main.scss`'te `@use` edilmeyen 11 partial: `product-gallery`, `product-gallery-sef`, `product-rail-sef`, `product-filter-sef`, `product-item-sef`, `auth-sef`, `layout-sef`, `layout/_hero`, `utilities/_sticky1`, `base/_colors` (0 satır), `utilities/_transition` (0 satır) | `@use/@import/@forward` ile başka scss'ten çağrılmıyor. `package.json`/CI çağırmıyor. Other repolarda yalnız sınıf adları geçiyor (Draugr şablonu/Ortobella kendi CSS'ini derliyor, bu partial'ları çağırmıyor). `_sticky1` ile `components/_sticky` aynı 14 seçiciyi tanımlıyor; `_sticky1`'de eşsiz sınıf yok. `layout-sef` içindeki `.bb-empty-state` zaten `_empty-state`'te var. | SİL (git geçmişinde kalır). |
+| B1 | `main.scss`'te `@use` edilmeyen 11 partial: `product-gallery`, `product-gallery-sef`, `product-rail-sef`, `product-filter-sef`, `product-item-sef`, `auth-sef`, `layout-sef`, `layout/_hero`, `utilities/_sticky1`, `base/_colors` (0 satır), `utilities/_transition` (0 satır) | `@use/@import/@forward` ile başka scss'ten çağrılmıyor. `package.json`/CI çağırmıyor. Other repolarda yalnız sınıf adları geçiyor (Draugr şablonu/Ortobella kendi CSS'ini derliyor, bu partialsı çağırmıyor). `_sticky1` ile `components/_sticky` aynı 14 seçiciyi tanımlıyor; `_sticky1`'de eşsiz sınıf yok. `layout-sef` içindeki `.bb-empty-state` zaten `_empty-state`'te var. | SİL (git geçmişinde kalır). |
 | B2 | `scss/pages/admin.bulbulustur.com/media` (292 dosya) | `assets/media` ile birebir aynı (`diff -rq` farksız). | Mükerrer kopya SİL; flag/avatar `assets/media`'da kalır. |
 | B3 | `scss/pages/admin.bulbulustur.com/pages/account` | `pages/demo1/account` ile birebir aynı. | Mükerrer kopya SİL. |
 | B4 | `scss/pages/.../js` altında 6 JS | SCSS kaynağı olmayan klasörde. Demo sayfaları `assets/js/...` altından çağırıyor; `bb-lightbox.js` zaten `assets/js`'te (birebir aynı), `bb-dialer`/`bb-toast`/`bb.drawer` orada YOK → demolar bozuk. | `assets/js`'e taşı; lightbox kopyasını sil. |
 | B5 | Demo script yolları: `lightbox.html` `../../../../assets/js/` (repo dışına çıkıyor), `dialer.html` `/assets/js/components/bb-dialer.js` | Dosya bu yollarda yok. | Yollar `assets/js`'e düzeltilecek. |
-| B6 | ChatGPT'nin `scripts/check-helix-contracts.mjs` ve `check:css`/`check:contracts` komutları yeni repoya gelmedi. | Eski `helix/ana`'da var. | Yeni repoya uyarlanmış sürümü eklenecek (ölü partial koruması dahil). |
+| B6 | ChatGPT'nin `scripts/check-helix-contracts.mjs` ve `check:css`/`check:contracts` komutları yeni repoya gelmedi. | Eski `helix/ana`'da var. | New repoya uyarlanmış sürümü eklenecek (ölü partial koruması dahil). |
 
 ## C. Kontrol edildi, hata DEĞİL
 
@@ -39,9 +39,9 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 |---|------|-----|
 | D1 | `base/_zindex.scss` | **ÇÖZÜLDÜ 16.11.2026:** Dosya hiçbir build'e bağlı değildi ve Bootstrap ölçeğiyle çakışıyordu; silindi. Mevcut fallback davranışı değişmedi. |
 | D2 | `components/forms-final` | ChatGPT sözleşmesinde ana girişten ayrıydı; senin `main.scss`'inde "Final Overrides" olarak bağlı. |
-| D3 | `components/product-quick-view` | **ÇÖZÜLDÜ 16.11.2026:** Müşteri-site ürün kompozisyonu olduğu için GlobalTheme core kapsamından çıkarıldı; partial, demo, katalog kaydı ve compiled CSS çıktısı kaldırıldı. |
+| D3 | `components/product-quick-view` | **ÇÖZÜLDÜ 16.11.2026:** Customer-site ürün kompozisyonu olduğu için GlobalTheme core kapsamından çıkarıldı; partial, demo, katalog kaydı ve compiled CSS çıktısı kaldırıldı. |
 | D4 | `js/bb-modal.js` | **ÇÖZÜLDÜ 16.11.2026:** Hiçbir sayfa tarafından yüklenmeyen ES module kaldırıldı. Modal demoları Bootstrap modal davranışını kullanmaya devam ediyor. |
-| D5 | Eski depoya (`muraterkan/bulbulustur.theme`) işaret eden yerler | `draugr.ortobella/RawTemplate/Styles/theme.lock.json` ve AI bilgi SQL'leri (`20261102`, `20261106`, `20261111`) "Tema deposu = bulbulustur.theme main" diyor; Draugr hattı main.css'i oradan klonluyor. Eski depo `e7836fd`'e geri alındı. Karar: Draugr main.css kaynağı hangi depo olacak? |
+| D5 | Eski depoya (`muraterkan/bulbulustur.theme`) işaret eden yerler | `draugr.ortobella/RawTemplate/Styles/theme.lock.json` ve AI bilgi SQLsi (`20261102`, `20261106`, `20261111`) "Tema deposu = bulbulustur.theme main" diyor; Draugr hattı main.css'i oradan klonluyor. Eski depo `e7836fd`'e geri alındı. Karar: Draugr main.css kaynağı hangi depo olacak? |
 | D6 | 9 tanımsız `--bb-*` kanca | Panel şablonunda token olarak tanımlamak istersen eklenir. |
 
 ## E. Uygulama kaydı (15.11.2026)

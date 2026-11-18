@@ -1,23 +1,23 @@
-# GlobalTheme Panel — Destek Merkezi
+# GlobalTheme Panel — Support Center
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 
 ## Geliştirilen
 
-- `modules/panel/support-center.html`: Metronic referansındaki karşılama/arama alanı, 6 sekme (Genel Bakış, Requests, Eğitimler, SSS, Lisanslar, Contact), Popular Requests/SSS/Eğitimler/Videolar/Dokümantasyon kartları ve örnek destek talebi formu.
+- `modules/panel/support-center.html`: Bulbulustur referansındaki karşılama/arama alanı, 6 sekme (Overview, Requests, Trainings, SSS, Licenses, Contact), Popular Requests/SSS/Trainings/Videos/Dokümantasyon kartları ve örnek destek talebi formu.
 - `assets/scss/layout/_panel-support.scss`: yalnız panel Support Center kapsamında responsive yerleşim, soru/cevap ve arama tasarımı. Ana `bb-card`, Bootstrap form ve semantik renk/spacing tokenları korunur.
 - `assets/js/bb-panel-support.js`: sekme geçişi, soru arama, açılır cevaplar, talep formu istemci doğrulaması, başlık/breadcrumb düzeni.
 - `assets/scss/main.scss`: SCSS partial import edildi.
-- Panel sidebar'larında `support-tickets` ve `support-faq` bağlantıları `support-center.html?tab=tickets` ve `support-center.html?tab=faq` adreslerine yönlendirildi.
+- Panel sidebarsında `support-tickets` ve `support-faq` bağlantıları `support-center.html?tab=tickets` ve `support-center.html?tab=faq` adreslerine yönlendirildi.
 
 ## Kapsam
 
-Bu statik demo gerçek destek talebi oluşturmaz, e-posta/API gönderimi yapmaz, video oynatıcı uydurmaz. Videolar kartında kaynak bağlı olmadığını belirtir. Dokümantasyon alanı mevcut component ve panel demo sayfalarına link verir. Görsellerdeki özel Metronic illüstrasyonu kopyalanmadı; mevcut Material Symbols ile temsil edildi.
+Bu statik demo gerçek destek talebi oluşturmaz, e-posta/API gönderimi yapmaz, video oynatıcı uydurmaz. Videos kartında kaynak bağlı olmadığını belirtir. Dokümantasyon alanı mevcut component ve panel demo sayfalarına link verir. Görsellerdeki özel Bulbulustur illüstrasyonu kopyalanmadı; mevcut Material Symbols ile temsil edildi.
 
 ## Kaynak kontrolü
 
-- Yeni HTML'de açık/kapalı etiket sayımları eşleşti.
+- New HTML'de açık/kapalı etiket sayımları eşleşti.
 - Tekrarlı `id` ve eksik `aria-controls` hedefi: yok.
 - 6 tab/tabpanel bağlantısı var, JS V8 sözdizimi kontrolünden geçti.
 - CSS partial, `main.scss` içinde.

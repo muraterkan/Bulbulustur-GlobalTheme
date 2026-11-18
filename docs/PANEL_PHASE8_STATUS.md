@@ -1,6 +1,6 @@
 # Panel Template — Faz 8 teslim
 
-Tarih: 2026-11-15
+Date: 2026-11-15
 Dal: `main`
 
 ## Faz 7
@@ -20,7 +20,7 @@ Demo: `modules/panel/dashboard.html`
 | 8.5 | `layout/_panel-dashboard-timeline.scss` | Görev zaman çizelgesi |
 | 8.6 | `layout/_panel-dashboard-promo.scss` | Token tabanlı vurgu kartı |
 
-Tüm partial'lar `assets/scss/main.scss` üzerinden derlenecek şekilde bağlandı. Sıfır ilave harici UI bağımlılığı. Dashboard rakamları ve ajanda girişleri **temsili**, canlı veriden çekilmiyor.
+Tüm partials `assets/scss/main.scss` üzerinden derlenecek şekilde bağlandı. Sıfır ilave harici UI bağımlılığı. Dashboard rakamları ve ajanda girişleri **temsili**, canlı veriden çekilmiyor.
 
 ## Kod ve statik kontrol
 

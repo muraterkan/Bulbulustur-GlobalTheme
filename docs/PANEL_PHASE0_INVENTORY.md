@@ -1,7 +1,7 @@
 # Panel Template — Faz 0 Envanter
 
-Tarih: 2026-11-15  
-Depo: `muraterkan/Bulbulustur-GlobalTheme` / `main`
+Date: 2026-11-15  
+Warehouse: `muraterkan/Bulbulustur-GlobalTheme` / `main`
 
 ## Examinenen kaynaklar
 
@@ -13,7 +13,7 @@ Depo: `muraterkan/Bulbulustur-GlobalTheme` / `main`
 
 ## Var olan parçalar
 
-| Parça | Depodaki durum | Fazlarda kullanılacak yol |
+| Parça | Warehousedaki durum | Fazlarda kullanılacak yol |
 |---|---|---|
 | Temel iskelet | `.bb-app`, `.bb-shell`, `.bb-main`, `.bb-main-inner`, `.bb-content` mevcut | Faz 1 mevcut kabuğu tamamlar; ikinci kabuk yazılmaz |
 | Sidebar | `.bb-sidebar` ile header/body/footer mevcut | Faz 1 mobil/daraltma; Faz 2 menü içeriği |

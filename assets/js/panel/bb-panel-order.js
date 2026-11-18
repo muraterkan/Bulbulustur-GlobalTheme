@@ -31,22 +31,22 @@
   var edit = root.querySelector("[data-bb-order-edit]");
   if (edit) edit.addEventListener("click", function () {
     result.hidden = false;
-    result.textContent = "Sipariş düzenleme işlemi bu statik demoda bulunmuyor. Hiçbir sipariş değiştirilmedi.";
+    result.textContent = "Order düzenleme işlemi bu statik demoda bulunmuyor. Hiçbir sipariş değiştirilmedi.";
     result.focus();
   });
   var next = root.querySelector("[data-bb-order-new]");
   if (next) next.addEventListener("click", function () {
     result.hidden = false;
-    result.textContent = "Yeni sipariş formu bu demoda henüz bağlı değil. Herhangi bir kayıt oluşturulmadı.";
+    result.textContent = "New sipariş formu bu demoda henüz bağlı değil. Herhangi bir kayıt oluşturulmadı.";
     result.focus();
   });
 
   var title = document.querySelector(".bb-page-title");
-  if (title) title.textContent = "Sipariş Details";
+  if (title) title.textContent = "Order Details";
   var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
   if (breadcrumb) {
     breadcrumb.replaceChildren();
-    ["APPLICATIONS", "e-Ticaret", "Siparişler", "Detaillar"].forEach(function (value, i, items) {
+    ["APPLICATIONS", "e-Ticaret", "Orders", "Detaillar"].forEach(function (value, i, items) {
       var item = document.createElement("li");
       item.className = "breadcrumb-item" + (i === items.length - 1 ? " active" : "");
       item.textContent = value;

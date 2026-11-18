@@ -76,7 +76,7 @@
         el.setAttribute("data-bb-open", "false");
         el.innerHTML = `
           <div class="bb-datetime-popover-header">
-            <p class="bb-datetime-title mb-0">Tarih Seç</p>
+            <p class="bb-datetime-title mb-0">Date Select</p>
             <button type="button" class="bb-datetime-close" aria-label="Close">
               <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
@@ -86,8 +86,8 @@
             <div class="bb-datetime-presets">
               <button type="button" class="bb-datetime-preset" data-bb-preset="today">Bugün</button>
               <button type="button" class="bb-datetime-preset" data-bb-preset="yesterday">Dün</button>
-              <button type="button" class="bb-datetime-preset" data-bb-preset="last7">Son 7 Gün</button>
-              <button type="button" class="bb-datetime-preset" data-bb-preset="last30">Son 30 Gün</button>
+              <button type="button" class="bb-datetime-preset" data-bb-preset="last7">Last 7 Day</button>
+              <button type="button" class="bb-datetime-preset" data-bb-preset="last30">Last 30 Day</button>
               <button type="button" class="bb-datetime-preset" data-bb-preset="thisMonth">Bu Ay</button>
               <button type="button" class="bb-datetime-preset" data-bb-preset="lastMonth">Geçen Ay</button>
             </div>
@@ -124,8 +124,8 @@
           </div>
 
           <div class="bb-datetime-popover-footer">
-            <div class="bb-datetime-selected" data-bb-selected>Seçim yok</div>
-            <button type="button" class="btn btn-light btn-sm" data-bb-action="clear">Temizle</button>
+            <div class="bb-datetime-selected" data-bb-selected>Selectim yok</div>
+            <button type="button" class="btn btn-light btn-sm" data-bb-action="clear">Clean</button>
             <button type="button" class="btn btn-light btn-sm" data-bb-action="cancel">Cancel</button>
             <button type="button" class="btn btn-primary btn-sm" data-bb-action="apply">Uygula</button>
           </div>
@@ -157,7 +157,7 @@
 
           if (mode === "single") {
             if (!draftStart) {
-              el.textContent = "Seçim yok";
+              el.textContent = "Selectim yok";
               return;
             }
             el.textContent = formatTR(draftStart);
@@ -165,7 +165,7 @@
           }
 
           if (!draftStart || !draftEnd) {
-            el.textContent = "Seçim yok";
+            el.textContent = "Selectim yok";
             return;
           }
 

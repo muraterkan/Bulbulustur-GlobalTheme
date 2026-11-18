@@ -14,13 +14,13 @@
   const photoIcon = $(".bb-contacts-avatar-upload .material-symbols-outlined");
   const demo = [
     ["Emma Smith", "smith@kpmg.com", "Abone"],
-    ["Melody Macy", "melody@altbox.com", "Onay Bekliyor"],
+    ["Melody Macy", "melody@altbox.com", "Awaiting Approval"],
     ["Max Smith", "max@kt.com", "Abone"],
     ["Sean Bean", "sean@dellito.com", "1. Seviye Üye"],
-    ["Brian Cox", "brian@exchange.com", "Onay Bekliyor"],
+    ["Brian Cox", "brian@exchange.com", "Awaiting Approval"],
     ["Mikaela Collins", "mik@pex.com", "Engelli"],
     ["Francis Mitcham", "f.mit@kpmg.com", "Abone"],
-    ["Olivia Wild", "olivia@corpmail.com", "Onay Bekliyor"],
+    ["Olivia Wild", "olivia@corpmail.com", "Awaiting Approval"],
     ["Neil Owen", "owen.neil@gmail.com", "Engelli"],
     ["Dan Wilson", "dam@consulting.com", "Genel"],
     ["Emma Bold", "emma@intenso.com", "Genel"],
@@ -31,7 +31,7 @@
     ["Ethan Wilder", "ethan@loop.com.au", "Genel"]
   ];
   const records = demo.map((data, index) => ({ id: index + 1, name: data[0], email: data[1], group: data[2], company: "", phone: "", city: "", country: "Türkiye", notes: "", photo: "" }));
-  const groups = ["Tüm Kişiler", "Abone", "1. Seviye Üye", "Onay Bekliyor", "Engelli", "Genel"];
+  const groups = ["Tüm Kişiler", "Abone", "1. Seviye Üye", "Awaiting Approval", "Engelli", "Genel"];
   let activeGroup = "Tüm Kişiler";
   let currentId = null;
   let currentPhoto = "";
@@ -112,7 +112,7 @@
     photoInput.value = "";
     setPhoto("");
     field("membership").value = activeGroup !== "Tüm Kişiler" ? activeGroup : "Genel";
-    $("[data-bb-contacts-form-heading]").textContent = "Yeni Kişi";
+    $("[data-bb-contacts-form-heading]").textContent = "New Kişi";
     message(""); drawList(); field("name").focus();
   }
   function openRecord(item) {
@@ -164,7 +164,7 @@
     const button = event.currentTarget;
     const opened = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!opened));
-    activeGroup = opened ? "Tüm Kişiler" : "Onay Bekliyor";
+    activeGroup = opened ? "Tüm Kişiler" : "Awaiting Approval";
     drawGroups(); drawList();
     message(opened ? "Filtre kaldırıldı." : "Onay bekleyen kişiler filtrelendi.");
   });

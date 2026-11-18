@@ -1,11 +1,11 @@
-# User Profili — Metronic referanslı tam demo sayfalar
+# User Profili — Bulbulustur referanslı tam demo sayfalar
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 
 ## Uygulanan ortak profil düzeni
 
-Metronic referans görsellerindeki düzen esas alındı. Tek `assets/js/bb-panel-profile.js` bütün profil ekranlarının ortak kimlik kartını, yatay 9 sekmeli menüsünü ve ilgili içerik bölümünü oluşturuyor. HTML dosyaları mevcut panel shell/toolbar/header/sidebar/footer sistemini koruyor.
+Bulbulustur referans görsellerindeki düzen esas alındı. Tek `assets/js/bb-panel-profile.js` bütün profil ekranlarının ortak kimlik kartını, yatay 9 sekmeli menüsünü ve ilgili içerik bölümünü oluşturuyor. HTML dosyaları mevcut panel shell/toolbar/header/sidebar/footer sistemini koruyor.
 
 Ortak kart: kare avatar ve aktiflik göstergesi, ad/doğrulama ikonu, rol/konum/e-posta meta bilgileri, Takip et/Profle Edit aksiyonları, üç KPI ve %50 örnek profil tamamlanma çubuğu.
 
@@ -15,7 +15,7 @@ Stiller ayrı, bağımsız bir tema olarak değil `assets/scss/layout/_panel-acc
 
 | Sekme | Dosya | İçerik |
 |---|---|---|
-| Genel Bakış | `modules/panel/profile.html` | Profil bilgileri, durum ve bilgilendirme kartı |
+| Overview | `modules/panel/profile.html` | Profil bilgileri, durum ve bilgilendirme kartı |
 | Settings | `modules/panel/profile-settings.html` | Gerçek form alanları, tarayıcı doğrulaması |
 | Security | `modules/panel/profile-security.html` | Summary metrikler, grafik, uyarı kartları ve oturum tablosu |
 | Activity | `modules/panel/profile-activity.html` | Zaman çizelgesi ve etkinlik metrikleri |
@@ -57,11 +57,11 @@ npm run check:panel
 npm run check:contracts
 ```
 
-Live Server ile `modules/panel/profile.html` açıp profil kartının avatar/istatikler/sekme yerleşimini ve 9 sekme bağlantısının farklı içerik açtığını kontrol et. Özellikle `profile-security.html`, `profile-billing.html`, `profile-api.html` ve 375px mobil görünümünü Metronic ekranlarıyla karşılaştır.
+Live Server ile `modules/panel/profile.html` açıp profil kartının avatar/istatikler/sekme yerleşimini ve 9 sekme bağlantısının farklı içerik açtığını kontrol et. Özellikle `profile-security.html`, `profile-billing.html`, `profile-api.html` ve 375px mobil görünümünü Bulbulustur ekranlarıyla karşılaştır.
 
 ```powershell
 git add assets/css/main.css
-git commit -m "build(css): user profile Metronic layout"
+git commit -m "build(css): user profile Bulbulustur layout"
 npm run check:css
 git push origin main
 ```

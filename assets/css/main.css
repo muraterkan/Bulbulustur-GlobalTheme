@@ -1001,15 +1001,15 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
 }
 /* =====================================
    Bulbulustur Theme — Data Viz & Status Tokens
-   Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
+   Categoryk grafik serisi, sıralı/ayrışan rampa, durum renkleri.
    Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
-   Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
+   Categoryk sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
    Usage kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
    Durum renkleri yalnız ikon/etiket ile birlikte kullanılır (renk tek başına anlam taşımaz).
 ===================================== */
 :root,
 html[data-bs-theme=light] {
-  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Other"e katlanır) */
+  /* Categoryk seri (sabit sıra, döndürülmez; 9. seri "Other"e katlanır) */
   --bb-chart-1: #2a78d6;
   --bb-chart-2: #eb6834;
   --bb-chart-3: #1baf7a;
@@ -5129,7 +5129,7 @@ button.bb-link:focus-visible,
   transform: rotate(var(--bb-rotate-n180)) !important;
 }
 
-/* Metronic-like specific */
+/* Bulbulustur-like specific */
 .bb-rotate-90-rt {
   transform: rotate(var(--bb-rotate-90)) !important;
   transform-origin: var(--bb-origin-right-top) !important;
@@ -5886,7 +5886,7 @@ button.bb-link:focus-visible,
 
 /* -------------------------------------
    Ecosystem shell helpers
-   Header ve footer token'larına bağlı
+   Header ve footer tokensına bağlı
 ------------------------------------- */
 .bb-bg-header {
   background-color: var(--bb-header-bg) !important;
@@ -6547,7 +6547,7 @@ button.bb-link:focus-visible,
 
 /* -------------------------------------
    Lift — shadow + transform birlikte
-   Kart hover'ları için en sık kullanım
+   Kart hoversı için en sık kullanım
 ------------------------------------- */
 .bb-shadow-lift {
   transition: box-shadow var(--bb-transition-normal), transform var(--bb-transition-normal);
@@ -8487,7 +8487,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   color: var(--bb-body-color);
 }
 
-/* Keep panel titles Metronic-scale without shrinking site-wide headings. */
+/* Keep panel titles Bulbulustur-scale without shrinking site-wide headings. */
 .bb-panel .bb-page-title {
   font-family: var(--bb-font-heading);
   font-size: var(--bb-panel-title-size);
@@ -9394,7 +9394,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   text-decoration: none;
 }
 
-/* User menu — Metronic-like hierarchy, scoped to the user popup only. */
+/* User menu — Bulbulustur-like hierarchy, scoped to the user popup only. */
 .bb-panel .bb-panel-overlay-host > .bb-panel-popover.bb-panel-user-menu {
   width: min(20.5rem, 100vw - 2rem);
   min-width: 0;
@@ -10781,7 +10781,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     grid-auto-columns: 7.25rem;
   }
 }
-/* POSB channel management — physical retail operations on shared core tokens. */
+/* PosB channel management — physical retail operations on shared core tokens. */
 .bb-panel .bb-posb-page {
   padding-bottom: var(--bb-space-6);
 }
@@ -15317,7 +15317,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     box-shadow: none;
   }
 }
-/* User Profile — shared Metronic-style identity card and subpage layout. */
+/* User Profile — shared Bulbulustur-style identity card and subpage layout. */
 .bb-panel .bb-profile-hero {
   overflow: visible;
 }
@@ -15670,7 +15670,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     grid-template-columns: 1fr;
   }
 }
-/* Panel footer: compact Metronic-style metadata and links. Shared footer stays unchanged. */
+/* Panel footer: compact Bulbulustur-style metadata and links. Shared footer stays unchanged. */
 .bb-panel {
   --bb-panel-footer-fs: var(--bb-fs-xs);
   --bb-panel-footer-py: var(--bb-space-4);
@@ -18425,7 +18425,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     gap: var(--bb-space-1);
   }
 }
-/* Lists Widgets — Metronic reference composition; canonical GlobalTheme components. */
+/* Lists Widgets — Bulbulustur reference composition; canonical GlobalTheme components. */
 .bb-panel .bb-widget-lists {
   --bb-widget-gap:var(--bb-panel-content-gap);
 }
@@ -20245,7 +20245,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 
 /* =====================================
    Bulbulustur Theme — Cards (v2 PURE)
-   Metronic DNA: in, copy: out
+   Bulbulustur DNA: in, copy: out
    Bootstrap 5 compatible, token-first
    ===================================== */
 .bb-card {
@@ -20471,7 +20471,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 
 /* =====================================
    Bulbulustur Theme — Modal (PURE)
-   Metronic-inspired | Bootstrap 5 compatible
+   Bulbulustur-inspired | Bootstrap 5 compatible
    Token-first | Dark/Light safe
    Root: .bb-modal
    ===================================== */
@@ -22214,7 +22214,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* -------------------------------------
-   Soft Pills (Metronic feel)
+   Soft Pills (Bulbulustur feel)
 ------------------------------------- */
 .bb-nav-soft {
   background-color: var(--bb-nav-soft-bg);
@@ -22392,7 +22392,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* -----------------------------
-   Light / Soft (Metronic feel)
+   Light / Soft (Bulbulustur feel)
 ----------------------------- */
 .badge.bb-badge-light-primary {
   --bb-badge-bg: var(--bb-primary-light);
@@ -22864,7 +22864,7 @@ button.badge.bb-badge:disabled {
 }
 /* =====================================
    Bulbulustur Theme — Carousel (PURE)
-   Metronic inspired (no copy)
+   Bulbulustur inspired (no copy)
    Bootstrap 5 compatible, bb-* modifiers
    ===================================== */
 .bb-carousel {
@@ -24451,7 +24451,7 @@ button.badge.bb-badge:disabled {
   line-height: 1;
 }
 .bb-menu {
-  /* Bullet (resim 2-3 sub item'lar) */
+  /* Bullet (resim 2-3 sub items) */
 }
 .bb-menu .bb-menu-bullet {
   width: var(--bb-menu-bullet-gap);
@@ -25554,7 +25554,7 @@ label.required::after {
 
 /* =====================================
    Bulbulustur Theme — Ribbons (PURE)
-   Bootstrap 5 base class'lar korunur.
+   Bootstrap 5 base classs korunur.
    Token-first | Dark/Light safe
    Root: .bb-ribbon
    Variants: start/end, top/bottom, vertical, clip, triangle
@@ -26915,7 +26915,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   box-shadow: var(--bb-tooltip-shadow);
   font-size: var(--bb-tooltip-font-size);
   line-height: var(--bb-tooltip-line-height);
-  text-align: left; /* Metronic hissi: daha “UI tooltip” */
+  text-align: left; /* Bulbulustur hissi: daha “UI tooltip” */
 }
 .tooltip.bb-tooltip {
   /* Arrow uses current tooltip bg */
@@ -26929,7 +26929,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* -------------------------------------
-   Inverse variant (Metronic-esque)
+   Inverse variant (Bulbulustur-esque)
    Usage: data-bs-custom-class="bb-tooltip bb-tooltip-inverse"
 -------------------------------------- */
 .tooltip.bb-tooltip.bb-tooltip-inverse {
@@ -26967,7 +26967,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 /* =====================================
    Bulbulustur Theme — Form Repeater
-   Bootstrap 5 compatible (Metronic-inspired)
+   Bootstrap 5 compatible (Bulbulustur-inspired)
    Prefix: bb-
    Dark/Light: data-bs-theme="light|dark"
 ===================================== */
@@ -27266,7 +27266,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
    Prefix: bb-
    Notes:
    - Hard-coded renk yok -> tokens / Bootstrap CSS vars
-   - Bootstrap base class'lar korunur (.dropdown-menu, .dropdown-item ...)
+   - Bootstrap base classs korunur (.dropdown-menu, .dropdown-item ...)
 ===================================== */
 .bb-dropdown-menu {
   /* local tokens (override edilebilir) */
@@ -27596,7 +27596,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 }
 
 /* -------------------------------------
-   Button helper (Metronic hissi: label + spinner)
+   Button helper (Bulbulustur hissi: label + spinner)
 ------------------------------------- */
 .bb-btn-spinner {
   display: inline-flex;
@@ -28353,7 +28353,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   --bb-btg-gap: 0.15rem;
 }
 
-/* “Soft surface” (Metronic hissi ama kopya değil) */
+/* “Soft surface” (Bulbulustur hissi ama kopya değil) */
 .btn-group.bb-btn-group-soft,
 .btn-group-vertical.bb-btn-group-soft {
   --bb-btg-bg: var(--bb-tertiary-bg);

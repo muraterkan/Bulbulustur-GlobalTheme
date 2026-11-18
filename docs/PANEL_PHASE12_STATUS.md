@@ -1,6 +1,6 @@
 # Panel Template — Faz 12 Teslim
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 
 ## Yapılanlar

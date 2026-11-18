@@ -10,7 +10,7 @@
         }
       })();
   
-      // Lightweight image check buttons (Metronic data-kt-buttons benzeri)
+      // Lightweight image check buttons (Bulbulustur data-kt-buttons benzeri)
       (function () {
         var groups = document.querySelectorAll('[data-bb-buttons="true"]');
         groups.forEach(function (group) {

@@ -1,12 +1,12 @@
 # GlobalTheme Panel — Görsel ve Fonksiyonel Kabul Kontrolü
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 Durum: **Kabul süreci açık; tarayıcı testleri henüz sonuçlandırılmadı.**
 
 ## Kapsam ve referans
 
-`PROJE_BAGLAMI.md`, `KURALLAR.md` ve `IS_PLANI.md` çalışma koşullarına göre Faz 0–12 kod teslimi tamamlandı. Metronic ekran görüntüleri yapı ve davranış referansıdır, kod/CSS kopyalama kaynağı değildir. Yerel derleme ve SCSS kontratları kullanıcının paylaştığı son çıktıda başarılı: `build:css`, `check:contracts` 22/22, `check:css`, derlenmiş CSS push `5c7c417`.
+`PROJE_BAGLAMI.md`, `KURALLAR.md` ve `IS_PLANI.md` çalışma koşullarına göre Faz 0–12 kod teslimi tamamlandı. Bulbulustur ekran görüntüleri yapı ve davranış referansıdır, kod/CSS kopyalama kaynağı değildir. Yerel derleme ve SCSS kontratları kullanıcının paylaştığı son çıktıda başarılı: `build:css`, `check:contracts` 22/22, `check:css`, derlenmiş CSS push `5c7c417`.
 
 ### Kaynak denetiminin ilk sonucu
 
@@ -21,7 +21,7 @@ Durum: **Kabul süreci açık; tarayıcı testleri henüz sonuçlandırılmadı.
 - **Kritik / düzeltildi (kaynak):** `_menu.scss` içerisindeki yatay `.bb-menu-item` flex düzeni sidebar accordion alt öğelerini sağa, içerik alanına taşıyordu. `layout/_panel-sidebar.scss` içinde yalnız sidebar öğelerine `flex-direction: column`, genişlik ve min-width sınırlaması eklendi. Tarayıcıda yeniden test gerekli.
 - **Kritik / düzeltildi (kaynak):** 13 panel sayfası depoda olmayan `assets/media/logos/default-dark.svg` görüntüsünü çağırıyordu. `bb-panel-brand-text` ile metin marka başlığına geçildi.
 - **Kullanılabilir demo / eklendi:** `modules/panel/social-feed.html`, `assets/js/bb-panel-social.js`. Üç örnek gönderi, paylaşım yazma, takip filtresi, beğenme, profil/konu kartları. Tüm işlemler bellekte; gerçek sosyal API değil.
-- **AÇIK KAPSAM:** 58 menü kimliğinden yalnız belirli sayfalar (Dashboard, Products, Oluştur, giriş/kayıt/sıfırlama, 404/500, profil/hesap/fatura, sosyal akış) içerik demosuna bağlandı. Kalan sayfalar `pages.html?page=...` üzerinden `Yapım aşamasında` şablonunu gösteriyor. Bu menüler **tamamlanmış içerik sayfası sayılmaz**. Prior Faz 0–12 "tamamlandı" değerlendirmesi yalnız fazların örnek dosyaları için geçerlidir.
+- **AÇIK KAPSAM:** 58 menü kimliğinden yalnız belirli sayfalar (Dashboard, Products, Oluştur, giriş/kayıt/sıfırlama, 404/500, profil/hesap/fatura, sosyal akış) içerik demosuna bağlandı. Kalan sayfalar `pages.html?page=...` üzerinden `Under Construction!` şablonunu gösteriyor. Bu menüler **tamamlanmış içerik sayfası sayılmaz**. Prior Faz 0–12 "tamamlandı" değerlendirmesi yalnız fazların örnek dosyaları için geçerlidir.
 - **KABUL BEKLİYOR:** CSS derlemesi ve canlı tarayıcı görsel kontrolü bu düzeltmelerden sonra henüz yapılmadı. Tam kabul kapatılamaz.
 
 ## Otomatik kontroller

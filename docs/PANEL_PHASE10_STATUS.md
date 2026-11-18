@@ -1,6 +1,6 @@
 # Panel Template — Faz 10 teslim
 
-Tarih: 2026-11-15
+Date: 2026-11-15
 Dal: `main`
 
 ## Gerçekleştirilen
@@ -16,9 +16,9 @@ Dal: `main`
 
 - GitHub'da oluşturulup tekrar okunan dosyalarda yeni HTML'nin ana etiket açma/kapatma sayıları eşleşti.
 - `bb-panel-form.js` ve güncellenen `bb-panel-pages.js` JavaScript sözdizimi V8 tarafından kabul edildi.
-- Üç form adımı ve ilgili fieldset'ler HTML kaynağında mevcut; dosya alanı ve form script linki var; SCSS partial `main.scss` içine ekli.
+- Üç form adımı ve ilgili fieldsets HTML kaynağında mevcut; dosya alanı ve form script linki var; SCSS partial `main.scss` içine ekli.
 - **Yerel CSS derlemesi, kontrat ve gerçek tarayıcı davranış kontrolleri Faz 10 için yapılmadı.**
-- Son kullanıcı çıktısındaki `check:css` başarısı Faz 8 koduna aittir. Bu çalışma için yeniden test edilmelidir.
+- Last kullanıcı çıktısındaki `check:css` başarısı Faz 8 koduna aittir. Bu çalışma için yeniden test edilmelidir.
 - `assets/css/main.css` henüz yeniden üretilip GitHub'a konmadı.
 - Demo verileri sunucuya göndermez. Sürüklenen veya seçilen dosyalar yüklenmez.
 

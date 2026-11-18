@@ -1,19 +1,19 @@
 # Panel — Subscription Details demo sayfası
 
-Tarih: 2026-11-16
+Date: 2026-11-16
 Dal: `main`
 
 ## Gerçekleştirilen
 
-- `modules/panel/subscription.html`: Metronic Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Müşteri, Products, Ödeme Yöntemi, Gelişmiş Seçenekler. Sağ kolon: Summary.
+- `modules/panel/subscription.html`: Bulbulustur Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Customer, Products, Payment Methods, Gelişmiş Selectenekler. Sağ kolon: Summary.
 - `assets/scss/layout/_panel-subscription.scss`: GlobalTheme renk, spacing, typography tokenlarıyla responsive abonelik ekranı.
 - `assets/js/bb-panel-subscription.js`: müşteri ve ödeme yöntemi seçimi, plan ekle/kaldır, örnek özel alan ekle/kaldır, özet ve aylık toplam güncelleme, form doğrulama ve demo uyarısı.
 - `assets/scss/main.scss`: ilgili partial `@use` ile dahil edildi.
-- Mevcut panel demolarında Subscription/Genel Bakış bağlantıları `subscription.html` sayfasına çevrildi.
+- Mevcut panel demolarında Subscription/Overview bağlantıları `subscription.html` sayfasına çevrildi.
 
 ## Kapsam ve veri sınırı
 
-Bu yalnız arayüz Exampledir. Müşteri ve kart bilgileri temsili, ödeme tutarları TRY bazında örnektir; herhangi bir abonelik oluşturma, ödeme tahsilatı, fatura düzenleme veya API isteği yapılmaz. Yeni ödeme yöntemi butonu kullanım dışı olduğunu açıkça söyler.
+Bu yalnız arayüz Exampledir. Customer ve kart bilgileri temsili, ödeme tutarları TRY bazında örnektir; herhangi bir abonelik oluşturma, ödeme tahsilatı, fatura düzenleme veya API isteği yapılmaz. New ödeme yöntemi butonu kullanım dışı olduğunu açıkça söyler.
 
 ## Kaynak doğrulaması
 
@@ -32,7 +32,7 @@ npm run check:panel
 npm run check:contracts
 ```
 
-`modules/panel/subscription.html` dosyasını Live Server'da aç. Müşteri, plan ve ödeme seçimi sırasında özeti kontrol et. Product kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
+`modules/panel/subscription.html` dosyasını Live Server'da aç. Customer, plan ve ödeme seçimi sırasında özeti kontrol et. Product kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
 
 CSS derlenince:
 

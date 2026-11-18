@@ -5,23 +5,23 @@
   if (!root) return;
   var records = [
     ["PRD-1001", "Keten Elbise", "Giyim", 1290, "Aktif", "2026-11-14"],
-    ["PRD-1002", "Seramik Kupa", "Ev & Yaşam", 420, "Aktif", "2026-11-12"],
+    ["PRD-1002", "Seramik Kupa", "Ev & Ageam", 420, "Aktif", "2026-11-12"],
     ["PRD-1003", "Deri Defter", "Kırtasiye", 650, "Taslak", "2026-11-10"],
     ["PRD-1004", "Pamuk Gömlek", "Giyim", 890, "Aktif", "2026-11-09"],
-    ["PRD-1005", "Ahşap Tepsi", "Ev & Yaşam", 740, "Pasif", "2026-11-08"],
+    ["PRD-1005", "Ahşap Tepsi", "Ev & Ageam", 740, "Pasif", "2026-11-08"],
     ["PRD-1006", "Yün Şal", "Aksesuar", 980, "Aktif", "2026-11-07"],
     ["PRD-1007", "Minimal Kolye", "Aksesuar", 1150, "Taslak", "2026-11-06"],
     ["PRD-1008", "Kanaviçe Çanta", "Aksesuar", 560, "Aktif", "2026-11-05"],
-    ["PRD-1009", "Cam Vazo", "Ev & Yaşam", 860, "Pasif", "2026-11-04"],
+    ["PRD-1009", "Cam Vazo", "Ev & Ageam", 860, "Pasif", "2026-11-04"],
     ["PRD-1010", "Organik Sabun", "Kozmetik", 210, "Aktif", "2026-11-03"],
-    ["PRD-1011", "Makrome Askı", "Ev & Yaşam", 340, "Taslak", "2026-11-02"],
-    ["PRD-1012", "Döküm Mum", "Ev & Yaşam", 320, "Aktif", "2026-11-01"],
+    ["PRD-1011", "Makrome Askı", "Ev & Ageam", 340, "Taslak", "2026-11-02"],
+    ["PRD-1012", "Döküm Mum", "Ev & Ageam", 320, "Aktif", "2026-11-01"],
     ["PRD-1013", "İpek Fular", "Aksesuar", 1750, "Pasif", "2026-10-30"],
-    ["PRD-1014", "El Yapımı Tabak", "Ev & Yaşam", 580, "Aktif", "2026-10-28"],
+    ["PRD-1014", "El Yapımı Tabak", "Ev & Ageam", 580, "Aktif", "2026-10-28"],
     ["PRD-1015", "Örme Bere", "Aksesuar", 390, "Taslak", "2026-10-26"],
-    ["PRD-1016", "Bambu Sepet", "Ev & Yaşam", 990, "Aktif", "2026-10-25"],
+    ["PRD-1016", "Bambu Sepet", "Ev & Ageam", 990, "Aktif", "2026-10-25"],
     ["PRD-1017", "Doğal Krem", "Kozmetik", 490, "Pasif", "2026-10-22"],
-    ["PRD-1018", "Keten Örtü", "Ev & Yaşam", 1190, "Aktif", "2026-10-20"]
+    ["PRD-1018", "Keten Örtü", "Ev & Ageam", 1190, "Aktif", "2026-10-20"]
   ].map(function (r) {
     return { id: r[0], name: r[1], category: r[2], price: r[3], status: r[4], date: r[5] };
   });

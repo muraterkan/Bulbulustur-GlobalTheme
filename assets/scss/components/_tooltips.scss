@@ -34,7 +34,7 @@
     box-shadow: var(--bb-tooltip-shadow);
     font-size: var(--bb-tooltip-font-size);
     line-height: var(--bb-tooltip-line-height);
-    text-align: left; /* Metronic hissi: daha “UI tooltip” */
+    text-align: left; /* Bulbulustur hissi: daha “UI tooltip” */
   }
 
   /* Arrow uses current tooltip bg */
@@ -48,7 +48,7 @@
 }
 
 /* -------------------------------------
-   Inverse variant (Metronic-esque)
+   Inverse variant (Bulbulustur-esque)
    Usage: data-bs-custom-class="bb-tooltip bb-tooltip-inverse"
 -------------------------------------- */
 .tooltip.bb-tooltip.bb-tooltip-inverse {
