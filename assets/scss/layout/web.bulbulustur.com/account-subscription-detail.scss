@@ -53,15 +53,6 @@
 .bb-account-subscription-detail-panel {
   display: grid;
   gap: 1.125rem;
-
-  padding: clamp(1rem, 2.4vw, 1.375rem);
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-xl);
-  box-shadow:
-    0 1.25rem 3.25rem rgba(15, 23, 42, 0.06),
-    0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
 }
 
 /* Summary */
@@ -191,16 +182,12 @@
 }
 
 .bb-account-subscription-detail-stat-card {
+  --bb-card-bg: var(--bb-tertiary-bg);
+
   min-width: 0;
 
   display: grid;
   gap: 0.5rem;
-
-  padding: 0.875rem;
-
-  background-color: var(--bb-tertiary-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 82%, transparent);
-  border-radius: var(--bb-radius-lg);
 }
 
 .bb-account-subscription-detail-stat-icon {
@@ -242,22 +229,17 @@
 /* Detail card */
 
 .bb-account-subscription-detail-card {
+  --bb-card-px: 1rem;
+  --bb-card-body-py: 0;
+
   min-width: 0;
   overflow: hidden;
-
-  background-color: var(--bb-body-bg);
-  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 84%, transparent);
-  border-radius: var(--bb-radius-lg);
-  box-shadow: var(--bb-shadow-xs);
 }
 
 .bb-account-subscription-detail-card-head {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-
-  padding: 1rem;
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
 }
 
 .bb-account-subscription-detail-card-icon {
