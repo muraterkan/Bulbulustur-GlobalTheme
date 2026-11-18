@@ -32892,7 +32892,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--bb-web-section-head-margin);
 }
 
 .bb-home-section-head-left {
@@ -33436,7 +33436,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   min-height: 2.125rem;
   display: inline-flex;
   align-items: center;
-  margin-bottom: 1.125rem;
+  margin-bottom: var(--bb-space-5);
   padding: 0 0.95rem;
   color: var(--bb-home-hero-slide-text, var(--bb-white));
   background-color: color-mix(in srgb, var(--bb-home-hero-slide-text, var(--bb-white)) 14%, transparent);
@@ -33477,7 +33477,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   align-items: center;
   flex-wrap: wrap;
   gap: 0.875rem;
-  margin-top: 1.75rem;
+  margin-top: var(--bb-web-section-head-margin);
 }
 
 /* Default slider buttons */
@@ -43187,7 +43187,7 @@ body.bb-category-menu-open {
   gap: 22px;
   align-items: stretch;
   min-height: 380px;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
   border-radius: var(--bb-radius-2xl);
   background-color: color-mix(in srgb, var(--bb-body-bg) 88%, transparent);
   border: 1px solid color-mix(in srgb, var(--bb-border-color) 92%, transparent);
@@ -43339,7 +43339,7 @@ body.bb-category-menu-open {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.125rem;
+  gap: var(--bb-web-section-head-gap);
   margin-bottom: 24px;
 }
 
@@ -43584,7 +43584,7 @@ body.bb-category-menu-open {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.125rem;
+  gap: var(--bb-web-section-head-gap);
   margin-bottom: 22px;
 }
 
@@ -43662,7 +43662,7 @@ body.bb-category-menu-open {
 .bb-blog-special-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
 }
 
 .bb-blog-special-card {
@@ -43804,7 +43804,7 @@ body.bb-category-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
 }
 
 .bb-blog-page-notify {
@@ -44118,7 +44118,7 @@ body.bb-category-menu-open {
     margin-bottom: 38px;
   }
   .bb-blog-subscribe-card {
-    padding: 1.375rem;
+    padding: var(--bb-web-card-padding);
   }
   .bb-blog-subscribe-card-form {
     border-radius: var(--bb-radius-xl);
@@ -44189,7 +44189,7 @@ body.bb-category-menu-open {
   position: relative;
   max-width: 33rem;
   min-height: 4rem;
-  margin-top: 1.75rem;
+  margin-top: var(--bb-web-section-head-margin);
   padding: 0.5rem 0.5rem 0.5rem 4.125rem;
   display: flex;
   align-items: center;
@@ -44242,7 +44242,7 @@ body.bb-category-menu-open {
 .bb-blog-search-button {
   min-width: 7.25rem;
   min-height: 3rem;
-  padding: 0 1.375rem;
+  padding: 0 var(--bb-space-6);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -44277,7 +44277,7 @@ body.bb-category-menu-open {
   grid-template-columns: minmax(0, 0.82fr) minmax(18rem, 1fr);
   gap: 1.5rem;
   align-items: stretch;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
   background-color: color-mix(in srgb, var(--bb-body-bg) 94%, transparent);
   border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
   border-radius: var(--bb-radius-2xl);
@@ -48673,7 +48673,7 @@ body.bb-category-menu-open {
 .bb-contact-form-info-card,
 .bb-contact-form-note-card,
 .bb-contact-form-help-card {
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 }
 
 .bb-contact-form-info-card {
@@ -48758,7 +48758,7 @@ body.bb-category-menu-open {
 }
 
 .bb-contact-form-card-head {
-  padding: 1.375rem 1.625rem;
+  padding: var(--bb-web-card-padding);
   background: radial-gradient(circle at 92% 12%, color-mix(in srgb, var(--bb-contact-form-accent) 8%, transparent) 0, transparent 34%), var(--bb-body-bg);
   border-bottom: var(--bb-border-width) solid var(--bb-contact-form-border-soft);
 }
@@ -48811,7 +48811,7 @@ body.bb-category-menu-open {
 .bb-contact-form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem 1.125rem;
+  gap: var(--bb-space-4) var(--bb-space-5);
 }
 
 .bb-contact-form-field {
@@ -48871,7 +48871,7 @@ body.bb-category-menu-open {
   grid-column: 1/-1;
   display: flex;
   align-items: center;
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
   padding-top: 0.125rem;
 }
 
@@ -48953,7 +48953,7 @@ body.bb-category-menu-open {
     padding: 1.375rem;
   }
   .bb-contact-form-alert {
-    margin: 1.375rem 1.375rem 0;
+    margin: var(--bb-web-card-padding) var(--bb-web-card-padding) 0;
   }
   .bb-contact-form-grid {
     grid-template-columns: 1fr;
@@ -53679,7 +53679,7 @@ body.bb-category-menu-open {
 .bb-career-subcontent-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
 }
 
 .bb-career-subcontent-card {
@@ -53726,7 +53726,7 @@ body.bb-category-menu-open {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
 }
 
 .bb-career-subcontent-body h3 {
@@ -53977,7 +53977,7 @@ body.bb-category-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
   margin-top: 24px;
   padding-top: 22px;
   border-top: 1px solid var(--bb-career-border-soft);
@@ -54278,7 +54278,7 @@ body.bb-category-menu-open {
 .bb-career-job-apply-card {
   display: grid;
   gap: 0.875rem;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
 }
 
 .bb-career-job-apply-icon {
@@ -54334,7 +54334,7 @@ body.bb-category-menu-open {
 .bb-career-job-apply-card {
   display: grid;
   gap: 16px;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
   border: 1px solid var(--bb-career-border);
   border-radius: var(--bb-radius-2xl);
   background-color: var(--bb-body-bg);
@@ -54409,7 +54409,7 @@ body.bb-category-menu-open {
 .bb-career-job-bottom-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.125rem;
+  gap: var(--bb-space-5);
   align-items: center;
   padding: 24px;
   border: 1px solid color-mix(in srgb, var(--bb-career-accent) 26%, var(--bb-career-border));
@@ -54542,7 +54542,7 @@ body.bb-category-menu-open {
     border-radius: var(--bb-radius-xl);
   }
   .bb-career-block-full {
-    padding: 1.375rem;
+    padding: var(--bb-web-card-padding);
     border-radius: var(--bb-radius-xl);
   }
   .bb-career-subcontent-wrap {
@@ -59420,7 +59420,7 @@ body.bb-category-menu-open {
   flex-direction: column;
   height: 100%;
   min-height: 100%;
-  padding: 2.125rem 1.5rem 1.5rem;
+  padding: var(--bb-web-section-gap-tight) var(--bb-space-6) var(--bb-space-6);
   border: var(--bb-border-width) solid var(--bb-pricing-muted-border);
   border-radius: var(--bb-radius-2xl);
   background-color: var(--bb-pricing-card-bg);
@@ -59509,7 +59509,7 @@ body.bb-category-menu-open {
 .bb-pricing-divider {
   width: 100%;
   height: var(--bb-border-width);
-  margin: 1.375rem 0;
+  margin: var(--bb-space-6) 0;
   background-color: var(--bb-pricing-soft-border);
 }
 
@@ -59571,7 +59571,7 @@ body.bb-category-menu-open {
 .bb-compare-btn {
   min-width: 8.75rem;
   min-height: 2.625rem;
-  padding: 0.6875rem 1.125rem;
+  padding: 0.6875rem var(--bb-space-5);
 }
 
 .bb-pricing-btn:hover,
@@ -59626,7 +59626,7 @@ body.bb-category-menu-open {
 
 .bb-compare-head {
   max-width: 58.75rem;
-  margin: 0 auto 2.125rem;
+  margin: 0 auto var(--bb-web-section-gap-tight);
   text-align: center;
 }
 
@@ -59681,7 +59681,7 @@ body.bb-category-menu-open {
 
 .bb-compare-table th,
 .bb-compare-table td {
-  padding: 1.125rem 1rem;
+  padding: var(--bb-space-5) var(--bb-space-4);
   border-right: var(--bb-border-width) solid var(--bb-pricing-soft-border);
   border-bottom: var(--bb-border-width) solid var(--bb-pricing-soft-border);
   color: var(--bb-body-color);
@@ -59695,8 +59695,8 @@ body.bb-category-menu-open {
 }
 
 .bb-compare-table thead th {
-  padding-top: 1.375rem;
-  padding-bottom: 1.375rem;
+  padding-top: var(--bb-space-6);
+  padding-bottom: var(--bb-space-6);
   background-color: var(--bb-pricing-table-bg);
   color: var(--bb-emphasis-color);
   font-size: var(--bb-fs-base);
@@ -59827,7 +59827,7 @@ body.bb-category-menu-open {
     font-size: var(--bb-fs-base);
   }
   .bb-pricing-card {
-    padding: 2rem 1.375rem 1.375rem;
+    padding: var(--bb-web-section-gap-tight) var(--bb-space-6) var(--bb-space-6);
   }
 }
 @media (max-width: 767.98px) {
@@ -91105,7 +91105,7 @@ button:not(:disabled) {
   grid-template-columns: 3.875rem minmax(0, 1fr);
   gap: 0.875rem;
   align-items: flex-start;
-  padding: 1.25rem 1.375rem 1.75rem;
+  padding: var(--bb-space-5) var(--bb-space-6) var(--bb-web-section-gap-tight);
   background-color: var(--bb-body-bg);
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
 }
@@ -91249,14 +91249,14 @@ button:not(:disabled) {
 
 /* Variant wrapper */
 .bb-b2c-buy-variant-area {
-  padding: 1.125rem 1.375rem 0;
+  padding: var(--bb-space-5) var(--bb-space-6) 0;
   margin-bottom: 0;
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
 }
 
 /* Generic variant component compatibility */
 .bb-b2c-variant-group {
-  margin-bottom: 1.125rem;
+  margin-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-variant-group:last-child {
@@ -91435,7 +91435,7 @@ button:not(:disabled) {
 /* Price */
 .bb-b2c-buy-price-block {
   position: relative;
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
   margin-bottom: 0;
   background: radial-gradient(circle at 92% 12%, color-mix(in srgb, var(--bb-primary) 16%, transparent), transparent 32%), linear-gradient(135deg, var(--bb-body-bg) 0%, color-mix(in srgb, var(--bb-primary) 5%, var(--bb-surface-elevated)) 100%);
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
@@ -91569,14 +91569,14 @@ button:not(:disabled) {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.625rem;
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
   margin-bottom: 0;
   border-bottom: var(--bb-border-width) solid var(--bb-border-color);
 }
 
 .bb-b2c-buy-btn {
   min-height: 3rem;
-  padding: 0 1.125rem;
+  padding: 0 var(--bb-space-5);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -91639,7 +91639,7 @@ button:not(:disabled) {
   display: flex;
   flex-direction: column;
   gap: 0.5625rem;
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 }
 
 .bb-b2c-buy-trust-item {
@@ -91785,7 +91785,7 @@ button:not(:disabled) {
 }
 
 .bb-b2c-detail-section {
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--bb-web-section-gap-tight);
 }
 
 .bb-b2c-detail-section-head {
@@ -91817,7 +91817,7 @@ button:not(:disabled) {
 .bb-b2c-detail-section-card,
 .bb-b2c-detail-component-shell {
   overflow: hidden;
-  padding: 1.375rem;
+  padding: var(--bb-web-card-padding);
   background-color: var(--bb-body-bg);
   border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius-lg);
@@ -91834,8 +91834,8 @@ button:not(:disabled) {
 }
 
 .bb-b2c-detail-section-card.is-question {
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  padding-top: var(--bb-space-5);
+  padding-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-detail-section-card.is-installment {
@@ -91854,7 +91854,7 @@ button:not(:disabled) {
 }
 
 .bb-b2c-detail-legal-note {
-  padding: 1.125rem 1.25rem;
+  padding: var(--bb-space-5);
   color: var(--bb-secondary-color);
   background-color: var(--bb-body-bg);
   border: var(--bb-border-width) solid var(--bb-border-color);
@@ -91881,7 +91881,7 @@ button:not(:disabled) {
   position: sticky;
   top: 0.75rem;
   z-index: 20;
-  margin-bottom: 1.125rem;
+  margin-bottom: var(--bb-space-5);
 }
 
 .bb-b2c-detail-anchor-bar {
@@ -92031,12 +92031,12 @@ button:not(:disabled) {
 .bb-b2c-detail-feature-actions {
   display: flex;
   justify-content: center;
-  margin-top: 1.125rem;
+  margin-top: var(--bb-space-5);
 }
 
 .bb-b2c-detail-feature-toggle {
   min-height: 2.875rem;
-  padding: 0 1.125rem;
+  padding: 0 var(--bb-space-5);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -92097,7 +92097,7 @@ button:not(:disabled) {
 
 .bb-b2c-product-drawer-head {
   min-height: 4.5rem;
-  padding: 1.125rem 1.25rem;
+  padding: var(--bb-space-5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92435,7 +92435,7 @@ body.bb-b2c-drawer-open {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 1.125rem;
+  padding: var(--bb-space-5);
 }
 
 .bb-b2c-gallery-modal-side {
