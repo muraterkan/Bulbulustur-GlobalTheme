@@ -181,6 +181,31 @@ Bu bölüm Web katmanının yeni Core üzerinde görsel ve yapısal olarak tek a
 - Core card yeniden yazılmaz; Web yalnız composition/varyant verir.
 - Aynı görsel rol için farklı radius/shadow/padding değerleri azaltılır.
 
+**Durum:** KOD / STATIC CONTRACT TAMAMLANDI — gerçek Web light/dark + responsive smoke testi bekliyor.
+
+**18.11.2026 sonucu:**
+- Core `components/_cards.scss` contract'ı referans alındı; yeni bir Web card component/motoru üretilmedi.
+- Web App tarafında 27 Razor dosyasında eski `bb-account-*` / `bb-b2b-company-*` class contract'ları korunarak additive biçimde Core `bb-card`, `bb-card-bordered`, `bb-card-body`, `bb-card-header`, `bb-card-px-0` ve gerektiği yerde `bb-card-hover-elevate` anatomisi eklendi.
+- Account overview, profile, company, subscription list/detail, address, bank account, e-posta/şifre, review, disable, phone, recovery email ve subscription create nötr kartları Core surface motoruna bağlandı.
+- Company create/edit, profile component, contact person/info, home component, products sidebar, reviews summary/review nötr kartları Core surface motoruna bağlandı.
+- Account Company ve Subscription Detail info kartlarında gerçek Core header/body anatomisi kullanıldı; liste body'lerinde `bb-card-px-0` ve `--bb-card-body-py: 0` ile satır tablosu geometrisi korundu.
+- Stat kartlarında farklı bir kart motoru tutulmadı; yalnız gerçek varyant ihtiyacı olarak `--bb-card-bg: var(--bb-tertiary-bg)` bırakıldı.
+- Account Subscription ve Company Review hover davranışı Core `bb-card-hover-elevate` sistemine devredildi; page-specific transform/shadow transition tekrarları kaldırıldı.
+- Faz 3'ten kalan form sayfalarının page-specific `bb-layout-light-card` border/shadow ve card-body padding override'ları kaldırıldı; ortak `_layout-light.scss` yeniden tek sahibi oldu.
+- Promo/identity kartları bilinçli olarak Core nötr kart ailesine zorlanmadı: company/subscription summary, subscription-create info, company profile side/trust, company contact message, company home trust ve company reviews hero/info kartları kendi composition rollerini koruyor.
+- Store kartları ayrıca incelendi. `store-index` hero/storefront kartları ve `store-profile` category/product kartları Account/Company nötr content kartıyla aynı görsel role sahip olmadığı için bu fazda zorla birleştirilmedi; storefront-specific legacy surface borcu ayrı temizlik olarak bırakıldı.
+- Subscription tarafında nötr panel/detail kartları Core'a taşındı; satış/plan kartının dekoratif gradient composition'ı korundu fakat Core card body + hover davranışını kullanıyor.
+- GlobalTheme'de 21 hedef SCSS dosyası toplam yaklaşık 13.185 bayt küçüldü.
+- Aynı 21 SCSS dosyasında toplam property sayımı: `background 206 → 179`, `border 463 → 382`, `border-radius 230 → 190`, `box-shadow 80 → 40`, `padding 168 → 130`.
+- Derlenmiş `assets/css/main.css`: 2.903.469 → 2.893.883 bayt (-9.586 bayt).
+- Web App commitleri: `7263fa87` — `refactor(web): adopt core card anatomy in account surfaces`; `085b1200` — `refactor(web): adopt core card shell in account forms`; `ff5e22e5` — `refactor(web): adopt core card shell in company and account detail views`.
+- GlobalTheme commitleri: `addc1d12` — `refactor(web): hand account card surfaces to core`; `03b156c9` — `refactor(web): remove page card engines from account forms`; `f6655fc7` — `refactor(web): hand company neutral cards to core`.
+- Final GitHub Build CSS başarılı; final generated CSS commit'i: `88d24967` — `build(css): regenerate from main.scss`.
+- Aradaki `03b156c9` workflow run'ı tamamlanmadan iptal edildi; sonraki final commit'in Build CSS run'ı başarıyla tamamlandı.
+- Web App repository'sinde bu üç Razor commit için GitHub Actions run oluşmadı; CI sonucu varmış gibi kabul edilmedi.
+- `npm run check:contracts` / `npm run check:css` bu oturumda çalıştırılmış sayılmıyor; GlobalTheme workflow hâlâ yalnız `build:css` çalıştırıyor.
+- Gerçek tarayıcı light/dark ve desktop/tablet/mobile smoke testi yapılmadı; kalan iş görsel regresyon kontrolüdür.
+
 ---
 
 ### Faz 5 — Hero ailesini 3–4 ana varyanta düşürme
