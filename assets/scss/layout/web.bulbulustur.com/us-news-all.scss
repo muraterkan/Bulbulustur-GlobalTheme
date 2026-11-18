@@ -7,42 +7,6 @@
    Hero
 ------------------------------------- */
 
-.bb-news-all-hero {
-  position: relative;
-  overflow: hidden;
-
-  padding: clamp(3rem, 6vw, 5rem) 0;
-
-  background:
-    radial-gradient(
-      circle at top right,
-      color-mix(in srgb, var(--bb-primary) 16%, transparent),
-      transparent 17rem
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-body-bg)) 0%,
-      var(--bb-body-bg) 100%
-    );
-
-  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
-}
-
-.bb-news-all-hero::after {
-  content: "";
-
-  position: absolute;
-  right: clamp(1rem, 9vw, 8rem);
-  bottom: -4rem;
-
-  width: 11rem;
-  height: 11rem;
-
-  background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .bb-news-all-hero-content {
   position: relative;
   z-index: 1;
@@ -57,25 +21,6 @@
 .bb-news-all-hero-chip .material-symbols-outlined {
   font-size: var(--bb-fs-sm);;
   line-height: 1;
-}
-
-.bb-news-all-hero-title {
-  margin: 0;
-
-  color: var(--bb-emphasis-color);
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
-  font-weight: var(--bb-fw-bold);
-  line-height: 1.04;
-  letter-spacing: -0.055em;
-}
-
-.bb-news-all-hero-text {
-  max-width: 44rem;
-  margin: 1rem 0 0;
-
-  color: var(--bb-secondary-color);
-  font-size: clamp(1rem, 1.25vw, 1.1rem);
-  line-height: 1.85;
 }
 
 /* -------------------------------------
@@ -371,9 +316,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .bb-news-all-hero {
-    padding: 2.5rem 0;
-  }
+  
 
   .bb-news-all-grid {
     grid-template-columns: 1fr;

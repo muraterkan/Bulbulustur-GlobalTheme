@@ -15,88 +15,6 @@
    Hero
 ===================================== */
 
-.bb-b2b-category-hero {
-    position: relative;
-    overflow: hidden;
-
-    padding-top: clamp(2.475rem, 4.4vw, 3.575rem);
-    padding-bottom: clamp(3.95rem, 6.9vw, 5.8rem);
-
-    background:
-        radial-gradient(
-            circle at 88% 14%,
-            color-mix(in srgb, var(--bb-info, #3b82f6) 11%, transparent),
-            transparent 19rem
-        ),
-        radial-gradient(
-            circle at 70% 76%,
-            color-mix(in srgb, var(--bb-primary) 8%, transparent),
-            transparent 20rem
-        ),
-        radial-gradient(
-            circle at 10% 88%,
-            color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent),
-            transparent 16rem
-        ),
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, #f8fbff 92%, var(--bb-body-bg)),
-            color-mix(in srgb, #dceaff 58%, var(--bb-body-bg))
-        );
-}
-
-.bb-b2b-category-hero::before {
-    content: "";
-    position: absolute;
-    right: -7rem;
-    top: -8rem;
-
-    width: 22rem;
-    height: 22rem;
-
-    background-color: color-mix(in srgb, var(--bb-info, #3b82f6) 12%, transparent);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.bb-b2b-category-hero::after {
-    content: "";
-    position: absolute;
-    left: -7rem;
-    bottom: -8rem;
-
-    width: 18rem;
-    height: 18rem;
-
-    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 64%, transparent);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.bb-b2b-category-hero .bb-container {
-    position: relative;
-    z-index: 2;
-}
-
-.bb-b2b-category-hero .bb-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.72fr);
-    align-items: center;
-    gap: clamp(1.75rem, 4vw, 3rem);
-}
-
-.bb-b2b-category-hero .bb-hero-content {
-    min-width: 0;
-}
-
-.bb-b2b-category-hero .bb-hero-title {
-    max-width: 48rem;
-}
-
-.bb-b2b-category-hero .bb-hero-text {
-    max-width: 47rem;
-}
-
 /* Hero label */
 
 .bb-b2b-category-hero-label {
@@ -751,33 +669,6 @@
 /* =====================================
    Dark
 ===================================== */
-
-[data-bs-theme="dark"] .bb-b2b-category-hero {
-    background:
-        radial-gradient(
-            circle at 88% 14%,
-            color-mix(in srgb, var(--bb-info, #3b82f6) 10%, transparent),
-            transparent 19rem
-        ),
-        radial-gradient(
-            circle at 70% 76%,
-            color-mix(in srgb, var(--bb-primary) 8%, transparent),
-            transparent 20rem
-        ),
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, #071b34 74%, var(--bb-body-bg)),
-            color-mix(in srgb, #0f3b74 38%, var(--bb-body-bg))
-        );
-}
-
-[data-bs-theme="dark"] .bb-b2b-category-hero::before {
-    background-color: color-mix(in srgb, var(--bb-info, #3b82f6) 8%, transparent);
-}
-
-[data-bs-theme="dark"] .bb-b2b-category-hero::after {
-    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 4%, transparent);
-}
 
 [data-bs-theme="dark"] .bb-b2b-category-hero-label {
     background-color: color-mix(

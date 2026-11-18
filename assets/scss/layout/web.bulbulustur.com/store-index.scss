@@ -9,30 +9,6 @@
 
 /* Hero */
 
-.bb-store-index-hero {
-    position: relative;
-    overflow: hidden;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background:
-        radial-gradient(circle at 92% 0%, rgba(var(--bb-primary-rgb, 254, 215, 0), .18), transparent 20rem),
-        linear-gradient(135deg, var(--bb-white, #ffffff), #fffdf2);
-    border-bottom: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), .07);
-}
-
-.bb-store-index-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(19rem, .65fr);
-    gap: 2rem;
-    align-items: center;
-    padding: 1.75rem;
-    border: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), .08);
-    border-radius: var(--bb-radius-2xl, 1.5rem);
-    background: rgba(255, 255, 255, .78);
-    box-shadow: 0 1rem 2.75rem rgba(var(--bb-dark-rgb, 51, 62, 72), .055);
-    backdrop-filter: blur(.45rem);
-}
-
 .bb-store-index-hero-content {
     min-width: 0;
     max-width: 48rem;
@@ -63,91 +39,9 @@
     font-size: var(--bb-fs-base);
 }
 
-.bb-store-index-hero-title {
-    margin: 0;
-    color: var(--bb-heading-color);
-    font-size: clamp(2rem, 3.2vw, 3rem);
-    font-weight: var(--bb-fw-black);
-    letter-spacing: -.05em;
-    line-height: 1.05;
-}
-
-.bb-store-index-hero-text {
-    max-width: 44rem;
-    margin: .85rem 0 0;
-    color: var(--bb-body-color);
-    font-size: .98rem;
-    line-height: var(--bb-line-height-content);
-}
-
-.bb-store-index-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .7rem;
-    margin-top: 1.2rem;
-}
-
-.bb-store-index-hero-primary-btn,
-.bb-store-index-hero-secondary-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .45rem;
-    min-height: 2.85rem;
-    padding-inline: 1.2rem;
-    border-radius: var(--bb-radius-pill);
-    font-weight: var(--bb-fw-extrabold);
-}
-
-.bb-store-index-hero-primary-btn .material-symbols-outlined,
-.bb-store-index-hero-secondary-btn .material-symbols-outlined {
-    font-size: var(--bb-fs-md);
-}
-
 .bb-store-index-hero-aside {
     display: grid;
     gap: .85rem;
-}
-
-.bb-store-index-hero-card {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    column-gap: .85rem;
-    row-gap: .15rem;
-    align-items: center;
-    padding: .95rem 1.05rem;
-    border: 1px solid rgba(var(--bb-dark-rgb, 51, 62, 72), .07);
-    border-radius: var(--bb-radius-xl, 1rem);
-    background: rgba(255, 255, 255, .92);
-    box-shadow: 0 .7rem 1.8rem rgba(var(--bb-dark-rgb, 51, 62, 72), .05);
-}
-
-.bb-store-index-hero-card-icon-container {
-    grid-row: span 2;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: var(--bb-radius-pill);
-    color: var(--bb-primary-active, #d6b700);
-    background: rgba(var(--bb-primary-rgb, 254, 215, 0), .14);
-}
-
-.bb-store-index-hero-card-icon {
-    font-size: var(--bb-icon-size-sm);
-}
-
-.bb-store-index-hero-card-title {
-    color: var(--bb-heading-color);
-    font-size: var(--bb-fs-sm);
-    font-weight: var(--bb-fw-extrabold);
-}
-
-.bb-store-index-hero-card-text {
-    color: var(--bb-secondary, #77838f);
-    font-size: .78rem;
-    line-height: var(--bb-line-height-base);
 }
 
 /* Alpha */

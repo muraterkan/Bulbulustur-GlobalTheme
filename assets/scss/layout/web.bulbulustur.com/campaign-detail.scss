@@ -44,51 +44,6 @@
    Hero
 ===================================== */
 
-.bb-campaign-detail-hero {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(
-            circle at 86% 12%,
-            color-mix(in srgb, var(--bb-primary) 18%, transparent),
-            transparent 22rem
-        ),
-        linear-gradient(
-            180deg,
-            color-mix(in srgb, var(--bb-tertiary-bg) 84%, var(--bb-body-bg)) 0%,
-            var(--bb-body-bg) 100%
-        );
-    border-bottom: var(--bb-border-width) solid var(--bb-campaign-detail-border);
-}
-
-.bb-campaign-detail-hero::after {
-    content: "";
-    position: absolute;
-    right: -7rem;
-    bottom: -8rem;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-    pointer-events: none;
-}
-
-.bb-campaign-detail-hero > .bb-container {
-    position: relative;
-    z-index: 2;
-}
-
-.bb-campaign-detail-hero-breadcrumb {
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-campaign-detail-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(20rem, 0.85fr);
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-}
-
 .bb-campaign-detail-label {
     gap: 0.4375rem;
     margin-bottom: 1rem;
@@ -98,25 +53,6 @@
     color: var(--bb-primary);
     font-size: var(--bb-icon-size-sm);
     line-height: 1;
-}
-
-.bb-campaign-detail-title {
-    max-width: 48rem;
-    margin: 0;
-    color: var(--bb-emphasis-color);
-    font-size: clamp(2.25rem, 5vw, 4.35rem);
-    font-weight: var(--bb-fw-extrabold);
-    line-height: 1.02;
-    letter-spacing: -0.06em;
-    overflow-wrap: anywhere;
-}
-
-.bb-campaign-detail-text {
-    max-width: 44rem;
-    margin: 1rem 0 0;
-    color: var(--bb-secondary-color);
-    font-size: var(--bb-fs-md);
-    line-height: var(--bb-line-height-loose);
 }
 
 .bb-campaign-detail-info-grid {
@@ -178,25 +114,6 @@
     font-weight: var(--bb-fw-bold);
     line-height: var(--bb-line-height-base);
     overflow-wrap: anywhere;
-}
-
-.bb-campaign-detail-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
-}
-
-.bb-campaign-detail-hero-actions .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4375rem;
-}
-
-.bb-campaign-detail-hero-actions .material-symbols-outlined {
-    font-size: var(--bb-icon-size-md);
-    line-height: 1;
 }
 
 /* =====================================

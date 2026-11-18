@@ -66,62 +66,6 @@
    Hero
 ===================================== */
 
-.bb-b2c-review-hero {
-    position: relative;
-    overflow: hidden;
-    padding-top: clamp(2.5rem, 5vw, 4.75rem);
-    padding-bottom: clamp(2.75rem, 6vw, 5.25rem);
-    background:
-        radial-gradient(
-            circle at 88% 14%,
-            color-mix(in srgb, var(--bb-b2c-review-accent) 18%, transparent),
-            transparent 23rem
-        ),
-        radial-gradient(
-            circle at 8% 92%,
-            color-mix(in srgb, var(--bb-b2c-review-accent) 8%, transparent),
-            transparent 18rem
-        ),
-        linear-gradient(
-            180deg,
-            color-mix(in srgb, var(--bb-tertiary-bg) 86%, var(--bb-body-bg)) 0%,
-            var(--bb-body-bg) 100%
-        );
-    border-bottom: var(--bb-border-width) solid var(--bb-b2c-review-border);
-}
-
-.bb-b2c-review-hero::after {
-    content: "";
-    position: absolute;
-    right: -7rem;
-    bottom: -8rem;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-primary) 12%, transparent);
-    pointer-events: none;
-}
-
-.bb-b2c-review-hero > .bb-container {
-    position: relative;
-    z-index: 2;
-}
-
-.bb-b2c-review-hero-breadcrumb {
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.bb-b2c-review-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(28rem, 0.55fr);
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-}
-
-.bb-b2c-review-hero-content {
-    min-width: 0;
-}
-
 .bb-b2c-review-hero-label {
     gap: 0.4375rem;
     margin-bottom: 1rem;
@@ -131,39 +75,6 @@
     color: var(--bb-b2c-review-accent-strong);
     font-size: var(--bb-icon-size-sm);
     line-height: 1;
-}
-
-.bb-b2c-review-hero-title {
-    max-width: 52rem;
-    margin: 0;
-    color: var(--bb-b2c-review-heading);
-    font-size: clamp(2.35rem, 5vw, 4.35rem);
-    font-weight: var(--bb-fw-extrabold);
-    line-height: 1.02;
-    letter-spacing: -0.06em;
-    overflow-wrap: anywhere;
-}
-
-.bb-b2c-review-hero-text {
-    max-width: 47rem;
-    margin: 1rem 0 0;
-    color: var(--bb-b2c-review-muted);
-    font-size: var(--bb-fs-md);
-    line-height: var(--bb-line-height-loose);
-}
-
-.bb-b2c-review-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
-}
-
-.bb-b2c-review-hero-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4375rem;
 }
 
 .bb-b2c-review-hero-btn .material-symbols-outlined {
