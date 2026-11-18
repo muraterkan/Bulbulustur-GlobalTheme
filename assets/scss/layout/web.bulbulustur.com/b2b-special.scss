@@ -53,83 +53,6 @@
    Hero
 ===================================== */
 
-.bb-b2b-special-hero {
-    position: relative;
-    overflow: hidden;
-
-    padding-top: clamp(2.75rem, 5vw, 4.25rem);
-    padding-bottom: clamp(4.25rem, 7vw, 6.25rem);
-
-    color: var(--bb-b2b-special-hero-text, var(--bb-white, #ffffff));
-
-    background:
-        linear-gradient(
-            90deg,
-            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #0f2747) 88%, var(--bb-black, #000000)),
-            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #0f2747) 70%, transparent)
-        ),
-        var(--bb-b2b-special-hero-image),
-        radial-gradient(
-            circle at 86% 18%,
-            color-mix(in srgb, var(--bb-b2b-special-yellow) 20%, transparent),
-            transparent 18rem
-        ),
-        linear-gradient(
-            135deg,
-            var(--bb-b2b-special-navy),
-            var(--bb-b2b-special-navy-soft)
-        );
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.bb-b2b-special-hero::before {
-    content: "";
-    position: absolute;
-    left: -7rem;
-    bottom: -8rem;
-
-    width: 18rem;
-    height: 18rem;
-
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 8%, transparent);
-    pointer-events: none;
-}
-
-.bb-b2b-special-hero::after {
-    content: "";
-    position: absolute;
-    right: -6rem;
-    top: -7rem;
-
-    width: 17rem;
-    height: 17rem;
-
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--bb-white, #ffffff) 7%, transparent);
-    pointer-events: none;
-}
-
-.bb-b2b-special-hero .bb-container {
-    position: relative;
-    z-index: 2;
-}
-
-.bb-b2b-special-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.06fr) minmax(18rem, 0.94fr);
-    align-items: center;
-    gap: clamp(1.75rem, 4vw, 3rem);
-}
-
-.bb-b2b-special-hero-copy {
-    min-width: 0;
-    max-width: 48rem;
-}
-
 .bb-b2b-special-hero-label {
     margin-bottom: 1.125rem;
 
@@ -148,57 +71,6 @@
 }
 
 .bb-b2b-special-hero-label .material-symbols-outlined {
-    color: currentColor;
-    font-size: var(--bb-icon-size-md);
-    line-height: 1;
-}
-
-.bb-b2b-special-hero-title {
-    max-width: 48rem;
-    margin: 0 0 1rem;
-
-    color: currentColor;
-    font-size: clamp(2.5rem, 5vw, 4.25rem);
-    font-weight: var(--bb-fw-extrabold, 800);
-    line-height: 0.98;
-    letter-spacing: var(--bb-letter-spacing-tight, -0.055em);
-}
-
-.bb-b2b-special-hero-text {
-    max-width: 45rem;
-    margin: 0 0 1.375rem;
-
-    color: color-mix(in srgb, currentColor 88%, transparent);
-    font-size: clamp(var(--bb-fs-sm), 1.2vw, var(--bb-fs-lg));
-    font-weight: var(--bb-fw-medium);
-    line-height: var(--bb-line-height-content);
-}
-
-.bb-b2b-special-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.875rem;
-}
-
-.bb-b2b-special-hero-btn {
-    min-height: 3.25rem;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-
-    padding-right: 1.35rem;
-    padding-left: 1.35rem;
-
-    border-radius: var(--bb-radius-pill);
-    font-size: var(--bb-fs-sm);
-    font-weight: var(--bb-fw-bold);
-    text-decoration: none !important;
-}
-
-.bb-b2b-special-hero-btn .material-symbols-outlined {
     color: currentColor;
     font-size: var(--bb-icon-size-md);
     line-height: 1;
@@ -663,29 +535,7 @@
         0 1.25rem 3rem color-mix(in srgb, var(--bb-black, #000000) 28%, transparent);
 }
 
-[data-bs-theme="dark"] .bb-b2b-special-hero {
-    background:
-        linear-gradient(
-            90deg,
-            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #071b34) 88%, var(--bb-black, #000000)),
-            color-mix(in srgb, var(--bb-b2b-special-hero-bg, #071b34) 66%, transparent)
-        ),
-        var(--bb-b2b-special-hero-image),
-        radial-gradient(
-            circle at 86% 18%,
-            color-mix(in srgb, var(--bb-b2b-special-yellow) 12%, transparent),
-            transparent 18rem
-        ),
-        linear-gradient(
-            135deg,
-            color-mix(in srgb, #071b34 82%, var(--bb-body-bg)),
-            color-mix(in srgb, #0f3b74 34%, var(--bb-body-bg))
-        );
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+[data-bs-theme="dark"] 
 
 [data-bs-theme="dark"] .bb-b2b-special-quick-nav-card {
     background-color: color-mix(
@@ -764,9 +614,7 @@
 }
 
 @media (max-width: 1199.98px) {
-    .bb-b2b-special-hero-grid {
-        grid-template-columns: 1fr;
-    }
+    
 
     .bb-b2b-special-hero-visual {
         justify-content: flex-start;
@@ -801,23 +649,13 @@
 }
 
 @media (max-width: 767.98px) {
-    .bb-b2b-special-hero {
-        padding-top: 2rem;
-        padding-bottom: 4.5rem;
-    }
+    
 
-    .bb-b2b-special-hero-title {
-        font-size: clamp(2rem, 13vw, 3rem);
-    }
+    
 
-    .bb-b2b-special-hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
+    
 
-    .bb-b2b-special-hero-btn {
-        width: 100%;
-    }
+    
 
     .bb-b2b-special-quick-nav {
         margin-top: -1.75rem;
