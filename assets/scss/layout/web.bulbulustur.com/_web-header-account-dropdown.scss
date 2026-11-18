@@ -269,32 +269,6 @@
     }
 
     .bb-web-account-trigger {
-        padding: 0 8px;
-    }
-
-    .bb-web-account-arrow {
-        display: none;
-    }
-
-    .bb-web-account-menu {
-        min-width: 248px;
-        max-width: 248px;
-    }
-
-    .bb-web-account-menu-avatar {
-        width: 40px;
-        height: 40px;
-        flex: 0 0 40px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 575.98px) {
-    .bb-web-account-current {
-        display: none;
-    }
-
-    .bb-web-account-trigger {
         width: 36px;
         padding: 0;
     }
@@ -305,5 +279,12 @@
 
     .bb-web-account-menu {
         min-width: 250px;
+        max-width: 250px;
+    }
+
+    .bb-web-account-menu-avatar {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
     }
 }
