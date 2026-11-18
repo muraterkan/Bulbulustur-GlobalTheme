@@ -3,18 +3,18 @@
 var root=document.querySelector("[data-bb-channel-registry]");if(!root)return;
 
 var channels=[
- {id:1,code:"BULBULUSTUR",name:"Bulbulustur B2B/B2C",ownership:"owned",type:"Merkezi Pazaryeri",health:"healthy",icon:"storefront",orders:184,pending:3,lastSync:"Şimdi",mode:"Native",open:"dashboard.html",cap:["Sipariş","Ürün","Stok","Fiyat","İade"]},
- {id:2,code:"DRAUGR",name:"Draugr",ownership:"owned",type:"Kendi Domainin",health:"healthy",icon:"language",orders:72,pending:1,lastSync:"1 dk önce",mode:"Native",open:"draugr.html?view=dashboard",cap:["Sipariş","Ürün","Stok","Fiyat","Müşteri"]},
- {id:3,code:"POSB",name:"POSB",ownership:"owned",type:"Fiziksel Mağaza / Kasa",health:"healthy",icon:"point_of_sale",orders:96,pending:4,lastSync:"Şimdi",mode:"Offline-first",open:"posb.html?view=dashboard",cap:["Sipariş","Stok","Fiyat","Fatura","Müşteri"]},
- {id:101,code:"TRENDYOL",name:"Trendyol",ownership:"connected",type:"Pazaryeri",health:"healthy",logo:"trendyol.png",orders:128,pending:5,lastSync:"2 dk önce",mode:"Webhook + Poller",cap:["Sipariş","Ürün","Stok","Fiyat","İade"]},
- {id:102,code:"HEPSIBURADA",name:"Hepsiburada",ownership:"connected",type:"Pazaryeri",health:"warning",logo:"hepsiburada.png",orders:84,pending:9,lastSync:"11 dk önce",mode:"Poller",cap:["Sipariş","Ürün","Stok","Fiyat","Kargo"]},
- {id:103,code:"TICIMAX",name:"Ticimax",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"ticimax.png",orders:41,pending:2,lastSync:"4 dk önce",mode:"API + Webhook",cap:["Sipariş","Ürün","Stok","Fiyat"]},
- {id:104,code:"SHOPIFY",name:"Shopify",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"shopify.png",orders:37,pending:1,lastSync:"3 dk önce",mode:"Webhook",cap:["Sipariş","Ürün","Stok","Fiyat","Müşteri"]},
- {id:105,code:"IDEASOFT",name:"Ideasoft",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"ideasoft.png",orders:22,pending:0,lastSync:"6 dk önce",mode:"API",cap:["Sipariş","Ürün","Stok","Fiyat"]},
- {id:106,code:"AMAZON_TR",name:"Amazon Türkiye",ownership:"connected",type:"Pazaryeri",health:"warning",logo:"amazon.png",orders:19,pending:7,lastSync:"18 dk önce",mode:"Poller",cap:["Sipariş","Ürün","Stok","Fiyat","Kargo"]},
- {id:107,code:"N11",name:"N11",ownership:"connected",type:"Pazaryeri",health:"healthy",logo:"N11.png",orders:31,pending:1,lastSync:"5 dk önce",mode:"API",cap:["Sipariş","Ürün","Stok","Fiyat"]},
- {id:108,code:"PAZARAMA",name:"Pazarama",ownership:"connected",type:"Pazaryeri",health:"offline",logo:"pazarama.png",orders:0,pending:12,lastSync:"1 sa 24 dk",mode:"Poller",cap:["Sipariş","Ürün","Stok","Fiyat"]},
- {id:109,code:"SHOPIER",name:"Shopier",ownership:"connected",type:"Satış Kanalı",health:"healthy",logo:"shopier.png",orders:12,pending:0,lastSync:"7 dk önce",mode:"API",cap:["Sipariş","Stok"]}
+ {id:1,code:"BULBULUSTUR",name:"Bulbulustur B2B/B2C",ownership:"owned",type:"Merkezi Pazaryeri",health:"healthy",icon:"storefront",orders:184,pending:3,lastSync:"Şimdi",mode:"Native",open:"dashboard.html",cap:["Sipariş","Product","Stock","Price","İade"]},
+ {id:2,code:"DRAUGR",name:"Draugr",ownership:"owned",type:"Kendi Domainin",health:"healthy",icon:"language",orders:72,pending:1,lastSync:"1 dk önce",mode:"Native",open:"draugr.html?view=dashboard",cap:["Sipariş","Product","Stock","Price","Müşteri"]},
+ {id:3,code:"POSB",name:"POSB",ownership:"owned",type:"Fiziksel Mağaza / Kasa",health:"healthy",icon:"point_of_sale",orders:96,pending:4,lastSync:"Şimdi",mode:"Offline-first",open:"posb.html?view=dashboard",cap:["Sipariş","Stock","Price","Invoice","Müşteri"]},
+ {id:101,code:"TRENDYOL",name:"Trendyol",ownership:"connected",type:"Pazaryeri",health:"healthy",logo:"trendyol.png",orders:128,pending:5,lastSync:"2 dk önce",mode:"Webhook + Poller",cap:["Sipariş","Product","Stock","Price","İade"]},
+ {id:102,code:"HEPSIBURADA",name:"Hepsiburada",ownership:"connected",type:"Pazaryeri",health:"warning",logo:"hepsiburada.png",orders:84,pending:9,lastSync:"11 dk önce",mode:"Poller",cap:["Sipariş","Product","Stock","Price","Kargo"]},
+ {id:103,code:"TICIMAX",name:"Ticimax",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"ticimax.png",orders:41,pending:2,lastSync:"4 dk önce",mode:"API + Webhook",cap:["Sipariş","Product","Stock","Price"]},
+ {id:104,code:"SHOPIFY",name:"Shopify",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"shopify.png",orders:37,pending:1,lastSync:"3 dk önce",mode:"Webhook",cap:["Sipariş","Product","Stock","Price","Müşteri"]},
+ {id:105,code:"IDEASOFT",name:"Ideasoft",ownership:"connected",type:"E-Ticaret Altyapısı",health:"healthy",logo:"ideasoft.png",orders:22,pending:0,lastSync:"6 dk önce",mode:"API",cap:["Sipariş","Product","Stock","Price"]},
+ {id:106,code:"AMAZON_TR",name:"Amazon Türkiye",ownership:"connected",type:"Pazaryeri",health:"warning",logo:"amazon.png",orders:19,pending:7,lastSync:"18 dk önce",mode:"Poller",cap:["Sipariş","Product","Stock","Price","Kargo"]},
+ {id:107,code:"N11",name:"N11",ownership:"connected",type:"Pazaryeri",health:"healthy",logo:"N11.png",orders:31,pending:1,lastSync:"5 dk önce",mode:"API",cap:["Sipariş","Product","Stock","Price"]},
+ {id:108,code:"PAZARAMA",name:"Pazarama",ownership:"connected",type:"Pazaryeri",health:"offline",logo:"pazarama.png",orders:0,pending:12,lastSync:"1 sa 24 dk",mode:"Poller",cap:["Sipariş","Product","Stock","Price"]},
+ {id:109,code:"SHOPIER",name:"Shopier",ownership:"connected",type:"Satış Kanalı",health:"healthy",logo:"shopier.png",orders:12,pending:0,lastSync:"7 dk önce",mode:"API",cap:["Sipariş","Stock"]}
 ];
 
 var orders=[

@@ -7,7 +7,7 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 
 | # | Yer | Sorun | Etki | Çağıran var mı? / Karar |
 |---|-----|-------|------|-------------------------|
-| A1 | `components/_inputmask.scss:20` | `--bb-inputmask-hint-font-size: (--bb-fs-sm)` — noktalı virgül yok, değer bozuk. Sonraki satır (`--bb-inputmask-hint-color`) bu bildirime yutuluyor, çıktıda tanımsız kalıyor. | Hint yazısının boyutu ve rengi uygulanmıyor. | `.bb-inputmask-hint` kullanıyor. DÜZELT: `var(--bb-fs-sm);` |
+| A1 | `components/_inputmask.scss:20` | `--bb-inputmask-hint-font-size: (--bb-fs-sm)` — noktalı virgül yok, değer bozuk. Next satır (`--bb-inputmask-hint-color`) bu bildirime yutuluyor, çıktıda tanımsız kalıyor. | Hint yazısının boyutu ve rengi uygulanmıyor. | `.bb-inputmask-hint` kullanıyor. DÜZELT: `var(--bb-fs-sm);` |
 | A2 | `components/_rating.scss:24`, `_dialer.scss:34` | `--bb-*-focus-ring: var(--bs-focus-ring-box-shadow)` fallback'siz. Bootstrap 5.3 bu değişkeni tanımlamıyor. | Klavye odak halkası (focus) görünmüyor. | `_menu`, `_modals`, `_nav` aynı değişkeni fallback ile kullanıyor. DÜZELT: aynı fallback eklenecek. |
 | A3 | `components/_carousel.scss:28` | `var(--bb-dark, var(--bs-black))` iç fallback `--bs-black` Bootstrap'ta tanımlı ama GlobalTheme kendi başına bu fallback'e bağımlı olmamalı. | Bugün etkisi yok (`--bb-dark` her zaman tanımlı). | DÜZELT: `var(--bb-black)` (token kendi içinde). |
 
@@ -15,7 +15,7 @@ Yöntem: `main.scss` → sass 1.93.2 ile derlenen çıktı postcss ile ayrışt�
 
 | # | Sorun | Doğrulama | Karar |
 |---|-------|-----------|-------|
-| B1 | `main.scss`'te `@use` edilmeyen 11 partial: `product-gallery`, `product-gallery-sef`, `product-rail-sef`, `product-filter-sef`, `product-item-sef`, `auth-sef`, `layout-sef`, `layout/_hero`, `utilities/_sticky1`, `base/_colors` (0 satır), `utilities/_transition` (0 satır) | `@use/@import/@forward` ile başka scss'ten çağrılmıyor. `package.json`/CI çağırmıyor. Diğer repolarda yalnız sınıf adları geçiyor (Draugr şablonu/Ortobella kendi CSS'ini derliyor, bu partial'ları çağırmıyor). `_sticky1` ile `components/_sticky` aynı 14 seçiciyi tanımlıyor; `_sticky1`'de eşsiz sınıf yok. `layout-sef` içindeki `.bb-empty-state` zaten `_empty-state`'te var. | SİL (git geçmişinde kalır). |
+| B1 | `main.scss`'te `@use` edilmeyen 11 partial: `product-gallery`, `product-gallery-sef`, `product-rail-sef`, `product-filter-sef`, `product-item-sef`, `auth-sef`, `layout-sef`, `layout/_hero`, `utilities/_sticky1`, `base/_colors` (0 satır), `utilities/_transition` (0 satır) | `@use/@import/@forward` ile başka scss'ten çağrılmıyor. `package.json`/CI çağırmıyor. Other repolarda yalnız sınıf adları geçiyor (Draugr şablonu/Ortobella kendi CSS'ini derliyor, bu partial'ları çağırmıyor). `_sticky1` ile `components/_sticky` aynı 14 seçiciyi tanımlıyor; `_sticky1`'de eşsiz sınıf yok. `layout-sef` içindeki `.bb-empty-state` zaten `_empty-state`'te var. | SİL (git geçmişinde kalır). |
 | B2 | `scss/pages/admin.bulbulustur.com/media` (292 dosya) | `assets/media` ile birebir aynı (`diff -rq` farksız). | Mükerrer kopya SİL; flag/avatar `assets/media`'da kalır. |
 | B3 | `scss/pages/admin.bulbulustur.com/pages/account` | `pages/demo1/account` ile birebir aynı. | Mükerrer kopya SİL. |
 | B4 | `scss/pages/.../js` altında 6 JS | SCSS kaynağı olmayan klasörde. Demo sayfaları `assets/js/...` altından çağırıyor; `bb-lightbox.js` zaten `assets/js`'te (birebir aynı), `bb-dialer`/`bb-toast`/`bb.drawer` orada YOK → demolar bozuk. | `assets/js`'e taşı; lightbox kopyasını sil. |

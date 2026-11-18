@@ -19,7 +19,7 @@ Depo: `muraterkan/Bulbulustur-GlobalTheme` / `main`
 | Sidebar | `.bb-sidebar` ile header/body/footer mevcut | Faz 1 mobil/daraltma; Faz 2 menü içeriği |
 | Header | `.bb-header`, `.bb-header-nav`; ayrıca `.bb-shell-header` mevcut | Faz 3 üst menü ve aksiyonlar |
 | Toolbar | `.bb-toolbar`, `.bb-toolbar-row` mevcut | Faz 5 varyantları |
-| Footer | `.bb-footer`, `.bb-footer-bar` mevcut | Faz 1 örneğinde kullanılır |
+| Footer | `.bb-footer`, `.bb-footer-bar` mevcut | Faz 1 Examplende kullanılır |
 | Menü | `.bb-menu`, accordion/submenu/bullet/arrow stilleri mevcut | Faz 2, eksik davranışın JS ile bağlanması |
 | Dropdown / drawer | `.bb-dropdown-menu`, `.bb-drawer`, backdrop mevcut | Faz 3–4 |
 | Kart / formlar | `.bb-card` ve bileşen seti mevcut | Faz 8+; kabuk sırasında kopyalanmaz |
@@ -29,7 +29,7 @@ Depo: `muraterkan/Bulbulustur-GlobalTheme` / `main`
 ## Eksik veya karar bekleyen
 
 1. Mobil sidebar aç/kapat, ikon-only daraltma modu ve klavye durum yönetimi Faz 1 için hazırlanmalı. `assets/js/` altında ayrı bir panel-menü script'i mevcut değil.
-2. Sidebar menü ağacı ve aktif rota için ortak demonstrasyon Faz 2'de hazırlanmalı; panelin mevcut menu.html örneği davranış kalıbıdır.
+2. Sidebar menü ağacı ve aktif rota için ortak demonstrasyon Faz 2'de hazırlanmalı; panelin mevcut menu.html Example davranış kalıbıdır.
 3. `--bb-header-height`, `--bb-layout-gap`, `--bb-main-max-width`, `--bb-radius-md`, `--bb-shell-header-height`, `--bb-wrapper-padding-top-spaced`, `--bb-overlay-color`, `--bb-overlay-blur`, `--bb-letter-spacing-tight` dışarıdan verilebilen fallback kancalarıdır. `CSS_ANALYSIS_2026-11-15.md` bunları bilinçli ve şimdilik değişmeyecek olarak belgeliyor. Faz 1'de gereksiz yere tanımlanmaz; farklı karar gerekiyorsa mimar onayı alınır.
 4. `base/_zindex.scss` `main.scss` içinden kullanılmıyor; Bootstrap ölçeğiyle çakışma riski var. Onaysız bağlanmaz.
 5. `forms-final` ve `product-quick-view` şimdilik dokunulmaz.

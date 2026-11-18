@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bulbulustur Theme — Ürün Formu (Faz 10)</title>
+    <title>Bulbulustur Theme — Product Formu (Faz 10)</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -14,9 +14,8 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="projects-create" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
-
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -290,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -320,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -468,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -573,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -598,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -628,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -856,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -865,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -971,7 +974,7 @@
                             </div>
                         </div>
 
-                        <section class="bb-content" aria-label="Ürün oluşturma formu">
+                        <section class="bb-content" aria-label="Product oluşturma formu">
                             <div class="bb-panel-content-container">
                                 <p class="bb-panel-toolbar-description mb-4">Form bileşenleri, adımlı giriş ve dosya yükleme alanı. Bu örnek sunucuya veri göndermez.</p>
                                 <div class="card bb-card">
@@ -996,14 +999,14 @@
                                                 </li>
                                             </ol>
                                             <fieldset class="bb-panel-form-pane" data-bb-form-pane>
-                                                <legend class="h5 mb-4">Ürün bilgileri</legend>
+                                                <legend class="h5 mb-4">Product bilgileri</legend>
                                                 <div class="row g-4">
                                                     <div class="col-md-6">
-                                                        <label for="bb_form_name" class="required form-label">Ürün adı</label>
+                                                        <label for="bb_form_name" class="required form-label">Product adı</label>
                                                         <input id="bb_form_name" class="form-control form-control-solid" name="productName" type="text" maxlength="150" placeholder="Örn. Keten gömlek" required>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <label for="bb_form_sku" class="required form-label">Stok kodu</label>
+                                                        <label for="bb_form_sku" class="required form-label">Stock kodu</label>
                                                         <input id="bb_form_sku" class="form-control form-control-solid" name="sku" type="text" maxlength="50" placeholder="Örn. SKU-1001" required>
                                                     </div>
                                                     <div class="col-md-6">
@@ -1016,7 +1019,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        <label for="bb_form_price" class="required form-label">Fiyat (TL)</label>
+                                                        <label for="bb_form_price" class="required form-label">Price (TL)</label>
                                                         <input id="bb_form_price" class="form-control form-control-solid" name="price" type="number" min="0.01" step="0.01" placeholder="0,00" required>
                                                     </div>
                                                     <div class="col-md-3">
@@ -1032,7 +1035,7 @@
                                             <fieldset class="bb-panel-form-pane" data-bb-form-pane hidden>
                                                 <legend class="h5 mb-4">Description ve dosyalar</legend>
                                                 <div class="mb-4">
-                                                    <label for="bb_form_description" class="form-label">Ürün açıklaması</label><textarea id="bb_form_description" name="description" class="form-control form-control-solid" rows="4" maxlength="1500" placeholder="Ürünün temel özellikleri"></textarea>
+                                                    <label for="bb_form_description" class="form-label">Product açıklaması</label><textarea id="bb_form_description" name="description" class="form-control form-control-solid" rows="4" maxlength="1500" placeholder="Productün temel özellikleri"></textarea>
                                                     <div class="form-text">En fazla 1500 karakter.</div>
                                                 </div>
                                                 <div class="bb-panel-form-upload" data-bb-form-upload>
@@ -1053,7 +1056,7 @@
                                                 <div class="d-flex gap-2 ms-auto">
                                                     <button type="button" class="btn bb-btn-secondary" data-bb-form-reset>Sıfırla</button>
                                                     <button type="button" class="btn btn-primary" data-bb-form-next>İleri</button>
-                                                    <button type="submit" class="btn btn-primary" data-bb-form-submit hidden>Örneği tamamla</button>
+                                                    <button type="submit" class="btn btn-primary" data-bb-form-submit hidden>Example tamamla</button>
                                                 </div>
                                             </div>
                                             <p class="visually-hidden" aria-live="polite" role="status" data-bb-form-message></p>

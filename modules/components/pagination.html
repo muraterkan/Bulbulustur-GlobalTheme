@@ -5,29 +5,28 @@
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bulbulustur Theme — Bulbulustur - Pagination</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
-
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
-
                 <section class="bb-section">
-
                     <!-- Demo Card -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
@@ -39,7 +38,6 @@
                                 <span class="badge text-bg-light">.bb-pagination</span>
                             </div>
                         </div>
-
                         <div class="bb-card-body">
                             <nav class="bb-pagination" aria-label="Pagination Default">
                                 <ul class="pagination">
@@ -69,7 +67,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Outline + Pill -->
                     <div class="bb-card mb-4">
@@ -83,7 +80,6 @@
                                 <span class="badge text-bg-light">--pill</span>
                             </div>
                         </div>
-
                         <div class="bb-card-body">
                             <nav class="bb-pagination bb-pagination--outline bb-pagination--pill" aria-label="Pagination Outline Pill">
                                 <ul class="pagination">
@@ -125,7 +121,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Circle -->
                     <div class="bb-card mb-4">
@@ -138,7 +133,6 @@
                                 <span class="badge text-bg-light">--circle</span>
                             </div>
                         </div>
-
                         <div class="bb-card-body">
                             <nav class="bb-pagination bb-pagination--circle" aria-label="Pagination Circle">
                                 <ul class="pagination">
@@ -168,7 +162,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Compact + Disabled -->
                     <div class="card bb-card">
@@ -218,7 +211,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <div class="text-muted small mt-4">
                         SCSS import: <code>@use "components/_pagination.scss";</code>
@@ -226,20 +218,21 @@
                     <!-- Bootstrap JS -->
                     <!-- Theme Toggle (demo only) -->
                 </section>
-
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Sayfalama</h3>
                                 <p class="bb-usage-text"><code>bb-pagination</code> + <code>pagination</code>. Biçim için <code>bb-pagination--outline|pill|circle|compact</code>.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;nav class=&quot;bb-pagination&quot; aria-label=&quot;Pagination Default&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;nav class=&quot;bb-pagination&quot; aria-label=&quot;Pagination Default&quot;&gt;
     &lt;ul class=&quot;pagination&quot;&gt;
         &lt;li class=&quot;page-item disabled&quot;&gt;
             &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; tabindex=&quot;-1&quot;&gt;
@@ -272,7 +265,7 @@
     <!--/::Main-->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

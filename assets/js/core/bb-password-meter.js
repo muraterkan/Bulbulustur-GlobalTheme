@@ -97,7 +97,7 @@
         }
 
         this.toggle.setAttribute("aria-pressed", isPassword ? "true" : "false");
-        this.toggle.setAttribute("aria-label", isPassword ? "Şifreyi gizle" : "Şifreyi göster");
+        this.toggle.setAttribute("aria-label", isPassword ? "Passwordyi gizle" : "Passwordyi göster");
       };
 
       BBPasswordMeter.prototype._setState = function (state) {

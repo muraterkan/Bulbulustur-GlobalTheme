@@ -26,7 +26,7 @@ Dal: `main`
 - Faz 12 için `npm run build:css`, `npm run check:contracts`, `npm run check:css` çalıştırılmadı.
 - Gerçek tarayıcıda light/dark, mobil ve klavye, yazdırma önizlemesi test edilmedi.
 - Derlenmiş `assets/css/main.css` GitHub'a yazılmadı.
-- Fatura ve profil bilgileri örnektir; gerçek API, veritabanı, GİB veya hesap kaydı yoktur.
+- Invoice ve profil bilgileri örnektir; gerçek API, veritabanı, GİB veya hesap kaydı yoktur.
 
 ## Yerel test
 
@@ -47,6 +47,6 @@ npm run check:css
 git push origin main
 ```
 
-## Sonraki iş
+## Next iş
 
-Faz 12 tamamlanınca iş planındaki 0–12 fazları kod bazında sonlanır. Görsel, erişilebilirlik ve fonksiyonel kabul kontrolleri planın genel doğrulama gereği açık kalır. Sonraki faz kendiliğinden açılmaz.
+Faz 12 tamamlanınca iş planındaki 0–12 fazları kod bazında sonlanır. Görsel, erişilebilirlik ve fonksiyonel kabul kontrolleri planın genel doğrulama gereği açık kalır. Next faz kendiliğinden açılmaz.

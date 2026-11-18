@@ -14,9 +14,8 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="draugr-dashboard" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
-
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -290,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -320,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -468,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -573,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -598,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -628,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -856,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -865,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -959,7 +962,7 @@
                                     </div>
                                     <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
                                         <a class="btn bb-btn-secondary" href="draugr.html?view=theme">Temayı Yönet</a>
-                                        <a class="btn btn-primary" href="draugr.html?view=storefront">Vitrini Düzenle</a>
+                                        <a class="btn btn-primary" href="draugr.html?view=storefront">Vitrini Edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -1148,7 +1151,7 @@
                                                     <div class="bb-draugr-quick-grid">
                                                         <a class="bb-draugr-quick-link" href="pages.html?page=ecommerce-products">
                                                             <span class="material-symbols-outlined">inventory_2</span>
-                                                            <strong>Ürünler</strong>
+                                                            <strong>Products</strong>
                                                         </a>
                                                         <a class="bb-draugr-quick-link" href="orders.html">
                                                             <span class="material-symbols-outlined">shopping_bag</span>
@@ -1219,7 +1222,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn bb-btn-secondary" type="button">Önizle</button><button class="btn btn-primary" type="submit">Kaydet</button></div>
+                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn bb-btn-secondary" type="button">Önizle</button><button class="btn btn-primary" type="submit">Kaydet</button>
+</div>
                                                 </form>
                                             </div>
                                         </section>
@@ -1246,7 +1250,7 @@
                                                             <tr>
                                                                 <th>Yerel Kategori</th>
                                                                 <th>Merkezi Kaynak</th>
-                                                                <th>Ürün</th>
+                                                                <th>Product</th>
                                                                 <th>Durum</th>
                                                                 <th></th>
                                                             </tr>
@@ -1259,7 +1263,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-success">Miraslandı</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Ampuller</td>
@@ -1268,7 +1272,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-success">Miraslandı</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Kampanya Seçkisi</td>
@@ -1277,7 +1281,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-warning">Yerel</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -1315,7 +1319,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-success">Yayında</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>About Us</td>
@@ -1327,7 +1331,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-success">Yayında</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Kargo & Teslimat</td>
@@ -1339,7 +1343,7 @@
                                                                 <td>
                                                                     <span class="bb-badge bb-badge-light">Taslak</span>
                                                                 </td>
-                                                                <td><button class="btn bb-btn-secondary btn-sm">Düzenle</button></td>
+                                                                <td><button class="btn bb-btn-secondary btn-sm">Edit</button></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -1381,7 +1385,8 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Temayı Kaydet</button></div>
+                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Temayı Kaydet</button>
+</div>
                                                 </form>
                                             </div>
                                         </section>
@@ -1426,7 +1431,8 @@
                                                         <div class="mb-3">
                                                             <label class="form-label" for="dr_seo_desc">Meta Description</label><textarea class="form-control form-control-solid" id="dr_seo_desc" rows="3">Demo mağazamızın seçili ürünlerini keşfedin.</textarea>
                                                         </div>
-                                                        <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Kaydet</button></div>
+                                                        <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Kaydet</button>
+</div>
                                                     </form>
                                                 </div>
                                             </section>
@@ -1494,7 +1500,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Account Settingsı Kaydet</button></div>
+                                                    <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Account Settingsı Kaydet</button>
+</div>
                                                 </form>
                                             </div>
                                         </section>
@@ -1514,7 +1521,7 @@
                                         <div class="bb-draugr-form-grid mt-4">
                                             <section class="card bb-card">
                                                 <div class="bb-card-header">
-                                                    <div class="bb-draugr-card-heading"><h2>Subscription Özeti</h2><p>Demo paket bilgisi</p></div>
+                                                    <div class="bb-draugr-card-heading"><h2>Subscription Summaryi</h2><p>Demo paket bilgisi</p></div>
                                                 </div>
                                                 <div class="bb-card-body">
                                                     <div class="bb-draugr-setting-list">
@@ -1538,7 +1545,7 @@
                                                 </div>
                                             </section><section class="card bb-card">
                                                 <div class="bb-card-header">
-                                                    <div class="bb-draugr-card-heading"><h2>Paket Kullanımı</h2><p>Demo kapasite</p></div>
+                                                    <div class="bb-draugr-card-heading"><h2>Paket Usageı</h2><p>Demo kapasite</p></div>
                                                 </div>
                                                 <div class="bb-card-body">
                                                     <div class="bb-draugr-health-list">

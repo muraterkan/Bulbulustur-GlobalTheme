@@ -29,7 +29,7 @@ npm run build:css
 npm run check:contracts
 ```
 
-Yerel HTTP sunucusunda `modules/panel/pages.html` açın. Örneğin `?page=ecommerce-products` ve `?page=auth-corporate-signin` ile menü/başlık/breadcrumb geçişlerini; mobil menüyü ve dark/light modunu deneyin.
+Yerel HTTP sunucusunda `modules/panel/pages.html` açın. Examplen `?page=ecommerce-products` ve `?page=auth-corporate-signin` ile menü/başlık/breadcrumb geçişlerini; mobil menüyü ve dark/light modunu deneyin.
 
 ## Açık kararlar
 

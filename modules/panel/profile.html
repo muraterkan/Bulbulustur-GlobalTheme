@@ -14,7 +14,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="profile-overview" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -289,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -461,7 +461,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -560,7 +560,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -585,7 +585,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -615,7 +615,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -843,7 +843,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -852,21 +853,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -943,7 +947,7 @@
                             <div class="bb-panel-content-container">
                                 <div class="bb-toolbar-row">
                                     <div class="bb-toolbar-col-left">
-                                        <h1 class="bb-page-title">Profil Özeti</h1>
+                                        <h1 class="bb-page-title">Profil Summaryi</h1>
                                         <nav class="bb-breadcrumb" aria-label="İçerik yolu">
                                             <ol class="breadcrumb mb-0">
                                                 <li class="breadcrumb-item"><a href="shell.html">Panel</a></li>

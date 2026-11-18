@@ -30,7 +30,7 @@ function render(){
   var total=element("td","",money(o.total)),added=element("td","",labelDate(o.created)),modified=element("td","",labelDate(o.modified));
   var actions=element("td"),dropdown=element("div","dropdown bb-action-menu"),trigger=element("button","btn bb-btn-secondary btn-sm bb-action-menu-toggle","Actionler");trigger.type="button";trigger.setAttribute("data-bs-toggle","dropdown");trigger.setAttribute("aria-expanded","false");trigger.setAttribute("aria-label","Sipariş "+o.id+" işlemleri");
   var menu=element("ul","dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list");
-  [["Görüntüle","view"],["Düzenle","edit"],["Sil","delete"]].forEach(function(action){var li=element("li");if(action[1]==="view"){var a=element("a","dropdown-item",action[0]);a.href=link.href;a.title="Örnek sipariş #14534 (bu satırın gerçek detayı değil)";li.append(a);}else{var b=element("button","dropdown-item",action[0]);b.type="button";b.dataset.bbOrdersAction=action[1];b.dataset.bbOrdersId=o.id;li.append(b);}menu.append(li);});dropdown.append(trigger,menu);actions.append(dropdown);
+  [["Görüntüle","view"],["Edit","edit"],["Sil","delete"]].forEach(function(action){var li=element("li");if(action[1]==="view"){var a=element("a","dropdown-item",action[0]);a.href=link.href;a.title="Örnek sipariş #14534 (bu satırın gerçek detayı değil)";li.append(a);}else{var b=element("button","dropdown-item",action[0]);b.type="button";b.dataset.bbOrdersAction=action[1];b.dataset.bbOrdersId=o.id;li.append(b);}menu.append(li);});dropdown.append(trigger,menu);actions.append(dropdown);
   tr.append(select,id,customer,state,total,added,modified,actions);body.append(tr);
  });
  var start=visible.length?(page-1)*size+1:0,end=start+visible.length-1;
@@ -51,7 +51,7 @@ root.addEventListener("click",function(event){var button=event.target.closest("[
  if(event.target.closest("[data-bb-orders-new]"))info("Yeni sipariş işlemi demo kapsamındadır; kayıt oluşturulmadı.");
  if(event.target.closest("[data-bb-orders-clear]")){search.value="";from.value="";to.value="";status.value="";limit.value="10";selection.clear();page=1;notice.hidden=true;render();}
 });
-var title=document.querySelector(".bb-page-title");if(title)title.textContent="Sipariş Listsi";
+var title=document.querySelector(".bb-page-title");if(title)title.textContent="Order List";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");if(crumb){crumb.replaceChildren();["APPLICATIONS","e-Ticaret","Siparişler"].forEach(function(value,i){var li=element("li","breadcrumb-item"+(i===2?" active":""),value);if(i===2)li.setAttribute("aria-current","page");crumb.append(li);});}
 render();
 })();

@@ -95,11 +95,11 @@
             <div class="bb-datetime-calendars">
               <div class="bb-datetime-cal" data-bb-cal="left">
                 <div class="bb-datetime-cal-head">
-                  <button type="button" class="bb-datetime-nav" data-bb-nav="prev" aria-label="Önceki ay">
+                  <button type="button" class="bb-datetime-nav" data-bb-nav="prev" aria-label="Prior ay">
                     <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                   </button>
                   <p class="bb-datetime-month mb-0" data-bb-month-title></p>
-                  <button type="button" class="bb-datetime-nav" data-bb-nav="next" aria-label="Sonraki ay">
+                  <button type="button" class="bb-datetime-nav" data-bb-nav="next" aria-label="Next ay">
                     <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                   </button>
                 </div>

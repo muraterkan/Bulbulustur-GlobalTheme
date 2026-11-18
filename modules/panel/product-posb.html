@@ -14,7 +14,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="product-posb" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -289,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -467,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -572,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -597,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -627,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -855,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -864,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -966,7 +970,7 @@
                                     <section class="bb-public-hero">
                                         <div class="bb-public-hero-copy">
                                             <span class="bb-public-eyebrow">PosB</span>
-                                            <h2 class="bb-public-title">Kasayı aç. Satışı yap. Stok ve operasyon arkada birlikte yürüsün.</h2>
+                                            <h2 class="bb-public-title">Kasayı aç. Satışı yap. Stock ve operasyon arkada birlikte yürüsün.</h2>
                                             <p class="bb-public-lead">PosB, fiziksel mağaza satışını Bulbulustur’un merkezi stok, müşteri ve fatura altyapısıyla aynı operasyon zincirine taşır.</p>
                                             <div class="bb-public-actions">
                                                 <a class="btn btn-primary" href="pricing.html?product=posb">Paketleri Gör</a>
@@ -1016,7 +1020,7 @@
                                                     <span class="material-symbols-outlined" aria-hidden="true">sync</span>
                                                 </span>
                                                 <span class="bb-public-strip-copy">
-                                                    <strong>Stok senkronu</strong><span>Fiziksel satış merkezi stok havuzuna yansır; offline kuyruk bağlantı gelince senkron olur.</span>
+                                                    <strong>Stock senkronu</strong><span>Fiziksel satış merkezi stok havuzuna yansır; offline kuyruk bağlantı gelince senkron olur.</span>
                                                 </span>
                                             </article>
                                         </div>
@@ -1049,7 +1053,7 @@
 
                                     <section class="bb-public-section">
                                         <div class="bb-public-section-head">
-                                            <h2>Kullanım hikâyeleri.</h2>
+                                            <h2>Usage hikâyeleri.</h2>
                                             <p>Kısa, doğrudan ve günlük operasyona dokunan örnekler.</p>
                                         </div>
                                         <div class="bb-public-quotes">
@@ -1123,7 +1127,7 @@
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posb_public_faq_2" aria-expanded="false">
-                                                        <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>Fatura ve stok ayrı sistem mi?
+                                                        <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>Invoice ve stok ayrı sistem mi?
                                                     </button>
                                                 </h3><div id="posb_public_faq_2" class="accordion-collapse collapse ">
                                                     <div class="accordion-body">Hayır. POSB satış akışı merkezi stok ve fatura servisleriyle birlikte çalışacak şekilde tasarlanır.</div>
@@ -1132,10 +1136,10 @@
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header">
                                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posb_public_faq_3" aria-expanded="false">
-                                                        <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>Ürünler nereden gelir?
+                                                        <span class="bb-accordion-icon material-symbols-outlined" aria-hidden="true">chevron_right</span>Products nereden gelir?
                                                     </button>
                                                 </h3><div id="posb_public_faq_3" class="accordion-collapse collapse ">
-                                                    <div class="accordion-body">Ürün, barkod, varyant ve temel stok tanımları merkezi Bulbulustur master verisinden beslenir.</div>
+                                                    <div class="accordion-body">Product, barkod, varyant ve temel stok tanımları merkezi Bulbulustur master verisinden beslenir.</div>
                                                 </div>
                                             </div>
                                         </div>

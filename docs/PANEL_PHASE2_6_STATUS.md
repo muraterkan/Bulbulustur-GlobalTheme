@@ -26,7 +26,7 @@ Bütün yeni SCSS partial'ları `assets/scss/main.scss` üzerinden çağrılıyo
 - Usernın önceki çalıştırması: Sass başarılı, kontrat 21/22 (eski kontrol). Düzeltmeden sonra yeni gerçek sonuç henüz yok.
 - `npm audit` bulguları (4 moderate / 7 high) kullanıcının ortamında görüldü. `npm audit fix` otomatik uygulanmadı; bağımlılıklar değiştirilmedi.
 
-## Sonraki aşama
+## Next aşama
 
 1. Murat `git pull origin main`, `npm run build:css`, `npm run check:contracts`, `npm run check:css` çalıştıracak. `check:css` güncel main.css repoda olmadığından derleme sonrası fark gösterebilir; önce derlenmiş CSS için commit gerekir.
 2. Demo dosyalarını yerel HTTP sunucusundan görsel ve klavye üzerinden kontrol edecek.

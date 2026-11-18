@@ -3,25 +3,28 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Bulbulustur Theme — Modal Test</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
-
-<body class="bb-body">
+<!--::Body-->
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
                     <div class="bb-card">
@@ -43,15 +46,18 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Modal</h3>
                                 <p class="bb-usage-text">Bootstrap modal yapısı kullanılır; tema için <code>bb-modal-header|body|footer</code> sınıfları eklenir. Açma düğmesine <code>data-bs-toggle="modal"</code> ve <code>data-bs-target</code> verin.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;modal-dialog modal-dialog-centered modal-lg&quot;&gt;
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;modal-dialog modal-dialog-centered modal-lg&quot;&gt;
     &lt;div class=&quot;modal-content bb-modal&quot;&gt;
 
         &lt;!-- Header --&gt;
@@ -92,62 +98,62 @@
                     </div>
                 </section>
                 <!--/::Usage-->
-    <!--::Modals-->
-<div class="modal fade" id="bbTestModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bb-modal">
+                <!--::Modals-->
+                <div class="modal fade" id="bbTestModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bb-modal">
 
-                <!-- Header -->
-                <div class="modal-header bb-modal-header">
-                    <h5 class="bb-modal-title">Gerçek Modal Testi</h5>
+                            <!-- Header -->
+                            <div class="modal-header bb-modal-header">
+                                <h5 class="bb-modal-title">Gerçek Modal Testi</h5>
 
-                    <div class="bb-modal-actions">
-                        <!-- bb-modal-close (püür modal SCSS ile uyumlu) -->
-                        <button type="button"
-                                class="bb-modal-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Kapat">
-                            <span class="material-symbols-outlined">close</span>
-                        </button>
-                    </div>
-                </div>
+                                <div class="bb-modal-actions">
+                                    <!-- bb-modal-close (püür modal SCSS ile uyumlu) -->
+                                    <button type="button"
+                                            class="bb-modal-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Kapat">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
 
-                <!-- Body -->
-                <div class="modal-body bb-modal-body">
-                    <p class="text-muted mb-2">Bu modal:</p>
-                    <ul class="text-muted mb-0">
-                        <li>Sayfanın üstünde overlay ile açılır</li>
-                        <li>Arka planı kilitler</li>
-                        <li>Ortalanır</li>
-                        <li><strong>bb-modal</strong> stillerini kullanır</li>
-                    </ul>
+                            <!-- Body -->
+                            <div class="modal-body bb-modal-body">
+                                <p class="text-muted mb-2">Bu modal:</p>
+                                <ul class="text-muted mb-0">
+                                    <li>Sayfanın üstünde overlay ile açılır</li>
+                                    <li>Arka planı kilitler</li>
+                                    <li>Ortalanır</li>
+                                    <li><strong>bb-modal</strong> stillerini kullanır</li>
+                                </ul>
 
-                    <div class="mt-4">
-                        <div class="fw-semibold mb-2">Örnek içerik</div>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge text-bg-secondary">Token-first</span>
-                            <span class="badge text-bg-secondary">Dark/Light safe</span>
-                            <span class="badge text-bg-secondary">Bootstrap 5</span>
+                                <div class="mt-4">
+                                    <div class="fw-semibold mb-2">Örnek içerik</div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge text-bg-secondary">Token-first</span>
+                                        <span class="badge text-bg-secondary">Dark/Light safe</span>
+                                        <span class="badge text-bg-secondary">Bootstrap 5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="modal-footer bb-modal-footer">
+                                <button type="button"
+                                        class="btn bb-btn-light"
+                                        data-bs-dismiss="modal">
+                                    Kapat
+                                </button>
+                                <button type="button"
+                                        class="btn bb-btn-primary">
+                                    Onayla
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                <!-- Footer -->
-                <div class="modal-footer bb-modal-footer">
-                    <button type="button"
-                            class="btn bb-btn-light"
-                            data-bs-dismiss="modal">
-                        Kapat
-                    </button>
-                    <button type="button"
-                            class="btn bb-btn-primary">
-                        Onayla
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
             </div>
         </div>
@@ -156,6 +162,6 @@
     <!-- Theme Toggle -->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 </html>

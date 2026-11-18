@@ -42,11 +42,11 @@
   });
 
   var title = document.querySelector(".bb-page-title");
-  if (title) title.textContent = "Sipariş Detayları";
+  if (title) title.textContent = "Sipariş Details";
   var breadcrumb = document.querySelector(".bb-breadcrumb .breadcrumb");
   if (breadcrumb) {
     breadcrumb.replaceChildren();
-    ["APPLICATIONS", "e-Ticaret", "Siparişler", "Detaylar"].forEach(function (value, i, items) {
+    ["APPLICATIONS", "e-Ticaret", "Siparişler", "Detaillar"].forEach(function (value, i, items) {
       var item = document.createElement("li");
       item.className = "breadcrumb-item" + (i === items.length - 1 ? " active" : "");
       item.textContent = value;

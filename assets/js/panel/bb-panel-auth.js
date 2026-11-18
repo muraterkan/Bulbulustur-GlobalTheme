@@ -17,10 +17,10 @@
   var confirm = form.querySelector("[data-bb-auth-confirm]");
   if (password && confirm) {
     confirm.addEventListener("input", function () {
-      confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Şifreler eşleşmiyor." : "");
+      confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Passwordler eşleşmiyor." : "");
     });
     password.addEventListener("input", function () {
-      confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Şifreler eşleşmiyor." : "");
+      confirm.setCustomValidity(confirm.value && confirm.value !== password.value ? "Passwordler eşleşmiyor." : "");
     });
   }
   form.addEventListener("submit", function (event) {
@@ -30,7 +30,7 @@
       var messages = {
         login: "Giriş formu doğrulandı. Oturum açılmadı; bu yalnızca arayüz demosudur.",
         register: "Register formu doğrulandı. Hesap oluşturulmadı.",
-        reset: "E-posta biçimi doğrulandı. Sıfırlama bağlantısı gönderilmedi."
+        reset: "E-mail biçimi doğrulandı. Sıfırlama bağlantısı gönderilmedi."
       };
       result.textContent = messages[form.dataset.bbAuthForm] || "Form doğrulandı.";
       result.hidden = false;

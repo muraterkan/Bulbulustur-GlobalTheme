@@ -120,7 +120,7 @@
     for (const name of ["name", "company", "email", "phone", "city", "country", "notes"]) field(name).value = item[name] || "";
     field("membership").value = item.group;
     photoInput.value = ""; setPhoto(item.photo);
-    $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Düzenle";
+    $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Edit";
     message(""); drawList();
   }
   form.addEventListener("submit", (event) => {
@@ -136,7 +136,7 @@
     else Object.assign(records.find((item) => item.id === currentId), data);
     activeGroup = "Tüm Kişiler";
     drawGroups(); drawList();
-    $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Düzenle";
+    $("[data-bb-contacts-form-heading]").textContent = "Kişiyi Edit";
     message("Kişi demo listesine kaydedildi. Sunucuya gönderilmedi.");
   });
   form.addEventListener("reset", (event) => { event.preventDefault(); newRecord(); });

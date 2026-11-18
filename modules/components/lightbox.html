@@ -5,26 +5,28 @@
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bulbulustur Theme — Bulbulustur - Lightbox</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
 
     <!--::Main-->
     <main class="bb-main">
 
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
 
@@ -108,7 +110,7 @@
                     <!-- Usage Card -->
                     <div class="card bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title mb-0">Kullanım</div>
+                            <div class="bb-card-title mb-0">Usage</div>
                             <div class="text-muted small">Markup + script include.</div>
                         </div>
 
@@ -137,15 +139,17 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Resim büyütme</h3>
                                 <p class="bb-usage-text">Tetikleyiciye <code>bb-lightbox-trigger</code> ve <code>data-bb-lightbox-src</code> verin. Aynı <code>data-bb-lightbox-group</code> değerine sahip görseller galeri olur.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;img src=&quot;https://picsum.photos/id/1015/800/600&quot;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;img src=&quot;https://picsum.photos/id/1015/800/600&quot;
 class=&quot;img-fluid rounded bb-lightbox-trigger&quot;
 data-bb-lightbox-group=&quot;gallery&quot;
 data-bb-lightbox-src=&quot;https://picsum.photos/id/1015/1600/1200&quot;
@@ -163,7 +167,7 @@ alt=&quot;Dağ manzarası&quot; /&gt;</code></pre>
     <script src="../../assets/js/core/bb-lightbox.js"></script>
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

@@ -3,35 +3,35 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Bulbulustur Theme — Spinner</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
-
                 <section class="bb-section">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div>
                             <h1 class="h4 mb-1">Spinner</h1>
                             <div class="text-muted">Bootstrap 5 base + bb token katmanı</div>
                         </div>
-
                         <!-- quick theme toggle demo (optional) -->
                         <button type="button" class="btn btn-light bb-btn-spinner" id="bbThemeToggle">
                             <span class="material-symbols-outlined">dark_mode</span>
@@ -39,7 +39,6 @@
                         </button>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- 1) Border spinners -->
                     <div class="bb-card mb-4">
@@ -79,27 +78,26 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- 3) Inside buttons -->
                     <div class="bb-card mb-4">
                         <div class="bb-card-body">
-                            <h2 class="h6 mb-3">Button İçinde</h2>
+                            <h2 class="h6 mb-3">Button Inside</h2>
 
                             <div class="d-flex flex-wrap gap-3">
                                 <button class="btn btn-primary bb-btn-spinner" type="button" disabled>
                                     <span class="spinner-border bb-spinner bb-spinner-xs bb-spinner-light bb-spinner-inline" role="status" aria-hidden="true"></span>
-                                    <span class="bb-btn-spinner__label">Kaydediliyor</span>
+                                    <span class="bb-btn-spinner__label">Saving</span>
                                 </button>
 
                                 <button class="btn btn-success bb-btn-spinner" type="button" disabled>
                                     <span class="spinner-grow bb-spinner bb-spinner-xs bb-spinner-light bb-spinner-inline" role="status" aria-hidden="true"></span>
-                                    <span class="bb-btn-spinner__label">Approvenıyor</span>
+                                    <span class="bb-btn-spinner__label">Approving</span>
                                 </button>
 
                                 <button class="btn btn-light bb-btn-spinner" type="button" disabled>
                                     <span class="spinner-border bb-spinner bb-spinner-xs bb-spinner-primary bb-spinner-inline" role="status" aria-hidden="true"></span>
-                                    <span class="bb-btn-spinner__label">Yükleniyor</span>
+                                    <span class="bb-btn-spinner__label">Loading</span>
                                 </button>
                             </div>
                         </div>
@@ -110,61 +108,62 @@
                     <!-- 4) Card overlay -->
                     <div class="bb-card mb-4 bb-spinner-overlay-wrap">
                         <div class="bb-card-body">
-                            <h2 class="h6 mb-2">Card Üstünde Overlay</h2>
-                            <div class="text-muted mb-3">Statik demo (JS ile is-active toggle edebilirsin)</div>
+                            <h2 class="h6 mb-2">Overlay on Card</h2>
+                            <div class="text-muted mb-3">Static demo (you can toggle 'is-active' using JS)</div>
 
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="p-3 border rounded">
-                                        <div class="fw-semibold mb-1">Sipariş #10293</div>
-                                        <div class="text-muted">Kargo etiketi hazırlanıyor…</div>
+                                        <div class="fw-semibold mb-1">Order #10293</div>
+                                        <div class="text-muted">Shipping label is being prepared…</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="p-3 border rounded">
-                                        <div class="fw-semibold mb-1">Ürün Güncelleme</div>
-                                        <div class="text-muted">Stok senkronize ediliyor…</div>
+                                        <div class="fw-semibold mb-1">Product Update</div>
+                                        <div class="text-muted">Stock is being synchronized…</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- overlay layer -->
                     <div class="bb-spinner-overlay is-active">
                         <div class="d-flex flex-column align-items-center gap-2">
                             <div class="spinner-border bb-spinner bb-spinner-lg bb-spinner-primary" role="status" aria-label="Loading"></div>
-                            <div class="text-muted small">Lütfen bekleyin…</div>
+                            <div class="text-muted small">Please wait…</div>
                         </div>
                     </div>
                 </section>
-
             </div>
-
             <!-- footer hint -->
             <div class="text-muted small">
-                İpucu: spinner rengi <code>color</code> üstünden gider (Bootstrap currentColor). Biz sadece token bridge yaptık.
+                Hint: spinner color is derived from <code>color</code> (Bootstrap currentColor). We only created a token bridge.
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Spinner</h3>
                                 <p class="bb-usage-text"><code>bb-spinner</code> + boyut (<code>xs|sm|md|lg|xl</code>) + renk (<code>bb-spinner-primary</code> vb.).</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;spinner-border bb-spinner bb-spinner-sm bb-spinner-primary bb-spinner-inline&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/div&gt;</code></pre>
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;spinner-border bb-spinner bb-spinner-sm bb-spinner-primary bb-spinner-inline&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/div&gt;</code></pre>
                                 </div>
-                                <h3 class="bb-usage-title">Katman (overlay)</h3>
-                                <p class="bb-usage-text"><code>bb-spinner-overlay-wrap</code> kapsayıcı, içine <code>bb-spinner-overlay</code> koyun.</p>
+                                <h3 class="bb-usage-title">Layer (overlay)</h3>
+                                <p class="bb-usage-text"><code>bb-spinner-overlay-wrap</code> container, inside which <code>bb-spinner-overlay</code> is placed.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-card mb-4 bb-spinner-overlay-wrap&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-card mb-4 bb-spinner-overlay-wrap&quot;&gt;
     &lt;div class=&quot;bb-card-body&quot;&gt;
         &lt;h2 class=&quot;h6 mb-2&quot;&gt;Card Üstünde Overlay&lt;/h2&gt;
         &lt;div class=&quot;text-muted mb-3&quot;&gt;Statik demo (JS ile is-active toggle edebilirsin)&lt;/div&gt;
@@ -178,8 +177,8 @@
             &lt;/div&gt;
             &lt;div class=&quot;col-md-6&quot;&gt;
                 &lt;div class=&quot;p-3 border rounded&quot;&gt;
-                    &lt;div class=&quot;fw-semibold mb-1&quot;&gt;Ürün Güncelleme&lt;/div&gt;
-                    &lt;div class=&quot;text-muted&quot;&gt;Stok senkronize ediliyor…&lt;/div&gt;
+                    &lt;div class=&quot;fw-semibold mb-1&quot;&gt;Product Güncelleme&lt;/div&gt;
+                    &lt;div class=&quot;text-muted&quot;&gt;Stock senkronize ediliyor…&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -192,13 +191,13 @@
                 </section>
                 <!--/::Usage-->
             </div>
-            
+
         </div>
     </main>
     <!--/::Main-->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

@@ -9,7 +9,7 @@ var pages = [
   ["settings", "Settings", "profile-settings.html"],
   ["security", "Security", "profile-security.html"],
   ["activity", "Activity", "profile-activity.html"],
-  ["billing", "Faturalandırma", "profile-billing.html"],
+  ["billing", "Invoicelandırma", "profile-billing.html"],
   ["statements", "Ekstreler", "profile-statements.html"],
   ["referrals", "References", "profile-referrals.html"],
   ["api", "API Anahtarları", "profile-api.html"],
@@ -53,11 +53,11 @@ function metric(label, value, tone) {
 /* Reusable action menu markup: Bootstrap dropdown + canonical bb-dropdown-menu. */
 function profileActionsMenu() {
   return '<div class="dropdown bb-action-menu">' +
-    '<button type="button" class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Diğer profil işlemleri">' +
+    '<button type="button" class="btn bb-btn-secondary btn-sm bb-action-menu-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Other profil işlemleri">' +
     '<span class="material-symbols-outlined" aria-hidden="true">more_horiz</span></button>' +
     '<ul class="dropdown-menu dropdown-menu-end bb-dropdown-menu bb-action-menu-list">' +
     '<li><h3 class="dropdown-header">ÖDEMELER</h3></li>' +
-    '<li><a class="dropdown-item" href="invoices.html">Fatura ön izlemesi</a></li>' +
+    '<li><a class="dropdown-item" href="invoices.html">Invoice ön izlemesi</a></li>' +
     '<li><a class="dropdown-item" href="profile-billing.html">Ödeme yöntemleri</a></li>' +
     '<li><a class="dropdown-item" href="profile-statements.html">Ekstreler</a></li>' +
     '<li><a class="dropdown-item bb-action-menu-has-arrow" href="profile-billing.html"><span>Subscription</span><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a></li>' +
@@ -92,7 +92,7 @@ function profileHero() {
 function pageOverview() {
   return '<div class="row g-4"><div class="col-xl-8">' + card("Profile Details",detailRows([
     ["Full Name", "Örnek User"],["Company","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
-    ["Web sitesi","bulbulustur.com"],["Country","Türkiye"],["Contact","E-posta, Telefon"],["Değişiklik izni","Evet"]
+    ["Web sitesi","bulbulustur.com"],["Country","Türkiye"],["Contact","E-mail, Telefon"],["Değişiklik izni","Evet"]
   ]) + '<div class="mt-4">' + note("Profil bilgilerini tamamlayın", "Eksik alanları Settings sayfasından güncelleyebilirsiniz. Bu örnekte veriler kaydedilmez.") + '</div>',
   '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profle Edit</a>') +
   '</div><div class="col-xl-4">' + card("Profil Durumu",'<div class="bb-profile-metric-grid">' +
@@ -102,7 +102,7 @@ function pageOverview() {
 function pageSettings() {
   return card("Profil Settingsı",'<form data-bb-profile-form><div class="row g-4">' +
     '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Örnek User" maxlength="120" required></div>' +
-    '<div class="col-md-6"><label class="form-label" for="profile_email">E-posta</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
+    '<div class="col-md-6"><label class="form-label" for="profile_email">E-mail</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_city">Şehir</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_language">Languages</label><select class="form-select form-select-solid" id="profile_language" name="language"><option>Türkçe</option><option>English</option></select></div>' +
     '<div class="col-12"><label class="form-label" for="profile_about">Hakkımda</label><textarea class="form-control form-control-solid" id="profile_about" name="about" rows="4" maxlength="1000">Panel tasarım sistemi üzerinde çalışıyorum.</textarea></div>' +
@@ -113,7 +113,7 @@ function pageSettings() {
 function pageSecurity() {
   var heights=[41,59,72,90,65,53,64,75,92,76,56,68];
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Security Özeti", '<div class="bb-profile-metric-grid">' +
+    card("Security Summaryi", '<div class="bb-profile-metric-grid">' +
       metric("User girişi","36.899","success") + metric("Yönetici girişi","72","primary") + metric("Başarısız deneme","291","danger") +
       '</div><h3 class="h6 mt-4">Activity Grafiği</h3><div class="bb-profile-activity-bars" role="img" aria-label="Ocaktan Aralığa örnek güvenlik etkinliği çubuk grafiği">' +
       heights.map(function(h){return '<div style="--bar-height:'+h+'%"></div>';}).join("") + '</div>' +
@@ -132,7 +132,7 @@ function pageSecurity() {
 function pageActivity() {
   return '<div class="row g-4"><div class="col-xl-8">' +
     card("Son Activityler", '<ol class="bb-dashboard-timeline">' + [
-      ["Ürün bilgileri güncellendi","Katalog üzerinde örnek değişiklik yapıldı","Bugün 11:20"],
+      ["Product bilgileri güncellendi","Katalog üzerinde örnek değişiklik yapıldı","Bugün 11:20"],
       ["Profil görüntülendi","Genel bakış sayfası açıldı","Dün 16:45"],
       ["Proje tamamlandı","Panel bileşen düzeni incelendi","14 Kasım 2026"],
       ["Yeni bildirim","Örnek görev bildirimi oluşturuldu","12 Kasım 2026"]
@@ -142,7 +142,7 @@ function pageActivity() {
 }
 function pageBilling() {
   return '<div class="bb-card mb-4"><div class="bb-card-body">' + note("Ödeme bilgileri örnektir", "Bu tasarım gerçek abonelik veya ödeme yönetimi yapmaz.") +
-    '<div class="row g-4 mt-2"><div class="col-lg-6"><h3 class="h6">Aktif plan · Pro</h3><p class="text-body-secondary">Sonraki yenileme: 09 Aralık 2026 (demo)</p><strong>₺799 / ay</strong><small class="d-block text-body-secondary">Örnek abonelik bedeli</small></div>' +
+    '<div class="row g-4 mt-2"><div class="col-lg-6"><h3 class="h6">Aktif plan · Pro</h3><p class="text-body-secondary">Next yenileme: 09 Aralık 2026 (demo)</p><strong>₺799 / ay</strong><small class="d-block text-body-secondary">Örnek abonelik bedeli</small></div>' +
     '<div class="col-lg-6"><div class="d-flex justify-content-between"><span>User kullanımı</span><strong>86 / 100</strong></div><div class="bb-profile-plan-usage mt-2"><span></span></div><small class="text-body-secondary">14 kullanıcı kontenjanı kaldı</small></div></div></div></div>' +
     '<div class="mt-4">' + card("Ödeme Yöntemleri",'<h3 class="h6 mb-3">Registerlı kart örnekleri</h3><div class="row g-3">' +
       '<div class="col-lg-6"><div class="bb-profile-method"><span class="material-symbols-outlined" aria-hidden="true">credit_card</span><div><strong>Visa •••• 1679</strong><small>09/2028 · Birincil (demo)</small></div></div></div>' +
@@ -161,9 +161,9 @@ function pageReferrals() {
   return '<div class="row g-4"><div class="col-xl-8">' +
     card("Referans Programı",'<p class="text-body-secondary">Örnek davet bağlantısı. Yönlendirme veya ödül kazanımı yapılmaz.</p>' +
       '<label class="form-label" for="bb_profile_referral">Davet kodunuz</label><div class="input-group"><input class="form-control" id="bb_profile_referral" value="BB-DEMO-2026" readonly>' +
-      '<button class="btn bb-btn-secondary" type="button" data-bb-profile-copy>Kopyala</button></div>' +
+      '<button class="btn bb-btn-secondary" type="button" data-bb-profile-copy>Copy</button></div>' +
       '<p class="text-body-secondary mt-3 mb-0" data-bb-profile-status role="status">Bu kod yalnız demo amaçlıdır.</p>') +
-    '</div><div class="col-xl-4">' + card("Referans Özeti",'<div class="bb-profile-metric-grid">'+metric("Davet","18")+metric("Katılım","7")+metric("Beklemede","3")+'</div>')+'</div></div>';
+    '</div><div class="col-xl-4">' + card("Referans Summaryi",'<div class="bb-profile-metric-grid">'+metric("Davet","18")+metric("Katılım","7")+metric("Beklemede","3")+'</div>')+'</div></div>';
 }
 function pageApi() {
   return card("API Genel Bakış",'<div class="d-flex justify-content-end align-items-center gap-2 mb-4"><label class="form-check form-switch"><input class="form-check-input" type="checkbox" data-bb-profile-api-test checked>' +
@@ -172,7 +172,7 @@ function pageApi() {
     '<code>/api/v1/example</code></div><div class="col-lg-6"><h3 class="h6">Developer Araçları</h3><p class="text-body-secondary">Uygulama anahtarları ve erişim kurallarını merkezi olarak yönetin.</p>' +
     '<button class="btn bb-btn-secondary btn-sm" type="button" data-bb-profile-rule>Örnek kural oluştur</button></div></div>' +
     '<div class="mt-4">' + note("İki aşamalı doğrulama", "Üretim API erişiminde gerekli güvenlik kontrolleri ayrıca uygulanmalıdır.") + '</div>' +
-    '<p class="text-body-secondary mt-3 mb-0" role="status" data-bb-profile-status>Test modu örneği; gerçek anahtar veya API çağrısı yok.</p>');
+    '<p class="text-body-secondary mt-3 mb-0" role="status" data-bb-profile-status>Test modu Example; gerçek anahtar veya API çağrısı yok.</p>');
 }
 function pageLogs() {
   return card("Action Logsı",'<p class="text-body-secondary">Temsili denetim kayıtları; gerçek kullanıcı izleme verisi içermez.</p>' +
@@ -180,7 +180,7 @@ function pageLogs() {
       ["Profil görüntüleme","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"16.11.2026"],
       ["Giriş kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-success">Başarılı</span>',"15.11.2026"],
       ["API demo isteği","Developer",'<span class="badge bb-badge bb-badge-light-warning">Test</span>',"14.11.2026"],
-      ["Şifre kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-danger">Reddedildi</span>',"13.11.2026"]
+      ["Password kontrolü","Web Panel",'<span class="badge bb-badge bb-badge-light-danger">Reddedildi</span>',"13.11.2026"]
     ]));
 }
 function pageProjects() {
@@ -211,7 +211,7 @@ function pageFollowers() {
     ["Ayşe Yılmaz","UI Tasarımcı","AY"],
     ["Mehmet Kaya","Frontend Developer","MK"],
     ["Zeynep Demir","Proje Yöneticisi","ZD"],
-    ["Deniz Arslan","Ürün Tasarımcısı","DA"]
+    ["Deniz Arslan","Product Tasarımcısı","DA"]
   ].map(function(r){return '<div class="col-md-6"><div class="bb-profile-method">' +
     '<span class="bb-symbol size-50 is-circle"><span class="bb-symbol-label">'+r[2]+'</span></span>' +
     '<div><strong>'+r[0]+'</strong><small>'+r[1]+'</small></div>' +
@@ -274,7 +274,7 @@ if(copy) copy.addEventListener("click",function(){
   if(navigator.clipboard && window.isSecureContext){
     navigator.clipboard.writeText(input.value).then(function(){
       if(status)status.textContent="Demo davet kodu kopyalandı.";
-    }).catch(function(){if(status)status.textContent="Kopyalama engellendi. Kod alanından elle kopyalayabilirsiniz.";});
+    }).catch(function(){if(status)status.textContent="Copyma engellendi. Kod alanından elle kopyalayabilirsiniz.";});
   } else {input.focus();input.select();if(status)status.textContent="Kodu seçip kopyalayabilirsiniz.";}
 });
 var rule=root.querySelector("[data-bb-profile-rule]");

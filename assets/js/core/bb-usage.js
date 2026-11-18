@@ -22,7 +22,7 @@
     var done = function () {
       var label = button.getAttribute("data-label") || button.textContent;
       button.setAttribute("data-label", label);
-      button.textContent = "Kopyalandı";
+      button.textContent = "Copyndı";
       button.classList.add("is-copied");
       setTimeout(function () {
         button.textContent = label;

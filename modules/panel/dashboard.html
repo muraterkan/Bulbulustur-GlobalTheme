@@ -14,9 +14,8 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
-
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -290,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -320,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -468,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -573,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -598,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -628,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -856,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -865,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -972,7 +975,7 @@
 
                         <section class="bb-content" aria-label="Dashboard bileşenleri">
                             <div class="bb-panel-content-container">
-                                <p class="bb-panel-toolbar-description mb-3">Temsili verilerle hazırlanmış panel dashboard örneği. Canlı satış veya kullanıcı verisi içermez.</p>
+                                <p class="bb-panel-toolbar-description mb-3">Temsili verilerle hazırlanmış panel dashboard Example. Canlı satış veya kullanıcı verisi içermez.</p>
                                 <div class="bb-dashboard-kpis mb-4">
                                     <article class="bb-card bb-dashboard-kpi" data-tone="info">
                                         <div class="bb-card-body">
@@ -982,7 +985,7 @@
                                             </div><strong class="bb-dashboard-kpi-value">1.284</strong>
                                             <div class="bb-dashboard-kpi-foot">
                                                 <span class="bb-badge bb-badge-success">+12,8%</span>
-                                                <span>Önceki döneme göre</span>
+                                                <span>Prior döneme göre</span>
                                             </div>
                                             <div class="bb-progress" role="progressbar" aria-label="Orders hedef gerçekleşmesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="86">
                                                 <div class="bb-progress__track">
@@ -999,7 +1002,7 @@
                                             </div><strong class="bb-dashboard-kpi-value">₺482.650</strong>
                                             <div class="bb-dashboard-kpi-foot">
                                                 <span class="bb-badge bb-badge-success">+8,4%</span>
-                                                <span>Önceki döneme göre</span>
+                                                <span>Prior döneme göre</span>
                                             </div>
                                             <div class="bb-progress" role="progressbar" aria-label="Net Satış hedef gerçekleşmesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72">
                                                 <div class="bb-progress__track">
@@ -1016,7 +1019,7 @@
                                             </div><strong class="bb-dashboard-kpi-value">8.492</strong>
                                             <div class="bb-dashboard-kpi-foot">
                                                 <span class="bb-badge bb-badge-success">+4,1%</span>
-                                                <span>Önceki döneme göre</span>
+                                                <span>Prior döneme göre</span>
                                             </div>
                                             <div class="bb-progress" role="progressbar" aria-label="Aktif Customers hedef gerçekleşmesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="61">
                                                 <div class="bb-progress__track">
@@ -1028,14 +1031,14 @@
                                     <article class="bb-card bb-dashboard-kpi" data-tone="info">
                                         <div class="bb-card-body">
                                             <div class="bb-dashboard-kpi-heading">
-                                                <span>Ürünler</span>
+                                                <span>Products</span>
                                                 <span class="material-symbols-outlined bb-dashboard-kpi-icon" aria-hidden="true">inventory_2</span>
                                             </div><strong class="bb-dashboard-kpi-value">2.184</strong>
                                             <div class="bb-dashboard-kpi-foot">
                                                 <span class="bb-badge bb-badge-success">+6,7%</span>
-                                                <span>Önceki döneme göre</span>
+                                                <span>Prior döneme göre</span>
                                             </div>
-                                            <div class="bb-progress" role="progressbar" aria-label="Ürünler hedef gerçekleşmesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="94">
+                                            <div class="bb-progress" role="progressbar" aria-label="Products hedef gerçekleşmesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="94">
                                                 <div class="bb-progress__track">
                                                     <div class="bb-progress__bar" data-level="94"></div>
                                                 </div>
@@ -1052,7 +1055,7 @@
                                             </div>
                                             <div class="bb-card-body">
                                                 <div class="bb-dashboard-donut-layout">
-                                                    <div class="bb-dashboard-donut" role="img" aria-label="Örnek dağılım: Web yüzde 44, Pazaryeri yüzde 30, Mobil yüzde 16, Diğer yüzde 10">
+                                                    <div class="bb-dashboard-donut" role="img" aria-label="Örnek dağılım: Web yüzde 44, Pazaryeri yüzde 30, Mobil yüzde 16, Other yüzde 10">
                                                         <div class="bb-dashboard-donut-center">
                                                             <strong>100%</strong><small>Toplam</small>
                                                         </div>
@@ -1075,7 +1078,7 @@
                                                         </li>
                                                         <li>
                                                             <i class="bb-dashboard-legend-mark" data-series="4" aria-hidden="true"></i>
-                                                            <span class="bb-dashboard-legend-label">Diğer</span>
+                                                            <span class="bb-dashboard-legend-label">Other</span>
                                                             <strong>%10</strong>
                                                         </li>
                                                     </ul>
@@ -1102,7 +1105,7 @@
                                                 <ul class="bb-dashboard-appointments">
                                                     <li>
                                                         <time datetime="2026-11-15T09:30">09:30</time><span>
-                                                            <strong>Katalog kontrolü</strong><small>Ürün ve stok eşleştirme · Demo</small>
+                                                            <strong>Katalog kontrolü</strong><small>Product ve stok eşleştirme · Demo</small>
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1294,7 +1297,7 @@
                                                             <span class="bb-dashboard-timeline-line"></span>
                                                         </span>
                                                         <div class="bb-dashboard-timeline-content">
-                                                            <strong>List ve formlar</strong><p>Sonraki fazlar</p><small>Bekliyor</small>
+                                                            <strong>List ve formlar</strong><p>Next fazlar</p><small>Bekliyor</small>
                                                         </div>
                                                     </li>
                                                 </ol>

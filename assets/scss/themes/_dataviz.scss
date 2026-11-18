@@ -3,13 +3,13 @@
    Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
    Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
    Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
-   Kullanım kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
+   Usage kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
    Durum renkleri yalnız ikon/etiket ile birlikte kullanılır (renk tek başına anlam taşımaz).
 ===================================== */
 
 :root,
 html[data-bs-theme="light"] {
-  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Diğer"e katlanır) */
+  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Other"e katlanır) */
   --bb-chart-1: #2a78d6;
   --bb-chart-2: #eb6834;
   --bb-chart-3: #1baf7a;

@@ -47,7 +47,7 @@
     if (!cart.size) {
       var empty = document.createElement("div");
       empty.className = "bb-pos-empty-cart";
-      empty.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span><strong>Fiş boş</strong><small>Ürün kartlarından seçim yaparak satışa başlayın.</small>';
+      empty.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span><strong>Fiş boş</strong><small>Product kartlarından seçim yaparak satışa başlayın.</small>';
       orderLines.append(empty);
     }
 

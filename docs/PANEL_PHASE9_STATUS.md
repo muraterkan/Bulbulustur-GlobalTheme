@@ -9,7 +9,7 @@ Dal: `main`
 - `assets/js/bb-panel-list.js`: 18 kayıtlı ve tarayıcı belleğinde çalışan örnek ürün listesi.
 - `modules/panel/lists.html`: header/sidebar/toolbar/footer ile bütünleşik ürün yönetimi demo sayfası.
 - `assets/scss/main.scss`: Faz 9 partial çağrısı.
-- `modules/panel/dashboard.html` ve `modules/panel/pages.html`: e-Ticaret → Ürünler bağlantısı `lists.html?page=ecommerce-products` adresine bağlandı.
+- `modules/panel/dashboard.html` ve `modules/panel/pages.html`: e-Ticaret → Products bağlantısı `lists.html?page=ecommerce-products` adresine bağlandı.
 
 ## İşlevler
 
@@ -42,6 +42,6 @@ npm run check:css
 
 Tarayıcıda `modules/panel/lists.html?page=ecommerce-products` sayfasını yerel HTTP sunucusundan aç. Arama, status, sayfalama, sıralama, toplu seçim ve detay işlemlerini dene. Sonrasında CSS commit'ini GitHub'a göndermek için `git push origin main`.
 
-## Sonraki faz
+## Next faz
 
 Faz 10: form sayfası, stepper ve dosya yükleme alanı. Faz onayı olmadan devam edilmedi.

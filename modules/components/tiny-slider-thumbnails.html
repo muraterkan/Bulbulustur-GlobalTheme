@@ -5,25 +5,26 @@
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bulbulustur Theme — Tiny Slider (Thumbnails)</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
-
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
                     <div class="d-flex align-items-center justify-content-between mb-3">
@@ -147,15 +148,17 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
-                                <h3 class="bb-usage-title">Küçük resimli slider</h3>
+                                <h3 class="bb-usage-title">Thumbnails Slider</h3>
                                 <p class="bb-usage-text"><code>data-bb-slider-thumbs</code> ile ana slider ve <code>bb-ts-thumbs</code> küçük resimleri senkron çalışır.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-tiny-slider mb-3 bb-ts-thumb-shell&quot;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-tiny-slider mb-3 bb-ts-thumb-shell&quot;
      data-bb-slider-thumbs
      data-bb-items=&quot;3&quot;
      data-bb-step=&quot;1&quot;
@@ -204,7 +207,7 @@
     <script src="../../assets/js/core/bb-tiny-slider.js"></script>
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

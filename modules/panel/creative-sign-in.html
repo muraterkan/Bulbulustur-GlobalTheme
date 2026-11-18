@@ -3,9 +3,10 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bulbulustur Theme — Bulbulustur Panel — Creative / Login</title>
+    <title>Bulbulustur Theme — Creative / Login</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -13,51 +14,55 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel bb-panel-auth bb-panel-auth-creative" data-bb-panel-layout="auth">
         <main class="bb-creative-auth-stage">
-                        <section class="bb-creative-auth-story" aria-label="Bulbulustur Creative">
-                            <a class="bb-creative-auth-brand" href="dashboard.html">
-                                <span class="material-symbols-outlined" aria-hidden="true">interests</span>
-                                <span>Bulbulustur Creative</span>
-                            </a>
-                            <div class="bb-creative-auth-story-copy">
-                                <span class="bb-badge bb-badge-light-primary">Creative Düzen</span><h2>Fikirleri düzenleyin.<br>İşi görünür kılın.</h2><p>Koleksiyonlar, ekipler ve işler tek yaratıcı çalışma alanında.</p>
+            <section class="bb-creative-auth-story" aria-label="Bulbulustur Creative">
+                <a class="bb-creative-auth-brand" href="dashboard.html">
+                    <span class="material-symbols-outlined" aria-hidden="true">interests</span>
+                    <span>Bulbulustur Creative</span>
+                </a>
+                <div class="bb-creative-auth-story-copy">
+                    <span class="bb-badge bb-badge-light-primary">Creative Düzen</span><h2>Fikirleri düzenleyin.<br>İşi görünür kılın.</h2><p>Koleksiyonlar, ekipler ve işler tek yaratıcı çalışma alanında.</p>
+                </div>
+                <div class="bb-creative-auth-shapes" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+            <section class="bb-creative-auth-panel" aria-label="Login">
+                <div class="bb-creative-auth-card">
+                    <header>
+                        <span class="bb-creative-auth-kicker">Bulbulustur / Creative</span><h1>Login</h1><p>Yaratıcı çalışma alanınıza dönün.</p>
+                    </header>
+                    <form data-bb-auth-form="login">
+                        <div class="bb-creative-auth-field">
+                            <label class="form-label" for="bb_creative_email">E-mail</label>
+                            <input class="form-control form-control-solid" id="bb_creative_email" name="email" type="email" autocomplete="username" required>
+                        </div>
+                        <div class="bb-creative-auth-field">
+                            <label class="form-label" for="bb_creative_password">Password</label>
+                            <div class="bb-creative-auth-password">
+                                <input class="form-control form-control-solid" id="bb_creative_password" data-bb-auth-password name="password" type="password" autocomplete="current-password" minlength="8" required><button class="bb-creative-auth-toggle" type="button" data-bb-auth-password-toggle aria-pressed="false" aria-controls="bb_creative_password">Göster</button>
                             </div>
-                            <div class="bb-creative-auth-shapes" aria-hidden="true">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </section>
-                        <section class="bb-creative-auth-panel" aria-label="Login">
-                            <div class="bb-creative-auth-card">
-                                <header>
-                                    <span class="bb-creative-auth-kicker">Bulbulustur / Creative</span><h1>Login</h1><p>Yaratıcı çalışma alanınıza dönün.</p>
-                                </header>
-                                <form data-bb-auth-form="login">
-                                    <div class="bb-creative-auth-field">
-                                        <label class="form-label" for="bb_creative_email">E-posta adresi</label>
-                                        <input class="form-control form-control-solid" id="bb_creative_email" name="email" type="email" autocomplete="username" required>
-                                    </div>
-                                    <div class="bb-creative-auth-field">
-                                        <label class="form-label" for="bb_creative_password">Şifre</label>
-                                        <div class="bb-creative-auth-password"><input class="form-control form-control-solid" id="bb_creative_password" data-bb-auth-password name="password" type="password" autocomplete="current-password" minlength="8" required><button class="bb-creative-auth-toggle" type="button" data-bb-auth-password-toggle aria-pressed="false" aria-controls="bb_creative_password">Göster</button></div>
-                                    </div>
-                                    <div class="bb-creative-auth-row"><a href="creative-reset-password.html">Forgot Pasword</a><button class="btn btn-primary" type="submit">Login</button></div>
-                                </form>
-                                <p class="bb-creative-auth-switch">Yeni misiniz? <a href="creative-sign-up.html">Manage Account oluşturun</a></p>
-                                <div class="bb-alert bb-alert-success bb-panel-auth-result" data-bb-auth-result role="status" tabindex="-1" hidden></div>
-                            </div>
-                            <!--::Footer-->
-                            <footer class="bb-creative-auth-footer">
-                                <span>Arayüz Semosu</span>
-                                <nav>
-                                    <a href="sign-in.html">Corporate Layout</a><a href="creative-sign-in.html">Creative Düzen</a>
-                                </nav>
-                            </footer>
-                            <!--/::Footer-->
-                        </section>
+                        </div>
+                        <div class="bb-creative-auth-row">
+                            <a href="creative-reset-password.html">Forgot Pasword</a><button class="btn btn-primary" type="submit">Login</button>
+                        </div>
+                    </form>
+                    <p class="bb-creative-auth-switch">Yeni misiniz? <a href="creative-sign-up.html">Manage Account oluşturun</a></p>
+                    <div class="bb-alert bb-alert-success bb-panel-auth-result" data-bb-auth-result role="status" tabindex="-1" hidden></div>
+                </div>
+                <!--::Footer-->
+                <footer class="bb-creative-auth-footer">
+                    <span>Arayüz Semosu</span>
+                    <nav>
+                        <a href="sign-in.html">Corporate Layout</a><a href="creative-sign-in.html">Creative Düzen</a>
+                    </nav>
+                </footer>
+                <!--/::Footer-->
+            </section>
         </main>
     </div>
     <script src="../../assets/js/panel/bb-panel-auth.js"></script>

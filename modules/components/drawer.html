@@ -3,16 +3,17 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Bulbulustur Theme — Drawer</title>
-
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -34,11 +35,11 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
                     <!-- Controls in bb-card -->
@@ -51,10 +52,10 @@
 
                             <div class="d-flex gap-2">
                                 <button class="btn btn-primary" data-bb-drawer-toggle="#drawerEnd" aria-controls="drawerEnd">
-                                    Sağdan Aç
+                                    Opens from the Right
                                 </button>
                                 <button class="btn btn-secondary" data-bb-drawer-toggle="#drawerStart" aria-controls="drawerStart">
-                                    Soldan Aç
+                                    Opens from the Left
                                 </button>
                             </div>
                         </div>
@@ -63,7 +64,7 @@
                             <div class="row g-3">
                                 <div class="col-lg-7">
                                     <div class="p-3 border rounded-3">
-                                        <div class="fw-semibold mb-2">Kullanım</div>
+                                        <div class="fw-semibold mb-2">Usage</div>
                                         <ul class="mb-0 small text-body-secondary">
                                             <li>Toggle: <code>data-bb-drawer-toggle="#id"</code></li>
                                             <li>Close: <code>data-bb-drawer-close</code></li>
@@ -151,15 +152,17 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Açma düğmesi ve çekmece</h3>
                                 <p class="bb-usage-text">Düğmeye <code>data-bb-drawer-toggle</code>, çekmeceye <code>data-bb-drawer</code> verin. Konum için <code>bb-drawer-start</code> veya <code>bb-drawer-end</code>; kapatma için <code>data-bb-drawer-close</code>.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div id=&quot;drawerEnd&quot; class=&quot;bb-drawer bb-drawer-end&quot; data-bb-drawer role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;drawerEndTitle&quot; tabindex=&quot;-1&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div id=&quot;drawerEnd&quot; class=&quot;bb-drawer bb-drawer-end&quot; data-bb-drawer role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;drawerEndTitle&quot; tabindex=&quot;-1&quot;&gt;
 
     &lt;div class=&quot;bb-drawer-header&quot;&gt;
         &lt;h2 id=&quot;drawerEndTitle&quot; class=&quot;bb-drawer-title&quot;&gt;Sağ Panel&lt;/h2&gt;
@@ -199,7 +202,7 @@
     <!-- Demo: theme + density -->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

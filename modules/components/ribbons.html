@@ -3,36 +3,35 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>Bulbulustur Theme — Bulbulustur Theme | Ribbons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — | Ribbons</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
-
                     <div class="mb-4">
                         <h1 class="h4 mb-1">Ribbons</h1>
                         <div class="text-secondary">bb- prefix, Bootstrap 5 uyumlu, token odaklı.</div>
                     </div>
-
                     <div class="row">
-
                         <!-- Basic (card-header içinde) -->
                         <div class="col-12 col-lg-6">
                             <div class="card card-bordered">
@@ -60,7 +59,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Rounded edge -->
                         <div class="col-12 col-lg-6">
                             <div class="card card-bordered">
@@ -86,7 +88,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Vertical -->
                         <div class="col-12 col-lg-6">
                             <div class="card card-bordered">
@@ -117,7 +122,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Triangle corner ribbon (wrapper) -->
                         <div class="col-12">
                             <div class="position-relative overflow-hidden rounded-3">
@@ -147,15 +155,18 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Kurdele</h3>
                                 <p class="bb-usage-text">Kabuğa <code>bb-ribbon</code>, içine <code>bb-ribbon-label</code> koyun. Konum için <code>bb-ribbon-start|end</code> ve <code>bb-ribbon-top|bottom</code>.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;card-header bb-ribbon&quot;&gt;
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;card-header bb-ribbon&quot;&gt;
     &lt;div class=&quot;card-title fw-semibold&quot;&gt;Ribbon Example&lt;/div&gt;
 
     &lt;!-- bg-* kullanmak serbest; istersen token ile de sür --&gt;
@@ -173,7 +184,7 @@
     <!--/::Main-->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

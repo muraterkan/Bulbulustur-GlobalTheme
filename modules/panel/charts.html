@@ -14,7 +14,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="widgets-charts" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -289,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -467,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -572,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -597,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -627,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -855,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -864,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+                            <div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -980,7 +984,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Son Orders</h2><p class="bb-chart-subtitle">500'den fazla yeni sipariş</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="orders" role="img" aria-label="Son Orders grafiği"></canvas></div>
@@ -991,7 +997,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Son Actionler</h2><p class="bb-chart-subtitle">1000'den fazla yeni kayıt</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="transactions" role="img" aria-label="Son Actionler grafiği"></canvas></div>
@@ -1002,7 +1010,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Son Customers</h2><p class="bb-chart-subtitle">500'den fazla yeni müşteri</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="customers" role="img" aria-label="Son Customers grafiği"></canvas></div>
@@ -1013,7 +1023,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Müşteri Değişimi</h2><p class="bb-chart-subtitle">Haftalık net müşteri değişimi</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="false">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="true">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="false">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="true">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="customerDelta" role="img" aria-label="Müşteri Değişimi grafiği"></canvas></div>
@@ -1024,7 +1036,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Satış / Gider</h2><p class="bb-chart-subtitle">Satış ve gider karşılaştırması</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Metrik"><button class="btn bb-btn-secondary btn-sm" type="button" aria-pressed="true">Satış</button><button class="btn bb-btn-secondary btn-sm" type="button" aria-pressed="false">Gider</button></div>
+                                            <div class="bb-chart-periods" aria-label="Metrik">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" aria-pressed="true">Satış</button><button class="btn bb-btn-secondary btn-sm" type="button" aria-pressed="false">Gider</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="salesExpenses" role="img" aria-label="Satış / Gider grafiği"></canvas></div>
@@ -1035,7 +1049,9 @@
                                             <div class="bb-chart-heading">
                                                 <h2 class="bb-card-title">Son Users</h2><p class="bb-chart-subtitle">500'den fazla yeni kullanıcı</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
                                             <div class="bb-chart-host"><canvas data-bb-chart="users" role="img" aria-label="Son Users grafiği"></canvas></div>
@@ -1044,12 +1060,14 @@
                                     <section class="bb-card bb-chart-card" data-bb-chart-card>
                                         <div class="bb-card-header">
                                             <div class="bb-chart-heading">
-                                                <h2 class="bb-card-title">Finans Özeti</h2><p class="bb-chart-subtitle">Net kâr, gelir ve gider</p>
+                                                <h2 class="bb-card-title">Finans Summaryi</h2><p class="bb-chart-subtitle">Net kâr, gelir ve gider</p>
                                             </div>
-                                            <div class="bb-chart-periods" aria-label="Grafik dönemi"><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button></div>
+                                            <div class="bb-chart-periods" aria-label="Grafik dönemi">
+                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="year" aria-pressed="true">Yıl</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="month" aria-pressed="false">Ay</button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-chart-period="week" aria-pressed="false">Hafta</button>
+                                            </div>
                                         </div>
                                         <div class="bb-card-body">
-                                            <div class="bb-chart-host"><canvas data-bb-chart="finance" role="img" aria-label="Finans Özeti grafiği"></canvas></div>
+                                            <div class="bb-chart-host"><canvas data-bb-chart="finance" role="img" aria-label="Finans Summaryi grafiği"></canvas></div>
                                         </div>
                                     </section>
                                 </div><p class="bb-chart-status" data-bb-chart-status role="status">Grafikler hazırlanıyor…</p>

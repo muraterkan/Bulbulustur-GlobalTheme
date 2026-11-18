@@ -49,7 +49,7 @@
       var id = button.getAttribute("data-id");
       var labels = {
         view: "Görüntüleme",
-        edit: "Düzenleme",
+        edit: "Editme",
         delete: "Silme",
         grid: "View Mode",
         new: "New Record",

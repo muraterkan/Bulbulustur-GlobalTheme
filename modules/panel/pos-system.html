@@ -14,7 +14,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="posb-quick-sale" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -289,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -467,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -572,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -597,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -627,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -855,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -864,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -971,7 +975,7 @@
                                             <span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span> Kasa &amp; Gün
                                         </button>
                                         <a class="btn btn-primary" href="create-product.html">
-                                            <span class="material-symbols-outlined" aria-hidden="true">add</span> Yeni Ürün
+                                            <span class="material-symbols-outlined" aria-hidden="true">add</span> New Product
                                         </a>
                                     </div>
                                 </div>
@@ -991,13 +995,13 @@
                                                 </div>
                                                 <div class="bb-pos-search">
                                                     <span class="material-symbols-outlined" aria-hidden="true">search</span>
-                                                    <label class="visually-hidden" for="bb_pos_product_search">Ürün arama</label>
-                                                    <input class="form-control form-control-solid" id="bb_pos_product_search" data-bb-pos-product-search type="search" placeholder="Ürün ara…">
+                                                    <label class="visually-hidden" for="bb_pos_product_search">Product arama</label>
+                                                    <input class="form-control form-control-solid" id="bb_pos_product_search" data-bb-pos-product-search type="search" placeholder="Product ara…">
                                                 </div>
                                             </div>
                                         </section>
 
-                                        <div class="bb-pos-category-strip" role="group" aria-label="Ürün kategorileri">
+                                        <div class="bb-pos-category-strip" role="group" aria-label="Product kategorileri">
                                             <button class="bb-pos-category" type="button" data-bb-pos-category="all" aria-pressed="true">
                                                 <span class="material-symbols-outlined" aria-hidden="true">restaurant_menu</span>
                                                 <strong>All</strong><small>9 ürün</small>
@@ -1021,7 +1025,7 @@
                                         </div>
 
                                         <div class="bb-pos-products-head">
-                                            <div><h2>Hızlı Ürünler</h2><p>Karta tıklayarak fişe ekleyin. Barkod alanı da demo olarak çalışır.</p></div>
+                                            <div><h2>Hızlı Products</h2><p>Karta tıklayarak fişe ekleyin. Barkod alanı da demo olarak çalışır.</p></div>
                                             <span class="bb-badge bb-badge-light">Merkez Şube · Demo</span>
                                         </div>
 
@@ -1327,7 +1331,8 @@
                         <div>
                             <label class="form-label" for="bb_pos_opening_note">Notlar <span class="text-body-secondary">(İsteğe bağlı)</span></label><textarea class="form-control form-control-solid" id="bb_pos_opening_note" rows="4" placeholder="Açılış ile ilgili notlar…"></textarea>
                         </div>
-                        <div class="bb-pos-form-actions"><button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button><button class="btn bb-btn-success" type="submit">Gün Aç</button></div>
+                        <div class="bb-pos-form-actions"><button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button><button class="btn bb-btn-success" type="submit">Gün Aç</button>
+</div>
                     </form>
                     <div class="bb-pos-panel" data-bb-pos-cash-panel="session" hidden>
                         <div class="bb-alert bb-alert-info" role="status">
@@ -1370,8 +1375,8 @@
                     <input class="form-control form-control-solid" id="bb_pos_customer_phone" type="tel" placeholder="Telefon">
                 </div>
                 <div>
-                    <label class="form-label" for="bb_pos_customer_email">E-posta</label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_email" type="email" placeholder="E-posta">
+                    <label class="form-label" for="bb_pos_customer_email">E-mail</label>
+                    <input class="form-control form-control-solid" id="bb_pos_customer_email" type="email" placeholder="E-mail">
                 </div>
                 <div>
                     <label class="form-label" for="bb_pos_customer_tckn">TCKN <span class="text-body-secondary">(Ops.)</span></label>
@@ -1399,7 +1404,8 @@
                     </select>
                 </div>
             </div>
-            <div class="bb-pos-form-actions"><button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button><button class="btn bb-btn-success" type="submit">Kaydet</button></div>
+            <div class="bb-pos-form-actions"><button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button><button class="btn bb-btn-success" type="submit">Kaydet</button>
+</div>
         </form>
     </section>
     <!--::Modals-->

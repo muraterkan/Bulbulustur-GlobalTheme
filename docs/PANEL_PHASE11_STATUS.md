@@ -10,8 +10,8 @@ Dal: `main`
 - `modules/panel/sign-in.html`: giriş formu.
 - `modules/panel/sign-up.html`: kayıt formu.
 - `modules/panel/reset-password.html`: şifre sıfırlama talebi demo formu.
-- `modules/panel/404.html`: 404 örneği.
-- `modules/panel/500.html`: 500 örneği.
+- `modules/panel/404.html`: 404 Example.
+- `modules/panel/500.html`: 500 Example.
 - `assets/scss/main.scss`: Faz 11 partial'ı eklendi.
 - `modules/panel/pages.html`, `dashboard.html`, `lists.html`, `forms.html`: Authentication ve 404/500 menü girişleri gerçek demo sayfa bağlantılarına taşındı.
 
@@ -45,6 +45,6 @@ npm run check:css
 git push origin main
 ```
 
-## Sonraki faz
+## Next faz
 
 Faz 12: Profil, hesap ve fatura sayfaları. User doğrulayıp onaylamadan başlatılmaz.

@@ -23,7 +23,7 @@ var productPlans={
   intro:"Fiziksel mağaza, kasa ve şube operasyonunuz için uygun PosB paketini seçin.",
   plans:[
    {name:"PosB Basic",desc:"Tek mağaza ve temel hızlı satış akışı",year:499,features:["Hızlı satış ekranı","Temel stok görünümü","1 şube / kasa yapısı","Merkezi müşteri verisi"]},
-   {name:"PosB Pro",desc:"Çoklu şube, kasa ve operasyon yönetimi",year:999,features:["Çoklu şube & kasa","Depo ve transfer","Fatura ayarları","Vardiya & gün yönetimi"]},
+   {name:"PosB Pro",desc:"Çoklu şube, kasa ve operasyon yönetimi",year:999,features:["Çoklu şube & kasa","Depo ve transfer","Invoice ayarları","Vardiya & gün yönetimi"]},
    {name:"PosB Enterprise",desc:"Daha büyük mağaza operasyonları için",year:1999,features:["Gelişmiş şube yapısı","Öncelikli entegrasyonlar","Gelişmiş raporlama","Öncelikli destek"]}
   ]
  }
@@ -93,10 +93,10 @@ root.querySelectorAll("[data-bb-pricing-select]").forEach(function(button){
  });
 });
 var title=document.querySelector(".bb-page-title");
-if(title&&!productPlans[product])title.textContent="Fiyatlandırma / Planlar";
+if(title&&!productPlans[product])title.textContent="Pricing / Planlar";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
 if(crumb){
- var crumbValues=productPlans[product]?["HİZMETLER",product==="draugr"?"Draugr":"PosB","Paketler"]:["PAGES","Fiyatlandırma","Planlar"];
+ var crumbValues=productPlans[product]?["HİZMETLER",product==="draugr"?"Draugr":"PosB","Paketler"]:["PAGES","Pricing","Planlar"];
  crumb.replaceChildren();
  crumbValues.forEach(function(value,i){var li=document.createElement("li");li.className="breadcrumb-item"+(i===2?" active":"");li.textContent=value;if(i===2)li.setAttribute("aria-current","page");crumb.appendChild(li);});
 }

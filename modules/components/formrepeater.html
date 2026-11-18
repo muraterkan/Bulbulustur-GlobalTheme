@@ -3,28 +3,29 @@
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>Bulbulustur Theme — Bulbulustur Theme — FormRepeater</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — — FormRepeater</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
-
                 <section class="bb-section">
                     <!-- BASIC -->
                     <div class="bb-card mb-4">
@@ -35,17 +36,14 @@
                                         <h2 class="bb-formrepeater-title h5">Basic Example</h2>
                                         <p class="bb-formrepeater-subtitle">Ad / Telefon alanlarını çoğalt</p>
                                     </div>
-
                                     <div class="bb-formrepeater-actions">
                                         <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
                                             <span class="material-symbols-outlined align-middle me-1">add</span>
-                                            Satır Ekle
+                                            Add Line
                                         </button>
                                     </div>
                                 </div>
-
                                 <div class="bb-formrepeater-list" data-bb-repeater-list></div>
-
                                 <!-- TEMPLATE -->
                                 <template data-bb-repeater-template>
                                     <div class="bb-formrepeater-item" data-bb-repeater-item>
@@ -106,13 +104,11 @@
                                     <div class="bb-formrepeater-actions">
                                         <button type="button" class="btn btn-sm bb-formrepeater-btn-add" data-bb-repeater-create>
                                             <span class="material-symbols-outlined align-middle me-1">add</span>
-                                            Satır Ekle
+                                            Add Line
                                         </button>
                                     </div>
                                 </div>
-
                                 <div class="bb-formrepeater-list" data-bb-repeater-list></div>
-
                                 <template data-bb-repeater-template>
                                     <div class="bb-formrepeater-item" data-bb-repeater-item>
                                         <div class="bb-formrepeater-item-head">
@@ -123,14 +119,12 @@
                                                 <span class="bb-formrepeater-index" data-bb-repeater-index>1</span>
                                                 <h3 class="bb-formrepeater-item-title">Item</h3>
                                             </div>
-
                                             <div class="bb-formrepeater-item-actions">
                                                 <button type="button" class="btn btn-sm bb-formrepeater-btn-remove" data-bb-repeater-delete>
                                                     <span class="material-symbols-outlined align-middle">delete</span>
                                                 </button>
                                             </div>
                                         </div>
-
                                         <div class="bb-formrepeater-item-body">
                                             <div class="row g-3">
                                                 <div class="col-md-4">
@@ -176,15 +170,17 @@
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Tekrarlanan form</h3>
                                 <p class="bb-usage-text">Kök öğe <code>data-bb-repeater</code> alır; ekleme/silme düğmeleri <code>data-bb-repeater-create</code> / <code>data-bb-repeater-delete</code> ile bağlanır. <code>assets/js/core/bb-formrepeater.js</code> gerekir.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-formrepeater&quot; data-bb-repeater id=&quot;bb_fr_basic&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-formrepeater&quot; data-bb-repeater id=&quot;bb_fr_basic&quot;&gt;
     &lt;div class=&quot;bb-formrepeater-header&quot;&gt;
         &lt;div&gt;
             &lt;h2 class=&quot;bb-formrepeater-title h5&quot;&gt;Basic Example&lt;/h2&gt;
@@ -194,7 +190,7 @@
         &lt;div class=&quot;bb-formrepeater-actions&quot;&gt;
             &lt;button type=&quot;button&quot; class=&quot;btn btn-sm bb-formrepeater-btn-add&quot; data-bb-repeater-create&gt;
                 &lt;span class=&quot;material-symbols-outlined align-middle me-1&quot;&gt;add&lt;/span&gt;
-                Satır Ekle
+                Add Line
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -232,7 +228,7 @@
     <script src="../../assets/js/core/bb-formrepeater.js"></script>
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

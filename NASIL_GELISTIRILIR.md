@@ -296,7 +296,7 @@ aynı düzeltmeden faydalanır.
 
 Application bir componentin yeni bir kopyasını üretmemelidir.
 
-Örneğin aşağıdakiler Core'dan gelmelidir:
+Examplen aşağıdakiler Core'dan gelmelidir:
 
 - shape
 - base padding
@@ -694,9 +694,9 @@ Application'ı Core'a sızdırma.
 
 ---
 
-## Component sayfalarında "Nasıl kullanılır" bölümü
+## Component sayfalarında "How do I use it?" bölümü
 
-Her `modules/components/*.html` sayfasının sonunda `<!--::Usage-->` bloğu bulunur: `bb-usage` bileşeni (başlık, açıklama, `bb-usage-code` kod bloğu, Kopyala düğmesi). Kod örneği sayfadaki gerçek demo işaretlemesinden alınır; yeni component eklerken aynı bloğu ekleyin ve sayfaya `assets/js/core/bb-usage.js` bağlayın. Stil: `assets/scss/components/_usage.scss` (yalnız token).
+Her `modules/components/*.html` sayfasının sonunda `<!--::Usage-->` bloğu bulunur: `bb-usage` bileşeni (başlık, açıklama, `bb-usage-code` kod bloğu, Copy düğmesi). Kod Example sayfadaki gerçek demo işaretlemesinden alınır; yeni component eklerken aynı bloğu ekleyin ve sayfaya `assets/js/core/bb-usage.js` bağlayın. Stil: `assets/scss/components/_usage.scss` (yalnız token).
 
 ## Katman sırası (z-index)
 

@@ -32,7 +32,7 @@
       {side:"out",text:"Takvimi kontrol edip size dönüş yapacağım.",time:"1 sa"}
     ]},
     {id:4,name:"Max Smith",email:"max@kt.com",online:true,unread:0,last:"4 sa",avatar:"../../assets/media/avatars/300-5.webp",messages:[
-      {side:"in",text:"Ürün aktarımı tamamlandı mı?",time:"4 sa"},
+      {side:"in",text:"Product aktarımı tamamlandı mı?",time:"4 sa"},
       {side:"out",text:"Katalog tamamlandı, fiyat deltasını bekliyoruz.",time:"3 sa"}
     ]},
     {id:5,name:"Sean Bean",email:"sean@dellito.com",online:false,unread:1,last:"Dün",avatar:"../../assets/media/avatars/300-6.webp",messages:[

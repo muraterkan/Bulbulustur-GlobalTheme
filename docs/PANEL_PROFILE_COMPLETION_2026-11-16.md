@@ -17,9 +17,9 @@ Stiller ayrı, bağımsız bir tema olarak değil `assets/scss/layout/_panel-acc
 |---|---|---|
 | Genel Bakış | `modules/panel/profile.html` | Profil bilgileri, durum ve bilgilendirme kartı |
 | Settings | `modules/panel/profile-settings.html` | Gerçek form alanları, tarayıcı doğrulaması |
-| Security | `modules/panel/profile-security.html` | Özet metrikler, grafik, uyarı kartları ve oturum tablosu |
+| Security | `modules/panel/profile-security.html` | Summary metrikler, grafik, uyarı kartları ve oturum tablosu |
 | Activity | `modules/panel/profile-activity.html` | Zaman çizelgesi ve etkinlik metrikleri |
-| Faturalandırma | `modules/panel/profile-billing.html` | Subscription, kullanıcı kota barı, örnek ödeme yöntemleri |
+| Invoicelandırma | `modules/panel/profile-billing.html` | Subscription, kullanıcı kota barı, örnek ödeme yöntemleri |
 | Ekstreler | `modules/panel/profile-statements.html` | Dönemsel örnek ekstre tablosu |
 | References | `modules/panel/profile-referrals.html` | Davet kodu, kopyalama aksiyonu, metrikler |
 | API Anahtarları | `modules/panel/profile-api.html` | API genel bakış, test modu, geliştirici araçları, 2FA notu |

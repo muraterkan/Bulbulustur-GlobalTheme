@@ -5,7 +5,7 @@ Dal: `main`
 
 ## Geliştirilen
 
-- `modules/panel/support-center.html`: Metronic referansındaki karşılama/arama alanı, 6 sekme (Genel Bakış, Requests, Eğitimler, SSS, Lisanslar, Contact), Popüler Requests/SSS/Eğitimler/Videolar/Dokümantasyon kartları ve örnek destek talebi formu.
+- `modules/panel/support-center.html`: Metronic referansındaki karşılama/arama alanı, 6 sekme (Genel Bakış, Requests, Eğitimler, SSS, Lisanslar, Contact), Popular Requests/SSS/Eğitimler/Videolar/Dokümantasyon kartları ve örnek destek talebi formu.
 - `assets/scss/layout/_panel-support.scss`: yalnız panel Support Center kapsamında responsive yerleşim, soru/cevap ve arama tasarımı. Ana `bb-card`, Bootstrap form ve semantik renk/spacing tokenları korunur.
 - `assets/js/bb-panel-support.js`: sekme geçişi, soru arama, açılır cevaplar, talep formu istemci doğrulaması, başlık/breadcrumb düzeni.
 - `assets/scss/main.scss`: SCSS partial import edildi.

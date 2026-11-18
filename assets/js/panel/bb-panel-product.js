@@ -5,11 +5,11 @@ var root=document.querySelector("[data-bb-product]");
 if(!root)return;
 var form=root.querySelector("[data-bb-product-form]");
 var pageTitle=document.querySelector(".bb-page-title");
-if(pageTitle)pageTitle.textContent="Ürün Oluştur";
+if(pageTitle)pageTitle.textContent="Product Oluştur";
 var crumb=document.querySelector(".bb-breadcrumb .breadcrumb");
 if(crumb){
  crumb.replaceChildren();
- ["APPLICATIONS","e-Ticaret","Ürün Oluştur"].forEach(function(value,i){
+ ["APPLICATIONS","e-Ticaret","Product Oluştur"].forEach(function(value,i){
   var item=document.createElement("li");item.className="breadcrumb-item"+(i===2?" active":"");item.textContent=value;
   if(i===2)item.setAttribute("aria-current","page");
   crumb.appendChild(item);
@@ -31,7 +31,7 @@ function accept(incoming){
  var items=Array.from(incoming||[]).slice(0,10),valid=items.filter(function(file){return ["image/png","image/jpeg"].includes(file.type)&&file.size<=5*1024*1024;});
  release();list.replaceChildren();thumb.replaceChildren();
  if(!valid.length){var icon=document.createElement("span");icon.className="material-symbols-outlined";icon.textContent="imagesmode";thumb.append(icon);}
- valid.forEach(function(file,index){var url=URL.createObjectURL(file);urls.push(url);var li=document.createElement("li"),img=document.createElement("img");img.src=url;img.alt="Seçilen görsel "+(index+1);var span=document.createElement("span");span.textContent=file.name;li.append(img,span);list.append(li);if(index===0){var preview=document.createElement("img");preview.src=url;preview.alt="Ürün küçük görsel ön izlemesi";thumb.append(preview);}});
+ valid.forEach(function(file,index){var url=URL.createObjectURL(file);urls.push(url);var li=document.createElement("li"),img=document.createElement("img");img.src=url;img.alt="Seçilen görsel "+(index+1);var span=document.createElement("span");span.textContent=file.name;li.append(img,span);list.append(li);if(index===0){var preview=document.createElement("img");preview.src=url;preview.alt="Product küçük görsel ön izlemesi";thumb.append(preview);}});
  root.querySelector("[data-bb-product-file-status]").textContent=valid.length+" / 10 geçerli görsel seçildi. PNG/JPEG, en fazla 5 MB. Dosyalar gönderilmez.";
 }
 files.addEventListener("change",function(){accept(files.files);});
@@ -49,7 +49,7 @@ root.querySelectorAll("[data-bb-product-editor-command]").forEach(function(butto
 form.addEventListener("submit",function(e){
  e.preventDefault();selectTab("general",false);
  if(!form.reportValidity()){var invalid=form.querySelector(":invalid");if(invalid){var pane=invalid.closest("[data-bb-product-pane]");if(pane)selectTab(pane.dataset.bbProductPane,false);invalid.focus();}return;}
- result.hidden=false;result.textContent="Ürün bilgileri doğrulandı. Bu ekran demo olduğu için ürün oluşturulmadı veya kaydedilmedi.";result.focus();
+ result.hidden=false;result.textContent="Product bilgileri doğrulandı. Bu ekran demo olduğu için ürün oluşturulmadı veya kaydedilmedi.";result.focus();
 });
 root.querySelector("[data-bb-product-reset]").addEventListener("click",function(){form.reset();accept([]);result.hidden=true;selectTab("general",false);updateDiscount();});
 updateDiscount();selectTab("general",false);

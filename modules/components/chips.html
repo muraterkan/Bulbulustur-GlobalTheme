@@ -12,18 +12,19 @@
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
                 <section class="bb-section">
                     <div class="row">
@@ -53,7 +54,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Light / Soft -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -96,7 +100,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Icon + Dot -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -154,7 +161,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Sizes & Shapes -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -193,7 +203,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Outline -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -214,7 +227,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Interactive -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -250,7 +266,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Removable -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -289,7 +308,10 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
                         <!-- Card: Status Page Example -->
                         <div class="col-12 col-xl-6">
                             <div class="card bb-card">
@@ -335,34 +357,37 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
                 <section class="bb-section">
                     <div class="text-body-secondary small mt-4">
                         Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
                     </div>
-
                 </section>
+
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Chip</h3>
                                 <p class="bb-usage-text"><code>bb-chip</code> + renk. Soft görünüm için <code>bb-chip-light-*</code>; boyut için <code>bb-chip-sm|lg</code>; biçim için <code>bb-chip-pill|square</code>.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;span class=&quot;bb-chip bb-chip-light-primary&quot;&gt;Light Primary&lt;/span&gt;</code></pre>
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;span class=&quot;bb-chip bb-chip-light-primary&quot;&gt;Light Primary&lt;/span&gt;</code></pre>
                                 </div>
                                 <h3 class="bb-usage-title">Kaldırılabilir chip</h3>
                                 <p class="bb-usage-text"><code>bb-chip-remove</code> düğmesi chip içine eklenir; silme davranışını kendi kodunuz bağlar.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;button type=&quot;button&quot; class=&quot;bb-chip-remove&quot; aria-label=&quot;Remove API filter&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;button type=&quot;button&quot; class=&quot;bb-chip-remove&quot; aria-label=&quot;Remove API filter&quot;&gt;
     &lt;span class=&quot;material-symbols-outlined&quot;&gt;close&lt;/span&gt;
 &lt;/button&gt;</code></pre>
                                 </div>
@@ -377,7 +402,7 @@
     <!--/::Main-->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

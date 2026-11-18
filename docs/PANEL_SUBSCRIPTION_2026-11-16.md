@@ -1,11 +1,11 @@
-# Panel — Subscription Detayları demo sayfası
+# Panel — Subscription Details demo sayfası
 
 Tarih: 2026-11-16
 Dal: `main`
 
 ## Gerçekleştirilen
 
-- `modules/panel/subscription.html`: Metronic Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Müşteri, Ürünler, Ödeme Yöntemi, Gelişmiş Seçenekler. Sağ kolon: Özet.
+- `modules/panel/subscription.html`: Metronic Subscription Details ekranındaki iki kolonlu düzen. Sol kolon: Müşteri, Products, Ödeme Yöntemi, Gelişmiş Seçenekler. Sağ kolon: Summary.
 - `assets/scss/layout/_panel-subscription.scss`: GlobalTheme renk, spacing, typography tokenlarıyla responsive abonelik ekranı.
 - `assets/js/bb-panel-subscription.js`: müşteri ve ödeme yöntemi seçimi, plan ekle/kaldır, örnek özel alan ekle/kaldır, özet ve aylık toplam güncelleme, form doğrulama ve demo uyarısı.
 - `assets/scss/main.scss`: ilgili partial `@use` ile dahil edildi.
@@ -13,7 +13,7 @@ Dal: `main`
 
 ## Kapsam ve veri sınırı
 
-Bu yalnız arayüz örneğidir. Müşteri ve kart bilgileri temsili, ödeme tutarları TRY bazında örnektir; herhangi bir abonelik oluşturma, ödeme tahsilatı, fatura düzenleme veya API isteği yapılmaz. Yeni ödeme yöntemi butonu kullanım dışı olduğunu açıkça söyler.
+Bu yalnız arayüz Exampledir. Müşteri ve kart bilgileri temsili, ödeme tutarları TRY bazında örnektir; herhangi bir abonelik oluşturma, ödeme tahsilatı, fatura düzenleme veya API isteği yapılmaz. Yeni ödeme yöntemi butonu kullanım dışı olduğunu açıkça söyler.
 
 ## Kaynak doğrulaması
 
@@ -32,7 +32,7 @@ npm run check:panel
 npm run check:contracts
 ```
 
-`modules/panel/subscription.html` dosyasını Live Server'da aç. Müşteri, plan ve ödeme seçimi sırasında özeti kontrol et. Ürün kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
+`modules/panel/subscription.html` dosyasını Live Server'da aç. Müşteri, plan ve ödeme seçimi sırasında özeti kontrol et. Product kaldırıp tekrar ekle, özel alan oluştur/kaldır, form gönder ve responsive dark/light görünümünü incele.
 
 CSS derlenince:
 

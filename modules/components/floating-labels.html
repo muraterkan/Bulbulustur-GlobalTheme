@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="light" data-bb-theme="light">
-
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bulbulustur Theme — Floating Labels</title>
     <!-- Main Theme CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-   <!--::Scripts--> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <!--::Main-->
     <main class="bb-main">
         <!--::Wrapper-->
-<div class="bb-wrapper">
+        <div class="bb-wrapper">
             <div class="bb-container">
-
                 <section class="bb-section">
                     <!-- Basic -->
                     <div class="card bb-card">
@@ -66,9 +66,7 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
-
                     <!-- Validation -->
                     <div class="card bb-card">
                         <div class="card-header bb-card-header">
@@ -98,7 +96,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Textareas -->
                     <div class="card bb-card">
@@ -125,7 +122,6 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Select -->
                     <div class="card bb-card">
@@ -150,14 +146,12 @@
                         </div>
                     </div>
                 </section>
-
                 <section class="bb-section">
                     <!-- Solid / Transparent -->
                     <div class="card bb-card">
                         <div class="card-header bb-card-header">
                             <div class="card-title mb-0">Solid + Transparent</div>
                         </div>
-
                         <div class="card-body bb-card-body bb-demo-solid-fix">
                             <div class="row">
                                 <div class="col-md-6">
@@ -205,22 +199,22 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
-
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">Nasıl kullanılır</div>
+                            <div class="bb-card-title">How do I use it?</div>
                         </div>
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Floating label</h3>
                                 <p class="bb-usage-text">Alan, <code>form-floating</code> içinde <code>placeholder</code> ile birlikte yazılır; <code>label</code> alandan SONRA gelir.</p>
                                 <div class="bb-usage-code">
-                                  <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Kopyala</button></div>
-                                  <pre class="bb-usage-pre"><code>&lt;div class=&quot;form-floating&quot;&gt;
+                                    <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
+<button type="button" class="bb-usage-copy">Copy</button>
+</div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;form-floating&quot;&gt;
     &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingInput&quot; placeholder=&quot;name@example.com&quot; /&gt;
     &lt;label for=&quot;floatingInput&quot;&gt;Email address&lt;/label&gt;
 &lt;/div&gt;</code></pre>
@@ -236,7 +230,7 @@
     <!--/::Main-->
     <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-<!--/::Scripts-->
+    <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>

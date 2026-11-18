@@ -14,7 +14,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="widgets-tables" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -289,7 +289,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -467,13 +467,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -572,7 +572,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -597,7 +597,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -627,7 +627,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -855,7 +855,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -864,21 +865,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -967,7 +971,7 @@
                                 <section class="card bb-card">
                                     <div class="bb-card-header">
                                         <div>
-                                            <h2 class="bb-card-title mb-1">Yeni Ürünler</h2><p class="bb-widget-subtitle mb-0">500'den fazla yeni kayıt</p>
+                                            <h2 class="bb-card-title mb-1">New Products</h2><p class="bb-widget-subtitle mb-0">500'den fazla yeni kayıt</p>
                                         </div><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="grid">
                                             <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
                                         </button>
@@ -980,7 +984,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">ES</span>
-                                                                <span class="bb-table-entity-main"><strong>Emma Smith</strong><small>E-posta: smith@kpmg.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Emma Smith</strong><small>E-mail: smith@kpmg.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -994,7 +998,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-01" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-01" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-01" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-01" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1006,7 +1010,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">MM</span>
-                                                                <span class="bb-table-entity-main"><strong>Melody Macy</strong><small>E-posta: melody@altbox.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Melody Macy</strong><small>E-mail: melody@altbox.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -1020,7 +1024,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-02" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-02" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-02" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-02" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1032,7 +1036,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">MS</span>
-                                                                <span class="bb-table-entity-main"><strong>Max Smith</strong><small>E-posta: max@kt.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Max Smith</strong><small>E-mail: max@kt.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -1046,7 +1050,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-03" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-03" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-03" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-03" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1058,7 +1062,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">SB</span>
-                                                                <span class="bb-table-entity-main"><strong>Sean Bean</strong><small>E-posta: sean@dellito.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Sean Bean</strong><small>E-mail: sean@dellito.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -1072,7 +1076,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-04" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-04" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-04" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-04" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1084,7 +1088,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">BC</span>
-                                                                <span class="bb-table-entity-main"><strong>Brian Cox</strong><small>E-posta: brian@exchange.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Brian Cox</strong><small>E-mail: brian@exchange.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -1098,7 +1102,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-05" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-05" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-05" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-05" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1114,7 +1118,7 @@
                                 <section class="card bb-card">
                                     <div class="bb-card-header">
                                         <div>
-                                            <h2 class="bb-card-title mb-1">Yeni Gelenler</h2><p class="bb-widget-subtitle mb-0">Ürün, fiyat, kapora, temsilci ve durum</p>
+                                            <h2 class="bb-card-title mb-1">Yeni Gelenler</h2><p class="bb-widget-subtitle mb-0">Product, fiyat, kapora, temsilci ve durum</p>
                                         </div><button class="btn btn-primary btn-sm" type="button" data-bb-table-action="new">
                                             <span class="material-symbols-outlined" aria-hidden="true">add</span> Yeni Üye
                                         </button>
@@ -1124,8 +1128,8 @@
                                             <table class="table bb-table bb-table-dashboard bb-table-row-dashed mb-0">
                                                 <thead>
                                                     <tr>
-                                                        <th>Ürün</th>
-                                                        <th>Fiyat</th>
+                                                        <th>Product</th>
+                                                        <th>Price</th>
                                                         <th>Kapora</th>
                                                         <th>Temsilci</th>
                                                         <th>Durum</th>
@@ -1158,7 +1162,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1191,7 +1195,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1224,7 +1228,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1257,7 +1261,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1290,7 +1294,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1308,7 +1312,9 @@
                                         <div>
                                             <h2 class="bb-card-title mb-1">Üye Statiscitci</h2><p class="bb-widget-subtitle mb-0">Kazanç, komisyon, şirket ve puan</p>
                                         </div>
-                                        <div class="bb-table-periods" aria-label="Dönem">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="month" aria-pressed="true">Ay</button>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="week" aria-pressed="false">Hafta</button>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="day" aria-pressed="false">Gün</button></div>
+                                        <div class="bb-table-periods" aria-label="Dönem">
+                                            \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="month" aria-pressed="true">Ay</button><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="week" aria-pressed="false">Hafta</button><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="day" aria-pressed="false">Gün</button>
+                                        </div>
                                     </div>
                                     <div class="bb-card-body p-0">
                                         <div class="bb-table-responsive">
@@ -1350,7 +1356,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-1">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-1">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1379,7 +1387,9 @@
                                                             </span><small class="bb-table-subtext">Ortalamanın üstü</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-2">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-2">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1408,7 +1418,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-3">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-3">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1437,7 +1449,9 @@
                                                             </span><small class="bb-table-subtext">Ortalama</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-4">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-4">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -1466,7 +1480,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-5">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-5">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -1516,7 +1532,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1544,7 +1560,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1572,7 +1588,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1600,7 +1616,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1628,7 +1644,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1682,7 +1698,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1710,7 +1726,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1738,7 +1754,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1766,7 +1782,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1794,7 +1810,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -1874,7 +1890,7 @@
 </head>
 <!--/::Head-->
 <!--::Body-->
-<body class="bb-body">
+<body class="bb-body" id="bb-body-id">
     <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="widgets-tables" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
@@ -2149,7 +2165,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Detayı</span>
+                                        <span class="bb-menu-title">Yazı Details</span>
                                     </a>
                                 </div>
                             </div>
@@ -2179,7 +2195,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">sell</span>
                             </span>
-                            <span class="bb-menu-title">Fiyatlandırma</span>
+                            <span class="bb-menu-title">Pricing</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
@@ -2327,13 +2343,13 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürünler</span>
+                                        <span class="bb-menu-title">Products</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="create-product.html">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Ürün Create</span>
+                                        <span class="bb-menu-title">Product Create</span>
                                     </a>
                                 </div>
                                 <div class="bb-menu-item">
@@ -2432,7 +2448,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yetkiler</span>
+                                        <span class="bb-menu-title">Authorities</span>
                                     </a>
                                 </div>
                             </div>
@@ -2457,7 +2473,7 @@
                                 <div class="bb-menu-item">
                                     <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
                                         <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaylar</span>
+                                        <span class="bb-menu-title">Detaillar</span>
                                     </a>
                                 </div>
                             </div>
@@ -2487,7 +2503,7 @@
                             <span class="bb-menu-icon">
                                 <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
                             </span>
-                            <span class="bb-menu-title">Fatura Yönetimi</span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
                             <span class="bb-menu-arrow" aria-hidden="true"></span>
                         </button>
                         <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
@@ -2715,7 +2731,8 @@
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">search</span>
-                            </button><div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <label class="form-label" for="bb_search">Hızlı arama</label>
                                 <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
                             </div>
@@ -2724,21 +2741,24 @@
                             <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">notifications</span>
                                 <span class="bb-panel-indicator"></span>
-                            </button><div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: Yeni sipariş alındı · Sistem güncellemesi tamamlandı.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">chat</span>
-                            </button><div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: Yeni destek talebiniz var.</p>
                             </div>
                         </div>
                         <div class="bb-panel-overlay-host" data-bb-panel-popup>
                             <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
                                 <span class="material-symbols-outlined">apps</span>
-                            </button><div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
                                 <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
                                 <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
                                 <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
@@ -2825,7 +2845,7 @@
                                 <section class="card bb-card">
                                     <div class="bb-card-header">
                                         <div>
-                                            <h2 class="bb-card-title mb-1">Yeni Ürünler</h2><p class="bb-widget-subtitle mb-0">500'den fazla yeni kayıt</p>
+                                            <h2 class="bb-card-title mb-1">New Products</h2><p class="bb-widget-subtitle mb-0">500'den fazla yeni kayıt</p>
                                         </div><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="grid">
                                             <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
                                         </button>
@@ -2838,7 +2858,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">ES</span>
-                                                                <span class="bb-table-entity-main"><strong>Emma Smith</strong><small>E-posta: smith@kpmg.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Emma Smith</strong><small>E-mail: smith@kpmg.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -2852,7 +2872,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-01" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-01" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-01" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-01" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -2864,7 +2884,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">MM</span>
-                                                                <span class="bb-table-entity-main"><strong>Melody Macy</strong><small>E-posta: melody@altbox.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Melody Macy</strong><small>E-mail: melody@altbox.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -2878,7 +2898,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-02" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-02" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-02" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-02" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -2890,7 +2910,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">MS</span>
-                                                                <span class="bb-table-entity-main"><strong>Max Smith</strong><small>E-posta: max@kt.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Max Smith</strong><small>E-mail: max@kt.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -2904,7 +2924,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-03" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-03" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-03" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-03" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -2916,7 +2936,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">SB</span>
-                                                                <span class="bb-table-entity-main"><strong>Sean Bean</strong><small>E-posta: sean@dellito.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Sean Bean</strong><small>E-mail: sean@dellito.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -2930,7 +2950,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-04" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-04" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-04" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-04" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -2942,7 +2962,7 @@
                                                         <td>
                                                             <div class="bb-table-entity">
                                                                 <span class="bb-table-entity-media">BC</span>
-                                                                <span class="bb-table-entity-main"><strong>Brian Cox</strong><small>E-posta: brian@exchange.com</small></span>
+                                                                <span class="bb-table-entity-main"><strong>Brian Cox</strong><small>E-mail: brian@exchange.com</small></span>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -2956,7 +2976,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="NP-05" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-05" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="NP-05" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="NP-05" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -2972,7 +2992,7 @@
                                 <section class="card bb-card">
                                     <div class="bb-card-header">
                                         <div>
-                                            <h2 class="bb-card-title mb-1">Yeni Gelenler</h2><p class="bb-widget-subtitle mb-0">Ürün, fiyat, kapora, temsilci ve durum</p>
+                                            <h2 class="bb-card-title mb-1">Yeni Gelenler</h2><p class="bb-widget-subtitle mb-0">Product, fiyat, kapora, temsilci ve durum</p>
                                         </div><button class="btn btn-primary btn-sm" type="button" data-bb-table-action="new">
                                             <span class="material-symbols-outlined" aria-hidden="true">add</span> Yeni Üye
                                         </button>
@@ -2982,8 +3002,8 @@
                                             <table class="table bb-table bb-table-dashboard bb-table-row-dashed mb-0">
                                                 <thead>
                                                     <tr>
-                                                        <th>Ürün</th>
-                                                        <th>Fiyat</th>
+                                                        <th>Product</th>
+                                                        <th>Price</th>
                                                         <th>Kapora</th>
                                                         <th>Temsilci</th>
                                                         <th>Durum</th>
@@ -3016,7 +3036,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3049,7 +3069,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3082,7 +3102,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3115,7 +3135,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3148,7 +3168,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="AR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="AR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="AR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3166,7 +3186,9 @@
                                         <div>
                                             <h2 class="bb-card-title mb-1">Üye Statiscitci</h2><p class="bb-widget-subtitle mb-0">Kazanç, komisyon, şirket ve puan</p>
                                         </div>
-                                        <div class="bb-table-periods" aria-label="Dönem">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="month" aria-pressed="true">Ay</button>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="week" aria-pressed="false">Hafta</button>\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="day" aria-pressed="false">Gün</button></div>
+                                        <div class="bb-table-periods" aria-label="Dönem">
+                                            \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="month" aria-pressed="true">Ay</button><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="week" aria-pressed="false">Hafta</button><button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-period="day" aria-pressed="false">Gün</button>
+                                        </div>
                                     </div>
                                     <div class="bb-card-body p-0">
                                         <div class="bb-table-responsive">
@@ -3208,7 +3230,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-1">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-1">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -3237,7 +3261,9 @@
                                                             </span><small class="bb-table-subtext">Ortalamanın üstü</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-2">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-2">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -3266,7 +3292,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-3">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-3">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -3295,7 +3323,9 @@
                                                             </span><small class="bb-table-subtext">Ortalama</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-4">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-4">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -3324,7 +3354,9 @@
                                                             </span><small class="bb-table-subtext">En iyi</small>
                                                         </td>
                                                         <td>
-                                                            <div class="bb-table-actions">\<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-5">Görüntüle</button></div>
+                                                            <div class="bb-table-actions">
+                                                                \<button type="button" class="btn bb-btn-secondary btn-sm" data-bb-table-action="view" data-id="MS-5">Görüntüle</button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -3374,7 +3406,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3402,7 +3434,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3430,7 +3462,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3458,7 +3490,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3486,7 +3518,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="OR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="OR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="OR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3540,7 +3572,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-1" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-1" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-1" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-1" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3568,7 +3600,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-2" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-2" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-2" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-2" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3596,7 +3628,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-3" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-3" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-3" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-3" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3624,7 +3656,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-4" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-4" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-4" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-4" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>
@@ -3652,7 +3684,7 @@
                                                             <div class="bb-table-actions">
                                                                 <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="view" data-id="PR-5" aria-label="Görüntüle">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-5" aria-label="Düzenle">
+                                                                </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="edit" data-id="PR-5" aria-label="Edit">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">edit</span>
                                                                 </button><button class="btn bb-btn-secondary btn-sm" type="button" data-bb-table-action="delete" data-id="PR-5" aria-label="Sil">
                                                                     <span class="material-symbols-outlined" aria-hidden="true">delete</span>

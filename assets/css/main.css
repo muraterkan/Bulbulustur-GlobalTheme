@@ -1004,12 +1004,12 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
    Kategorik grafik serisi, sıralı/ayrışan rampa, durum renkleri.
    Sabit (renk paketinden BAĞIMSIZ): bir varlığın rengi paket değişince değişmez.
    Kategorik sıra CVD-güvenli doğrulanmıştır (validate_palette: açık+koyu, bitişik çiftler).
-   Kullanım kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
+   Usage kuralı: seri rengi yalnız işaret (bar/çizgi/nokta) içindir; metin --bb-chart-label ile yazılır.
    Durum renkleri yalnız ikon/etiket ile birlikte kullanılır (renk tek başına anlam taşımaz).
 ===================================== */
 :root,
 html[data-bs-theme=light] {
-  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Diğer"e katlanır) */
+  /* Kategorik seri (sabit sıra, döndürülmez; 9. seri "Other"e katlanır) */
   --bb-chart-1: #2a78d6;
   --bb-chart-2: #eb6834;
   --bb-chart-3: #1baf7a;
@@ -1075,7 +1075,7 @@ html[data-bs-theme=dark] {
 /* =====================================
    Bulbulustur Theme — Renk Paketi: WORKSHOP
    El emeği / butik / sıcak doğal palet (krem, terracotta, adaçayı, zeytin)
-   Kullanım: <html data-bb-pack="workshop"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
+   Usage: <html data-bb-pack="workshop"> (+ isteğe bağlı data-bs-theme / data-bb-surface)
    Yalnız GİRDİ tokenları (palet, marka, nötr, kabuk). hover/active/light/clarity
    türevleri themes/_token-engine.scss tarafından bu girdilerden üretilir.
    Kapsam: yalnız renk tokenları. Sarı marka paleti (base/_theme) bozulmaz;
@@ -3187,7 +3187,7 @@ button.bb-link:focus-visible,
   }
 }
 /* =====================================
-   Bulbulustur Theme – Hover Utilities
+   Bulbulustur Theme — – Hover Utilities
    Base-level hover helpers
    ===================================== */
 /* -------------------------------------
@@ -4835,7 +4835,7 @@ button.bb-link:focus-visible,
 }
 
 /* =====================================
-   Bulbulustur Theme – Flex Helpers
+   Bulbulustur Theme — – Flex Helpers
    bb- prefix | responsive | Bootstrap SCSS bağımsız
    ===================================== */
 /* Breakpoints (Bootstrap 5 defaults) */
@@ -5027,7 +5027,7 @@ button.bb-link:focus-visible,
   }
 }
 /* =====================================
-   Bulbulustur Theme – Transform Helpers (PURE)
+   Bulbulustur Theme — – Transform Helpers (PURE)
    bb- prefix | token-driven | minimal + practical
    Scope: utilities/transform
 ===================================== */
@@ -5236,7 +5236,7 @@ button.bb-link:focus-visible,
 }
 
 /* =====================================
-   Bulbulustur Theme – Background Helpers
+   Bulbulustur Theme — – Background Helpers
    bb- prefix | token-driven | dark/light safe
    ===================================== */
 /* -------------------------------------
@@ -5975,7 +5975,7 @@ button.bb-link:focus-visible,
 }
 
 /* =====================================
-   Bulbulustur Theme – Border Helpers
+   Bulbulustur Theme — – Border Helpers
    bb- prefix | token-driven | state aware
    ===================================== */
 /* -------------------------------------
@@ -6476,7 +6476,7 @@ button.bb-link:focus-visible,
 }
 
 /* =====================================
-   Bulbulustur Theme – Shadow Helpers
+   Bulbulustur Theme — – Shadow Helpers
    bb- prefix | token-driven | dark/light safe
    ===================================== */
 /* -------------------------------------
@@ -6712,7 +6712,7 @@ button.bb-link:focus-visible,
   }
 }
 /* =====================================
-   Bulbulustur Theme – Opacity Helpers
+   Bulbulustur Theme — – Opacity Helpers
    bb- prefix | state aware | minimal
    ===================================== */
 /* -------------------------------------

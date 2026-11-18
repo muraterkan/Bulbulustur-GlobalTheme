@@ -116,7 +116,7 @@
       tr.appendChild(element("td", "", new Date(r.date + "T12:00:00").toLocaleDateString("tr-TR")));
       var actions = element("td");
       var wrap = element("div", "bb-panel-list-operations");
-      wrap.appendChild(button("Detay: " + r.name, "visibility", "detail", r.id));
+      wrap.appendChild(button("Detail: " + r.name, "visibility", "detail", r.id));
       wrap.appendChild(button("Durum değiştir: " + r.name, "sync", "toggle", r.id));
       actions.appendChild(wrap);
       tr.appendChild(actions);
@@ -149,9 +149,9 @@
       li.appendChild(b);
       pages.appendChild(li);
     }
-    pageButton("Önceki", page - 1, page === 1, false);
+    pageButton("Prior", page - 1, page === 1, false);
     for (var n = 1; n <= result.totalPages; n++) pageButton(String(n), n, false, n === page);
-    pageButton("Sonraki", page + 1, page === result.totalPages, false);
+    pageButton("Next", page + 1, page === result.totalPages, false);
     root.querySelectorAll("[data-bb-list-sort]").forEach(function (button) {
       var active = button.dataset.bbListSort === sort.field;
       button.setAttribute("aria-pressed", String(active));
