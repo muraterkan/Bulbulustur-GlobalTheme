@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "sass assets/scss/main.scss assets/css/main.css --no-source-map",
+    "build:css": "npm run build:css:legacy && npm run build:css:bundles",
     "check:contracts": "node scripts/check-contracts.mjs",
-    "check:css": "npm run check:architecture && npm run check:contracts && npm run build:css && git diff --check && git diff --exit-code -- assets/css/main.css",
-    "watch:css": "sass --watch assets/scss/main.scss assets/css/main.css",
+    "check:css": "npm run check:architecture && npm run check:contracts && npm run build:css && git diff --check && git diff --exit-code -- assets/css/main.css assets/css/core.css assets/css/panel.css assets/css/status.css assets/css/web.css",
+    "watch:css": "sass --watch assets/scss/main.scss:assets/css/main.css assets/scss/core.scss:assets/css/core.css assets/scss/panel.scss:assets/css/panel.css assets/scss/status.scss:assets/css/status.css assets/scss/web.scss:assets/css/web.css",
     "prod:css": "sass assets/scss/main.scss assets/css/main.css --style=compressed && postcss assets/css/main.css --use autoprefixer cssnano -o assets/css/main.min.css",
     "check:panel": "node scripts/check-panel.mjs",
     "check:architecture": "node scripts/check-architecture.mjs",
-    "check:components": "node scripts/check-components.mjs"
+    "check:components": "node scripts/check-components.mjs",
+    "build:css:legacy": "sass assets/scss/main.scss assets/css/main.css --no-source-map",
+    "build:css:bundles": "sass assets/scss/core.scss assets/css/core.css --no-source-map && sass assets/scss/panel.scss assets/css/panel.css --no-source-map && sass assets/scss/status.scss assets/css/status.css --no-source-map && sass assets/scss/web.scss assets/css/web.css --no-source-map"
   },
   "keywords": [],
   "author": "",

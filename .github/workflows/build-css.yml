@@ -28,17 +28,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build CSS
+      - name: Build CSS bundles
         run: npm run build:css
+
+      - name: Verify architecture
+        run: npm run check:architecture
+
+      - name: Verify SCSS contracts
+        run: npm run check:contracts
+
+      - name: Verify diff syntax
+        run: git diff --check
 
       - name: Commit compiled CSS when changed
         run: |
-          if git diff --quiet -- assets/css/main.css; then
-            echo "main.css is already in sync."
+          if git diff --quiet -- assets/css/main.css assets/css/core.css assets/css/panel.css assets/css/status.css assets/css/web.css; then
+            echo "CSS bundles are already in sync."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/css/main.css
-          git commit -m "build(css): regenerate from main.scss"
+          git add assets/css/main.css assets/css/core.css assets/css/panel.css assets/css/status.css assets/css/web.css
+          git commit -m "build(css): regenerate application bundles"
           git push

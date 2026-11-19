@@ -4,6 +4,7 @@ import { join, relative, resolve, sep } from "node:path";
 const root = process.cwd();
 const scssRoot = resolve(root, "assets/scss");
 const jsRoot = resolve(root, "assets/js");
+const cssRoot = resolve(root, "assets/css");
 const failures = [];
 const pass = (label) => console.log("PASS " + label);
 const fail = (label, details = []) => {
@@ -16,19 +17,33 @@ const walk = (dir) => readdirSync(dir).flatMap((name) => {
   return statSync(full).isDirectory() ? walk(full) : [full];
 });
 const rel = (path) => relative(root, path).split(sep).join("/");
+const read = (path) => readFileSync(resolve(root, path), "utf8");
+const uses = (source) => [...source.matchAll(/^\s*@use\s+["']([^"']+)["'](?:\s+as\s+[\w-]+)?;/gm)].map((m) => m[1]);
+const normalizeModule = (name) => name.replace(/\.scss$/, "").replace(/(^|\/)_(?=[^/]+$)/, "$1");
 
 const panelScssRoot = resolve(scssRoot, "layout/panel");
+const statusScssRoot = resolve(scssRoot, "layout/status");
+const webScssRoot = resolve(scssRoot, "layout/web.bulbulustur.com");
+const bundlesRoot = resolve(scssRoot, "bundles");
 const allScss = walk(scssRoot).filter((x) => x.endsWith(".scss"));
-const panelScss = existsSync(panelScssRoot) ? walk(panelScssRoot).filter((x) => x.endsWith(".scss")) : [];
-const coreScss = allScss.filter((x) => !x.startsWith(panelScssRoot + sep) && !x.endsWith("main.scss"));
-const panelPartialNames = panelScss.map((path) => path.split(sep).pop().replace(/^_/, "").replace(/\.scss$/, "")).sort();
+const entrypointPaths = new Set(["main.scss", "core.scss", "panel.scss", "status.scss", "web.scss"].map((name) => resolve(scssRoot, name)));
 
-const panelLeaks = coreScss.filter((path) => {
-  const source = readFileSync(path, "utf8");
-  return /\.bb-panel\b|--bb-panel-[\w-]+|@use\s+["']layout\/panel\//.test(source);
-});
-if (panelLeaks.length) fail("core SCSS has no panel dependency", panelLeaks.map(rel));
-else pass("core SCSS has no panel dependency");
+const inRoot = (path, dir) => path.startsWith(dir + sep);
+const coreScss = allScss.filter((path) =>
+  !inRoot(path, panelScssRoot) &&
+  !inRoot(path, statusScssRoot) &&
+  !inRoot(path, webScssRoot) &&
+  !inRoot(path, bundlesRoot) &&
+  !entrypointPaths.has(path)
+);
+
+const coreDependencyLeaks = coreScss.filter((path) => /@use\s+["'][^"']*layout\/(?:panel|status|web\.bulbulustur\.com)\//.test(readFileSync(path, "utf8")));
+if (coreDependencyLeaks.length) fail("core SCSS has no application dependency", coreDependencyLeaks.map(rel));
+else pass("core SCSS has no application dependency");
+
+const panelLeaks = coreScss.filter((path) => /\.bb-panel\b|--bb-panel-[\w-]+/.test(readFileSync(path, "utf8")));
+if (panelLeaks.length) fail("core SCSS has no panel namespace leak", panelLeaks.map(rel));
+else pass("core SCSS has no panel namespace leak");
 
 const misplacedPanelScss = allScss.filter((path) => /[\\/]_panel-[^\\/]+\.scss$/.test(path));
 if (misplacedPanelScss.length) fail("panel SCSS lives only in layout/panel", misplacedPanelScss.map(rel));
@@ -49,53 +64,99 @@ const webOnlyComponentDemos = existsSync(componentDemoRoot)
 if (webOnlyComponentDemos.length) fail("component catalog contains no customer-site demos", webOnlyComponentDemos);
 else pass("component catalog contains no customer-site demos");
 
-const main = readFileSync(resolve(scssRoot, "main.scss"), "utf8");
-const panelImportMatches = [...main.matchAll(/@use\s+["']layout\/panel\/([^"']+)["'](?:\s+as\s+[\w-]+)?;/g)]
-  .map((m) => ({ name: m[1], index: m.index }));
-const panelImports = panelImportMatches.map((x) => x.name);
-if (!panelImports.length) fail("main.scss declares panel layer imports");
-else pass("main.scss declares panel layer imports");
-
-const blockAStart = main.indexOf("PANEL TEMPLATE ONLY — BLOCK A");
-const blockAEnd = main.indexOf("END PANEL TEMPLATE ONLY — BLOCK A");
-const blockBStart = main.indexOf("PANEL TEMPLATE ONLY — BLOCK B");
-const blockBEnd = main.indexOf("END PANEL TEMPLATE ONLY — BLOCK B");
-const validPanelBlocks = blockAStart >= 0 && blockAEnd > blockAStart && blockBStart > blockAEnd && blockBEnd > blockBStart;
-
-if (!validPanelBlocks) {
-  fail("main.scss keeps removable panel boundary markers");
-} else {
-  pass("main.scss keeps removable panel boundary markers");
-
-  const insidePanelBlock = (index) =>
-    (index > blockAStart && index < blockAEnd) ||
-    (index > blockBStart && index < blockBEnd);
-
-  const importsOutsideBlocks = panelImportMatches.filter((x) => !insidePanelBlock(x.index)).map((x) => x.name);
-  if (importsOutsideBlocks.length) fail("panel imports stay inside PANEL TEMPLATE ONLY blocks", importsOutsideBlocks);
-  else pass("panel imports stay inside PANEL TEMPLATE ONLY blocks");
-
-  const panelBlockSource = main.slice(blockAStart, blockAEnd) + "\n" + main.slice(blockBStart, blockBEnd);
-  const nonPanelImportsInsideBlocks = [...panelBlockSource.matchAll(/@use\s+["']([^"']+)["'](?:\s+as\s+[\w-]+)?;/g)]
-    .map((m) => m[1])
-    .filter((name) => !name.startsWith("layout/panel/"));
-  if (nonPanelImportsInsideBlocks.length) fail("PANEL TEMPLATE ONLY blocks contain only panel imports", nonPanelImportsInsideBlocks);
-  else pass("PANEL TEMPLATE ONLY blocks contain only panel imports");
+const expectedEntrypoints = {
+  "assets/scss/core.scss": [
+    "bundles/core-foundation",
+    "bundles/core-components-head",
+    "bundles/core-components-tail",
+    "bundles/core-final"
+  ],
+  "assets/scss/panel.scss": [
+    "bundles/core-foundation",
+    "bundles/panel-shell",
+    "bundles/core-components-head",
+    "bundles/panel-compositions",
+    "bundles/core-components-tail",
+    "bundles/core-final"
+  ],
+  "assets/scss/status.scss": [
+    "bundles/core-foundation",
+    "bundles/core-components-head",
+    "bundles/core-components-tail",
+    "bundles/status",
+    "bundles/core-final"
+  ],
+  "assets/scss/web.scss": [
+    "bundles/core-foundation",
+    "bundles/core-components-head",
+    "bundles/core-components-tail",
+    "bundles/web",
+    "bundles/core-final"
+  ],
+  "assets/scss/main.scss": [
+    "bundles/core-foundation",
+    "bundles/panel-shell",
+    "bundles/core-components-head",
+    "bundles/panel-compositions",
+    "bundles/core-components-tail",
+    "bundles/status",
+    "bundles/web",
+    "bundles/core-final"
+  ]
+};
+for (const [path, expected] of Object.entries(expectedEntrypoints)) {
+  const actual = uses(read(path));
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) fail(path + " keeps canonical bundle order", ["expected: " + expected.join(", "), "actual: " + actual.join(", ")]);
+  else pass(path + " keeps canonical bundle order");
 }
 
-const duplicatePanelImports = [...new Set(panelImports.filter((name, index) => panelImports.indexOf(name) !== index))];
-if (duplicatePanelImports.length) fail("panel partials are imported once", duplicatePanelImports);
-else pass("panel partials are imported once");
+const bundleInventory = (rootDir) => walk(rootDir).filter((path) => path.endsWith(".scss"))
+  .map((path) => normalizeModule(relative(rootDir, path).split(sep).join("/")))
+  .sort();
+const importsFromBundle = (path, prefix) => uses(read(path))
+  .filter((name) => name.startsWith(prefix))
+  .map((name) => normalizeModule(name.slice(prefix.length)))
+  .sort();
 
-const importedPanelSet = new Set(panelImports);
-const missingPanelImports = panelPartialNames.filter((name) => !importedPanelSet.has(name));
-const unknownPanelImports = panelImports.filter((name) => !panelPartialNames.includes(name));
-if (missingPanelImports.length || unknownPanelImports.length) {
-  fail("layout/panel partial inventory matches main.scss", [
-    ...missingPanelImports.map((name) => "missing import: " + name),
-    ...unknownPanelImports.map((name) => "missing partial: " + name)
-  ]);
-} else pass("layout/panel partial inventory matches main.scss (" + panelPartialNames.length + " partials)");
+const panelInventory = bundleInventory(panelScssRoot);
+const panelImports = [
+  ...importsFromBundle("assets/scss/bundles/_panel-shell.scss", "../layout/panel/"),
+  ...importsFromBundle("assets/scss/bundles/_panel-compositions.scss", "../layout/panel/")
+].sort();
+if (JSON.stringify(panelInventory) !== JSON.stringify(panelImports)) fail("panel bundle inventory matches layout/panel", [
+  "inventory: " + panelInventory.join(", "),
+  "imports: " + panelImports.join(", ")
+]);
+else pass("panel bundle inventory matches layout/panel (" + panelInventory.length + " modules)");
+
+const statusInventory = bundleInventory(statusScssRoot);
+const statusImports = importsFromBundle("assets/scss/bundles/_status.scss", "../layout/status/");
+if (JSON.stringify(statusInventory) !== JSON.stringify(statusImports)) fail("status bundle inventory matches layout/status", [
+  "inventory: " + statusInventory.join(", "),
+  "imports: " + statusImports.join(", ")
+]);
+else pass("status bundle inventory matches layout/status (" + statusInventory.length + " modules)");
+
+const webInventory = bundleInventory(webScssRoot);
+const webImports = importsFromBundle("assets/scss/bundles/_web.scss", "../layout/web.bulbulustur.com/");
+if (JSON.stringify(webInventory) !== JSON.stringify(webImports)) fail("web bundle inventory matches layout/web.bulbulustur.com", [
+  "missing/extra modules detected"
+]);
+else pass("web bundle inventory matches layout/web.bulbulustur.com (" + webInventory.length + " modules)");
+
+const appSources = [
+  ...walk(panelScssRoot).filter((x) => x.endsWith(".scss")),
+  ...walk(statusScssRoot).filter((x) => x.endsWith(".scss")),
+  ...walk(webScssRoot).filter((x) => x.endsWith(".scss"))
+];
+const crossAppLeaks = appSources.filter((path) => {
+  const source = readFileSync(path, "utf8");
+  if (inRoot(path, panelScssRoot)) return /@use\s+["'][^"']*layout\/(?:status|web\.bulbulustur\.com)\//.test(source);
+  if (inRoot(path, statusScssRoot)) return /@use\s+["'][^"']*layout\/(?:panel|web\.bulbulustur\.com)\//.test(source);
+  return /@use\s+["'][^"']*layout\/(?:panel|status)\//.test(source);
+});
+if (crossAppLeaks.length) fail("application SCSS layers have no cross-application dependency", crossAppLeaks.map(rel));
+else pass("application SCSS layers have no cross-application dependency");
 
 const rootJs = readdirSync(jsRoot).filter((name) => statSync(join(jsRoot, name)).isFile() && name.endsWith(".js"));
 if (rootJs.length) fail("assets/js root contains no loose JavaScript", rootJs);
@@ -113,12 +174,11 @@ const coreJsLeaks = coreJs.filter((path) => /\bbb-panel\b|data-bb-panel|assets\/
 if (coreJsLeaks.length) fail("core JavaScript has no panel dependency", coreJsLeaks.map(rel));
 else pass("core JavaScript has no panel dependency");
 
-const cssRoot = resolve(root, "assets/css");
-const strayPanelCss = existsSync(cssRoot)
-  ? readdirSync(cssRoot).filter((name) => /^panel-.*\.css$/i.test(name))
-  : [];
-if (strayPanelCss.length) fail("no standalone panel CSS artifacts", strayPanelCss);
-else pass("no standalone panel CSS artifacts");
+for (const name of ["core.css", "panel.css", "status.css", "web.css"]) {
+  const target = resolve(cssRoot, name);
+  if (!existsSync(target)) fail("generated bundle exists: " + name);
+  else pass("generated bundle exists: " + name);
+}
 
 const moduleRootFiles = existsSync(resolve(root, "modules"))
   ? readdirSync(resolve(root, "modules")).filter((name) => name.endsWith(".html"))

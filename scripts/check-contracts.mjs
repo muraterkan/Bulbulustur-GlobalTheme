@@ -1,5 +1,5 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
-import { resolve, join, relative } from 'node:path';
+import { resolve, join, relative, dirname, basename } from 'node:path';
 
 const root = process.cwd();
 const scssRoot = resolve(root, 'assets/scss');
@@ -13,19 +13,55 @@ const walk = (dir) => readdirSync(dir).flatMap((name) => {
   return statSync(full).isDirectory() ? walk(full) : [full];
 });
 
-const main = file('assets/scss/main.scss');
-const mainImports = [...main.matchAll(/^\s*@use\s+"([^"]+)"(?:\s+as\s+[\w-]+)?;/gm)].map((match) => match[1]);
-const partials = walk(scssRoot)
-  .filter((path) => /[\\/]_[^\\/]+\.scss$/.test(path))
-  .map((path) => relative(scssRoot, path).replace(/\\/g, '/').replace(/\/_/, '/').replace(/\.scss$/, ''));
+const entrypointRel = [
+  'assets/scss/core.scss',
+  'assets/scss/panel.scss',
+  'assets/scss/status.scss',
+  'assets/scss/web.scss'
+];
+const compatibilityEntrypointRel = 'assets/scss/main.scss';
+const allScssFiles = walk(scssRoot).filter((path) => path.endsWith('.scss'));
+const entrypointPaths = new Set([...entrypointRel, compatibilityEntrypointRel].map((path) => resolve(root, path)));
+const parseUses = (source) => [...source.matchAll(/^\s*@use\s+"([^"]+)"(?:\s+as\s+[\w-]+)?;/gm)].map((match) => match[1]);
+const resolveUse = (fromPath, name) => {
+  if (name.startsWith('sass:')) return null;
+  const base = resolve(dirname(fromPath), name);
+  const candidates = name.endsWith('.scss')
+    ? [base]
+    : [base + '.scss', join(dirname(base), '_' + basename(base) + '.scss')];
+  return candidates.find((candidate) => existsSync(candidate)) ?? false;
+};
+const reachable = new Set();
+const missingImports = [];
+const visit = (path) => {
+  if (reachable.has(path)) return;
+  reachable.add(path);
+  const source = readFileSync(path, 'utf8');
+  for (const name of parseUses(source)) {
+    const target = resolveUse(path, name);
+    if (target === false) missingImports.push(relative(root, path).replace(/\\/g, '/') + ' -> ' + name);
+    else if (target) visit(target);
+  }
+};
+entrypointRel.map((path) => resolve(root, path)).forEach(visit);
 
-// Derlenmeyen (ölü) partial kalmasın. Bilinçli ayrılmışlar burada açıkça listelenir (docs/CSS_ANALYSIS_2026-11-15.md D1).
 const detached = new Set();
-const orphans = partials.filter((name) => !mainImports.includes(name) && !detached.has(name));
-check('every partial is imported by main.scss (or explicitly detached)', orphans.length === 0);
-if (orphans.length) console.log('  orphan partials:', orphans.join(', '));
-check('every main.scss @use target exists', mainImports.every((name) => partials.includes(name)));
-check('main.scss has no duplicate @use', new Set(mainImports).size === mainImports.length);
+const runtimeModules = allScssFiles.filter((path) => !entrypointPaths.has(path));
+const orphans = runtimeModules.filter((path) => !reachable.has(path) && !detached.has(relative(scssRoot, path).replace(/\\/g, '/')));
+check('every SCSS module is reachable by a runtime bundle entrypoint (or explicitly detached)', orphans.length === 0);
+if (orphans.length) console.log('  orphan SCSS modules:', orphans.map((path) => relative(scssRoot, path).replace(/\\/g, '/')).join(', '));
+
+const everyUseResolves = allScssFiles.every((path) => parseUses(readFileSync(path, 'utf8')).every((name) => resolveUse(path, name) !== false));
+check('every SCSS @use target exists', everyUseResolves && missingImports.length === 0);
+if (missingImports.length) console.log('  missing @use targets:', missingImports.join(', '));
+
+const duplicateUseFiles = allScssFiles.filter((path) => {
+  const uses = parseUses(readFileSync(path, 'utf8'));
+  return new Set(uses).size !== uses.length;
+});
+check('SCSS files have no duplicate direct @use', duplicateUseFiles.length === 0);
+if (duplicateUseFiles.length) console.log('  duplicate @use in:', duplicateUseFiles.map((path) => relative(root, path).replace(/\\/g, '/')).join(', '));
+
 const pagesScss = resolve(scssRoot, 'pages');
 check('no pages/ SCSS sources in GlobalTheme', !existsSync(pagesScss) || !walk(pagesScss).some((path) => path.endsWith('.scss')));
 
