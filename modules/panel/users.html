@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Kullanıcılar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body" id="bb-body-id">
+    <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false" data-bb-panel-default-page="users-list">
+        <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
+            <div class="bb-sidebar-header">
+                <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
+                    <span class="bb-panel-brand-text">Bulbulustur</span>
+                </a>
+                <button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet">
+                    <span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span>
+                </button>
+                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Close Menu">
+                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                </button>
+            </div>
+            <div class="bb-sidebar-body">
+                <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
+                    <div class="bb-menu-section">DASHBOARDS</div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+                            </span>
+                            <span class="bb-menu-title">Dashboard</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_dashboard">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="dashboard.html" data-bb-panel-page="dashboard-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=dashboard-analytics" data-bb-panel-page="dashboard-analytics">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Analitics</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-section">PAGES</div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                            </span>
+                            <span class="bb-menu-title">User Profile</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile.html" data-bb-panel-page="profile-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile-projects.html" data-bb-panel-page="profile-projects">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Projects</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile-campaigns.html" data-bb-panel-page="profile-campaigns">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Campaigns</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile-documents.html" data-bb-panel-page="profile-documents">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Documents</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile-followers.html" data-bb-panel-page="profile-followers">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Followers</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile-activity.html" data-bb-panel-page="profile-activity">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Activity</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_account">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>
+                            </span>
+                            <span class="bb-menu-title">Manage Account</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_account">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="profile.html" data-bb-panel-page="account-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="account.html" data-bb-panel-page="account-settings">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Account Settings</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=account-security" data-bb-panel-page="account-security">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Security</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="invoices.html" data-bb-panel-page="account-billing">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Billing</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_authentication">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                            </span>
+                            <span class="bb-menu-title">Identity Verification</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_authentication">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item" data-bb-menu-trigger="click">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_corporate_layout">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Corporate Layout</span>
+                                        <span class="bb-menu-arrow" aria-hidden="true"></span>
+                                    </button>
+                                    <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_corporate_layout">
+                                        <div class="bb-menu-sub-content">
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="sign-in.html" data-bb-panel-page="auth-corporate-signin">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Login</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="sign-up.html" data-bb-panel-page="auth-corporate-signup">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Register</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="reset-password.html" data-bb-panel-page="auth-corporate-reset">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Reset Password</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bb-menu-item" data-bb-menu-trigger="click">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_general_layout">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Creative Düzen</span>
+                                        <span class="bb-menu-arrow" aria-hidden="true"></span>
+                                    </button>
+                                    <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_general_layout">
+                                        <div class="bb-menu-sub-content">
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="creative-sign-in.html" data-bb-panel-page="auth-creative-signin">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Login</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="creative-sign-up.html" data-bb-panel-page="auth-creative-signup">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Register</span>
+                                                </a>
+                                            </div>
+                                            <div class="bb-menu-item">
+                                                <a class="bb-menu-link" href="creative-reset-password.html" data-bb-panel-page="auth-creative-reset">
+                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                                    <span class="bb-menu-title">Reset Password</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_corporate">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">domain</span>
+                            </span>
+                            <span class="bb-menu-title">Kurumsal</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_corporate">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=corporate-about" data-bb-panel-page="corporate-about">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">About Us</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=corporate-contact" data-bb-panel-page="corporate-contact">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Contact</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="team.html" data-bb-panel-page="corporate-team">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Team</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_social">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+                            </span>
+                            <span class="bb-menu-title">Social</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_social">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="social-feed.html" data-bb-panel-page="social-feed">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Workflow</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=social-activity" data-bb-panel-page="social-activity">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Activity</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_blog">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">article</span>
+                            </span>
+                            <span class="bb-menu-title">Blog</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_blog">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="blog.html" data-bb-panel-page="blog-posts">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Blogs</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Yazı Details</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_faq">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">quiz</span>
+                            </span>
+                            <span class="bb-menu-title">Faq</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_faq">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=faq-overview" data-bb-panel-page="faq-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pricing">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">sell</span>
+                            </span>
+                            <span class="bb-menu-title">Pricing</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pricing.html" data-bb-panel-page="pricing-plans">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Planlar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_careers">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">work</span>
+                            </span>
+                            <span class="bb-menu-title">Carrer</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_careers">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=careers-open" data-bb-panel-page="careers-open">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Open Positions</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_utilities">
+                            <span class="bb-menu-icon">
+                                <span class="bb-empty-icon">
+                                    <span class="material-symbols-outlined" aria-hidden="true">construction</span>
+                                </span>
+                            </span>
+                            <span class="bb-menu-title">Helpcı Pages</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="404.html" data-bb-panel-page="utility-404">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">404</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="500.html" data-bb-panel-page="utility-500">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">500</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=utility-maintenance" data-bb-panel-page="utility-maintenance">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Maintenance</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_widgets">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">widgets</span>
+                            </span>
+                            <span class="bb-menu-title">Widgets</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_widgets">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="statistics.html" data-bb-panel-page="widgets-statistics">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Statiscitc</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="tabs.html" data-bb-panel-page="widgets-tables">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Tables</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="widget-lists.html" data-bb-panel-page="widgets-lists">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Lists</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="charts.html" data-bb-panel-page="widgets-charts">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Grafikler</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-section">APPLICATIONS</div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_projects">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
+                            </span>
+                            <span class="bb-menu-title">Projects</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_projects">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=projects-list" data-bb-panel-page="projects-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">List</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=projects-overview" data-bb-panel-page="projects-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="forms.html?page=projects-create" data-bb-panel-page="projects-create">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Create</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_ecommerce">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+                            </span>
+                            <span class="bb-menu-title">e-Ticaret</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_ecommerce">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Products</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="create-product.html">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Product Create</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=ecommerce-categories" data-bb-panel-page="ecommerce-categories">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Categories</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="orders.html" data-bb-panel-page="ecommerce-orders">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Orders</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="order-details.html">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Order Detail</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=ecommerce-customers" data-bb-panel-page="ecommerce-customers">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Customers</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_contacts">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">contacts</span>
+                            </span>
+                            <span class="bb-menu-title">Contacts</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_contacts">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=contacts-list" data-bb-panel-page="contacts-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">List</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_support_center">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+                            </span>
+                            <span class="bb-menu-title">Support Center</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_support_center">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="support-center.html?tab=tickets" data-bb-panel-page="support-tickets">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Requests</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="support-center.html?tab=faq" data-bb-panel-page="support-faq">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Faq</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_management">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span>
+                            </span>
+                            <span class="bb-menu-title">User Management</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_management">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=users-list" data-bb-panel-page="users-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Users</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=users-roles" data-bb-panel-page="users-roles">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Roles</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Authorities</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_customers">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">group</span>
+                            </span>
+                            <span class="bb-menu-title">Customers</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_customers">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=customers-list" data-bb-panel-page="customers-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">List</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Detaillar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_subscription">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">subscriptions</span>
+                            </span>
+                            <span class="bb-menu-title">Subscription</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_subscription">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="subscription.html" data-bb-panel-page="subscription-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_invoice_manager">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
+                            </span>
+                            <span class="bb-menu-title">Invoice Yönetimi</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=invoice-list" data-bb-panel-page="invoice-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Invoices</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_file_manager">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">drive_folder_upload</span>
+                            </span>
+                            <span class="bb-menu-title">File Manager</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_file_manager">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=files-list" data-bb-panel-page="files-list">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Dosyalar</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_inbox">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">inbox</span>
+                            </span>
+                            <span class="bb-menu-title">Gelen Kutusu</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_inbox">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Messges</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_chat">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                            </span>
+                            <span class="bb-menu-title">Sohbet</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_chat">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=chat-conversations" data-bb-panel-page="chat-conversations">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Chats</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_calendar">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
+                            </span>
+                            <span class="bb-menu-title">Calendar</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=calendar-overview" data-bb-panel-page="calendar-overview">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Overview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-menu-section">LAYOUTS</div>
+                    <div class="bb-menu-item" data-bb-menu-trigger="click">
+                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_layouts">
+                            <span class="bb-menu-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">view_quilt</span>
+                            </span>
+                            <span class="bb-menu-title">Layouts</span>
+                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                        </button>
+                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_layouts">
+                            <div class="bb-menu-sub-content">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=layout-sidebar" data-bb-panel-page="layout-sidebar">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Side Bar</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=layout-header" data-bb-panel-page="layout-header">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Top Menu</span>
+                                    </a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="pages.html?page=layout-auth" data-bb-panel-page="layout-auth">
+                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
+                                        <span class="bb-menu-title">Identity Verification</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="bb-sidebar-footer">
+                <div class="bb-panel-overlay-host bb-panel-sidebar-account" data-bb-panel-popup>
+                    <button class="bb-panel-sidebar-account-toggle" type="button" data-bb-panel-popup-toggle aria-controls="bb_sidebar_account_pop" aria-haspopup="true" aria-expanded="false" aria-label="Hesap ve çalışma alanı menüsü">
+                        <span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span>
+                        <span class="bb-panel-sidebar-account-text"><strong>Bulbulustur</strong><small>Demo User</small></span>
+                        <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span>
+                    </button>
+                    <div id="bb_sidebar_account_pop" class="bb-panel-popover bb-panel-user-menu bb-panel-sidebar-account-menu" data-bb-panel-popup-content hidden>
+                        <div class="bb-panel-user-summary">
+                            <span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span>
+                            <span class="bb-panel-user-info">
+                                <span class="bb-panel-user-name">Bulbulustur Çalışma Alanı</span><small>1 üye · Mağaza planı</small>
+                            </span>
+                        </div>
+                        <div class="bb-panel-user-section">Uygulamalar</div>
+                        <div class="bb-panel-user-group">
+                            <a class="bb-panel-user-item" href="posb.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span>PosB</span>
+                                <span class="bb-panel-user-meta">POS kiralama</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="draugr.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">language</span>Draugr</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="../components/menu.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Components</span>
+                            </a>
+                        </div>
+                        <div class="bb-panel-user-section">demo@example.com</div>
+                        <div class="bb-panel-user-group">
+                            <a class="bb-panel-user-item" href="profile.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">account_circle</span>Profilim</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="account.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>Hesap ayarları</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="subscription.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>Aboneliklerim</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="support-center.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım ve destek</span>
+                            </a>
+                            <a class="bb-panel-user-item" href="sign-in.html">
+                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">logout</span>Çıkış yap</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close Menu" aria-hidden="true" tabindex="-1"></button>
+
+        <div class="bb-shell">
+            <header class="bb-shell-header">
+                <div class="bb-shell-header-inner">
+                    <div class="bb-shell-header-left">
+                        <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Menüyü aç">
+                            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                        </button>
+
+                        <nav class="bb-panel-topnav" data-bb-panel-topnav aria-label="Üst navigasyon">
+                            <div class="bb-menu bb-menu-hover-bg bb-menu-active-bg">
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
+                                </div>
+                                <div class="bb-menu-item" data-bb-menu-trigger="click">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
+                                        Pages <span class="bb-menu-arrow"></span>
+                                    </button>
+                                    <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
+                                        <div class="bb-menu-item">
+                                            <a class="bb-menu-link" href="profile.html">Profil</a>
+                                        </div>
+                                        <div class="bb-menu-item">
+                                            <a class="bb-menu-link" href="account.html">Manage Account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bb-menu-item" data-bb-menu-trigger="click">
+                                    <button class="bb-menu-link" type="button" aria-expanded="false">
+                                        Applications <span class="bb-menu-arrow"></span>
+                                    </button>
+                                    <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
+                                        <div class="bb-menu-item">
+                                            <a class="bb-menu-link" href="../components/forms.html">Forms</a>
+                                        </div>
+                                        <div class="bb-menu-item">
+                                            <a class="bb-menu-link" href="../components/tables.html">Tables</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="layouts.html">Layouts</a>
+                                </div>
+                                <div class="bb-menu-item">
+                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="bb-shell-header-right bb-panel-header-actions">
+                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
+                                <span class="material-symbols-outlined">search</span>
+                            </button>
+<div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <label class="form-label" for="bb_search">Hızlı arama</label>
+                                <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
+                            </div>
+                        </div>
+                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
+                                <span class="material-symbols-outlined">notifications</span>
+                                <span class="bb-panel-indicator"></span>
+                            </button>
+<div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: New sipariş alındı · Sistem güncellemesi tamamlandı.</p>
+                            </div>
+                        </div>
+                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
+                                <span class="material-symbols-outlined">chat</span>
+                            </button>
+<div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: New destek talebiniz var.</p>
+                            </div>
+                        </div>
+                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
+                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
+                                <span class="material-symbols-outlined">apps</span>
+                            </button>
+<div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
+                                <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
+                                <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
+                                <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
+                            </div>
+                        </div>
+                        <button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Temayı değiştir">
+                            <span class="material-symbols-outlined">contrast</span>
+                        </button>
+                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
+                            <button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="User menüsü">
+                                <span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt="Örnek kullanıcı"></span>
+                            </button>
+                            <div id="bb_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>
+                                <div class="bb-panel-user-summary">
+                                    <span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt=""></span>
+                                    <span class="bb-panel-user-info">
+                                        <span class="bb-panel-user-name">
+                                            Demo User <span class="bb-badge bb-badge-success">Demo</span>
+                                        </span><small>demo@example.com</small>
+                                    </span>
+                                </div>
+                                <div class="bb-panel-user-group">
+                                    <a class="bb-panel-user-item" href="profile.html">
+                                        <span>My Profile</span>
+                                    </a>
+                                    <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
+                                        <span>Projects</span>
+                                        <span class="bb-panel-user-meta">Yakında</span>
+                                    </button>
+                                    <button class="bb-panel-user-item" type="button" disabled title="Subscription demo sayfası henüz hazırlanmadı">
+                                        <span>My Subscriptions</span>
+                                        <span class="bb-panel-user-meta">
+                                            <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                                        </span>
+                                    </button>
+                                    <a class="bb-panel-user-item" href="invoices.html">
+                                        <span>Orders</span>
+                                    </a>
+                                </div>
+                                <div class="bb-panel-user-group">
+                                    <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
+                                        <span>View Mode</span>
+                                        <span class="bb-panel-user-meta">
+                                            <span data-bb-panel-user-mode-text>Koyu</span>
+                                            <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
+                                        </span>
+                                    </button>
+                                    <div class="bb-panel-user-item">
+                                        <span>Languages</span>
+                                        <span class="bb-panel-user-meta">Türkçe (demo)</span>
+                                    </div>
+                                    <a class="bb-panel-user-item" href="account.html">
+                                        <span>Manage Account ayarları</span>
+                                    </a>
+                                    <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
+                                        <span>Logout</span>
+                                        <span class="bb-panel-user-meta">Demo</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--::Main-->
+            <main class="bb-main">
+                <!--::Wrapper-->
+                <div class="bb-wrapper">
+                    <div class="bb-container">
+                        <div class="bb-toolbar">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-toolbar-row">
+                                    <div class="bb-toolbar-col-left">
+                                        <h1 class="bb-page-title">Kullanıcılar</h1>
+                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
+                                            <ol class="breadcrumb mb-0">
+                                                <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
+                                                <li class="breadcrumb-item">Kullanıcı Yönetimi</li>
+                                                <li class="breadcrumb-item active" aria-current="page">Kullanıcılar</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
+                                        <button class="btn bb-btn-secondary" type="button" aria-controls="bb_users_filters" aria-expanded="false" data-bb-users-filter-toggle>
+                                            <span class="material-symbols-outlined" aria-hidden="true">filter_alt</span> Filtrele
+                                        </button>
+                                        <button class="btn btn-primary" type="button" data-bb-users-create>
+                                            <span class="material-symbols-outlined" aria-hidden="true">person_add</span> Kullanıcı ekle
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--::Content-->
+                        <section class="bb-content bb-users-page" data-bb-users-list aria-label="Kullanıcı yönetimi">
+                            <div class="bb-panel-content-container">
+                                <div class="bb-users-layout">
+                                    <!--::User list-->
+                                    <div class="bb-users-main">
+                                        <section class="bb-card bb-card-bordered" aria-labelledby="bb_users_title">
+                                            <div class="bb-card-header bb-users-intro">
+                                                <div>
+                                                    <h2 class="bb-card-title" id="bb_users_title">Kullanıcılar</h2>
+                                                    <small data-bb-users-total>12 kullanıcı</small>
+                                                </div>
+                                                <div class="bb-users-tools">
+                                                    <button type="button" class="btn bb-btn-secondary btn-sm" data-bb-users-export>
+                                                        <span class="material-symbols-outlined" aria-hidden="true">ios_share</span> CSV dışa aktar
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary btn-sm" data-bb-users-create>
+                                                        <span class="material-symbols-outlined" aria-hidden="true">add</span> Yeni kullanıcı
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="bb-card-body">
+                                                <div class="bb-users-tools">
+                                                    <label class="visually-hidden" for="bb_users_search">Kullanıcı ara</label>
+                                                    <input class="form-control bb-users-search" type="search" id="bb_users_search" placeholder="Ad, e-posta, ekip veya rol ara" autocomplete="off" data-bb-users-search>
+                                                    <label class="visually-hidden" for="bb_users_size">Sayfa başına kayıt</label>
+                                                    <select class="form-select" id="bb_users_size" data-bb-users-size aria-label="Sayfa başına kayıt">
+                                                        <option value="5">5 kayıt</option>
+                                                        <option value="10" selected>10 kayıt</option>
+                                                        <option value="20">20 kayıt</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bb-users-filter-area" id="bb_users_filters" hidden>
+                                                    <div>
+                                                        <label class="form-label" for="bb_users_role">Rol</label>
+                                                        <select class="form-select" id="bb_users_role" data-bb-users-role>
+                                                            <option value="">Tüm roller</option>
+                                                            <option value="Yönetici">Yönetici</option>
+                                                            <option value="Geliştirici">Geliştirici</option>
+                                                            <option value="Analist">Analist</option>
+                                                            <option value="Destek">Destek</option>
+                                                            <option value="Deneme">Deneme</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-label" for="bb_users_status">Durum</label>
+                                                        <select class="form-select" id="bb_users_status" data-bb-users-status>
+                                                            <option value="">Tüm durumlar</option>
+                                                            <option value="Aktif">Aktif</option>
+                                                            <option value="Davetli">Davetli</option>
+                                                            <option value="Askıda">Askıda</option>
+                                                        </select>
+                                                    </div>
+                                                    <button class="btn bb-btn-secondary" type="button" data-bb-users-reset>Filtreleri temizle</button>
+                                                </div>
+                                                <div class="bb-users-tools mt-3 mb-3">
+                                                    <span class="bb-users-muted" data-bb-users-selected-count>0 seçili</span>
+                                                    <button type="button" class="btn bb-btn-secondary btn-sm" data-bb-users-bulk disabled>Seçilenleri askıya al (demo)</button>
+                                                </div>
+                                                <div class="bb-users-table-wrap">
+                                                    <table class="table bb-table table-hover bb-users-table">
+                                                        <caption class="visually-hidden">Kullanıcı listesi, roller ve kimlik doğrulama durumları</caption>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col"><input class="form-check-input" type="checkbox" aria-label="Bu sayfadaki kullanıcıları seç" data-bb-users-select-all></th>
+                                                                <th scope="col" aria-sort="none"><button type="button" class="bb-users-sort" data-bb-users-sort="name">Kullanıcı <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button></th>
+                                                                <th scope="col" aria-sort="none"><button type="button" class="bb-users-sort" data-bb-users-sort="role">Rol <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button></th>
+                                                                <th scope="col" aria-sort="none"><button type="button" class="bb-users-sort" data-bb-users-sort="team">Ekip <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button></th>
+                                                                <th scope="col" aria-sort="none"><button type="button" class="bb-users-sort" data-bb-users-sort="status">Durum <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button></th>
+                                                                <th scope="col">Doğrulama</th>
+                                                                <th scope="col">Son etkinlik</th>
+                                                                <th scope="col">İşlemler</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody data-bb-users-rows></tbody>
+                                                    </table>
+                                                </div>
+                                                <p class="bb-users-muted bb-users-empty" data-bb-users-empty hidden>Arama kriterlerinize uygun kullanıcı bulunamadı.</p>
+                                                <div class="bb-users-bottom">
+                                                    <span class="bb-users-muted" data-bb-users-range>0–0 / 0</span>
+                                                    <nav class="bb-pagination" aria-label="Kullanıcı sayfaları"><ul class="pagination" data-bb-users-pages></ul></nav>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!--/::User list-->
+                                    <!--::Right menu-->
+                                    <aside class="bb-users-aside" aria-label="Kullanıcı yönetimi menüsü">
+                                        <nav class="bb-card bb-card-bordered" aria-labelledby="bb_users_nav_title">
+                                            <div class="bb-card-header"><h2 class="bb-card-title" id="bb_users_nav_title">Kullanıcı Yönetimi</h2></div>
+                                            <div class="bb-card-body">
+                                                <a class="bb-users-nav-link" href="users.html" aria-current="page"><span class="material-symbols-outlined" aria-hidden="true">group</span> Kullanıcılar</a>
+                                                <a class="bb-users-nav-link" href="roles.html"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span> Roller</a>
+                                                <a class="bb-users-nav-link" href="permissions.html"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span> Yetkiler</a>
+                                            </div>
+                                        </nav>
+                                        <div class="bb-card bb-card-bordered">
+                                            <div class="bb-card-header"><h2 class="bb-card-title">Erişim ve güvenlik</h2></div>
+                                            <div class="bb-card-body">
+                                                <p class="bb-users-muted mb-2">Kimlik doğrulama, etkin oturumlar ve erişim geçmişini kullanıcı detayından görüntüleyebilirsiniz.</p>
+                                                <a class="btn bb-btn-secondary" href="user-details.html?id=11">Örnek kullanıcı detayı</a>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                    <!--/::Right menu-->
+                                </div>
+                                <p class="bb-users-feedback" role="status" aria-live="polite" data-bb-users-feedback>Bu ekran temsili kullanıcılarla çalışır; işlemler sunucuya kaydedilmez.</p>
+                            </div>
+                        </section>
+                        <!--/::Content-->
+                    </div>
+                </div>
+            </main>
+            <!--/::Main-->
+            <!--::Footer-->
+            <footer class="bb-shell-footer bb-footer">
+                <div class="bb-footer-bar">
+                    <div class="bb-footer-inner">
+                        <div class="bb-footer-left">
+                            <span>2026 ©</span>
+                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
+                        </div>
+                        <nav class="bb-footer-right" aria-label="Sub Links">
+                            <a class="bb-footer-link" href="../components/cards.html">Components</a>
+                            <a class="bb-footer-link" href="../components/menu.html">Menus</a>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+            <!--/::Footer-->
+        </div>
+    </div>
+    <!--::Modals-->
+    <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Filtre içeriği Faz 9 kapsamında hazırlanacaktır.</div>
+            </div>
+        </div>
+    </div>
+
+    <!--::Users demo dialog-->
+    <dialog class="bb-showcase-dialog bb-users-dialog" data-bb-users-create-dialog aria-labelledby="bb_users_dialog_title">
+        <form>
+            <h2 id="bb_users_dialog_title" class="bb-card-title">Örnek kullanıcı ekle</h2>
+            <label class="form-label" for="bb_users_new_name">Ad soyad</label>
+            <input class="form-control" type="text" name="name" id="bb_users_new_name" required maxlength="100">
+            <label class="form-label" for="bb_users_new_email">E-posta</label>
+            <input class="form-control" type="email" name="email" id="bb_users_new_email" required maxlength="150">
+            <label class="form-label" for="bb_users_new_role">Rol</label>
+            <select class="form-select" name="role" id="bb_users_new_role">
+                <option value="Analist">Analist</option><option value="Yönetici">Yönetici</option><option value="Geliştirici">Geliştirici</option><option value="Destek">Destek</option>
+            </select>
+            <label class="form-label" for="bb_users_new_team">Ekip</label>
+            <select class="form-select" name="team" id="bb_users_new_team">
+                <option value="Mühendislik">Mühendislik</option><option value="Pazarlama">Pazarlama</option><option value="Tasarım">Tasarım</option><option value="Destek">Destek</option><option value="Ürün">Ürün</option>
+            </select>
+            <p class="bb-users-muted">Yalnızca demo listeye eklenir; gerçek davet gönderilmez.</p>
+            <div class="bb-users-dialog-actions">
+                <button class="btn bb-btn-secondary" type="button" data-bb-users-cancel>Vazgeç</button>
+                <button class="btn btn-primary" type="submit">Listeye ekle</button>
+            </div>
+        </form>
+    </dialog>
+    <!--/::Users demo dialog-->
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/panel/bb-panel.js"></script>
+    <script src="../../assets/js/panel/bb-panel-theme.js"></script>
+    <script src="../../assets/js/panel/bb-panel-menu.js"></script>
+    <script src="../../assets/js/panel/bb-panel-header.js"></script>
+    <script src="../../assets/js/panel/bb-panel-user.js"></script>
+    <script src="../../assets/js/panel/bb-panel-pages.js"></script>
+    <script src="../../assets/js/panel/bb-panel-users.js"></script>
+    <!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>
