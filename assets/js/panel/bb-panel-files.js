@@ -408,7 +408,7 @@
     dialog.querySelectorAll("[data-bb-files-dialog-close]").forEach(button =>
       button.addEventListener("click",() => dialog.close()));
   }
-  $("[data-bb-files-create-folder]").addEventListener("click",() => {
+  document.querySelector("[data-bb-files-create-folder]").addEventListener("click",() => {
     $("[data-bb-files-folder-name]").value = "";
     $("[data-bb-files-new-folder-dialog]").showModal();
   });
