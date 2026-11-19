@@ -109,10 +109,18 @@
     text-decoration: none;
 }
 
-.bb-web-header-logo img {
+.bb-web-header-logo-mark {
     display: block;
-    width: auto;
+    width: 11rem;
     height: var(--bb-web-header-logo-height);
+    background-image: url("/assets/logo-black.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+
+html[data-bs-theme="dark"] .bb-web-header-logo-mark {
+    background-image: url("/assets/logo-white.png");
 }
 
 /* =====================================
@@ -555,25 +563,6 @@ body.bb-web-sidebar-open {
     text-decoration: none;
 }
 
-.bb-web-header-logo-img {
-    display: block;
-    width: auto;
-    height: 2.25rem;
-    object-fit: contain;
-}
-
-.bb-web-header-logo-img-dark {
-    display: none;
-}
-
-html[data-bs-theme="dark"] .bb-web-header-logo-img-light {
-    display: none;
-}
-
-html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
-    display: block;
-}
-
 /* =====================================
    Responsive
 ===================================== */
@@ -587,7 +576,8 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
         gap: 1.125rem;
     }
 
-    .bb-web-header-logo img {
+    .bb-web-header-logo-mark {
+        width: 10.5rem;
         height: 38px;
     }
 
@@ -627,7 +617,8 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
         gap: 0;
     }
 
-    .bb-web-header-logo img {
+    .bb-web-header-logo-mark {
+        width: 10rem;
         height: 36px;
     }
 
@@ -650,7 +641,8 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
         gap: 12px;
     }
 
-    .bb-web-header-logo img {
+    .bb-web-header-logo-mark {
+        width: 9.5rem;
         height: 34px;
     }
 
@@ -674,7 +666,8 @@ html[data-bs-theme="dark"] .bb-web-header-logo-img-dark {
         gap: 0.5rem;
     }
 
-    .bb-web-header-logo img {
+    .bb-web-header-logo-mark {
+        width: 9rem;
         height: 32px;
     }
 
