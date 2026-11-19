@@ -19711,6 +19711,374 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     border: 0;
   }
 }
+/* User Management — panel composition, built from core cards, table, forms, badges and symbols. */
+.bb-panel .bb-users-page .bb-panel-content-container {
+  display: grid;
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-users-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(calc(var(--bb-space-4) * 12), 0.28fr);
+  align-items: start;
+  gap: var(--bb-space-4);
+}
+
+.bb-panel .bb-users-main,
+.bb-panel .bb-users-aside {
+  min-width: 0;
+}
+
+.bb-panel .bb-users-aside {
+  display: grid;
+  gap: var(--bb-space-4);
+  position: sticky;
+  top: var(--bb-space-4);
+}
+
+.bb-panel .bb-users-aside .bb-card-body {
+  display: grid;
+  gap: var(--bb-space-1);
+}
+
+.bb-panel .bb-users-nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-3);
+  color: var(--bb-body-color);
+  border-radius: var(--bb-radius);
+  text-decoration: none;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+}
+
+.bb-panel .bb-users-nav-link .material-symbols-outlined {
+  color: var(--bb-secondary-color);
+}
+
+.bb-panel .bb-users-nav-link:hover,
+.bb-panel .bb-users-nav-link[aria-current=page],
+.bb-panel .bb-users-nav-link[aria-current=location] {
+  background: var(--bb-primary-light);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-users-nav-link:hover .material-symbols-outlined,
+.bb-panel .bb-users-nav-link[aria-current] .material-symbols-outlined {
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-users-nav-link:focus-visible,
+.bb-panel .bb-users-actions summary:focus-visible,
+.bb-panel .bb-users-actions-menu a:focus-visible,
+.bb-panel .bb-users-actions-menu button:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
+  outline-offset: var(--bb-focus-ring-width);
+}
+
+.bb-panel .bb-users-intro {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bb-panel .bb-users-muted,
+.bb-panel .bb-users-intro small,
+.bb-panel .bb-users-person-copy small,
+.bb-panel .bb-users-security-copy small {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-users-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  flex-wrap: wrap;
+}
+
+.bb-panel .bb-users-search {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.bb-panel .bb-users-filter-area {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+  align-items: end;
+  margin-top: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-filter-area[hidden],
+.bb-panel .bb-users-empty[hidden] {
+  display: none;
+}
+
+.bb-panel .bb-users-table-wrap {
+  overflow: auto;
+}
+
+.bb-panel .bb-users-table {
+  width: 100%;
+  min-width: calc(var(--bb-space-4) * 55);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.bb-panel .bb-users-table th {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+}
+
+.bb-panel .bb-users-table th,
+.bb-panel .bb-users-table td {
+  padding: var(--bb-space-3);
+  border-bottom: var(--bb-border-width) dashed var(--bb-border-color);
+}
+
+.bb-panel .bb-users-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.bb-panel .bb-users-table .bb-users-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-1);
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.bb-panel .bb-users-table .bb-users-sort .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+}
+
+.bb-panel .bb-users-person {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-person-copy {
+  display: grid;
+  min-width: 0;
+  gap: var(--bb-space-1);
+}
+
+.bb-panel .bb-users-person-name {
+  color: var(--bb-heading-color);
+  font-weight: var(--bb-fw-semibold);
+  text-decoration: none;
+}
+
+.bb-panel .bb-users-person-name:hover {
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-users-team,
+.bb-panel .bb-users-auth {
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-body-color);
+  background: var(--bb-tertiary-bg);
+  border-radius: var(--bb-radius-sm);
+  padding: var(--bb-space-1) var(--bb-space-2);
+}
+
+.bb-panel .bb-users-actions {
+  position: relative;
+}
+
+.bb-panel .bb-users-actions summary {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.bb-panel .bb-users-actions summary::-webkit-details-marker {
+  display: none;
+}
+
+.bb-panel .bb-users-actions-menu {
+  position: absolute;
+  z-index: 5;
+  inset-inline-end: 0;
+  top: 100%;
+  min-width: calc(var(--bb-space-4) * 12);
+  display: grid;
+  gap: var(--bb-space-1);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  box-shadow: var(--bb-shadow-sm);
+  background: var(--bb-surface-bg);
+  padding: var(--bb-space-2);
+}
+
+.bb-panel .bb-users-actions-menu a,
+.bb-panel .bb-users-actions-menu button {
+  display: block;
+  border: 0;
+  width: 100%;
+  text-align: start;
+  border-radius: var(--bb-radius-sm);
+  padding: var(--bb-space-2);
+  color: var(--bb-body-color);
+  background: transparent;
+  text-decoration: none;
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-panel .bb-users-actions-menu a:hover,
+.bb-panel .bb-users-actions-menu button:hover {
+  background: var(--bb-tertiary-bg);
+}
+
+.bb-panel .bb-users-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--bb-space-3);
+  padding-top: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-bottom .bb-pagination .pagination {
+  margin: 0;
+}
+
+.bb-panel .bb-users-feedback {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  margin: 0;
+}
+
+.bb-panel .bb-users-profile-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-profile-head h2 {
+  color: var(--bb-heading-color);
+  font-size: var(--bb-h3);
+  font-weight: var(--bb-fw-semibold);
+  margin: 0;
+}
+
+.bb-panel .bb-users-profile-meta {
+  display: grid;
+  gap: var(--bb-space-1);
+  min-width: 0;
+}
+
+.bb-panel .bb-users-profile-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.bb-panel .bb-users-section {
+  scroll-margin-top: var(--bb-space-4);
+}
+
+.bb-panel .bb-users-section + .bb-users-section {
+  margin-top: var(--bb-space-4);
+}
+
+.bb-panel .bb-users-security-list {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.bb-panel .bb-users-security-list > li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--bb-space-4);
+  align-items: center;
+  padding: var(--bb-space-3) 0;
+  border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-panel .bb-users-security-list > li:last-child {
+  border-bottom: 0;
+}
+
+.bb-panel .bb-users-security-copy {
+  display: grid;
+  gap: var(--bb-space-1);
+}
+
+.bb-panel .bb-users-security-copy strong {
+  color: var(--bb-heading-color);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-users-section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--bb-space-2);
+  margin-top: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-danger {
+  border-color: var(--bb-danger);
+}
+
+.bb-panel .bb-users-danger .bb-card-title {
+  color: var(--bb-danger-text);
+}
+
+.bb-panel .bb-users-dialog {
+  max-width: calc(var(--bb-space-4) * 30);
+}
+
+.bb-panel .bb-users-dialog form {
+  display: grid;
+  gap: var(--bb-space-3);
+}
+
+.bb-panel .bb-users-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--bb-space-2);
+}
+
+@media (max-width: 991.98px) {
+  .bb-panel .bb-users-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bb-panel .bb-users-aside {
+    position: static;
+    grid-row: 1;
+  }
+  .bb-panel .bb-users-aside .bb-card-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-panel .bb-users-filter-area {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bb-panel .bb-users-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
 /* =====================================
    Bundle Layer — Core Components Head
    Early core components kept before panel compositions.
