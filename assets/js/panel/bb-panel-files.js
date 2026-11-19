@@ -454,7 +454,7 @@
       notify("Bağlantıyı seçip kopyalayabilirsiniz. Örnek bağlantı gerçek erişim sağlamaz.");
     }
   });
-  $("[data-bb-files-upload-open]").addEventListener("click",() => {
+  document.querySelector("[data-bb-files-upload-open]").addEventListener("click",() => {
     droppedFiles = [];renderQueue();$("[data-bb-files-upload-dialog]").showModal();
   });
   const uploadField = $("[data-bb-files-upload-input]");
