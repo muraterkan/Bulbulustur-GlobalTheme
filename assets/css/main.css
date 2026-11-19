@@ -30150,19 +30150,19 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-status-history-kind.incident {
   --bb-chip-bg: var(--bb-danger-light);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-status-history-kind.maintenance {
   --bb-chip-bg: var(--bb-info-light);
-  --bb-chip-color: var(--bb-info);
+  --bb-chip-color: var(--bb-info-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-status-history-kind.warning {
   --bb-chip-bg: var(--bb-warning-light);
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
   --bb-chip-border-color: transparent;
 }
 
@@ -30208,19 +30208,19 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-status-history-state.resolved,
 .bb-status-history-state.completed {
   --bb-chip-bg: var(--bb-success-light);
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-status-history-state.monitoring {
   --bb-chip-bg: var(--bb-warning-light);
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
   --bb-chip-border-color: transparent;
 }
 
 .bb-status-history-state.scheduled {
   --bb-chip-bg: var(--bb-info-light);
-  --bb-chip-color: var(--bb-info);
+  --bb-chip-color: var(--bb-info-text);
   --bb-chip-border-color: transparent;
 }
 
@@ -30447,7 +30447,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-status-incident-badge.outage {
   --bb-chip-bg: var(--bb-danger-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
 }
 
 .bb-status-incident-badge .material-symbols-outlined {
@@ -30643,19 +30643,19 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-status-timeline-state.resolved {
   --bb-chip-bg: var(--bb-success-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-success) 25%, transparent);
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
 }
 
 .bb-status-timeline-state.monitoring {
   --bb-chip-bg: var(--bb-warning-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-warning) 35%, transparent);
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
 }
 
 .bb-status-timeline-state.identified {
   --bb-chip-bg: var(--bb-danger-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
 }
 
 .bb-status-timeline-state.update {
@@ -31633,7 +31633,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 
 .bb-status-component-section-label {
   --bb-chip-bg: var(--bb-success-light);
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
   --bb-chip-border-color: transparent;
   --bb-chip-padding-x: .65rem;
   --bb-chip-padding-y: 0.25rem;
@@ -36138,7 +36138,7 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   --bb-breadcrumb-font-size: var(--bb-fs-sm);
   --bb-breadcrumb-color: var(--bb-secondary-color);
   --bb-breadcrumb-active-color: var(--bb-heading-color);
-  --bb-breadcrumb-link-hover-color: var(--bb-primary);
+  --bb-breadcrumb-link-hover-color: var(--bb-primary-text);
 }
 
 .bb-hero-breadcrumb::-webkit-scrollbar {
