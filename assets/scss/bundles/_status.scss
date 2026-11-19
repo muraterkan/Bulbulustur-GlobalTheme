@@ -1,0 +1,14 @@
+/* =====================================
+   Bundle Layer — Status
+   Status application styles only.
+===================================== */
+
+/* 7. Status Pages */
+/* Status projesinin genel token, shell, header, footer, card, border, radius ve layout varsayılanları burada. */
+@use "../layout/status/project";
+@use "../layout/status/index";
+@use "../layout/status/history";
+@use "../layout/status/incident";
+@use "../layout/status/subscribe";
+@use "../layout/status/component";
+@use "../layout/status/overrides";

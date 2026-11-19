@@ -1,0 +1,10 @@
+/* =====================================
+   Bulbulustur Theme — Web Bundle
+   Core + Bulbulustur Web only.
+===================================== */
+
+@use "bundles/core-foundation";
+@use "bundles/core-components-head";
+@use "bundles/core-components-tail";
+@use "bundles/web";
+@use "bundles/core-final";

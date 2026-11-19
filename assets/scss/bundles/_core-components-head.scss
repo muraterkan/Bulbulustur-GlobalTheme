@@ -1,0 +1,11 @@
+/* =====================================
+   Bundle Layer — Core Components Head
+   Early core components kept before panel compositions.
+===================================== */
+
+/* 5. Components */
+// CORE COMPONENTS: reusable outside the panel template.
+@use "../components/buttons";
+@use "../components/cards";
+@use "../components/modals";
+@use "../components/tables";         // CORE: reusable rich table patterns

@@ -1,0 +1,8 @@
+/* =====================================
+   Bundle Layer — Core Final
+   Final core guards that must compile after application layers.
+===================================== */
+
+/* 6. Final Overrides */
+/* Bootstrap ve page-level ezmelerden sonra form objelerini tekrar Main CSS standardına sabitler. */
+@use "../components/forms-final";

@@ -1,0 +1,49 @@
+/* =====================================
+   Bundle Layer — Panel Shell
+   Panel-only shell/page layouts.
+===================================== */
+
+// Optional layer. Core-only projects must exclude this block.
+// Keep import order stable: panel layouts currently compile before core components.
+// ==================================================
+@use "../layout/panel/theme-profile"; // panel/component neutral dark profile
+@use "../layout/panel/shell";         // panel template Faz 1: responsive shell
+@use "../layout/panel/sidebar" as panel-sidebar;       // panel template Faz 2: sidebar menüsü
+@use "../layout/panel/header" as panel-header;        // panel template Faz 3: topbar
+@use "../layout/panel/user";          // panel template Faz 4: user panels
+@use "../layout/panel/toolbar" as panel-toolbar;       // panel template Faz 5: toolbar
+@use "../layout/panel/variants";      // panel template Faz 6: layout variants
+@use "../layout/panel/pages";         // panel template Faz 7: empty page navigation
+@use "../layout/panel/dashboard-kpi";  // panel dashboard widget 1
+@use "../layout/panel/dashboard-donut";  // panel dashboard widget 2
+@use "../layout/panel/dashboard-calendar";  // panel dashboard widget 3
+@use "../layout/panel/dashboard-table";  // panel dashboard widget 4
+@use "../layout/panel/dashboard-timeline";  // panel dashboard widget 5
+@use "../layout/panel/dashboard-promo";  // panel dashboard widget 6
+@use "../layout/panel/pos-system";       // PosB quick sale
+@use "../layout/panel/posb";             // PosB channel dashboard and definitions
+@use "../layout/panel/integrations";      // Integration Center catalog
+@use "../layout/panel/channel-registry";  // Channel Registry dashboard
+@use "../layout/panel/about";             // Ecosystem about page
+@use "../layout/panel/service-product";   // Legacy service landing styles
+@use "../layout/panel/public-pages";      // Public-facing editorial pages
+@use "../layout/panel/draugr";            // Draugr SaaS channel management
+@use "../layout/panel/list";           // Faz 9 tablo/listeler
+@use "../layout/panel/form";           // Faz 10 stepper, dosya alanı
+@use "../layout/panel/auth";           // Faz 11 auth ve hata sayfaları
+@use "../layout/panel/account";        // Faz 12 profil hesap ve fatura
+@use "../layout/panel/footer" as panel-footer;         // Panel footer and scroll-to-top
+@use "../layout/panel/messages";       // panel chat drawer
+@use "../layout/panel/chat";           // full chat conversations page
+@use "../layout/panel/support";        // support center
+@use "../layout/panel/updates";        // changelog / updates center
+@use "../layout/panel/subscription";   // subscription details
+@use "../layout/panel/blog";           // blog home and listing
+@use "../layout/panel/product";        // product editor
+@use "../layout/panel/order";          // order details
+@use "../layout/panel/pricing";        // plan pricing comparison
+@use "../layout/panel/social";         // social feed composition
+@use "../layout/panel/widget-lists";   // list widgets showcase
+@use "../layout/panel/orders";
+@use "../layout/panel/contacts";       // kişiler demo sayfası
+@use "../layout/panel/administration"; // roller, yetkiler, abonelik ve fatura detayları

@@ -1,0 +1,12 @@
+/* =====================================
+   Bundle Layer — Panel Compositions
+   Panel-only page/widget compositions.
+===================================== */
+
+// These files compose core cards/tables/progress/tokens for panel screens.
+// They are not reusable core components.
+// ==================================================
+@use "../layout/panel/charts";
+@use "../layout/panel/statistics";
+@use "../layout/panel/team";
+@use "../layout/panel/components";      // core component demos inside panel shell

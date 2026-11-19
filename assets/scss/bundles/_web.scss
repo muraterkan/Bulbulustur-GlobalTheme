@@ -1,0 +1,237 @@
+/* =====================================
+   Bundle Layer — Web
+   Bulbulustur Web application styles only.
+===================================== */
+
+/* 8. Web Bulbulustur Pages */
+/* Ana web projesinde hafif layout, auth/form ve ileride sayfa bazlı düzenler burada. */
+
+@use "../layout/web.bulbulustur.com/layout-light";
+
+/* Bulbulustur Home Page*/
+@use "../layout/web.bulbulustur.com/home";
+@use "../layout/web.bulbulustur.com/advert";
+
+/* Bulbulustur Pages*/
+@use "../layout/web.bulbulustur.com/web";
+@use "../layout/web.bulbulustur.com/web-page-showcase";
+@use "../layout/web.bulbulustur.com/web-page-hero";
+@use "../layout/web.bulbulustur.com/web-page-sections";
+@use "../layout/web.bulbulustur.com/web-error";
+@use "../layout/web.bulbulustur.com/web-header-top";
+@use "../layout/web.bulbulustur.com/web-header-account-dropdown";
+@use "../layout/web.bulbulustur.com/web-header";
+@use "../layout/web.bulbulustur.com/web-category-menu-top";
+@use "../layout/web.bulbulustur.com/web-mobile-category-menu";
+@use "../layout/web.bulbulustur.com/web-basket-dropdown";
+@use "../layout/web.bulbulustur.com/web-footer";
+@use "../layout/web.bulbulustur.com/web-language-dropdown";
+@use "../layout/web.bulbulustur.com/web-ask-seller-question";
+@use "../layout/web.bulbulustur.com/web-product-complaint";
+
+@use "../layout/web.bulbulustur.com/components/product-card";
+@use "../layout/web.bulbulustur.com/components/cookie-consent-banner";
+@use "../layout/web.bulbulustur.com/components/brand-product-featureds.scss";
+
+
+
+/* Bulbulustur Us Pages*/
+@use "../layout/web.bulbulustur.com/us-about";
+@use "../layout/web.bulbulustur.com/us-blog";
+@use "../layout/web.bulbulustur.com/us-blog-detail";
+@use "../layout/web.bulbulustur.com/us-service";
+@use "../layout/web.bulbulustur.com/us-news";
+@use "../layout/web.bulbulustur.com/us-news-all";
+@use "../layout/web.bulbulustur.com/us-news-detail.scss";
+@use "../layout/web.bulbulustur.com/us-ourteam";
+@use "../layout/web.bulbulustur.com/us-contact";
+@use "../layout/web.bulbulustur.com/us-ibans";
+@use "../layout/web.bulbulustur.com/us-story-detail";
+@use "../layout/web.bulbulustur.com/us-stories";
+@use "../layout/web.bulbulustur.com/us-community-topic";
+@use "../layout/web.bulbulustur.com/us-community";
+@use "../layout/web.bulbulustur.com/us-roadmap";
+@use "../layout/web.bulbulustur.com/us-investor-relation";
+@use "../layout/web.bulbulustur.com/us-about-company";
+@use "../layout/web.bulbulustur.com/us-draugr";
+@use "../layout/web.bulbulustur.com/us-whitepaper";
+@use "../layout/web.bulbulustur.com/us-career";
+@use "../layout/web.bulbulustur.com/us-career-job-apply";
+
+@use "../layout/web.bulbulustur.com/support-condition";
+@use "../layout/web.bulbulustur.com/brand";
+@use "../layout/web.bulbulustur.com/brand-detail";
+@use "../layout/web.bulbulustur.com/help";
+@use "../layout/web.bulbulustur.com/subscription-comparison";
+
+@use "../layout/web.bulbulustur.com/account" as web-account;
+@use "../layout/web.bulbulustur.com/account-profile";
+@use "../layout/web.bulbulustur.com/account-address";
+@use "../layout/web.bulbulustur.com/account-requests";
+@use "../layout/web.bulbulustur.com/account-ibans";
+@use "../layout/web.bulbulustur.com/account-change-mail";
+@use "../layout/web.bulbulustur.com/account-change-password";
+@use "../layout/web.bulbulustur.com/account-contact-preferences";
+@use "../layout/web.bulbulustur.com/account-login-activities";
+@use "../layout/web.bulbulustur.com/account-disable";
+@use "../layout/web.bulbulustur.com/account-favorites";
+@use "../layout/web.bulbulustur.com/account-followed-suppliers";
+@use "../layout/web.bulbulustur.com/account-rfq";
+@use "../layout/web.bulbulustur.com/account-alarms";
+@use "../layout/web.bulbulustur.com/account-reviews";
+@use "../layout/web.bulbulustur.com/account-followed-stores";
+@use "../layout/web.bulbulustur.com/account-coupons";
+@use "../layout/web.bulbulustur.com/account-company";
+@use "../layout/web.bulbulustur.com/account-subscription";
+@use "../layout/web.bulbulustur.com/account-rfq-detail";
+@use "../layout/web.bulbulustur.com/account-bank-account-form";
+@use "../layout/web.bulbulustur.com/account-subscription-detail";
+@use "../layout/web.bulbulustur.com/account-rfq-offers";
+@use "../layout/web.bulbulustur.com/account-b2b-status";
+@use "../layout/web.bulbulustur.com/account-recovery-email";
+@use "../layout/web.bulbulustur.com/account-phone-create";
+@use "../layout/web.bulbulustur.com/account-create-review";
+@use "../layout/web.bulbulustur.com/account-subscription-create";
+@use "../layout/web.bulbulustur.com/account-phone-verify";
+@use "../layout/web.bulbulustur.com/account-email-change-info";
+@use "../layout/web.bulbulustur.com/account-phones";
+@use "../layout/web.bulbulustur.com/account-store-access";
+@use "../layout/web.bulbulustur.com/account-complaints";
+
+@use "../layout/web.bulbulustur.com/message";
+@use "../layout/web.bulbulustur.com/basket";
+@use "../layout/web.bulbulustur.com/seller";
+
+
+@use "../layout/web.bulbulustur.com/rfq-create";
+
+/* - Web Bulbulustur Logon Pages */
+@use "../layout/web.bulbulustur.com/logon-login";
+@use "../layout/web.bulbulustur.com/logon-forgot-password";
+@use "../layout/web.bulbulustur.com/logon-firstdoor";
+@use "../layout/web.bulbulustur.com/logon-set-new-password";
+@use "../layout/web.bulbulustur.com/logon-register";
+
+
+@use "../layout/web.bulbulustur.com/web-cookie";
+@use "../layout/web.bulbulustur.com/web-sizeguide";
+@use "../layout/web.bulbulustur.com/web-questions";
+
+
+
+@use "../layout/web.bulbulustur.com/components/b2c-other-store-prices";
+@use "../layout/web.bulbulustur.com/components/banner";
+
+@use "../layout/web.bulbulustur.com/components/king-of-the-category-adverts";
+
+
+@use "../layout/web.bulbulustur.com/company-profile";
+@use "../layout/web.bulbulustur.com/company-home";
+@use "../layout/web.bulbulustur.com/company-form";
+@use "../layout/web.bulbulustur.com/company-index";
+@use "../layout/web.bulbulustur.com/company-products";
+@use "../layout/web.bulbulustur.com/company-contact";
+@use "../layout/web.bulbulustur.com/company-reviews";
+@use "../layout/web.bulbulustur.com/company-b2b-index";
+@use "../layout/web.bulbulustur.com/components/company-extended-informations";
+@use "../layout/web.bulbulustur.com/components/company-certificates";
+@use "../layout/web.bulbulustur.com/components/company-pictures";
+@use "../layout/web.bulbulustur.com/components/company-product-special-groups";
+@use "../layout/web.bulbulustur.com/components/company-cpages-product-specials";
+
+@use "../layout/web.bulbulustur.com/components/community-create";
+
+@use "../layout/web.bulbulustur.com/b2b-home";
+@use "../layout/web.bulbulustur.com/b2b-product-list";
+@use "../layout/web.bulbulustur.com/b2b-product-detail";
+@use "../layout/web.bulbulustur.com/b2b-special";
+@use "../layout/web.bulbulustur.com/b2b-category-page";
+@use "../layout/web.bulbulustur.com/b2b-history";
+@use "../layout/web.bulbulustur.com/b2b-last-price";
+@use "../layout/web.bulbulustur.com/b2b-sample-request";
+@use "../layout/web.bulbulustur.com/b2b-poduct-special";
+@use "../layout/web.bulbulustur.com/b2b-customize";
+@use "../layout/web.bulbulustur.com/b2b-featured-products";
+
+
+
+
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-slider";
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-vertical-spotlight";
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-featured-products";
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-content-groups";
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-stats";
+@use "../layout/web.bulbulustur.com/components/b2b-product-category-guide-cards";
+@use "../layout/web.bulbulustur.com/components/b2b-popular-product-categories";
+@use "../layout/web.bulbulustur.com/components/b2b-product-category-suppliers";
+@use "../layout/web.bulbulustur.com/components/b2b-homepage-banner-type2";
+@use "../layout/web.bulbulustur.com/components/b2b-product-category-content-groups";
+@use "../layout/web.bulbulustur.com/components/b2b-product-category-slider";
+@use "../layout/web.bulbulustur.com/components/b2b-customize-request";
+@use "../layout/web.bulbulustur.com/components/b2b-product-list-filters";
+@use "../layout/web.bulbulustur.com/components/b2b-browsing-history";
+@use "../layout/web.bulbulustur.com/components/b2b-related-category-links";
+@use "../layout/web.bulbulustur.com/components/b2b-product-relateds";
+@use "../layout/web.bulbulustur.com/components/b2c-product-category-slider";
+@use "../layout/web.bulbulustur.com/components/b2c-product-question-preview";
+
+
+/* Bulbulustur B2C Pages */
+
+@use "../layout/web.bulbulustur.com/b2c-product-index";
+@use "../layout/web.bulbulustur.com/b2c-product-details";
+@use "../layout/web.bulbulustur.com/b2c-history";
+@use "../layout/web.bulbulustur.com/b2c-product-category-deals-of-the-day";
+@use "../layout/web.bulbulustur.com/b2c-sponsored-adverts";
+
+@use "../layout/web.bulbulustur.com/b2c-search";
+@use "../layout/web.bulbulustur.com/b2c-deals";
+@use "../layout/web.bulbulustur.com/b2c-product-category-contents";
+@use "../layout/web.bulbulustur.com/b2c-category-brands";
+@use "../layout/web.bulbulustur.com/b2c-homepage-banner-type2";
+@use "../layout/web.bulbulustur.com/b2c-product-category-page";
+@use "../layout/web.bulbulustur.com/b2c-popular-product-categories-grid";
+@use "../layout/web.bulbulustur.com/b2c-sponsored-highlights";
+@use "../layout/web.bulbulustur.com/b2c-other-store-price";
+@use "../layout/web.bulbulustur.com/b2c-product-special";
+@use "../layout/web.bulbulustur.com/b2c-product-reviews";
+
+@use "../layout/web.bulbulustur.com/components/b2c-sponsored-product-top-product-list";
+@use "../layout/web.bulbulustur.com/components/b2c-product-list-filters";
+@use "../layout/web.bulbulustur.com/components/b2c-inline-sponsored-product-card-list";
+@use "../layout/web.bulbulustur.com/components/b2c-product-browsing-history";
+@use "../layout/web.bulbulustur.com/components/b2c-related-category-links";
+@use "../layout/web.bulbulustur.com/components/b2c-popular-product-categories-row";
+@use "../layout/web.bulbulustur.com/components/b2c-product-color-variants";
+@use "../layout/web.bulbulustur.com/components/b2c-product-size-variants";
+@use "../layout/web.bulbulustur.com/components/b2c-product-installments";
+@use "../layout/web.bulbulustur.com/components/b2c-homepage-slider";
+@use "../layout/web.bulbulustur.com/components/b2c-deals-of-the-day";
+@use "../layout/web.bulbulustur.com/components/category-showcases";
+@use "../layout/web.bulbulustur.com/components/new-arrivals";
+@use "../layout/web.bulbulustur.com/components/campaign-banners";
+@use "../layout/web.bulbulustur.com/components/b2c-other-products-to-seller";
+@use "../layout/web.bulbulustur.com/components/from-brands";
+@use "../layout/web.bulbulustur.com/components/b2c-homepage-special-contents";
+@use "../layout/web.bulbulustur.com/components/product-low-price-report.scss";
+@use "../layout/web.bulbulustur.com/components/b2c-submit-valuation";
+@use "../layout/web.bulbulustur.com/components/store-askquestion";
+@use "../layout/web.bulbulustur.com/components/store-header";
+@use "../layout/web.bulbulustur.com/components/b2c-product-detail-review";
+
+@use "../layout/web.bulbulustur.com/order-index";
+@use "../layout/web.bulbulustur.com/order-details";
+@use "../layout/web.bulbulustur.com/order-contract";
+@use "../layout/web.bulbulustur.com/order-requests";
+@use "../layout/web.bulbulustur.com/order-cargo-tracking";
+@use "../layout/web.bulbulustur.com/order-return";
+@use "../layout/web.bulbulustur.com/order-checkout";
+@use "../layout/web.bulbulustur.com/order-cancel";
+@use "../layout/web.bulbulustur.com/order-create-request";
+@use "../layout/web.bulbulustur.com/payment-result";
+@use "../layout/web.bulbulustur.com/campaign";
+@use "../layout/web.bulbulustur.com/campaign-detail";
+@use "../layout/web.bulbulustur.com/return-request-detail";
+@use "../layout/web.bulbulustur.com/store-index";
+@use "../layout/web.bulbulustur.com/store-reviews";
+@use "../layout/web.bulbulustur.com/store-profile";

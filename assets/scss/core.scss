@@ -1,0 +1,9 @@
+/* =====================================
+   Bulbulustur Theme — Core Bundle
+   Reusable foundation + components only.
+===================================== */
+
+@use "bundles/core-foundation";
+@use "bundles/core-components-head";
+@use "bundles/core-components-tail";
+@use "bundles/core-final";
