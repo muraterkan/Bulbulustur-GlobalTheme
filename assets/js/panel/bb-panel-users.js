@@ -130,7 +130,7 @@
         tr.append(personCell);
 
         const role = node("td");
-        role.append(badge(user.role, user.role === "Yönetici" ? "primary" : "info"));
+        role.append(badge(user.role, user.role === "Yönetici" ? "primary" : "success"));
         tr.append(role);
         const team = node("td");
         team.append(node("span", "bb-users-team", user.team));
