@@ -229,6 +229,7 @@
     });
     document.querySelectorAll("[data-bb-users-create]").forEach(button =>
       button.addEventListener("click", () => dialog.showModal()));
+    dialog.querySelector("[data-bb-users-cancel]").addEventListener("click", () => dialog.close());
     const createForm = dialog.querySelector("form");
     createForm.addEventListener("submit", event => {
       event.preventDefault();
