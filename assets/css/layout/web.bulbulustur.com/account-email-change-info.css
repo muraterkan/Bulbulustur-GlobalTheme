@@ -1,0 +1,181 @@
+/* =====================================
+   Account Email Change Info
+   FormLight result page
+===================================== */
+.bb-account-email-change-info-page {
+  width: 100%;
+}
+
+.bb-account-email-change-info-card {
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 4vw, 2.25rem);
+  text-align: center;
+  background: radial-gradient(circle at top right, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 32%), radial-gradient(circle at bottom left, color-mix(in srgb, var(--bb-info) 7%, transparent), transparent 30%), var(--bb-body-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: none;
+}
+
+.bb-account-email-change-info-icon {
+  width: 4.75rem;
+  height: 4.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--bb-primary);
+  background-color: color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated));
+  border-radius: 50%;
+}
+
+.bb-account-email-change-info-icon .material-symbols-outlined {
+  font-size: var(--bb-icon-size-3xl);
+  line-height: 1;
+}
+
+.bb-account-email-change-info-chip {
+  margin-bottom: 0.875rem;
+  color: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-dark)) !important;
+  background-color: color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated)) !important;
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
+}
+
+.bb-account-email-change-info-chip .material-symbols-outlined {
+  font-size: var(--bb-fs-sm);
+  line-height: 1;
+}
+
+.bb-account-email-change-info-title {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-tight);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
+}
+
+.bb-account-email-change-info-text {
+  max-width: 40rem;
+  margin: 0.75rem auto 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-account-email-change-info-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  padding: 0.8125rem 0.875rem;
+  color: color-mix(in srgb, var(--bb-info) 72%, var(--bb-dark));
+  background-color: color-mix(in srgb, var(--bb-info) 8%, var(--bb-white));
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-info) 18%, var(--bb-border-color));
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-table-line-height);
+  text-align: left;
+}
+
+.bb-account-email-change-info-message .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-info);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-account-email-change-info-note {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  padding: 0.8125rem 0.875rem;
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-table-line-height);
+  text-align: left;
+}
+
+.bb-account-email-change-info-note .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+.bb-account-email-change-info-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.bb-account-email-change-info-login {
+  min-width: 12.5rem;
+  min-height: 2.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-bold);
+  box-shadow: none;
+}
+
+.bb-account-email-change-info-login .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+/* FormLight width override */
+.bb-layout-light-page:has(.bb-account-email-change-info-page) .bb-layout-light-content-col {
+  width: 100%;
+  max-width: 48rem;
+  flex: 0 0 auto;
+}
+
+.bb-layout-light-page:has(.bb-account-email-change-info-page) .bb-layout-light-card-body {
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.bb-layout-light-page:has(.bb-account-email-change-info-page) .bb-layout-light-card {
+  border-color: color-mix(in srgb, var(--bb-border-color) 72%, transparent);
+  box-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.06), 0 0.125rem 0.375rem rgba(15, 23, 42, 0.03);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .bb-account-email-change-info-card {
+    border-radius: var(--bb-radius-lg);
+  }
+  .bb-account-email-change-info-actions {
+    justify-content: stretch;
+  }
+  .bb-account-email-change-info-login {
+    width: 100%;
+    min-width: 0;
+    border-radius: var(--bb-radius);
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-account-email-change-info-card {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .bb-account-email-change-info-icon {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+  .bb-account-email-change-info-icon .material-symbols-outlined {
+    font-size: var(--bb-icon-size-2xl);
+  }
+}
+
+/*# sourceMappingURL=account-email-change-info.css.map */

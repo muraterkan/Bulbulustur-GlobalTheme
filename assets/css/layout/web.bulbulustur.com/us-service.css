@@ -1,0 +1,194 @@
+.bb-service-content-section {
+  padding-top: 36px;
+}
+
+.bb-service-block {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0;
+  background: radial-gradient(circle at 90% 12%, color-mix(in srgb, var(--bb-service-accent) 8%, transparent) 0, transparent 30%), var(--bb-service-section-bg, var(--bb-body-bg));
+}
+
+.bb-service-block + .bb-service-block {
+  border-top: 1px solid var(--bb-service-border-soft);
+}
+
+.bb-service-block-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.bb-service-block-grid-reverse .bb-service-block-media {
+  order: 2;
+}
+
+.bb-service-block-grid-reverse .bb-service-block-content {
+  order: 1;
+}
+
+.bb-service-block-media {
+  min-width: 0;
+}
+
+.bb-service-block-media img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--bb-radius-2xl);
+  border: 1px solid color-mix(in srgb, var(--bb-service-border) 72%, transparent);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-service-block-content {
+  min-width: 0;
+}
+
+.bb-service-block-label,
+.bb-service-faq-label {
+  gap: 0.4375rem;
+  margin-bottom: 14px;
+}
+
+.bb-service-block-label .material-symbols-outlined,
+.bb-service-faq-label .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+.bb-service-block-title {
+  max-width: 47.5rem;
+  margin-bottom: 1rem;
+  color: var(--bb-heading-color);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.08;
+  font-weight: var(--bb-fw-extrabold);
+  letter-spacing: -0.035em;
+}
+
+.bb-service-block-subtitle {
+  max-width: 47.5rem;
+  margin-bottom: 14px;
+  color: var(--bb-heading-color);
+  font-size: var(--bb-icon-size-md);
+  line-height: var(--bb-line-height-base);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-service-block-subtitle p,
+.bb-service-block-subtitle h1,
+.bb-service-block-subtitle h2,
+.bb-service-block-subtitle h3,
+.bb-service-block-subtitle h4,
+.bb-service-block-subtitle h5,
+.bb-service-block-subtitle h6 {
+  margin-bottom: 0;
+}
+
+.bb-service-block-text {
+  max-width: 820px;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-base);
+  line-height: 1.85;
+}
+
+.bb-service-block-text p:last-child {
+  margin-bottom: 0;
+}
+
+.bb-service-block-full {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 42px;
+  border: 1px solid var(--bb-service-border-soft);
+  border-radius: var(--bb-radius-2xl);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 88%, transparent);
+  box-shadow: var(--bb-shadow-xs);
+  text-align: center;
+}
+
+.bb-service-block-full .bb-service-block-title,
+.bb-service-block-full .bb-service-block-subtitle,
+.bb-service-block-full .bb-service-block-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bb-service-faq-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid var(--bb-service-border);
+  border-radius: var(--bb-radius-2xl);
+  background-color: var(--bb-body-bg);
+  box-shadow: var(--bb-shadow-xs);
+}
+
+.bb-service-faq-head {
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--bb-service-border-soft);
+  text-align: center;
+}
+
+.bb-service-faq-title {
+  margin-bottom: 0.625rem;
+  color: var(--bb-heading-color);
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  line-height: var(--bb-line-height-heading);
+  font-weight: var(--bb-fw-extrabold);
+  letter-spacing: -0.025em;
+}
+
+.bb-service-faq-text {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--bb-secondary-color);
+}
+
+.bb-service-faq-content {
+  min-width: 0;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .bb-service-block {
+    padding: 48px 0;
+  }
+  .bb-service-block-grid,
+  .bb-service-block-grid-reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .bb-service-block-grid-reverse .bb-service-block-media,
+  .bb-service-block-grid-reverse .bb-service-block-content {
+    order: initial;
+  }
+  .bb-service-block-media img {
+    max-height: 380px;
+  }
+  .bb-service-block-full {
+    padding: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-service-content-section {
+    padding-top: 24px;
+  }
+  .bb-service-block {
+    padding: 36px 0;
+  }
+  .bb-service-block-media img {
+    max-height: 300px;
+    border-radius: var(--bb-radius-xl);
+  }
+  .bb-service-block-full,
+  .bb-service-faq-shell {
+    padding: 1.375rem;
+    border-radius: var(--bb-radius-xl);
+  }
+}
+
+/*# sourceMappingURL=us-service.css.map */

@@ -1,0 +1,236 @@
+/* =====================================
+   Account Phone Create
+   FormLight page
+===================================== */
+.bb-account-phone-create-page {
+  width: 100%;
+}
+
+.bb-account-phone-create-back {
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  padding: 0 0.75rem;
+  color: var(--bb-emphasis-color) !important;
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  border-radius: var(--bb-radius-pill);
+  text-decoration: none !important;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-account-phone-create-back:hover {
+  color: var(--bb-primary) !important;
+  background-color: color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated));
+  border-color: color-mix(in srgb, var(--bb-primary) 16%, var(--bb-border-color));
+}
+
+.bb-account-phone-create-back .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+/* Header */
+.bb-account-phone-create-head {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.bb-account-phone-create-chip {
+  margin-bottom: 0.75rem;
+  color: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-dark)) !important;
+  background-color: color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated)) !important;
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
+}
+
+.bb-account-phone-create-chip .material-symbols-outlined {
+  font-size: var(--bb-fs-sm);
+  line-height: 1;
+}
+
+.bb-account-phone-create-title {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-tight);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
+}
+
+.bb-account-phone-create-text {
+  max-width: 40rem;
+  margin: 0.625rem 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-account-phone-create-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.8125rem 0.875rem;
+  color: color-mix(in srgb, var(--bb-info) 72%, var(--bb-dark));
+  background-color: color-mix(in srgb, var(--bb-info) 8%, var(--bb-white));
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-info) 18%, var(--bb-border-color));
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+  line-height: var(--bb-table-line-height);
+}
+
+.bb-account-phone-create-message .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-info);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Card */
+.bb-account-phone-create-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.125rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
+}
+
+.bb-account-phone-create-card-icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  min-width: 2.375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-dark));
+  background-color: color-mix(in srgb, var(--bb-primary) 7%, var(--bb-surface-elevated));
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 10%, var(--bb-border-color));
+  border-radius: var(--bb-radius);
+}
+
+.bb-account-phone-create-card-icon .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+.bb-account-phone-create-card-head h2 {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: -0.01em;
+}
+
+.bb-account-phone-create-card-head p {
+  margin: 0.25rem 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+}
+
+/* Form */
+.bb-account-phone-create-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.bb-account-phone-create-field {
+  min-width: 0;
+}
+
+.bb-account-phone-create-input-group .input-group-text {
+  min-width: 2.75rem;
+  padding-left: 0.875rem;
+  padding-right: 0.75rem;
+  border-right: 0;
+}
+
+.bb-account-phone-create-input-group .input-group-text .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+.bb-account-phone-create-input-group .form-control {
+  border-left: 0;
+}
+
+/* Helper */
+.bb-account-phone-create-helper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.8125rem 0.875rem;
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 78%, transparent);
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-xs);
+  line-height: var(--bb-table-line-height);
+}
+
+.bb-account-phone-create-helper .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Actions */
+.bb-account-phone-create-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bb-account-phone-create-submit {
+  min-width: 12.5rem;
+  min-height: 2.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-bold);
+  box-shadow: none;
+}
+
+.bb-account-phone-create-submit .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+/* FormLight width override */
+.bb-layout-light-page:has(.bb-account-phone-create-page) .bb-layout-light-content-col {
+  width: 100%;
+  max-width: 48rem;
+  flex: 0 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .bb-account-phone-create-actions {
+    justify-content: stretch;
+  }
+  .bb-account-phone-create-submit {
+    width: 100%;
+    min-width: 0;
+    border-radius: var(--bb-radius);
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-account-phone-create-card-head {
+    gap: 0.625rem;
+  }
+  .bb-account-phone-create-card-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+  }
+}
+
+/*# sourceMappingURL=account-phone-create.css.map */

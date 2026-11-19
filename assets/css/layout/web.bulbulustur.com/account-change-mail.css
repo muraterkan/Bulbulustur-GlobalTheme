@@ -1,0 +1,212 @@
+/* =====================================
+   Account Change Mail
+   FormLight page
+===================================== */
+.bb-account-change-mail-page {
+  width: 100%;
+}
+
+.bb-account-change-mail-head {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.bb-account-change-mail-chip {
+  margin-bottom: 0.75rem;
+  color: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-dark)) !important;
+  background-color: color-mix(in srgb, var(--bb-primary) 8%, var(--bb-surface-elevated)) !important;
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 12%, var(--bb-border-color));
+}
+
+.bb-account-change-mail-chip .material-symbols-outlined {
+  font-size: var(--bb-fs-sm);
+  line-height: 1;
+}
+
+.bb-account-change-mail-title {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-tight);
+  letter-spacing: var(--bb-letter-spacing-tight, -0.04em);
+}
+
+.bb-account-change-mail-text {
+  max-width: 40rem;
+  margin: 0.625rem 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+.bb-account-change-mail-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.8125rem 0.875rem;
+  color: var(--bb-emphasis-color);
+  background-color: color-mix(in srgb, var(--bb-primary) 7%, var(--bb-surface-elevated));
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 14%, var(--bb-border-color));
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+}
+
+.bb-account-change-mail-message .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Card */
+.bb-account-change-mail-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.125rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
+}
+
+.bb-account-change-mail-card-icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  min-width: 2.375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: color-mix(in srgb, var(--bb-primary) 82%, var(--bb-dark));
+  background-color: color-mix(in srgb, var(--bb-primary) 7%, var(--bb-surface-elevated));
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-primary) 10%, var(--bb-border-color));
+  border-radius: var(--bb-radius);
+}
+
+.bb-account-change-mail-card-icon .material-symbols-outlined {
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+}
+
+.bb-account-change-mail-card-head h2 {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-bold);
+  line-height: var(--bb-line-height-heading);
+  letter-spacing: -0.01em;
+}
+
+.bb-account-change-mail-card-head p {
+  margin: 0.25rem 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-table-line-height);
+}
+
+.bb-account-change-mail-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.bb-account-change-mail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.125rem;
+}
+
+.bb-account-change-mail-field {
+  min-width: 0;
+}
+
+/* Softer input-group treatment */
+.bb-account-change-mail-field .bb-input-group .input-group-text {
+  min-width: 2.75rem;
+  padding-left: 0.875rem;
+  padding-right: 0.75rem;
+  border-right: 0;
+}
+
+.bb-account-change-mail-field .bb-input-group .input-group-text .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+.bb-account-change-mail-field .bb-input-group .form-control {
+  border-left: 0;
+}
+
+/* Note */
+.bb-account-change-mail-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.8125rem 0.875rem;
+  color: var(--bb-secondary-color);
+  background-color: var(--bb-tertiary-bg);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-border-color) 80%, transparent);
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-account-change-mail-note .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--bb-primary);
+  font-size: var(--bb-fs-base);
+  line-height: var(--bb-line-height-heading);
+}
+
+/* Actions */
+.bb-account-change-mail-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bb-account-change-mail-submit {
+  min-width: 11.25rem;
+  min-height: 2.875rem;
+  border-radius: var(--bb-radius-pill);
+  font-weight: var(--bb-fw-bold);
+  box-shadow: none;
+}
+
+.bb-account-change-mail-submit .material-symbols-outlined {
+  font-size: var(--bb-fs-md);
+  line-height: 1;
+}
+
+/* FormLight width override */
+.bb-layout-light-page:has(.bb-account-change-mail-page) .bb-layout-light-content-col {
+  width: 100%;
+  max-width: 48rem;
+  flex: 0 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .bb-account-change-mail-grid {
+    grid-template-columns: 1fr;
+  }
+  .bb-account-change-mail-actions {
+    justify-content: stretch;
+  }
+  .bb-account-change-mail-submit {
+    width: 100%;
+    min-width: 0;
+    border-radius: var(--bb-radius);
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-account-change-mail-card-head {
+    gap: 0.625rem;
+  }
+  .bb-account-change-mail-card-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+  }
+}
+
+/*# sourceMappingURL=account-change-mail.css.map */

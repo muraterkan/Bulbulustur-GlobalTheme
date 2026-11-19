@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* =====================================
+   Web Marketplace Section System
+   B2B/B2C/Home/List/Search/Campaign shared carrier
+   Çekirdek .bb-section sözleşmesi (base/_page.scss) ezilmez: Web boşlukları yalnız .bb-web-page içinde (:where ile, özgüllük eskisi gibi) geçerli.
+===================================== */
+:where(.bb-web-page) .bb-section {
+  margin-top: 3rem;
+}
+
+:where(.bb-web-page) .bb-section:first-child {
+  margin-top: 0;
+}
+
+:where(.bb-web-page) .bb-section--tight {
+  margin-top: 2.125rem;
+}
+
+:where(.bb-web-page) .bb-section--last {
+  margin-bottom: 4rem;
+}
+
+/* -------------------------------------
+   Stage / visual carrier
+------------------------------------- */
+.bb-page-stage {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem;
+  background-color: var(--bb-body-bg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-page-stage > * {
+  position: relative;
+  z-index: 2;
+}
+
+.bb-page-stage--plain {
+  background-color: var(--bb-body-bg);
+}
+
+.bb-page-stage--soft {
+  background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--bb-primary) 8%, transparent), transparent 28%), linear-gradient(180deg, color-mix(in srgb, var(--bb-tertiary-bg) 82%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--peach {
+  background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--bb-primary) 10%, transparent), transparent 28%), linear-gradient(180deg, color-mix(in srgb, var(--bb-primary) 4%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--deal {
+  background: radial-gradient(circle at 10% 12%, color-mix(in srgb, var(--bb-primary) 6%, transparent), transparent 28%), linear-gradient(180deg, color-mix(in srgb, var(--bb-primary) 4%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--green {
+  background: radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--bb-success) 11%, transparent), transparent 30%), linear-gradient(180deg, color-mix(in srgb, var(--bb-success) 5%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--sky {
+  background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--bb-info) 10%, transparent), transparent 28%), linear-gradient(180deg, color-mix(in srgb, var(--bb-info) 4%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--purple {
+  background: radial-gradient(circle at 92% 8%, color-mix(in srgb, #8b5cf6 9%, transparent), transparent 28%), linear-gradient(180deg, color-mix(in srgb, #8b5cf6 4%, var(--bb-white)) 0%, var(--bb-body-bg) 100%);
+}
+
+.bb-page-stage--dark {
+  background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--bb-primary) 16%, transparent), transparent 28%), linear-gradient(135deg, #0f2747 0%, #123764 48%, #1f2d3d 100%);
+  border-color: color-mix(in srgb, var(--bb-white) 12%, transparent);
+  color: var(--bb-white);
+}
+
+.bb-page-stage--dark .bb-section-title,
+.bb-page-stage--dark .bb-section-text,
+.bb-page-stage--dark .bb-section-label {
+  color: var(--bb-white);
+}
+
+.bb-page-stage--grid::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 0;
+  height: 9.375rem;
+  background-image: linear-gradient(color-mix(in srgb, var(--bb-coal-300) 4%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--bb-coal-300) 4%, transparent) 1px, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.26), transparent 82%);
+  pointer-events: none;
+}
+
+.bb-page-stage--dark.bb-page-stage--grid::after {
+  background-image: linear-gradient(color-mix(in srgb, var(--bb-white) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--bb-white) 7%, transparent) 1px, transparent 1px);
+}
+
+/* -------------------------------------
+   Shared section head
+------------------------------------- */
+.bb-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.bb-section-head-main,
+.bb-section-head > div {
+  min-width: 0;
+}
+
+.bb-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.625rem;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  line-height: 1;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.bb-section-label .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+  line-height: 1;
+}
+
+.bb-section-title {
+  margin: 0;
+  color: var(--bb-emphasis-color);
+  font-size: clamp(1.625rem, 3vw, 2.125rem);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.bb-section-text {
+  max-width: 51.25rem;
+  margin: 0.5rem 0 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+  line-height: var(--bb-line-height-content);
+}
+
+/* -------------------------------------
+   Section action
+------------------------------------- */
+.bb-section-action {
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.35rem;
+  color: var(--bb-white, #ffffff);
+  background-color: var(--bb-emphasis-color);
+  border: var(--bb-border-width) solid var(--bb-emphasis-color);
+  border-radius: var(--bb-radius);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-bold);
+  line-height: 1;
+  text-decoration: none !important;
+  white-space: nowrap;
+  box-shadow: 0 0.75rem 1.5rem color-mix(in srgb, var(--bb-emphasis-color) 14%, transparent), inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 10%, transparent);
+  transition: transform var(--bb-transition-fast), color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast);
+}
+
+.bb-section-action:hover,
+.bb-section-action:focus {
+  color: var(--bb-white, #ffffff);
+  background-color: color-mix(in srgb, var(--bb-emphasis-color) 86%, var(--bb-primary));
+  border-color: color-mix(in srgb, var(--bb-emphasis-color) 82%, var(--bb-primary));
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 1.875rem color-mix(in srgb, var(--bb-emphasis-color) 18%, transparent), inset 0 1px 0 color-mix(in srgb, var(--bb-white, #ffffff) 12%, transparent);
+}
+
+.bb-section-action .material-symbols-outlined {
+  color: currentColor;
+  font-size: var(--bb-icon-size-md);
+  line-height: 1;
+  transition: transform var(--bb-transition-fast);
+}
+
+.bb-section-action:hover .material-symbols-outlined,
+.bb-section-action:focus .material-symbols-outlined {
+  transform: translateX(0.1875rem);
+}
+
+/* -------------------------------------
+   Component host
+------------------------------------- */
+.bb-page-component-host {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.bb-page-component-host--spaced {
+  margin-top: 0.5rem;
+}
+
+.bb-page-component-host--after-head {
+  margin-top: 1.5rem;
+}
+
+.bb-page-component-host--content-groups {
+  display: block;
+}
+
+/* -------------------------------------
+   Responsive
+------------------------------------- */
+@media (max-width: 991.98px) {
+  :where(.bb-web-page) .bb-section {
+    margin-top: 2.375rem;
+  }
+  .bb-section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bb-page-stage {
+    padding: 1.375rem;
+    border-radius: var(--bb-radius-lg);
+  }
+  .bb-section-link {
+    width: fit-content;
+  }
+}
+@media (max-width: 575.98px) {
+  :where(.bb-web-page) .bb-section {
+    margin-top: 1.875rem;
+  }
+  .bb-page-stage {
+    padding: 1rem;
+    border-radius: var(--bb-radius);
+  }
+  .bb-section-link {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=web-page-sections.css.map */

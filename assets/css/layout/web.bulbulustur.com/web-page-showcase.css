@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* =====================================
+   Web Page Showcase Carrier
+   Slider / vitrin alanları için dış sayfa ritmi.
+   Slider component tasarımına karışmaz.
+===================================== */
+.bb-page-showcase {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.bb-page-showcase--home {
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.bb-page-showcase--tight {
+  padding-top: 0.75rem;
+}
+
+.bb-page-showcase--wide {
+  padding-top: 1.5rem;
+}
+
+.bb-page-showcase--flush {
+  padding-top: 0;
+}
+
+.bb-page-showcase--last {
+  padding-bottom: 3rem;
+}
+
+.bb-page-showcase > .bb-web-container {
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .bb-page-showcase {
+    padding-top: 0.875rem;
+  }
+  .bb-page-showcase--wide {
+    padding-top: 1.25rem;
+  }
+  .bb-page-showcase--last {
+    padding-bottom: 2.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-page-showcase {
+    padding-top: 0.75rem;
+  }
+  .bb-page-showcase--wide {
+    padding-top: 1rem;
+  }
+  .bb-page-showcase--last {
+    padding-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=web-page-showcase.css.map */
