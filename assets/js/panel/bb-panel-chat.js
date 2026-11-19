@@ -49,7 +49,9 @@
 
   function renderList() {
     const q = search.value.trim().toLocaleLowerCase("tr-TR");
+    const onlineOnly = root.getAttribute("data-bb-chat-online-only") === "true";
     const filtered = people.filter(person =>
+      (!onlineOnly || person.online) &&
       (person.name + " " + person.email + " " + person.messages.map(x => x.text).join(" "))
         .toLocaleLowerCase("tr-TR").includes(q)
     );
@@ -62,7 +64,7 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "bb-chat-list-item";
-      button.setAttribute("aria-selected", String(person.id === activeId));
+      button.setAttribute("aria-current", person.id === activeId ? "true" : "false");
 
       const avatar = document.createElement(person.avatar ? "img" : "span");
       avatar.className = "bb-chat-list-avatar";
@@ -134,6 +136,16 @@
       row.className = "bb-chat-message";
       row.dataset.side = message.side;
 
+      const heading = document.createElement("div");
+      heading.className = "bb-chat-message-heading";
+      const picture = document.createElement(person.avatar && message.side === "in" ? "img" : "span");
+      picture.className = "bb-chat-message-avatar";
+      if (picture.tagName === "IMG") {
+        picture.src = person.avatar;
+        picture.alt = "";
+      } else {
+        picture.textContent = message.side === "out" ? "BB" : initial(person);
+      }
       const meta = document.createElement("div");
       meta.className = "bb-chat-message-meta";
       const author = document.createElement("strong");
@@ -146,7 +158,8 @@
       bubble.className = "bb-chat-bubble";
       bubble.textContent = message.text;
 
-      row.append(meta, bubble);
+      heading.append(picture, meta);
+      row.append(heading, bubble);
       messages.append(row);
     });
     messages.scrollTop = messages.scrollHeight;
@@ -170,13 +183,15 @@
   });
 
   search.addEventListener("input", renderList);
-  root.querySelector("[data-bb-chat-filter]").addEventListener("click", () => {
+  root.querySelector("[data-bb-chat-filter]").addEventListener("click", event => {
     const current = root.getAttribute("data-bb-chat-online-only") === "true";
     root.setAttribute("data-bb-chat-online-only", String(!current));
-    feedback.textContent = current ? "Çevrimiçi filtresi kaldırıldı." : "Çevrimiçi filtresi demo olarak etkinleştirildi.";
+    event.currentTarget.setAttribute("aria-pressed", String(!current));
+    feedback.textContent = current ? "Çevrimiçi filtresi kaldırıldı." : "Yalnız çevrimiçi kişiler gösteriliyor.";
+    renderList();
   });
   root.querySelector("[data-bb-chat-new]").addEventListener("click", () => {
-    feedback.textContent = "New konuşma oluşturma demo sürümünde kayıt yapmaz.";
+    feedback.textContent = "Yeni konuşma oluşturma demo sürümünde kayıt yapmaz.";
     input.focus();
   });
   root.querySelector("[data-bb-chat-more]").addEventListener("click", () => {
