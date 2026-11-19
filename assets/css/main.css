@@ -16487,6 +16487,36 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     width: 100%;
   }
 }
+/* Chat mesaj başlığı: mevcut bb-chat düzeninin sayfaya özgü avatar kompozisyonu. */
+.bb-panel .bb-chat-message-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.bb-panel .bb-chat-message[data-side=out] .bb-chat-message-heading {
+  flex-direction: row-reverse;
+}
+
+.bb-panel .bb-chat-message-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: calc(var(--bb-space-4) * 2);
+  height: calc(var(--bb-space-4) * 2);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+  object-fit: cover;
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-panel .bb-chat-list-item[aria-current=true] {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+}
+
 /* Support Center — panel-scoped, shared card/form/accordion tokens. */
 .bb-panel .bb-support-hero {
   overflow: hidden;
