@@ -83513,7 +83513,7 @@ body.bb-b2c-review-gallery-open {
 .bb-b2c-deals-day-head {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: end;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 1.25rem;
 }
@@ -83524,7 +83524,7 @@ body.bb-b2c-review-gallery-open {
 }
 
 .bb-b2c-deals-day-title {
-  margin: 0.625rem 0 0;
+  margin: 0;
   color: var(--bb-emphasis-color);
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: var(--bb-fw-bold);
