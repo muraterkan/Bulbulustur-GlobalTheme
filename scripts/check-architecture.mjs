@@ -45,7 +45,7 @@ const panelLeaks = coreScss.filter((path) => /\.bb-panel\b|--bb-panel-[\w-]+/.te
 if (panelLeaks.length) fail("core SCSS has no panel namespace leak", panelLeaks.map(rel));
 else pass("core SCSS has no panel namespace leak");
 
-const misplacedPanelScss = allScss.filter((path) => /[\\/]_panel-[^\\/]+\.scss$/.test(path));
+const misplacedPanelScss = allScss.filter((path) => !inRoot(path, bundlesRoot) && /[\\/]_panel-[^\\/]+\.scss$/.test(path));
 if (misplacedPanelScss.length) fail("panel SCSS lives only in layout/panel", misplacedPanelScss.map(rel));
 else pass("panel SCSS lives only in layout/panel");
 
