@@ -1008,16 +1008,16 @@
                                             <div class="bb-card-header">
                                                 <div>
                                                     <h2 class="bb-card-title" id="bb_user_auth_title">Kimlik doğrulama faktörleri</h2>
-                                                    <p class="bb-users-muted mb-0">3 faktörden 2'si etkin.</p>
+                                                    <p class="bb-users-muted mb-0" data-bb-user-factor-summary>3 faktörden 2'si etkin.</p>
                                                 </div>
                                             </div>
                                             <div class="bb-card-body">
                                                 <ul class="bb-users-security-list">
-                                                    <li>
+                                                    <li data-bb-user-factor="totp">
                                                         <div class="bb-users-security-copy"><strong><span class="material-symbols-outlined" aria-hidden="true">smartphone</span> Doğrulayıcı (TOTP)</strong><small>12 Nis 2026 tarihinde doğrulandı</small></div>
                                                         <span class="bb-badge bb-badge-light-success">Etkin</span>
                                                     </li>
-                                                    <li>
+                                                    <li data-bb-user-factor="passkey">
                                                         <div class="bb-users-security-copy"><strong><span class="material-symbols-outlined" aria-hidden="true">passkey</span> Passkey</strong><small>MacBook Pro · Touch ID</small></div>
                                                         <span class="bb-badge bb-badge-light-success">Etkin</span>
                                                     </li>
@@ -1042,7 +1042,7 @@
                                                 <ul class="bb-users-security-list">
                                                     <li><div class="bb-users-security-copy"><small>Şifre</small><strong>04 Mar 2024 tarihinde tanımlandı</strong><small>Son değişiklik: 09 Nis 2026</small></div><span class="bb-badge bb-badge-light-success">Güçlü</span></li>
                                                     <li><div class="bb-users-security-copy"><small>SSO bağlantısı</small><strong>Okta</strong><small>SCIM ile eşitlenmiş hesap</small></div><span class="bb-badge bb-badge-light-success">Bağlı</span></li>
-                                                    <li><div class="bb-users-security-copy"><small>İki adımlı doğrulama</small><strong>2 faktör kayıtlı</strong><small>Doğrulayıcı ve Passkey</small></div><span class="bb-badge bb-badge-light-primary">Zorunlu</span></li>
+                                                    <li><div class="bb-users-security-copy"><small>İki adımlı doğrulama</small><strong data-bb-user-factor-count>2 faktör kayıtlı</strong><small>Doğrulayıcı ve Passkey</small></div><span class="bb-badge bb-badge-light-primary">Zorunlu</span></li>
                                                 </ul>
                                             </div>
                                         </section>
