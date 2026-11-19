@@ -20659,7 +20659,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   display: none;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.99875em) {
   .bb-panel .bb-files-workspace {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -20682,7 +20682,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     margin-block-start: 0;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 35.99875em) {
   .bb-panel .bb-files-content-head,
   .bb-panel .bb-files-list-heading {
     align-items: stretch;
