@@ -413,6 +413,32 @@ Core
 - Application bundlesı ayrı build edilir.
 - Core hiçbir application katmanına bağımlı değildir.
 
+**Durum:** KOD / PACKAGE CONTRACT TAMAMLANDI — deploy/browser smoke ve AI DB setting scriptinin uygulanması bekliyor.
+
+**19.11.2026 sonucu:**
+- Monolitik source sahipliği parçalandı. `main.scss` artık stil motoru değil yalnız legacy compatibility aggregator; gerçek katmanlar `assets/scss/bundles/` altında tutuluyor.
+- Yeni runtime entrypointleri üretildi: `core.scss`, `panel.scss`, `status.scss`, `web.scss`. Her application bundle Core'u kendi içinde derliyor; browser'da iki ayrı CSS yükleme sırası zorunluluğu yok.
+- Canonical compile sırası eski `main.scss` cascade contractını koruyacak şekilde ayrıldı: Core Foundation → application shell/composition gerekiyorsa → Core Components → application layer → Core Final.
+- `panel.css` yalnız Core + Panel; `status.css` yalnız Core + Status; `web.css` yalnız Core + Web kaynaklarından derleniyor. Core entrypoint hiçbir Panel/Status/Web source'una bağımlı değil.
+- Draugr için GlobalTheme içine uydurma application stili eklenmedi. Yeni Draugr tasarım hattının contractı **`core.css` + proje tarafından üretilen `draugr.css`** olarak netleştirildi.
+- `package.json`: legacy build ayrı `build:css:legacy`, application bundle buildi `build:css:bundles`; ana `build:css` ikisini de üretir. Watch ve `check:css` artık `main/core/panel/status/web` çıktılarının tamamını kapsıyor.
+- CI artık yalnız Sass derlemiyor; sırasıyla bundle build, architecture guard, SCSS contract ve diff syntax kontrolü çalıştırıyor, sonra değişen generated CSS bundlelarını commitliyor.
+- Architecture guard; Core → application dependency yasağını, Panel/Status/Web inventory eşleşmesini, applicationlar arası SCSS dependency yasağını, canonical bundle orderını ve generated bundle varlığını doğruluyor.
+- Contract resolver tek `main.scss` varsayımından çıkarıldı; `core/panel/status/web` runtime entrypoint graphını recursive takip ediyor. Tüm SCSS modülleri runtime bundle üzerinden erişilebilir olmalı, her `@use` resolve olmalı ve aynı dosyada duplicate direct `@use` bulunmamalı.
+- Yeni CI ilk çalışmasında eski contract borcunu görünür hale getirdi: Status chip text rolleri ve Web breadcrumb hover rengi raw semantic color kullanıyordu. Yalnız işaretlenen satırlar `*-text` semantic tokenlarına geçirildi. Final `check:contracts`: **22/22 PASS**.
+- Final generated bundle boyutları: legacy `main.css` **2.876.184 B**; `core.css` **462.942 B** (-%83,9); `panel.css` **752.298 B** (-%73,8); `status.css` **566.283 B** (-%80,3); `web.css` **2.483.466 B** (-%13,7).
+- Status consumer `ea6825a5`: `_HeadCommon.cshtml` artık `~/css/status.css` yüklüyor. Eski `main.css` rollback amacıyla dosyada tutuldu fakat runtime tarafından indirilmiyor.
+- Web consumer önce `8ab6efcd` ile `core.css` + `web.css` assetlerini aldı; sonra `0f383b0a` ile `_HeadMainCss.cshtml` `main.css` yerine `web.css` yüklemeye geçti. Eski `main.css` rollback amacıyla tutuluyor.
+- Web local legacy CSS farkı körlemesine korunmadı: lokal `main.css`te yeni `web.css`te olmayan 664 `bb-*` classın **244'ü Status application classı**, kalan **420'si güncel GlobalTheme legacy bundleında dahi artık bulunmayan eski/stale kuşak**. Buna karşı yeni `web.css` lokal legacy CSS'te olmayan 146 güncel class içeriyor.
+- Draugr Designer/preview hattı: Web uygulamasına `/assets/css/core.css` asseti eklendi. AI `d8adfe4d` ve Helix `bfd147e9` ile hard-coded preview/default manifest referansları `main.css` → `core.css` oldu.
+- AI DB'deki mevcut `DRAUGR_CORE_CSS_URL` kaydı koddan bağımsız olduğu için `Database/20261119_draugr_core_css_url_ai.sql` idempotent migration scripti eklendi. **Script bu çalışma sırasında DB'ye uygulanmadı.**
+- Eski `Bulbulustur.Draugr.App.Solution` master'ına bilerek dokunulmadı: repo 15.11.2026'da Murat kararıyla 04.10.2026 şablonuna geri alınmış; 09–13.11 tarihli `drauger.css` storefront geliştirmelerini geri getirmek bu kararı bozardı.
+- Panel için bağlı repolar içinde GlobalTheme `main.css` tüketen aktif runtime consumer bulunmadı; Helix normal UI Metronic `style.bundle.css` kullanıyor. Bu nedenle yanlış uygulamaya `panel.css` zorla bağlanmadı. `panel.css` ayrı ve doğrulanmış deliverable olarak hazır.
+- GlobalTheme kod commitleri: `31c99afd` — bundle entrypointleri; `d44db9bf` — bundle build/architecture/contracts CI; `1c659fda` — bundle aggregator placement guard; `0c84c811` — semantic text token contract fix. Final generated CSS: `5a6eb36e`.
+- Final GlobalTheme workflow: bundle build **PASS**, architecture **PASS**, SCSS contracts **22/22 PASS**, diff syntax **PASS**, generated bundle commit **PASS**.
+- Status/Web/AI/Helix consumer repolarında bu commitler için GitHub Actions run oluşmadı; build sonucu varmış gibi kabul edilmedi.
+- Gerçek deploy ve browser smoke testi yapılmadı. Web/Status light+dark desktop/tablet/mobile ve Draugr preview render kontrolü deployment sonrası yapılmalı.
+
 ---
 
 ## Faz çalışma kuralı
