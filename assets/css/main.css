@@ -38194,6 +38194,11 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   --bb-web-header-action-size: 2.5rem;
   --bb-web-header-action-badge-size: 1.1875rem;
   --bb-web-header-action-badge-offset: -0.25rem;
+  --bb-web-header-control-bg: color-mix(in srgb, var(--bb-body-bg) 96%, var(--bb-secondary-bg));
+  --bb-web-header-control-border: color-mix(in srgb, var(--bb-border-color) 88%, var(--bb-heading-color));
+  --bb-web-header-control-shadow:
+      var(--bb-shadow-xs),
+      inset 0 1px 0 color-mix(in srgb, var(--bb-theme-on-dark) 38%, transparent);
   position: relative;
   z-index: 1040;
   background-color: var(--bb-web-header-bg);
@@ -38311,15 +38316,16 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   display: flex;
   align-items: stretch;
   overflow: hidden;
-  background-color: var(--bb-body-bg);
-  border: 2px solid var(--bb-primary);
+  background-color: var(--bb-web-header-control-bg);
+  border: 1px solid color-mix(in srgb, var(--bb-primary) 62%, var(--bb-web-header-control-border));
   border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-web-header-control-shadow);
   transition: border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast);
 }
 
 .bb-web-header-search-group:focus-within {
   border-color: var(--bb-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 16%, transparent);
+  box-shadow: var(--bb-shadow-sm), 0 0 0 4px color-mix(in srgb, var(--bb-primary) 16%, transparent);
 }
 
 .bb-web-header-search-input {
@@ -38422,9 +38428,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   justify-content: center;
   padding: 0 16px;
   color: var(--bb-heading-color);
-  background-color: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
+  background-color: var(--bb-web-header-control-bg);
+  border: 1px solid var(--bb-web-header-control-border);
   border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-web-header-control-shadow);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-semibold);
   line-height: 1;
@@ -38433,11 +38440,17 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
 }
 
+.bb-web-header-utility-chip-suppliers {
+  min-height: var(--bb-web-header-search-height);
+  padding-inline: 1.25rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bb-body-bg) 97%, var(--bb-primary)) 0%, var(--bb-web-header-control-bg) 100%);
+}
+
 .bb-web-header-utility-chip:hover {
   color: var(--bb-heading-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color));
-  box-shadow: var(--bb-shadow-xs);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 88%, var(--bb-primary));
+  border-color: color-mix(in srgb, var(--bb-primary) 48%, var(--bb-border-color));
+  box-shadow: var(--bb-shadow-sm);
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -38450,10 +38463,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   align-items: center;
   justify-content: center;
   color: var(--bb-heading-color);
-  background-color: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
+  background-color: var(--bb-web-header-control-bg);
+  border: 1px solid var(--bb-web-header-control-border);
   border-radius: var(--bb-radius-pill);
-  box-shadow: none;
+  box-shadow: var(--bb-web-header-control-shadow);
   text-decoration: none;
   transition: color var(--bb-transition-fast), background-color var(--bb-transition-fast), border-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast), transform var(--bb-transition-fast);
 }
@@ -38461,9 +38474,9 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 .bb-web-header-utility-circle:hover,
 .bb-web-header-icon-button:hover {
   color: var(--bb-heading-color);
-  background-color: var(--bb-tertiary-bg);
-  border-color: color-mix(in srgb, var(--bb-primary) 45%, var(--bb-border-color));
-  box-shadow: var(--bb-shadow-xs);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 88%, var(--bb-primary));
+  border-color: color-mix(in srgb, var(--bb-primary) 48%, var(--bb-border-color));
+  box-shadow: var(--bb-shadow-sm);
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -38788,9 +38801,10 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   gap: 10px;
   padding: 0 16px;
   color: var(--bb-heading-color);
-  background-color: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bb-body-bg) 98%, var(--bb-primary)) 0%, var(--bb-body-bg) 100%);
+  border: 1px solid color-mix(in srgb, var(--bb-border-color) 88%, var(--bb-primary));
   border-radius: var(--bb-radius-pill);
+  box-shadow: var(--bb-shadow-xs), inset 0 1px 0 color-mix(in srgb, var(--bb-theme-on-dark) 34%, transparent);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-semibold);
   line-height: 1;
@@ -38803,14 +38817,14 @@ html[data-bs-theme=dark] .bb-web-header-logo-img-dark {
   color: var(--bb-heading-color);
   background-color: var(--bb-body-bg);
   border-color: var(--bb-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
+  box-shadow: var(--bb-shadow-sm), 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
 }
 
 .bb-category-menu-root.is-open .bb-category-menu-trigger {
   color: var(--bb-heading-color);
   background-color: var(--bb-body-bg);
   border-color: var(--bb-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
+  box-shadow: var(--bb-shadow-sm), 0 0 0 4px color-mix(in srgb, var(--bb-primary) 14%, transparent);
 }
 
 .bb-category-menu-trigger-icon,
@@ -38892,20 +38906,21 @@ body.bb-category-menu-open {
 .bb-category-menu-panel {
   position: fixed;
   top: var(--bb-category-overlay-top);
-  left: 50%;
+  right: 0;
+  left: 0;
   z-index: var(--bb-category-panel-z);
-  width: min(var(--bb-category-panel-width), 100vw - 48px);
-  max-width: min(var(--bb-category-panel-width), 100vw - 48px);
-  max-height: calc(100vh - var(--bb-category-overlay-top) - 24px);
+  width: 100%;
+  max-width: none;
+  max-height: calc(100vh - var(--bb-category-overlay-top));
   overflow: hidden;
   color: var(--bb-body-color);
   background-color: var(--bb-body-bg);
-  border: 1px solid var(--bb-border-color);
-  border-radius: 0 0 var(--bb-radius-2xl) var(--bb-radius-2xl);
+  border-top: 1px solid var(--bb-border-color);
+  border-bottom: 1px solid var(--bb-border-color);
   box-shadow: var(--bb-shadow-lg);
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateY(8px);
   pointer-events: none;
   transition: opacity var(--bb-transition-normal), visibility var(--bb-transition-normal), transform var(--bb-transition-normal);
 }
@@ -38913,8 +38928,18 @@ body.bb-category-menu-open {
 .bb-category-menu-root.is-open .bb-category-menu-panel {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
   pointer-events: auto;
+}
+
+.bb-category-menu-panel-inner {
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background-color: var(--bb-body-bg);
+  border-right: 1px solid var(--bb-border-color);
+  border-left: 1px solid var(--bb-border-color);
+  box-shadow: -18px 0 38px color-mix(in srgb, var(--bb-dark) 5%, transparent), 18px 0 38px color-mix(in srgb, var(--bb-dark) 5%, transparent);
 }
 
 /* =====================================
@@ -39008,7 +39033,7 @@ body.bb-category-menu-open {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   align-items: stretch;
-  min-height: 0;
+  min-height: min(32rem, 100vh - var(--bb-category-overlay-top) - 6rem);
   max-height: calc(100vh - var(--bb-category-overlay-top) - 100px);
   background-color: var(--bb-body-bg);
 }
@@ -39313,9 +39338,6 @@ body.bb-category-menu-open {
    Responsive
 ===================================== */
 @media (max-width: 1479.98px) {
-  .bb-category-menu-root {
-    --bb-category-panel-width: 1200px;
-  }
   .bb-category-menu-columns {
     grid-template-columns: repeat(3, minmax(190px, 1fr));
     gap: 26px 30px;
