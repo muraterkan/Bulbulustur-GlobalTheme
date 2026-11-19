@@ -453,6 +453,8 @@
 
 .bb-web-footer-language {
     position: relative;
+    width: 100%;
+    min-width: 0;
 }
 
 .bb-web-footer-language-trigger {
@@ -961,9 +963,15 @@
 }
 
 .bb-web-footer-language .bb-web-language-current {
+    display: inline-flex;
     flex: 1 1 auto;
     justify-content: flex-start;
     color: inherit;
+}
+
+.bb-web-footer-language .bb-web-language-arrow {
+    display: inline-flex;
+    margin-left: auto;
 }
 
 .bb-web-footer-language .bb-web-language-menu {
