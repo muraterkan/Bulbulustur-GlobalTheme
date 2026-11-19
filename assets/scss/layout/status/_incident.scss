@@ -137,7 +137,7 @@
 .bb-status-incident-badge.outage {
   --bb-chip-bg: var(--bb-danger-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
 }
 
 .bb-status-incident-badge .material-symbols-outlined {
@@ -333,19 +333,19 @@
 .bb-status-timeline-state.resolved {
   --bb-chip-bg: var(--bb-success-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-success) 25%, transparent);
-  --bb-chip-color: var(--bb-success);
+  --bb-chip-color: var(--bb-success-text);
 }
 
 .bb-status-timeline-state.monitoring {
   --bb-chip-bg: var(--bb-warning-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-warning) 35%, transparent);
-  --bb-chip-color: var(--bb-warning);
+  --bb-chip-color: var(--bb-warning-text);
 }
 
 .bb-status-timeline-state.identified {
   --bb-chip-bg: var(--bb-danger-light);
   --bb-chip-border-color: color-mix(in srgb, var(--bb-danger) 18%, transparent);
-  --bb-chip-color: var(--bb-danger);
+  --bb-chip-color: var(--bb-danger-text);
 }
 
 .bb-status-timeline-state.update {
