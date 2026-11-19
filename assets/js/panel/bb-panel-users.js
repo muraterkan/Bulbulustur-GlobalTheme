@@ -21,6 +21,15 @@
     {id:12,name:"David Kim",email:"david.kim@acmecloud.com",avatar:"300-14.webp",role:"Geliştirici",team:"Mühendislik",status:"Davetli",auth:"Şifre",last:"Davet gönderildi",joined:"02 May 2026",order:12}
   ];
 
+  // Demo-only additions survive navigation between list and detail in this tab.
+  try {
+    const stored = JSON.parse(sessionStorage.getItem("bb-users-demo-added") || "[]");
+    if (Array.isArray(stored)) stored.forEach(user => {
+      if (user && Number.isSafeInteger(user.id) && typeof user.name === "string" && typeof user.email === "string" &&
+          !users.some(existing => existing.id === user.id)) users.unshift(user);
+    });
+  } catch (_) { /* Storage is optional for the showcase. */ }
+
   const avatarPath = "../../assets/media/avatars/";
   const selected = new Set();
   const pageState = {page:1,size:10,key:"order",ascending:true};
@@ -242,7 +251,12 @@
         notify("Bu e-posta ile örnek kullanıcı zaten mevcut.");
         return;
       }
-      users.unshift({id:Date.now(),name,email,avatar:"",role:String(values.get("role")),team:String(values.get("team")),status:"Davetli",auth:"Şifre",last:"Davet gönderilmedi",joined:"Bugün",order:0});
+      const created = {id:Date.now(),name,email,avatar:"",role:String(values.get("role")),team:String(values.get("team")),status:"Davetli",auth:"Şifre",last:"Davet gönderilmedi",joined:"Bugün",order:0};
+      users.unshift(created);
+      try {
+        const added = JSON.parse(sessionStorage.getItem("bb-users-demo-added") || "[]");
+        sessionStorage.setItem("bb-users-demo-added", JSON.stringify((Array.isArray(added) ? added : []).concat(created)));
+      } catch (_) { /* The in-memory demo still works without storage. */ }
       createForm.reset();
       dialog.close();
       pageState.page = 1;
@@ -278,6 +292,19 @@
     profile.querySelector("[data-bb-user-avatar]").append(avatar(user, 60));
     profile.querySelector("[data-bb-user-last]").textContent = user.last;
     profile.querySelector("[data-bb-user-joined]").textContent = user.joined;
+    const enabledFactors = user.id === 11 ? ["totp", "passkey"] :
+      user.auth === "Doğrulayıcı" ? ["totp"] :
+      user.auth === "Passkey" ? ["passkey"] : [];
+    profile.querySelector("[data-bb-user-factor-summary]").textContent =
+      "3 faktörden " + enabledFactors.length + "'i etkin.";
+    profile.querySelectorAll("[data-bb-user-factor]").forEach(item => {
+      const active = enabledFactors.includes(item.dataset.bbUserFactor);
+      const marker = item.querySelector(".bb-badge");
+      marker.className = "bb-badge bb-badge-light-" + (active ? "success" : "warning");
+      marker.textContent = active ? "Etkin" : "Kapalı";
+    });
+    profile.querySelector("[data-bb-user-factor-count]").textContent =
+      enabledFactors.length + " faktör kayıtlı";
 
     profile.querySelectorAll("[data-bb-users-demo-action]").forEach(button => {
       button.addEventListener("click", () => {
