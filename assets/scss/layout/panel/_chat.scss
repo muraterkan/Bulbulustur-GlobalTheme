@@ -45,3 +45,30 @@
 @media(max-width:991.98px){.bb-panel .bb-chat-workspace{grid-template-columns:minmax(16rem,.75fr) minmax(0,1.25fr)}.bb-panel .bb-chat-message{max-width:88%}}
 @media(max-width:767.98px){.bb-panel .bb-chat-workspace{grid-template-columns:1fr}.bb-panel .bb-chat-list{max-height:22rem}.bb-panel .bb-chat-thread{min-height:38rem}.bb-panel .bb-chat-messages{max-height:48vh}}
 @media(max-width:575.98px){.bb-panel .bb-chat-page{padding:var(--bb-space-3)}.bb-panel .bb-chat-message{max-width:94%}.bb-panel .bb-chat-compose-actions{align-items:stretch;flex-direction:column}.bb-panel .bb-chat-compose-actions>.btn{width:100%}}
+
+/* Chat mesaj başlığı: mevcut bb-chat düzeninin sayfaya özgü avatar kompozisyonu. */
+.bb-panel .bb-chat-message-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+.bb-panel .bb-chat-message[data-side="out"] .bb-chat-message-heading {
+  flex-direction: row-reverse;
+}
+.bb-panel .bb-chat-message-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: calc(var(--bb-space-4) * 2);
+  height: calc(var(--bb-space-4) * 2);
+  border-radius: var(--bb-radius-pill);
+  background: var(--bb-tertiary-bg);
+  color: var(--bb-primary-text);
+  object-fit: cover;
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-panel .bb-chat-list-item[aria-current="true"] {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+}
