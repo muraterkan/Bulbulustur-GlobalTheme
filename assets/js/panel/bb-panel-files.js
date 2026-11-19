@@ -345,7 +345,7 @@
     return article;
   }
   function renderSelection() {
-    const items = visibleItems();
+    const items = visibleItems().filter(item => state.view !== "drive" || !isFolder(item));
     const onPage = items.filter(item => selected.has(item.id)).length;
     const all = $("[data-bb-files-all]");
     all.checked = !!items.length && onPage === items.length;
@@ -404,7 +404,8 @@
   }));
   $("[data-bb-files-all]").addEventListener("change",event => {
     const checked = event.target.checked;
-    visibleItems().forEach(item => checked ? selected.add(item.id) : selected.delete(item.id));
+    visibleItems().filter(item => state.view !== "drive" || !isFolder(item))
+      .forEach(item => checked ? selected.add(item.id) : selected.delete(item.id));
     renderSelection();
   });
   $("[data-bb-files-bulk-trash]").addEventListener("click",() => {
