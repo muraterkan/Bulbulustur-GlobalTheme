@@ -207,7 +207,7 @@
     details.append(summary);
     const menu = element("div","bb-files-actions-menu");
     const actions = [
-      ["Aç / ayrıntı","open",true],
+      ["Aç / ayrıntı","open",state.view !== "trash"],
       [item.starred ? "Yıldızı kaldır" : "Yıldızla","star",state.view !== "trash"],
       ["Yeniden adlandır","rename",state.view !== "trash"],
       ["Taşı","move",state.view !== "trash"],
@@ -229,7 +229,24 @@
   function handleItemAction(item,verb) {
     if (verb === "open") return activate(item);
     if (verb === "star") { item.starred = !item.starred; render(); notify(item.name + " yıldız durumu güncellendi (demo)."); return; }
-    if (verb === "restore") { item.trash = false; render(); notify(item.name + " geri yüklendi (demo)."); return; }
+    if (verb === "restore") {
+      item.trash = false;
+      if (isFolder(item)) {
+        const queue = [item.id];
+        for (let i = 0; i < queue.length; i++) {
+          currentItems().filter(child => child.parent === queue[i]).forEach(child => {
+            child.trash = false;
+            if (isFolder(child)) queue.push(child.id);
+          });
+        }
+      }
+      let ancestor = folders.find(folder => folder.id === item.parent);
+      while (ancestor) {
+        ancestor.trash = false;
+        ancestor = folders.find(folder => folder.id === ancestor.parent);
+      }
+      render(); notify(item.name + " geri yüklendi (demo)."); return;
+    }
     if (verb === "trash") {
       if (isFolder(item)) {
         const queue = [item.id];
@@ -240,7 +257,9 @@
           });
         }
       }
-      item.trash = true; selected.delete(item.id); render(); notify(item.name + " çöp kutusuna taşındı (demo)."); return;
+      item.trash = true; selected.delete(item.id);
+      if (isFolder(item) && state.view === "drive" && isDescendant(state.folder,item.id)) state.folder = "root";
+      render(); notify(item.name + " çöp kutusuna taşındı (demo)."); return;
     }
     dialogItem = item;
     if (verb === "rename") {
@@ -251,6 +270,7 @@
       $("[data-bb-files-share-name]").textContent = item.name;
       $("[data-bb-files-share-state]").textContent = item.shared ? "Paylaşılıyor (örnek)" : "Özel (örnek)";
       $("[data-bb-files-share-toggle]").textContent = item.shared ? "Paylaşımı kapat (demo)" : "Paylaşımı aç (demo)";
+      $("[data-bb-files-share-link]").value = location.href.split("#")[0] + "#file-" + encodeURIComponent(item.id);
       $("[data-bb-files-share-dialog]").showModal();
     }
     if (verb === "move") {
@@ -281,7 +301,7 @@
     checkbox.type = "checkbox";
     checkbox.checked = selected.has(item.id);
     checkbox.setAttribute("aria-label",item.name + " seç");
-    checkbox.addEventListener("change",() => { checkbox.checked ? selected.add(item.id) : selected.delete(item.id); renderSelection(); });
+    checkbox.addEventListener("change",() => { checkbox.checked ? selected.add(item.id) : selected.delete(item.id); checkbox.closest("tr").classList.toggle("bb-panel-list-selected",checkbox.checked); renderSelection(); });
     checkboxCell.append(checkbox);
     tr.append(checkboxCell);
     const name = element("td");
@@ -457,13 +477,19 @@
   document.querySelector("[data-bb-files-upload-open]").addEventListener("click",() => {
     droppedFiles = [];renderQueue();$("[data-bb-files-upload-dialog]").showModal();
   });
+  $("[data-bb-files-storage-action]").addEventListener("click",() => {
+    notify("Depolama ölçümü örnektir. Gerçek kota veya satın alma işlemi yapılmaz.");
+  });
   const uploadField = $("[data-bb-files-upload-input]");
   const uploadZone = $("[data-bb-files-dropzone]");
   function queueFiles(incoming) {
-    const available = Array.from(incoming || []).filter(file => file.size <= 25 * 1000 * 1000);
+    const candidates = Array.from(incoming || []);
+    const available = candidates.filter(file => file.size <= 25 * 1000 * 1000);
     droppedFiles.push(...available);
     renderQueue();
-    notify(available.length + " dosya yükleme kuyruğuna alındı (demo, sunucuya gönderilmez).");
+    notify(available.length + " dosya demo kuyruğunda. " +
+      (candidates.length - available.length ? (candidates.length - available.length) + " dosya 25 MB sınırını aştığı için alınmadı. " : "") +
+      "Sunucuya gönderim yok.");
   }
   function renderQueue() {
     const queue = $("[data-bb-files-upload-queue]");
@@ -488,13 +514,15 @@
   });
   $("[data-bb-files-upload-save]").addEventListener("click",() => {
     const amount = droppedFiles.length;
+    const targetFolder = state.view === "drive" ? state.folder : "root";
     droppedFiles.forEach((file,index) => {
       const ext = file.name.split(".").pop().toUpperCase();
-      files.push({id:"local-" + Date.now() + "-" + index,parent:state.folder,name:file.name,type:ext,size:file.size,owner:0,modified:13,shared:false,starred:false,trash:false});
+      files.push({id:"local-" + Date.now() + "-" + index,parent:targetFolder,name:file.name,type:ext,size:file.size,owner:0,modified:13,shared:false,starred:false,trash:false});
     });
     $("[data-bb-files-upload-dialog]").close();
     droppedFiles = [];
-    render();notify(amount + " dosyanın yalnızca adı ve boyutu bu demo listeye eklendi; içerik yüklenmedi.");
+    openFolder(targetFolder);
+    notify(amount + " dosyanın yalnızca adı ve boyutu demo listeye eklendi; içerik yüklenmedi.");
   });
   $$("[data-bb-files-dialog-close]").forEach(button => {
     const dialog = button.closest("dialog");
