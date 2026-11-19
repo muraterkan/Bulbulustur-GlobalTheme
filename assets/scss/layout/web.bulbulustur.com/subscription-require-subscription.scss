@@ -1,0 +1,29 @@
+/* =====================================
+   Web Subscription / Require Subscription
+   Page-specific composition built on GlobalTheme Core tokens.
+===================================== */
+
+.bb-require-subscription-card {
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.bb-require-subscription-icon {
+  margin-bottom: var(--bb-space-4);
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.bb-require-subscription-title {
+  margin-bottom: var(--bb-space-4);
+}
+
+.bb-require-subscription-text {
+  margin-bottom: var(--bb-space-2);
+}
+
+.bb-require-subscription-btn {
+  margin-top: var(--bb-space-6);
+}

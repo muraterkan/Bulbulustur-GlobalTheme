@@ -1,0 +1,165 @@
+/* =====================================
+   Web Us / Sell On Us
+   Page-specific additions for dynamic UsSellOnUs content and subscription plans.
+   Shared seller/section primitives remain owned by the Web application layer.
+===================================== */
+
+.bb-sou-card {
+  position: relative;
+}
+
+.bb-sou-card-picture {
+  display: block;
+  overflow: hidden;
+  margin-bottom: var(--bb-space-4);
+  border-radius: var(--bb-radius-lg);
+}
+
+.bb-sou-card-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bb-sou-picture-right {
+  order: 2;
+}
+
+.bb-sou-card-label {
+  display: inline-block;
+  margin-bottom: 0.375rem;
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.bb-sou-card-subtitle {
+  margin-bottom: var(--bb-space-1);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-sou-card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-space-2);
+  margin: var(--bb-space-3) 0;
+}
+
+.bb-sou-card-stat {
+  padding: var(--bb-space-1) 0.625rem;
+  font-size: var(--bb-fs-xs);
+  background: var(--bb-tertiary-bg);
+  border-radius: var(--bb-radius-pill);
+}
+
+.bb-sou-card-stat strong {
+  margin-right: var(--bb-space-1);
+}
+
+.bb-sou-section-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Abonelik planları (Draugr) — /subscription sayfasının özetlenmiş hâli */
+.bb-sou-plan-table-wrap {
+  overflow: hidden;
+  margin-top: 2rem;
+  border: 1px solid var(--bb-border-color);
+  border-radius: var(--bb-radius-xl);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.bb-sou-plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--bb-body-color);
+  background: var(--bb-body-bg);
+}
+
+.bb-sou-plan-table th,
+.bb-sou-plan-table td {
+  padding: var(--bb-space-4) var(--bb-space-5);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.bb-sou-plan-table thead th {
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--bb-border-color);
+}
+
+.bb-sou-plan-table tbody tr + tr td {
+  border-top: 1px solid var(--bb-border-color);
+}
+
+.bb-sou-plan-table-name {
+  color: var(--bb-heading-color);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-bold);
+}
+
+.bb-sou-plan-table-price {
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-sou-plan-table-select {
+  white-space: nowrap;
+}
+
+.bb-sou-plan-footnote {
+  margin-top: var(--bb-space-6);
+  text-align: center;
+}
+
+/* Kurucu notu */
+.bb-sou-founder-section {
+  padding: 3rem 0;
+}
+
+.bb-sou-founder-quote {
+  max-width: 47.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bb-sou-founder-quote p {
+  font-size: var(--bb-fs-xl);
+  font-style: italic;
+  line-height: var(--bb-line-height-base);
+}
+
+.bb-sou-founder-picture {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto var(--bb-space-4);
+  object-fit: cover;
+  border-radius: var(--bb-radius-pill);
+}
+
+.bb-sou-founder-quote footer {
+  margin-top: var(--bb-space-4);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+@media (max-width: 768px) {
+  .bb-sou-plan-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .bb-sou-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}

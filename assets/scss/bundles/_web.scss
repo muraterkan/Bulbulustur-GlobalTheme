@@ -235,3 +235,9 @@
 @use "../layout/web.bulbulustur.com/store-index";
 @use "../layout/web.bulbulustur.com/store-reviews";
 @use "../layout/web.bulbulustur.com/store-profile";
+
+/* Web page-specific compositions migrated from standalone CSS files. */
+@use "../layout/web.bulbulustur.com/product-posb";
+@use "../layout/web.bulbulustur.com/subscription-require-subscription";
+@use "../layout/web.bulbulustur.com/us-sell-on-us";
+
