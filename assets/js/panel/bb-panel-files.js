@@ -384,7 +384,7 @@
       state.view === "drive" ? (folders.find(folder => folder.id === state.folder)?.name || "Dosyalarım") :
       ({shared:"Benimle paylaşılanlar",recent:"Son kullanılanlar",starred:"Yıldızlılar",trash:"Çöp kutusu"})[state.view];
     $("[data-bb-files-count]").textContent = items.length + " öğe";
-    $("[data-bb-files-create-folder]").disabled = state.view !== "drive";
+    document.querySelector("[data-bb-files-create-folder]").disabled = state.view !== "drive";
     renderSelection();
   }
 
