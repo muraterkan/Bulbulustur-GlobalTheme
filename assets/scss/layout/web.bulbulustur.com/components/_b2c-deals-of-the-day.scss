@@ -30,11 +30,10 @@
 /* Head */
 
 .bb-b2c-deals-day-head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: end;
   gap: 1rem;
-  flex-wrap: wrap;
 
   margin-bottom: 1.25rem;
 }
@@ -64,17 +63,16 @@
 }
 
 .bb-b2c-deals-day-head-right {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.875rem;
-  flex-wrap: wrap;
+  display: contents;
 }
 
 .bb-b2c-deals-day-timer-wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  justify-self: center;
 }
 
 .bb-b2c-deals-day-timer {
@@ -102,6 +100,7 @@
 }
 
 .bb-b2c-deals-day-all-link {
+  justify-self: end;
   min-height: 2.625rem;
   border-radius: var(--bb-radius-pill);
   font-size: var(--bb-fs-sm);;
@@ -196,18 +195,22 @@
   }
 
   .bb-b2c-deals-day-head {
+    grid-template-columns: 1fr;
     align-items: flex-start;
-    flex-direction: column;
   }
 
-  .bb-b2c-deals-day-head-right {
+  .bb-b2c-deals-day-timer-wrap,
+  .bb-b2c-deals-day-all-link {
     width: 100%;
-    align-items: stretch;
-    flex-direction: column;
+    justify-self: stretch;
+  }
+
+  .bb-b2c-deals-day-timer-wrap {
+    justify-content: flex-start;
   }
 
   .bb-b2c-deals-day-all-link {
-    width: 100%;
+    justify-content: center;
   }
 
 }
