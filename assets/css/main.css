@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* =====================================
-   Bulbulustur Theme — Main Stylesheet
+   Bulbulustur Theme — Legacy Compatibility Bundle
+===================================== */
+/* =====================================
+   Bundle Layer — Core Foundation
+   Tokens, base, utilities and shared layout.
 ===================================== */
 /* 1. Foundation / Tokens */
 /* =====================================
@@ -8401,6 +8405,10 @@ Header
     padding: 0.75rem 1rem;
   }
 }
+/* =====================================
+   Bundle Layer — Panel Shell
+   Panel-only shell/page layouts.
+===================================== */
 /* Panel + component catalog dark profile.
    Neutral charcoal only: no navy/blue cast in UI surfaces. */
 html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
@@ -19673,6 +19681,10 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
     border: 0;
   }
 }
+/* =====================================
+   Bundle Layer — Core Components Head
+   Early core components kept before panel compositions.
+===================================== */
 /* 5. Components */
 /* =====================================
    Bulbulustur Theme — Buttons
@@ -20917,6 +20929,10 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 }
 
 /* =====================================
+   Bundle Layer — Panel Compositions
+   Panel-only page/widget compositions.
+===================================== */
+/* =====================================
    Bulbulustur Theme — Charts
    Chart.js host/layout only. All visual colors come from DataViz tokens.
 ===================================== */
@@ -21640,6 +21656,10 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   --bb-card-bg: var(--bb-surface-elevated);
 }
 
+/* =====================================
+   Bundle Layer — Core Components Tail
+   Remaining reusable core components.
+===================================== */
 /* =====================================
    Empty State
    Main CSS component
@@ -28373,6 +28393,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
 -------------------------------------------------- */
 /* ================================================== */
 /* ================================================== */
+/* =====================================
+   Bundle Layer — Status
+   Status application styles only.
+===================================== */
 /* 7. Status Pages */
 /* Status projesinin genel token, shell, header, footer, card, border, radius ve layout varsayılanları burada. */
 /* Status project — Bulbulustur.Service.Status.API status.css (18.11.2026) ile aynı içerik; artık yalnız buradan yönetilir. */
@@ -32707,6 +32731,10 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   font-weight: var(--bb-status-component-fw);
 }
 
+/* =====================================
+   Bundle Layer — Web
+   Bulbulustur Web application styles only.
+===================================== */
 /* 8. Web Bulbulustur Pages */
 /* Ana web projesinde hafif layout, auth/form ve ileride sayfa bazlı düzenler burada. */
 /* =====================================
@@ -109638,6 +109666,10 @@ body.bb-b2c-detail-review-gallery-open {
     border-radius: var(--bb-radius);
   }
 }
+/* =====================================
+   Bundle Layer — Core Final
+   Final core guards that must compile after application layers.
+===================================== */
 /* 6. Final Overrides */
 /* Bootstrap ve page-level ezmelerden sonra form objelerini tekrar Main CSS standardına sabitler. */
 /* =====================================
