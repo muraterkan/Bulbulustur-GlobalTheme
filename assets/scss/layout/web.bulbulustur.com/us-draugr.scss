@@ -362,6 +362,20 @@
   opacity: 0.56;
 }
 
+.bb-draugr-console-bars span:nth-child(1) { height: 32%; }
+.bb-draugr-console-bars span:nth-child(2) { height: 44%; }
+.bb-draugr-console-bars span:nth-child(3) { height: 38%; }
+.bb-draugr-console-bars span:nth-child(4) { height: 58%; }
+.bb-draugr-console-bars span:nth-child(5) { height: 72%; }
+.bb-draugr-console-bars span:nth-child(6) { height: 64%; }
+.bb-draugr-console-bars span:nth-child(7) { height: 82%; }
+.bb-draugr-console-bars span:nth-child(8) { height: 94%; }
+.bb-draugr-console-bars span:nth-child(9) { height: 76%; }
+.bb-draugr-console-bars span:nth-child(10) { height: 68%; }
+.bb-draugr-console-bars span:nth-child(11) { height: 54%; }
+.bb-draugr-console-bars span:nth-child(12) { height: 42%; }
+
+
 .bb-draugr-console-feed {
   display: flex;
   flex-direction: column;
@@ -535,9 +549,9 @@
   border-radius: var(--bb-radius-xl);
   background: var(--bb-draugr-soft);
   transition:
-    transform var(--bb-transition-normal),
-    border-color var(--bb-transition-normal),
-    background-color var(--bb-transition-normal);
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .bb-draugr-service-card:hover {
@@ -973,7 +987,7 @@
 
 .bb-draugr-faq-shell .bb-accordion-icon {
   color: var(--bb-draugr-accent);
-  transition: transform var(--bb-transition-normal);
+  transition: transform 0.2s ease;
 }
 
 .bb-draugr-faq-shell .accordion-button[aria-expanded="true"] .bb-accordion-icon {
