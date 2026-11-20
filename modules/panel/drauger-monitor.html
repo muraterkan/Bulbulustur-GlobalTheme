@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drauger Node &amp; Sunucu Monitörü — Bulbulustur Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/panel.css" />
+</head>
+<body class="bb-panel-body">
+  <div class="bb-app-shell">
+    <!-- SIDEBAR -->
+    <aside class="bb-sidebar" id="bbSidebar">
+      <div class="bb-sidebar-brand">
+        <span class="material-icons-outlined bb-brand-icon">hub</span>
+        <span class="bb-brand-text">Bulbulustur</span>
+        <span class="bb-badge bb-badge-neutral">v2.4</span>
+      </div>
+
+      <nav class="bb-sidebar-nav">
+        <div class="bb-nav-group">
+          <div class="bb-nav-label">GENEL</div>
+          <a href="dashboard.html" class="bb-nav-item">
+            <span class="material-icons-outlined">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+        </div>
+
+        <div class="bb-nav-group">
+          <div class="bb-nav-label">APPLICATIONS</div>
+          <a href="integrations.html" class="bb-nav-item">
+            <span class="material-icons-outlined">extension</span>
+            <span>Entegrasyonlar</span>
+          </a>
+          <a href="drauger-monitor.html" class="bb-nav-item is-active">
+            <span class="material-icons-outlined">dns</span>
+            <span>Drauger Node Monitör</span>
+          </a>
+          <a href="files.html" class="bb-nav-item">
+            <span class="material-icons-outlined">folder</span>
+            <span>Dosya Yöneticisi</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- MAIN SHELL -->
+    <div class="bb-main-wrapper">
+      <!-- HEADER -->
+      <header class="bb-shell-header">
+        <div class="bb-header-left">
+          <button type="button" class="bb-icon-btn" id="bbSidebarToggle" aria-label="Menüyü Aç/Kapat">
+            <span class="material-icons-outlined">menu</span>
+          </button>
+          <div class="bb-tenant-selector">
+            <span class="material-icons-outlined">cloud_queue</span>
+            <select id="bbTenantSelect" class="bb-select-sm" aria-label="Drauger Tenant Seçimi">
+              <option value="ortobella" selected>ortobella.drauger.net (k8s-node-04)</option>
+              <option value="velora">velora.drauger.net (k8s-node-07)</option>
+              <option value="kuzeyoutdoor">kuzeyoutdoor.drauger.net (k8s-node-11)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bb-header-right">
+          <span class="bb-live-indicator" id="bbStreamStatus">
+            <span class="bb-status-dot is-online"></span>
+            <span>Telemetri Canlı (5sn)</span>
+          </span>
+          <button type="button" class="bb-btn bb-btn-ghost bb-btn-sm" id="bbManualRefresh">
+            <span class="material-icons-outlined">refresh</span>
+            <span>Yenile</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- TOOLBAR -->
+      <div class="bb-toolbar">
+        <div class="bb-toolbar-title">
+          <h1>Drauger Tenant Sunucu &amp; Sync Monitörü</h1>
+          <nav class="bb-breadcrumb" aria-label="Breadcrumb">
+            <span>Applications</span>
+            <span class="material-icons-outlined">chevron_right</span>
+            <span>Altyapı &amp; Telemetri</span>
+            <span class="material-icons-outlined">chevron_right</span>
+            <strong id="bbActiveDomainLabel">ortobella.drauger.net</strong>
+          </nav>
+        </div>
+
+        <div class="bb-toolbar-actions">
+          <div class="bb-segmented-control" role="group" aria-label="Zaman Aralığı">
+            <button type="button" class="bb-seg-btn is-active" data-range="1h">1S</button>
+            <button type="button" class="bb-seg-btn" data-range="6h">6S</button>
+            <button type="button" class="bb-seg-btn" data-range="24h">24S</button>
+            <button type="button" class="bb-seg-btn" data-range="7d">7G</button>
+          </div>
+          <button type="button" class="bb-btn bb-btn-primary bb-btn-sm" id="bbTriggerSyncBtn">
+            <span class="material-icons-outlined">sync</span>
+            <span>Master Katalog Sync Tetikle</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <main class="bb-content">
+        <!-- KPI ROW -->
+        <section class="bb-grid bb-grid-4">
+          <article class="bb-card bb-kpi-card">
+            <div class="bb-kpi-head">
+              <span class="bb-kpi-label">K8s Node CPU / Pod Yükü</span>
+              <span class="material-icons-outlined bb-kpi-icon">memory</span>
+            </div>
+            <div class="bb-kpi-value" id="kpiCpuValue">34.8%</div>
+            <div class="bb-progress bb-progress-sm">
+              <div class="bb-progress-bar is-success" id="kpiCpuBar" style="width: 34.8%"></div>
+            </div>
+            <div class="bb-kpi-foot">
+              <span class="bb-badge bb-badge-success" id="kpiNodeBadge">4 vCPU • Sağlıklı</span>
+              <span class="bb-text-muted" id="kpiUptimeText">Uptime: 42g 11s</span>
+            </div>
+          </article>
+
+          <article class="bb-card bb-kpi-card">
+            <div class="bb-kpi-head">
+              <span class="bb-kpi-label">Node Bellek (RAM) Kullanımı</span>
+              <span class="material-icons-outlined bb-kpi-icon">storage</span>
+            </div>
+            <div class="bb-kpi-value" id="kpiRamValue">5.4 / 8.0 GB</div>
+            <div class="bb-progress bb-progress-sm">
+              <div class="bb-progress-bar is-warning" id="kpiRamBar" style="width: 67.5%"></div>
+            </div>
+            <div class="bb-kpi-foot">
+              <span class="bb-badge bb-badge-neutral">App + Local PostgreSQL</span>
+              <span class="bb-text-muted" id="kpiRamPct">67.5%</span>
+            </div>
+          </article>
+
+          <article class="bb-card bb-kpi-card">
+            <div class="bb-kpi-head">
+              <span class="bb-kpi-label">Yerel PostgreSQL Gecikmesi</span>
+              <span class="material-icons-outlined bb-kpi-icon">speed</span>
+            </div>
+            <div class="bb-kpi-value" id="kpiDbLatency">4.2 ms</div>
+            <div class="bb-kpi-foot">
+              <span class="bb-badge bb-badge-success" id="kpiDbConn">38 / 150 Aktif Bağlantı</span>
+              <span class="bb-text-muted">P95: 9.1 ms</span>
+            </div>
+          </article>
+
+          <article class="bb-card bb-kpi-card">
+            <div class="bb-kpi-head">
+              <span class="bb-kpi-label">Bulbulustur Sync Kuyruğu</span>
+              <span class="material-icons-outlined bb-kpi-icon">sync_alt</span>
+            </div>
+            <div class="bb-kpi-value" id="kpiSyncLag">0 Bekleyen</div>
+            <div class="bb-kpi-foot">
+              <span class="bb-badge bb-badge-success" id="kpiSyncState">Eşitlendi</span>
+              <span class="bb-text-muted" id="kpiLastSync">Son: 18 sn önce</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- MIDDLE GRID: TELEMETRY + SHARED API GATEWAY -->
+        <section class="bb-grid bb-grid-2-1">
+          <!-- NODE & CONTAINER TELEMETRY -->
+          <article class="bb-card">
+            <div class="bb-card-header">
+              <div>
+                <h2 class="bb-card-title">Node Kaynak &amp; İstek Akışı</h2>
+                <p class="bb-card-subtitle">İzole Kubernetes pod metrikleri ve saniyelik HTTP/SSR yanıt dağılımı</p>
+              </div>
+              <span class="bb-mono-tag" id="bbPodIdTag">pod/drauger-ortobella-7f8d9c-x2k9p</span>
+            </div>
+
+            <div class="bb-card-body">
+              <div class="bb-telemetry-bars" id="bbTelemetryChart" aria-label="CPU ve İstek Yoğunluğu Grafiği"></div>
+
+              <div class="bb-metric-strip">
+                <div class="bb-metric-item">
+                  <span class="bb-text-muted">İstek / Dakika (RPM)</span>
+                  <strong id="metricRpm">1,420</strong>
+                </div>
+                <div class="bb-metric-item">
+                  <span class="bb-text-muted">Ortalama SSR Süresi</span>
+                  <strong id="metricSsr">38 ms</strong>
+                </div>
+                <div class="bb-metric-item">
+                  <span class="bb-text-muted">5xx Hata Oranı</span>
+                  <strong id="metricErrRate" class="bb-text-success">0.01%</strong>
+                </div>
+                <div class="bb-metric-item">
+                  <span class="bb-text-muted">Disk Kullanımı (NVMe)</span>
+                  <strong id="metricDisk">41.2 / 120 GB</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SHARED BULBULUSTUR SERVICES -->
+          <article class="bb-card">
+            <div class="bb-card-header">
+              <div>
+                <h2 class="bb-card-title">Ortak Bulbulustur API Sağlığı</h2>
+                <p class="bb-card-subtitle">Tenant üzerinden paylaşımlı servis çağrıları</p>
+              </div>
+            </div>
+
+            <div class="bb-card-body">
+              <ul class="bb-service-list" id="bbSharedServicesList">
+                <li class="bb-service-row">
+                  <div class="bb-service-info">
+                    <span class="material-icons-outlined">category</span>
+                    <div>
+                      <strong>Master Katalog &amp; Kategori</strong>
+                      <small>Otomatik eşleştirme &amp; aktarım</small>
+                    </div>
+                  </div>
+                  <span class="bb-badge bb-badge-success">12 ms • OK</span>
+                </li>
+                <li class="bb-service-row">
+                  <div class="bb-service-info">
+                    <span class="material-icons-outlined">credit_card</span>
+                    <div>
+                      <strong>Ödeme Gateway (POSX / Drager)</strong>
+                      <small>Sanal POS &amp; 3D Secure</small>
+                    </div>
+                  </div>
+                  <span class="bb-badge bb-badge-success">94 ms • OK</span>
+                </li>
+                <li class="bb-service-row">
+                  <div class="bb-service-info">
+                    <span class="material-icons-outlined">local_shipping</span>
+                    <div>
+                      <strong>Kargo &amp; Lojistik API</strong>
+                      <small>Barkod &amp; takip webhook</small>
+                    </div>
+                  </div>
+                  <span class="bb-badge bb-badge-success">68 ms • OK</span>
+                </li>
+                <li class="bb-service-row">
+                  <div class="bb-service-info">
+                    <span class="material-icons-outlined">translate</span>
+                    <div>
+                      <strong>Globalization Engine (41 Dil)</strong>
+                      <small>Aktif: TR, EN, DE, AR, RU</small>
+                    </div>
+                  </div>
+                  <span class="bb-badge bb-badge-neutral">Cache %99.4</span>
+                </li>
+                <li class="bb-service-row">
+                  <div class="bb-service-info">
+                    <span class="material-icons-outlined">notifications_active</span>
+                    <div>
+                      <strong>E-Posta &amp; SMS Kuyruğu</strong>
+                      <small>Hangfire Worker</small>
+                    </div>
+                  </div>
+                  <span class="bb-badge bb-badge-success">Aktif</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <!-- BOTTOM TABLE: NODE CONTAINERS & SYNC LOGS -->
+        <section class="bb-card">
+          <div class="bb-card-header">
+            <div>
+              <h2 class="bb-card-title">Node Üzerindeki Servisler &amp; Son Senkronizasyon Olayları</h2>
+              <p class="bb-card-subtitle">İlgili Linux node içindeki konteynerler ve Bulbulustur veri aktarım kayıtları</p>
+            </div>
+            <div class="bb-filter-bar">
+              <select id="bbLogFilter" class="bb-select-sm" aria-label="Kayıt Filtresi">
+                <option value="all">Tüm Kayıtlar</option>
+                <option value="sync">Ürün / Kategori Sync</option>
+                <option value="system">Sistem &amp; K8s</option>
+                <option value="warn">Uyarılar</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bb-table-responsive">
+            <table class="bb-table">
+              <thead>
+                <tr>
+                  <th>Zaman</th>
+                  <th>Bileşen / Kaynak</th>
+                  <th>İşlem Detayı</th>
+                  <th>Süre</th>
+                  <th>Durum</th>
+                </tr>
+              </thead>
+              <tbody id="bbTelemetryLogsBody">
+                <!-- JS tarafından doldurulur -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="bb-footer">
+        <span>Bulbulustur Ecosystem • Drauger Infrastructure Telemetry</span>
+        <span>K8s Cluster: <strong>prod-eu-central</strong></span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../../assets/js/panel/bb-panel-drauger-monitor.js"></script>
+</body>
+</html>
