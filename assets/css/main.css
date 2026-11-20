@@ -8447,29 +8447,30 @@ Header
    Neutral charcoal only: no navy/blue cast in UI surfaces. */
 html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   color-scheme: dark;
-  --bb-body-bg: #15171b;
-  --bb-body-color: #d2d6dc;
+  --bb-body-bg: #0c0d0f;
+  --bb-body-color: #e1e4e8;
   --bb-fw-body: var(--bb-fw-medium);
   --bb-sidebar-text-color: #c3c8d0;
-  --bb-secondary-bg: #202228;
-  --bb-tertiary-bg: #1c1e23;
-  --bb-surface-bg: #1a1c20;
-  --bb-surface-soft: #1e2025;
-  --bb-surface-muted: #23262c;
-  --bb-surface-elevated: #292c33;
+  --bb-panel-sidebar-bg: #090a0c;
+  --bb-secondary-bg: #212328;
+  --bb-tertiary-bg: #0c0d0f;
+  --bb-surface-bg: #17191c;
+  --bb-surface-soft: #1c1e22;
+  --bb-surface-muted: #22252a;
+  --bb-surface-elevated: #2b2e34;
   --bb-emphasis-color: #dde1e6;
   --bb-heading-color: #e1e4e8;
   --bb-secondary-color: #a8aeb8;
   --bb-tertiary-color: #808792;
-  --bb-body-bg-rgb: 21, 23, 27;
-  --bb-body-color-rgb: 210, 214, 220;
-  --bb-secondary-bg-rgb: 32, 34, 40;
-  --bb-tertiary-bg-rgb: 28, 30, 35;
+  --bb-body-bg-rgb: 12, 13, 15;
+  --bb-body-color-rgb: 225, 228, 232;
+  --bb-secondary-bg-rgb: 33, 35, 40;
+  --bb-tertiary-bg-rgb: 12, 13, 15;
   --bb-secondary-color-rgb: 168, 174, 184;
   --bb-tertiary-color-rgb: 128, 135, 146;
-  --bb-border-color: rgba(255, 255, 255, 0.08);
-  --bb-border-color-strong: rgba(255, 255, 255, 0.13);
-  --bb-border-dashed-color: rgba(255, 255, 255, 0.12);
+  --bb-border-color: rgba(255, 255, 255, 0.10);
+  --bb-border-color-strong: rgba(255, 255, 255, 0.17);
+  --bb-border-dashed-color: rgba(255, 255, 255, 0.14);
   --bb-brand-secondary: #23262c;
   --bb-brand-secondary-rgb: 35, 38, 44;
   --bb-brand-secondary-inverse: #e3e5e8;
@@ -8497,14 +8498,20 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   --bb-secondary-inverse: var(--bb-theme-on-secondary);
   --bb-dark-inverse: var(--bb-theme-on-dark);
   --bb-light-inverse: var(--bb-theme-on-light);
-  --bb-header-bg: #181a1f;
-  --bb-header-color: #d2d6dc;
+  --bb-header-bg: #0c0d0f;
+  --bb-header-color: #e1e4e8;
   --bb-header-border-color: var(--bb-border-color);
-  --bb-footer-bg: #15171b;
-  --bb-footer-bg-soft: #191b20;
-  --bb-footer-bottom-bg: #121317;
+  --bb-footer-bg: #0c0d0f;
+  --bb-footer-bg-soft: #111215;
+  --bb-footer-bottom-bg: #090a0c;
   --bb-link-color: #b6bcc5;
   --bb-link-hover-color: var(--bb-primary);
+}
+
+/* The navigation rail is deliberately a shade darker than the content canvas.
+   The sidebar component still owns its layout, width and interactive states. */
+html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
+  --bb-sidebar-bg: var(--bb-panel-sidebar-bg);
 }
 
 /* =====================================
