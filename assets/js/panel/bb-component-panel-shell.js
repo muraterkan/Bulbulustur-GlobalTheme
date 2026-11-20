@@ -210,20 +210,6 @@
           renderComponentSidebar(),
         '</nav>',
       '</div>',
-      '<div class="bb-sidebar-footer"><div class="bb-panel-overlay-host bb-panel-sidebar-account" data-bb-panel-popup>' +
-        '<button class="bb-panel-sidebar-account-toggle" type="button" data-bb-panel-popup-toggle aria-controls="bb_sidebar_account_pop" aria-haspopup="true" aria-expanded="false" aria-label="Account and workspace menu"><span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span><span class="bb-panel-sidebar-account-text"><strong>Bulbulustur</strong><small>Demo User</small></span><span class="material-symbols-outlined" aria-hidden="true">unfold_more</span></button>' +
-        '<div id="bb_sidebar_account_pop" class="bb-panel-popover bb-panel-user-menu bb-panel-sidebar-account-menu" data-bb-panel-popup-content hidden>' +
-          '<div class="bb-panel-user-summary"><span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span><span class="bb-panel-user-info"><span class="bb-panel-user-name">Bulbulustur Workspace</span><small>1 member · Store plan</small></span></div>' +
-          '<div class="bb-panel-user-section">Apps</div><div class="bb-panel-user-group">' +
-          '<a class="bb-panel-user-item" href="../panel/posb.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span>PosB</span><span class="bb-panel-user-meta">POS rental</span></a>' +
-          '<a class="bb-panel-user-item" href="../panel/draugr.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">language</span>Draugr</span></a>' +
-          '<a class="bb-panel-user-item" href="menu.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Components</span></a>' +'</div>' +
-          '<div class="bb-panel-user-section">demo@example.com</div><div class="bb-panel-user-group">' +
-          '<a class="bb-panel-user-item" href="../panel/profile.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">account_circle</span>Profile</span></a>' +
-          '<a class="bb-panel-user-item" href="../panel/account.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>Account settings</span></a>' +
-          '<a class="bb-panel-user-item" href="../panel/support-center.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>Get Support</span></a>' +
-          '<a class="bb-panel-user-item" href="../panel/sign-in.html"><span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">logout</span>Log out</span></a>' +'</div>' +
-        '</div></div></div>',
     '</aside>',
     '<button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close menu" aria-hidden="true" tabindex="-1"></button>',
     '<div class="bb-shell">',

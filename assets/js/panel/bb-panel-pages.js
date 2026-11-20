@@ -34,7 +34,6 @@
     "draugr-localization": {title:"Dil & Yerelleştirme", group:"Draugr", section:"DRAUGR"},
     "draugr-settings": {title:"Channel Settings", group:"Draugr", section:"DRAUGR"},
     "draugr-subscription": {title:"Subscription", group:"Draugr", section:"DRAUGR"},
-    "posb-dashboard": {title:"Dashboard", group:"PosB", section:"PosB"},
     "posb-quick-sale": {title:"Quick Sale", group:"PosB", section:"PosB"},
     "posb-branches": {title:"Branches", group:"PosB / Branch & Kasa", section:"PosB"},
     "posb-registers": {title:"Cash Registers", group:"PosB / Branch & Kasa", section:"PosB"},

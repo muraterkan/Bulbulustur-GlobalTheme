@@ -21,39 +21,51 @@ if (topnav) {
           <div class="bb-panel-mega-layout">
             <div class="bb-panel-mega-main">
               <div class="bb-panel-mega-items">
-                <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="profile.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
-                  <span><strong>Profile</strong><small>User overview and activity</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-success" href="account.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
-                  <span><strong>Account</strong><small>Settings, security and preferences</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="invoices.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></span>
-                  <span><strong>Invoices</strong><small>Invoice list and details</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="pricing.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">payments</span></span>
-                  <span><strong>Pricing</strong><small>Compare plans and packages</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="team.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span>
-                  <span><strong>Our Team</strong><small>Corporate team and culture page</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-info" href="blog.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">article</span></span>
-                  <span><strong>Blog</strong><small>Content and publishing screens</small></span>
-                </a>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-primary" href="profile.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
+                    <span><strong>Profile</strong><small>User overview and activity</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-success" href="account.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span></span>
+                    <span><strong>Account</strong><small>Settings, security and preferences</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-warning" href="invoices.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">receipt_long</span></span>
+                    <span><strong>Invoices</strong><small>Invoice list and details</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-danger" href="pricing.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">payments</span></span>
+                    <span><strong>Pricing</strong><small>Compare plans and packages</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-violet" href="team.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">groups</span></span>
+                    <span><strong>Our Team</strong><small>Corporate team and culture page</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-info" href="blog.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">article</span></span>
+                    <span><strong>Blog</strong><small>Content and publishing screens</small></span>
+                  </a>
+                </div>
               </div>
             </div>
             <aside class="bb-panel-mega-side" aria-label="Daha fazla sayfa">
               <strong>More Pages</strong>
-              <a href="social-feed.html">Social Feed</a>
-              <a href="profile-settings.html">Profile Settings</a>
-              <a href="statistics.html">Statistics</a>
-              <a href="charts.html">Charts</a>
-              <a href="widget-lists.html">Widget Lists</a>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="social-feed.html">Social Feed</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="profile-settings.html">Profile Settings</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="statistics.html">Statistics</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="charts.html">Charts</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="widget-lists.html">Widget Lists</a></div>
             </aside>
           </div>
           <div class="bb-panel-mega-footer">
@@ -71,39 +83,51 @@ if (topnav) {
           <div class="bb-panel-mega-layout">
             <div class="bb-panel-mega-main">
               <div class="bb-panel-mega-items">
-                <a class="bb-panel-mega-link bb-panel-mega-link-primary" href="orders.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span></span>
-                  <span><strong>Orders</strong><small>Order list and detail flow</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-success" href="create-product.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">add_box</span></span>
-                  <span><strong>Create Product</strong><small>Product form and content fields</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-warning" href="contacts.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">contacts</span></span>
-                  <span><strong>Contacts</strong><small>Contact cards and list view</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-danger" href="subscription.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">subscriptions</span></span>
-                  <span><strong>Subscription</strong><small>Plan status and subscription details</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-violet" href="roles.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span></span>
-                  <span><strong>Roles</strong><small>Role list and management view</small></span>
-                </a>
-                <a class="bb-panel-mega-link bb-panel-mega-link-info" href="permissions.html">
-                  <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span></span>
-                  <span><strong>Permissions</strong><small>Permission matrix and access scopes</small></span>
-                </a>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-primary" href="orders.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span></span>
+                    <span><strong>Orders</strong><small>Order list and detail flow</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-success" href="create-product.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">add_box</span></span>
+                    <span><strong>Create Product</strong><small>Product form and content fields</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-warning" href="contacts.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">contacts</span></span>
+                    <span><strong>Contacts</strong><small>Contact cards and list view</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-danger" href="subscription.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">subscriptions</span></span>
+                    <span><strong>Subscription</strong><small>Plan status and subscription details</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-violet" href="roles.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span></span>
+                    <span><strong>Roles</strong><small>Role list and management view</small></span>
+                  </a>
+                </div>
+                <div class="bb-menu-item">
+                  <a class="bb-menu-link bb-panel-mega-link-info" href="permissions.html">
+                    <span class="bb-panel-mega-icon"><span class="material-symbols-outlined" aria-hidden="true">verified_user</span></span>
+                    <span><strong>Permissions</strong><small>Permission matrix and access scopes</small></span>
+                  </a>
+                </div>
               </div>
             </div>
             <aside class="bb-panel-mega-side" aria-label="Tools and examples">
               <strong>Tools and Examples</strong>
-              <a href="lists.html">List / Table</a>
-              <a href="forms.html">Forms</a>
-              <a href="charts.html">Charts</a>
-              <a href="statistics.html">Statistics</a>
-              <a href="widget-lists.html">Widget Lists</a>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="lists.html">List / Table</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="forms.html">Forms</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="charts.html">Charts</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="statistics.html">Statistics</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="widget-lists.html">Widget Lists</a></div>
             </aside>
           </div>
           <div class="bb-panel-mega-footer">
@@ -118,10 +142,10 @@ if (topnav) {
           Layouts <span class="bb-menu-arrow" aria-hidden="true"></span>
         </button>
         <div class="bb-menu-sub bb-menu-sub-dropdown bb-panel-nav-menu" id="bb_panel_topnav_layouts" data-bb-menu-placement="bottom-start">
-          <a class="bb-panel-nav-menu-link" href="layouts.html"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span><span><strong>Layout Plans</strong><small>Sidebar, top navigation and auth layouts</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="header.html"><span class="material-symbols-outlined" aria-hidden="true">web_asset</span><span><strong>Header</strong><small>Header and top navigation</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="sidebar.html"><span class="material-symbols-outlined" aria-hidden="true">left_panel_open</span><span><strong>Sidebar</strong><small>Panel sidebar</small></span></a>
-          <a class="bb-panel-nav-menu-link" href="toolbar.html"><span class="material-symbols-outlined" aria-hidden="true">toolbar</span><span><strong>Toolbar</strong><small>Title, breadcrumb and actions</small></span></a>
+          <div class="bb-menu-item"><a class="bb-menu-link bb-panel-nav-menu-link" href="layouts.html"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">dashboard_customize</span></span><span><strong>Layout Plans</strong><small>Sidebar, top navigation and auth layouts</small></span></a></div>
+          <div class="bb-menu-item"><a class="bb-menu-link bb-panel-nav-menu-link" href="header.html"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">web_asset</span></span><span><strong>Header</strong><small>Header and top navigation</small></span></a></div>
+          <div class="bb-menu-item"><a class="bb-menu-link bb-panel-nav-menu-link" href="sidebar.html"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">left_panel_open</span></span><span><strong>Sidebar</strong><small>Panel sidebar</small></span></a></div>
+          <div class="bb-menu-item"><a class="bb-menu-link bb-panel-nav-menu-link" href="toolbar.html"><span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">toolbar</span></span><span><strong>Toolbar</strong><small>Title, breadcrumb and actions</small></span></a></div>
         </div>
       </div>
 
@@ -137,6 +161,7 @@ if (topnav) {
     if (!href || href.charAt(0) === "#" || href.indexOf("../") === 0) return;
     var targetPage = href.split(/[?#]/)[0].split("/").pop().toLowerCase();
     if (targetPage !== currentPage) return;
+    link.classList.add("active");
     link.setAttribute("aria-current", "page");
     var group = link.closest("[data-bb-panel-nav-group]");
     if (group) group.classList.add("active");
