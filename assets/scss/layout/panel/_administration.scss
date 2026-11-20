@@ -2,7 +2,7 @@
 .bb-panel .bb-admin-showcase{--bb-showcase-gap:var(--bb-space-4)}
 .bb-panel .bb-admin-showcase .bb-panel-content-container{display:grid;gap:var(--bb-showcase-gap)}
 .bb-panel .bb-showcase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-showcase-gap)}
-.bb-panel .bb-showcase-card{min-width:0;padding:var(--bb-space-4);border:var(--bb-border-width) solid var(--bb-border-color);background:var(--bb-surface-bg);border-radius:var(--bb-radius-lg)}
+.bb-panel .bb-showcase-card{min-width:0;padding:var(--bb-space-4)}
 .bb-panel .bb-showcase-card h2{font-size:var(--bb-h4);color:var(--bb-heading-color);font-weight:var(--bb-fw-semibold);margin-bottom:var(--bb-space-4)}
 .bb-panel .bb-showcase-muted{color:var(--bb-secondary-color);font-size:var(--bb-fs-sm)}
 .bb-panel .bb-role-card{display:flex;flex-direction:column;min-height:100%}
