@@ -25170,7 +25170,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
      Local tokens (override-friendly)
   ----------------------------------- */
   /* surfaces + text (dark/light safe fallbacks) */
-  --bb-card-bg: var(--bb-body-bg);
+  --bb-card-bg: var(--bb-card, var(--bb-surface-bg));
   --bb-card-color: var(--bb-emphasis-color, var(--bs-emphasis-color, var(--bb-body-color)));
   --bb-card-muted: var(--bb-secondary-color);
   /* border */
@@ -25195,7 +25195,9 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
   --bb-card-focus-ring-width: var(--bb-focus-ring-width, 0.2rem);
   --bb-card-focus-ring-color: var(--bb-focus-ring-color, var(--bb-primary));
   --bb-card-focus-ring-opacity: var(--bb-focus-ring-opacity, 0.35);
-  border: 0;
+  /* Every card receives the same hairline surface boundary in both themes.
+     Page compositions no longer need to request a border for each instance. */
+  border: var(--bb-card-border-width) solid var(--bb-card-border-color);
   border-radius: var(--bb-card-radius);
   background-color: var(--bb-card-bg);
   color: var(--bb-card-color);
@@ -25320,10 +25322,9 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] {
 /* -------------------------------------
    Variants
 ------------------------------------- */
-/* Bordered: shadow off, border on */
+/* Legacy bordered modifier: base cards are now bordered; preserve shadow opt-out. */
 .bb-card-bordered {
   box-shadow: none;
-  border: var(--bb-card-border-width) solid var(--bb-card-border-color);
 }
 
 /* Dashed: shadow off, dashed border */
