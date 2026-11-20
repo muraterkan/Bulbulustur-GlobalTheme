@@ -101,6 +101,7 @@
     "customers-list": {title:"List", group:"Customers", section:"APPLICATIONS"},
     "customers-details": {title:"Details", group:"Customers", section:"APPLICATIONS"},
     "subscription-overview": {title:"Overview", group:"Subscription", section:"APPLICATIONS"},
+    "subscription-checkout": {title:"Checkout", group:"Subscription", section:"APPLICATIONS"},
     "invoice-list": {title:"Invoices", group:"Invoice Management", section:"APPLICATIONS"},
     "files-list": {title:"Files", group:"File Manager", section:"APPLICATIONS"},
     "inbox-messages": {title:"Messages", group:"Inbox", section:"APPLICATIONS"},
