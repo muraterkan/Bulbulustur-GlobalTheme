@@ -10178,6 +10178,135 @@ Header
   color: var(--bb-danger);
 }
 
+/* Semantic plan matrix. Plans, labels and actions belong to the caller. */
+.bb-plan-comparison {
+  --bb-plan-feature-bg: var(--bb-surface-bg);
+  --bb-plan-featured-bg: var(--bb-surface-soft);
+  --bb-plan-border: var(--bb-border-width) solid var(--bb-border-color);
+  --bb-plan-feature-min: 12rem;
+  --bb-plan-column-min: 11rem;
+  position: relative;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  border: var(--bb-plan-border);
+  border-radius: var(--bb-radius-xl);
+  background: var(--bb-surface-bg);
+  color: var(--bb-body-color);
+}
+.bb-plan-comparison:focus-visible {
+  outline: var(--bb-focus-ring-width) solid var(--bb-focus-ring-color);
+  outline-offset: 2px;
+}
+.bb-plan-comparison .bb-plan-comparison__table {
+  inline-size: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.bb-plan-comparison th,
+.bb-plan-comparison td {
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-block-end: var(--bb-plan-border);
+  border-inline-end: var(--bb-plan-border);
+  text-align: center;
+  vertical-align: middle;
+}
+.bb-plan-comparison tr > :last-child {
+  border-inline-end: 0;
+}
+.bb-plan-comparison tbody:last-child > tr:last-child > * {
+  border-block-end: 0;
+}
+.bb-plan-comparison thead .bb-plan-comparison__plan,
+.bb-plan-comparison thead .bb-plan-comparison__feature {
+  padding-block: var(--bb-space-5);
+  vertical-align: top;
+}
+.bb-plan-comparison .bb-plan-comparison__plan {
+  min-inline-size: var(--bb-plan-column-min);
+  font-weight: var(--bb-fw-normal);
+}
+.bb-plan-comparison .bb-plan-comparison__feature {
+  min-inline-size: var(--bb-plan-feature-min);
+  inline-size: 28%;
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 1;
+  background: var(--bb-plan-feature-bg);
+  text-align: start;
+  font-weight: var(--bb-fw-medium);
+}
+.bb-plan-comparison [data-featured] {
+  background: var(--bb-plan-featured-bg);
+}
+.bb-plan-comparison thead [data-featured] {
+  box-shadow: inset 0 var(--bb-space-1) 0 var(--bb-primary);
+}
+.bb-plan-comparison .bb-plan-comparison__group {
+  padding-block: var(--bb-space-2);
+  background: var(--bb-secondary-bg);
+  color: var(--bb-emphasis-color);
+  text-align: start;
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-plan-comparison .bb-plan-comparison__heading {
+  margin: 0 0 var(--bb-space-1);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-h5);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-plan-comparison .bb-plan-comparison__intro,
+.bb-plan-comparison .bb-plan-comparison__description,
+.bb-plan-comparison .bb-plan-comparison__period {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+.bb-plan-comparison .bb-plan-comparison__description {
+  min-block-size: 3em;
+}
+.bb-plan-comparison .bb-plan-comparison__price {
+  display: block;
+  margin-block-start: var(--bb-space-3);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-h3);
+  font-weight: var(--bb-fw-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--bb-line-height-heading);
+}
+.bb-plan-comparison .bb-plan-comparison__action {
+  margin-block-start: var(--bb-space-4);
+}
+.bb-plan-comparison .bb-plan-comparison__tag {
+  margin-block-start: var(--bb-space-2);
+  color: var(--bb-primary-text);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+}
+.bb-plan-comparison .bb-plan-comparison__included {
+  color: var(--bb-success-text);
+  font-size: var(--bb-fs-lg);
+}
+.bb-plan-comparison .bb-plan-comparison__excluded {
+  color: var(--bb-secondary-color);
+}
+
+@media (max-width: 575.98px) {
+  .bb-plan-comparison {
+    --bb-plan-feature-min: 6.75rem;
+    --bb-plan-column-min: 10rem;
+  }
+  .bb-plan-comparison th,
+  .bb-plan-comparison td {
+    padding-inline: var(--bb-space-2);
+  }
+  .bb-plan-comparison .bb-plan-comparison__feature {
+    inline-size: auto;
+  }
+  .bb-plan-comparison .bb-plan-comparison__price {
+    font-size: var(--bb-h4);
+  }
+}
 /* =====================================
    Bundle Layer — Core Components Tail
    Remaining reusable core components.

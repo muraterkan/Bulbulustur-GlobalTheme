@@ -9,17 +9,34 @@
       label: "Draugr",
       icon: "storefront",
       summary: "Kendi alan adınızda mağaza",
-      intro: "Kendi domaininizde çalışan Draugr mağazanız için uygun paketi seçin.",
+      intro: "Kendi alan adınızda satış yapın ve B2B teklif taleplerine yanıt verin.",
+      recommended: "pro",
+      comparison: [
+        { title: "Mağaza ve satış", rows: [
+          ["Kendi alan adınız", true, true, true],
+          ["Merkezi ürün ve stok", true, true, true],
+          ["Tema", "Hazır tema", "Gelişmiş tema ayarları", "Özel tema çalışması"],
+          ["Sayfa ve içerik yönetimi", "Temel", "Gelişmiş", "Özel içerik yapısı"],
+          ["Dil ve SEO araçları", false, true, true]
+        ] },
+        { title: "Bulbulustur hizmetleri", rows: [
+          ["B2B RFQ taleplerine teklif", true, true, true],
+          ["Kategori Router", false, true, true],
+          ["PosB hızlı satış", true, true, true],
+          ["Özel entegrasyon çalışması", false, false, true],
+          ["Öncelikli destek", false, false, true]
+        ] }
+      ],
       plans: [
         {id:"basic",name:"Draugr Basic",desc:"Hızlı başlangıç ve temel marka görünümü",
           description:"Temel mağaza ve tema yönetimi",year:2500,
-          features:["Kendi domaini","Hazır tema","Temel içerik yönetimi","Merkezi ürün ve stok"]},
+          features:["Kendi domaini","Hazır tema","Temel içerik yönetimi","Merkezi ürün ve stok","B2B RFQ taleplerine teklif","PosB hızlı satış"]},
         {id:"pro",name:"Draugr Pro",desc:"Büyüyen mağazalar için içerik ve SEO kontrolü",
           description:"İçerik, SEO ve gelişmiş kontrol",year:10000,
-          features:["Gelişmiş tema ayarları","Sayfa ve içerik yönetimi","Dil ve SEO araçları","Category Router"]},
+          features:["Gelişmiş tema ayarları","Sayfa ve içerik yönetimi","Dil ve SEO araçları","Category Router","B2B RFQ taleplerine teklif","PosB hızlı satış"]},
         {id:"custom",name:"Draugr Custom",desc:"Özel tasarım ve daha ileri ihtiyaçlar",
           description:"Özel tasarım ve ileri ihtiyaçlar",year:100000,
-          features:["Özel tema çalışması","İleri içerik yapısı","Özel entegrasyon ihtiyaçları","Öncelikli destek"]}
+          features:["Özel tema çalışması","İleri içerik yapısı","Özel entegrasyon ihtiyaçları","Öncelikli destek","B2B RFQ taleplerine teklif","PosB hızlı satış"]}
       ]
     },
     posb: {
@@ -27,7 +44,23 @@
       label: "PosB",
       icon: "point_of_sale",
       summary: "Şube, kasa ve stok yönetimi",
-      intro: "Fiziksel mağaza, kasa ve şube operasyonunuz için uygun PosB paketini seçin.",
+      intro: "Fiziksel mağazanızın kasa, şube ve stok işlemlerini yönetin.",
+      recommended: "pro",
+      comparison: [
+        { title: "Kasa ve mağaza", rows: [
+          ["Hızlı satış ekranı", true, true, true],
+          ["Şube ve kasa", "Tek şube", "Çoklu şube ve kasa", "Gelişmiş şube yapısı"],
+          ["Merkezi müşteri verisi", true, true, true],
+          ["Stok görünümü", "Temel", "Depo ve transfer", "Depo ve transfer"],
+          ["Fatura ayarları", false, true, true],
+          ["Vardiya ve gün yönetimi", false, true, true]
+        ] },
+        { title: "Operasyon ve destek", rows: [
+          ["Öncelikli entegrasyonlar", false, false, true],
+          ["Gelişmiş raporlama", false, false, true],
+          ["Öncelikli destek", false, false, true]
+        ] }
+      ],
       plans: [
         {id:"basic",name:"PosB Basic",desc:"Tek mağaza ve temel hızlı satış akışı",
           description:"Tek mağaza için kasa operasyonu",year:499,

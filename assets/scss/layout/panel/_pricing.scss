@@ -1,28 +1,24 @@
-/* Pricing comparison: panel-only, existing spacing, color and typography tokens. */
-.bb-panel .bb-pricing-page{--bb-pricing-gap:var(--bb-panel-content-gap)}
-.bb-panel .bb-pricing-intro{text-align:center;max-width:40rem;margin:0 auto calc(var(--bb-space-4)*2)}
-.bb-panel .bb-pricing-intro h2{margin:0 0 var(--bb-space-3);font-size:var(--bb-h2);font-weight:var(--bb-fw-semibold);color:var(--bb-emphasis-color)}
-.bb-panel .bb-pricing-intro p{color:var(--bb-secondary-color);font-size:var(--bb-fs-sm);margin:0}
-.bb-panel .bb-pricing-switch{display:flex;justify-content:center;margin-bottom:calc(var(--bb-space-4)*2)}
-.bb-panel .bb-pricing-switch-inner{display:inline-flex;gap:var(--bb-space-1);padding:var(--bb-space-1);border:var(--bb-border-width,1px) solid var(--bb-border-color);border-radius:var(--bb-radius)}
-.bb-panel .bb-pricing-switch button{border:0;background:transparent;border-radius:var(--bb-radius);padding:var(--bb-space-3) var(--bb-space-4);color:var(--bb-secondary-color);font-size:var(--bb-fs-sm);font-weight:var(--bb-fw-medium);cursor:pointer}
-.bb-panel .bb-pricing-switch button[aria-pressed="true"]{background:var(--bb-tertiary-bg);color:var(--bb-emphasis-color)}
-.bb-panel .bb-pricing-switch button:focus-visible,.bb-panel .bb-pricing-plan button:focus-visible{outline:var(--bb-focus-ring-width) solid var(--bb-primary);outline-offset:2px}
-.bb-panel .bb-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--bb-pricing-gap);align-items:stretch}
-.bb-panel .bb-pricing-plan{min-width:0;display:flex;flex-direction:column;padding:calc(var(--bb-space-4)*2) var(--bb-space-4);text-align:center}
-.bb-panel .bb-pricing-plan[data-featured="true"]{border-color:var(--bb-primary)}
-.bb-panel .bb-pricing-plan h3{font-size:var(--bb-h4);font-weight:var(--bb-fw-semibold);color:var(--bb-emphasis-color);margin:0 0 var(--bb-space-3)}
-.bb-panel .bb-pricing-desc{color:var(--bb-secondary-color);font-size:var(--bb-fs-sm);min-height:3rem}
-.bb-panel .bb-pricing-price{display:flex;align-items:baseline;justify-content:center;gap:var(--bb-space-1);margin:var(--bb-space-4) 0}
-.bb-panel .bb-pricing-price strong{color:var(--bb-primary-text);font-size:var(--bb-h1);line-height:1.15}
-.bb-panel .bb-pricing-price small{font-size:var(--bb-fs-xs);color:var(--bb-secondary-color)}
-.bb-panel .bb-pricing-features{list-style:none;padding:0;margin:0 0 var(--bb-space-4);text-align:start}
-.bb-panel .bb-pricing-features li{display:flex;align-items:center;justify-content:space-between;gap:var(--bb-space-3);padding:var(--bb-space-3) 0;color:var(--bb-body-color);font-size:var(--bb-fs-sm)}
-.bb-panel .bb-pricing-features li[data-unavailable="true"]{color:var(--bb-secondary-color)}
-.bb-panel .bb-pricing-features .material-symbols-outlined{font-size:var(--bb-fs-lg);color:var(--bb-success-text);flex:none}
-.bb-panel .bb-pricing-features li[data-unavailable="true"] .material-symbols-outlined{color:var(--bb-secondary-color)}
-.bb-panel .bb-pricing-plan .btn{margin:auto auto 0;min-width:6rem}
-.bb-panel .bb-pricing-result[hidden]{display:none}
-.bb-panel .bb-pricing-disclaimer{margin-top:var(--bb-space-4);text-align:center;color:var(--bb-secondary-color);font-size:var(--bb-fs-xs)}
-@media(max-width:991.98px){.bb-panel .bb-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bb-panel .bb-pricing-grid .bb-pricing-plan:last-child{grid-column:1/-1}}
-@media(max-width:575.98px){.bb-panel .bb-pricing-grid{grid-template-columns:1fr}.bb-panel .bb-pricing-grid .bb-pricing-plan:last-child{grid-column:auto}.bb-panel .bb-pricing-plan{padding:var(--bb-space-4)}}
+.bb-panel .bb-pricing-page .bb-panel-content-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--bb-space-3);
+  min-width: 0;
+}
+
+.bb-panel .bb-pricing-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bb-space-2);
+}
+
+.bb-panel .bb-pricing-services a[aria-current="page"] {
+  border-color: var(--bb-primary);
+  background: var(--bb-primary-light);
+  color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-pricing-note {
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}

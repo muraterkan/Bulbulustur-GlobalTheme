@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulbulustur Theme — Paket Karşılaştırması</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body class="bb-body" id="bb-body-id">
+    <main class="bb-main">
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <section class="bb-section" aria-labelledby="plan-comparison-title">
+                    <h2 class="h5 mb-3" id="plan-comparison-title">Paket karşılaştırması</h2>
+                    <div class="bb-plan-comparison" role="region" aria-labelledby="plan-comparison-title" tabindex="0">
+                        <table class="bb-plan-comparison__table">
+                            <caption class="visually-hidden">Örnek site planları ve özellikleri</caption>
+                            <thead>
+                                <tr>
+                                    <th class="bb-plan-comparison__feature" scope="col">
+                                        <h3 class="bb-plan-comparison__heading">Site planları</h3>
+                                        <p class="bb-plan-comparison__intro">Kendi siteniz için ihtiyaç duyduğunuz özellikleri seçin.</p>
+                                    </th>
+                                    <th class="bb-plan-comparison__plan" scope="col">
+                                        <h3 class="bb-plan-comparison__heading">Başlangıç</h3>
+                                        <p class="bb-plan-comparison__description">Tek bir site için temel yayın araçları</p>
+                                        <strong class="bb-plan-comparison__price">₺490</strong>
+                                        <span class="bb-plan-comparison__period">Yıllık · Örnek</span>
+                                    </th>
+                                    <th class="bb-plan-comparison__plan" scope="col" data-featured>
+                                        <h3 class="bb-plan-comparison__heading">Ekip</h3>
+                                        <p class="bb-plan-comparison__description">Birden fazla site ve ortak çalışma</p>
+                                        <strong class="bb-plan-comparison__price">₺1.290</strong>
+                                        <span class="bb-plan-comparison__period">Yıllık · Örnek</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th class="bb-plan-comparison__group" scope="rowgroup" colspan="3">Yayın ve yönetim</th></tr>
+                                <tr>
+                                    <th class="bb-plan-comparison__feature" scope="row">Yayındaki site</th>
+                                    <td>1</td>
+                                    <td data-featured>3</td>
+                                </tr>
+                                <tr>
+                                    <th class="bb-plan-comparison__feature" scope="row">Kendi alan adınız</th>
+                                    <td><span class="material-symbols-outlined bb-plan-comparison__included" aria-hidden="true">check</span><span class="visually-hidden">Dahil</span></td>
+                                    <td data-featured><span class="material-symbols-outlined bb-plan-comparison__included" aria-hidden="true">check</span><span class="visually-hidden">Dahil</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="bb-plan-comparison__feature" scope="row">Ekip erişimi</th>
+                                    <td><span class="bb-plan-comparison__excluded" aria-hidden="true">—</span><span class="visually-hidden">Dahil değil</span></td>
+                                    <td data-featured>5 kullanıcı</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="bb-section" aria-labelledby="plan-comparison-usage">
+                    <h2 class="h5" id="plan-comparison-usage">Kullanım</h2>
+                    <p>Tabloyu <code>.bb-plan-comparison</code> içine yerleştirin. Her plan için bir sütun, her özellik için bir satır kullanın. Vurgulamak istediğiniz sütunun başlık ve veri hücrelerine <code>data-featured</code> ekleyin.</p>
+                    <p class="mb-0">Plan metinleri, fiyatlar ve varsa işlem bağlantıları tabloyu hazırlayan uygulamadan gelir.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+</body>
+</html>
