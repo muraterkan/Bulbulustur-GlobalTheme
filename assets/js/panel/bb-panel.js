@@ -203,4 +203,15 @@
     if (!posFrame || event.origin !== window.location.origin || event.source !== posFrame.contentWindow) return;
     if (event.data && event.data.type === "bb:pos:close") posDialog.close();
   });
+
+  var entry = new URL(window.location.href);
+  var dashboardView = entry.searchParams.get("view");
+  var dashboardPosLink = panel.querySelector("a[data-bb-draugr-pos][href]");
+  if (dashboardPosLink && (!dashboardView || dashboardView === "dashboard") &&
+      entry.searchParams.get("pos") === "open" && window.location.origin !== "null" &&
+      typeof HTMLDialogElement.prototype.showModal === "function") {
+    openPOS(new URL(dashboardPosLink.href), dashboardPosLink);
+    entry.searchParams.delete("pos");
+    window.history.replaceState(window.history.state, "", entry);
+  }
 })();
