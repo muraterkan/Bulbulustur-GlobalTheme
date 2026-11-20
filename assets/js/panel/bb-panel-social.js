@@ -28,7 +28,7 @@ function createPost(content){
  var body=document.createElement("div");body.className="bb-card-body";
  var head=document.createElement("div");head.className="bb-social-post-header";
  head.append(avatar("ÖK"));var detail=document.createElement("div");detail.className="flex-grow-1";
- var name=document.createElement("strong");name.textContent="Örnek User";
+ var name=document.createElement("strong");name.textContent="Murat Erkan";
  var date=document.createElement("small");date.textContent="Şimdi · Demo";
  detail.append(name,date);head.append(detail);
  var paragraph=document.createElement("p");paragraph.className="bb-social-post-text";paragraph.textContent=content;
@@ -65,7 +65,7 @@ root.addEventListener("submit",function(event){
  if(!text)return;
  var post=commentForm.closest("[data-bb-social-post]"),comments=post.querySelector("[data-bb-social-comments]");
  var row=document.createElement("div");row.className="bb-social-comment";row.append(avatar("ÖK"));
- var wrapper=document.createElement("div"),name=document.createElement("strong"),p=document.createElement("p");name.textContent="Örnek User";p.textContent=text;wrapper.append(name,p);row.append(wrapper);comments.append(row);
+ var wrapper=document.createElement("div"),name=document.createElement("strong"),p=document.createElement("p");name.textContent="Murat Erkan";p.textContent=text;wrapper.append(name,p);row.append(wrapper);comments.append(row);
  var count=post.querySelector("[data-bb-social-comment-count]");count.textContent=comments.children.length+" yorum";
  commentForm.reset();field.focus();
 });

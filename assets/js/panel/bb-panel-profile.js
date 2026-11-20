@@ -73,7 +73,7 @@ function profileHero() {
     '<div class="bb-card-body"><div class="bb-profile-hero-main">' +
     '<div class="bb-profile-portrait"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt="Örnek kullanıcı profil fotoğrafı"><span class="bb-profile-presence" title="Çevrimiçi" aria-label="Çevrimiçi"></span></div>' +
     '<div class="bb-profile-hero-content"><div class="bb-profile-hero-top">' +
-    '<div><h2 class="bb-profile-hero-name">Örnek User <span class="material-symbols-outlined" aria-label="Demo doğrulama işareti">verified</span></h2>' +
+    '<div><h2 class="bb-profile-hero-name">Murat Erkan <span class="material-symbols-outlined" aria-label="Demo doğrulama işareti">verified</span></h2>' +
     '<div class="bb-profile-hero-meta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>Developer</span>' +
     '<span><span class="material-symbols-outlined" aria-hidden="true">location_on</span>İstanbul, Türkiye</span>' +
     '<span><span class="material-symbols-outlined" aria-hidden="true">mail</span>demo@example.com</span></div></div>' +
@@ -91,7 +91,7 @@ function profileHero() {
 }
 function pageOverview() {
   return '<div class="row g-4"><div class="col-xl-8">' + card("Profile Details",detailRows([
-    ["Full Name", "Örnek User"],["Company","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
+    ["Full Name", "Murat Erkan"],["Company","Bulbulustur (demo)"],["Telefon","+90 555 000 00 00"],
     ["Web sitesi","bulbulustur.com"],["Country","Türkiye"],["Contact","E-mail, Telefon"],["Değişiklik izni","Evet"]
   ]) + '<div class="mt-4">' + note("Profil bilgilerini tamamlayın", "Eksik alanları Settings sayfasından güncelleyebilirsiniz. Bu örnekte veriler kaydedilmez.") + '</div>',
   '<a href="profile-settings.html" class="btn btn-primary btn-sm">Profle Edit</a>') +
@@ -101,7 +101,7 @@ function pageOverview() {
 }
 function pageSettings() {
   return card("Profil Settings",'<form data-bb-profile-form><div class="row g-4">' +
-    '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Örnek User" maxlength="120" required></div>' +
+    '<div class="col-md-6"><label class="form-label" for="profile_name">Ad soyad</label><input class="form-control form-control-solid" id="profile_name" name="name" value="Murat Erkan" maxlength="120" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_email">E-mail</label><input type="email" class="form-control form-control-solid" id="profile_email" name="email" value="demo@example.com" required></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_city">City</label><input class="form-control form-control-solid" id="profile_city" name="city" value="İstanbul"></div>' +
     '<div class="col-md-6"><label class="form-label" for="profile_language">Languages</label><select class="form-select form-select-solid" id="profile_language" name="language"><option>Türkçe</option><option>English</option></select></div>' +
@@ -131,7 +131,7 @@ function pageSecurity() {
 }
 function pageActivity() {
   return '<div class="row g-4"><div class="col-xl-8">' +
-    card("Last Activityler", '<ol class="bb-dashboard-timeline">' + [
+    card("Last Activities", '<ol class="bb-dashboard-timeline">' + [
       ["Product bilgileri güncellendi","Katalog üzerinde örnek değişiklik yapıldı","Bugün 11:20"],
       ["Profil görüntülendi","Genel bakış sayfası açıldı","Dün 16:45"],
       ["Proje tamamlandı","Panel bileşen düzeni incelendi","14 Kasım 2026"],
