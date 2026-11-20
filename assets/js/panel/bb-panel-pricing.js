@@ -4,6 +4,7 @@
 var root=document.querySelector("[data-bb-pricing]");
 if(!root)return;
 var product=new URLSearchParams(window.location.search).get("product");
+if(product==="posx")product="posb";
 var cycle="month",cycles=Array.from(root.querySelectorAll("[data-bb-pricing-cycle]"));
 var amounts=Array.from(root.querySelectorAll("[data-bb-pricing-amount]"));
 var result=root.querySelector("[data-bb-pricing-result]");
@@ -65,7 +66,7 @@ function applyProductContext(){
   }
   if(select){
    select.dataset.bbPricingSelect=plan.name;
-   select.textContent="Bu Pakete Başvur";
+   select.textContent="Checkout'a Geç";
   }
  });
  var pageTitle=document.querySelector(".bb-page-title");
@@ -82,11 +83,19 @@ function render(){
  });
  root.querySelectorAll("[data-bb-pricing-period]").forEach(function(label){label.textContent=cycle==="month"?"/ ay":"/ yıl";});
  var note=root.querySelector("[data-bb-pricing-saving]");
- if(note)note.textContent=cycle==="year"?"Annual tutarlar demo amaçlı %20 indirimli hesaplanmıştır.":"Annual plana geçerek örnek %20 avantajı görebilirsiniz.";
+ if(note)note.textContent=productPlans[product]?"Paket tutarları temsili olup gerçek fiyat ve vergiler ödeme sisteminde belirlenir.":(cycle==="year"?"Annual tutarlar demo amaçlı %20 indirimli hesaplanmıştır.":"Annual plana geçerek örnek %20 avantajı görebilirsiniz.");
 }
 cycles.forEach(function(button){button.addEventListener("click",function(){cycle=button.dataset.bbPricingCycle;render();});});
 root.querySelectorAll("[data-bb-pricing-select]").forEach(function(button){
  button.addEventListener("click",function(){
+  if(productPlans[product]){
+   var index=Array.from(root.querySelectorAll(".bb-pricing-plan")).indexOf(button.closest(".bb-pricing-plan"));
+   var keys=product==="draugr"?["basic","pro","custom"]:["basic","pro","enterprise"];
+   if(index>=0 && keys[index]){
+    window.location.assign("checkout.html?product="+encodeURIComponent(product)+"&plan="+encodeURIComponent(keys[index]));
+    return;
+   }
+  }
   result.hidden=false;
   result.textContent=button.dataset.bbPricingSelect+" planı seçildi ("+(cycle==="month"?"aylık":"yıllık")+"). Bu yalnızca arayüz demosudur; ödeme veya abonelik oluşturulmadı.";
   result.focus();
