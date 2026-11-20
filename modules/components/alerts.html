@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="tr" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
@@ -8,10 +8,10 @@
 
     <title>Bulbulustur Theme — Alert Test</title>
     <!-- Main Theme CSS -->
-    <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <!--::Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
@@ -155,6 +155,16 @@
                         Not: Theme switcher <code>data-bs-theme</code> değiştirir. Density toggle <code>data-bb-density="compact"</code> ekler/çıkarır.
                     </div>
                 </section>
+                <section class="bb-section">
+                    <div class="bb-card mb-4">
+                        <div class="bb-card-header"><h2 class="bb-card-title">Bildirimler ve kenarlık varyantları</h2></div>
+                        <div class="bb-card-body"><div class="row g-4"><div class="col-12 col-lg-6"><div class="alert bb-alert bb-alert-primary bb-alert-dotted mb-0" role="status"><span class="bb-alert-dot" aria-hidden="true"></span><div class="bb-alert-body"><h4 class="bb-alert-title">Bildirim noktası</h4><p class="bb-alert-text">Renk tokenları seçili temaya göre değişir.</p></div></div></div>
+<div class="col-12 col-lg-6"><div class="alert bb-alert bb-alert-success bb-alert-dashed mb-0" role="status"><span class="bb-alert-icon" aria-hidden="true"><span class="material-symbols-outlined">check_circle</span></span><div class="bb-alert-body"><h4 class="bb-alert-title">İşlem tamamlandı</h4><p class="bb-alert-text">Kesik çizgili kenarlık başarı bildirimini vurgular.</p></div></div></div>
+<div class="col-12 col-lg-6"><div class="alert bb-alert bb-alert-warning bb-alert-dotted mb-0" role="status"><span class="bb-alert-icon" aria-hidden="true"><span class="material-symbols-outlined">warning</span></span><div class="bb-alert-body"><h4 class="bb-alert-title">Kontrol gerekiyor</h4><p class="bb-alert-text">Noktalı kenarlık ile uyarıyı metin ve ikon da belirtir.</p></div></div></div>
+<div class="col-12 col-lg-6"><div class="alert bb-alert bb-alert-info bb-alert-outline bb-alert-dotted mb-0" role="status"><span class="bb-alert-dot" aria-hidden="true"></span><div class="bb-alert-body"><h4 class="bb-alert-title">Bilgi notu</h4><p class="bb-alert-text">Şeffaf zemin ve noktalı kenarlık birlikte kullanılabilir.</p></div></div></div>
+<div class="col-12 col-lg-6"><div class="alert bb-alert bb-alert-danger bb-alert-dashed mb-0" role="status"><span class="bb-alert-icon" aria-hidden="true"><span class="material-symbols-outlined">error</span></span><div class="bb-alert-body"><h4 class="bb-alert-title">İşlem başarısız</h4><p class="bb-alert-text">Lütfen bilgileri kontrol edip tekrar deneyin.</p></div></div></div></div></div>
+                    </div>
+                </section>
                 <!--::Usage-->
                 <section class="bb-section">
                     <div class="bb-card">
@@ -164,7 +174,7 @@
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Temel uyarı</h3>
-                                <p class="bb-usage-text">Renk <code>bb-alert-primary|success|warning|danger</code> ile seçilir. Kapatma düğmesi Bootstrap <code>data-bs-dismiss="alert"</code> ile çalışır.</p>
+                                <p class="bb-usage-text">Renk <code>bb-alert-primary|success|warning|danger|info</code> ile seçilir. Mevcut <code>clarity</code>, <code>hover</code> ve <code>text</code> tokenları kullanılır. <code>bb-alert-dotted</code>, <code>bb-alert-dashed</code> ve <code>bb-alert-outline</code> renk sınıflarıyla birleştirilir. İkon yerine <code>bb-alert-dot</code> kullanılabilir. Kapatma düğmesi Bootstrap <code>data-bs-dismiss="alert"</code> ile çalışır.</p>
                                 <div class="bb-usage-code">
                                     <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
 <button type="button" class="bb-usage-copy">Copy</button>
@@ -182,6 +192,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                                 </div>
+                                <div class="bb-usage-code"><div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span><button type="button" class="bb-usage-copy">Copy</button></div><pre class="bb-usage-pre"><code>&lt;div class=&quot;alert bb-alert bb-alert-primary bb-alert-dotted mb-0&quot; role=&quot;status&quot;&gt;&lt;span class=&quot;bb-alert-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;bb-alert-body&quot;&gt;&lt;h4 class=&quot;bb-alert-title&quot;&gt;Bildirim noktası&lt;/h4&gt;&lt;p class=&quot;bb-alert-text&quot;&gt;Renk tokenları seçili temaya göre değişir.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></div>
                             </div>
                         </div>
                     </div>
