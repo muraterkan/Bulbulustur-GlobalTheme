@@ -68,14 +68,21 @@
   else desktop.addListener(onViewportChange);
   updateControls();
 
-  /* Channel Registry dashboard: one list for owned and connected sales channels. */
-  var channelDashboardMenu = panel.querySelector("#bb_tree_dashboard .bb-menu-sub-content");
-  if (channelDashboardMenu && !channelDashboardMenu.querySelector("[data-bb-panel-page='dashboard-channels']")) {
-    var channelDashboardItem = document.createElement("div");
-    channelDashboardItem.className = "bb-menu-item";
-    channelDashboardItem.innerHTML = '<a class="bb-menu-link" href="channels.html" data-bb-panel-page="dashboard-channels"><span class="bb-menu-bullet" aria-hidden="true"></span><span class="bb-menu-title">Channels</span></a>';
-    channelDashboardMenu.appendChild(channelDashboardItem);
-  }
+  /* Normalize the legacy dashboard group in templates that still carry it. */
+  panel.querySelectorAll("#bb_tree_dashboard").forEach(function (tree) {
+    var group = tree.closest(".bb-menu-item");
+    var overview = tree.querySelector('a[data-bb-panel-page="dashboard-overview"]');
+    if (!group || !overview) return;
+
+    var icon = group.querySelector(".bb-menu-icon");
+    var title = overview.querySelector(".bb-menu-title");
+    title.textContent = "Mağaza panosu";
+    overview.replaceChildren(icon, title);
+    group.removeAttribute("data-bb-menu-trigger");
+    group.replaceChildren(overview);
+    var section = group.previousElementSibling;
+    if (section && section.classList.contains("bb-menu-section")) section.textContent = "MAĞAZA";
+  });
 
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
   var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
