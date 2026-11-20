@@ -11021,6 +11021,158 @@ button.badge.bb-badge:disabled {
   height: 100%;
 }
 
+/* CORE UI: Aurora Waves — reusable, decorative CSS/SVG light trails.
+   Usage: <div class="bb-aurora-waves" aria-hidden="true"><svg class="bb-aurora-waves__svg" ...>...</svg></div>
+   Parent must establish position: relative and overflow: hidden. No JS required. */
+.bb-aurora-waves-host {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(var(--bb-space-4) * 20);
+  background: var(--bb-coal-600);
+  color: var(--bb-white);
+}
+
+.bb-aurora-waves-host > :not(.bb-aurora-waves) {
+  position: relative;
+  z-index: 1;
+}
+
+.bb-aurora-waves {
+  --bb-aurora-a: var(--bb-turquoise-400);
+  --bb-aurora-b: var(--bb-purple-400);
+  --bb-aurora-c: var(--bb-pink-500);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  contain: paint;
+}
+
+.bb-aurora-waves::before {
+  content: "";
+  position: absolute;
+  inset: 12% -26% 0;
+  z-index: -1;
+  opacity: 0.72;
+  background: radial-gradient(ellipse at 20% 69%, color-mix(in srgb, var(--bb-aurora-a) 29%, transparent), transparent 51%), radial-gradient(ellipse at 83% 48%, color-mix(in srgb, var(--bb-aurora-c) 26%, transparent), transparent 55%), radial-gradient(ellipse at 57% 79%, color-mix(in srgb, var(--bb-aurora-b) 30%, transparent), transparent 58%);
+  filter: blur(calc(var(--bb-space-4) * 3));
+  animation: bb-aurora-haze 14s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.bb-aurora-waves::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent 24%, color-mix(in srgb, var(--bb-black) 12%, transparent) 56%, color-mix(in srgb, var(--bb-black) 60%, transparent) 100%);
+}
+
+.bb-aurora-waves__svg {
+  display: block;
+  position: absolute;
+  inset: 10% -18% auto;
+  width: 145%;
+  height: 95%;
+  overflow: visible;
+  opacity: 0.88;
+  animation: bb-aurora-drift 17s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.bb-aurora-waves__band {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.1;
+  vector-effect: non-scaling-stroke;
+}
+
+.bb-aurora-waves__band path {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.bb-aurora-waves__band--a {
+  stroke: var(--bb-aurora-a);
+  opacity: 0.5;
+  filter: drop-shadow(0 0 var(--bb-space-2) color-mix(in srgb, var(--bb-aurora-a) 63%, transparent));
+  animation: bb-aurora-float-a 10s ease-in-out infinite alternate;
+}
+
+.bb-aurora-waves__band--b {
+  stroke: var(--bb-aurora-b);
+  opacity: 0.62;
+  filter: drop-shadow(0 0 var(--bb-space-2) color-mix(in srgb, var(--bb-aurora-b) 75%, transparent));
+  animation: bb-aurora-float-b 13s ease-in-out infinite alternate;
+}
+
+.bb-aurora-waves__band--c {
+  stroke: var(--bb-aurora-c);
+  opacity: 0.57;
+  filter: drop-shadow(0 0 var(--bb-space-2) color-mix(in srgb, var(--bb-aurora-c) 75%, transparent));
+  animation: bb-aurora-float-c 12s ease-in-out infinite alternate;
+}
+
+.bb-aurora-waves__band--a path:nth-child(even),
+.bb-aurora-waves__band--b path:nth-child(odd),
+.bb-aurora-waves__band--c path:nth-child(even) {
+  opacity: 0.52;
+}
+
+@keyframes bb-aurora-haze {
+  from {
+    transform: translate3d(-5%, 2%, 0) scale(1);
+    opacity: 0.58;
+  }
+  to {
+    transform: translate3d(7%, -5%, 0) scale(1.18);
+    opacity: 0.92;
+  }
+}
+@keyframes bb-aurora-drift {
+  from {
+    transform: translate3d(-3%, 2%, 0) rotate(-2deg) scale(1);
+  }
+  to {
+    transform: translate3d(4%, -3%, 0) rotate(2deg) scale(1.06);
+  }
+}
+@keyframes bb-aurora-float-a {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+@keyframes bb-aurora-float-b {
+  from {
+    transform: translateY(-4%);
+  }
+  to {
+    transform: translateY(3%);
+  }
+}
+@keyframes bb-aurora-float-c {
+  from {
+    transform: translateY(2%);
+  }
+  to {
+    transform: translateY(-4%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-aurora-waves::before,
+  .bb-aurora-waves__svg,
+  .bb-aurora-waves__band {
+    animation: none;
+    will-change: auto;
+  }
+}
 /* =====================================
    Bulbulustur Theme — Separator (PURE)
    Token-first | Dark/Light safe
