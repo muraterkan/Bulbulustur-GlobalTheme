@@ -254,6 +254,21 @@
    Hesap / profil / ayar / iç form sayfaları ortak kabuk.
 ===================================== */
 
+.bb-account-category {
+    --bb-chip-bg: var(--bb-black);
+    --bb-chip-color: var(--bb-white);
+    --bb-chip-border-color: var(--bb-black);
+    margin-block-end: var(--bb-space-3);
+}
+
+.bb-account-breadcrumb-wrap {
+    margin-block-end: var(--bb-space-4);
+}
+
+.bb-account-breadcrumb-wrap .bb-breadcrumb {
+    margin-block-end: 0;
+}
+
 .bb-account-sidebar-toggle {
     display: inline-flex;
     align-items: center;
@@ -613,11 +628,7 @@
 }
 
 .bb-account-nav-group-title {
-    padding: 0.4375rem 0.625rem 0.5rem;
-    color: var(--bb-tertiary-color);
-    font-size: var(--bb-fs-2xs);
-    line-height: 1;
-    font-weight: var(--bb-fw-bold);
+    margin: var(--bb-space-2) var(--bb-space-3) var(--bb-space-3);
     letter-spacing: .08em;
     text-transform: uppercase;
 }
