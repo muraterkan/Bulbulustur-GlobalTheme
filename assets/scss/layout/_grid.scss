@@ -19,6 +19,14 @@
   padding-right: var(--bb-gutter-x);
 }
 
+/* Container genişlik değiştiriciler: .bb-container'a (yalnız o sayfa) ya da
+   uygulama köküne (header dahil tüm layout) eklenir. Panelde varsayılan 1400px. */
+.bb-container-sm { --bb-container-max-width: 1140px; }
+.bb-container-md { --bb-container-max-width: 1320px; }
+.bb-container-lg { --bb-container-max-width: 1400px; }
+.bb-container-xl { --bb-container-max-width: 1600px; }
+.bb-container-fluid { --bb-container-max-width: none; }
+
 /* BB Row (isteğe bağlı, bootstrap'a alternatif) */
 .bb-row {
   display: flex;
