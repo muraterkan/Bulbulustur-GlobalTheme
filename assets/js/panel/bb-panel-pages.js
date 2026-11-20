@@ -15,6 +15,7 @@
   });
   var pages = {
     "issue-tracking": {title:"Issue Tracking", group:"Görev Yönetimi", section:"APPLICATIONS"},
+    "rfq-overview": {title:"RFQ · Teklif talepleri", group:"B2B", section:"MAĞAZA"},
     "dashboard-overview": {title:"Mağaza panosu", group:"Mağaza panosu", section:"MAĞAZA"},
     "dashboard-analytics": {title:"Analitik", group:"Dashboard", section:"DASHBOARDS"},
     "dashboard-channels": {title:"Channels", group:"Gösterge Paneli", section:"DASHBOARDS"},
@@ -131,7 +132,7 @@
   var cardTitle = panel.querySelector("#bb_page_card_title");
   var desc = panel.querySelector("#bb_page_empty_description");
   var crumb = panel.querySelector(".bb-breadcrumb .breadcrumb");
-  if (pageTitle) pageTitle.textContent = id === "dashboard-overview" ? title : heading;
+  if (pageTitle) pageTitle.textContent = (id === "dashboard-overview" || id === "rfq-overview") ? title : heading;
   if (cardTitle) cardTitle.textContent = title;
   if (desc) desc.textContent = selected ? selected.section + " / " + selected.group + " / " + selected.title + " — under construction." : "Select a page from the menu.";
   if (crumb) {

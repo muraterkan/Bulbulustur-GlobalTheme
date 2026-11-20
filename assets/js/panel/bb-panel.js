@@ -84,6 +84,16 @@
     if (section && section.classList.contains("bb-menu-section")) section.textContent = "MAĞAZA";
   });
 
+  var overviewLink = panel.querySelector('[data-bb-panel-menu] a[data-bb-panel-page="dashboard-overview"]');
+  if (overviewLink) {
+    var rfqItem = document.createElement("div");
+    rfqItem.className = "bb-menu-item";
+    rfqItem.innerHTML = '<a class="bb-menu-link" href="rfq.html" data-bb-panel-page="rfq-overview">' +
+      '<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">request_quote</span></span>' +
+      '<span class="bb-menu-title">Teklif talepleri (RFQ)</span></a>';
+    overviewLink.closest(".bb-menu-item").after(rfqItem);
+  }
+
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
   var sidebarLogo = panel.querySelector(".bb-sidebar-logo");
   if (sidebarLogo) {
