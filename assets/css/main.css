@@ -8622,9 +8622,23 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   color: inherit;
 }
 
+/* Header and content share ONE horizontal gutter (--bb-panel-content-gap).
+   The page wrapper container adds no gutter or max-width of its own, so the
+   header edge, toolbar and content edge line up at every viewport width. */
+.bb-panel .bb-main > .bb-wrapper > .bb-container {
+  max-width: none;
+  padding-inline: 0;
+}
+
 .bb-panel .bb-panel-content-container {
   width: 100%;
   padding-inline: var(--bb-panel-content-gap);
+}
+
+/* Header menu links carry their own inline padding; pull the first one back
+   so its text starts on the same line as the page title below. */
+.bb-panel .bb-panel-topnav {
+  margin-inline-start: -0.75rem;
 }
 
 .bb-panel .bb-toolbar {
