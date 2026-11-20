@@ -203,6 +203,10 @@
     }
   }
 
+  // Toolbar lives outside the content root; bind print at the document level.
+  const printButton=document.querySelector("[data-bb-invoice-print]");
+  if(printButton)printButton.addEventListener("click",()=>window.print());
+
   select.addEventListener("change",renderHistory);
   renderHeader();
   renderLines();
