@@ -1,6 +1,18 @@
 /* CORE UI: Aurora Waves — reusable, decorative CSS/SVG light trails.
    Usage: <div class="bb-aurora-waves" aria-hidden="true"><svg class="bb-aurora-waves__svg" ...>...</svg></div>
    Parent must establish position: relative and overflow: hidden. No JS required. */
+.bb-aurora-waves-host {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(var(--bb-space-4) * 20);
+  background: var(--bb-coal-600);
+  color: var(--bb-white);
+}
+.bb-aurora-waves-host > :not(.bb-aurora-waves) {
+  position: relative;
+  z-index: 1;
+}
 .bb-aurora-waves {
   --bb-aurora-a: var(--bb-turquoise-400);
   --bb-aurora-b: var(--bb-purple-400);
