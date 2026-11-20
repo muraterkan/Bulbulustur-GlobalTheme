@@ -1,171 +1,115 @@
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
-<!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Bulbulustur Theme — Premium Table Component</title>
-    <!-- Main Theme CSS -->
-    <link rel="stylesheet" href="../../assets/css/main.css" />
-
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <!--::Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <!-- Google Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulbulustur Theme — Premium Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
-<!--/::Head-->
-<!--::Body-->
 <body class="bb-body" id="bb-body-id">
-    <!--::Main-->
     <main class="bb-main">
-        <!--::Wrapper-->
         <div class="bb-wrapper">
             <div class="bb-container">
-                <section class="bb-section">
-                    <!-- PAGE TITLE -->
-                    <div class="mb-4">
-                        <h3 class="mb-1">Premium Table Component</h3>
-                        <p class="text-muted mb-0">
-                            bb-table-premium • Hiyerarşik kırılım, canlı ısı haritası (heatmap) ve alt toplam matrisi
-                        </p>
-                    </div>
-                </section>
-
-                <section class="bb-section">
-                    <!-- PREMIUM TABLE CARD -->
-                    <div class="bb-pt-card" id="bbPremiumTableRoot">
-                        <!-- Top Header -->
-                        <div class="bb-pt-head">
+                <section class="bb-section" aria-labelledby="pt-title">
+                    <div class="bb-card bb-pt-card" data-bb-table-premium>
+                        <div class="bb-card-header bb-pt-head">
                             <div>
-                                <h2 class="bb-pt-title">Günlük Operasyon Dağılımı</h2>
-                                <p class="bb-pt-subtitle">Aktif tüm sipariş ve işlem akışlarının anlık aşama yoğunluğu.</p>
+                                <h2 class="h5 mb-1" id="pt-title">Günlük Operasyon Dağılımı</h2>
+                                <p class="text-body-secondary mb-0">Siparişlerin işlem aşamaları · Örnek veri</p>
                             </div>
-
-                            <div class="bb-pt-summary-pills">
+                            <div class="bb-pt-summary-pills" aria-live="polite">
                                 <span class="bb-pt-summary-item">
-                                    <span>Toplam İşlem</span>
-                                    <span class="bb-pt-count-pill" id="ptHeadTotal">17</span>
+                                    Toplam işlem
+                                    <span class="bb-badge" data-bb-pt-total>0</span>
                                 </span>
-                                <span class="bb-pt-summary-divider" aria-hidden="true"></span>
                                 <span class="bb-pt-summary-item">
-                                    <span>Müdahale Bekleyen</span>
-                                    <span class="bb-pt-count-pill is-danger" id="ptHeadAlert">2</span>
+                                    Müdahale bekleyen
+                                    <span class="bb-badge bb-badge-light-danger" data-bb-pt-alerts>0</span>
                                 </span>
                             </div>
                         </div>
 
-                        <!-- View Mode Tabs -->
-                        <div class="bb-pt-tabs" role="tablist" aria-label="Kırılım Görünümü">
-                            <button type="button" class="bb-pt-tab is-active" role="tab" aria-selected="true" data-view="channel">Kanala Göre</button>
-                            <button type="button" class="bb-pt-tab" role="tab" aria-selected="false" data-view="category">Kategoriye Göre</button>
-                            <button type="button" class="bb-pt-tab" role="tab" aria-selected="false" data-view="warehouse">Depoya Göre</button>
-                        </div>
+                        <div class="bb-card-body d-grid gap-3">
+                            <div class="bb-pt-tabs" role="tablist" aria-label="Kırılım görünümü">
+                                <button class="bb-pt-tab" id="pt-channel" type="button" role="tab" aria-controls="pt-matrix" aria-selected="true" data-view="channel">Kanala göre</button>
+                                <button class="bb-pt-tab" id="pt-category" type="button" role="tab" aria-controls="pt-matrix" aria-selected="false" tabindex="-1" data-view="category">Kategoriye göre</button>
+                                <button class="bb-pt-tab" id="pt-warehouse" type="button" role="tab" aria-controls="pt-matrix" aria-selected="false" tabindex="-1" data-view="warehouse">Depoya göre</button>
+                            </div>
 
-                        <!-- Filter & Action Toolbar -->
-                        <div class="bb-pt-toolbar">
-                            <div class="bb-pt-toolbar-left">
-                                <div class="bb-pt-select-box">
-                                    <select id="ptScopeFilter" aria-label="Durum Kapsamı">
-                                        <option value="all" selected>Tüm Kırılımlar</option>
-                                        <option value="active">Aktif İşlemi Olanlar</option>
-                                        <option value="cancelled">İptal İçerenler</option>
-                                    </select>
+                            <div class="bb-pt-toolbar">
+                                <div class="bb-pt-toolbar-left">
+                                    <div>
+                                        <label class="visually-hidden" for="pt-scope">Durum kapsamı</label>
+                                        <select class="form-select form-select-sm" id="pt-scope" data-bb-pt-scope>
+                                            <option value="all">Tüm işlemler</option>
+                                            <option value="active">Aktif işlemi olanlar</option>
+                                            <option value="cancelled">İptal içerenler</option>
+                                        </select>
+                                    </div>
+                                    <input class="form-control form-control-sm bb-pt-search" type="search" placeholder="Kırılım veya alt kalem ara" aria-label="Kırılım veya alt kalem ara" data-bb-pt-search>
                                 </div>
 
-                                <div class="bb-pt-search-box">
-                                    <span class="material-symbols-outlined bb-icon-sm bb-icon-muted" aria-hidden="true">search</span>
-                                    <input type="search" id="ptSearchInput" placeholder="Kırılım veya alt kalem ara..." aria-label="Kırılım ara" />
+                                <div class="bb-pt-toolbar-right">
+                                    <div class="form-check form-switch m-0">
+                                        <input class="form-check-input" id="pt-notes" type="checkbox" data-bb-pt-notes>
+                                        <label class="form-check-label" for="pt-notes">Notlar</label>
+                                    </div>
+                                    <button class="btn btn-sm bb-btn-secondary" type="button" data-bb-pt-toggle-all>Tümünü kapat</button>
                                 </div>
                             </div>
 
-                            <div class="bb-pt-toolbar-right">
-                                <label class="bb-pt-switch-label" for="ptNotesToggle">
-                                    <span>Notlar</span>
-                                    <input type="checkbox" class="bb-pt-switch-input" id="ptNotesToggle" />
-                                </label>
-
-                                <button type="button" class="btn btn-sm btn-outline-secondary" id="ptExpandAllBtn">
-                                    Tümünü Kapat
-                                </button>
+                            <div id="pt-matrix" role="tabpanel" aria-labelledby="pt-channel">
+                                <div class="bb-pt-table-wrap" tabindex="0" role="region" aria-label="Operasyon matrisi">
+                                    <table class="bb-table-premium">
+                                        <caption class="visually-hidden">Kırılım ve işlem aşamalarına göre sipariş adedi</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Kırılım</th>
+                                                <th scope="col">Toplam</th>
+                                                <th scope="col">Onaylandı</th>
+                                                <th scope="col">Hazırlanıyor</th>
+                                                <th scope="col">Kargoda</th>
+                                                <th scope="col">Teslim edildi</th>
+                                                <th scope="col">İptal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                        <tfoot></tfoot>
+                                    </table>
+                                </div>
                             </div>
+                            <noscript>Operasyon matrisini kullanmak için JavaScript’i etkinleştirin.</noscript>
                         </div>
 
-                        <!-- Matrix Table -->
-                        <div class="bb-pt-table-wrap">
-                            <table class="bb-table-premium" id="bbPremiumMatrixTable">
-                                <thead>
-                                    <tr>
-                                        <th>Kırılım</th>
-                                        <th class="text-end">Toplam</th>
-                                        <th class="text-end">Onaylandı</th>
-                                        <th class="text-end">Hazırlanıyor</th>
-                                        <th class="text-end">Kargoda</th>
-                                        <th class="text-end">Teslim Edildi</th>
-                                        <th class="text-end">İptal</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="ptTableBody"></tbody>
-                                <tfoot id="ptTableFoot"></tfoot>
-                            </table>
-                        </div>
+                        <template data-bb-pt-data>
+                            [
+                              {"label":"Günlük ayakkabı","channel":"Bulbulustur","category":"Ayakkabı","warehouse":"Merkez Depo","approved":2,"preparing":2,"shipped":1,"delivered":1},
+                              {"label":"Deri terlik","channel":"Bulbulustur","category":"Aksesuar","warehouse":"Merkez Depo","approved":1,"shipped":1,"cancelled":1,"alerts":1,"note":"İptal nedeni inceleniyor."},
+                              {"label":"Yürüyüş ayakkabısı","channel":"Draugr","category":"Ayakkabı","warehouse":"Merkez Depo","preparing":2,"delivered":1},
+                              {"label":"Kemer","channel":"Draugr","category":"Aksesuar","warehouse":"Mağaza Deposu","approved":1,"shipped":1,"alerts":1,"note":"Kargo kaydı kontrol bekliyor."},
+                              {"label":"Mağaza teslim siparişleri","channel":"PosB","category":"Ayakkabı","warehouse":"Mağaza Deposu","delivered":3}
+                            ]
+                        </template>
                     </div>
                 </section>
 
-                <!--::Usage-->
-                <section class="bb-section">
+                <section class="bb-section" aria-labelledby="pt-usage">
                     <div class="bb-card">
                         <div class="bb-card-header">
-                            <div class="bb-card-title">How do I use it?</div>
+                            <h2 class="h5 mb-0" id="pt-usage">Kullanım</h2>
                         </div>
                         <div class="bb-card-body">
-                            <div class="bb-usage">
-                                <h3 class="bb-usage-title">Premium Tablo (Matris &amp; Ağaç Kırılımı)</h3>
-                                <p class="bb-usage-text">
-                                    <code>bb-table-premium</code> sınıfı; açılır/kapanır ebeveyn-çocuk satırları, yüzdelik yoğunluğa göre renklendirilen <code>bb-pt-heat-cell</code> matris hücreleri ve otomatik <code>tfoot</code> özet satırı sunar.
-                                </p>
-                                <div class="bb-usage-code">
-                                    <div class="bb-usage-code-head">
-                                        <span class="bb-usage-code-lang">HTML</span>
-                                        <button type="button" class="bb-usage-copy">Copy</button>
-                                    </div>
-                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-pt-card&quot; id=&quot;bbPremiumTableRoot&quot;&gt;
-    &lt;div class=&quot;bb-pt-table-wrap&quot;&gt;
-        &lt;table class=&quot;bb-table-premium&quot;&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Kırılım&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;Toplam&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;Onaylandı&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;Hazırlanıyor&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;Kargoda&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;Teslim Edildi&lt;/th&gt;
-                    &lt;th class=&quot;text-end&quot;&gt;İptal&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody id=&quot;ptTableBody&quot;&gt;&lt;/tbody&gt;
-            &lt;tfoot id=&quot;ptTableFoot&quot;&gt;&lt;/tfoot&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                            </div>
+                            <p class="mb-0"><code>data-bb-table-premium</code> kökünün içindeki <code>template[data-bb-pt-data]</code> alanına her alt kalemin adını, kanalını, kategorisini, deposunu ve aşama adetlerini verin. <code>bb-table-premium.js</code> seçili kırılımı, ısı haritasını ve filtrelenmiş toplamları tablonun içine yerleştirir.</p>
                         </div>
                     </div>
                 </section>
-                <!--/::Usage-->
             </div>
         </div>
     </main>
-    <!--/::Main-->
-    <script src="../../assets/js/core/bb-usage.js"></script>
     <script src="../../assets/js/core/bb-table-premium.js"></script>
     <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
-    <!--/::Scripts-->
 </body>
-<!--/::Body-->
 </html>

@@ -53,6 +53,7 @@
     "spinner": "Spinner",
     "sticky": "Sticky",
     "symbol": "Symbol",
+    "table-premium": "Premium Table",
     "tables": "Tables",
     "tabs": "Tabs",
     "tiny-slider-advanced": "Tiny Slider / Advanced",
@@ -79,7 +80,7 @@
     ["pagination.html","Pagination"],["password-meter.html","Password Meter"],["popover.html","Popover"],
     ["progress.html","Progress"],["pulse.html","Pulse"],["rating.html","Rating"],
     ["ribbons.html","Ribbons"],["scroll.html","Scroll"],["separator.html","Separator"],["spinner.html","Spinner"],
-    ["sticky.html","Sticky"],["symbol.html","Symbol"],["tables.html","Tables"],["tabs.html","Tabs"],
+    ["sticky.html","Sticky"],["symbol.html","Symbol"],["tables.html","Tables"],["table-premium.html","Premium Table"],["tabs.html","Tabs"],
     ["tiny-slider-advanced.html","Tiny Slider / Advanced"],["tiny-slider-thumbnails.html","Tiny Slider / Thumbnails"],["tiny-slider.html","Tiny Slider"],
     ["toast.html","Toast"],["tooltips.html","Tooltips"],["typography.html","Typography"]
   ];

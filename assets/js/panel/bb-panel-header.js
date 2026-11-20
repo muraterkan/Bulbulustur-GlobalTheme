@@ -124,6 +124,7 @@ if (topnav) {
             <aside class="bb-panel-mega-side" aria-label="Tools and examples">
               <strong>Tools and Examples</strong>
               <div class="bb-menu-item"><a class="bb-menu-link" href="lists.html">List / Table</a></div>
+              <div class="bb-menu-item"><a class="bb-menu-link" href="../components/table-premium.html">Premium Table</a></div>
               <div class="bb-menu-item"><a class="bb-menu-link" href="forms.html">Forms</a></div>
               <div class="bb-menu-item"><a class="bb-menu-link" href="charts.html">Charts</a></div>
               <div class="bb-menu-item"><a class="bb-menu-link" href="statistics.html">Statistics</a></div>
