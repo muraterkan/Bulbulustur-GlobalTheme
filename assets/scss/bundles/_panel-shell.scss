@@ -50,5 +50,6 @@
 @use "../layout/panel/orders";
 @use "../layout/panel/contacts";       // kişiler demo sayfası
 @use "../layout/panel/administration"; // roller, yetkiler, abonelik ve fatura detayları
+@use "../layout/panel/invoice-details";  // fatura belgesi, kalemler ve geçmiş faturalar
 @use "../layout/panel/users";          // kullanıcı listesi ve güvenlik sayfaları
 @use "../layout/panel/files";          // dosya yöneticisi sayfası
