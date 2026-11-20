@@ -2449,6 +2449,15 @@ main {
     --bb-wrapper-padding-bottom: 0;
   }
 }
+/* Dark theme does not use generic page-surface gradients for depth.
+   Dedicated illustrations (e.g. Aurora Waves / Globe Lines) keep their own effects. */
+html[data-bs-theme=dark] .bb-wrapper-surface-primary-soft,
+html[data-bs-theme=dark] .bb-wrapper-surface-muted-wash,
+html[data-bs-theme=dark] .bb-wrapper-surface-accent,
+html[data-bs-theme=dark] .bb-wrapper-surface-technical {
+  --bb-wrapper-bg: var(--bb-body-bg);
+}
+
 /* =====================================
    Bulbulustur Theme — Icons
    Google Material Symbols Outlined
