@@ -382,6 +382,27 @@
   font-size: var(--bb-h3);
   color: var(--bb-primary-text);
 }
+.bb-panel .bb-cart-checkout-extra-items {
+  display: grid;
+  gap: var(--bb-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bb-panel .bb-cart-checkout-extra-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--bb-space-2);
+  padding-block: var(--bb-space-2);
+  border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+  font-size: var(--bb-fs-sm);
+}
+.bb-panel .bb-cart-checkout-extra-items strong {
+  color: var(--bb-heading-color);
+  font-weight: var(--bb-fw-semibold);
+  white-space: nowrap;
+}
 .bb-panel .bb-checkout-plan-link {
   display: inline-flex;
   align-items: center;
