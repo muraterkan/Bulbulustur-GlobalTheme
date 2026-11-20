@@ -67,7 +67,7 @@ function renderCards(){
  grid.replaceChildren();
  visible.forEach(function(c){
   var card=document.createElement("button");
-  card.type="button";card.className="bb-channel-card";card.dataset.channelId=String(c.id);
+  card.type="button";card.className="bb-card bb-channel-card";card.dataset.channelId=String(c.id);
   card.innerHTML=
    '<span class="bb-channel-card-head">'+logoMarkup(c,false)+'<span class="bb-channel-title"><strong>'+c.name+'</strong><small>'+c.type+'</small></span><span class="bb-channel-health" data-health="'+c.health+'" title="'+healthLabel(c.health)+'"></span></span>'+
    '<span class="bb-channel-card-meta"><span class="bb-channel-card-stat"><strong>'+c.orders+'</strong><small>Bugünkü sipariş</small></span><span class="bb-channel-card-stat"><strong>'+c.pending+'</strong><small>Bekleyen işlem</small></span></span>'+
