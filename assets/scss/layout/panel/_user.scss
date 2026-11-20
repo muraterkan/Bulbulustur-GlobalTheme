@@ -82,6 +82,12 @@
   padding-inline-start: var(--bb-space-4);
 }
 
+.bb-panel .bb-panel-user-disclosure[data-bb-panel-service][open] > .bb-panel-user-submenu {
+  --bb-menu-link-hover-bg: var(--bb-surface-muted);
+  border-radius: var(--bb-menu-link-radius);
+  background: var(--bb-surface-soft);
+}
+
 .bb-panel .bb-panel-user-menu .bb-panel-user-item {
   display: flex;
   align-items: center;

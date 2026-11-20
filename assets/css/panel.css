@@ -8577,9 +8577,8 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
    Panel Template — Faz 1: Shell
    Existing layout and component classes are reused.
    ===================================== */
-/* Panel content width: header inner and page container share one max width,
-   centered in the shell. Zero specificity so .bb-container-* modifiers on the
-   panel root or on a page container override it. */
+/* Center the main content in the shell. Zero specificity lets bb-container
+   width modifiers override the panel default. */
 :where(.bb-app.bb-panel) {
   --bb-container-max-width: 1400px;
 }
@@ -8645,8 +8644,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
 
 .bb-panel .bb-shell-header-inner {
   width: 100%;
-  max-width: var(--bb-container-max-width);
-  margin-inline: auto;
   min-height: var(--bb-panel-header-height);
   height: auto;
   padding-inline: var(--bb-panel-content-gap);
@@ -8681,9 +8678,8 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   color: inherit;
 }
 
-/* Header and content share ONE horizontal gutter (--bb-panel-content-gap).
-   The page wrapper container adds no gutter of its own and shares the header's max width, so the
-   header edge, toolbar and content edge line up at every viewport width. */
+/* The full-width header shares the content gutter. The toolbar and content
+   line up with it while the main container fills the shell. */
 .bb-panel .bb-main > .bb-wrapper > .bb-container {
   max-width: var(--bb-container-max-width);
   padding-inline: 0;
@@ -8832,6 +8828,17 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   }
   .bb-panel .bb-shell-header-inner {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 575.98px) {
+  .bb-panel .bb-shell-header-inner {
+    column-gap: var(--bb-space-2);
+  }
+  .bb-panel .bb-shell-header-inner .bb-panel-icon-button {
+    padding-inline: var(--bb-space-1);
+  }
+  .bb-panel .bb-shell-header-right {
+    margin-inline-start: auto;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -9549,6 +9556,12 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
 
 .bb-panel .bb-panel-user-submenu {
   padding-inline-start: var(--bb-space-4);
+}
+
+.bb-panel .bb-panel-user-disclosure[data-bb-panel-service][open] > .bb-panel-user-submenu {
+  --bb-menu-link-hover-bg: var(--bb-surface-muted);
+  border-radius: var(--bb-menu-link-radius);
+  background: var(--bb-surface-soft);
 }
 
 .bb-panel .bb-panel-user-menu .bb-panel-user-item {
