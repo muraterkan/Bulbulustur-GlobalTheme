@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bulbulustur Theme — Hizmet Sepeti</title>
+    <title>Bulbulustur Theme — Issue Tracking</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
 <!--/::Head-->
 <!--::Body-->
 <body class="bb-body" id="bb-body-id">
-    <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false" data-bb-panel-default-page="subscription-cart">
+    <div class="bb-app bb-panel" data-bb-panel data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false" data-bb-panel-default-page="issue-tracking">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -423,6 +423,12 @@
                         </div>
                     </div>
                     <div class="bb-menu-section">APPLICATIONS</div>
+                    <div class="bb-menu-item">
+                        <a class="bb-menu-link" href="issue-tracking.html" data-bb-panel-page="issue-tracking">
+                            <span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">bug_report</span></span>
+                            <span class="bb-menu-title">Issue Tracking</span>
+                        </a>
+                    </div>
                     <div class="bb-menu-item" data-bb-menu-trigger="click">
                         <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_projects">
                             <span class="bb-menu-icon">
@@ -957,53 +963,43 @@
                             <div class="bb-panel-content-container">
                                 <div class="bb-toolbar-row">
                                     <div class="bb-toolbar-col-left">
-                                        <h1 class="bb-page-title">Hizmet Sepeti</h1>
+                                        <h1 class="bb-page-title">Issue Tracking</h1>
                                         <nav class="bb-breadcrumb" aria-label="İçerik yolu">
                                             <ol class="breadcrumb mb-0">
                                                 <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
-                                                <li class="breadcrumb-item"><a href="pricing.html">Paketler</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Sepet</li>
+                                                <li class="breadcrumb-item active" aria-current="page">Issue Tracking</li>
                                             </ol>
                                         </nav>
+                                        <p class="bb-it-subtitle">Görevleri, sorumluları, öncelikleri ve yayın risklerini takip edin.</p>
                                     </div>
                                     <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                        <a class="btn bb-btn-secondary" href="pricing.html">
-                                            Paketlere dön <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-                                        </a>
+                                        <div class="bb-it-toolbar">
+      <button type="button" class="btn bb-btn-secondary btn-sm" id="itToggleFiltersBtn" aria-expanded="false" aria-controls="itFilterBar">
+        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">filter_list</span>
+        <span>Filters</span>
+      </button>
+
+      <button type="button" class="btn bb-btn-secondary btn-sm" id="itShareBtn">
+        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">share</span>
+        <span id="itShareLabel">Share</span>
+      </button>
+
+      <button type="button" class="btn bb-btn-primary btn-sm" id="itOpenNewTaskBtn">
+        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">add</span>
+        <span>New task</span>
+      </button>
+    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--/::Toolbar-->
                         <!--::Content-->
-                        <div class="bb-it-page">
-  <!-- PAGE HEADER -->
-  <header class="bb-it-header">
-    <div>
-      <h1 class="bb-it-title">Issue Tracking</h1>
-      <p class="bb-it-subtitle">Track ownership, severity, and release risk.</p>
-    </div>
-
-    <div class="bb-it-toolbar">
-      <button type="button" class="bb-btn bb-btn-secondary bb-btn-sm" id="itToggleFiltersBtn" aria-expanded="false">
-        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">filter_list</span>
-        <span>Filters</span>
-      </button>
-
-      <button type="button" class="bb-btn bb-btn-secondary bb-btn-sm" id="itShareBtn">
-        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">share</span>
-        <span id="itShareLabel">Share</span>
-      </button>
-
-      <button type="button" class="bb-btn bb-btn-primary bb-btn-sm" id="itOpenNewTaskBtn">
-        <span class="material-symbols-outlined bb-icon-sm bb-icon-start-sm" aria-hidden="true">add</span>
-        <span>New task</span>
-      </button>
-    </div>
-  </header>
-
+                        <section class="bb-content bb-panel-issue-tracking" aria-label="Issue Tracking">
+                            <div class="bb-panel-content-container">
+<div class="bb-it-page">
   <!-- FILTER BAR -->
-  <section class="bb-it-filter-bar" id="itFilterBar" hidden aria-label="Task Filtreleri">
+  <section class="bb-card bb-card-body bb-it-filter-bar" id="itFilterBar" hidden aria-label="Task Filtreleri">
     <div class="bb-it-filter-controls">
       <input type="search" class="form-control form-control-sm" id="itSearchInput" placeholder="BUG ID, başlık veya kişi ara..." aria-label="Görev ara" />
 
@@ -1024,34 +1020,34 @@
       </select>
     </div>
 
-    <button type="button" class="bb-btn bb-btn-ghost bb-btn-sm" id="itResetBoardBtn">
+    <button type="button" class="btn bb-btn-outline-secondary btn-sm" id="itResetBoardBtn">
       Varsayılan Panoya Sıfırla
     </button>
   </section>
 
   <!-- HORIZONTAL KANBAN BOARD -->
-  <section class="bb-it-board" id="itBoardContainer" aria-label="Issue Tracking Kanban Panosu"></section>
+  <div class="bb-it-board" id="itBoardContainer" role="region" tabindex="0" aria-label="Issue Tracking Kanban Panosu"></div>
 </div>
 
 <!-- NEW TASK DIALOG (Anında 1. Open kolonuna ekler) -->
-<dialog class="bb-it-dialog" id="itNewTaskDialog" aria-labelledby="itDialogTitle">
+<dialog class="bb-modal bb-it-dialog" id="itNewTaskDialog" aria-labelledby="itDialogTitle">
   <form id="itNewTaskForm" method="dialog">
-    <div class="bb-it-dialog-head">
-      <strong id="itDialogTitle">Yeni Task Oluştur</strong>
-      <button type="button" class="bb-icon-btn" id="itCloseDialogBtn" aria-label="Kapat">
+    <div class="bb-modal-header">
+      <strong class="bb-modal-title" id="itDialogTitle">Yeni Task Oluştur</strong>
+      <button type="button" class="bb-modal-close" id="itCloseDialogBtn" aria-label="Kapat">
         <span class="material-symbols-outlined bb-icon-sm" aria-hidden="true">close</span>
       </button>
     </div>
 
-    <div class="bb-it-dialog-body">
+    <div class="bb-modal-body bb-it-dialog-fields">
       <div class="bb-it-field">
-        <label for="itTaskTitleInput">Task Başlığı *</label>
+        <label class="form-label" for="itTaskTitleInput">Task Başlığı *</label>
         <input type="text" class="form-control form-control-sm" id="itTaskTitleInput" required placeholder="Örn: Drauger webhook timeout doğrulaması" />
       </div>
 
       <div class="bb-it-form-grid">
         <div class="bb-it-field">
-          <label for="itTaskModuleInput">Modül / Etiket</label>
+          <label class="form-label" for="itTaskModuleInput">Modül / Etiket</label>
           <select class="form-select form-select-sm" id="itTaskModuleInput">
             <option value="Access">Access</option>
             <option value="Auth">Auth</option>
@@ -1065,7 +1061,7 @@
         </div>
 
         <div class="bb-it-field">
-          <label for="itTaskStageInput">Hedef Kolon</label>
+          <label class="form-label" for="itTaskStageInput">Hedef Kolon</label>
           <select class="form-select form-select-sm" id="itTaskStageInput">
             <option value="open" selected>1. Open</option>
             <option value="triage">2. Triage</option>
@@ -1079,7 +1075,7 @@
 
       <div class="bb-it-form-grid">
         <div class="bb-it-field">
-          <label for="itTaskPriorityInput">Öncelik</label>
+          <label class="form-label" for="itTaskPriorityInput">Öncelik</label>
           <select class="form-select form-select-sm" id="itTaskPriorityInput">
             <option value="P0">P0</option>
             <option value="P1" selected>P1</option>
@@ -1089,7 +1085,7 @@
         </div>
 
         <div class="bb-it-field">
-          <label for="itTaskStatusInput">Risk Durumu</label>
+          <label class="form-label" for="itTaskStatusInput">Risk Durumu</label>
           <select class="form-select form-select-sm" id="itTaskStatusInput">
             <option value="Queued" selected>Queued</option>
             <option value="On track">On track</option>
@@ -1101,23 +1097,25 @@
 
       <div class="bb-it-form-grid">
         <div class="bb-it-field">
-          <label for="itTaskAssigneeInput">Atanan Kişi</label>
+          <label class="form-label" for="itTaskAssigneeInput">Atanan Kişi</label>
           <input type="text" class="form-control form-control-sm" id="itTaskAssigneeInput" value="Nora Lee" required />
         </div>
 
         <div class="bb-it-field">
-          <label for="itTaskDateInput">Hedef Tarih</label>
+          <label class="form-label" for="itTaskDateInput">Hedef Tarih</label>
           <input type="text" class="form-control form-control-sm" id="itTaskDateInput" value="Today" required />
         </div>
       </div>
     </div>
 
-    <div class="bb-it-dialog-foot">
-      <button type="button" class="bb-btn bb-btn-secondary bb-btn-sm" id="itCancelDialogBtn">İptal</button>
-      <button type="submit" class="bb-btn bb-btn-primary bb-btn-sm">Panoya Ekle</button>
+    <div class="bb-modal-footer">
+      <button type="button" class="btn bb-btn-secondary btn-sm" id="itCancelDialogBtn">İptal</button>
+      <button type="submit" class="btn bb-btn-primary btn-sm">Panoya Ekle</button>
     </div>
   </form>
 </dialog>
+                            </div>
+                        </section>
                         <!--/::Content-->
                     </div>
                 </div>
@@ -1141,17 +1139,6 @@
             <!--/::Footer-->
         </div>
     </div>
-    <!--::Modals-->
-    <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">Filtre içeriği Faz 9 kapsamında hazırlanacaktır.</div>
-            </div>
-        </div>
-    </div>
     <!--::Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/panel/bb-panel.js"></script>
@@ -1160,14 +1147,8 @@
     <script src="../../assets/js/panel/bb-panel-header.js"></script>
     <script src="../../assets/js/panel/bb-panel-user.js"></script>
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
-    <script src="../../assets/js/panel/bb-panel-service-plans.js"></script>
-    <script src="../../assets/js/panel/bb-panel-cart.js"></script>
+    <script src="../../assets/js/panel/bb-panel-issue-tracking.js"></script>
     <!--/::Scripts-->
 </body>
 <!--/::Body-->
 </html>
-
-
-
-
-

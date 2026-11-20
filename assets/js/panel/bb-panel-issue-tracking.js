@@ -1,6 +1,14 @@
 (function () {
   "use strict";
 
+  if (!document.querySelector(".bb-panel-issue-tracking")) return;
+
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (character) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[character]);
+  }
+
   const STORAGE_KEY = "bb_issue_tracking_tasks_v1";
 
   const STAGES = [
@@ -53,7 +61,13 @@
   function loadTasks() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.every((task) =>
+          task && ["id", "module", "priority", "status", "title", "assignee", "date"].every((key) => typeof task[key] === "string") &&
+          STAGES.some((stage) => stage.id === task.stage)
+        )) return parsed;
+      }
     } catch (_) {}
     return structuredClone(DEFAULT_TASKS);
   }
@@ -65,9 +79,9 @@
   }
 
   function getStatusTone(status) {
-    if (status === "On track") return "is-success";
-    if (status === "At risk") return "is-warning";
-    if (status === "Blocked") return "is-danger";
+    if (status === "On track") return "bb-chip-success-soft";
+    if (status === "At risk") return "bb-chip-warning-soft";
+    if (status === "Blocked") return "bb-chip-danger-soft";
     return "";
   }
 
@@ -108,35 +122,35 @@
   function renderCard(task) {
     const isDone = task.stage === "done";
     const isNew = task.id === newlyCreatedId;
-    const modClass = task.moduleTone && task.moduleTone !== "neutral" ? `is-${task.moduleTone}` : "";
+    const modClass = ["danger", "warning", "success", "info"].includes(task.moduleTone) ? `bb-chip-${task.moduleTone}-soft` : "";
     const statusClass = getStatusTone(task.status);
 
     return `
-      <article class="bb-card bb-it-card ${isDone ? "is-done" : ""} ${isNew ? "is-just-created" : ""}" draggable="true" data-task-id="${task.id}">
+      <article class="bb-card bb-card-body bb-it-card ${isDone ? "is-done" : ""} ${isNew ? "is-just-created" : ""}" draggable="true" data-task-id="${escapeHtml(task.id)}">
         <div class="bb-it-card-top">
           <div class="bb-it-meta-left">
-            <span class="bb-it-pill ${modClass}">${task.module}</span>
-            <span class="bb-it-key">${task.id}</span>
-            <span class="bb-it-prio">${task.priority}</span>
+            <span class="bb-chip bb-chip-sm ${modClass}">${escapeHtml(task.module)}</span>
+            <span class="bb-it-key">${escapeHtml(task.id)}</span>
+            <span class="bb-it-prio">${escapeHtml(task.priority)}</span>
           </div>
-          <span class="bb-it-pill ${statusClass}">
-            <span class="bb-it-status-dot" aria-hidden="true"></span>
-            <span>${task.status}</span>
+          <span class="bb-chip bb-chip-sm ${statusClass}">
+            <span class="bb-chip-dot" aria-hidden="true"></span>
+            <span>${escapeHtml(task.status)}</span>
           </span>
         </div>
 
-        <h3 class="bb-it-card-title">${task.title}</h3>
+        <h3 class="bb-it-card-title">${escapeHtml(task.title)}</h3>
 
         <div class="bb-it-card-foot">
           <div class="bb-it-assignee">
-            <span class="bb-avatar bb-avatar-sm bb-it-avatar-fallback" aria-hidden="true">${getInitials(task.assignee)}</span>
-            <span>${task.assignee}</span>
+            <span class="bb-symbol size-25 is-circle" aria-hidden="true"><span class="bb-symbol-label">${escapeHtml(getInitials(task.assignee))}</span></span>
+            <span>${escapeHtml(task.assignee)}</span>
           </div>
 
           <div class="bb-it-foot-right">
-            <span class="bb-it-date-pill">
+            <span class="bb-chip bb-chip-sm">
               <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">calendar_today</span>
-              <span>${task.date}</span>
+              <span>${escapeHtml(task.date)}</span>
             </span>
             ${buildProgressRing(task.progress, task.status)}
           </div>
@@ -168,11 +182,11 @@
     board.innerHTML = STAGES.map((stage) => {
       const stageTasks = filtered.filter((t) => t.stage === stage.id);
       return `
-        <section class="bb-it-col ${stage.stageClass}" data-stage="${stage.id}" aria-label="${stage.label}">
+        <section class="bb-card bb-it-col ${stage.stageClass}" data-stage="${stage.id}" aria-label="${stage.label}">
           <header class="bb-it-col-head">
             <div class="bb-it-col-title-wrap">
               <h2 class="bb-it-col-title">${stage.label}</h2>
-              <span class="bb-it-col-count">${stageTasks.length}</span>
+              <span class="bb-chip bb-chip-sm bb-it-col-count">${stageTasks.length}</span>
             </div>
             <span class="material-symbols-outlined bb-icon-sm bb-icon-muted" aria-hidden="true">drag_indicator</span>
           </header>
