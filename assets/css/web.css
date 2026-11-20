@@ -529,26 +529,26 @@ html[data-bs-theme=dark] {
      Black Navy Foundation
      95% black / 5% blue feeling.
   ------------------------------------- */
-  --bb-ink-990: #030507;
-  --bb-ink-980: #05080c;
-  --bb-ink-950: #070b11;
-  --bb-ink-900: #0a0f17;
-  --bb-ink-850: #0d141e;
-  --bb-ink-800: #101923;
-  --bb-ink-750: #131e2a;
-  --bb-ink-700: #172433;
-  --bb-ink-650: #1c2b3c;
-  --bb-ink-600: #233446;
-  --bb-ink-blue-line: rgba(152, 177, 200, 0.13);
-  --bb-ink-blue-line-soft: rgba(152, 177, 200, 0.08);
-  --bb-ink-blue-line-strong: rgba(152, 177, 200, 0.22);
+  --bb-ink-990: #050608;
+  --bb-ink-980: #07080a;
+  --bb-ink-950: #0a0b0d;
+  --bb-ink-900: #0c0d0f;
+  --bb-ink-850: #0e0f12;
+  --bb-ink-800: #17181b;
+  --bb-ink-750: #1c1e21;
+  --bb-ink-700: #222428;
+  --bb-ink-650: #2a2c31;
+  --bb-ink-600: #32353b;
+  --bb-ink-blue-line: rgba(190, 197, 208, 0.11);
+  --bb-ink-blue-line-soft: rgba(190, 197, 208, 0.07);
+  --bb-ink-blue-line-strong: rgba(190, 197, 208, 0.18);
   /* -------------------------------------
      RGB Helpers
   ------------------------------------- */
-  --bb-body-bg-rgb: 13, 20, 30;
+  --bb-body-bg-rgb: 14, 15, 18;
   --bb-body-color-rgb: 238, 243, 248;
-  --bb-secondary-bg-rgb: 23, 36, 51;
-  --bb-tertiary-bg-rgb: 19, 30, 42;
+  --bb-secondary-bg-rgb: 34, 36, 40;
+  --bb-tertiary-bg-rgb: 28, 30, 33;
   --bb-secondary-color-rgb: 196, 207, 218;
   --bb-tertiary-color-rgb: 148, 162, 177;
   /* -------------------------------------
@@ -589,9 +589,9 @@ html[data-bs-theme=dark] {
      Borders
   ------------------------------------- */
   --bb-border-rgb: 152, 177, 200;
-  --bb-border-opacity: 0.13;
-  --bb-border-opacity-strong: 0.22;
-  --bb-border-opacity-dashed: 0.20;
+  --bb-border-opacity: 0.11;
+  --bb-border-opacity-strong: 0.18;
+  --bb-border-opacity-dashed: 0.15;
   --bb-border-color: var(--bb-ink-blue-line);
   --bb-border-color-strong: var(--bb-ink-blue-line-strong);
   --bb-border-dashed-color: rgba(var(--bb-border-rgb), var(--bb-border-opacity-dashed));
@@ -600,16 +600,17 @@ html[data-bs-theme=dark] {
      Shadows
   ------------------------------------- */
   --bb-shadow-rgb: 0, 0, 0;
-  --bb-shadow-opacity-xs: 0.26;
-  --bb-shadow-opacity-sm: 0.34;
-  --bb-shadow-opacity-md: 0.42;
-  --bb-shadow-opacity-lg: 0.52;
-  --bb-shadow-opacity-inset: 0.30;
-  --bb-shadow-xs: 0 0.10rem 0.65rem rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-xs));
-  --bb-shadow-sm: 0 0.25rem 1rem rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-sm));
-  --bb-shadow: 0 0.60rem 1.60rem rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-md));
-  --bb-shadow-lg: 0 1.20rem 2.80rem rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-lg));
-  --bb-shadow-inset: inset 0 1px 2px rgba(var(--bb-shadow-rgb), var(--bb-shadow-opacity-inset));
+  /* Dark surfaces are separated by hairline borders, not light-mode elevation. */
+  --bb-shadow-opacity-xs: 0;
+  --bb-shadow-opacity-sm: 0;
+  --bb-shadow-opacity-md: 0;
+  --bb-shadow-opacity-lg: 0;
+  --bb-shadow-opacity-inset: 0;
+  --bb-shadow-xs: none;
+  --bb-shadow-sm: none;
+  --bb-shadow: none;
+  --bb-shadow-lg: none;
+  --bb-shadow-inset: none;
   /* -------------------------------------
      Brand dark tuning
   ------------------------------------- */
