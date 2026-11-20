@@ -112,6 +112,7 @@
     const method = root.querySelector("[name='paymentMethod']:checked")?.value || "card";
     setText("[data-bb-checkout-review-payment]",method === "card" ? "Güvenli kart ödeme alanı (demo)" : "Banka havalesi (demo)");
     setText("[data-bb-checkout-review-plan]",selectedPlan.name + " · 1 yıl");
+    setText("[data-bb-checkout-review-account]",root.querySelector("[name='createAccount']").checked ? "Hesap açma isteği (demo)" : "Misafir devam");
     setText("[data-bb-checkout-review-total]",fmt(price().total));
   }
   function renderStep() {
