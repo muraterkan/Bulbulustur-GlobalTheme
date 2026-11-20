@@ -13,9 +13,6 @@
   display: grid;
   gap: calc(var(--bb-space-4) * 2);
   padding: calc(var(--bb-space-4) * 2);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-lg);
-  background: var(--bb-surface-bg);
 }
 
 .bb-panel .bb-team-intro {
