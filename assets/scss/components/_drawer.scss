@@ -8,14 +8,19 @@
   /* Core tokens */
   --bb-drawer-z: var(--bb-z-drawer);
   --bb-drawer-width: 420px;
+  --bb-drawer-inset: var(--bb-space-3);
+  --bb-drawer-inset-top: max(var(--bb-drawer-inset), env(safe-area-inset-top, 0px));
+  --bb-drawer-inset-bottom: max(var(--bb-drawer-inset), env(safe-area-inset-bottom, 0px));
+  --bb-drawer-inset-left: max(var(--bb-drawer-inset), env(safe-area-inset-left, 0px));
+  --bb-drawer-inset-right: max(var(--bb-drawer-inset), env(safe-area-inset-right, 0px));
 
-  --bb-drawer-bg: var(--bb-body-bg);
+  --bb-drawer-bg: var(--bb-surface-elevated);
   --bb-drawer-color: var(--bb-emphasis-color);
   --bb-drawer-muted-color: var(--bb-secondary-color);
 
   --bb-drawer-border-color: var(--bb-border-color);
   --bb-drawer-border-width: var(--bb-border-width, 1px);
-  --bb-drawer-radius: var(--bb-radius-lg);
+  --bb-drawer-radius: var(--bb-radius-xl);
 
   --bb-drawer-padding-x: 1.25rem;
   --bb-drawer-header-padding-y: 1rem;
@@ -34,15 +39,17 @@
     );
 
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: var(--bb-drawer-inset-top);
+  bottom: var(--bb-drawer-inset-bottom);
   z-index: var(--bb-drawer-z);
 
   display: flex;
   flex-direction: column;
 
   width: var(--bb-drawer-width);
-  max-width: 100%;
+  max-width: calc(100vw - var(--bb-drawer-inset-left) - var(--bb-drawer-inset-right));
+  min-height: 0;
+  overflow: hidden;
 
   color: var(--bb-drawer-color);
   background-color: var(--bb-drawer-bg);
@@ -65,17 +72,13 @@
 }
 
 .bb-drawer.bb-drawer-end {
-  right: 0;
-  transform: translateX(102%);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  right: var(--bb-drawer-inset-right);
+  transform: translateX(calc(100% + var(--bb-drawer-inset-right)));
 }
 
 .bb-drawer.bb-drawer-start {
-  left: 0;
-  transform: translateX(-102%);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  left: var(--bb-drawer-inset-left);
+  transform: translateX(calc(-100% - var(--bb-drawer-inset-left)));
 }
 
 .bb-drawer.is-open {
@@ -90,6 +93,7 @@
 ------------------------------------- */
 
 .bb-drawer-header {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,6 +149,8 @@
 
 .bb-drawer-body {
   flex: 1 1 auto;
+  min-height: 0;
+  overscroll-behavior: contain;
   padding: var(--bb-drawer-body-padding-y) var(--bb-drawer-padding-x);
   overflow: auto;
   color: var(--bb-drawer-color);
@@ -165,8 +171,8 @@
 [data-bb-drawer-backdrop] {
   --bb-drawer-backdrop-z: calc(var(--bb-z-drawer) - 1);
   --bb-drawer-backdrop-color: var(--bb-overlay-color, var(--bb-black));
-  --bb-drawer-backdrop-opacity: var(--bb-overlay-opacity, 0.55);
-  --bb-drawer-backdrop-blur: var(--bb-overlay-blur, 0px);
+  --bb-drawer-backdrop-opacity: 0.35;
+  --bb-drawer-backdrop-blur: var(--bb-space-1);
   --bb-drawer-backdrop-transition: var(--bb-transition-normal);
 
   position: fixed;
@@ -180,6 +186,7 @@
       transparent
     );
 
+  -webkit-backdrop-filter: blur(var(--bb-drawer-backdrop-blur));
   backdrop-filter: blur(var(--bb-drawer-backdrop-blur));
 
   opacity: 0;
@@ -207,4 +214,17 @@
   --bb-drawer-padding-x: 1rem;
   --bb-drawer-header-padding-y: 0.85rem;
   --bb-drawer-body-padding-y: 0.85rem;
+}
+
+/* Keep the floating edge on narrow screens and preserve device safe areas. */
+@media (max-width: 575.98px) {
+  .bb-drawer { --bb-drawer-inset: var(--bb-space-2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-drawer,
+  .bb-drawer-backdrop,
+  [data-bb-drawer-backdrop] {
+    transition: none;
+  }
 }

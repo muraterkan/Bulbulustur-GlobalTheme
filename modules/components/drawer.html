@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="tr" data-bs-theme="dark">
 <!--::Head-->
 <head>
     <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
@@ -8,30 +8,16 @@
 
     <title>Bulbulustur Theme — Drawer</title>
     <!-- Main Theme CSS -->
-    <link rel="stylesheet" href="../../assets/css/main.css" />
 
     <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <!--::Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Google Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <style>
-        /* demo-only top hero */
-        .bb-demo-hero {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: 1.25rem;
-            border-radius: var(--bb-radius-lg, .75rem);
-            border: 1px solid var(--bb-border-color);
-            background: color-mix(in srgb, var(--bb-body-bg) 85%, var(--bb-tertiary-bg));
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
 <!--/::Head-->
 <!--::Body-->
@@ -51,10 +37,10 @@
                             </div>
 
                             <div class="d-flex gap-2">
-                                <button class="btn btn-primary" data-bb-drawer-toggle="#drawerEnd" aria-controls="drawerEnd">
+                                <button class="btn btn-primary" data-bb-drawer-toggle="#drawerEnd" aria-controls="drawerEnd" aria-expanded="false">
                                     Opens from the Right
                                 </button>
-                                <button class="btn btn-secondary" data-bb-drawer-toggle="#drawerStart" aria-controls="drawerStart">
+                                <button class="btn btn-secondary" data-bb-drawer-toggle="#drawerStart" aria-controls="drawerStart" aria-expanded="false">
                                     Opens from the Left
                                 </button>
                             </div>
@@ -78,7 +64,7 @@
                                     <div class="p-3 border rounded-3">
                                         <div class="fw-semibold mb-2">Token quick</div>
                                         <div class="small text-body-secondary">
-                                            Drawer bg/border/shadow + backdrop opacity tamamen token’dan.
+                                            Drawer dört kenardan boşluklu, yuvarlatılmış bir yüzeydir. Arka plan bulanıklığı, karartma ve kenar boşlukları component tokenlarıyla ayarlanır.
                                         </div>
                                     </div>
                                 </div>
@@ -92,18 +78,18 @@
                         <div class="card-body bb-card-body">
                             <div class="fw-semibold mb-2">Sayfa içeriği</div>
                             <div class="text-body-secondary small">
-                                Drawer açıldığında bu içerik backdrop altında kalmalı. Scroll + focus testini de burada rahat görürsün.
+                                Drawer açıldığında bu içerik bulanık arka planın altında kalır; çekmece keskin ve okunaklı kalmalıdır. Sağ/sol açılışı, dar ekranı ve iç kaydırmayı deneyin.
                             </div>
                         </div>
                     </div>
                     <!-- Drawer End -->
-                    <div id="drawerEnd" class="bb-drawer bb-drawer-end" data-bb-drawer role="dialog" aria-modal="true" aria-labelledby="drawerEndTitle" tabindex="-1">
+                    <div id="drawerEnd" class="bb-drawer bb-drawer-end" data-bb-drawer aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerEndTitle" tabindex="-1">
 
                         <div class="bb-drawer-header">
                             <h2 id="drawerEndTitle" class="bb-drawer-title">Sağ Panel</h2>
 
                             <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Close">
-                                <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+                                <span class="material-symbols-outlined bb-icon-sm">close</span>
                             </button>
                         </div>
 
@@ -127,13 +113,13 @@
                 </section>
                 <section class="bb-section">
                     <!-- Drawer Start -->
-                    <div id="drawerStart" class="bb-drawer bb-drawer-start" data-bb-drawer role="dialog" aria-modal="true" aria-labelledby="drawerStartTitle" tabindex="-1">
+                    <div id="drawerStart" class="bb-drawer bb-drawer-start" data-bb-drawer aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerStartTitle" tabindex="-1">
 
                         <div class="bb-drawer-header">
                             <h2 id="drawerStartTitle" class="bb-drawer-title">Sol Panel</h2>
 
                             <button type="button" class="bb-drawer-close" data-bb-drawer-close aria-label="Close">
-                                <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+                                <span class="material-symbols-outlined bb-icon-sm">close</span>
                             </button>
                         </div>
 
@@ -157,7 +143,7 @@
                         <div class="bb-card-body">
                             <div class="bb-usage">
                                 <h3 class="bb-usage-title">Açma düğmesi ve çekmece</h3>
-                                <p class="bb-usage-text">Düğmeye <code>data-bb-drawer-toggle</code>, çekmeceye <code>data-bb-drawer</code> verin. Konum için <code>bb-drawer-start</code> veya <code>bb-drawer-end</code>; kapatma için <code>data-bb-drawer-close</code>.</p>
+                                <p class="bb-usage-text">Düğmeye <code>data-bb-drawer-toggle</code>, çekmeceye <code>data-bb-drawer</code> verin. Konum için <code>bb-drawer-start</code> veya <code>bb-drawer-end</code>; kapatma için <code>data-bb-drawer-close</code>. Mevcut kullanımlar otomatik olarak boşluklu görünür. <code>--bb-drawer-inset</code> masaüstünde <code>--bb-space-3</code>, mobilde <code>--bb-space-2</code> kullanır; cihaz güvenli alanları korunur. Backdrop için <code>--bb-drawer-backdrop-blur</code> ve <code>--bb-drawer-backdrop-opacity</code> ayarlanabilir. Bulanıklık desteklenmeyen tarayıcılarda karartma katmanı çalışmaya devam eder.</p>
                                 <div class="bb-usage-code">
                                     <div class="bb-usage-code-head"><span class="bb-usage-code-lang">HTML</span>
 <button type="button" class="bb-usage-copy">Copy</button>
@@ -168,7 +154,7 @@
         &lt;h2 id=&quot;drawerEndTitle&quot; class=&quot;bb-drawer-title&quot;&gt;Sağ Panel&lt;/h2&gt;
 
         &lt;button type=&quot;button&quot; class=&quot;bb-drawer-close&quot; data-bb-drawer-close aria-label=&quot;Close&quot;&gt;
-            &lt;span class=&quot;material-symbols-outlined&quot; style=&quot;font-size:20px;&quot;&gt;close&lt;/span&gt;
+            &lt;span class=&quot;material-symbols-outlined bb-icon-sm&quot; &gt;close&lt;/span&gt;
         &lt;/button&gt;
     &lt;/div&gt;
 
