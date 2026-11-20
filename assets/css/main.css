@@ -45427,6 +45427,11 @@ body.bb-category-menu-open {
   display: block;
 }
 
+/* Footer her temada koyu kabuktur: yalnız beyaz logo görünür */
+.bb-web-footer-logo.is-dark {
+  display: none;
+}
+
 .bb-web-footer-tagline {
   max-width: 26.25rem;
   margin: 0 0 0.75rem;

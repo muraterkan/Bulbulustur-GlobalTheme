@@ -167,6 +167,10 @@
     display: block;
 }
 
+/* Footer her temada koyu kabuktur: yalnız beyaz logo görünür */
+.bb-web-footer-logo.is-dark {
+    display: none;
+}
 
 .bb-web-footer-tagline {
     max-width: 26.25rem;
