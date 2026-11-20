@@ -321,7 +321,7 @@
     return tr;
   }
   function folderTile(item) {
-    const wrapper = element("article","bb-files-folder-tile");
+    const wrapper = element("article","bb-card bb-files-folder-tile");
     const btn = action("",null,"bb-files-folder-open");
     btn.append(icon("folder","bb-files-folder-icon"));
     const text = element("span","bb-files-folder-copy");
@@ -332,7 +332,7 @@
     return wrapper;
   }
   function fileCard(item) {
-    const article = element("article","bb-files-file-card");
+    const article = element("article","bb-card bb-files-file-card");
     const badge = element("span","bb-badge bb-badge-light-primary",isFolder(item) ? "Klasör" : item.type);
     const opener = action(item.name,null,"bb-files-card-opener");
     opener.prepend(icon(fileIcon(item),"bb-files-file-card-icon"));
