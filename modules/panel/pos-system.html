@@ -1,1201 +1,352 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-<!--::Head-->
+<html lang="tr" data-bs-theme="dark">
 <head>
-    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Bulbulustur Theme — PosB Quick Sale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <title>Bulbulustur — PosB Kasa</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
-<!--/::Head-->
-<!--::Body-->
-<body class="bb-body" id="bb-body-id">
-    <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="posb-quick-sale" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
-        <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
-            <div class="bb-sidebar-header">
-                <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
-                    <span class="bb-panel-brand-text">Bulbulustur</span>
-                </a>
-                <button class="bb-panel-icon-button d-none d-lg-inline-flex" type="button" data-bb-panel-sidebar-collapse aria-label="Kenar çubuğunu daralt" aria-pressed="false" title="Daralt / genişlet">
-                    <span class="material-symbols-outlined" aria-hidden="true">left_panel_close</span>
-                </button>
-                <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-close aria-label="Close Menu">
-                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-            </div>
-            <div class="bb-sidebar-body">
-                <nav class="bb-menu bb-menu-column bb-menu-hover-bg bb-menu-active-bg bb-menu-sub-indention" data-bb-panel-menu aria-label="Panel gezinme">
-                    <div class="bb-menu-section">DASHBOARDS</div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_dashboard">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
-                            </span>
-                            <span class="bb-menu-title">Dashboard</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_dashboard">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="dashboard.html" data-bb-panel-page="dashboard-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=dashboard-analytics" data-bb-panel-page="dashboard-analytics">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Analitics</span>
-                                    </a>
-                                </div>
-                            </div>
+<body class="bb-body bb-panel bb-pos-terminal">
+    <main class="bb-main" data-bb-pos>
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <header class="bb-pos-terminal-header">
+                    <div class="bb-pos-terminal-brand">
+                        <span class="bb-pos-terminal-icon"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span></span>
+                        <div>
+                            <h1>PosB <span>Hızlı satış</span></h1>
+                            <p>Merkez Şube <span aria-hidden="true">·</span> Demo kasa</p>
                         </div>
                     </div>
-                    <div class="bb-menu-section">PAGES</div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_profile">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">person</span>
-                            </span>
-                            <span class="bb-menu-title">User Profile</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
+                    <div class="bb-pos-terminal-actions">
+                        <button class="btn bb-btn-secondary" type="button" data-bb-drawer-toggle="#bb_pos_held_drawer" aria-controls="bb_pos_held_drawer" aria-expanded="false">
+                            <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span> Bekleyen fişler
+                            <span class="bb-badge bb-badge-light" data-bb-pos-held-count hidden>0</span>
                         </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_profile">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile.html" data-bb-panel-page="profile-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile-projects.html" data-bb-panel-page="profile-projects">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Projects</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile-campaigns.html" data-bb-panel-page="profile-campaigns">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Campaigns</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile-documents.html" data-bb-panel-page="profile-documents">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Documents</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile-followers.html" data-bb-panel-page="profile-followers">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Followers</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile-activity.html" data-bb-panel-page="profile-activity">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Activity</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn bb-btn-secondary" type="button" data-bb-drawer-toggle="#bb_pos_cash_drawer" aria-controls="bb_pos_cash_drawer" aria-expanded="false">
+                            <span class="material-symbols-outlined" aria-hidden="true">payments</span> Kasa ve gün
+                        </button>
+                        <a class="btn bb-btn-secondary" href="draugr.html?view=dashboard" data-bb-pos-exit>
+                            <span class="material-symbols-outlined" aria-hidden="true">logout</span> Kasadan çık
+                        </a>
                     </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_account">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>
-                            </span>
-                            <span class="bb-menu-title">Manage Account</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_account">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="profile.html" data-bb-panel-page="account-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="account.html" data-bb-panel-page="account-settings">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Account Settings</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=account-security" data-bb-panel-page="account-security">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Security</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="invoices.html" data-bb-panel-page="account-billing">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Billing</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_authentication">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">lock</span>
-                            </span>
-                            <span class="bb-menu-title">Identity Verification</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_authentication">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_corporate_layout">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Corporate Layout</span>
-                                        <span class="bb-menu-arrow" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_corporate_layout">
-                                        <div class="bb-menu-sub-content">
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="sign-in.html" data-bb-panel-page="auth-corporate-signin">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Login</span>
-                                                </a>
-                                            </div>
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="sign-up.html" data-bb-panel-page="auth-corporate-signup">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Register</span>
-                                                </a>
-                                            </div>
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="reset-password.html" data-bb-panel-page="auth-corporate-reset">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Reset Password</span>
-                                                </a>
-                                            </div>
+                </header>
+                <section class="bb-section bb-pos-page" aria-label="Hızlı satış">
+                    <div class="bb-pos-layout">
+                        <div class="bb-pos-workspace">
+                            <section class="bb-card bb-pos-command-card" aria-label="Hızlı satış araçları">
+                                <div class="bb-card-body">
+                                    <div class="bb-pos-command-row">
+                                        <div class="bb-pos-search">
+                                            <span class="material-symbols-outlined" aria-hidden="true">barcode_scanner</span>
+                                            <label class="visually-hidden" for="bb_pos_barcode">Barkod girin veya taratın</label>
+                                            <input class="form-control form-control-solid" id="bb_pos_barcode" data-bb-pos-barcode type="search" placeholder="Barkod girin veya taratın…" autocomplete="off">
+                                        </div>
+                                        <div class="bb-pos-search">
+                                            <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                                            <label class="visually-hidden" for="bb_pos_product_search">Ürün arama</label>
+                                            <input class="form-control form-control-solid" id="bb_pos_product_search" data-bb-pos-product-search type="search" placeholder="Ürün ara…" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pages_authentication_general_layout">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Creative Düzen</span>
-                                        <span class="bb-menu-arrow" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pages_authentication_general_layout">
-                                        <div class="bb-menu-sub-content">
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="creative-sign-in.html" data-bb-panel-page="auth-creative-signin">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Login</span>
-                                                </a>
-                                            </div>
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="creative-sign-up.html" data-bb-panel-page="auth-creative-signup">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Register</span>
-                                                </a>
-                                            </div>
-                                            <div class="bb-menu-item">
-                                                <a class="bb-menu-link" href="creative-reset-password.html" data-bb-panel-page="auth-creative-reset">
-                                                    <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                                    <span class="bb-menu-title">Reset Password</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_corporate">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">domain</span>
-                            </span>
-                            <span class="bb-menu-title">Kurumsal</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_corporate">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=corporate-about" data-bb-panel-page="corporate-about">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">About Us</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=corporate-contact" data-bb-panel-page="corporate-contact">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Contact</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="team.html" data-bb-panel-page="corporate-team">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Team</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_social">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">groups</span>
-                            </span>
-                            <span class="bb-menu-title">Social</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_social">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="social-feed.html" data-bb-panel-page="social-feed">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Workflow</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=social-activity" data-bb-panel-page="social-activity">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Activity</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_blog">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">article</span>
-                            </span>
-                            <span class="bb-menu-title">Blog</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_blog">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="blog.html" data-bb-panel-page="blog-posts">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Blogs</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=blog-details" data-bb-panel-page="blog-details">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Yazı Details</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_faq">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">quiz</span>
-                            </span>
-                            <span class="bb-menu-title">Faq</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_faq">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=faq-overview" data-bb-panel-page="faq-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_pricing">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">sell</span>
-                            </span>
-                            <span class="bb-menu-title">Pricing</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_pricing">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pricing.html" data-bb-panel-page="pricing-plans">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Planlar</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_careers">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">work</span>
-                            </span>
-                            <span class="bb-menu-title">Carrer</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_careers">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=careers-open" data-bb-panel-page="careers-open">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Open Positions</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_utilities">
-                            <span class="bb-menu-icon">
-                                <span class="bb-empty-icon">
-                                    <span class="material-symbols-outlined" aria-hidden="true">construction</span>
-                                </span>
-                            </span>
-                            <span class="bb-menu-title">Helpcı Pages</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_utilities">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="404.html" data-bb-panel-page="utility-404">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">404</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="500.html" data-bb-panel-page="utility-500">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">500</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=utility-maintenance" data-bb-panel-page="utility-maintenance">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Maintenance</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_widgets">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">widgets</span>
-                            </span>
-                            <span class="bb-menu-title">Widgets</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_widgets">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="statistics.html" data-bb-panel-page="widgets-statistics">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Statiscitc</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="tabs.html" data-bb-panel-page="widgets-tables">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Tables</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="widget-lists.html" data-bb-panel-page="widgets-lists">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Lists</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="charts.html" data-bb-panel-page="widgets-charts">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Grafikler</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-section">APPLICATIONS</div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_projects">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
-                            </span>
-                            <span class="bb-menu-title">Projects</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_projects">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=projects-list" data-bb-panel-page="projects-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">List</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=projects-overview" data-bb-panel-page="projects-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="forms.html?page=projects-create" data-bb-panel-page="projects-create">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Create</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_ecommerce">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
-                            </span>
-                            <span class="bb-menu-title">e-Ticaret</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_ecommerce">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="lists.html?page=ecommerce-products" data-bb-panel-page="ecommerce-products">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Products</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="create-product.html">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Product Create</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=ecommerce-categories" data-bb-panel-page="ecommerce-categories">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Categories</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="orders.html" data-bb-panel-page="ecommerce-orders">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Orders</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="order-details.html">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Order Detail</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=ecommerce-customers" data-bb-panel-page="ecommerce-customers">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Customers</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_contacts">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">contacts</span>
-                            </span>
-                            <span class="bb-menu-title">Contacts</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_contacts">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=contacts-list" data-bb-panel-page="contacts-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">List</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_support_center">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
-                            </span>
-                            <span class="bb-menu-title">Support Center</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_support_center">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="support-center.html?tab=tickets" data-bb-panel-page="support-tickets">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Requests</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="support-center.html?tab=faq" data-bb-panel-page="support-faq">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Faq</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_user_management">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">admin_panel_settings</span>
-                            </span>
-                            <span class="bb-menu-title">User Management</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_user_management">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=users-list" data-bb-panel-page="users-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Users</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=users-roles" data-bb-panel-page="users-roles">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Roles</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=users-permissions" data-bb-panel-page="users-permissions">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Authorities</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_customers">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">group</span>
-                            </span>
-                            <span class="bb-menu-title">Customers</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_customers">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=customers-list" data-bb-panel-page="customers-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">List</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=customers-details" data-bb-panel-page="customers-details">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Detaillar</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_subscription">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">subscriptions</span>
-                            </span>
-                            <span class="bb-menu-title">Subscription</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_subscription">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="subscription.html" data-bb-panel-page="subscription-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_invoice_manager">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
-                            </span>
-                            <span class="bb-menu-title">Invoice Yönetimi</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_invoice_manager">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=invoice-list" data-bb-panel-page="invoice-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Invoices</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_file_manager">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">drive_folder_upload</span>
-                            </span>
-                            <span class="bb-menu-title">File Manager</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_file_manager">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=files-list" data-bb-panel-page="files-list">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Dosyalar</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_inbox">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">inbox</span>
-                            </span>
-                            <span class="bb-menu-title">Gelen Kutusu</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_inbox">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=inbox-messages" data-bb-panel-page="inbox-messages">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Messges</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_chat">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
-                            </span>
-                            <span class="bb-menu-title">Sohbet</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_chat">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=chat-conversations" data-bb-panel-page="chat-conversations">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Chats</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_calendar">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-                            </span>
-                            <span class="bb-menu-title">Calendar</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_calendar">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=calendar-overview" data-bb-panel-page="calendar-overview">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Overview</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bb-menu-section">LAYOUTS</div>
-                    <div class="bb-menu-item" data-bb-menu-trigger="click">
-                        <button class="bb-menu-link" type="button" aria-expanded="false" aria-controls="bb_tree_layouts">
-                            <span class="bb-menu-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">view_quilt</span>
-                            </span>
-                            <span class="bb-menu-title">Layouts</span>
-                            <span class="bb-menu-arrow" aria-hidden="true"></span>
-                        </button>
-                        <div class="bb-menu-sub bb-menu-sub-accordion" id="bb_tree_layouts">
-                            <div class="bb-menu-sub-content">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=layout-sidebar" data-bb-panel-page="layout-sidebar">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Side Bar</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=layout-header" data-bb-panel-page="layout-header">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Top Menu</span>
-                                    </a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="pages.html?page=layout-auth" data-bb-panel-page="layout-auth">
-                                        <span class="bb-menu-bullet" aria-hidden="true"></span>
-                                        <span class="bb-menu-title">Identity Verification</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </aside>
+                            </section>
 
-        <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close Menu" aria-hidden="true" tabindex="-1"></button>
+                            <div class="bb-pos-category-strip" role="group" aria-label="Ürün kategorileri">
+                                <button class="bb-pos-category" type="button" data-bb-pos-category="all" aria-pressed="true">
+                                    <span class="material-symbols-outlined" aria-hidden="true">restaurant_menu</span>
+                                    <strong>Tümü</strong><small>9 ürün</small>
+                                </button>
+                                <button class="bb-pos-category" type="button" data-bb-pos-category="main" aria-pressed="false">
+                                    <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+                                    <strong>Ana Yemek</strong><small>4 ürün</small>
+                                </button>
+                                <button class="bb-pos-category" type="button" data-bb-pos-category="soup" aria-pressed="false">
+                                    <span class="material-symbols-outlined" aria-hidden="true">soup_kitchen</span>
+                                    <strong>Çorba</strong><small>2 ürün</small>
+                                </button>
+                                <button class="bb-pos-category" type="button" data-bb-pos-category="breakfast" aria-pressed="false">
+                                    <span class="material-symbols-outlined" aria-hidden="true">breakfast_dining</span>
+                                    <strong>Kahvaltı</strong><small>2 ürün</small>
+                                </button>
+                                <button class="bb-pos-category" type="button" data-bb-pos-category="dessert" aria-pressed="false">
+                                    <span class="material-symbols-outlined" aria-hidden="true">cake</span>
+                                    <strong>Tatlı</strong><small>1 ürün</small>
+                                </button>
+                            </div>
 
-        <div class="bb-shell">
-            <header class="bb-shell-header">
-                <div class="bb-shell-header-inner">
-                    <div class="bb-shell-header-left">
-                        <button class="bb-panel-icon-button d-lg-none" type="button" data-bb-panel-sidebar-toggle aria-controls="bb_panel_sidebar" aria-expanded="false" aria-label="Menüyü aç">
-                            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-                        </button>
+                            <div class="bb-pos-products-head">
+                                <h2>Ürünler</h2>
+                                <span class="text-body-secondary" data-bb-pos-product-count aria-live="polite">9 ürün</span>
+                            </div>
 
-                        <nav class="bb-panel-topnav" data-bb-panel-topnav aria-label="Üst navigasyon">
-                            <div class="bb-menu bb-menu-hover-bg bb-menu-active-bg">
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="dashboard.html">Dashboard</a>
-                                </div>
-                                <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    <button class="bb-menu-link" type="button" aria-expanded="false">
-                                        Pages <span class="bb-menu-arrow"></span>
-                                    </button>
-                                    <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
-                                        <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="profile.html">Profil</a>
-                                        </div>
-                                        <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="account.html">Manage Account</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bb-menu-item" data-bb-menu-trigger="click">
-                                    <button class="bb-menu-link" type="button" aria-expanded="false">
-                                        Applications <span class="bb-menu-arrow"></span>
-                                    </button>
-                                    <div class="bb-menu-sub bb-menu-sub-dropdown" data-bb-menu-placement="bottom-start">
-                                        <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="../components/forms.html">Forms</a>
-                                        </div>
-                                        <div class="bb-menu-item">
-                                            <a class="bb-menu-link" href="../components/tables.html">Tables</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="layouts.html">Layouts</a>
-                                </div>
-                                <div class="bb-menu-item">
-                                    <a class="bb-menu-link" href="../components/menu.html">Help</a>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="bb-shell-header-right bb-panel-header-actions">
-                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" aria-label="Ara" aria-controls="bb_search_pop" data-bb-panel-popup-toggle>
-                                <span class="material-symbols-outlined">search</span>
-                            </button>
-                            <div id="bb_search_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-                                <label class="form-label" for="bb_search">Hızlı arama</label>
-                                <input id="bb_search" class="form-control bb-panel-search-field" type="search" placeholder="Ara">
-                            </div>
-                        </div>
-                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" aria-label="Notifications" aria-controls="bb_notifications_pop" data-bb-panel-popup-toggle>
-                                <span class="material-symbols-outlined">notifications</span>
-                                <span class="bb-panel-indicator"></span>
-                            </button>
-                            <div id="bb_notifications_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-                                <h2 class="bb-card-title">Notifications</h2><p class="mb-0">Örnek bildirimler: New sipariş alındı · Sistem güncellemesi tamamlandı.</p>
-                            </div>
-                        </div>
-                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" aria-label="Messges" aria-controls="bb_messages_pop" data-bb-panel-popup-toggle>
-                                <span class="material-symbols-outlined">chat</span>
-                            </button>
-                            <div id="bb_messages_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-                                <h2 class="bb-card-title">Messges</h2><p class="mb-0">Örnek mesaj: New destek talebiniz var.</p>
-                            </div>
-                        </div>
-                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" aria-label="Uygulama kısayolları" aria-controls="bb_apps_pop" data-bb-panel-popup-toggle>
-                                <span class="material-symbols-outlined">apps</span>
-                            </button>
-                            <div id="bb_apps_pop" class="bb-panel-popover" data-bb-panel-popup-content hidden>
-                                <a class="bb-dropdown-item" href="../components/forms.html">Forms</a>
-                                <a class="bb-dropdown-item" href="../components/cards.html">Cards</a>
-                                <a class="bb-dropdown-item" href="../components/tables.html">Tables</a>
-                            </div>
-                        </div>
-                        <button class="bb-panel-icon-button" type="button" id="bb_panel_theme_toggle" aria-label="Temayı değiştir">
-                            <span class="material-symbols-outlined">contrast</span>
-                        </button>
-                        <div class="bb-panel-overlay-host" data-bb-panel-popup>
-                            <button class="bb-panel-icon-button" type="button" data-bb-panel-popup-toggle aria-controls="bb_user_pop" aria-label="User menüsü">
-                                <span class="bb-symbol bb-symbol-35"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt="Örnek kullanıcı"></span>
-                            </button>
-                            <div id="bb_user_pop" class="bb-panel-popover bb-panel-user-menu" data-bb-panel-popup-content hidden>
-                                <div class="bb-panel-user-summary">
-                                    <span class="bb-symbol size-50 is-circle"><img src="../../assets/media/avatars/2ab21709-aa5c-451e-8be7-3b8c56c59a3c.webp" alt=""></span>
-                                    <span class="bb-panel-user-info">
-                                        <span class="bb-panel-user-name">
-                                            Demo User <span class="bb-badge bb-badge-success">Demo</span>
-                                        </span><small>demo@example.com</small>
+                            <div class="bb-pos-product-grid">
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="steak" data-product-name="T-Bone Steak" data-product-price="365" data-product-code="8691001" data-product-category="main" data-product-icon="set_meal">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">set_meal</span>
                                     </span>
-                                </div>
-                                <div class="bb-panel-user-group">
-                                    <a class="bb-panel-user-item" href="profile.html">
-                                        <span>My Profile</span>
-                                    </a>
-                                    <button class="bb-panel-user-item" type="button" disabled title="Projects demo sayfası henüz hazırlanmadı">
-                                        <span>Projects</span>
-                                        <span class="bb-panel-user-meta">Yakında</span>
-                                    </button>
-                                    <button class="bb-panel-user-item" type="button" disabled title="Subscription demo sayfası henüz hazırlanmadı">
-                                        <span>My Subscriptions</span>
-                                        <span class="bb-panel-user-meta">
-                                            <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                                        </span>
-                                    </button>
-                                    <a class="bb-panel-user-item" href="invoices.html">
-                                        <span>Orders</span>
-                                    </a>
-                                </div>
-                                <div class="bb-panel-user-group">
-                                    <button class="bb-panel-user-item" type="button" id="bb_panel_user_theme">
-                                        <span>View Mode</span>
-                                        <span class="bb-panel-user-meta">
-                                            <span data-bb-panel-user-mode-text>Koyu</span>
-                                            <span class="material-symbols-outlined" data-bb-panel-user-mode-icon aria-hidden="true">dark_mode</span>
-                                        </span>
-                                    </button>
-                                    <div class="bb-panel-user-item">
-                                        <span>Languages</span>
-                                        <span class="bb-panel-user-meta">Türkçe (demo)</span>
-                                    </div>
-                                    <a class="bb-panel-user-item" href="account.html">
-                                        <span>Manage Account ayarları</span>
-                                    </a>
-                                    <button class="bb-panel-user-item" type="button" disabled title="Demo oturumu mevcut değil">
-                                        <span>Logout</span>
-                                        <span class="bb-panel-user-meta">Demo</span>
-                                    </button>
-                                </div>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>T-Bone Steak</strong><small>16 dk hazırlanır · 8691001</small>
+                                        <span class="bb-pos-product-price">₺365,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="salmon" data-product-name="Şef Somon" data-product-price="285" data-product-code="8691002" data-product-category="main" data-product-icon="restaurant">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Şef Somon</strong><small>16 dk hazırlanır · 8691002</small>
+                                        <span class="bb-pos-product-price">₺285,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="ramen" data-product-name="Ramen" data-product-price="195" data-product-code="8691003" data-product-category="soup" data-product-icon="ramen_dining">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">ramen_dining</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Ramen</strong><small>12 dk hazırlanır · 8691003</small>
+                                        <span class="bb-pos-product-price">₺195,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="chicken" data-product-name="Izgara Tavuk" data-product-price="175" data-product-code="8691004" data-product-category="main" data-product-icon="skillet">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">skillet</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Izgara Tavuk</strong><small>14 dk hazırlanır · 8691004</small>
+                                        <span class="bb-pos-product-price">₺175,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="soup" data-product-name="Günün Çorbası" data-product-price="95" data-product-code="8691005" data-product-category="soup" data-product-icon="soup_kitchen">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">soup_kitchen</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Günün Çorbası</strong><small>5 dk hazırlanır · 8691005</small>
+                                        <span class="bb-pos-product-price">₺95,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="pancakes" data-product-name="Pancake" data-product-price="135" data-product-code="8691006" data-product-category="breakfast" data-product-icon="bakery_dining">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">bakery_dining</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Pancake</strong><small>8 dk hazırlanır · 8691006</small>
+                                        <span class="bb-pos-product-price">₺135,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="breakfast" data-product-name="Kahvaltı Tabağı" data-product-price="245" data-product-code="8691007" data-product-category="breakfast" data-product-icon="egg_alt">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">egg_alt</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Kahvaltı Tabağı</strong><small>10 dk hazırlanır · 8691007</small>
+                                        <span class="bb-pos-product-price">₺245,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="tenderloin" data-product-name="Bonfile" data-product-price="425" data-product-code="8691008" data-product-category="main" data-product-icon="outdoor_grill">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">outdoor_grill</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Bonfile</strong><small>18 dk hazırlanır · 8691008</small>
+                                        <span class="bb-pos-product-price">₺425,00</span>
+                                    </span>
+                                </button>
+                                <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="dessert" data-product-name="Tatlı Tabağı" data-product-price="145" data-product-code="8691009" data-product-category="dessert" data-product-icon="cake">
+                                    <span class="bb-pos-product-media">
+                                        <span class="material-symbols-outlined" aria-hidden="true">cake</span>
+                                    </span>
+                                    <span class="bb-pos-product-copy">
+                                        <strong>Tatlı Tabağı</strong><small>6 dk hazırlanır · 8691009</small>
+                                        <span class="bb-pos-product-price">₺145,00</span>
+                                    </span>
+                                </button>
                             </div>
+                            <p class="bb-pos-empty-cart" data-bb-pos-no-products hidden>Aramaya uygun ürün bulunamadı.</p>
                         </div>
-                    </div>
-                </div>
-            </header>
 
+                        <aside class="bb-card bb-pos-order-card" aria-labelledby="bb_pos_order_title">
+                            <div class="bb-card-header">
+                                <h2 class="bb-pos-order-title" id="bb_pos_order_title">Aktif fiş</h2>
+                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-pos-clear>Temizle</button>
+                            </div>
+                            <div class="bb-card-body">
+                                <div class="bb-card bb-pos-customer">
+                                    <span class="bb-pos-customer-icon">
+                                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                                    </span>
+                                    <span class="bb-pos-customer-copy"><strong data-bb-pos-customer-name>Perakende müşteri</strong><small data-bb-pos-customer-meta>Merkez Şube · #GENEL</small></span>
+                                    <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-drawer-toggle="#bb_pos_customer_drawer" aria-controls="bb_pos_customer_drawer" aria-expanded="false">Değiştir</button>
+                                </div>
 
-            <!--::Main-->
-            <main class="bb-main">
-                <!--::Wrapper-->
-                <div class="bb-wrapper">
-                    <div class="bb-container">
-                        <div class="bb-toolbar">
-                            <div class="bb-panel-content-container">
-                                <div class="bb-toolbar-row">
-                                    <div class="bb-toolbar-col-left">
-                                        <h1 class="bb-page-title">PosB / Quick Sale</h1>
-                                        <nav class="bb-breadcrumb" aria-label="İçerik yolu">
-                                            <ol class="breadcrumb mb-0">
-                                                <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
-                                                <li class="breadcrumb-item"><a href="posb.html?view=branches">PosB</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Quick Sale</li>
-                                            </ol>
-                                        </nav>
+                                <div class="bb-pos-order-lines" data-bb-pos-order-lines></div>
+
+                                <div class="bb-pos-totals" aria-label="Fiş toplamları" aria-live="polite">
+                                    <div class="bb-pos-total-row">
+                                        <span>Ara toplam</span>
+                                        <strong data-bb-pos-subtotal>₺0,00</strong>
                                     </div>
-                                    <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                        <button class="btn bb-btn-secondary" type="button" data-bb-drawer-toggle="#bb_pos_held_drawer">
-                                            <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span> Pending Orders
-                                        </button>
-                                        <button class="btn bb-btn-secondary" type="button" data-bb-drawer-toggle="#bb_pos_cash_drawer">
-                                            <span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span> Kasa &amp; Gün
-                                        </button>
-                                        <a class="btn btn-primary" href="create-product.html">
-                                            <span class="material-symbols-outlined" aria-hidden="true">add</span> New Product
-                                        </a>
+                                    <div class="bb-pos-total-row">
+                                        <span>İndirim</span>
+                                        <strong data-bb-pos-discount>₺0,00</strong>
+                                    </div>
+                                    <div class="bb-pos-total-row">
+                                        <span>KDV (%12)</span>
+                                        <strong data-bb-pos-tax>₺0,00</strong>
+                                    </div>
+                                    <div class="bb-pos-total-row bb-pos-total-row-main">
+                                        <span>Toplam</span>
+                                        <strong data-bb-pos-total>₺0,00</strong>
                                     </div>
                                 </div>
-                            </div>
-                        </div><section class="bb-content bb-pos-page" data-bb-pos aria-label="POS System">
-                            <div class="bb-panel-content-container">
-                                <div class="bb-pos-layout">
-                                    <div class="bb-pos-workspace">
-                                        <section class="bb-card bb-pos-command-card" aria-label="Hızlı satış araçları">
-                                            <div class="bb-card-body">
-                                                <div class="bb-pos-command-row">
-                                                    <label class="visually-hidden" for="bb_pos_barcode">Barkod girin veya taratın</label>
-                                                    <input class="form-control form-control-solid" id="bb_pos_barcode" data-bb-pos-barcode type="search" placeholder="Barkod girin veya taratın…" autocomplete="off">
-                                                    <button class="btn bb-btn-success" type="button" data-bb-drawer-toggle="#bb_pos_cash_drawer">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span> Central Cashier
-                                                    </button>
-                                                </div>
-                                                <div class="bb-pos-search">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">search</span>
-                                                    <label class="visually-hidden" for="bb_pos_product_search">Product arama</label>
-                                                    <input class="form-control form-control-solid" id="bb_pos_product_search" data-bb-pos-product-search type="search" placeholder="Product ara…">
-                                                </div>
-                                            </div>
-                                        </section>
 
-                                        <div class="bb-pos-category-strip" role="group" aria-label="Product kategorileri">
-                                            <button class="bb-pos-category" type="button" data-bb-pos-category="all" aria-pressed="true">
-                                                <span class="material-symbols-outlined" aria-hidden="true">restaurant_menu</span>
-                                                <strong>All</strong><small>9 ürün</small>
-                                            </button>
-                                            <button class="bb-pos-category" type="button" data-bb-pos-category="main" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
-                                                <strong>Ana Yemek</strong><small>4 ürün</small>
-                                            </button>
-                                            <button class="bb-pos-category" type="button" data-bb-pos-category="soup" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">soup_kitchen</span>
-                                                <strong>Çorba</strong><small>2 ürün</small>
-                                            </button>
-                                            <button class="bb-pos-category" type="button" data-bb-pos-category="breakfast" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">breakfast_dining</span>
-                                                <strong>Kahvaltı</strong><small>2 ürün</small>
-                                            </button>
-                                            <button class="bb-pos-category" type="button" data-bb-pos-category="dessert" aria-pressed="false">
-                                                <span class="material-symbols-outlined" aria-hidden="true">cake</span>
-                                                <strong>Tatlı</strong><small>1 ürün</small>
-                                            </button>
-                                        </div>
-
-                                        <div class="bb-pos-products-head">
-                                            <div><h2>Quick Selection</h2><p>Click on the card to add it to the receipt. The barcode field also functions as a demo.</p></div>
-                                            <span class="bb-badge bb-badge-light">Central Branch · Demo</span>
-                                        </div>
-
-                                        <div class="bb-pos-product-grid">
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="steak" data-product-name="T-Bone Steak" data-product-price="365" data-product-code="8691001" data-product-category="main" data-product-icon="set_meal">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">set_meal</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>T-Bone Steak</strong><small>16 dk hazırlanır · 8691001</small>
-                                                    <span class="bb-pos-product-price">₺365,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="salmon" data-product-name="Şef Somon" data-product-price="285" data-product-code="8691002" data-product-category="main" data-product-icon="restaurant">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">restaurant</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Şef Somon</strong><small>16 dk hazırlanır · 8691002</small>
-                                                    <span class="bb-pos-product-price">₺285,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="ramen" data-product-name="Ramen" data-product-price="195" data-product-code="8691003" data-product-category="soup" data-product-icon="ramen_dining">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">ramen_dining</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Ramen</strong><small>12 dk hazırlanır · 8691003</small>
-                                                    <span class="bb-pos-product-price">₺195,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="chicken" data-product-name="Izgara Tavuk" data-product-price="175" data-product-code="8691004" data-product-category="main" data-product-icon="skillet">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">skillet</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Izgara Tavuk</strong><small>14 dk hazırlanır · 8691004</small>
-                                                    <span class="bb-pos-product-price">₺175,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="soup" data-product-name="Günün Çorbası" data-product-price="95" data-product-code="8691005" data-product-category="soup" data-product-icon="soup_kitchen">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">soup_kitchen</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Günün Çorbası</strong><small>5 dk hazırlanır · 8691005</small>
-                                                    <span class="bb-pos-product-price">₺95,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="pancakes" data-product-name="Pancake" data-product-price="135" data-product-code="8691006" data-product-category="breakfast" data-product-icon="bakery_dining">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">bakery_dining</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Pancake</strong><small>8 dk hazırlanır · 8691006</small>
-                                                    <span class="bb-pos-product-price">₺135,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="breakfast" data-product-name="Kahvaltı Tabağı" data-product-price="245" data-product-code="8691007" data-product-category="breakfast" data-product-icon="egg_alt">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">egg_alt</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Kahvaltı Tabağı</strong><small>10 dk hazırlanır · 8691007</small>
-                                                    <span class="bb-pos-product-price">₺245,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="tenderloin" data-product-name="Bonfile" data-product-price="425" data-product-code="8691008" data-product-category="main" data-product-icon="outdoor_grill">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">outdoor_grill</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Bonfile</strong><small>18 dk hazırlanır · 8691008</small>
-                                                    <span class="bb-pos-product-price">₺425,00</span>
-                                                </span>
-                                            </button>
-                                            <button class="bb-card bb-pos-product" type="button" data-bb-pos-product data-product-id="dessert" data-product-name="Tatlı Tabağı" data-product-price="145" data-product-code="8691009" data-product-category="dessert" data-product-icon="cake">
-                                                <span class="bb-pos-product-media">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">cake</span>
-                                                </span>
-                                                <span class="bb-pos-product-copy">
-                                                    <strong>Tatlı Tabağı</strong><small>6 dk hazırlanır · 8691009</small>
-                                                    <span class="bb-pos-product-price">₺145,00</span>
-                                                </span>
-                                            </button>
-                                        </div>
+                                <div class="bb-pos-payment">
+                                    <h3 class="bb-pos-section-title">Ödeme yöntemi</h3>
+                                    <div class="bb-pos-payment-grid" role="group" aria-label="Ödeme yöntemi">
+                                        <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="Nakit" aria-pressed="false">
+                                            <span class="material-symbols-outlined" aria-hidden="true">payments</span>
+                                            <span>Nakit</span>
+                                        </button>
+                                        <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="Kart" aria-pressed="true">
+                                            <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
+                                            <span>Kart</span>
+                                        </button>
+                                        <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="Veresiye" aria-pressed="false">
+                                            <span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span>
+                                            <span>Veresiye</span>
+                                        </button>
                                     </div>
-
-                                    <aside class="bb-card bb-pos-order-card" aria-labelledby="bb_pos_order_title">
-                                        <div class="bb-card-header">
-                                            <h2 class="bb-pos-order-title" id="bb_pos_order_title">Active Receipt</h2>
-                                            <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-pos-clear>Clean</button>
-                                        </div>
-                                        <div class="bb-card-body">
-                                            <div class="bb-card bb-pos-customer">
-                                                <span class="bb-pos-customer-icon">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">person</span>
-                                                </span>
-                                                <span class="bb-pos-customer-copy"><strong data-bb-pos-customer-name>Retail Customer</strong><small data-bb-pos-customer-meta>Central Branch · Genel</small></span>
-                                                <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-pos-customer-open>Select</button>
-                                            </div>
-
-                                            <div class="bb-pos-order-lines" data-bb-pos-order-lines></div>
-
-                                            <div class="bb-pos-totals" aria-label="Fiş toplamları">
-                                                <div class="bb-pos-total-row">
-                                                    <span>Subtotal</span>
-                                                    <strong data-bb-pos-subtotal>₺0,00</strong>
-                                                </div>
-                                                <div class="bb-pos-total-row">
-                                                    <span>Discount</span>
-                                                    <strong data-bb-pos-discount>₺0,00</strong>
-                                                </div>
-                                                <div class="bb-pos-total-row">
-                                                    <span>KDV (%12)</span>
-                                                    <strong data-bb-pos-tax>₺0,00</strong>
-                                                </div>
-                                                <div class="bb-pos-total-row bb-pos-total-row-main">
-                                                    <span>Toplam</span>
-                                                    <strong data-bb-pos-total>₺0,00</strong>
-                                                </div>
-                                            </div>
-
-                                            <div class="bb-pos-payment">
-                                                <h3 class="bb-pos-section-title">Payment Methods</h3>
-                                                <div class="bb-pos-payment-grid" role="group" aria-label="Ödeme yöntemi">
-                                                    <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="Cash" aria-pressed="false">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">payments</span>
-                                                        <span>Cash</span>
-                                                    </button>
-                                                    <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="Kart" aria-pressed="true">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">credit_card</span>
-                                                        <span>Credit card</span>
-                                                    </button>
-                                                    <button class="bb-pos-payment-option" type="button" data-bb-pos-payment="On Credit" aria-pressed="false">
-                                                        <span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span>
-                                                        <span>On Credit</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-
-                                            <div class="bb-pos-order-actions">
-                                                <button class="btn bb-btn-secondary" type="button" data-bb-pos-hold>
-                                                    <span class="material-symbols-outlined" aria-hidden="true">pause_circle</span> Wait
-                                                </button>
-                                                <button class="btn btn-primary" type="button" data-bb-pos-checkout>
-                                                    <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span> Complete Payment
-                                                </button>
-                                            </div>
-                                            <p class="bb-pos-status" data-bb-pos-status role="status">Demo POS hazır.</p>
-                                        </div>
-                                    </aside>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </main>
-            <!--/::Main-->
-            <!--::Footer-->
-            <footer class="bb-shell-footer bb-footer">
-                <div class="bb-footer-bar">
-                    <div class="bb-footer-inner">
-                        <div class="bb-footer-left">
-                            <span>2026 ©</span>
-                            <a class="bb-footer-brand" href="dashboard.html">Bulbulustur</a>
-                        </div>
-                        <nav class="bb-footer-right" aria-label="Sub Links">
-                            <a class="bb-footer-link" href="../components/cards.html">Components</a>
-                            <a class="bb-footer-link" href="../components/menu.html">Menus</a>
-                        </nav>
-                    </div>
-                </div>
-            </footer>
-            <!--/::Footer-->
-        </div>
-    </div>
 
-    <!--::Modals-->
-    <div class="modal fade" id="bb_pos_customer_modal" tabindex="-1" aria-labelledby="bb_pos_customer_modal_title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="bb_pos_customer_modal_title">Customer Selection</h2>
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="bb-pos-modal-list">
-                        <label class="visually-hidden" for="bb_pos_customer_search">Customer ara</label>
-                        <input class="form-control form-control-solid" id="bb_pos_customer_search" type="search" placeholder="Search customers…">
-                        <button class="btn bb-btn-secondary" type="button" data-bb-pos-new-customer-open>
-                            <span class="material-symbols-outlined" aria-hidden="true">person_add</span> New Customer
-                        </button>
-                        <button class="bb-pos-customer-option" type="button" data-bb-pos-customer-select data-customer-name="Retail Customer" data-customer-meta="Central Branch · #GENEL">
-                            <span class="bb-pos-customer-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">person</span>
-                            </span>
-                            <span class="bb-pos-customer-copy"><strong>Retail Customer</strong><small>Central Branch · #GENEL</small></span>
-                            <span class="bb-badge bb-badge-success">Varsayılan</span>
-                        </button>
-                        <button class="bb-pos-customer-option" type="button" data-bb-pos-customer-select data-customer-name="Ortobella" data-customer-meta="Kurumsal · #M-1024">
-                            <span class="bb-pos-customer-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">domain</span>
-                            </span>
-                            <span class="bb-pos-customer-copy"><strong>Ortobella</strong><small>Kurumsal · #M-1024</small></span>
-                            <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-                        </button>
+                                <div class="bb-pos-order-actions">
+                                    <button class="btn bb-btn-secondary" type="button" data-bb-pos-hold>
+                                        <span class="material-symbols-outlined" aria-hidden="true">pause_circle</span> Beklet
+                                    </button>
+                                    <button class="btn btn-primary" type="button" data-bb-pos-checkout>
+                                        <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span> Ödemeyi tamamla
+                                    </button>
+                                </div>
+                                <p class="bb-pos-status" data-bb-pos-status role="status">Demo POS hazır.</p>
+                            </div>
+                        </aside>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
-    </div>
+    </main>
 
-    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-drawer-md" id="bb_pos_held_drawer" aria-hidden="true" tabindex="-1" aria-labelledby="bb_pos_held_title">
+    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-customer-drawer" id="bb_pos_customer_drawer" role="dialog" aria-modal="true" aria-hidden="true" inert tabindex="-1" aria-labelledby="bb_pos_customer_title">
         <div class="bb-drawer-header">
             <div>
-                <h2 class="bb-drawer-title" id="bb_pos_held_title">Pending Orders</h2><small class="text-body-secondary">Waitilen fişleri buradan geri çağırın.</small>
-            </div><button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Close">
+                <h2 class="bb-drawer-title" id="bb_pos_customer_title">Müşteri seçimi</h2>
+                <p class="bb-pos-drawer-caption">Aktif fişe bir müşteri bağlayın.</p>
+            </div>
+            <button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Müşteri çekmecesini kapat">
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="bb-drawer-body">
+            <div class="bb-pos-customer-layout">
+                <section class="bb-pos-customer-list" data-bb-pos-customer-list aria-labelledby="bb_pos_customer_list_title">
+                    <h3 class="bb-pos-section-title" id="bb_pos_customer_list_title">Müşteriler</h3>
+                    <label class="visually-hidden" for="bb_pos_customer_search">Müşteri ara</label>
+                    <input class="form-control form-control-solid" id="bb_pos_customer_search" type="search" placeholder="Ad veya müşteri kodu ara…" autocomplete="off" data-bb-pos-customer-search>
+                    <button class="bb-pos-customer-option" type="button" data-bb-pos-customer-select data-customer-name="Perakende müşteri" data-customer-meta="Merkez Şube · #GENEL">
+                        <span class="bb-pos-customer-icon"><span class="material-symbols-outlined" aria-hidden="true">person</span></span>
+                        <span class="bb-pos-customer-copy"><strong>Perakende müşteri</strong><small>Merkez Şube · #GENEL</small></span>
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </button>
+                    <button class="bb-pos-customer-option" type="button" data-bb-pos-customer-select data-customer-name="Ortobella" data-customer-meta="Kurumsal müşteri · #ORT">
+                        <span class="bb-pos-customer-icon"><span class="material-symbols-outlined" aria-hidden="true">apartment</span></span>
+                        <span class="bb-pos-customer-copy"><strong>Ortobella</strong><small>Kurumsal müşteri · #ORT</small></span>
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </button>
+                    <p class="bb-pos-drawer-caption" data-bb-pos-customer-empty hidden>Eşleşen müşteri bulunamadı.</p>
+                </section>
+                <aside class="bb-card bb-pos-customer-summary" aria-labelledby="bb_pos_customer_summary_title">
+                    <div class="bb-card-header">
+                        <h3 class="bb-pos-section-title" id="bb_pos_customer_summary_title">Fişteki müşteri</h3>
+                    </div>
+                    <div class="bb-card-body">
+                        <div class="bb-pos-customer-copy">
+                            <strong data-bb-pos-customer-summary-name></strong>
+                            <small data-bb-pos-customer-summary-meta></small>
+                        </div>
+                    </div>
+                </aside>
+                <section class="bb-pos-customer-create" data-bb-pos-customer-create hidden aria-labelledby="bb_pos_customer_create_title">
+                    <h3 class="bb-pos-section-title mb-3" id="bb_pos_customer_create_title">Yeni müşteri</h3>
+                    <form data-bb-pos-new-customer-form>
+                        <div class="bb-pos-form-grid">
+                            <div class="bb-pos-form-span-2">
+                                <label class="form-label" for="bb_pos_customer_type">Müşteri türü</label>
+                                <select class="form-select form-select-solid" id="bb_pos_customer_type">
+                                    <option>Bireysel</option>
+                                    <option>Kurumsal</option>
+                                </select>
+                            </div>
+                            <div class="bb-pos-form-span-2">
+                                <label class="form-label" for="bb_pos_customer_name">Ad / Ünvan</label>
+                                <input class="form-control form-control-solid" id="bb_pos_customer_name" name="customerName" required placeholder="Ad soyad veya ticari unvan">
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_phone">Telefon</label>
+                                <input class="form-control form-control-solid" id="bb_pos_customer_phone" type="tel" placeholder="Telefon">
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_email">E-mail</label>
+                                <input class="form-control form-control-solid" id="bb_pos_customer_email" type="email" placeholder="E-mail">
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_tckn">TCKN <span class="text-body-secondary">(Ops.)</span></label>
+                                <input class="form-control form-control-solid" id="bb_pos_customer_tckn" inputmode="numeric" placeholder="TCKN">
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_vkn">VKN <span class="text-body-secondary">(Ops.)</span></label>
+                                <input class="form-control form-control-solid" id="bb_pos_customer_vkn" inputmode="numeric" placeholder="VKN">
+                            </div>
+                            <div class="bb-pos-form-span-2">
+                                <label class="form-label" for="bb_pos_customer_address">Adres</label><textarea class="form-control form-control-solid" id="bb_pos_customer_address" rows="3" placeholder="Açık adres"></textarea>
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_country">Ülke</label>
+                                <select class="form-select form-select-solid" id="bb_pos_customer_country">
+                                    <option>Türkiye</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label" for="bb_pos_customer_city">İl</label>
+                                <select class="form-select form-select-solid" id="bb_pos_customer_city">
+                                    <option>İstanbul</option>
+                                    <option>Ankara</option>
+                                    <option>İzmir</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bb-pos-form-actions">
+                            <button class="btn bb-btn-secondary" type="button" data-bb-pos-customer-back>Vazgeç</button>
+                            <button class="btn bb-btn-success" type="submit">Müşteriyi seç</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="bb-pos-drawer-footer">
+            <button class="btn bb-btn-secondary" type="button" data-bb-pos-new-customer-open>
+                <span class="material-symbols-outlined" aria-hidden="true">person_add</span> Yeni müşteri
+            </button>
+        </div>
+    </section>
+
+    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-drawer-md" id="bb_pos_held_drawer" role="dialog" aria-modal="true" aria-hidden="true" inert tabindex="-1" aria-labelledby="bb_pos_held_title">
+        <div class="bb-drawer-header">
+            <div>
+                <h2 class="bb-drawer-title" id="bb_pos_held_title">Bekleyen fişler</h2><small class="text-body-secondary">Beklemeye aldığınız fişleri buradan açabilirsiniz.</small>
+            </div><button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Kapat">
                 <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
         </div>
@@ -1205,36 +356,37 @@
                     <span class="material-symbols-outlined">pause_circle</span>
                 </div>
                 <div class="bb-alert-body">
-                    <h3 class="bb-alert-title">No Pending Orders</h3>
-                    <div class="bb-alert-text">Orders will appear here when you use the "Wait" action on an active receipt.</div>
+                    <h3 class="bb-alert-title">Bekleyen fiş yok</h3>
+                    <div class="bb-alert-text">Aktif fişte Beklet seçeneğini kullandığınızda fiş burada görünür.</div>
                 </div>
             </div>
             <div class="bb-pos-held-list" data-bb-pos-held-list></div>
+            <p class="bb-pos-status" data-bb-pos-held-status role="status"></p>
         </div>
     </section>
 
-    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-drawer-lg" id="bb_pos_cash_drawer" aria-hidden="true" tabindex="-1" aria-labelledby="bb_pos_cash_title">
+    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-drawer-lg" id="bb_pos_cash_drawer" role="dialog" aria-modal="true" aria-hidden="true" inert tabindex="-1" aria-labelledby="bb_pos_cash_title">
         <div class="bb-drawer-header">
             <div>
-                <h2 class="bb-drawer-title" id="bb_pos_cash_title">Cash Register and Day Management</h2><small class="text-body-secondary">Open, close, and manage daily cash register operations.</small>
-            </div><button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Close">
+                <h2 class="bb-drawer-title" id="bb_pos_cash_title">Kasa ve gün yönetimi</h2><small class="text-body-secondary">Kasa durumunu ve günlük oturumu görüntüleyin.</small>
+            </div><button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Kapat">
                 <span class="material-symbols-outlined" aria-hidden="true">close</span>
             </button>
         </div>
         <div class="bb-drawer-body">
             <div class="bb-pos-cash-layout">
                 <div>
-                    <h3 class="bb-pos-section-title mb-3">Cash Registers</h3>
+                    <h3 class="bb-pos-section-title mb-3">Kasalar</h3>
                     <div class="bb-pos-cash-list">
                         <button class="bb-pos-cash-option" type="button" aria-pressed="true">
                             <span>
-                                <strong>R · Varsayılan Cash</strong><small class="d-block text-body-secondary mt-1">Central Branch</small>
+                                <strong>R · Varsayılan kasa</strong><small class="d-block text-body-secondary mt-1">Merkez Şube</small>
                             </span>
                             <span class="bb-badge bb-badge-success">Aktif</span>
                         </button>
                         <button class="bb-pos-cash-option" type="button" aria-pressed="false">
                             <span>
-                                <strong>Yedek Cash</strong><small class="d-block text-body-secondary mt-1">Henüz oturum yok</small>
+                                <strong>Yedek kasa</strong><small class="d-block text-body-secondary mt-1">Henüz oturum yok</small>
                             </span>
                             <span class="bb-badge bb-badge-light">Pasif</span>
                         </button>
@@ -1242,49 +394,50 @@
                 </div>
                 <div class="bb-pos-cash-main">
                     <div class="bb-pos-tabbar" role="tablist" aria-label="Kasa işlemleri">
-                        <button class="bb-pos-tab" type="button" role="tab" data-bb-pos-cash-tab="overview" aria-selected="true">Overview</button>
-                        <button class="bb-pos-tab" type="button" role="tab" data-bb-pos-cash-tab="open" aria-selected="false">Open Day</button>
+                        <button class="bb-pos-tab" type="button" role="tab" data-bb-pos-cash-tab="overview" aria-selected="true">Genel bakış</button>
+                        <button class="bb-pos-tab" type="button" role="tab" data-bb-pos-cash-tab="open" aria-selected="false">Gün aç</button>
                         <button class="bb-pos-tab" type="button" role="tab" data-bb-pos-cash-tab="session" aria-selected="false">Aktif Oturum</button>
                     </div>
                     <div class="bb-pos-panel" data-bb-pos-cash-panel="overview">
                         <div class="bb-card bb-card-flush">
                             <div class="bb-card-body">
                                 <div class="bb-pos-total-row">
-                                    <span>Cash Register ID</span>
+                                    <span>Kasa numarası</span>
                                     <strong>5146</strong>
                                 </div>
                                 <div class="bb-pos-total-row">
-                                    <span>Currency</span>
+                                    <span>Para birimi</span>
                                     <strong>TRY</strong>
                                 </div>
                                 <div class="bb-pos-total-row">
-                                    <span>Status</span>
-                                    <strong class="text-success">Day can be opened</strong>
+                                    <span>Durum</span>
+                                    <strong class="text-success">Gün açılabilir</strong>
                                 </div>
                                 <div class="bb-alert bb-alert-info mt-4" role="note">
                                     <div class="bb-alert-icon" aria-hidden="true">
                                         <span class="material-symbols-outlined">info</span>
                                     </div>
                                     <div class="bb-alert-body">
-                                        <h3 class="bb-alert-title">Cash Register Ready</h3>
-                                        <div class="bb-alert-text">Please open a new day before starting sales.</div>
+                                        <h3 class="bb-alert-title">Kasa hazır</h3>
+                                        <div class="bb-alert-text">Satışa başlamadan önce yeni bir kasa günü açın.</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <form class="bb-pos-panel" data-bb-pos-cash-panel="open" data-bb-pos-open-day-form hidden>
-                        <h3 class="bb-pos-section-title mb-3">New Open Day</h3>
+                        <h3 class="bb-pos-section-title mb-3">Yeni kasa günü</h3>
                         <div class="mb-3">
-                            <label class="form-label" for="bb_pos_opening_balance">Açılış Balancesi</label>
+                            <label class="form-label" for="bb_pos_opening_balance">Açılış bakiyesi</label>
                             <input class="form-control form-control-solid" id="bb_pos_opening_balance" type="number" min="0" value="0">
                         </div>
                         <div>
-                            <label class="form-label" for="bb_pos_opening_note">Notes <span class="text-body-secondary">(Optional)</span></label><textarea class="form-control form-control-solid" id="bb_pos_opening_note" rows="4" placeholder="Notes about the opening…"></textarea>
+                            <label class="form-label" for="bb_pos_opening_note">Not <span class="text-body-secondary">(İsteğe bağlı)</span></label>
+                            <textarea class="form-control form-control-solid" id="bb_pos_opening_note" rows="4" placeholder="Açılış hakkında…"></textarea>
                         </div>
                         <div class="bb-pos-form-actions">
-                            <button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button>
-<button class="btn bb-btn-success" type="submit">Open Day</button>
+                            <button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Vazgeç</button>
+                            <button class="btn bb-btn-success" type="submit">Gün aç</button>
                         </div>
                     </form>
                     <div class="bb-pos-panel" data-bb-pos-cash-panel="session" hidden>
@@ -1293,7 +446,7 @@
                                 <span class="material-symbols-outlined">hourglass_empty</span>
                             </div>
                             <div class="bb-alert-body">
-                                <h3 class="bb-alert-title">No Active Session!</h3>
+                                <h3 class="bb-alert-title">Aktif oturum yok</h3>
                                 <div class="bb-alert-text">Gün açıldıktan sonra kasa hareketleri ve oturum özeti burada gösterilir.</div>
                             </div>
                         </div>
@@ -1302,89 +455,23 @@
             </div>
         </div>
     </section>
-    <section class="bb-drawer bb-drawer-end bb-pos-drawer bb-pos-drawer-md" id="bb_pos_new_customer_drawer" aria-hidden="true" tabindex="-1" aria-labelledby="bb_pos_new_customer_title">
-        <div class="bb-drawer-header">
-            <div>
-                <h2 class="bb-drawer-title" id="bb_pos_new_customer_title">New Customer</h2><small class="text-body-secondary">Basic customer information for quick sales.</small>
-            </div><button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Close">
-                <span class="material-symbols-outlined" aria-hidden="true">close</span>
-            </button>
-        </div>
-        <form class="bb-drawer-body" data-bb-pos-new-customer-form>
-            <div class="bb-pos-form-grid">
-                <div class="bb-pos-form-span-2">
-                    <label class="form-label" for="bb_pos_customer_type">Customer Type</label>
-                    <select class="form-select form-select-solid" id="bb_pos_customer_type">
-                        <option>Retail</option>
-                        <option>Kurumsal</option>
-                    </select>
-                </div>
-                <div class="bb-pos-form-span-2">
-                    <label class="form-label" for="bb_pos_customer_name">Ad / Ünvan</label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_name" name="customerName" required placeholder="Customer tam adı veya ticari ünvanı">
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_phone">Telefon</label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_phone" type="tel" placeholder="Telefon">
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_email">E-mail</label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_email" type="email" placeholder="E-mail">
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_tckn">TCKN <span class="text-body-secondary">(Ops.)</span></label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_tckn" inputmode="numeric" placeholder="TCKN">
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_vkn">VKN <span class="text-body-secondary">(Ops.)</span></label>
-                    <input class="form-control form-control-solid" id="bb_pos_customer_vkn" inputmode="numeric" placeholder="VKN">
-                </div>
-                <div class="bb-pos-form-span-2">
-                    <label class="form-label" for="bb_pos_customer_address">Adres</label><textarea class="form-control form-control-solid" id="bb_pos_customer_address" rows="3" placeholder="Açık adres"></textarea>
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_country">Country</label>
-                    <select class="form-select form-select-solid" id="bb_pos_customer_country">
-                        <option>Türkiye</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="form-label" for="bb_pos_customer_city">City</label>
-                    <select class="form-select form-select-solid" id="bb_pos_customer_city">
-                        <option>İstanbul</option>
-                        <option>Ankara</option>
-                        <option>İzmir</option>
-                    </select>
-                </div>
+    <dialog class="bb-pos-exit-dialog" aria-labelledby="bb_pos_exit_title" data-bb-pos-exit-dialog>
+        <div class="bb-card">
+            <div class="bb-card-header">
+                <h2 class="bb-pos-section-title" id="bb_pos_exit_title">Açık fiş var</h2>
             </div>
-            <div class="bb-pos-form-actions">
-                <button class="btn bb-btn-secondary" type="button" data-bb-drawer-close>Cancel Et</button>
-<button class="btn bb-btn-success" type="submit">Save</button>
-            </div>
-        </form>
-    </section>
-    <!--::Modals-->
-    <div class="modal fade" id="bb_toolbar_filter" tabindex="-1" aria-labelledby="bb_toolbar_filter_label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="bb_toolbar_filter_label">Sample Filter</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">Filter content will be prepared within the scope of Phase 9.</div>
+            <div class="bb-card-body">
+                <p class="mb-3">Fişi beklemeye alıp kasadan çıkabilirsiniz. Fişi aynı sekmede tekrar açtığınızda Bekleyen fişler bölümünde bulabilirsiniz.</p>
+                <p class="bb-pos-status" data-bb-pos-exit-status role="status" hidden></p>
+                <form method="dialog" class="bb-pos-exit-actions">
+                    <button class="btn bb-btn-secondary" type="submit" value="cancel" autofocus>Kasaya dön</button>
+                    <button class="btn btn-primary" type="button" data-bb-pos-hold-exit>Fişi beklemeye al ve çık</button>
+                </form>
             </div>
         </div>
-    </div>
-    <!--::Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/panel/bb-panel.js"></script>
-    <script src="../../assets/js/panel/bb-panel-theme.js"></script>
-    <script src="../../assets/js/panel/bb-panel-menu.js"></script>
-    <script src="../../assets/js/panel/bb-panel-header.js"></script>
-    <script src="../../assets/js/panel/bb-panel-user.js"></script>
-    <script src="../../assets/js/panel/bb-panel-pages.js"></script>
+    </dialog>
+
     <script src="../../assets/js/core/bb-drawer.js"></script>
     <script src="../../assets/js/panel/bb-panel-pos.js"></script>
-    <!--/::Scripts-->
 </body>
-<!--/::Body-->
 </html>

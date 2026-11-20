@@ -139,4 +139,68 @@
     window.scrollTo({ top: 0, behavior: behavior });
   });
   updateBackToTop();
+
+  /* The POS keeps its own document so panel and register scripts stay independent. */
+  var posDialog = null;
+  var posFrame = null;
+  var posOpener = null;
+
+  function sendToPOS(message) {
+    if (posFrame) posFrame.contentWindow.postMessage(message, window.location.origin);
+  }
+
+  function openPOS(url, opener) {
+    if (posDialog) return;
+
+    posOpener = opener;
+    posDialog = document.createElement("dialog");
+    posDialog.className = "bb-panel-pos-dialog";
+    posDialog.setAttribute("aria-label", "PosB satış kasası");
+
+    posFrame = document.createElement("iframe");
+    posFrame.title = "PosB satış kasası";
+    posFrame.addEventListener("load", function () {
+      sendToPOS({
+        type: "bb:pos:activate",
+        theme: document.documentElement.getAttribute("data-bs-theme")
+      });
+    });
+    url.searchParams.set("embed", "1");
+    posFrame.src = url.href;
+
+    posDialog.addEventListener("cancel", function (event) {
+      event.preventDefault();
+      sendToPOS({ type: "bb:pos:request-close" });
+    });
+    posDialog.addEventListener("close", function () {
+      posDialog.remove();
+      posDialog = null;
+      posFrame = null;
+      document.body.classList.remove("bb-panel-pos-open");
+      posOpener.focus();
+      posOpener = null;
+    });
+
+    posDialog.appendChild(posFrame);
+    document.body.appendChild(posDialog);
+    posDialog.showModal();
+    document.body.classList.add("bb-panel-pos-open");
+  }
+
+  document.addEventListener("click", function (event) {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    var link = event.target.closest("a[href]");
+    if (!link || !panel.contains(link) || (link.target && link.target !== "_self") || link.hasAttribute("download")) return;
+    var url = new URL(link.href);
+    if (url.origin !== window.location.origin || !url.pathname.endsWith("/modules/panel/pos-system.html")) return;
+    if (window.location.origin === "null" || typeof HTMLDialogElement.prototype.showModal !== "function") return;
+
+    event.preventDefault();
+    openPOS(url, link);
+  });
+
+  window.addEventListener("message", function (event) {
+    if (!posFrame || event.origin !== window.location.origin || event.source !== posFrame.contentWindow) return;
+    if (event.data && event.data.type === "bb:pos:close") posDialog.close();
+  });
 })();
