@@ -9042,8 +9042,9 @@ Header
   /* radius */
   --bb-card-radius: var(--bb-radius-lg, var(--bs-border-radius-lg, 0.75rem));
   /* elevation (no rgba fallbacks) */
-  --bb-card-shadow: var(--bb-shadow-xs, var(--bs-box-shadow-sm, none));
-  --bb-card-shadow-hover: var(--bb-shadow-sm, var(--bs-box-shadow, var(--bb-card-shadow)));
+  /* A hairline is the default elevation in both modes; hover elevation is opt-in. */
+  --bb-card-shadow: none;
+  --bb-card-shadow-hover: var(--bb-shadow-sm, var(--bs-box-shadow, none));
   /* spacing */
   --bb-card-px: calc(var(--bb-space-4) + var(--bb-space-1));
   --bb-card-header-py: var(--bb-space-4);
