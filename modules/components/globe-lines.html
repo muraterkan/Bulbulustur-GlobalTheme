@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bulbulustur Theme — Globe Lines</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/core.css">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body" id="bb-body-id">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <!--::Content-->
+                <section class="bb-section py-4" aria-labelledby="bb_globe_lines_heading">
+                    <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap mb-4">
+                        <div>
+                            <span class="bb-badge bb-badge-light-warning mb-2">CORE / MOTION</span>
+                            <h1 id="bb_globe_lines_heading">Globe Lines</h1>
+                            <p class="text-body-secondary mb-0">Koyu alanda dönen, farklı yoğunluklardaki sarı çizgilerle çizilmiş üç boyutlu dünya.</p>
+                        </div>
+                        <a class="btn bb-btn-secondary" href="aurora-waves.html">
+                            <span class="material-symbols-outlined" aria-hidden="true">waves</span>
+                            Aurora Waves
+                        </a>
+                    </div>
+
+                    <!--::Globe Lines core component-->
+                    <section class="bb-globe-lines" data-bb-globe-lines data-bb-globe-duration="38" aria-label="Sarı çizgilerden oluşan ve yavaşça dönen dünya animasyonu">
+                        <canvas class="bb-globe-lines__canvas" data-bb-globe-lines-canvas aria-hidden="true">
+                            Tarayıcınız Canvas desteklemiyor.
+                        </canvas>
+                        <div class="bb-globe-lines__status">
+                            <button class="btn btn-sm" type="button" data-bb-globe-toggle aria-label="Dünya dönüşünü durdur" aria-pressed="true">
+                                <span class="material-symbols-outlined" aria-hidden="true">pause</span>
+                                <span data-bb-globe-toggle-label>Duraklat</span>
+                            </button>
+                        </div>
+                    </section>
+                    <!--/::Globe Lines core component-->
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-12 col-lg-7">
+                            <section class="bb-card bb-card-bordered h-100" aria-labelledby="bb_globe_details_heading">
+                                <div class="bb-card-header">
+                                    <h2 class="bb-card-title" id="bb_globe_details_heading">Nasıl çalışıyor?</h2>
+                                </div>
+                                <div class="bb-card-body">
+                                    <p>Küre gerçek 3B koordinatlardan Canvas 2D üzerine izdüşürülür. Arka çizgiler daha sönük, ön çizgiler daha parlaktır. Bazı boylam ve enlem bölgelerinde çizgiler sıklaşır; diğerleri seyrek bırakılır.</p>
+                                    <p class="mb-0">Görüntü, video veya harici 3B kütüphane kullanmaz. Kaydırma sırasında görünmeyen küre duraklatılır; hareketi azaltma tercihi olan kullanıcılar sabit dünya görür.</p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-12 col-lg-5">
+                            <section class="bb-card bb-card-bordered h-100" aria-labelledby="bb_globe_reuse_heading">
+                                <div class="bb-card-header">
+                                    <h2 class="bb-card-title" id="bb_globe_reuse_heading">Başka sayfada kullanımı</h2>
+                                </div>
+                                <div class="bb-card-body">
+                                    <p class="mb-2">Sınıf: <code>.bb-globe-lines</code></p>
+                                    <p class="mb-2">Hız: <code>data-bb-globe-duration="38"</code></p>
+                                    <p class="mb-2">Renkler: <code>--bb-globe-accent</code>, <code>--bb-globe-accent-soft</code></p>
+                                    <p class="mb-0">SCSS: <code>_globe-lines.scss</code>, JS: <code>bb-globe-lines.js</code>.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Content-->
+            </div>
+        </div>
+        <!--/::Wrapper-->
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/core/bb-globe-lines.js"></script>
+</body>
+<!--/::Body-->
+</html>
