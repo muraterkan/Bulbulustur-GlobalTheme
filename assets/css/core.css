@@ -953,6 +953,29 @@ html[data-bs-theme=dark][data-bb-surface=highlight] {
   --bb-danger-clarity: color-mix(in srgb, var(--bb-danger) var(--bb-clarity-ratio), transparent);
   --bb-dark-clarity: color-mix(in srgb, var(--bb-dark) 15%, transparent);
   --bb-light-clarity: color-mix(in srgb, var(--bb-light) 25%, transparent);
+  /* Component semantic pairs
+     Aliases only: brand/theme/palette values remain the single source of truth.
+     Surface/foreground pairs follow the active theme and data-bb-pack automatically.
+     Accent is a subtle interactive selection surface, not --bb-page-accent. */
+  --bb-surface: var(--bb-surface-bg);
+  --bb-surface-foreground: var(--bb-body-color);
+  --bb-card: var(--bb-surface-bg);
+  --bb-card-foreground: var(--bb-body-color);
+  --bb-popover: var(--bb-body-bg);
+  --bb-popover-foreground: var(--bb-body-color);
+  --bb-input: var(--bb-form-control-border-color, var(--bb-border-color));
+  --bb-muted: var(--bb-surface-muted);
+  --bb-muted-foreground: var(--bb-secondary-color);
+  --bb-accent: var(--bb-primary-light);
+  --bb-accent-foreground: var(--bb-primary-text);
+  /* Reverse-contrast pair: no new palette color, always opposite body colors. */
+  --bb-invert: var(--bb-body-color);
+  --bb-invert-foreground: var(--bb-body-bg);
+  /* Code blocks: background, accessible text, selected line, line numbers. */
+  --bb-code: var(--bb-surface-muted);
+  --bb-code-foreground: var(--bb-body-color);
+  --bb-code-highlight: var(--bb-primary-light);
+  --bb-code-number: var(--bb-secondary-color);
   /* State */
   --bb-state-error: var(--bb-danger);
   --bb-state-success: var(--bb-success);
@@ -8264,6 +8287,16 @@ button.bb-link:focus-visible,
   --bb-sidebar-header-divider: rgba(255, 255, 255, 0.06);
   --bb-sidebar-footer-divider: rgba(255, 255, 255, 0.05);
   --bb-sidebar-text-color: rgba(255, 255, 255, 0.85);
+  /* Sidebar semantic aliases — scoped to the existing sidebar component.
+     Do not duplicate the already established sidebar background/text inputs. */
+  --bb-sidebar: var(--bb-sidebar-bg);
+  --bb-sidebar-foreground: var(--bb-sidebar-text-color);
+  --bb-sidebar-primary: var(--bb-primary);
+  --bb-sidebar-primary-foreground: var(--bb-primary-inverse);
+  --bb-sidebar-accent: var(--bb-primary-light);
+  --bb-sidebar-accent-foreground: var(--bb-primary-text);
+  --bb-sidebar-border: var(--bb-sidebar-border-color);
+  --bb-sidebar-ring: var(--bb-focus-ring-color);
   /* layout */
   width: var(--bb-sidebar-width);
   display: flex;
