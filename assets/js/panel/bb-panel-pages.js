@@ -3,7 +3,7 @@
   "use strict";
   var panel = document.querySelector("[data-bb-panel]");
   if (!panel) return;
-  var demoRoutes = {"corporate-team":"team.html","widgets-statistics":"statistics.html","widgets-charts":"charts.html","dashboard-channels":"channels.html","footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","calendar-overview":"calendar.html","files-list":"files.html","cart":"cart.html","subscription-cart":"cart.html","draugr-cart":"cart.html?product=draugr&plan=basic","posb-cart":"cart.html?product=posb&plan=basic","checkout":"checkout.html","subscription-checkout":"checkout.html","draugr-checkout":"checkout.html?product=draugr","posb-checkout":"checkout.html?product=posb","posx-checkout":"checkout.html?product=posb","users-list":"users.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","inbox-messages":"chat.html","chat-conversations":"chat.html"};
+  var demoRoutes = {"corporate-team":"team.html","widgets-statistics":"statistics.html","widgets-charts":"charts.html","dashboard-channels":"channels.html","footer-draugr":"product-draugr.html","footer-about":"about.html","corporate-about":"about.html","footer-integrations":"integrations.html","posb-quick-sale":"pos-system.html","footer-posb":"product-posb.html","contacts-list":"contacts.html","calendar-overview":"calendar.html","files-list":"files.html","cart":"cart.html","subscription-cart":"cart.html","draugr-cart":"cart.html?product=draugr&plan=basic","posb-cart":"cart.html?product=posb&plan=basic","checkout":"checkout.html","subscription-checkout":"checkout.html","draugr-checkout":"checkout.html?product=draugr","posb-checkout":"checkout.html?product=posb","posx-checkout":"checkout.html?product=posb","users-list":"users.html","users-roles":"roles.html","users-permissions":"permissions.html","subscription-overview":"subscription-details.html","invoice-list":"invoice-details.html","inbox-messages":"chat.html","chat-conversations":"chat.html","layout-blank":"blank-app.html"};
   var requestedPage = new URLSearchParams(window.location.search).get("page");
   if (/\/pages\.html$/.test(window.location.pathname) && requestedPage && demoRoutes[requestedPage]) {
     window.location.replace(demoRoutes[requestedPage]);
@@ -108,6 +108,7 @@
     "inbox-messages": {title:"Messages", group:"Inbox", section:"APPLICATIONS"},
     "chat-conversations": {title:"Conversations", group:"Chat", section:"APPLICATIONS"},
     "calendar-overview": {title:"Overview", group:"Calendar", section:"APPLICATIONS"},
+    "layout-blank": {title:"Boş Uygulama", group:"Layouts", section:"LAYOUTS"},
     "layout-sidebar": {title:"Sidebar", group:"Layouts", section:"LAYOUTS"},
     "layout-header": {title:"Header", group:"Layouts", section:"LAYOUTS"},
     "layout-auth": {title:"Authentication", group:"Layouts", section:"LAYOUTS"},
