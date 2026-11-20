@@ -14,7 +14,9 @@
   min-width: 0;
   max-width: calc(100vw - 2rem);
   padding: 0;
-  overflow: visible;
+  max-height: min(75vh, calc(100dvh - var(--bb-panel-header-height) - var(--bb-space-4)));
+  overflow: auto;
+  overscroll-behavior: contain;
   border-radius: var(--bb-radius-lg);
   background: var(--bb-body-bg);
   box-shadow: var(--bb-shadow-lg, var(--bb-shadow-sm));
@@ -53,6 +55,33 @@
 .bb-panel .bb-panel-user-menu .bb-panel-user-group + .bb-panel-user-group {
   border-top: var(--bb-border-width, 1px) solid var(--bb-border-color);
 }
+.bb-panel .bb-panel-user-menu .bb-panel-user-navigation {
+  display: flex;
+  --bb-menu-link-color: var(--bb-body-color);
+  --bb-menu-link-hover-color: var(--bb-primary-text);
+}
+
+.bb-panel .bb-panel-user-navigation .bb-panel-user-disclosure {
+  display: block;
+}
+
+.bb-panel .bb-panel-user-disclosure > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.bb-panel .bb-panel-user-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.bb-panel .bb-panel-user-disclosure[open] > summary .bb-menu-arrow::before {
+  transform: rotate(var(--bb-menu-arrow-rotate-open));
+}
+
+.bb-panel .bb-panel-user-submenu {
+  padding-inline-start: var(--bb-space-4);
+}
+
 .bb-panel .bb-panel-user-menu .bb-panel-user-item {
   display: flex;
   align-items: center;

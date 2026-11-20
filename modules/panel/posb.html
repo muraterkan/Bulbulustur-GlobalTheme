@@ -15,7 +15,7 @@
 <!--/::Head-->
 <!--::Body-->
 <body class="bb-body" id="bb-body-id">
-    <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="posb-dashboard" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
+    <div class="bb-app bb-panel" data-bb-panel data-bb-panel-default-page="posb-branches" data-bb-sidebar-open="false" data-bb-sidebar-collapsed="false">
         <aside class="bb-sidebar" id="bb_panel_sidebar" aria-label="Panel kenar menüsü">
             <div class="bb-sidebar-header">
                 <a class="bb-sidebar-logo" href="shell.html" aria-label="Bulbulustur panel ana sayfa">
@@ -751,54 +751,6 @@
                     </div>
                 </nav>
             </div>
-            <div class="bb-sidebar-footer">
-                <div class="bb-panel-overlay-host bb-panel-sidebar-account" data-bb-panel-popup>
-                    <button class="bb-panel-sidebar-account-toggle" type="button" data-bb-panel-popup-toggle aria-controls="bb_sidebar_account_pop" aria-haspopup="true" aria-expanded="false" aria-label="Hesap ve çalışma alanı menüsü">
-                        <span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span>
-                        <span class="bb-panel-sidebar-account-text"><strong>Bulbulustur</strong><small>Demo User</small></span>
-                        <span class="material-symbols-outlined" aria-hidden="true">unfold_more</span>
-                    </button>
-                    <div id="bb_sidebar_account_pop" class="bb-panel-popover bb-panel-user-menu bb-panel-sidebar-account-menu" data-bb-panel-popup-content hidden>
-                        <div class="bb-panel-user-summary">
-                            <span class="bb-panel-sidebar-account-avatar" aria-hidden="true">BB</span>
-                            <span class="bb-panel-user-info">
-                                <span class="bb-panel-user-name">Bulbulustur Çalışma Alanı</span><small>1 üye · Mağaza planı</small>
-                            </span>
-                        </div>
-                        <div class="bb-panel-user-section">Uygulamalar</div>
-                        <div class="bb-panel-user-group">
-                            <a class="bb-panel-user-item" href="posb.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span>PosB</span>
-                                <span class="bb-panel-user-meta">POS kiralama</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="draugr.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">language</span>Draugr</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="../components/menu.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Components</span>
-                            </a>
-                        </div>
-                        <div class="bb-panel-user-section">demo@example.com</div>
-                        <div class="bb-panel-user-group">
-                            <a class="bb-panel-user-item" href="profile.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">account_circle</span>Profilim</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="account.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">manage_accounts</span>Hesap ayarları</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="subscription.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>Aboneliklerim</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="support-center.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">help</span>Yardım ve destek</span>
-                            </a>
-                            <a class="bb-panel-user-item" href="sign-in.html">
-                                <span class="bb-panel-user-item-label"><span class="material-symbols-outlined" aria-hidden="true">logout</span>Çıkış yap</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </aside>
 
         <button class="bb-panel-backdrop" type="button" data-bb-panel-backdrop aria-label="Close Menu" aria-hidden="true" tabindex="-1"></button>
@@ -957,175 +909,17 @@
                         <div class="bb-toolbar">
                             <div class="bb-panel-content-container">
                                 <div class="bb-toolbar-row">
-                                    <div class="bb-toolbar-col-left"><h1 class="bb-page-title">PosB Dashboard</h1><nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="posb.html?view=dashboard">PosB</a></li><li class="breadcrumb-item active" aria-current="page">Dashboard</li></ol></nav></div>
+                                    <div class="bb-toolbar-col-left"><h1 class="bb-page-title">PosB / Branches</h1><nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="pos-system.html">PosB</a></li><li class="breadcrumb-item active" aria-current="page">Branches</li></ol></nav></div>
                                     <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
                                         <a class="btn bb-btn-secondary" href="posb.html?view=registers">Manage Safes</a>
                                         <a class="btn btn-primary" href="pos-system.html">Quick Sale</a>
                                     </div>
                                 </div>
                             </div>
-                        </div><section class="bb-content bb-posb-page" data-bb-posb-page>
+                        </div>
+                        <section class="bb-content bb-posb-page" data-bb-posb-page>
                             <div class="bb-panel-content-container">
                                 <div class="bb-posb-stack">
-                                    <div data-bb-posb-view="dashboard">
-                                        <div class="bb-posb-stack">
-                                            <div class="bb-posb-kpis">
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">store</span>
-                                                        </span>
-                                                        <strong>3</strong><small>Aktif şube</small>
-                                                        <span class="bb-badge bb-badge-success">All açık</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">point_of_sale</span>
-                                                        </span>
-                                                        <strong>7</strong><small>Cash</small>
-                                                        <span class="bb-badge bb-badge-success">6 aktif</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">receipt_long</span>
-                                                        </span>
-                                                        <strong>184</strong><small>Bugünkü fiş</small>
-                                                        <span class="bb-badge bb-badge-info">+14.2%</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">payments</span>
-                                                        </span>
-                                                        <strong>₺128K</strong><small>Bugünkü ciro</small>
-                                                        <span class="bb-badge bb-badge-success">+9.6%</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">inventory</span>
-                                                        </span>
-                                                        <strong>1.248</strong><small>Stock kalemi</small>
-                                                        <span class="bb-badge bb-badge-warning">18 kritik</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-posb-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-posb-kpi-icon">
-                                                            <span class="material-symbols-outlined">sync</span>
-                                                        </span>
-                                                        <strong>12</strong><small>Bekleyen sync</small>
-                                                        <span class="bb-badge bb-badge-light">Offline kuyruk</span>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="bb-posb-grid">
-                                                <section class="card bb-card">
-                                                    <div class="bb-card-header">
-                                                        <div class="bb-posb-card-heading"><h2>Operasyon Sağlığı</h2><p>Branch, kasa ve senkronizasyon durumu</p></div>
-                                                    </div>
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-posb-health-list">
-                                                            <div class="bb-posb-health-row">
-                                                                <div class="bb-posb-health-copy">
-                                                                    <span>Kasa çevrimiçi</span>
-                                                                    <strong>100%</strong>
-                                                                </div>
-                                                                <div class="bb-posb-progress"><span data-level="100"></span></div>
-                                                            </div>
-                                                            <div class="bb-posb-health-row">
-                                                                <div class="bb-posb-health-copy">
-                                                                    <span>Stock senkronizasyonu</span>
-                                                                    <strong>92%</strong>
-                                                                </div>
-                                                                <div class="bb-posb-progress"><span data-level="92"></span></div>
-                                                            </div>
-                                                            <div class="bb-posb-health-row">
-                                                                <div class="bb-posb-health-copy">
-                                                                    <span>Invoice kuyruğu</span>
-                                                                    <strong>78%</strong>
-                                                                </div>
-                                                                <div class="bb-posb-progress"><span data-level="78"></span></div>
-                                                            </div>
-                                                            <div class="bb-posb-health-row">
-                                                                <div class="bb-posb-health-copy">
-                                                                    <span>Transfer tamamlama</span>
-                                                                    <strong>62%</strong>
-                                                                </div>
-                                                                <div class="bb-posb-progress"><span data-level="62"></span></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </section>
-                                                <section class="card bb-card">
-                                                    <div class="bb-card-header">
-                                                        <div class="bb-posb-card-heading"><h2>7 Günlük Satış</h2><p>Demo işlem hacmi</p></div>
-                                                        <span class="bb-badge bb-badge-light">1.284 işlem</span>
-                                                    </div>
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-posb-bars">
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="44"></span><small>Pzt</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="58"></span><small>Sal</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="73"></span><small>Çar</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="67"></span><small>Per</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="82"></span><small>Cum</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="91"></span><small>Cmt</small>
-                                                            </div>
-                                                            <div class="bb-posb-bar">
-                                                                <span data-level="73"></span><small>Paz</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </section>
-                                            </div>
-                                            <section class="card bb-card">
-                                                <div class="bb-card-header">
-                                                    <div class="bb-posb-card-heading"><h2>Hızlı Yönetim</h2><p>PosB tanımlarına ve satış ekranına geçiş</p></div>
-                                                </div>
-                                                <div class="bb-card-body">
-                                                    <div class="bb-posb-quick-grid">
-                                                        <a class="bb-card bb-posb-quick-link" href="pos-system.html">
-                                                            <span class="material-symbols-outlined">shopping_cart</span>
-                                                            <strong>Quick Sale</strong>
-                                                        </a>
-                                                        <a class="bb-card bb-posb-quick-link" href="posb.html?view=branches">
-                                                            <span class="material-symbols-outlined">store</span>
-                                                            <strong>Branches</strong>
-                                                        </a>
-                                                        <a class="bb-card bb-posb-quick-link" href="posb.html?view=registers">
-                                                            <span class="material-symbols-outlined">point_of_sale</span>
-                                                            <strong>Cash Registers</strong>
-                                                        </a>
-                                                        <a class="bb-card bb-posb-quick-link" href="posb.html?view=warehouses">
-                                                            <span class="material-symbols-outlined">warehouse</span>
-                                                            <strong>Warehouses</strong>
-                                                        </a>
-                                                        <a class="bb-card bb-posb-quick-link" href="posb.html?view=customers">
-                                                            <span class="material-symbols-outlined">groups</span>
-                                                            <strong>Customers</strong>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
                                     <div data-bb-posb-view="branches" hidden>
                                         <section class="bb-card bb-posb-list-card">
                                             <div class="bb-card-header">

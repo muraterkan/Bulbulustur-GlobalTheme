@@ -15,12 +15,12 @@
 .bb-panel .bb-panel-topnav .bb-menu-sub {
   min-width: var(--bb-menu-sub-min-width);
 }
-.bb-panel .bb-panel-topnav .bb-menu-link {
+.bb-panel .bb-panel-topnav > .bb-menu > .bb-menu-item > .bb-menu-link {
   white-space: nowrap;
 }
 /* Header menu: normalize button triggers to the same flat navigation as links.
    Bootstrap's generic button appearance must not leak into bb-menu. */
-.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link {
+.bb-panel .bb-panel-topnav > .bb-menu > .bb-menu-item > .bb-menu-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,13 +40,13 @@
   text-decoration: none;
   cursor: pointer;
 }
-.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link:hover,
+.bb-panel .bb-panel-topnav > .bb-menu > .bb-menu-item > .bb-menu-link:hover,
 .bb-panel .bb-panel-topnav .bb-menu-item.show > .bb-menu-link,
-.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link[aria-current="page"] {
+.bb-panel .bb-panel-topnav > .bb-menu > .bb-menu-item > .bb-menu-link[aria-current="page"] {
   background: var(--bb-tertiary-bg);
   color: var(--bb-panel-title-color);
 }
-.bb-panel .bb-panel-topnav .bb-menu-item > .bb-menu-link:focus-visible {
+.bb-panel .bb-panel-topnav > .bb-menu > .bb-menu-item > .bb-menu-link:focus-visible {
   outline: var(--bb-focus-ring-width) solid var(--bb-primary);
   outline-offset: 2px;
 }
@@ -59,7 +59,7 @@
 .bb-panel .bb-panel-topnav .bb-menu-sub .bb-menu-link {
   justify-content: flex-start;
   width: 100%;
-  padding: var(--bb-space-3);
+  padding: var(--bb-space-2);
 }
 
 .bb-panel .bb-panel-header-actions {
@@ -303,70 +303,50 @@
 }
 
 .bb-panel .bb-panel-mega-main {
-  padding: calc(var(--bb-space-4) * 2);
+  padding: var(--bb-space-2);
 }
 
 .bb-panel .bb-panel-mega-items {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--bb-space-2);
+  gap: var(--bb-space-1);
 }
 
-.bb-panel .bb-panel-mega-link {
-  --bb-panel-mega-tone: var(--bb-primary-text);
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: var(--bb-space-3);
+.bb-panel .bb-panel-mega-items .bb-menu-link,
+.bb-panel .bb-panel-nav-menu .bb-menu-link {
   min-width: 0;
-  padding: var(--bb-space-3);
-  border-radius: var(--bb-radius-sm);
-  color: var(--bb-body-color);
-  text-decoration: none;
-  transition: background-color var(--bb-transition-fast), color var(--bb-transition-fast);
-}
-
-.bb-panel .bb-panel-mega-link:hover,
-.bb-panel .bb-panel-mega-link[aria-current="page"] {
-  background: var(--bb-tertiary-bg);
-  color: var(--bb-emphasis-color);
-}
-
-.bb-panel .bb-panel-mega-link:focus-visible,
-.bb-panel .bb-panel-mega-side a:focus-visible,
-.bb-panel .bb-panel-nav-menu-link:focus-visible {
-  outline: var(--bb-focus-ring-width) solid var(--bb-primary);
-  outline-offset: 2px;
+  white-space: normal;
 }
 
 .bb-panel .bb-panel-mega-icon {
   display: grid;
   place-items: center;
-  width: calc(var(--bb-space-4) * 3);
+  flex: 0 0 auto;
+  width: calc(var(--bb-space-4) + var(--bb-space-6));
   aspect-ratio: 1;
   border-radius: var(--bb-radius);
-  background: color-mix(in srgb, var(--bb-panel-mega-tone) 12%, var(--bb-body-bg));
-  color: var(--bb-panel-mega-tone);
+  background: color-mix(in srgb, var(--bb-panel-mega-tone, var(--bb-primary-text)) 12%, var(--bb-body-bg));
+  color: var(--bb-panel-mega-tone, var(--bb-primary-text));
 }
 
 .bb-panel .bb-panel-mega-icon .material-symbols-outlined {
   font-size: var(--bb-h4);
 }
 
-.bb-panel .bb-panel-mega-link strong,
-.bb-panel .bb-panel-mega-link small {
+.bb-panel .bb-panel-mega-items strong,
+.bb-panel .bb-panel-mega-items small {
   display: block;
   min-width: 0;
 }
 
-.bb-panel .bb-panel-mega-link strong {
+.bb-panel .bb-panel-mega-items strong {
   color: var(--bb-emphasis-color);
   font-size: var(--bb-fs-xs);
   font-weight: var(--bb-fw-semibold);
   line-height: var(--bb-line-height-heading);
 }
 
-.bb-panel .bb-panel-mega-link small {
+.bb-panel .bb-panel-mega-items small {
   margin-top: var(--bb-space-1);
   color: var(--bb-secondary-color);
   font-size: var(--bb-fs-2xs);
@@ -401,30 +381,16 @@
   display: grid;
   align-content: start;
   gap: var(--bb-space-1);
-  padding: calc(var(--bb-space-4) * 2);
+  padding: var(--bb-space-2);
   border-inline-start: var(--bb-border-width) solid var(--bb-border-color);
   background: var(--bb-surface-soft);
 }
 
 .bb-panel .bb-panel-mega-side > strong {
-  margin-bottom: var(--bb-space-2);
+  padding: var(--bb-space-2);
   color: var(--bb-emphasis-color);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-semibold);
-}
-
-.bb-panel .bb-panel-mega-side a {
-  padding: var(--bb-space-2) 0;
-  border-radius: var(--bb-radius-sm);
-  color: var(--bb-secondary-color);
-  font-size: var(--bb-fs-xs);
-  font-weight: var(--bb-fw-medium);
-  text-decoration: none;
-}
-
-.bb-panel .bb-panel-mega-side a:hover,
-.bb-panel .bb-panel-mega-side a[aria-current="page"] {
-  color: var(--bb-primary-text);
 }
 
 .bb-panel .bb-panel-mega-footer {
@@ -432,7 +398,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--bb-space-4);
-  padding: var(--bb-space-3) calc(var(--bb-space-4) * 2);
+  padding: var(--bb-space-2) var(--bb-space-3);
   border-top: var(--bb-border-width) solid var(--bb-border-color);
   background: var(--bb-surface-elevated);
 }
@@ -464,26 +430,8 @@
   padding: var(--bb-space-2);
 }
 
-.bb-panel .bb-panel-nav-menu-link {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: var(--bb-space-3);
-  padding: var(--bb-space-3);
-  border-radius: var(--bb-radius-sm);
-  color: var(--bb-body-color);
-  text-decoration: none;
-}
-
-.bb-panel .bb-panel-nav-menu-link:hover,
-.bb-panel .bb-panel-nav-menu-link[aria-current="page"] {
-  background: var(--bb-tertiary-bg);
-  color: var(--bb-emphasis-color);
-}
-
-.bb-panel .bb-panel-nav-menu-link > .material-symbols-outlined {
+.bb-panel .bb-panel-nav-menu-link > .bb-menu-icon {
   color: var(--bb-primary-text);
-  font-size: var(--bb-h4);
 }
 
 .bb-panel .bb-panel-nav-menu-link strong,
@@ -506,11 +454,6 @@
 @media (max-width: 1399.98px) {
   .bb-panel .bb-panel-topnav .bb-panel-mega {
     width: min(calc(var(--bb-space-4) * 44), calc(100vw - (var(--bb-space-4) * 2)));
-  }
-
-  .bb-panel .bb-panel-mega-main,
-  .bb-panel .bb-panel-mega-side {
-    padding: var(--bb-space-4);
   }
 }
 

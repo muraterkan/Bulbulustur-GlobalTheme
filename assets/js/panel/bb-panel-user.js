@@ -5,7 +5,7 @@
   var STORAGE_THEME = "bb-panel-theme";
   var STORAGE_LANGUAGE = "bb-panel-language";
   var html = document.documentElement;
-  var menu = document.querySelector(".bb-panel-user-menu:not(.bb-panel-sidebar-account-menu)");
+  var menu = document.querySelector(".bb-panel-user-menu");
   if (!menu) return;
 
   var languages = [
@@ -45,18 +45,103 @@
     return languages.find(function (item) { return item.code === code; }) || languages[0];
   }
 
-  var legacyTheme = menu.querySelector("#bb_panel_user_theme");
-  var preferenceGroup = legacyTheme ? legacyTheme.closest(".bb-panel-user-group") : menu.querySelector(".bb-panel-user-group:last-child");
-  if (!preferenceGroup) {
-    preferenceGroup = document.createElement("div");
-    preferenceGroup.className = "bb-panel-user-group";
-    menu.appendChild(preferenceGroup);
+  var routes = [
+    { id: "draugr", label: "Draugr", icon: "language", links: [
+      ["draugr.html?view=dashboard", "Dashboard"],
+      ["draugr.html?view=storefront", "Vitrin"],
+      ["draugr.html?view=navigation", "Kategori ve navigasyon"],
+      ["draugr.html?view=content", "Sayfalar ve içerik"],
+      ["draugr.html?view=theme", "Tema ve görünüm"],
+      ["draugr.html?view=domain", "Alan adı ve SEO"],
+      ["draugr.html?view=localization", "Dil ve yerelleştirme"],
+      ["draugr.html?view=settings", "Kanal ayarları"],
+      ["draugr.html?view=subscription", "Abonelik"]
+    ] },
+    { id: "posb", label: "PosB", icon: "point_of_sale", links: [
+      ["pos-system.html", "POS ekranını aç"]
+    ], groups: [
+      { label: "Şube ve kasa", links: [
+        ["posb.html?view=branches", "Şubeler"],
+        ["posb.html?view=registers", "Kasalar"],
+        ["posb.html?view=shifts", "Vardiya ve gün"]
+      ] },
+      { label: "Fatura", links: [
+        ["posb.html?view=invoices", "Faturalar"],
+        ["posb.html?view=invoice-settings", "Fatura ayarları"]
+      ] },
+      { label: "Stok ve transfer", links: [
+        ["posb.html?view=warehouses", "Depolar"],
+        ["posb.html?view=stock", "Stok"],
+        ["posb.html?view=transfers", "Transferler"]
+      ] },
+      { label: "Müşteri ve tedarikçi", links: [
+        ["posb.html?view=customers", "Müşteriler"],
+        ["posb.html?view=suppliers", "Tedarikçiler"]
+      ] }
+    ] }
+  ];
+
+  function menuIcon(icon) {
+    return icon ? `<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">${icon}</span></span>` : "";
   }
 
-  preferenceGroup.querySelectorAll("#bb_panel_user_theme").forEach(function (node) { node.remove(); });
-  Array.from(preferenceGroup.children).forEach(function (node) {
-    if ((node.textContent || "").trim().startsWith("Dil")) node.remove();
-  });
+  var current = new URL(window.location.href);
+  if (current.pathname.endsWith("/draugr.html") && !current.searchParams.has("view")) {
+    current.searchParams.set("view", "dashboard");
+  }
+
+  function isCurrent(href) {
+    var target = new URL(href, document.baseURI);
+    return target.pathname === current.pathname && target.searchParams.get("view") === current.searchParams.get("view");
+  }
+
+  function menuLink(link) {
+    var href = link[0].startsWith("../") ? link[0] : "../panel/" + link[0];
+    var active = isCurrent(href);
+    return `
+      <div class="bb-menu-item">
+        <a class="bb-menu-link${active ? " active" : ""}" href="${href}"${active ? ' aria-current="page"' : ""}>
+          ${menuIcon(link[2])}<span class="bb-menu-title">${link[1]}</span>
+        </a>
+      </div>`;
+  }
+
+  function submenu(label, items, icon, service) {
+    return `
+      <details class="bb-menu-item bb-panel-user-disclosure"${service ? ` data-bb-panel-service="${service}"` : ""}${items.includes('aria-current="page"') ? " open" : ""}>
+        <summary class="bb-menu-link">
+          ${menuIcon(icon)}<span class="bb-menu-title">${label}</span><span class="bb-menu-arrow" aria-hidden="true"></span>
+        </summary>
+        <div class="bb-panel-user-submenu">${items}
+        </div>
+      </details>`;
+  }
+
+  var navigation = document.createElement("nav");
+  navigation.className = "bb-panel-user-group bb-panel-user-navigation bb-menu bb-menu-column bb-menu-sm bb-menu-hover-bg bb-menu-active-bg";
+  navigation.setAttribute("aria-label", "Kullanıcı menüsü");
+  navigation.innerHTML = [
+    menuLink(["profile.html", "Profilim", "account_circle"]),
+    menuLink(["account.html", "Hesap ayarları", "manage_accounts"]),
+    menuLink(["subscription.html", "Aboneliklerim", "workspace_premium"]),
+    menuLink(["orders.html", "Siparişlerim", "shopping_bag"]),
+    menuLink(["support-center.html", "Yardım ve destek", "help"]),
+    '<div class="bb-menu-section">Uygulamalar</div>',
+    ...routes.map(function (route) {
+      var links = route.links.map(menuLink).join("");
+      var groups = (route.groups || []).map(function (group) {
+        return submenu(group.label, group.links.map(menuLink).join(""));
+      }).join("");
+      return submenu(route.label, links + groups, route.icon, route.id);
+    }),
+    menuLink(["../components/menu.html", "Components", "menu_book"])
+  ].join("");
+
+  // Keep the server-rendered user summary and replace the demo links and preferences.
+  menu.querySelectorAll(".bb-panel-user-group").forEach(function (group) { group.remove(); });
+  var preferenceGroup = document.createElement("div");
+  preferenceGroup.className = "bb-panel-user-group";
+  menu.append(navigation, preferenceGroup);
 
   var appearance = document.createElement("div");
   appearance.className = "bb-panel-user-preference";
@@ -77,8 +162,12 @@
     '</button>' +
     '<div class="bb-panel-user-language-menu" id="bb_panel_language_menu" hidden></div>';
 
-  preferenceGroup.prepend(language);
-  preferenceGroup.prepend(appearance);
+  preferenceGroup.append(appearance, language);
+
+  var session = document.createElement("div");
+  session.className = navigation.className;
+  session.innerHTML = menuLink(["sign-in.html", "Çıkış yap", "logout"]);
+  menu.appendChild(session);
 
   var languageMenu = language.querySelector(".bb-panel-user-language-menu");
   languages.forEach(function (item) {
