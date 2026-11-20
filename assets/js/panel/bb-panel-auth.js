@@ -10,7 +10,12 @@
     toggle.addEventListener("click", function () {
       var visible = password.type === "text";
       password.type = visible ? "password" : "text";
-      toggle.textContent = visible ? "Göster" : "Gizle";
+      var label = toggle.querySelector("[data-bb-auth-toggle-label]");
+      var icon = toggle.querySelector("[data-bb-auth-toggle-icon]");
+      if (label) label.textContent = visible ? "Göster" : "Gizle";
+      else toggle.textContent = visible ? "Göster" : "Gizle";
+      if (icon) icon.textContent = visible ? "visibility" : "visibility_off";
+      if (label) toggle.setAttribute("aria-label", visible ? "Şifreyi göster" : "Şifreyi gizle");
       toggle.setAttribute("aria-pressed", String(!visible));
     });
   }
