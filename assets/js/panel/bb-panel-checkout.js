@@ -54,7 +54,10 @@
     return {subtotal,discount,tax,total:Math.round((subtotal - discount + tax) * 100) / 100};
   }
   function bindProduct() {
-    $("[data-bb-checkout-product-name]").forEach(el => { el.textContent = product.label; });
+    const productLabel = [...new Set(lines.map(line => catalog[line.product].label))].join(" + ");
+    $("[data-bb-checkout-product-name]").forEach(el => { el.textContent = productLabel; });
+    $("[data-bb-checkout-item-count]").textContent = lines.length + " paket · " +
+      lines.reduce((sum,line) => sum + line.quantity,0) + " hizmet adedi · 1 yıllık dönem";
     $$("[data-bb-checkout-product-description]").forEach(el => { el.textContent = product.summary; });
     $$("[data-bb-checkout-plan-name]").forEach(el => { el.textContent = selectedPlan.name; });
     $("[data-bb-checkout-plan-description]").textContent = selectedPlan.description + (usingCart ? " · " + lines[0].quantity + " adet" : "");
@@ -185,10 +188,18 @@
     const code = field("coupon").toUpperCase();
     if (code === "DEMO10") {
       couponApplied = true;
+      if (usingCart) {
+        cartSnapshot.coupon = true;
+        try { sessionStorage.setItem("bb-panel-service-cart-v1",JSON.stringify(cartSnapshot)); } catch (_) {}
+      }
       renderTotals();
       announce("DEMO10 kodu ile örnek %10 indirim uygulandı. Gerçek kupon doğrulanmadı.");
     } else {
       couponApplied = false;
+      if (usingCart) {
+        cartSnapshot.coupon = false;
+        try { sessionStorage.setItem("bb-panel-service-cart-v1",JSON.stringify(cartSnapshot)); } catch (_) {}
+      }
       renderTotals();
       announce("Bu demo için geçerli tek kod DEMO10.",true);
     }
@@ -196,6 +207,10 @@
   $("[data-bb-checkout-remove-coupon]").addEventListener("click",() => {
     couponApplied = false;
     root.querySelector("[name='coupon']").value = "";
+    if (usingCart) {
+      cartSnapshot.coupon = false;
+      try { sessionStorage.setItem("bb-panel-service-cart-v1",JSON.stringify(cartSnapshot)); } catch (_) {}
+    }
     renderTotals();
     announce("Örnek indirim kaldırıldı.");
   });
