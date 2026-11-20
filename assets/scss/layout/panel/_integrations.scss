@@ -43,9 +43,7 @@
   display: grid;
   gap: var(--bb-space-1);
   padding: var(--bb-space-3);
-  border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);
-  background: var(--bb-surface-soft);
 }
 
 .bb-panel .bb-integrations-meta-card strong {
@@ -161,8 +159,6 @@
 .bb-panel .bb-integration-card {
   min-width: 0;
   overflow: hidden;
-  border-color: var(--bb-border-color);
-  background: var(--bb-surface-elevated);
   box-shadow: var(--bb-shadow-xs);
   transition:
     transform var(--bb-transition-fast),
