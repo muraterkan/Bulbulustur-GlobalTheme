@@ -881,6 +881,35 @@ html[data-bs-theme="dark"] {
   --bb-focus-ring-color: var(--bb-primary);
 }
 
+/* =====================================
+   NAVY PALETTE (Lacivert)
+   Koyu temanın lacivert tonlu varyantı. Uygulama data-bs-theme="dark" ile birlikte
+   data-bb-palette="navy" kullanır; tüm dark bileşen kuralları aynen geçerli kalır,
+   yalnız zemin/yüzey/metin/kenarlık tokenları lacivert skalaya çevrilir.
+===================================== */
+html[data-bs-theme="dark"][data-bb-palette="navy"] {
+  --bb-body-bg: #0d141e;
+  --bb-body-color: #eef3f8;
+  --bb-body-bg-rgb: 13, 20, 30;
+  --bb-body-color-rgb: 238, 243, 248;
+
+  --bb-secondary-bg: #172433;
+  --bb-tertiary-bg: #131e2a;
+  --bb-surface-bg: #101923;
+  --bb-surface-soft: #131e2a;
+  --bb-surface-muted: #172433;
+  --bb-surface-elevated: #1c2b3c;
+  --bb-secondary-bg-rgb: 23, 36, 51;
+  --bb-tertiary-bg-rgb: 19, 30, 42;
+
+  --bb-border-opacity: 0.13;
+  --bb-border-opacity-strong: 0.22;
+  --bb-border-opacity-dashed: 0.20;
+  --bb-border-color: rgba(var(--bb-border-rgb), var(--bb-border-opacity));
+  --bb-border-color-strong: rgba(var(--bb-border-rgb), var(--bb-border-opacity-strong));
+  --bb-border-dashed-color: rgba(var(--bb-border-rgb), var(--bb-border-opacity-dashed));
+}
+
 /* -------------------------------------
    DARK SURFACE / DOMAIN ACCENTS
 ------------------------------------- */
