@@ -1,0 +1,300 @@
+.bb-panel .bb-merchant-dashboard {
+  padding-bottom: var(--bb-space-6);
+}
+
+.bb-merchant-stack {
+  display: grid;
+  align-content: start;
+  gap: var(--bb-space-4);
+  min-width: 0;
+}
+
+.bb-merchant-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(19rem, 1fr);
+  gap: var(--bb-space-4);
+  align-items: start;
+}
+
+.bb-merchant-card-head {
+  flex-wrap: wrap;
+  gap: var(--bb-space-2) var(--bb-space-3);
+}
+
+.bb-merchant-meta {
+  display: block;
+  margin: 0;
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-sm);
+}
+
+.bb-merchant-tasks {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--bb-space-3);
+}
+
+.bb-merchant-task {
+  --bb-merchant-tone: var(--bb-primary-text);
+  --bb-merchant-tint: var(--bb-primary-light);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--bb-space-2);
+  min-width: 0;
+  padding: var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background: var(--bb-surface-soft);
+  color: var(--bb-emphasis-color);
+  text-align: start;
+  transition: background-color var(--bb-transition-fast), border-color var(--bb-transition-fast);
+
+  &[data-tone="info"] {
+    --bb-merchant-tone: var(--bb-info-text);
+    --bb-merchant-tint: var(--bb-info-light);
+  }
+
+  &[data-tone="warning"] {
+    --bb-merchant-tone: var(--bb-warning-text);
+    --bb-merchant-tint: var(--bb-warning-light);
+  }
+
+  &[data-tone="danger"] {
+    --bb-merchant-tone: var(--bb-danger-text);
+    --bb-merchant-tint: var(--bb-danger-light);
+  }
+
+  &:hover {
+    border-color: var(--bb-merchant-tone);
+    background: var(--bb-surface-elevated);
+  }
+
+  &:focus-visible {
+    outline: var(--bb-focus-ring-width) solid var(--bb-focus-ring-color);
+    outline-offset: 2px;
+  }
+}
+
+.bb-merchant-task-lead,
+.bb-merchant-task-action {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.bb-merchant-task-lead strong {
+  font-size: var(--bb-h3);
+  line-height: var(--bb-line-height-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.bb-merchant-task-icon,
+.bb-merchant-channel-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.25rem;
+  aspect-ratio: 1;
+  border-radius: var(--bb-radius);
+  color: var(--bb-merchant-tone, var(--bb-primary-text));
+  background: var(--bb-merchant-tint, var(--bb-primary-light));
+
+  .material-symbols-outlined {
+    font-size: var(--bb-fs-xl);
+  }
+}
+
+.bb-merchant-task-label {
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-semibold);
+}
+
+.bb-merchant-task-action {
+  color: var(--bb-merchant-tone);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-medium);
+
+  .material-symbols-outlined {
+    font-size: var(--bb-fs-base);
+  }
+}
+
+.bb-merchant-sales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--bb-space-4);
+  margin: 0;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+  background: var(--bb-surface-soft);
+
+  dt {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-medium);
+  }
+
+  dd {
+    margin: 0;
+    color: var(--bb-emphasis-color);
+    font-size: var(--bb-h4);
+    font-weight: var(--bb-fw-semibold);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.bb-merchant-table {
+  margin: 0;
+
+  th,
+  td {
+    padding: var(--bb-space-3) var(--bb-space-4);
+    vertical-align: middle;
+  }
+
+  th {
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-sm);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+.bb-merchant-order-link {
+  color: var(--bb-emphasis-color);
+  font-weight: var(--bb-fw-semibold);
+
+  &:hover {
+    color: var(--bb-primary-text);
+  }
+}
+
+.bb-merchant-amount {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.bb-merchant-list,
+.bb-merchant-drawer-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bb-merchant-list > li + li {
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+}
+
+.bb-merchant-stock li,
+.bb-merchant-channel-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-3) var(--bb-space-4);
+}
+
+.bb-merchant-channel-link {
+  color: var(--bb-body-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--bb-emphasis-color);
+    background: var(--bb-surface-soft);
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+.bb-merchant-channel-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.bb-merchant-channel-status {
+  flex: 0 0 auto;
+  text-align: end;
+}
+
+.bb-merchant-channel-status .bb-merchant-meta {
+  margin-top: var(--bb-space-1);
+}
+
+.bb-merchant-payout {
+  display: grid;
+  gap: var(--bb-space-3);
+  margin: 0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--bb-space-2);
+  }
+
+  dt {
+    color: var(--bb-secondary-color);
+    font-weight: var(--bb-fw-medium);
+  }
+
+  dd {
+    margin: 0;
+    color: var(--bb-emphasis-color);
+    font-weight: var(--bb-fw-semibold);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+}
+
+.bb-merchant-drawer {
+  --bb-drawer-width: 33rem;
+}
+
+.bb-merchant-drawer-list {
+  gap: var(--bb-space-3);
+}
+
+.bb-merchant-task-record {
+  display: grid;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-3);
+}
+
+.bb-merchant-record-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--bb-space-2);
+}
+
+.bb-merchant-record-detail {
+  margin: 0;
+}
+
+#satis-kanallari {
+  scroll-margin-block-start: var(--bb-space-4);
+}
+
+@media (max-width: 1150px) {
+  .bb-merchant-tasks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .bb-merchant-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .bb-merchant-tasks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bb-merchant-table :is(th, td) {
+    padding-inline: var(--bb-space-2);
+  }
+}

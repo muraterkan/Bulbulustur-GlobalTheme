@@ -54,6 +54,7 @@
     });
   });
 
+  search.value = new URLSearchParams(window.location.search).get("q") || "";
   search.addEventListener("input", applyFilter);
 
   var setupDrawer = document.getElementById("bb_integration_setup_drawer");

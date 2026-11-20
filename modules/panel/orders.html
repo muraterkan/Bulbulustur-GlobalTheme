@@ -933,7 +933,7 @@
                                             <div class="bb-orders-search">
                                                 <label class="bb-orders-filter-label" for="bb_orders_search">Order ara</label>
                                                 <div class="bb-orders-filter-field">
-                                                    <span class="material-symbols-outlined" aria-hidden="true">search</span><input type="search" class="form-control form-control-solid" id="bb_orders_search" data-bb-orders-search placeholder="Order no veya müşteri" autocomplete="off">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">search</span><input type="search" class="form-control form-control-solid" id="bb_orders_search" data-bb-orders-search placeholder="Sipariş no veya müşteri" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="bb-orders-date">
@@ -952,6 +952,12 @@
                                                     <option value="Beklemede">Beklemede</option>
                                                     <option value="Cancel">Cancel</option>
                                                     <option value="İade">İade</option>
+                                                </select>
+                                            </div>
+                                            <div class="bb-orders-status">
+                                                <label class="bb-orders-filter-label" for="bb_orders_channel">Kanal</label>
+                                                <select id="bb_orders_channel" class="form-select form-select-solid" data-bb-orders-channel>
+                                                    <option value="">Tüm kanallar</option>
                                                 </select>
                                             </div>
                                             <button type="button" class="btn bb-btn-secondary btn-sm" data-bb-orders-clear>Clean</button>
@@ -1036,6 +1042,7 @@
     <script src="../../assets/js/panel/bb-panel-header.js"></script>
     <script src="../../assets/js/panel/bb-panel-user.js"></script>
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
+    <script src="../../assets/js/panel/bb-panel-merchant-data.js"></script>
     <script src="../../assets/js/panel/bb-panel-orders.js"></script>
     <!--/::Scripts-->
 </body>
