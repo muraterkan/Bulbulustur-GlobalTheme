@@ -37526,6 +37526,7 @@ body.bb-product-gallery-lightbox-open {
   --bb-draugr-line: var(--bb-border-color);
   --bb-draugr-line-strong: color-mix(in srgb, var(--bb-body-color) 20%, var(--bb-border-color));
   --bb-draugr-accent: var(--bb-primary);
+  --bb-draugr-accent-text: var(--bb-primary-text);
   --bb-draugr-accent-soft: color-mix(in srgb, var(--bb-primary) 14%, transparent);
   --bb-draugr-accent-line: color-mix(in srgb, var(--bb-primary) 34%, transparent);
   overflow: hidden;
@@ -37546,7 +37547,7 @@ body.bb-product-gallery-lightbox-open {
 
 .bb-draugr-page .bb-page-hero-label,
 .bb-draugr-page .bb-draugr-section-label {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-size: var(--bb-fs-sm);
   font-weight: var(--bb-fw-bold);
   letter-spacing: 0.1em;
@@ -37683,7 +37684,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-hero-proof .material-symbols-outlined {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-size: var(--bb-fs-base);
 }
 
@@ -37718,7 +37719,7 @@ body.bb-product-gallery-lightbox-open {
 
 .bb-draugr-console-brand .material-symbols-outlined,
 .bb-draugr-console-live {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
 }
 
 .bb-draugr-console-live::before {
@@ -37751,7 +37752,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-console-rail .is-active {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
 }
 
 .bb-draugr-console-stage {
@@ -37778,7 +37779,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-console-score {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-family: var(--bb-font-mono);
   font-size: var(--bb-fs-sm);
 }
@@ -37814,7 +37815,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-console-metric small {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-size: var(--bb-fs-2xs);
 }
 
@@ -37934,7 +37935,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-console-event .material-symbols-outlined {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-size: var(--bb-fs-base);
 }
 
@@ -38147,7 +38148,7 @@ body.bb-product-gallery-lightbox-open {
 
 .bb-draugr-flow-step {
   margin-bottom: 5rem;
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-family: var(--bb-font-mono);
   font-size: var(--bb-fs-xs);
   letter-spacing: 0.12em;
@@ -38324,10 +38325,17 @@ body.bb-product-gallery-lightbox-open {
 /* =====================================
    Pricing
 ===================================== */
-.bb-draugr-pricing-section {
-  border-top: 1px solid var(--bb-draugr-line);
-  border-bottom: 1px solid var(--bb-draugr-line);
-  background: var(--bb-draugr-soft);
+.bb-draugr-page .bb-page-section.bb-draugr-pricing-section {
+  /* Use the light-theme footer's neutral charcoal even with the navy palette. */
+  --bb-draugr-bg: var(--bb-coal-400);
+  --bb-draugr-ink: var(--bb-footer-heading-color);
+  --bb-draugr-muted: var(--bb-footer-muted-color);
+  --bb-draugr-soft-strong: var(--bb-footer-surface);
+  --bb-draugr-line: var(--bb-footer-border-color);
+  --bb-draugr-line-strong: var(--bb-footer-border-color-strong);
+  --bb-draugr-accent-text: var(--bb-draugr-accent);
+  color-scheme: dark;
+  border-block: var(--bb-border-width) solid var(--bb-draugr-line);
 }
 
 .bb-draugr-pricing-head {
@@ -38375,7 +38383,7 @@ body.bb-product-gallery-lightbox-open {
 .bb-draugr-plan-badge {
   width: fit-content;
   margin-bottom: var(--bb-space-4);
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-family: var(--bb-font-mono);
   font-size: var(--bb-fs-2xs);
   font-weight: var(--bb-fw-bold);
@@ -38440,7 +38448,7 @@ body.bb-product-gallery-lightbox-open {
 
 .bb-draugr-plan-features .material-symbols-outlined {
   margin-top: 0.125rem;
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   font-size: var(--bb-fs-base);
 }
 
@@ -38503,7 +38511,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-faq-shell .accordion-button:not(.collapsed) {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   background: transparent;
   box-shadow: none;
 }
@@ -38513,7 +38521,7 @@ body.bb-product-gallery-lightbox-open {
 }
 
 .bb-draugr-faq-shell .bb-accordion-icon {
-  color: var(--bb-primary-text);
+  color: var(--bb-draugr-accent-text);
   transition: transform 0.2s ease;
 }
 
