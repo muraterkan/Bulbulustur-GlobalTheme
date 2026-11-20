@@ -961,218 +961,337 @@
                                         <nav class="bb-breadcrumb" aria-label="İçerik yolu"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="draugr.html?view=dashboard">Draugr</a></li><li class="breadcrumb-item active" aria-current="page">Dashboard</li></ol></nav>
                                     </div>
                                     <div class="bb-toolbar-col-right bb-panel-toolbar-actions">
-                                        <a class="btn bb-btn-secondary" href="draugr.html?view=theme">Temayı Yönet</a>
-                                        <a class="btn btn-primary" href="draugr.html?view=storefront">Vitrini Edit</a>
+                                        <div class="dropdown">
+                                            <button class="btn bb-btn-secondary dropdown-toggle" id="dr-toolbar-menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">Site işlemleri</button>
+                                            <ul class="dropdown-menu bb-dropdown-menu dropdown-menu-end" aria-labelledby="dr-toolbar-menu">
+                                                <li><a class="dropdown-item bb-dropdown-item" href="draugr.html?view=theme">Temayı yönet</a></li>
+                                                <li><a class="dropdown-item bb-dropdown-item" href="draugr.html?view=domain">Alan adı ve SEO</a></li>
+                                                <li><a class="dropdown-item bb-dropdown-item" href="draugr.html?view=localization">Dil ayarları</a></li>
+                                                <li><a class="dropdown-item bb-dropdown-item" href="draugr.html?view=settings">Kanal ayarları</a></li>
+                                            </ul>
+                                        </div>
+                                        <a class="btn btn-primary" href="draugr.html?view=storefront">Vitrini düzenle</a>
                                     </div>
                                 </div>
                             </div>
-                        </div><section class="bb-content bb-draugr-page" data-bb-draugr-page>
+                        </div>
+                        <section class="bb-content bb-draugr-page" data-bb-draugr-page>
+                            <p class="bb-panel-content-container bb-draugr-muted mb-3" data-bb-draugr-demo-label hidden>Örnek mağaza · Veriler temsilidir</p>
                             <div class="bb-panel-content-container">
                                 <div class="bb-draugr-stack">
 
-                                    <div data-bb-draugr-view="dashboard">
-                                        <div class="bb-draugr-stack">
-                                            <section class="bb-card bb-draugr-subscription-banner">
+                                    <div class="bb-draugr-dashboard bb-draugr-stack" data-bb-draugr-view="dashboard">
+                                        <section class="bb-card" aria-labelledby="dr-site-title">
+                                            <div class="bb-card-body bb-draugr-site-summary">
+                                                <span class="bb-symbol size-45 bb-draugr-site-icon" aria-hidden="true">
+                                                    <span class="bb-symbol-label"><span class="material-symbols-outlined">storefront</span></span>
+                                                </span>
+                                                <div class="bb-draugr-site-identity">
+                                                    <div class="bb-draugr-site-name">
+                                                        <h2 id="dr-site-title">Demo Mağaza</h2>
+                                                        <span class="badge bb-badge bb-badge-light-success bb-badge-pill">Yayında</span>
+                                                    </div>
+                                                    <p>demo-magaza.com <span aria-hidden="true">·</span> Editorial <span aria-hidden="true">·</span> TR / EN</p>
+                                                </div>
+                                                <div class="bb-draugr-site-plan">
+                                                    <div>
+                                                        <strong>Draugr Business</strong>
+                                                        <small>Yenileme <time datetime="2026-12-14">14 Aralık 2026</time></small>
+                                                    </div>
+                                                    <a class="btn bb-btn-secondary btn-sm" href="draugr.html?view=subscription">Aboneliği yönet</a>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <section class="bb-draugr-metrics" aria-label="Mağaza özeti">
+                                            <article class="bb-card bb-draugr-metric">
                                                 <div class="bb-card-body">
-                                                    <span class="bb-draugr-subscription-icon">
-                                                        <span class="material-symbols-outlined">workspace_premium</span>
-                                                    </span>
-                                                    <span class="bb-draugr-subscription-copy"><strong>Draugr Business aboneliği aktif</strong><small>Site yönetimi abonelik aktif olduğu sürece açık. Demo yenileme: 14 Aralık 2026.</small></span>
-                                                    <a class="btn bb-btn-secondary" href="draugr.html?view=subscription">Aboneliği Yönet</a>
+                                                    <h2><span class="material-symbols-outlined bb-draugr-tone-success" aria-hidden="true">shield</span> Yayın sağlığı</h2>
+                                                    <div class="bb-draugr-metric-value">86<span>%</span></div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--success">
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="Yayın hazırlığı" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 86%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <p>Alan adı bağlı · SSL geçerli</p>
+                                                </div>
+                                                <a class="bb-card-footer bb-draugr-card-link" href="#dr-site-health">
+                                                    Sağlık kontrolleri <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                </a>
+                                            </article>
+
+                                            <article class="bb-card bb-draugr-metric">
+                                                <div class="bb-card-body">
+                                                    <h2><span class="material-symbols-outlined bb-draugr-tone-info" aria-hidden="true">account_tree</span> Kategori ağı</h2>
+                                                    <div class="bb-draugr-metric-value">124 <span>kategori</span></div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--info">
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="Kategori eşleştirme kapsamı" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 88%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <p>%88 eşlendi · Router bağlı</p>
+                                                </div>
+                                                <a class="bb-card-footer bb-draugr-card-link" href="draugr.html?view=navigation">
+                                                    Kategorileri yönet <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                </a>
+                                            </article>
+
+                                            <article class="bb-card bb-draugr-metric">
+                                                <div class="bb-card-body">
+                                                    <h2><span class="material-symbols-outlined bb-draugr-tone-warning" aria-hidden="true">article</span> Site içeriği</h2>
+                                                    <div class="bb-draugr-metric-value">18 <span>yayında</span></div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--warning">
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="Yayınlanan sayfalar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="20" aria-valuetext="20 sayfadan 18'i yayında">
+                                                            <div class="bb-progress__bar" style="width: 90%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <p><span class="bb-draugr-tone-warning">2 taslak</span> · 2 aktif dil</p>
+                                                </div>
+                                                <a class="bb-card-footer bb-draugr-card-link" href="draugr.html?view=content">
+                                                    Sayfaları yönet <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                </a>
+                                            </article>
+
+                                            <article class="bb-card bb-draugr-metric">
+                                                <div class="bb-card-body">
+                                                    <h2><span class="material-symbols-outlined bb-draugr-tone-success" aria-hidden="true">monitoring</span> Site trafiği</h2>
+                                                    <div class="bb-draugr-metric-value"><strong data-bb-draugr-traffic-headline>8.400</strong> <span>ziyaret</span></div>
+                                                    <div class="bb-draugr-trend bb-draugr-tone-success">
+                                                        <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                                                        <strong>%12,4 artış</strong>
+                                                    </div>
+                                                    <p>Son 30 gün · Önceki döneme göre</p>
+                                                </div>
+                                                <a class="bb-card-footer bb-draugr-card-link" href="#dr-traffic">
+                                                    Kaynakları incele <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                </a>
+                                            </article>
+                                        </section>
+
+                                        <div class="bb-draugr-dashboard-grid">
+                                            <section class="bb-card" id="dr-traffic" aria-labelledby="dr-traffic-title">
+                                                <div class="bb-card-header bb-draugr-dashboard-header">
+                                                    <div class="bb-draugr-card-heading">
+                                                        <h2 id="dr-traffic-title">Trafik kaynakları</h2>
+                                                        <p data-bb-draugr-traffic-summary aria-live="polite"></p>
+                                                    </div>
+                                                    <fieldset class="bb-draugr-period">
+                                                        <legend class="visually-hidden">Trafik dönemi</legend>
+                                                        <div class="btn-group">
+                                                            <input class="btn-check" type="radio" name="dr-traffic-period" id="dr-traffic-7" value="7" autocomplete="off" checked>
+                                                            <label class="btn bb-btn-secondary btn-sm" for="dr-traffic-7">7 gün</label>
+                                                            <input class="btn-check" type="radio" name="dr-traffic-period" id="dr-traffic-30" value="30" autocomplete="off">
+                                                            <label class="btn bb-btn-secondary btn-sm" for="dr-traffic-30">30 gün</label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="bb-card-body bb-draugr-traffic-body">
+                                                    <div class="bb-draugr-chart" data-bb-draugr-traffic-chart aria-hidden="true"></div>
+                                                    <ul class="bb-draugr-traffic-legend list-unstyled mb-0">
+                                                        <li><span class="bb-draugr-chart-key is-network" aria-hidden="true"></span> Bulbulustur yönlendirmesi <strong data-bb-draugr-network></strong></li>
+                                                        <li><span class="bb-draugr-chart-key is-other" aria-hidden="true"></span> Diğer kaynaklar <strong data-bb-draugr-other></strong></li>
+                                                    </ul>
+                                                    <details class="bb-draugr-traffic-details">
+                                                        <summary>Grafik verileri</summary>
+                                                        <div class="table-responsive">
+                                                            <table class="table bb-table mb-0">
+                                                                <caption class="visually-hidden">Döneme göre trafik kaynakları</caption>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Dönem</th>
+                                                                        <th scope="col">Bulbulustur</th>
+                                                                        <th scope="col">Diğer</th>
+                                                                        <th scope="col">Toplam</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody data-bb-draugr-traffic-rows></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </details>
                                                 </div>
                                             </section>
-                                            <div class="bb-draugr-kpis">
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">public</span>
-                                                        </span>
-                                                        <strong>Yayında</strong><small>Site durumu</small>
-                                                        <span class="bb-badge bb-badge-success">SSL Aktif</span>
+
+                                            <section class="bb-card" aria-labelledby="dr-actions-title">
+                                                <div class="bb-card-header bb-draugr-dashboard-header">
+                                                    <div class="bb-draugr-card-heading">
+                                                        <h2 id="dr-actions-title">Öncelikli işler</h2>
+                                                        <p>Siteyi iyileştirmek için 3 takip başlığı</p>
                                                     </div>
-                                                </article>
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">category</span>
-                                                        </span>
-                                                        <strong>124</strong><small>Miras kategori</small>
-                                                        <span class="bb-badge bb-badge-info">Router bağlı</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">article</span>
-                                                        </span>
-                                                        <strong>18</strong><small>Yayındaki içerik</small>
-                                                        <span class="bb-badge bb-badge-light">2 taslak</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">translate</span>
-                                                        </span>
-                                                        <strong>2 / 41</strong><small>Aktif dil</small>
-                                                        <span class="bb-badge bb-badge-light">TR · EN</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">monitoring</span>
-                                                        </span>
-                                                        <strong>8.4K</strong><small>30 günlük ziyaret</small>
-                                                        <span class="bb-badge bb-badge-success">+12.4%</span>
-                                                    </div>
-                                                </article>
-                                                <article class="bb-card bb-draugr-kpi">
-                                                    <div class="bb-card-body">
-                                                        <span class="bb-draugr-kpi-icon">
-                                                            <span class="material-symbols-outlined">speed</span>
-                                                        </span>
-                                                        <strong>86%</strong><small>Site hazırlık skoru</small>
-                                                        <span class="bb-badge bb-badge-warning">3 aksiyon</span>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <div class="bb-draugr-main-grid">
-                                                <div class="bb-draugr-side-stack">
-                                                    <section class="card bb-card">
-                                                        <div class="bb-card-header">
-                                                            <div class="bb-draugr-card-heading"><h2>Site Sağlığı</h2><p>Domain, kategori ve içerik hazırlığı</p></div>
-                                                        </div>
-                                                        <div class="bb-card-body">
-                                                            <div class="bb-draugr-health-list">
-                                                                <div class="bb-draugr-health-row">
-                                                                    <div class="bb-draugr-health-copy">
-                                                                        <span>Domain & SSL</span>
-                                                                        <strong>100%</strong>
-                                                                    </div>
-                                                                    <div class="bb-draugr-progress"><span data-level="100"></span></div>
-                                                                </div>
-                                                                <div class="bb-draugr-health-row">
-                                                                    <div class="bb-draugr-health-copy">
-                                                                        <span>Category eşleme</span>
-                                                                        <strong>88%</strong>
-                                                                    </div>
-                                                                    <div class="bb-draugr-progress"><span data-level="88"></span></div>
-                                                                </div>
-                                                                <div class="bb-draugr-health-row">
-                                                                    <div class="bb-draugr-health-copy">
-                                                                        <span>İçerik hazırlığı</span>
-                                                                        <strong>86%</strong>
-                                                                    </div>
-                                                                    <div class="bb-draugr-progress"><span data-level="86"></span></div>
-                                                                </div>
-                                                                <div class="bb-draugr-health-row">
-                                                                    <div class="bb-draugr-health-copy">
-                                                                        <span>SEO hazırlığı</span>
-                                                                        <strong>76%</strong>
-                                                                    </div>
-                                                                    <div class="bb-draugr-progress"><span data-level="76"></span></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                    <section class="card bb-card">
-                                                        <div class="bb-card-header">
-                                                            <div class="bb-draugr-card-heading"><h2>Site Kimliği</h2><p>Draugr kanal özeti</p></div>
-                                                        </div>
-                                                        <div class="bb-card-body">
-                                                            <div class="bb-draugr-setting-list">
-                                                                <div class="bb-draugr-setting-copy">
-                                                                    <span>Domain</span>
-                                                                    <strong>demo-magaza.com</strong>
-                                                                </div>
-                                                                <div class="bb-draugr-setting-copy">
-                                                                    <span>Tema</span>
-                                                                    <strong>Editorial</strong>
-                                                                </div>
-                                                                <div class="bb-draugr-setting-copy">
-                                                                    <span>Varsayılan dil</span>
-                                                                    <strong>Türkçe</strong>
-                                                                </div>
-                                                                <div class="bb-draugr-setting-copy">
-                                                                    <span>Category kaynağı</span>
-                                                                    <strong>Bulbulustur Router</strong>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
                                                 </div>
-                                                <section class="card bb-card">
-                                                    <div class="bb-card-header">
-                                                        <div class="bb-draugr-card-heading"><h2>Site Trafiği</h2><p>Last 7 gün · Demo ziyaret hacmi</p></div>
-                                                        <span class="bb-badge bb-badge-light">8.4K ziyaret</span>
-                                                    </div>
-                                                    <div class="bb-card-body">
-                                                        <div class="bb-draugr-bars">
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="41"></span><small>Pzt</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="54"></span><small>Sal</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="72"></span><small>Çar</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="63"></span><small>Per</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="76"></span><small>Cum</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="88"></span><small>Cmt</small>
-                                                            </div>
-                                                            <div class="bb-draugr-bar">
-                                                                <span data-level="86"></span><small>Paz</small>
-                                                            </div>
+                                                <ul class="bb-draugr-action-list list-unstyled mb-0">
+                                                    <li>
+                                                        <span class="bb-symbol size-35 bb-draugr-action-icon is-warning" aria-hidden="true">
+                                                            <span class="bb-symbol-label"><span class="material-symbols-outlined">search</span></span>
+                                                        </span>
+                                                        <div>
+                                                            <h3>Site başlığı ve açıklaması</h3>
+                                                            <p>Arama sonuçlarındaki mağaza bilgilerini düzenleyin.</p>
+                                                            <span class="badge bb-badge bb-badge-light-warning" data-bb-draugr-seo-badge>İncelenmeli</span>
                                                         </div>
-                                                        <div class="bb-alert bb-alert-info mt-4">
-                                                            <div class="bb-alert-icon">
-                                                                <span class="material-symbols-outlined">info</span>
-                                                            </div>
-                                                            <div class="bb-alert-body">
-                                                                <h3 class="bb-alert-title">Channel verisi ayrı, master veri ortak</h3>
-                                                                <div class="bb-alert-text">Draugr vitrini ve site içeriği burada; ürün, stok, fiyat, sipariş ve müşteri merkezi Bulbulustur ekranlarında yönetilir.</div>
-                                                            </div>
+                                                        <button class="btn bb-btn-secondary btn-sm" type="button" data-bb-drawer-toggle="#dr-seo-drawer" aria-controls="dr-seo-drawer" aria-expanded="false">Düzenle</button>
+                                                    </li>
+                                                    <li>
+                                                        <span class="bb-symbol size-35 bb-draugr-action-icon is-info" aria-hidden="true">
+                                                            <span class="bb-symbol-label"><span class="material-symbols-outlined">account_tree</span></span>
+                                                        </span>
+                                                        <div>
+                                                            <h3>Kategori eşleştirmesi</h3>
+                                                            <p>Bulbulustur Router eşleme kapsamını kontrol edin.</p>
+                                                            <span class="badge bb-badge bb-badge-light-info">%88 eşleşti</span>
                                                         </div>
-                                                    </div>
-                                                </section>
-                                            </div>
-                                            <section class="card bb-card">
-                                                <div class="bb-card-header">
-                                                    <div class="bb-draugr-card-heading"><h2>Ortak Yönetim</h2><p>Draugr altında tekrar üretmediğimiz merkezi ekranlara geçiş</p></div>
+                                                        <a class="btn bb-btn-secondary btn-sm" href="draugr.html?view=navigation">İncele</a>
+                                                    </li>
+                                                    <li>
+                                                        <span class="bb-symbol size-35 bb-draugr-action-icon is-primary" aria-hidden="true">
+                                                            <span class="bb-symbol-label"><span class="material-symbols-outlined">edit_document</span></span>
+                                                        </span>
+                                                        <div>
+                                                            <h3>Yayın bekleyen sayfalar</h3>
+                                                            <p>Vitrine çıkmadan önce taslakları gözden geçirin.</p>
+                                                            <span class="badge bb-badge bb-badge-light-primary">2 taslak</span>
+                                                        </div>
+                                                        <a class="btn bb-btn-secondary btn-sm" href="draugr.html?view=content">Sayfalar</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="bb-card-footer">
+                                                    <p class="bb-draugr-feedback" data-bb-draugr-dashboard-status role="status"></p>
+                                                    <a class="bb-draugr-card-link" href="draugr.html?view=storefront">
+                                                        Vitrini düzenle <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                                    </a>
                                                 </div>
-                                                <div class="bb-card-body">
-                                                    <div class="bb-draugr-quick-grid">
-                                                        <a class="bb-card bb-draugr-quick-link" href="pages.html?page=ecommerce-products">
-                                                            <span class="material-symbols-outlined">inventory_2</span>
-                                                            <strong>Products</strong>
+                                            </section>
+
+                                            <section class="bb-card" id="dr-site-health" aria-labelledby="dr-health-title">
+                                                <div class="bb-card-header bb-draugr-dashboard-header">
+                                                    <div class="bb-draugr-card-heading">
+                                                        <h2 id="dr-health-title">Site sağlığı</h2>
+                                                        <p>Alan adı, katalog, içerik ve arama görünürlüğü</p>
+                                                    </div>
+                                                    <span class="badge bb-badge bb-badge-light-success">%86 hazır</span>
+                                                </div>
+                                                <div class="bb-card-body bb-draugr-health-grid">
+                                                    <div class="bb-progress bb-progress--sm bb-progress--success">
+                                                        <div class="bb-progress__meta">
+                                                            <span class="bb-progress__label">Alan adı ve SSL</span>
+                                                            <strong class="bb-progress__value">%100</strong>
+                                                        </div>
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="Alan adı ve SSL" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 100%"></div>
+                                                        </div>
+                                                        <a href="draugr.html?view=domain">Alan adını yönet</a>
+                                                    </div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--info">
+                                                        <div class="bb-progress__meta">
+                                                            <span class="bb-progress__label">Kategori eşleştirme</span>
+                                                            <strong class="bb-progress__value">%88</strong>
+                                                        </div>
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="Kategori eşleştirme" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 88%"></div>
+                                                        </div>
+                                                        <a href="draugr.html?view=navigation">Eşleştirmeleri incele</a>
+                                                    </div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--success">
+                                                        <div class="bb-progress__meta">
+                                                            <span class="bb-progress__label">İçerik hazırlığı</span>
+                                                            <strong class="bb-progress__value">%86</strong>
+                                                        </div>
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="İçerik hazırlığı" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 86%"></div>
+                                                        </div>
+                                                        <a href="draugr.html?view=content">İçerikleri yönet</a>
+                                                    </div>
+                                                    <div class="bb-progress bb-progress--sm bb-progress--warning">
+                                                        <div class="bb-progress__meta">
+                                                            <span class="bb-progress__label">SEO hazırlığı</span>
+                                                            <strong class="bb-progress__value">%76</strong>
+                                                        </div>
+                                                        <div class="bb-progress__track" role="progressbar" aria-label="SEO hazırlığı" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="bb-progress__bar" style="width: 76%"></div>
+                                                        </div>
+                                                        <a href="draugr.html?view=domain">SEO ayarlarını aç</a>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                            <section class="bb-card" aria-labelledby="dr-management-title">
+                                                <div class="bb-card-header bb-draugr-dashboard-header">
+                                                    <div class="bb-draugr-card-heading">
+                                                        <h2 id="dr-management-title">Ortak ticaret yönetimi</h2>
+                                                        <p>Bulbulustur ve Draugr aynı Merchant panelinde.</p>
+                                                    </div>
+                                                </div>
+                                                <ul class="bb-draugr-management list-unstyled mb-0">
+                                                    <li>
+                                                        <a class="bb-draugr-card-link" href="pages.html?page=ecommerce-products">
+                                                            <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
+                                                            <strong>Ürün, stok ve fiyat</strong>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                                                         </a>
-                                                        <a class="bb-card bb-draugr-quick-link" href="orders.html">
-                                                            <span class="material-symbols-outlined">shopping_bag</span>
-                                                            <strong>Orders</strong>
+                                                    </li>
+                                                    <li>
+                                                        <a class="bb-draugr-card-link" href="orders.html">
+                                                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+                                                            <strong>Siparişler</strong>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                                                         </a>
-                                                        <a class="bb-card bb-draugr-quick-link" href="contacts.html">
-                                                            <span class="material-symbols-outlined">groups</span>
-                                                            <strong>Customers</strong>
+                                                    </li>
+                                                    <li>
+                                                        <a class="bb-draugr-card-link" href="contacts.html">
+                                                            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+                                                            <strong>Müşteriler</strong>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                                                         </a>
-                                                        <a class="bb-card bb-draugr-quick-link" href="integrations.html">
-                                                            <span class="material-symbols-outlined">hub</span>
-                                                            <strong>Integrationlar</strong>
+                                                    </li>
+                                                    <li>
+                                                        <a class="bb-draugr-card-link" href="integrations.html">
+                                                            <span class="material-symbols-outlined" aria-hidden="true">hub</span>
+                                                            <strong>Entegrasyonlar</strong>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                                                         </a>
-                                                        <a class="bb-card bb-draugr-quick-link" href="pos-system.html">
-                                                            <span class="material-symbols-outlined">point_of_sale</span>
+                                                    </li>
+                                                    <li>
+                                                        <a class="bb-draugr-card-link" href="pos-system.html">
+                                                            <span class="material-symbols-outlined" aria-hidden="true">point_of_sale</span>
                                                             <strong>PosB / POS</strong>
+                                                            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                                                         </a>
-                                                    </div>
-                                                </div>
+                                                    </li>
+                                                </ul>
                                             </section>
                                         </div>
+
+                                        <aside id="dr-seo-drawer" class="bb-drawer bb-drawer-end bb-draugr-seo-drawer" data-bb-drawer role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="dr-seo-drawer-title" tabindex="-1">
+                                            <div class="bb-drawer-header">
+                                                <h2 class="bb-drawer-title" id="dr-seo-drawer-title">Arama görünürlüğü</h2>
+                                                <button class="bb-drawer-close" type="button" data-bb-drawer-close aria-label="Kapat">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                                                </button>
+                                            </div>
+                                            <div class="bb-drawer-body">
+                                                <form class="bb-draugr-stack" id="dr-seo-quick-form" data-bb-draugr-seo>
+                                                    <div>
+                                                        <label class="form-label" for="dr-quick-title">Site başlığı</label>
+                                                        <input class="form-control form-control-solid" id="dr-quick-title" name="title" value="Demo Mağaza | Online Alışveriş" maxlength="60" required>
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-label" for="dr-quick-description">Site açıklaması</label>
+                                                        <textarea class="form-control form-control-solid" id="dr-quick-description" name="description" rows="4" maxlength="160" required>Demo mağazamızın seçili ürünlerini keşfedin.</textarea>
+                                                    </div>
+                                                    <div class="bb-card bb-card-body bb-draugr-search-preview">
+                                                        <h3>Arama sonucu önizlemesi</h3>
+                                                        <strong data-bb-draugr-preview-title>Demo Mağaza | Online Alışveriş</strong>
+                                                        <small>demo-magaza.com</small>
+                                                        <p data-bb-draugr-preview-description>Demo mağazamızın seçili ürünlerini keşfedin.</p>
+                                                    </div>
+                                                    <p class="bb-draugr-muted mb-0">Demo taslağı bu tarayıcıda saklanır.</p>
+                                                    <p class="bb-draugr-feedback" data-bb-draugr-seo-status role="status"></p>
+                                                </form>
+                                            </div>
+                                            <div class="bb-draugr-drawer-footer">
+                                                <a href="draugr.html?view=domain" class="btn bb-btn-secondary btn-sm">Tüm ayarlar</a>
+                                                <button type="submit" form="dr-seo-quick-form" class="btn btn-primary btn-sm">Taslağı kaydet</button>
+                                            </div>
+                                        </aside>
                                     </div>
 
                                     <div data-bb-draugr-view="storefront" hidden>
@@ -1426,16 +1545,19 @@
                                                     <div class="bb-draugr-card-heading"><h2>SEO Temelleri</h2><p>Site geneli metadata</p></div>
                                                 </div>
                                                 <div class="bb-card-body">
-                                                    <form data-bb-draugr-form>
+                                                    <form data-bb-draugr-seo>
                                                         <div class="mb-3">
                                                             <label class="form-label" for="dr_seo_title">Site Başlığı</label>
-                                                            <input class="form-control form-control-solid" id="dr_seo_title" value="Demo Mağaza | Online Alışveriş">
+                                                            <input class="form-control form-control-solid" id="dr_seo_title" name="title" maxlength="60" required value="Demo Mağaza | Online Alışveriş">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" for="dr_seo_desc">Meta Description</label><textarea class="form-control form-control-solid" id="dr_seo_desc" rows="3">Demo mağazamızın seçili ürünlerini keşfedin.</textarea>
+                                                            <label class="form-label" for="dr_seo_desc">Site açıklaması</label>
+                                                            <textarea class="form-control form-control-solid" id="dr_seo_desc" name="description" rows="3" maxlength="160" required>Demo mağazamızın seçili ürünlerini keşfedin.</textarea>
                                                         </div>
-                                                        <div class="bb-draugr-form-actions"><p class="bb-draugr-save-status me-auto" data-bb-draugr-status></p><button class="btn btn-primary" type="submit">Save</button>
-</div>
+                                                        <div class="bb-draugr-form-actions">
+                                                            <p class="bb-draugr-feedback me-auto" data-bb-draugr-seo-status role="status"></p>
+                                                            <button class="btn btn-primary" type="submit">Taslağı kaydet</button>
+                                                        </div>
                                                     </form>
                                                 </div>
                                             </section>
@@ -1622,6 +1744,7 @@
     <script src="../../assets/js/panel/bb-panel-header.js"></script>
     <script src="../../assets/js/panel/bb-panel-user.js"></script>
     <script src="../../assets/js/panel/bb-panel-pages.js"></script>
+    <script src="../../assets/js/core/bb-drawer.js"></script>
     <script src="../../assets/js/panel/bb-panel-draugr.js"></script>
     <!--/::Scripts-->
 </body>
