@@ -30,6 +30,7 @@
 @use "../layout/panel/service-product";   // Legacy service landing styles
 @use "../layout/panel/public-pages";      // Public-facing editorial pages
 @use "../layout/panel/draugr";            // Draugr SaaS channel management
+@use "../layout/panel/drauger-monitor";   // Drauger node and integration monitor
 @use "../layout/panel/list";           // Faz 9 tablo/listeler
 @use "../layout/panel/form";           // Faz 10 stepper, dosya alanı
 @use "../layout/panel/auth";           // Faz 11 auth ve hata sayfaları
