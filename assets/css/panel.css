@@ -27512,6 +27512,109 @@ button.badge.bb-badge:disabled {
     will-change: auto;
   }
 }
+/* CORE UI — Globe Lines: rotating globe with sparse and dense latitude/longitude traces.
+   Canvas rendering lives in assets/js/core/bb-globe-lines.js.
+   This is a reusable effect, not a panel page composition. */
+.bb-globe-lines {
+  --bb-globe-ink: var(--bb-coal-600);
+  --bb-globe-accent: var(--bb-brand-yellow);
+  --bb-globe-accent-soft: var(--bb-yellow-300);
+  --bb-globe-accent-deep: var(--bb-yellow-700);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--bb-space-4) * 28);
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--bb-radius-lg);
+  background: radial-gradient(ellipse at 50% 53%, color-mix(in srgb, var(--bb-globe-accent) 8%, transparent), transparent 39%), radial-gradient(ellipse at 58% 66%, color-mix(in srgb, var(--bb-globe-accent-deep) 16%, transparent), transparent 65%), var(--bb-globe-ink);
+  color: var(--bb-white);
+}
+
+.bb-globe-lines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 50%, transparent 24%, color-mix(in srgb, var(--bb-globe-ink) 50%, transparent) 80%), linear-gradient(to bottom, color-mix(in srgb, var(--bb-black) 30%, transparent), transparent 30%, color-mix(in srgb, var(--bb-black) 32%, transparent));
+}
+
+.bb-globe-lines__canvas {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bb-globe-lines__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: var(--bb-space-4);
+  pointer-events: none;
+}
+
+.bb-globe-lines__content a,
+.bb-globe-lines__content button {
+  pointer-events: auto;
+}
+
+.bb-globe-lines__credit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  color: var(--bb-globe-accent-soft);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-medium);
+}
+
+.bb-globe-lines__status {
+  position: absolute;
+  z-index: 2;
+  inset-inline-end: var(--bb-space-4);
+  inset-block-end: var(--bb-space-4);
+}
+
+.bb-globe-lines__status .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  border: var(--bb-border-width) solid color-mix(in srgb, var(--bb-globe-accent) 28%, transparent);
+  color: var(--bb-globe-accent-soft);
+  background: color-mix(in srgb, var(--bb-globe-ink) 80%, transparent);
+}
+
+.bb-globe-lines__status .btn:hover {
+  border-color: var(--bb-globe-accent-soft);
+  color: var(--bb-white);
+}
+
+.bb-globe-lines__status .material-symbols-outlined {
+  font-size: var(--bb-fs-base);
+}
+
+.bb-globe-lines [hidden] {
+  display: none;
+}
+
+@media (max-width: 42rem) {
+  .bb-globe-lines {
+    min-height: calc(var(--bb-space-4) * 22);
+  }
+  .bb-globe-lines__status {
+    inset-inline-end: var(--bb-space-3);
+    inset-block-end: var(--bb-space-3);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bb-globe-lines {
+    scroll-behavior: auto;
+  }
+}
 /* =====================================
    Bulbulustur Theme — Separator (PURE)
    Token-first | Dark/Light safe
