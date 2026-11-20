@@ -1,0 +1,240 @@
+/* =====================================
+   Bulbulustur Theme — Drauger Node & Telemetry Monitor
+   File: assets/scss/panel/_drauger-monitor.scss
+===================================== */
+
+.bb-tenant-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-1) var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-surface-soft);
+  transition: var(--bb-transition-colors);
+
+  &:focus-within {
+    border-color: var(--bb-border-color-strong);
+    @include bb-focus-ring();
+  }
+
+  .bb-select-sm {
+    border: 0;
+    background: transparent;
+    color: var(--bb-emphasis-color);
+    font-size: var(--bb-fs-sm);
+    font-weight: var(--bb-fw-ui);
+    line-height: var(--bb-ui-line-height);
+    outline: 0;
+    cursor: pointer;
+
+    option {
+      color: var(--bb-body-color);
+      background-color: var(--bb-surface-bg);
+    }
+  }
+}
+
+.bb-live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  padding: var(--bb-space-1) var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-pill);
+  background-color: var(--bb-surface-soft);
+  color: var(--bb-secondary-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-ui);
+}
+
+.bb-status-dot {
+  width: var(--bb-space-2);
+  height: var(--bb-space-2);
+  flex-shrink: 0;
+  border-radius: var(--bb-radius-pill);
+  background-color: var(--bb-tertiary-color);
+
+  &.is-online {
+    background-color: var(--bb-success);
+    box-shadow: 0 0 0 var(--bb-space-1) color-mix(in srgb, var(--bb-success) 22%, transparent);
+  }
+}
+
+.bb-segmented-control {
+  display: inline-flex;
+  padding: var(--bb-space-1);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-tertiary-bg);
+
+  .bb-seg-btn {
+    border: 0;
+    background: transparent;
+    padding: var(--bb-space-1) var(--bb-space-3);
+    border-radius: var(--bb-radius-sm);
+    color: var(--bb-secondary-color);
+    font-size: var(--bb-fs-xs);
+    font-weight: var(--bb-fw-ui);
+    line-height: var(--bb-ui-line-height);
+    transition: var(--bb-transition-colors);
+
+    &:hover {
+      color: var(--bb-emphasis-color);
+    }
+
+    &:focus-visible {
+      @include bb-focus-ring();
+    }
+
+    &.is-active {
+      background-color: var(--bb-surface-bg);
+      color: var(--bb-emphasis-color);
+      font-weight: var(--bb-fw-action);
+      box-shadow: var(--bb-shadow-xs);
+    }
+  }
+}
+
+.bb-grid-2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--bb-space-5);
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bb-mono,
+.bb-mono-tag {
+  font-family: var(--bb-font-mono);
+  font-size: var(--bb-fs-xs);
+}
+
+.bb-mono-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--bb-space-1) var(--bb-space-2);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-sm);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-secondary-color);
+}
+
+/* -------------------------------------
+   Node & Container Telemetry Chart
+------------------------------------- */
+
+.bb-telemetry-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--bb-space-2);
+  height: 11rem;
+  padding: var(--bb-space-4) var(--bb-space-3) var(--bb-space-2);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background-color: var(--bb-surface-soft);
+
+  .bb-telemetry-bar {
+    flex: 1 1 0;
+    min-height: 12%;
+    border-radius: var(--bb-radius-xs) var(--bb-radius-xs) var(--bb-radius-none) var(--bb-radius-none);
+    background-color: var(--bb-page-accent);
+    opacity: 0.85;
+    transition:
+      height var(--bb-transition-normal),
+      opacity var(--bb-transition-fast),
+      background-color var(--bb-transition-fast);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.is-warning {
+      background-color: var(--bb-warning);
+    }
+  }
+}
+
+.bb-metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--bb-space-3);
+  margin-top: var(--bb-space-4);
+  padding-top: var(--bb-space-4);
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bb-metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bb-space-1);
+
+    .bb-metric-label {
+      color: var(--bb-secondary-color);
+      font-size: var(--bb-fs-xs);
+    }
+
+    .bb-metric-val {
+      color: var(--bb-emphasis-color);
+      font-size: var(--bb-fs-base);
+      font-weight: var(--bb-fw-title);
+      line-height: var(--bb-line-height-heading);
+
+      &.is-success {
+        color: var(--bb-success);
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+   Shared Bulbulustur Services List
+------------------------------------- */
+
+.bb-service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-3);
+
+  .bb-service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--bb-space-3);
+    margin-bottom: 0;
+    padding: var(--bb-space-3);
+    border: var(--bb-border-width) solid var(--bb-border-color);
+    border-radius: var(--bb-radius);
+    background-color: var(--bb-surface-soft);
+  }
+
+  .bb-service-info {
+    display: flex;
+    align-items: center;
+    gap: var(--bb-space-3);
+    min-width: 0;
+
+    .bb-service-title {
+      display: block;
+      color: var(--bb-emphasis-color);
+      font-size: var(--bb-fs-sm);
+      font-weight: var(--bb-fw-title);
+      line-height: var(--bb-line-height-heading);
+    }
+
+    .bb-service-sub {
+      display: block;
+      color: var(--bb-secondary-color);
+      font-size: var(--bb-fs-xs);
+      line-height: var(--bb-line-height-base);
+    }
+  }
+}
