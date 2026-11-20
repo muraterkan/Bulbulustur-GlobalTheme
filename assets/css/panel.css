@@ -12557,9 +12557,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   gap: var(--bb-space-2);
   min-height: 6rem;
   padding: var(--bb-space-3);
-  border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);
-  background: var(--bb-surface-soft);
   color: var(--bb-secondary-color);
   text-decoration: none;
   text-align: center;
@@ -12617,7 +12615,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   gap: var(--bb-space-3);
   align-items: center;
   padding: var(--bb-space-3);
-  border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);
   background: var(--bb-surface-soft);
 }
@@ -12719,9 +12716,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   display: grid;
   gap: var(--bb-space-1);
   padding: var(--bb-space-3);
-  border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);
-  background: var(--bb-surface-soft);
 }
 
 .bb-panel .bb-integrations-meta-card strong {
@@ -12837,8 +12832,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
 .bb-panel .bb-integration-card {
   min-width: 0;
   overflow: hidden;
-  border-color: var(--bb-border-color);
-  background: var(--bb-surface-elevated);
   box-shadow: var(--bb-shadow-xs);
   transition: transform var(--bb-transition-fast), border-color var(--bb-transition-fast), background-color var(--bb-transition-fast), box-shadow var(--bb-transition-fast);
 }
@@ -15626,9 +15619,7 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   gap: var(--bb-space-2);
   min-height: 6rem;
   padding: var(--bb-space-3);
-  border: var(--bb-border-width) solid var(--bb-border-color);
   border-radius: var(--bb-radius);
-  background: var(--bb-surface-soft);
   color: var(--bb-secondary-color);
   text-decoration: none;
   text-align: center;
@@ -21320,9 +21311,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  border: var(--bb-border-width, 1px) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-lg);
-  background: var(--bb-tertiary-bg);
   padding: calc(var(--bb-space-4) * 2) var(--bb-space-4);
   text-align: center;
 }
@@ -26222,9 +26210,6 @@ html[data-bb-ui-profile=neutral][data-bs-theme=dark] .bb-panel > .bb-sidebar {
   display: grid;
   gap: calc(var(--bb-space-4) * 2);
   padding: calc(var(--bb-space-4) * 2);
-  border: var(--bb-border-width) solid var(--bb-border-color);
-  border-radius: var(--bb-radius-lg);
-  background: var(--bb-surface-bg);
 }
 
 .bb-panel .bb-team-intro {
