@@ -1,5 +1,17 @@
-(function () {
+(function initPOS() {
   "use strict";
+
+  // A direct POS URL opens the same modal used by the panel links.
+  if (window.parent === window && window.location.origin !== "null" &&
+      typeof HTMLDialogElement.prototype.showModal === "function") {
+    window.location.replace(new URL("draugr.html?view=dashboard&pos=open", window.location.href));
+    return;
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPOS, { once: true });
+    return;
+  }
 
   var root = document.querySelector("[data-bb-pos]");
   if (!root) return;
