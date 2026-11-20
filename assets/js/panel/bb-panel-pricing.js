@@ -73,7 +73,7 @@ root.querySelectorAll("[data-bb-pricing-select]").forEach(function(button){
    var index=Array.from(root.querySelectorAll(".bb-pricing-plan")).indexOf(button.closest(".bb-pricing-plan"));
    var keys=product==="draugr"?["basic","pro","custom"]:["basic","pro","enterprise"];
    if(index>=0 && keys[index]){
-    window.location.assign("checkout.html?product="+encodeURIComponent(product)+"&plan="+encodeURIComponent(keys[index]));
+    window.location.assign("cart.html?product="+encodeURIComponent(product)+"&plan="+encodeURIComponent(keys[index]));
     return;
    }
   }
