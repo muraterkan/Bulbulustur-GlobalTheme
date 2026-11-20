@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bulbulustur Theme — Flow</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 (main.css zaten bootstrap içeriyorsa bunu kaldırabilirsin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body" id="bb-body-id">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <section class="bb-section">
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header"><div class="bb-card-title">Default</div></div>
+                                <div class="bb-card-body">
+                                    <div class="bb-flow">
+                                        <div class="bb-flow-node bb-flow-node-completed">
+                                            <div class="bb-flow-card">
+                                                <div class="bb-flow-head"><span class="bb-flow-icon"><span class="material-symbols-outlined">assignment_turned_in</span></span><div class="bb-flow-titles"><div class="bb-flow-title">Master</div><div class="bb-flow-sub">Request accepted</div></div></div>
+                                                <div class="bb-flow-status"><span class="material-symbols-outlined">check_circle</span> Completed<span class="bb-flow-status-meta">12s</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="bb-flow-link bb-flow-link-done"></div>
+                                        <div class="bb-flow-node bb-flow-node-running">
+                                            <div class="bb-flow-card">
+                                                <div class="bb-flow-head"><span class="bb-flow-icon"><span class="material-symbols-outlined">palette</span></span><div class="bb-flow-titles"><div class="bb-flow-title">Designer</div><div class="bb-flow-sub">Home page design</div></div></div>
+                                                <div class="bb-flow-status"><span class="material-symbols-outlined">progress_activity</span> Running</div>
+                                            </div>
+                                        </div>
+                                        <div class="bb-flow-link"></div>
+                                        <div class="bb-flow-node bb-flow-node-pending">
+                                            <div class="bb-flow-card">
+                                                <div class="bb-flow-head"><span class="bb-flow-icon"><span class="material-symbols-outlined">code</span></span><div class="bb-flow-titles"><div class="bb-flow-title">Frontend</div><div class="bb-flow-sub">Waiting</div></div></div>
+                                                <div class="bb-flow-status"><span class="material-symbols-outlined">schedule</span> Pending</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bb-usage-copy">Copy</button>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-flow&quot;&gt;
+    &lt;div class=&quot;bb-flow-node bb-flow-node-completed&quot;&gt;
+        &lt;div class=&quot;bb-flow-card&quot;&gt;
+            &lt;div class=&quot;bb-flow-head&quot;&gt;
+                &lt;span class=&quot;bb-flow-icon&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;assignment_turned_in&lt;/span&gt;&lt;/span&gt;
+                &lt;div class=&quot;bb-flow-titles&quot;&gt;
+                    &lt;div class=&quot;bb-flow-title&quot;&gt;Master&lt;/div&gt;
+                    &lt;div class=&quot;bb-flow-sub&quot;&gt;Request accepted&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bb-flow-status&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;check_circle&lt;/span&gt; Completed&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bb-flow-link bb-flow-link-done&quot;&gt;&lt;/div&gt;
+    &lt;!-- states: bb-flow-node-completed | running | failed | pending | skipped --&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header"><div class="bb-card-title">Branches</div></div>
+                                <div class="bb-card-body">
+                                    <div class="bb-flow">
+                                        <div class="bb-flow-node bb-flow-node-completed"><div class="bb-flow-card"><div class="bb-flow-head"><span class="bb-flow-icon"><span class="material-symbols-outlined">smart_toy</span></span><div class="bb-flow-titles"><div class="bb-flow-title">Master review</div><div class="bb-flow-sub">Final check</div></div></div><div class="bb-flow-status"><span class="material-symbols-outlined">check_circle</span> Completed</div></div></div>
+                                        <div class="bb-flow-branches" style="--bb-flow-width:180px">
+                                            <div class="bb-flow-branch"><span class="bb-flow-label">Approved</span><div class="bb-flow-node bb-flow-node-completed"><div class="bb-flow-card"><div class="bb-flow-head"><div class="bb-flow-titles"><div class="bb-flow-title">Merge</div></div></div><div class="bb-flow-status"><span class="material-symbols-outlined">check_circle</span> Done</div></div></div></div>
+                                            <div class="bb-flow-branch"><span class="bb-flow-label">Rejected</span><div class="bb-flow-node bb-flow-node-skipped"><div class="bb-flow-card"><div class="bb-flow-head"><div class="bb-flow-titles"><div class="bb-flow-title">Rework</div></div></div><div class="bb-flow-status"><span class="material-symbols-outlined">remove</span> Branch not taken</div></div></div></div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bb-usage-copy">Copy</button>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-flow-branches&quot;&gt;
+    &lt;div class=&quot;bb-flow-branch&quot;&gt;
+        &lt;span class=&quot;bb-flow-label&quot;&gt;Approved&lt;/span&gt;
+        &lt;div class=&quot;bb-flow-node bb-flow-node-completed&quot;&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header">
+                                    <div class="bb-card-title">With Actions</div>
+                                </div>
+                                <div class="bb-card-body">
+                                    <div class="bb-empty-state bb-empty-state-primary">
+                                        <div class="bb-empty-icon">
+                                            <span class="material-symbols-outlined">add_circle</span>
+                                        </div>
+                                        <h2 class="bb-empty-title">No content has been added yet</h2>
+
+                                        <p class="bb-empty-text">
+                                            Create your first record to start using this area.
+                                        </p>
+
+                                        <div class="bb-empty-actions">
+                                            <button type="button" class="btn btn-primary">
+                                                Add First Record
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                Later
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header">
+                                    <div class="bb-card-title">Warning</div>
+                                </div>
+
+                                <div class="bb-card-body">
+                                    <div class="bb-empty-state bb-empty-state-warning">
+                                        <div class="bb-empty-icon">
+                                            <span class="material-symbols-outlined">notifications</span>
+                                        </div>
+
+                                        <h2 class="bb-empty-title">No notification channel selected!</h2>
+
+                                        <p class="bb-empty-text">
+                                            Güncellemeleri almak için en az bir bildirim kanalı seçmelisiniz.
+                                        </p>
+
+                                        <div class="bb-empty-actions">
+                                            <button type="button" class="btn btn-warning">
+                                                Channel Select
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bb-section">
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header">
+                                    <div class="bb-card-title">Panel Variant</div>
+                                </div>
+
+                                <div class="bb-card-body">
+                                    <div class="bb-empty-state bb-empty-state-panel bb-empty-state-info">
+                                        <div class="bb-empty-icon">
+                                            <span class="material-symbols-outlined">search_off</span>
+                                        </div>
+
+                                        <h2 class="bb-empty-title">No Results Found!</h2>
+
+                                        <p class="bb-empty-text">
+                                            Filtersinizi değiştirerek tekrar arama yapabilirsiniz.
+                                        </p>
+
+                                        <div class="bb-empty-actions">
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                Clear Filters
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <div class="card bb-card">
+                                <div class="bb-card-header">
+                                    <div class="bb-card-title">Horizontal</div>
+                                </div>
+
+                                <div class="bb-card-body">
+                                    <div class="bb-empty-state bb-empty-state-horizontal bb-empty-state-sm bb-empty-state-danger">
+                                        <div class="bb-empty-icon">
+                                            <span class="material-symbols-outlined">error</span>
+                                        </div>
+
+                                        <div>
+                                            <h2 class="bb-empty-title">Veri alınamadı</h2>
+
+                                            <p class="bb-empty-text">
+                                                The relevant service did not respond temporarily.
+                                            </p>
+
+                                            <div class="bb-empty-actions">
+                                                <button type="button" class="btn btn-outline-danger btn-sm">
+                                                    Try Again
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-body-secondary small mt-4">
+                        Not: Theme switcher <code>data-bs-theme</code> değerini değiştirir.
+                    </div>
+
+                </section>
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">How do I use it?</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Empty State</h3>
+                                <p class="bb-usage-text">Icons, titles, text, and action buttons are arranged in sequence. For colors, use <code>bb-empty-state-primary|success|warning|danger|info</code>.</p>
+                                <div class="bb-usage-code">
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-empty-state&quot;&gt;
+    &lt;div class=&quot;bb-empty-icon&quot;&gt;
+        &lt;span class=&quot;material-symbols-outlined&quot;&gt;inbox&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;h2 class=&quot;bb-empty-title&quot;&gt;No record found!&lt;/h2&gt;
+
+    &lt;p class=&quot;bb-empty-text&quot;&gt;
+        Şu anda bu alanda gösterilecek herhangi bir kayıt bulunmuyor.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+
+    <script src="../../assets/js/core/bb-usage.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>

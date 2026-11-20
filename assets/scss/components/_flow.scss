@@ -1,0 +1,152 @@
+/* =====================================
+   Flow
+   Core component: vertical node flow (process/stage diagram)
+   Token-first | Dark/Light safe
+   Markup: .bb-flow > .bb-flow-node[.bb-flow-node-{completed|running|failed|pending|skipped}] > .bb-flow-card
+           connectors: .bb-flow-link ; branches: .bb-flow-branches > .bb-flow-branch > .bb-flow-label + .bb-flow-node
+===================================== */
+
+.bb-flow {
+  --bb-flow-width: 280px;
+  --bb-flow-gap: 1.5rem;
+  --bb-flow-line-color: var(--bb-border-color);
+  --bb-flow-line-width: 1px;
+  --bb-flow-card-bg: var(--bb-body-bg);
+  --bb-flow-card-radius: var(--bb-radius-lg, 12px);
+  --bb-flow-state-color: var(--bb-secondary-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bb-flow-node {
+  position: relative;
+  width: min(100%, var(--bb-flow-width));
+}
+
+.bb-flow-card {
+  background-color: var(--bb-flow-card-bg);
+  border: 1px solid var(--bb-border-color);
+  border-radius: var(--bb-flow-card-radius);
+  overflow: hidden;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.bb-flow-node[data-bb-flow-url] .bb-flow-card,
+.bb-flow-node.bb-flow-clickable .bb-flow-card { cursor: pointer; }
+.bb-flow-node.bb-flow-clickable .bb-flow-card:hover { border-color: var(--bb-flow-state-color); }
+
+.bb-flow-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem .85rem;
+}
+
+.bb-flow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--bb-radius-sm);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-emphasis-color);
+  font-size: 20px;
+}
+
+.bb-flow-titles { min-width: 0; flex: 1 1 auto; }
+.bb-flow-title { font-weight: var(--bb-fw-semibold); color: var(--bb-emphasis-color); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bb-flow-sub { font-size: var(--bb-fs-xs); color: var(--bb-secondary-color); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.bb-flow-status {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .85rem;
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-flow-state-color);
+  border-top: 1px solid var(--bb-border-color);
+  background-color: var(--bb-tertiary-bg);
+}
+
+.bb-flow-status .material-symbols-outlined { font-size: 16px; }
+.bb-flow-status-meta { margin-left: auto; color: var(--bb-secondary-color); white-space: nowrap; }
+
+/* states */
+.bb-flow-node-completed { --bb-flow-state-color: var(--bb-success); }
+.bb-flow-node-running { --bb-flow-state-color: var(--bb-primary); }
+.bb-flow-node-failed { --bb-flow-state-color: var(--bb-danger); }
+.bb-flow-node-pending { --bb-flow-state-color: var(--bb-secondary-color); }
+.bb-flow-node-skipped { --bb-flow-state-color: var(--bb-secondary-color); }
+.bb-flow-node-running .bb-flow-card { border-color: var(--bb-primary); box-shadow: 0 0 0 3px var(--bb-primary-light); }
+.bb-flow-node-failed .bb-flow-card { border-color: var(--bb-danger); }
+.bb-flow-node-skipped .bb-flow-card { border-style: dashed; opacity: .7; }
+.bb-flow-node-pending .bb-flow-card { opacity: .85; }
+.bb-flow-node-running .bb-flow-status .material-symbols-outlined { animation: bb-flow-spin 1.4s linear infinite; }
+
+/* connectors */
+.bb-flow-link {
+  position: relative;
+  width: var(--bb-flow-line-width);
+  height: var(--bb-flow-gap);
+  background-color: var(--bb-flow-line-color);
+  flex: 0 0 auto;
+}
+
+.bb-flow-link::after,
+.bb-flow-link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--bb-flow-line-color);
+  transform: translateX(-50%);
+}
+.bb-flow-link::before { top: -3px; }
+.bb-flow-link::after { bottom: -3px; }
+.bb-flow-link-done, .bb-flow-link-done::before, .bb-flow-link-done::after { background-color: var(--bb-success); }
+
+/* branches */
+.bb-flow-branches {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  padding-top: var(--bb-flow-gap);
+}
+
+.bb-flow-branches::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(var(--bb-flow-width) / 2);
+  right: calc(var(--bb-flow-width) / 2);
+  height: var(--bb-flow-line-width);
+  background-color: var(--bb-flow-line-color);
+}
+
+.bb-flow-branch { position: relative; display: flex; flex-direction: column; align-items: center; width: min(100%, var(--bb-flow-width)); }
+.bb-flow-branch::before { content: ""; width: var(--bb-flow-line-width); height: var(--bb-flow-gap); background-color: var(--bb-flow-line-color); margin-top: calc(var(--bb-flow-gap) * -1); }
+
+.bb-flow-label {
+  position: absolute;
+  top: calc(var(--bb-flow-gap) * -1 - .6rem);
+  padding: .1rem .5rem;
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-semibold);
+  color: var(--bb-emphasis-color);
+  background-color: var(--bb-body-bg);
+  border: 1px solid var(--bb-border-color);
+  border-radius: var(--bb-radius-sm);
+}
+
+@keyframes bb-flow-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .bb-flow-node-running .bb-flow-status .material-symbols-outlined { animation: none; } }
