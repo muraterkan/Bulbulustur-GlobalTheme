@@ -1,6 +1,11 @@
+/* Drauger Monitor — core panel page controller. Static snapshots only, NO live API.
+ * The data block is the original visual demonstration dataset, deliberately preserved.
+ * Data is never mutated to imitate a real refresh or successful synchronization.
+ */
 (function () {
   "use strict";
-
+  const root = document.querySelector("[data-bb-drauger-monitor]");
+  if (!root) return;
   const TENANT_TELEMETRY = {
     ortobella: {
       domain: "ortobella.drauger.net",
@@ -76,147 +81,133 @@
     }
   };
 
-  let currentTenantKey = "ortobella";
-  let currentFilter = "all";
 
-  const el = {
-    tenantSelect: document.getElementById("bbTenantSelect"),
-    domainLabel: document.getElementById("bbActiveDomainLabel"),
-    podTag: document.getElementById("bbPodIdTag"),
-    cpuVal: document.getElementById("kpiCpuValue"),
-    cpuBar: document.getElementById("kpiCpuBar"),
-    nodeBadge: document.getElementById("kpiNodeBadge"),
-    uptime: document.getElementById("kpiUptimeText"),
-    ramVal: document.getElementById("kpiRamValue"),
-    ramBar: document.getElementById("kpiRamBar"),
-    ramPct: document.getElementById("kpiRamPct"),
-    dbLatency: document.getElementById("kpiDbLatency"),
-    dbConn: document.getElementById("kpiDbConn"),
-    syncLag: document.getElementById("kpiSyncLag"),
-    syncState: document.getElementById("kpiSyncState"),
-    lastSync: document.getElementById("kpiLastSync"),
-    rpm: document.getElementById("metricRpm"),
-    ssr: document.getElementById("metricSsr"),
-    errRate: document.getElementById("metricErrRate"),
-    disk: document.getElementById("metricDisk"),
-    chart: document.getElementById("bbTelemetryChart"),
-    logsBody: document.getElementById("bbTelemetryLogsBody"),
-    logFilter: document.getElementById("bbLogFilter"),
-    syncBtn: document.getElementById("bbTriggerSyncBtn"),
-    refreshBtn: document.getElementById("bbManualRefresh"),
-    sidebarToggle: document.getElementById("bbSidebarToggle"),
-    sidebar: document.getElementById("bbSidebar")
-  };
+  const $ = selector => root.querySelector(selector);
+  const status = $("[data-bb-monitor-feedback]");
+  const tenantControl = $("[data-bb-monitor-tenant]");
+  const filterControl = $("[data-bb-monitor-log-filter]");
+  const rangeControls = Array.from(root.querySelectorAll("[data-bb-monitor-range]"));
+  const state = { tenant:tenantControl.value, filter:"all", range:"1h" };
 
-  function renderChart(values) {
-    if (!el.chart) return;
-    el.chart.innerHTML = "";
-    values.forEach((val, idx) => {
-      const bar = document.createElement("div");
-      bar.className = "bb-telemetry-bar" + (val > 60 ? " is-warning" : "");
-      bar.style.height = Math.max(12, Math.min(100, val)) + "%";
-      bar.title = `T-${(values.length - 1 - idx) * 5}dk: %${val} CPU`;
-      el.chart.appendChild(bar);
-    });
+  function text(selector,value) {
+    const el=$(selector);
+    if (el) el.textContent = String(value);
+  }
+  function notify(message) {
+    status.textContent = message;
+  }
+  function updateProgress(selector,value) {
+    const el=$(selector);
+    if (el) el.value=Math.max(0,Math.min(100,Number(value)||0));
   }
 
-  function renderLogs(logs) {
-    if (!el.logsBody) return;
-    const filtered = currentFilter === "all"
-      ? logs
-      : logs.filter((item) => item.type === currentFilter);
-
-    el.logsBody.innerHTML = filtered.map((row) => `
-      <tr>
-        <td class="bb-mono">${row.time}</td>
-        <td><strong>${row.source}</strong></td>
-        <td>${row.detail}</td>
-        <td class="bb-mono">${row.duration}</td>
-        <td><span class="bb-badge bb-badge-${row.badge}">${row.status}</span></td>
-      </tr>
-    `).join("");
+  function renderChart(tenant) {
+    const svg=$("[data-bb-monitor-chart]");
+    const empty=$("[data-bb-monitor-chart-empty]");
+    const series=Array.isArray(tenant.series) ? tenant.series : [];
+    const hasSeries=state.range==="1h" && series.length>1;
+    svg.hidden=!hasSeries;
+    empty.hidden=hasSeries;
+    text("[data-bb-monitor-chart-label]",
+      hasSeries ? "1 saat · Örnek seri" : "Aralıkta demo verisi yok");
+    if (!hasSeries) return;
+    const left=36,right=700,top=20,bottom=215;
+    const step=(right-left)/(series.length-1);
+    const points=series.map((raw,i)=>{
+      const value=Math.max(0,Math.min(100,Number(raw)||0));
+      return [left+i*step,bottom-(value/100)*(bottom-top)];
+    });
+    const pointString=points.map(p=>p[0].toFixed(2)+","+p[1].toFixed(2)).join(" ");
+    const line=$("[data-bb-monitor-chart-line]");
+    const area=$("[data-bb-monitor-chart-area]");
+    line.setAttribute("points",pointString);
+    const path="M "+left+" "+bottom+" L "+points.map(p=>p[0].toFixed(2)+" "+p[1].toFixed(2)).join(" L ")+" L "+right+" "+bottom+" Z";
+    area.setAttribute("d",path);
+    const min=Math.min(...series),max=Math.max(...series);
+    svg.setAttribute("aria-label","Örnek CPU kullanımı: en düşük %"+min+", en yüksek %"+max+". Canlı ölçüm değildir.");
   }
 
-  function renderTenant(key) {
-    const data = TENANT_TELEMETRY[key];
-    if (!data) return;
-
-    el.domainLabel.textContent = data.domain;
-    el.podTag.textContent = data.pod;
-    el.cpuVal.textContent = `${data.cpu.toFixed(1)}%`;
-    el.cpuBar.style.width = `${data.cpu}%`;
-    el.cpuBar.className = `bb-progress-bar ${data.cpu > 60 ? "is-warning" : "is-success"}`;
-    el.nodeBadge.textContent = data.nodeSpec;
-    el.uptime.textContent = data.uptime;
-
-    el.ramVal.textContent = data.ramText;
-    el.ramBar.style.width = `${data.ramPct}%`;
-    el.ramPct.textContent = `${data.ramPct}%`;
-
-    el.dbLatency.textContent = data.dbLatency;
-    el.dbConn.textContent = data.dbConn;
-
-    el.syncLag.textContent = data.syncLag;
-    el.syncState.textContent = data.syncState;
-    el.lastSync.textContent = data.lastSync;
-
-    el.rpm.textContent = data.rpm;
-    el.ssr.textContent = data.ssr;
-    el.errRate.textContent = data.errRate;
-    el.disk.textContent = data.disk;
-
-    renderChart(data.series);
-    renderLogs(data.logs);
+  function create(tag,css,textValue) {
+    const el=document.createElement(tag);
+    if (css) el.className=css;
+    if (textValue!==undefined) el.textContent=String(textValue);
+    return el;
+  }
+  const badgeTypes={success:"bb-badge-light-success",warning:"bb-badge-light-warning",neutral:"bb-badge-light-info"};
+  function renderLogs(tenant) {
+    const tbody=$("[data-bb-monitor-log-rows]");
+    const entries=(tenant.logs||[]).filter(row=>state.filter==="all"||row.type===state.filter);
+    const rows=entries.map(row=>{
+      const tr=create("tr");
+      const time=create("td","bb-monitor-mono",row.time);
+      const source=create("td");
+      source.append(create("strong","bb-monitor-log-source",row.source));
+      const detail=create("td","",row.detail);
+      const duration=create("td","bb-monitor-mono",row.duration);
+      const stateCell=create("td");
+      stateCell.append(create("span","bb-badge "+(badgeTypes[row.badge]||badgeTypes.neutral),row.status+" · demo"));
+      tr.append(time,source,detail,duration,stateCell);
+      return tr;
+    });
+    tbody.replaceChildren(...rows);
+    text("[data-bb-monitor-log-count]",rows.length+" kayıt");
+    $("[data-bb-monitor-log-empty]").hidden=rows.length>0;
   }
 
-  function bindEvents() {
-    el.tenantSelect?.addEventListener("change", (e) => {
-      currentTenantKey = e.target.value;
-      renderTenant(currentTenantKey);
-    });
-
-    el.logFilter?.addEventListener("change", (e) => {
-      currentFilter = e.target.value;
-      renderLogs(TENANT_TELEMETRY[currentTenantKey].logs);
-    });
-
-    document.querySelectorAll(".bb-seg-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".bb-seg-btn").forEach((b) => b.classList.remove("is-active"));
-        btn.classList.add("is-active");
-      });
-    });
-
-    el.syncBtn?.addEventListener("click", () => {
-      const data = TENANT_TELEMETRY[currentTenantKey];
-      const now = new Date().toTimeString().slice(0, 8);
-      data.logs.unshift({
-        time: now,
-        source: "ManualSyncTrigger",
-        type: "sync",
-        detail: `${data.domain} için manuel master ürün/kategori doğrulaması başlatıldı.`,
-        duration: "145 ms",
-        status: "Tamamlandı",
-        badge: "success"
-      });
-      data.lastSync = "Son: Az önce";
-      renderTenant(currentTenantKey);
-    });
-
-    el.refreshBtn?.addEventListener("click", () => {
-      const data = TENANT_TELEMETRY[currentTenantKey];
-      const delta = (Math.random() * 2 - 1);
-      data.cpu = Math.max(8, Math.min(92, Number((data.cpu + delta).toFixed(1))));
-      data.series.shift();
-      data.series.push(data.cpu);
-      renderTenant(currentTenantKey);
-    });
-
-    el.sidebarToggle?.addEventListener("click", () => {
-      el.sidebar?.classList.toggle("is-collapsed");
-    });
+  function renderTenant() {
+    const tenant=TENANT_TELEMETRY[state.tenant];
+    if (!tenant) return;
+    text("[data-bb-monitor-domain]",tenant.domain+" · örnek");
+    text("[data-bb-monitor-pod]",tenant.pod+" (demo)");
+    text("[data-bb-monitor-cpu]",tenant.cpu.toFixed(1)+"%");
+    updateProgress("[data-bb-monitor-cpu-progress]",tenant.cpu);
+    text("[data-bb-monitor-node-spec]",tenant.nodeSpec);
+    text("[data-bb-monitor-uptime]",tenant.uptime);
+    text("[data-bb-monitor-ram]",tenant.ramText);
+    updateProgress("[data-bb-monitor-ram-progress]",tenant.ramPct);
+    text("[data-bb-monitor-ram-percent]",tenant.ramPct+"%");
+    text("[data-bb-monitor-db-latency]",tenant.dbLatency);
+    text("[data-bb-monitor-db-connections]",tenant.dbConn);
+    text("[data-bb-monitor-sync-lag]",tenant.syncLag);
+    text("[data-bb-monitor-sync-state]",tenant.syncState+" (demo)");
+    text("[data-bb-monitor-last-sync]",tenant.lastSync);
+    text("[data-bb-monitor-rpm]",tenant.rpm);
+    text("[data-bb-monitor-ssr]",tenant.ssr);
+    text("[data-bb-monitor-error]",tenant.errRate);
+    text("[data-bb-monitor-disk]",tenant.disk);
+    renderChart(tenant);
+    renderLogs(tenant);
+  }
+  function redrawView() {
+    text("[data-bb-monitor-checked]","Görünüm: "+new Intl.DateTimeFormat("tr-TR",{hour:"2-digit",minute:"2-digit"}).format(new Date()));
+    renderTenant();
   }
 
-  bindEvents();
-  renderTenant(currentTenantKey);
+  tenantControl.addEventListener("change",()=>{
+    if (!Object.prototype.hasOwnProperty.call(TENANT_TELEMETRY,tenantControl.value)) return;
+    state.tenant=tenantControl.value;
+    redrawView();
+    notify("Örnek tenant değiştirildi: "+TENANT_TELEMETRY[state.tenant].domain+". Canlı veri alınmadı.");
+  });
+  filterControl.addEventListener("change",()=>{
+    state.filter=filterControl.value;
+    renderLogs(TENANT_TELEMETRY[state.tenant]);
+    notify("Demo olayları filtrelendi.");
+  });
+  rangeControls.forEach(button=>button.addEventListener("click",()=>{
+    state.range=button.getAttribute("data-bb-monitor-range");
+    rangeControls.forEach(item=>item.setAttribute("aria-pressed",
+      String(item.getAttribute("data-bb-monitor-range")===state.range)));
+    renderChart(TENANT_TELEMETRY[state.tenant]);
+    notify(state.range==="1h"?
+      "Son 1 saatlik örnek CPU serisi görüntüleniyor.":
+      "Seçilen dönem için demo veri yok; hayalî telemetri üretilmedi.");
+  }));
+  $("[data-bb-monitor-refresh]").addEventListener("click",()=>{
+    redrawView();
+    notify("Demo görünümü yeniden çizildi. Sunucuya istek gönderilmedi, ölçümler değiştirilmedi.");
+  });
+
+  redrawView();
+  notify("Yalnız demo verileri. Gerçek Kubernetes, PostgreSQL, RabbitMQ veya entegrasyon API'sine bağlı değil.");
 })();
