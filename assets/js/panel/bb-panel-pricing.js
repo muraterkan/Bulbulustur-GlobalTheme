@@ -47,7 +47,7 @@ function applyProductContext(){
   }
   if(select){
    select.dataset.bbPricingSelect=plan.name;
-   select.textContent="Checkout'a Geç";
+   select.textContent="Sepete Ekle";
   }
  });
  var pageTitle=document.querySelector(".bb-page-title");
