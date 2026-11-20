@@ -11,6 +11,17 @@
     --bb-sidebar-footer-divider: rgba(255, 255, 255, 0.05);
     --bb-sidebar-text-color: rgba(255, 255, 255, 0.85);
 
+  /* Sidebar semantic aliases — scoped to the existing sidebar component.
+     Do not duplicate the already established sidebar background/text inputs. */
+    --bb-sidebar: var(--bb-sidebar-bg);
+    --bb-sidebar-foreground: var(--bb-sidebar-text-color);
+    --bb-sidebar-primary: var(--bb-primary);
+    --bb-sidebar-primary-foreground: var(--bb-primary-inverse);
+    --bb-sidebar-accent: var(--bb-primary-light);
+    --bb-sidebar-accent-foreground: var(--bb-primary-text);
+    --bb-sidebar-border: var(--bb-sidebar-border-color);
+    --bb-sidebar-ring: var(--bb-focus-ring-color);
+
   /* layout */
     width: var(--bb-sidebar-width);
     display: flex;
