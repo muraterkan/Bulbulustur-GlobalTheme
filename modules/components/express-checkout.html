@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Express Checkout Component</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <section class="bb-section">
+                    <div class="mb-4">
+                        <h3 class="mb-1">Express Checkout Component</h3>
+                        <p class="text-muted mb-0">
+                            bb-express-checkout • Drauger mağaza vitrinleri ve POSX ödeme akışı için tek adımlı hızlı onay ekranı
+                        </p>
+                    </div>
+                </section>
+
+                <section class="bb-section">
+                    <!-- EXPRESS CHECKOUT COMPONENT -->
+                    <div class="bb-ec-shell" id="bbExpressCheckout">
+                        <!-- LEFT PANE: PRODUCT & ORDER TOTALS -->
+                        <aside class="bb-ec-summary-pane" aria-label="Sipariş Özeti">
+                            <div class="bb-ec-merchant-bar">
+                                <a href="#ecUsageSection" class="bb-ec-back-btn" aria-label="Mağazaya dön">
+                                    <span class="material-symbols-outlined bb-icon-sm" aria-hidden="true">arrow_back</span>
+                                </a>
+                                <span class="bb-ec-merchant-avatar" aria-hidden="true">O</span>
+                                <span class="bb-ec-merchant-name">Ortobella Store</span>
+                            </div>
+
+                            <div class="bb-ec-product-showcase">
+                                <div class="bb-ec-media-frame">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=640&q=80" alt="Aero Kablosuz Kulaklık" loading="lazy" />
+                                    <span class="bb-ec-qty-badge">Adet 1</span>
+                                </div>
+
+                                <h2 class="bb-ec-product-title">Aero Kablosuz Kulaklık</h2>
+                                <p class="bb-ec-product-variant">Grafit · Kişisel Ses Sistemleri</p>
+
+                                <span class="bb-ec-eta-pill">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">local_shipping</span>
+                                    <span>Tahmini Teslimat: 24 Kas, Salı</span>
+                                </span>
+                            </div>
+
+                            <div class="bb-ec-totals">
+                                <div class="bb-ec-total-row">
+                                    <span>Ara Toplam</span>
+                                    <strong>₺3.450,00</strong>
+                                </div>
+                                <div class="bb-ec-total-row">
+                                    <span class="bb-ec-total-label-group">
+                                        <span>Teslimat</span>
+                                        <span class="bb-ec-total-note">Hızlı Kargo</span>
+                                    </span>
+                                    <strong>₺95,00</strong>
+                                </div>
+                                <div class="bb-ec-total-row">
+                                    <span>KDV (%20)</span>
+                                    <strong>₺690,00</strong>
+                                </div>
+
+                                <div class="bb-ec-grand-total">
+                                    <span>Ödenecek Tutar</span>
+                                    <strong id="ecGrandTotalText">₺4.235,00</strong>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <!-- RIGHT PANE: CONFIRM & PAY -->
+                        <div class="bb-ec-action-pane">
+                            <header class="bb-ec-head">
+                                <span class="bb-ec-kicker">HIZLI ÖDEME</span>
+                                <h1 class="bb-ec-title">Onayla &amp; Öde</h1>
+                                <p class="bb-ec-subtitle">Kayıtlı bilgileriniz hazır. Siparişi tamamlamak için güvenlik kodunu onaylayın.</p>
+                            </header>
+
+                            <!-- Saved Customer & Payment Info -->
+                            <div class="bb-ec-saved-box">
+                                <!-- Contact Row -->
+                                <div class="bb-ec-saved-row">
+                                    <div class="bb-ec-saved-left">
+                                        <span class="bb-ec-saved-icon" aria-hidden="true">
+                                            <span class="material-symbols-outlined bb-icon-sm">mail</span>
+                                        </span>
+                                        <div class="bb-ec-saved-info">
+                                            <span class="bb-ec-kicker">İLETİŞİM</span>
+                                            <span class="bb-ec-saved-val" id="ecContactDisplay">selin.kaya@example.com</span>
+                                            <span class="bb-ec-saved-sub">E-fatura ve kargo takip bildirimleri</span>
+                                            <div class="bb-ec-inline-edit" id="ecContactEditor" hidden>
+                                                <input type="email" class="bb-ec-input" id="ecContactInput" value="selin.kaya@example.com" aria-label="E-posta adresi" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bb-ec-edit-btn" data-ec-edit="contact">Düzenle</button>
+                                </div>
+
+                                <!-- Delivery Row -->
+                                <div class="bb-ec-saved-row">
+                                    <div class="bb-ec-saved-left">
+                                        <span class="bb-ec-saved-icon" aria-hidden="true">
+                                            <span class="material-symbols-outlined bb-icon-sm">location_on</span>
+                                        </span>
+                                        <div class="bb-ec-saved-info">
+                                            <span class="bb-ec-kicker">TESLİMAT ADRESİ</span>
+                                            <span class="bb-ec-saved-val" id="ecAddressDisplay">Bağdat Cad. No: 218 D:4</span>
+                                            <span class="bb-ec-saved-sub" id="ecCityDisplay">Kadıköy, İstanbul 34728</span>
+                                            <div class="bb-ec-inline-edit" id="ecAddressEditor" hidden>
+                                                <input type="text" class="bb-ec-input" id="ecAddressInput" value="Bağdat Cad. No: 218 D:4" aria-label="Teslimat adresi" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bb-ec-edit-btn" data-ec-edit="address">Düzenle</button>
+                                </div>
+
+                                <!-- Saved Card Row -->
+                                <div class="bb-ec-saved-row">
+                                    <div class="bb-ec-saved-left">
+                                        <span class="bb-ec-saved-icon" aria-hidden="true">
+                                            <span class="material-symbols-outlined bb-icon-sm">credit_card</span>
+                                        </span>
+                                        <div class="bb-ec-saved-info">
+                                            <span class="bb-ec-kicker">ÖDEME YÖNTEMİ</span>
+                                            <span class="bb-ec-saved-val" id="ecCardDisplay">Visa •••• 1847</span>
+                                            <span class="bb-ec-saved-sub">Bu cihazda doğrulandı (POSX Token)</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bb-ec-edit-btn" id="ecSwitchToAltBtn">Değiştir</button>
+                                </div>
+                            </div>
+
+                            <!-- CVV & Pay Action -->
+                            <form class="bb-ec-pay-block" id="ecPayForm">
+                                <label class="bb-ec-cvv-label" for="ecCvvInput">CVV</label>
+                                <div class="bb-ec-pay-row">
+                                    <input type="text" class="bb-ec-cvv-input" id="ecCvvInput" inputmode="numeric" maxlength="4" value="637" required aria-label="Kart güvenlik kodu" />
+                                    <button type="submit" class="bb-ec-pay-btn" id="ecPaySubmitBtn">
+                                        <span class="material-symbols-outlined bb-icon-sm" aria-hidden="true">lock</span>
+                                        <span id="ecPayBtnLabel">₺4.235,00 Öde</span>
+                                    </button>
+                                </div>
+                                <p class="bb-ec-helper-text" id="ecPayHelperText">
+                                    Visa •••• 1847 kartından çekim yapılır. Güvenlik kodu bu cihazda doğrulandı.
+                                </p>
+                            </form>
+
+                            <!-- Collapsible New Card Box -->
+                            <div class="bb-ec-alt-card">
+                                <button type="button" class="bb-ec-alt-toggle" id="ecAltCardToggle" aria-expanded="true">
+                                    <span class="bb-ec-saved-left">
+                                        <span class="bb-ec-saved-icon" aria-hidden="true">
+                                            <span class="material-symbols-outlined bb-icon-sm">add</span>
+                                        </span>
+                                        <span class="bb-ec-saved-info">
+                                            <span class="bb-ec-saved-val">Farklı bir kart kullan</span>
+                                            <span class="bb-ec-saved-sub">Bu siparişi yeni bir banka veya kredi kartıyla öde</span>
+                                        </span>
+                                    </span>
+                                    <span class="material-symbols-outlined bb-icon-sm bb-ec-alt-chevron is-open" id="ecAltChevron" aria-hidden="true">expand_more</span>
+                                </button>
+
+                                <div class="bb-ec-alt-body" id="ecAltCardBody">
+                                    <div class="bb-ec-form-row">
+                                        <div class="bb-ec-field">
+                                            <label for="ecCardNameInput">Kart üzerindeki isim</label>
+                                            <input type="text" class="bb-ec-input" id="ecCardNameInput" value="Selin Kaya" autocomplete="cc-name" />
+                                        </div>
+                                        <div class="bb-ec-field">
+                                            <label for="ecCardExpInput">Son kullanma</label>
+                                            <input type="text" class="bb-ec-input" id="ecCardExpInput" placeholder="AA / YY" maxlength="7" autocomplete="cc-exp" />
+                                        </div>
+                                    </div>
+
+                                    <div class="bb-ec-field">
+                                        <label for="ecCardNumberInput">Kart numarası</label>
+                                        <div class="bb-ec-card-number-box">
+                                            <span class="bb-ec-brand-tag" id="ecCardBrandTag">VISA</span>
+                                            <input type="text" id="ecCardNumberInput" placeholder="1234 1234 1234 1234" inputmode="numeric" maxlength="19" autocomplete="cc-number" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Trust & Policy Footer -->
+                            <footer class="bb-ec-trust-foot">
+                                <div class="bb-ec-trust-items">
+                                    <span class="bb-ec-trust-item">
+                                        <span class="material-symbols-outlined bb-icon-xs bb-ec-shield-icon" aria-hidden="true">verified_user</span>
+                                        <span>Şifreli ödeme</span>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-ec-trust-item">
+                                        <span class="material-symbols-outlined bb-icon-xs" aria-hidden="true">replay</span>
+                                        <span>30 gün iade garantisi</span>
+                                    </span>
+                                </div>
+
+                                <a href="#ecUsageSection" class="bb-ec-policy-link">
+                                    <span>Sipariş koşulları</span>
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">open_in_new</span>
+                                </a>
+                            </footer>
+                        </div>
+                    </div>
+                </section>
+
+                <!--::Usage-->
+                <section class="bb-section" id="ecUsageSection">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">How do I use it?</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Express Checkout (Hızlı Onay &amp; Ödeme)</h3>
+                                <p class="bb-usage-text">
+                                    <code>bb-ec-shell</code>; solda <code>bb-ec-summary-pane</code> ürün ve fiyat kırılımını, sağda <code>bb-ec-action-pane</code> kayıtlı müşteri/kart bilgilerini, CVV onayını ve açılır alternatif kart panelini tek bir duyarlı bileşen içinde sunar.
+                                </p>
+                                <div class="bb-usage-code">
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-ec-shell&quot;&gt;
+    &lt;aside class=&quot;bb-ec-summary-pane&quot;&gt;
+        &lt;!-- Mağaza başlığı, ürün görseli ve fiyat dökümü --&gt;
+    &lt;/aside&gt;
+    &lt;div class=&quot;bb-ec-action-pane&quot;&gt;
+        &lt;!-- Kayıtlı iletişim/adres/kart kutusu, CVV + Öde formu ve alternatif kart akordeonu --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
+    <script src="../../assets/js/core/bb-express-checkout.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>

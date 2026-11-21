@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Summary Card Component</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!--::Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <section class="bb-section">
+                    <!-- PAGE TITLE -->
+                    <div class="mb-4">
+                        <h3 class="mb-1">Summary Card Component</h3>
+                        <p class="text-muted mb-0">
+                            bb-summary-card • Tablo üstü dönem özeti, ana bakiye, 2×2 alt kırılım ve aksiyon uyarı şeridi
+                        </p>
+                    </div>
+                </section>
+
+                <section class="bb-section">
+                    <!-- SUMMARY CARD COMPONENT -->
+                    <div class="bb-sc-wrap">
+                        <!-- Top Header -->
+                        <div class="bb-sc-page-head">
+                            <div>
+                                <div class="bb-sc-title-row">
+                                    <h2 class="bb-sc-title">Tahsilat &amp; Hesap Özeti</h2>
+                                    <span class="bb-sc-pill is-warning">₺28.940 açık bakiye</span>
+                                </div>
+                                <p class="bb-sc-subtitle">Kasım 2026 dönem ekstresi • 9 adet açık fatura</p>
+                            </div>
+
+                            <button type="button" class="btn btn-sm btn-outline-secondary d-inline-flex align-items-center gap-1">
+                                <span class="material-symbols-outlined bb-icon-sm" aria-hidden="true">download</span>
+                                <span>Dışa Aktar</span>
+                            </button>
+                        </div>
+
+                        <!-- Main Card -->
+                        <div class="bb-summary-card">
+                            <div class="bb-sc-body">
+                                <!-- Left Hero Metric -->
+                                <div class="bb-sc-primary">
+                                    <span class="bb-icon-box" aria-hidden="true">
+                                        <span class="material-symbols-outlined bb-icon-ui">receipt_long</span>
+                                    </span>
+
+                                    <div class="bb-sc-primary-content">
+                                        <div class="bb-sc-period-row">
+                                            <span class="bb-sc-period-title">Kasım 2026</span>
+                                            <span class="bb-sc-pill is-warning">Aksiyon gerekli</span>
+                                        </div>
+                                        <span class="bb-sc-kicker">AÇIK BAKİYE</span>
+                                        <div class="bb-sc-hero-value">₺28.940</div>
+                                        <p class="bb-sc-caption">Bu fatura döneminde 16 kayıt bulunuyor, en eskisi 18 gün gecikmede.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Vertical Divider -->
+                                <div class="bb-sc-divider" aria-hidden="true"></div>
+
+                                <!-- Right 2x2 Metrics -->
+                                <div class="bb-sc-metrics-grid">
+                                    <div class="bb-sc-metric">
+                                        <span class="bb-sc-kicker">VADESİ GELMEMİŞ</span>
+                                        <span class="bb-sc-metric-val">₺27.410</span>
+                                    </div>
+
+                                    <div class="bb-sc-metric">
+                                        <span class="bb-sc-kicker">GECİKMİŞ</span>
+                                        <span class="bb-sc-metric-val">₺1.530</span>
+                                    </div>
+
+                                    <div class="bb-sc-metric">
+                                        <span class="bb-sc-kicker">TAHSİL EDİLEN</span>
+                                        <span class="bb-sc-metric-val">₺48.480</span>
+                                    </div>
+
+                                    <div class="bb-sc-metric">
+                                        <span class="bb-sc-kicker">SONRAKİ AKTARIM</span>
+                                        <span class="bb-sc-metric-val">30 Kas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Footer -->
+                            <div class="bb-sc-footer">
+                                <span>Dönem kapanışı 30 Kasım • otomatik tahsilat aktif.</span>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ekstreyi Görüntüle</button>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Callout Banner -->
+                        <div class="bb-sc-callout" role="region" aria-label="Gecikmiş Tahsilat Uyarısı">
+                            <div class="bb-sc-callout-info">
+                                <span class="material-symbols-outlined bb-icon-sm bb-sc-callout-icon" aria-hidden="true">warning</span>
+                                <div>
+                                    <strong class="bb-sc-callout-title">Gecikmiş tahsilat takibi</strong>
+                                    <span class="bb-sc-callout-desc">2 faturada toplam ₺1.530 gecikmiş tutar bulunuyor, en eskisi 18 gün gecikmede.</span>
+                                </div>
+                            </div>
+
+                            <div class="bb-sc-callout-actions">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Gecikenleri Gör</button>
+                                <button type="button" class="btn btn-sm btn-light">Takibi Başlat</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--::Usage-->
+                <section class="bb-section">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">How do I use it?</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Summary Card (Tablo &amp; Dönem Özeti)</h3>
+                                <p class="bb-usage-text">
+                                    <code>bb-summary-card</code>; herhangi bir veri tablosunun üstünde dönem özetini, sol blokta <code>bb-sc-hero-value</code> ana metriğini ve sağdaki <code>bb-sc-metrics-grid</code> 2×2 alt kırılımlarını gösterir. İsteğe bağlı aksiyon uyarısı için altına <code>bb-sc-callout</code> eklenir.
+                                </p>
+                                <div class="bb-usage-code">
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-sc-wrap&quot;&gt;
+    &lt;div class=&quot;bb-summary-card&quot;&gt;
+        &lt;div class=&quot;bb-sc-body&quot;&gt;
+            &lt;div class=&quot;bb-sc-primary&quot;&gt;
+                &lt;span class=&quot;bb-icon-box&quot;&gt;&lt;span class=&quot;material-symbols-outlined bb-icon-ui&quot;&gt;receipt_long&lt;/span&gt;&lt;/span&gt;
+                &lt;div class=&quot;bb-sc-primary-content&quot;&gt;
+                    &lt;div class=&quot;bb-sc-period-row&quot;&gt;
+                        &lt;span class=&quot;bb-sc-period-title&quot;&gt;Kasım 2026&lt;/span&gt;
+                        &lt;span class=&quot;bb-sc-pill is-warning&quot;&gt;Aksiyon gerekli&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;bb-sc-kicker&quot;&gt;AÇIK BAKİYE&lt;/span&gt;
+                    &lt;div class=&quot;bb-sc-hero-value&quot;&gt;₺28.940&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bb-sc-divider&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;bb-sc-metrics-grid&quot;&gt;
+                &lt;div class=&quot;bb-sc-metric&quot;&gt;
+                    &lt;span class=&quot;bb-sc-kicker&quot;&gt;VADESİ GELMEMİŞ&lt;/span&gt;
+                    &lt;span class=&quot;bb-sc-metric-val&quot;&gt;₺27.410&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;!-- Diğer 3 metrik --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;bb-sc-footer&quot;&gt;
+            &lt;span&gt;Dönem kapanışı 30 Kasım • otomatik tahsilat aktif.&lt;/span&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-outline-secondary&quot;&gt;Ekstreyi Görüntüle&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>

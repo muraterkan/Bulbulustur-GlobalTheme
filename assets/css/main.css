@@ -35098,6 +35098,575 @@ html[data-bs-theme=dark][data-bb-density=compact] .bb-pulse,
   - Default Bootstrap .btn-group davranışına dokunmuyoruz.
   - bb-* sadece opt-in class ile devreye girer.
 -------------------------------------------------- */
+/* =====================================
+   Bulbulustur Theme — Express Checkout (Confirm & Pay)
+   File: assets/scss/components/_express-checkout.scss
+===================================== */
+.bb-ec-shell {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background-color: var(--bb-surface-bg);
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .bb-ec-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------
+   Left Column: Store, Product & Breakdown
+------------------------------------- */
+.bb-ec-summary-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--bb-space-6);
+  padding: var(--bb-space-6);
+  background-color: var(--bb-surface-soft);
+  border-right: var(--bb-border-width) solid var(--bb-border-color);
+}
+@media (max-width: 991.98px) {
+  .bb-ec-summary-pane {
+    border-right: 0;
+    border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+    padding: var(--bb-space-5);
+  }
+}
+
+.bb-ec-merchant-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+}
+
+.bb-ec-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: var(--bb-radius-pill);
+  background: transparent;
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  transition: var(--bb-transition-colors);
+}
+.bb-ec-back-btn:hover {
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-merchant-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--bb-radius-pill);
+  background-color: var(--bb-emphasis-color);
+  color: var(--bb-body-bg);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-title-strong);
+  flex-shrink: 0;
+}
+
+.bb-ec-merchant-name {
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+}
+
+/* Product Showcase */
+.bb-ec-product-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--bb-space-2);
+  margin: auto 0;
+}
+
+.bb-ec-media-frame {
+  position: relative;
+  width: min(14.5rem, 100%);
+  aspect-ratio: 1/1;
+  margin-bottom: var(--bb-space-2);
+  border-radius: var(--bb-radius-lg);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  background-color: var(--bb-tertiary-bg);
+  overflow: hidden;
+}
+.bb-ec-media-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bb-ec-qty-badge {
+  position: absolute;
+  top: var(--bb-space-2);
+  right: var(--bb-space-2);
+  padding: 0.15rem var(--bb-space-2);
+  border-radius: var(--bb-radius-pill);
+  background-color: color-mix(in srgb, var(--bb-body-bg) 84%, transparent);
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-ui);
+  font-variant-numeric: tabular-nums;
+}
+
+.bb-ec-product-title {
+  margin: 0;
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-product-variant {
+  margin: 0;
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-secondary-color);
+}
+
+.bb-ec-eta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-1);
+  margin-top: var(--bb-space-1);
+  padding: 0.2rem var(--bb-space-3);
+  border-radius: var(--bb-radius-sm);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-body-color);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-ui);
+}
+
+/* Totals Breakdown */
+.bb-ec-totals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.bb-ec-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-secondary-color);
+}
+.bb-ec-total-row strong {
+  color: var(--bb-emphasis-color);
+  font-weight: var(--bb-fw-ui);
+}
+
+.bb-ec-total-label-group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.bb-ec-total-note {
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-tertiary-color);
+}
+
+.bb-ec-grand-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  padding-top: var(--bb-space-4);
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+}
+.bb-ec-grand-total span {
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+}
+.bb-ec-grand-total strong {
+  font-size: var(--bb-fs-2xl);
+  font-weight: var(--bb-fw-title-strong);
+  line-height: var(--bb-line-height-tight);
+  color: var(--bb-emphasis-color);
+}
+
+/* -------------------------------------
+   Right Column: Express Confirm & Pay
+------------------------------------- */
+.bb-ec-action-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-5);
+  padding: var(--bb-space-6);
+  background-color: var(--bb-surface-bg);
+}
+@media (max-width: 991.98px) {
+  .bb-ec-action-pane {
+    padding: var(--bb-space-5);
+  }
+}
+
+.bb-ec-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-1);
+}
+
+.bb-ec-kicker {
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-ui);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bb-secondary-color);
+}
+
+.bb-ec-title {
+  margin: 0;
+  font-size: var(--bb-fs-2xl);
+  font-weight: var(--bb-fw-title-strong);
+  line-height: var(--bb-line-height-tight);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-subtitle {
+  margin: var(--bb-space-1) 0 0;
+  font-size: var(--bb-fs-sm);
+  color: var(--bb-secondary-color);
+}
+
+/* Saved Details List */
+.bb-ec-saved-box {
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background-color: var(--bb-surface-soft);
+  overflow: hidden;
+}
+
+.bb-ec-saved-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border-bottom: var(--bb-border-width) solid var(--bb-border-color);
+}
+.bb-ec-saved-row:last-child {
+  border-bottom: 0;
+}
+
+.bb-ec-saved-left {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-3);
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.bb-ec-saved-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--bb-radius);
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-secondary-color);
+  flex-shrink: 0;
+}
+
+.bb-ec-saved-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.bb-ec-saved-val {
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bb-ec-saved-sub {
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-secondary-color);
+}
+
+.bb-ec-inline-edit {
+  margin-top: var(--bb-space-1);
+}
+.bb-ec-inline-edit[hidden] {
+  display: none;
+}
+
+.bb-ec-edit-btn {
+  border: 0;
+  background: transparent;
+  padding: var(--bb-space-1) var(--bb-space-2);
+  border-radius: var(--bb-radius-sm);
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-ui);
+  color: var(--bb-secondary-color);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--bb-transition-colors);
+}
+.bb-ec-edit-btn:hover {
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-emphasis-color);
+}
+
+/* CVV & Primary Pay Row */
+.bb-ec-pay-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-2);
+}
+
+.bb-ec-cvv-label {
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-pay-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: var(--bb-space-3);
+  align-items: stretch;
+}
+@media (max-width: 479.98px) {
+  .bb-ec-pay-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bb-ec-cvv-input {
+  height: 2.65rem;
+  padding: 0 var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-emphasis-color);
+  font-family: var(--bb-font-mono);
+  font-size: var(--bb-fs-base);
+  font-weight: var(--bb-fw-title);
+  letter-spacing: 0.16em;
+  text-align: center;
+  outline: 0;
+  transition: border-color var(--bb-transition-fast);
+}
+.bb-ec-cvv-input:focus {
+  border-color: var(--bb-info);
+}
+
+.bb-ec-pay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bb-space-2);
+  height: 2.65rem;
+  padding: 0 var(--bb-space-5);
+  border: var(--bb-border-width) solid var(--bb-emphasis-color);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-emphasis-color);
+  color: var(--bb-body-bg);
+  font-size: var(--bb-fs-sm);
+  font-weight: var(--bb-fw-action);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: opacity var(--bb-transition-fast), background-color var(--bb-transition-fast);
+}
+.bb-ec-pay-btn:hover {
+  opacity: 0.92;
+}
+.bb-ec-pay-btn.is-confirmed {
+  background-color: var(--bb-success);
+  border-color: var(--bb-success);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-helper-text {
+  margin: 0;
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-secondary-color);
+}
+
+/* Collapsible Alternative Card Panel */
+.bb-ec-alt-card {
+  border: var(--bb-border-width) solid var(--bb-border-color);
+  border-radius: var(--bb-radius-lg);
+  background-color: var(--bb-surface-soft);
+  overflow: hidden;
+}
+
+.bb-ec-alt-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  width: 100%;
+  padding: var(--bb-space-3) var(--bb-space-4);
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--bb-transition-fast);
+}
+.bb-ec-alt-toggle:hover {
+  background-color: var(--bb-tertiary-bg);
+}
+
+.bb-ec-alt-chevron {
+  color: var(--bb-secondary-color);
+  transition: transform var(--bb-transition-fast);
+}
+.bb-ec-alt-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.bb-ec-alt-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-4);
+  border-top: var(--bb-border-width) solid var(--bb-border-color);
+}
+.bb-ec-alt-body[hidden] {
+  display: none;
+}
+
+.bb-ec-form-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: var(--bb-space-3);
+}
+@media (max-width: 479.98px) {
+  .bb-ec-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bb-ec-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-1);
+}
+.bb-ec-field label {
+  font-size: var(--bb-fs-xs);
+  font-weight: var(--bb-fw-title);
+  color: var(--bb-emphasis-color);
+}
+
+.bb-ec-input {
+  height: 2.35rem;
+  padding: 0 var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-surface-bg);
+  color: var(--bb-emphasis-color);
+  font-size: var(--bb-fs-sm);
+  outline: 0;
+  width: 100%;
+  transition: border-color var(--bb-transition-fast);
+}
+.bb-ec-input:focus {
+  border-color: var(--bb-emphasis-color);
+}
+
+.bb-ec-card-number-box {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-2);
+  height: 2.35rem;
+  padding: 0 var(--bb-space-3);
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  border-radius: var(--bb-radius);
+  background-color: var(--bb-surface-bg);
+}
+.bb-ec-card-number-box:focus-within {
+  border-color: var(--bb-emphasis-color);
+}
+.bb-ec-card-number-box input {
+  border: 0;
+  background: transparent;
+  color: var(--bb-emphasis-color);
+  font-family: var(--bb-font-mono);
+  font-size: var(--bb-fs-sm);
+  width: 100%;
+  outline: 0;
+}
+
+.bb-ec-brand-tag {
+  padding: 0.1rem var(--bb-space-2);
+  border-radius: var(--bb-radius-xs);
+  border: var(--bb-border-width) solid var(--bb-border-color-strong);
+  background-color: var(--bb-tertiary-bg);
+  color: var(--bb-emphasis-color);
+  font-family: var(--bb-font-mono);
+  font-size: var(--bb-fs-2xs);
+  font-weight: var(--bb-fw-title-strong);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+/* Trust & Policy Footer */
+.bb-ec-trust-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bb-space-3);
+  margin-top: auto;
+  padding-top: var(--bb-space-2);
+  font-size: var(--bb-fs-xs);
+  color: var(--bb-secondary-color);
+}
+
+.bb-ec-trust-items {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.bb-ec-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-1);
+}
+
+.bb-ec-shield-icon {
+  color: var(--bb-success);
+}
+
+.bb-ec-policy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bb-space-1);
+  color: var(--bb-secondary-color);
+  text-decoration: none;
+  transition: color var(--bb-transition-fast);
+}
+.bb-ec-policy-link:hover {
+  color: var(--bb-emphasis-color);
+}
+
 /* ================================================== */
 /* ================================================== */
 /* =====================================

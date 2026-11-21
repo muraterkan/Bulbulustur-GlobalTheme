@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<!--::Head-->
+<head>
+    <script src="../../assets/js/panel/bb-panel-theme-init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulbulustur Theme — Coupon Component</title>
+    <!-- Main Theme CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Google Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<!--/::Head-->
+<!--::Body-->
+<body class="bb-body">
+    <!--::Main-->
+    <main class="bb-main">
+        <!--::Wrapper-->
+        <div class="bb-wrapper">
+            <div class="bb-container">
+                <section class="bb-section">
+                    <div class="mb-4">
+                        <h3 class="mb-1">Coupon &amp; Promo Component</h3>
+                        <p class="text-muted mb-0">
+                            bb-coupon • Drauger &amp; Bulbulustur mağazaları için kampanya banner'ı, filtrelenebilir kupon matrisi ve modal kartı
+                        </p>
+                    </div>
+                </section>
+
+                <!-- VARIANT 1: SPLIT HERO BANNER -->
+                <section class="bb-section">
+                    <article class="bb-coupon-hero">
+                        <div class="bb-coupon-hero-content">
+                            <div class="bb-coupon-meta-row">
+                                <span class="bb-coupon-badge is-danger">Sınırlı süre</span>
+                                <span class="bb-coupon-meta-item">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                    <span>Bitiş: 30 Kas, Pazar</span>
+                                </span>
+                            </div>
+
+                            <h2 class="bb-coupon-hero-title">Sezon sonu, tüm koleksiyonda %25 indirim</h2>
+                            <p class="bb-coupon-hero-desc">
+                                Tüm kataloğu kapsayan tek kodla sepetini yenile. Alt limit yok, 30 gün içinde ücretsiz iade geçerli.
+                            </p>
+
+                            <div class="bb-coupon-code-box">
+                                <div class="bb-coupon-code-meta">
+                                    <span class="bb-coupon-code-label">PROMOSYON KODU</span>
+                                    <span class="bb-coupon-code-val">SEZON25</span>
+                                </div>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="SEZON25">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+
+                            <ul class="bb-coupon-rules">
+                                <li>
+                                    <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                    <span>Yeni sezon ürünleri dahil tüm mağazada geçerlidir.</span>
+                                </li>
+                                <li>
+                                    <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                    <span>₺1.500 üzeri ücretsiz kargo kampanyasıyla birleştirilebilir.</span>
+                                </li>
+                                <li>
+                                    <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                    <span>Müşteri başına tek kullanım hakkı vardır.</span>
+                                </li>
+                            </ul>
+
+                            <div class="bb-coupon-cta-row">
+                                <a href="#offersGridSection" class="bb-coupon-cta-btn">
+                                    <span>Kampanyayı İncele</span>
+                                    <span class="material-symbols-outlined bb-icon-xs" aria-hidden="true">arrow_forward</span>
+                                </a>
+                                <a href="#couponUsageSection" class="bb-coupon-terms-link">Kampanya koşulları</a>
+                            </div>
+                        </div>
+
+                        <div class="bb-coupon-hero-media">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=960&q=80" alt="Sezon indirimi kampanya görseli" loading="lazy" />
+                        </div>
+                    </article>
+                </section>
+
+                <!-- VARIANT 2: FILTERABLE COUPON GRID -->
+                <section class="bb-section" id="offersGridSection">
+                    <div class="bb-coupon-filter-bar" role="tablist" aria-label="Kupon Kategorileri">
+                        <button type="button" class="bb-coupon-filter-pill is-active" data-coupon-filter="all">Tüm teklifler</button>
+                        <button type="button" class="bb-coupon-filter-pill" data-coupon-filter="welcome">Hoş geldin</button>
+                        <button type="button" class="bb-coupon-filter-pill" data-coupon-filter="seasonal">Sezonluk</button>
+                        <button type="button" class="bb-coupon-filter-pill" data-coupon-filter="shipping">Kargo</button>
+                        <button type="button" class="bb-coupon-filter-pill" data-coupon-filter="bundle">Paket</button>
+                        <button type="button" class="bb-coupon-filter-pill" data-coupon-filter="loyalty">Sadakat</button>
+                    </div>
+
+                    <div class="bb-coupon-grid" id="bbCouponGrid">
+                        <!-- Card 1 -->
+                        <article class="bb-coupon-card" data-category="welcome">
+                            <span class="bb-coupon-card-kicker">HOŞ GELDİN</span>
+                            <div class="bb-coupon-card-inner">
+                                <div>
+                                    <div class="bb-coupon-card-head">
+                                        <h3 class="bb-coupon-card-headline">%10 indirim</h3>
+                                        <span class="bb-coupon-badge is-success">Popüler</span>
+                                    </div>
+                                    <p class="bb-coupon-card-sub">ilk siparişe özel</p>
+                                </div>
+                                <p class="bb-coupon-card-desc">İlk sepetinizde ödeme adımında indirim otomatik olarak uygulanır.</p>
+                                <div class="bb-coupon-meta-row">
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                        <strong>Alt limit yok</strong>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                        <strong>Süresiz</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bb-coupon-card-foot">
+                                <span class="bb-coupon-inline-code">HOSGELDIN10</span>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="HOSGELDIN10">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="bb-coupon-card" data-category="seasonal">
+                            <span class="bb-coupon-card-kicker">SEZONLUK</span>
+                            <div class="bb-coupon-card-inner">
+                                <div>
+                                    <div class="bb-coupon-card-head">
+                                        <h3 class="bb-coupon-card-headline">%25 indirim</h3>
+                                        <span class="bb-coupon-badge is-warning">Öne çıkan</span>
+                                    </div>
+                                    <p class="bb-coupon-card-sub">tüm mağazada</p>
+                                </div>
+                                <p class="bb-coupon-card-desc">Tüm katalogda çeyrek fiyat avantajı. Müşteri başına bir kez kullanılır.</p>
+                                <div class="bb-coupon-meta-row">
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                        <span>Min sepet <strong>₺1.500</strong></span>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                        <strong>Bitiş: 30 Kas</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bb-coupon-card-foot">
+                                <span class="bb-coupon-inline-code">SEZON25</span>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="SEZON25">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="bb-coupon-card" data-category="shipping">
+                            <span class="bb-coupon-card-kicker">KARGO</span>
+                            <div class="bb-coupon-card-inner">
+                                <div>
+                                    <div class="bb-coupon-card-head">
+                                        <h3 class="bb-coupon-card-headline">Ücretsiz kargo</h3>
+                                    </div>
+                                    <p class="bb-coupon-card-sub">alt limit olmadan</p>
+                                </div>
+                                <p class="bb-coupon-card-desc">Türkiye geneli tüm standart teslimatlarda kargo ücreti sıfırlanır.</p>
+                                <div class="bb-coupon-meta-row">
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                        <strong>Alt limit yok</strong>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                        <strong>Devam ediyor</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bb-coupon-card-foot">
+                                <span class="bb-coupon-inline-code">KARGO0</span>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="KARGO0">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="bb-coupon-card" data-category="bundle">
+                            <span class="bb-coupon-card-kicker">PAKET FIRSATI</span>
+                            <div class="bb-coupon-card-inner">
+                                <div>
+                                    <div class="bb-coupon-card-head">
+                                        <h3 class="bb-coupon-card-headline">₺750 indirim</h3>
+                                    </div>
+                                    <p class="bb-coupon-card-sub">3'lü kombinlerde</p>
+                                </div>
+                                <p class="bb-coupon-card-desc">Aynı kategoriden herhangi 3 ürün eklediğinizde anında ₺750 kazanın.</p>
+                                <div class="bb-coupon-meta-row">
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                        <span>Min sepet <strong>₺4.000</strong></span>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                        <strong>Bitiş: 15 Ara</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bb-coupon-card-foot">
+                                <span class="bb-coupon-inline-code">KOMBIN750</span>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="KOMBIN750">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="bb-coupon-card" data-category="loyalty">
+                            <span class="bb-coupon-card-kicker">SADAKAT</span>
+                            <div class="bb-coupon-card-inner">
+                                <div>
+                                    <div class="bb-coupon-card-head">
+                                        <h3 class="bb-coupon-card-headline">%15 indirim</h3>
+                                        <span class="bb-coupon-badge is-info">Üyelere özel</span>
+                                    </div>
+                                    <p class="bb-coupon-card-sub">aktif kulüp üyeleri</p>
+                                </div>
+                                <p class="bb-coupon-card-desc">Drauger sadakat programına kayıtlı müşteriler için yenilenen aylık ayrıcalık.</p>
+                                <div class="bb-coupon-meta-row">
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                        <strong>Alt limit yok</strong>
+                                    </span>
+                                    <span>•</span>
+                                    <span class="bb-coupon-meta-item">
+                                        <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                        <strong>Aylık yenilenir</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bb-coupon-card-foot">
+                                <span class="bb-coupon-inline-code">UYE15</span>
+                                <button type="button" class="bb-coupon-copy-btn" data-copy-code="UYE15">
+                                    <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                    <span>Kopyala</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- VARIANT 3: STANDALONE / MODAL OFFER BOX -->
+                <section class="bb-section">
+                    <article class="bb-coupon-box">
+                        <span class="bb-coupon-badge">
+                            <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                            <span>Üye teklifi</span>
+                        </span>
+
+                        <h2 class="bb-coupon-box-title">Sonraki siparişinizde %15 indirim</h2>
+                        <p class="bb-coupon-box-desc">
+                            Kodu ödeme adımında uygulayın; sepetinizdeki uygun tüm ürünlere indirim anında yansısın.
+                        </p>
+
+                        <div class="bb-coupon-code-box">
+                            <div class="bb-coupon-code-meta">
+                                <span class="bb-coupon-code-label">PROMOSYON KODU</span>
+                                <span class="bb-coupon-code-val">HOSGELDIN15</span>
+                            </div>
+                            <button type="button" class="bb-coupon-copy-btn" data-copy-code="HOSGELDIN15">
+                                <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">confirmation_number</span>
+                                <span>Kopyala</span>
+                            </button>
+                        </div>
+
+                        <div class="bb-coupon-meta-row">
+                            <span class="bb-coupon-meta-item">
+                                <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">schedule</span>
+                                <span>Son tarih: <strong>15 Ara</strong></span>
+                            </span>
+                            <span>•</span>
+                            <span class="bb-coupon-meta-item">
+                                <span class="material-symbols-outlined bb-icon-2xs" aria-hidden="true">shopping_bag</span>
+                                <span>Min harcama <strong>₺1.250</strong></span>
+                            </span>
+                        </div>
+
+                        <ul class="bb-coupon-rules">
+                            <li>
+                                <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                <span>Normal sezon fiyatlı ürünlerde geçerlidir.</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                <span>Müşteri başına tek kullanım hakkı sunar.</span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined bb-icon-xs bb-coupon-check" aria-hidden="true">check</span>
+                                <span>Diğer yüzdelik indirim kuponlarıyla birleştirilemez.</span>
+                            </li>
+                        </ul>
+
+                        <div class="bb-coupon-cta-row">
+                            <a href="#offersGridSection" class="bb-coupon-cta-btn">
+                                <span>Alışverişe Başla</span>
+                                <span class="material-symbols-outlined bb-icon-xs" aria-hidden="true">arrow_forward</span>
+                            </a>
+                            <a href="#couponUsageSection" class="bb-coupon-terms-link">Tüm koşullar</a>
+                        </div>
+                    </article>
+                </section>
+
+                <!--::Usage-->
+                <section class="bb-section" id="couponUsageSection">
+                    <div class="bb-card">
+                        <div class="bb-card-header">
+                            <div class="bb-card-title">How do I use it?</div>
+                        </div>
+                        <div class="bb-card-body">
+                            <div class="bb-usage">
+                                <h3 class="bb-usage-title">Kupon &amp; Kampanya Kartları</h3>
+                                <p class="bb-usage-text">
+                                    Vitrin hero banner'ı için <code>bb-coupon-hero</code>, çoklu fırsat listeleri için <code>bb-coupon-grid</code> + <code>bb-coupon-card</code> ve modal/sepet içi tekil gösterimler için <code>bb-coupon-box</code> sınıflarını kullanın. Kopyalama butonlarına <code>data-copy-code="KOD"</code> eklenmesi yeterlidir.
+                                </p>
+                                <div class="bb-usage-code">
+                                    <div class="bb-usage-code-head">
+                                        <span class="bb-usage-code-lang">HTML</span>
+                                        <button type="button" class="bb-usage-copy">Copy</button>
+                                    </div>
+                                    <pre class="bb-usage-pre"><code>&lt;div class=&quot;bb-coupon-code-box&quot;&gt;
+    &lt;div class=&quot;bb-coupon-code-meta&quot;&gt;
+        &lt;span class=&quot;bb-coupon-code-label&quot;&gt;PROMOSYON KODU&lt;/span&gt;
+        &lt;span class=&quot;bb-coupon-code-val&quot;&gt;SEZON25&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;bb-coupon-copy-btn&quot; data-copy-code=&quot;SEZON25&quot;&gt;
+        &lt;span class=&quot;material-symbols-outlined bb-icon-2xs&quot;&gt;confirmation_number&lt;/span&gt;
+        &lt;span&gt;Kopyala&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/::Usage-->
+            </div>
+        </div>
+    </main>
+    <!--/::Main-->
+    <script src="../../assets/js/core/bb-usage.js"></script>
+    <script src="../../assets/js/core/bb-coupon.js"></script>
+    <script src="../../assets/js/panel/bb-component-panel-shell.js"></script>
+    <!--/::Scripts-->
+</body>
+<!--/::Body-->
+</html>
