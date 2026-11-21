@@ -92,6 +92,12 @@
       '<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">request_quote</span></span>' +
       '<span class="bb-menu-title">Teklif talepleri (RFQ)</span></a>';
     overviewLink.closest(".bb-menu-item").after(rfqItem);
+    var financeItem = document.createElement("div");
+    financeItem.className = "bb-menu-item";
+    financeItem.innerHTML = '<a class="bb-menu-link" href="sales-finance.html" data-bb-panel-page="sales-finance">' +
+      '<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span></span>' +
+      '<span class="bb-menu-title">Satış Finansmanı</span></a>';
+    overviewLink.closest(".bb-menu-item").after(financeItem);
     var brandsItem = document.createElement("div");
     brandsItem.className = "bb-menu-item";
     brandsItem.innerHTML = '<a class="bb-menu-link" href="brands.html" data-bb-panel-page="brand-management">' +
