@@ -7,6 +7,7 @@
 // CORE COMPONENTS: reusable outside the panel template.
 @use "../components/buttons";
 @use "../components/cards";
+@use "../components/summary-card";
 @use "../components/modals";
 @use "../components/tables";         // CORE: reusable rich table patterns
 @use "../components/table-premium";
