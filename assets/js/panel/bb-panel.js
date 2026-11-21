@@ -92,6 +92,12 @@
       '<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">request_quote</span></span>' +
       '<span class="bb-menu-title">Teklif talepleri (RFQ)</span></a>';
     overviewLink.closest(".bb-menu-item").after(rfqItem);
+    var brandsItem = document.createElement("div");
+    brandsItem.className = "bb-menu-item";
+    brandsItem.innerHTML = '<a class="bb-menu-link" href="brands.html" data-bb-panel-page="brand-management">' +
+      '<span class="bb-menu-icon"><span class="material-symbols-outlined" aria-hidden="true">verified</span></span>' +
+      '<span class="bb-menu-title">Marka Yönetimi</span></a>';
+    rfqItem.after(brandsItem);
   }
 
   /* Shared shell branding: use only the canonical Bulbulustur logo asset. */
