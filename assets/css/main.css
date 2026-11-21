@@ -8240,10 +8240,8 @@ button.bb-link:focus-visible,
 .bb-container {
   width: 100%;
   max-width: var(--bb-container-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--bb-gutter-x);
-  padding-right: var(--bb-gutter-x);
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* Container genişlik değiştiriciler: .bb-container'a (yalnız o sayfa) ya da
